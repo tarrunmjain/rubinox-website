@@ -459,10 +459,25 @@
   </footer>
 
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  // Lead tracking (GA4)
+  function trackLead(method, label){
+    try{
+      if (typeof gtag === "function") {
+        gtag("event", "generate_lead", {
+          method: method,
+          event_category: "lead",
+          event_label: label
+        });
+      }
+    } catch(e){}
+    return true; // allow the click to continue
+  }
+</script>
 </body>
 </html>
+
 
 
 
