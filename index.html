@@ -1,59 +1,333 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <title>Rubinox Metal and Alloys | Metal Supplier in Mumbai</title>
-  <meta name="description" content="Rubinox Metal and Alloys is a leading stockist, supplier, trader, importer and exporter of Stainless Steel, Aluminium, Copper, Brass, Carbon Steel, Mild Steel, Nickel Alloys, Duplex & Super Duplex, SMO 254, Titanium and more in Mumbai.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Rubinox Metal and Alloys | Metal Stockist & Supplier in Mumbai</title>
+  <meta name="description" content="Rubinox Metal and Alloys (Mumbai) is a stockist, supplier, trader, importer and exporter of Stainless Steel, Aluminium, Copper, Brass, Carbon Steel, Mild Steel, Nickel Alloys, Duplex/Super Duplex, 254 SMO, Titanium and Phosphor Bronze." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://rubinoxmetal.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Rubinox Metal and Alloys | Metal Supplier in Mumbai" />
+  <meta property="og:description" content="Stockist, supplier, trader, importer & exporter of ferrous and non-ferrous metals in Mumbai (Kalbadevi)." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rubinoxmetal.com/" />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1b33;
+      --text:#e8eefc;
+      --muted:#b9c6e6;
+      --line:rgba(255,255,255,.12);
+      --accent:#4f8cff;
+      --accent2:#19c37d;
+      --white:#fff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:#0b1220;
+      background:#f6f8fc;
+    }
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+    header{
+      position:sticky;top:0;z-index:10;
+      background:rgba(255,255,255,.85);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid #e6ecf8;
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 0;
+    }
+    .brand{
+      display:flex;gap:10px;align-items:center;text-decoration:none;
+      font-weight:800;letter-spacing:.2px
+    }
+    .logo{
+      width:36px;height:36px;border-radius:12px;
+      background:linear-gradient(135deg,var(--accent),#7aa7ff);
+      display:grid;place-items:center;color:#fff;font-weight:900;
+      box-shadow:0 10px 30px rgba(79,140,255,.25);
+    }
+    .navlinks{display:flex;gap:14px;align-items:center}
+    .navlinks a{
+      text-decoration:none;
+      padding:8px 10px;border-radius:10px;
+      color:#1b2b52;font-weight:600;font-size:14px;
+    }
+    .navlinks a:hover{background:#eef4ff}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:11px 14px;border-radius:12px;
+      text-decoration:none;font-weight:800;font-size:14px;
+      border:1px solid transparent;
+      gap:8px;
+    }
+    .btn.primary{background:var(--accent);color:#fff;box-shadow:0 12px 30px rgba(79,140,255,.25)}
+    .btn.primary:hover{filter:brightness(.95)}
+    .btn.ghost{background:#fff;border-color:#dbe6ff;color:#1b2b52}
+    .btn.ghost:hover{background:#f4f8ff}
+    .hero{
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(79,140,255,.28), transparent 60%),
+                  radial-gradient(900px 500px at 90% 20%, rgba(25,195,125,.18), transparent 60%),
+                  linear-gradient(180deg, var(--bg), #0b1630 70%, #071225);
+      color:var(--text);
+      padding:56px 0 40px;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .heroGrid{
+      display:grid;gap:22px;
+      grid-template-columns: 1.25fr .75fr;
+      align-items:stretch;
+    }
+    h1{margin:0;font-size:38px;line-height:1.15;letter-spacing:-.3px}
+    .lead{margin:12px 0 0;color:var(--muted);max-width:62ch;font-size:16px;line-height:1.6}
+    .pillRow{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+    .pill{
+      display:inline-flex;gap:8px;align-items:center;
+      padding:8px 10px;border-radius:999px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      color:var(--text);font-weight:700;font-size:12px;
+    }
+    .heroCard{
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:18px;
+      padding:18px;
+    }
+    .heroCard h3{margin:0 0 10px;font-size:16px}
+    .heroCard p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
+    .ctaRow{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+    .section{padding:34px 0}
+    .cards{
+      display:grid;gap:14px;
+      grid-template-columns: repeat(3,1fr);
+    }
+    .card{
+      background:#fff;border:1px solid #e6ecf8;border-radius:18px;
+      padding:16px;box-shadow:0 10px 30px rgba(15,30,60,.06);
+    }
+    .card h3{margin:0 0 8px;font-size:16px}
+    .card p{margin:0;color:#566b9a;font-size:13px;line-height:1.6}
+    .grid2{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+    ul.clean{margin:10px 0 0;padding-left:18px;color:#566b9a}
+    ul.clean li{margin:6px 0}
+    .kpi{
+      display:grid;gap:10px;
+      grid-template-columns: repeat(3,1fr);
+      margin-top:14px;
+    }
+    .kpi .box{
+      background:#fff;border:1px solid #e6ecf8;border-radius:16px;
+      padding:14px;
+    }
+    .kpi .num{font-weight:900;font-size:18px;color:#132a63}
+    .kpi .lbl{color:#566b9a;font-size:12px;margin-top:4px}
+    footer{
+      background:#fff;border-top:1px solid #e6ecf8;
+      padding:22px 0;color:#566b9a;font-size:13px;
+    }
+    .floatWA{
+      position:fixed;right:16px;bottom:16px;z-index:50;
+      background:#25D366;color:#fff;text-decoration:none;
+      padding:12px 14px;border-radius:999px;font-weight:900;
+      box-shadow:0 16px 35px rgba(37,211,102,.25);
+    }
+    .floatWA:hover{filter:brightness(.95)}
+    @media (max-width: 900px){
+      .heroGrid{grid-template-columns:1fr}
+      h1{font-size:32px}
+      .cards{grid-template-columns:1fr}
+      .grid2{grid-template-columns:1fr}
+      .kpi{grid-template-columns:1fr}
+    }
+  </style>
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Rubinox Metal and Alloys",
+    "url":"https://rubinoxmetal.com/",
+    "telephone":"+91 9363193755",
+    "email":"tarun@rubinoxmetal.com",
+    "foundingDate":"2026",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"A-206, 2nd floor, C.S. No. 2251 to 2255, Krishvi Escape, Sitaram Poddar Marg, near Vinay Hotel, Kalbadevi",
+      "addressLocality":"Mumbai",
+      "addressRegion":"Maharashtra",
+      "postalCode":"400002",
+      "addressCountry":"IN"
+    },
+    "areaServed":["Mumbai","Navi Mumbai","Thane","Maharashtra","India"]
+  }
+  </script>
 </head>
 
-<body style="font-family: Arial; margin:0; padding:0;">
+<body>
+  <header>
+    <div class="wrap">
+      <div class="nav">
+        <a class="brand" href="/">
+          <div class="logo">R</div>
+          <div>Rubinox Metal &amp; Alloys</div>
+        </a>
+        <div class="navlinks">
+          <a href="#materials">Materials</a>
+          <a href="#forms">Forms</a>
+          <a href="#contact">Contact</a>
+          <a class="btn primary" href="https://wa.me/919363193755" target="_blank" rel="noopener">WhatsApp Quote</a>
+        </div>
+      </div>
+    </div>
+  </header>
 
-  <div style="background:#1f2937; color:white; padding:20px;">
-    <h1>Rubinox Metal and Alloys</h1>
-    <p>Stockist | Supplier | Importer | Exporter</p>
-    <p>Kalbadevi, Mumbai – 400002</p>
-    <p>Call: +91 9363193755</p>
-  </div>
+  <section class="hero">
+    <div class="wrap">
+      <div class="heroGrid">
+        <div>
+          <h1>Metal Stockist &amp; Supplier in Mumbai (Kalbadevi)</h1>
+          <p class="lead">
+            Rubinox Metal and Alloys (Started 2026) is a stockist, supplier, trader, importer and exporter of
+            ferrous and non-ferrous metals across multiple grades and product forms.
+          </p>
 
-  <div style="padding:20px;">
-    <h2>Welcome to Rubinox Metal and Alloys</h2>
-    <p>We are leading suppliers of ferrous and non-ferrous metals in Mumbai.</p>
+          <div class="pillRow">
+            <span class="pill">✔ Fast Quotation</span>
+            <span class="pill">✔ Multiple Grades</span>
+            <span class="pill">✔ Pipes • Plates • Coils</span>
+            <span class="pill">✔ Import/Export Support</span>
+          </div>
 
-    <h3>Our Materials</h3>
-    <ul>
-      <li>Stainless Steel</li>
-      <li>Aluminium</li>
-      <li>Copper</li>
-      <li>Brass</li>
-      <li>Carbon Steel</li>
-      <li>Mild Steel</li>
-      <li>Nickel Alloys (Inconel, Monel, Hastelloy, Incoloy)</li>
-      <li>Duplex & Super Duplex</li>
-      <li>SMO 254</li>
-      <li>Titanium</li>
-      <li>Phosphor Bronze</li>
-    </ul>
+          <div class="ctaRow">
+            <a class="btn primary" href="https://wa.me/919363193755" target="_blank" rel="noopener">Get Quote on WhatsApp</a>
+            <a class="btn ghost" href="#contact">Call / Email</a>
+          </div>
 
-    <h3>Product Forms</h3>
-    <ul>
-      <li>Pipes & Tubes</li>
-      <li>Sheets & Plates</li>
-      <li>Coils</li>
-      <li>Flanges</li>
-      <li>Fittings</li>
-      <li>Fasteners</li>
-      <li>Bars & Rods</li>
-      <li>Angles & Channels</li>
-      <li>Flats</li>
-      <li>Circles</li>
-      <li>Wire Mesh</li>
-    </ul>
+          <div class="kpi">
+            <div class="box">
+              <div class="num">Mumbai</div>
+              <div class="lbl">Kalbadevi – 400002</div>
+            </div>
+            <div class="box">
+              <div class="num">2026</div>
+              <div class="lbl">Started Business</div>
+            </div>
+            <div class="box">
+              <div class="num">All Forms</div>
+              <div class="lbl">Pipes, Plates, Coils &amp; More</div>
+            </div>
+          </div>
+        </div>
 
-    <h3>Contact Us</h3>
-    <p>Email: tarun@rubinoxmetal.com</p>
-    <p><a href="https://wa.me/919363193755">Click here to WhatsApp us</a></p>
+        <div class="heroCard">
+          <h3>Send these details for fastest quotation</h3>
+          <p>✅ Material + grade/spec</p>
+          <p>✅ Size (OD/ID/Thk/Length)</p>
+          <p>✅ Quantity</p>
+          <p>✅ Delivery location</p>
+          <p style="margin-top:10px"><b>Email:</b> tarun@rubinoxmetal.com</p>
+          <p><b>Call:</b> +91 9363193755</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  </div>
+  <section class="section" id="materials">
+    <div class="wrap">
+      <h2 style="margin:0 0 10px;color:#132a63">Materials We Supply</h2>
+      <div class="cards">
+        <div class="card"><h3>Stainless Steel</h3><p>200/300 series, 400 series, Duplex &amp; PH grades.</p></div>
+        <div class="card"><h3>Aluminium</h3><p>1000–8000 series alloys including 6061, 6063, 7075 etc.</p></div>
+        <div class="card"><h3>Copper &amp; Brass</h3><p>C101/C110/C122, C260, C360 and more.</p></div>
+        <div class="card"><h3>Carbon &amp; Mild Steel</h3><p>A36, 1018, 1020, A516 Gr 70 and others.</p></div>
+        <div class="card"><h3>Nickel Alloys</h3><p>Inconel, Monel, Hastelloy, Incoloy (various grades).</p></div>
+        <div class="card"><h3>Special Alloys</h3><p>Duplex/Super Duplex, SMO 254, Titanium, Phosphor Bronze.</p></div>
+      </div>
+    </div>
+  </section>
 
+  <section class="section" id="forms">
+    <div class="wrap">
+      <h2 style="margin:0 0 10px;color:#132a63">Product Forms Available</h2>
+      <div class="grid2">
+        <div class="card">
+          <h3>Standard Forms</h3>
+          <ul class="clean">
+            <li>Pipes &amp; Tubes</li>
+            <li>Sheets &amp; Plates</li>
+            <li>Coils</li>
+            <li>Flanges</li>
+            <li>Fittings</li>
+            <li>Fasteners</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Structural &amp; Other</h3>
+          <ul class="clean">
+            <li>Bars &amp; Rods</li>
+            <li>Angles &amp; Channels</li>
+            <li>Flats</li>
+            <li>Circles</li>
+            <li>Wire Mesh</li>
+            <li>Other ferrous &amp; non-ferrous metals</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap">
+      <h2 style="margin:0 0 10px;color:#132a63">Contact</h2>
+      <div class="grid2">
+        <div class="card">
+          <h3>Rubinox Metal and Alloys</h3>
+          <p style="margin:0;color:#566b9a;line-height:1.7">
+            A-206, 2nd floor, C.S. No. 2251 to 2255, Krishvi Escape,<br/>
+            Sitaram Poddar Marg, near Vinay Hotel, Kalbadevi,<br/>
+            Mumbai – 400002, Maharashtra, India
+          </p>
+          <p style="margin-top:10px;color:#566b9a">
+            <b>Phone:</b> +91 9363193755<br/>
+            <b>Email:</b> tarun@rubinoxmetal.com
+          </p>
+        </div>
+        <div class="card">
+          <h3>Quick Actions</h3>
+          <p style="color:#566b9a">Click to request quotation:</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
+            <a class="btn primary" href="https://wa.me/919363193755" target="_blank" rel="noopener">WhatsApp Quote</a>
+            <a class="btn ghost" href="mailto:tarun@rubinoxmetal.com?subject=Quotation%20Request%20-%20Rubinox">Email</a>
+            <a class="btn ghost" href="tel:+919363193755">Call Now</a>
+          </div>
+          <p style="margin-top:12px;color:#566b9a;font-size:12px">
+            Tip: Send material + grade + size + quantity for fastest response.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a class="floatWA" href="https://wa.me/919363193755" target="_blank" rel="noopener">WhatsApp</a>
+
+  <footer>
+    <div class="wrap">
+      © <span id="y"></span> Rubinox Metal and Alloys • Mumbai, India
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
