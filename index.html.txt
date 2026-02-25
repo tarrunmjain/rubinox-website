@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rubinox Metal and Alloys | Metal Supplier in Mumbai</title>
+  <meta name="description" content="Rubinox Metal and Alloys is a leading stockist, supplier, trader, importer and exporter of Stainless Steel, Aluminium, Copper, Brass, Carbon Steel, Mild Steel, Nickel Alloys, Duplex & Super Duplex, SMO 254, Titanium and more in Mumbai.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="font-family: Arial; margin:0; padding:0;">
+
+  <div style="background:#1f2937; color:white; padding:20px;">
+    <h1>Rubinox Metal and Alloys</h1>
+    <p>Stockist | Supplier | Importer | Exporter</p>
+    <p>Kalbadevi, Mumbai – 400002</p>
+    <p>Call: +91 9363193755</p>
+  </div>
+
+  <div style="padding:20px;">
+    <h2>Welcome to Rubinox Metal and Alloys</h2>
+    <p>We are leading suppliers of ferrous and non-ferrous metals in Mumbai.</p>
+
+    <h3>Our Materials</h3>
+    <ul>
+      <li>Stainless Steel</li>
+      <li>Aluminium</li>
+      <li>Copper</li>
+      <li>Brass</li>
+      <li>Carbon Steel</li>
+      <li>Mild Steel</li>
+      <li>Nickel Alloys (Inconel, Monel, Hastelloy, Incoloy)</li>
+      <li>Duplex & Super Duplex</li>
+      <li>SMO 254</li>
+      <li>Titanium</li>
+      <li>Phosphor Bronze</li>
+    </ul>
+
+    <h3>Product Forms</h3>
+    <ul>
+      <li>Pipes & Tubes</li>
+      <li>Sheets & Plates</li>
+      <li>Coils</li>
+      <li>Flanges</li>
+      <li>Fittings</li>
+      <li>Fasteners</li>
+      <li>Bars & Rods</li>
+      <li>Angles & Channels</li>
+      <li>Flats</li>
+      <li>Circles</li>
+      <li>Wire Mesh</li>
+    </ul>
+
+    <h3>Contact Us</h3>
+    <p>Email: tarun@rubinoxmetal.com</p>
+    <p><a href="https://wa.me/919363193755">Click here to WhatsApp us</a></p>
+
+  </div>
+
+</body>
+</html>
