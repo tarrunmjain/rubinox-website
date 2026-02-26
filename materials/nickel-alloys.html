@@ -17,7 +17,7 @@
     gtag('js', new Date());
     gtag('config', 'G-JT5X5L5H07');
 
-    // Track lead + allow safe navigation (WhatsApp opens fast, so we use callback)
+    // Track lead + safe navigation
     function trackLeadAndGo(method, label, url, newTab){
       try{
         if (typeof gtag === "function") {
@@ -53,8 +53,10 @@
     .card{background:#fff;border:1px solid #e6ecf8;border-radius:16px;padding:16px;margin-top:14px}
     h1{margin:0 0 10px;color:#132a63}
     h2{margin:0 0 10px;color:#132a63}
+    h3{margin:0 0 8px;color:#132a63}
     p{color:#566b9a;line-height:1.7;margin:0}
     ul{margin:0;padding-left:18px;color:#566b9a;line-height:1.8}
+    .grid2{display:grid;gap:14px;grid-template-columns:1fr 1fr;margin-top:14px}
     .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
     .btn{
       display:inline-block;
@@ -66,6 +68,9 @@
     }
     .btn.primary{background:#4f8cff;color:#fff}
     .btn.ghost{background:#fff;border-color:#dbe6ff;color:#132a63}
+    @media (max-width: 900px){
+      .grid2{grid-template-columns:1fr}
+    }
   </style>
 </head>
 
@@ -85,18 +90,50 @@
       We supply Inconel 600/625/718, Monel 400/K-500, Hastelloy C-276 and Incoloy 800/825 in pipes, tubes, plates, sheets, coils, bars, rods, flanges, fittings and fasteners for corrosive and high-temperature industrial applications across India and global markets.
     </p>
 
+    <!-- Two-column: Grades + Applications -->
+    <div class="grid2">
+      <div class="card">
+        <h2 style="margin:0 0 10px;color:#132a63">Common Nickel Alloy Grades</h2>
+        <ul>
+          <li><b>Inconel:</b> 600, 625, 718</li>
+          <li><b>Monel:</b> 400, K-500</li>
+          <li><b>Hastelloy:</b> C-276</li>
+          <li><b>Incoloy:</b> 800, 825</li>
+          <li><b>Pure Nickel:</b> 200 / 201</li>
+        </ul>
+        <p style="margin-top:10px">
+          Available as per ASTM/ASME specifications and customer requirement.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2 style="margin:0 0 10px;color:#132a63">Typical Applications</h2>
+        <ul>
+          <li>Heat exchangers, condensers &amp; pressure vessels</li>
+          <li>Chemical &amp; petrochemical processing equipment</li>
+          <li>Marine &amp; offshore oil &amp; gas components</li>
+          <li>High-temperature furnace parts &amp; fasteners</li>
+          <li>Corrosion-resistant piping &amp; tubing systems</li>
+        </ul>
+        <p style="margin-top:10px">
+          Tell us your service conditions (temperature / corrosion / media) for the right grade suggestion.
+        </p>
+      </div>
+    </div>
+
+    <!-- Popular grades + CTA -->
     <div class="card">
       <h2>Popular Nickel Alloy Grades We Supply</h2>
-      <ul>
-        <li><b>Inconel:</b> 600, 625, 718</li>
-        <li><b>Monel:</b> 400, K-500</li>
-        <li><b>Hastelloy:</b> C-276</li>
-        <li><b>Incoloy:</b> 800, 825</li>
-        <li><b>Pure Nickel:</b> Nickel 200 / 201</li>
-      </ul>
-      <p style="margin-top:10px">
-        Available in pipes, tubes, sheets, plates, coils, bars/rods, flanges, fittings and fasteners as per ASTM/ASME specifications.
+      <p style="margin-bottom:10px">
+        Fast availability for common project grades:
       </p>
+      <ul>
+        <li><b>Inconel 625</b> (UNS N06625)</li>
+        <li><b>Inconel 718</b> (UNS N07718)</li>
+        <li><b>Monel 400</b> (UNS N04400)</li>
+        <li><b>Hastelloy C-276</b> (UNS N10276)</li>
+        <li><b>Incoloy 825</b> (UNS N08825)</li>
+      </ul>
 
       <div class="btnrow">
         <a class="btn primary"
