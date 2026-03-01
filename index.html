@@ -173,14 +173,18 @@
       text-underline-offset:3px;
     }
     #seo-links a:hover{opacity:.85;}
-    /* Fix button stretching inside cards */
-.card .btn {
-  width: auto;
-  display: inline-flex;
+   /* Contact buttons only (safe) */
+#contact .btn{
+  display:inline-flex;
+  width:auto;
+  flex:0 0 auto;
 }
 
-.card div[style*="display:flex"] {
-  align-items: flex-start;
+#contact .btnrow{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:flex-start;
 }
     
     /* Contact section balance */
@@ -789,6 +793,7 @@ Kochi • Mangalore • Goa • Kandla
 </script>
 </body>
 </html>
+
 
 
 
