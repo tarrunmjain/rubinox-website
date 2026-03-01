@@ -653,56 +653,42 @@
   </div>
 </section>
   
-  <section class="section" id="contact">
+ <section class="section" id="contact">
   <div class="wrap">
     <h2 style="margin:0 0 10px;color:#132a63">Contact</h2>
 
-    <div class="grid2">
-      <!-- LEFT CARD -->
-   <div class="card">
-  <h3>Rubinox Metal and Alloys</h3>
+    <div class="grid2" style="align-items:stretch">
+      <!-- LEFT CARD (MAP + ADDRESS) -->
+      <div class="card" style="display:flex;flex-direction:column">
+        <h3 style="margin:0 0 10px">Rubinox Metal and Alloys</h3>
 
-  <!-- MAP -->
-  <div style="margin-top:14px;border-radius:12px;overflow:hidden;border:1px solid #e6ecf8">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.5248003740903!2d72.82250807373288!3d18.952416655843518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf76c0f530a9%3A0x56b5e47b6f039bba!2sKrishvi%20Escape!5e0!3m2!1sen!2sin!4v1772279474781!5m2!1sen!2sin"
-      width="100%"
-      height="240"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid #e6ecf8">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.5248003740903!2d72.82250807373288!3d18.952416655843518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf76c0f530a9%3A0x56b5e47b6f039bba!2sKrishvi%20Escape!5e0!3m2!1sen!2sin!4v1772279474781!5m2!1sen!2sin"
+            width="100%"
+            height="240"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
 
-  <!-- ADDRESS -->
-  <p style="margin-top:14px;color:#566b9a;line-height:1.7">
-    A-206, 2nd floor, C.S. No. 2251 to 2255, Krishvi Escape,<br/>
-    Sitaram Poddar Marg, near Vinay Hotel, Kalbadevi,<br/>
-    Mumbai – 400002, Maharashtra, India
-  </p>
+        <p style="margin:14px 0 0;color:#566b9a;line-height:1.7">
+          A-206, 2nd floor, C.S. No. 2251 to 2255, Krishvi Escape,<br/>
+          Sitaram Poddar Marg, near Vinay Hotel, Kalbadevi,<br/>
+          Mumbai – 400002, Maharashtra, India
+        </p>
 
-  <!-- CONTACT DETAILS -->
-  <p style="margin-top:10px;color:#566b9a;line-height:1.7">
-    <b>Phone:</b>
-    <a href="tel:+919363193755" onclick="return trackLead('call','contact_call')">
-      +91 9363193755
-    </a><br/>
-
-    <b>Email:</b>
-    <a href="mailto:tarun@rubinoxmetal.com?subject=Enquiry%20-%20Rubinox" onclick="return trackLead('email','contact_email')">
-      tarun@rubinoxmetal.com
-    </a><br/>
-
-    <b>Google Maps:</b>
-    <a href="https://www.google.com/maps/search/?api=1&query=Krishvi%20Escape%2C%20Sitaram%20Poddar%20Marg%2C%20Kalbadevi%2C%20Mumbai%20400002"
-       target="_blank"
-       rel="noopener"
-       onclick="return trackLead('maps','contact_maps')">
-       Open Location
-    </a>
-  </p>
-</div>
+        <p style="margin:10px 0 0;color:#566b9a;line-height:1.7">
+          <b>Phone:</b>
+          <a href="tel:+919363193755" onclick="return trackLead('call','contact_call')">+91 9363193755</a><br/>
+          <b>Email:</b>
+          <a href="mailto:tarun@rubinoxmetal.com?subject=Enquiry%20-%20Rubinox" onclick="return trackLead('email','contact_email')">tarun@rubinoxmetal.com</a><br/>
+          <b>Google Maps:</b>
+          <a href="https://www.google.com/maps/search/?api=1&query=Krishvi%20Escape%2C%20Sitaram%20Poddar%20Marg%2C%20Kalbadevi%2C%20Mumbai%20400002"
+             target="_blank" rel="noopener"
+             onclick="return trackLead('maps','contact_maps')">Open Location</a>
+        </p>
 
         <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
           <a class="btn primary"
@@ -717,59 +703,48 @@
         </div>
       </div>
 
-      <!-- RIGHT CARD (Premium Layout) -->
-<div class="card">
-  <h3 style="margin:0 0 6px">Quick Actions</h3>
-  <p style="color:#566b9a;margin:0;line-height:1.7">
-    Get a fast quotation by WhatsApp / Email / Call.
-  </p>
+      <!-- RIGHT CARD (PREMIUM QUICK ACTIONS — NOT TINY) -->
+      <div class="card" style="display:flex;flex-direction:column;justify-content:space-between">
+        <div>
+          <h3 style="margin:0 0 6px">Quick Actions</h3>
+          <p style="color:#566b9a;margin:0;line-height:1.7">
+            Fast quotation for PAN India supply and export orders.
+          </p>
 
-  <div class="btnrow" style="margin-top:14px">
-    <a class="btn primary"
-       href="https://wa.me/919363193755"
-       target="_blank"
-       rel="noopener"
-       onclick="return trackLead('whatsapp','contact_whatsapp_2')">
-       WhatsApp Quote
-    </a>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+            <a class="btn primary"
+               href="https://wa.me/919363193755"
+               target="_blank"
+               rel="noopener"
+               onclick="return trackLead('whatsapp','contact_whatsapp_2')">WhatsApp Quote</a>
 
-    <a class="btn ghost"
-       href="mailto:tarun@rubinoxmetal.com?subject=Quotation%20Request%20-%20Rubinox"
-       onclick="return trackLead('email','contact_email_2')">
-       Email RFQ
-    </a>
+            <a class="btn ghost"
+               href="mailto:tarun@rubinoxmetal.com?subject=Quotation%20Request%20-%20Rubinox"
+               onclick="return trackLead('email','contact_email_2')">Email RFQ</a>
 
-    <a class="btn ghost"
-       href="tel:+919363193755"
-       onclick="return trackLead('call','contact_call_2')">
-       Call Now
-    </a>
+            <a class="btn ghost"
+               href="tel:+919363193755"
+               onclick="return trackLead('call','contact_call_2')">Call Now</a>
+          </div>
 
-    <a class="btn ghost"
-       href="/quotation.html"
-       onclick="return trackLead('navigation','contact_quote_page_2')">
-       Quotation Page
-    </a>
-  </div>
+          <div style="margin-top:16px;background:#eef4ff;border:1px solid #dbe6ff;border-radius:14px;padding:14px">
+            <h4 style="margin:0 0 8px;color:#132a63;font-size:14px">
+              Send these details for fastest quotation
+            </h4>
+            <ul style="margin:0;padding-left:18px;color:#566b9a;line-height:1.8">
+              <li><b>Material + Grade/Spec</b> (SS / Duplex / Inconel / etc.)</li>
+              <li><b>Size</b> (OD/ID/Thk/Length)</li>
+              <li><b>Quantity</b></li>
+              <li><b>Delivery location</b></li>
+            </ul>
+          </div>
+        </div>
 
-  <!-- Enquiry checklist -->
-  <div style="margin-top:16px;background:#eef4ff;border:1px solid #dbe6ff;border-radius:14px;padding:14px">
-    <h4 style="margin:0 0 8px;color:#132a63;font-size:14px">Send these details for fastest quotation</h4>
-    <ul style="margin:0;padding-left:18px;color:#566b9a;line-height:1.8">
-      <li><b>Material + Grade/Spec</b> (ex: SS 316 / Inconel 625 / Duplex 2205)</li>
-      <li><b>Size</b> (OD/ID/Thk/Length)</li>
-      <li><b>Quantity</b></li>
-      <li><b>Delivery location</b></li>
-    </ul>
-  </div>
-
-  <!-- Trust line -->
-  <div style="margin-top:14px;border-top:1px solid #e6ecf8;padding-top:12px">
-    <p style="margin:0;color:#566b9a;line-height:1.7;font-size:13px">
-      ✅ PAN India supply • ✅ Bulk & project orders • ✅ Export documentation support
-    </p>
-  </div>
-</div>
+        <p style="margin:14px 0 0;color:#566b9a;font-size:13px;line-height:1.7">
+          ✅ PAN India supply • ✅ Bulk & project orders • ✅ Export documentation support
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -824,6 +799,7 @@ Kochi • Mangalore • Goa • Kandla
 </script>
 </body>
 </html>
+
 
 
 
