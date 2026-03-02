@@ -142,6 +142,28 @@
     .grid2{display:grid;gap:14px;grid-template-columns:1fr 1fr;margin-top:14px}
     .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 
+.relGrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:12px;
+  margin-top:10px;
+}
+.relItem{
+  display:block;
+  text-decoration:none;
+  padding:12px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#f9fbff;
+}
+.relItem strong{color:#132a63}
+.relItem span{
+  display:block;
+  color:var(--muted);
+  margin-top:4px;
+  font-size:13px;
+}
+    
     @media (max-width:900px){
       .grid2{grid-template-columns:1fr}
       h1{font-size:28px}
