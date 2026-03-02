@@ -19,13 +19,11 @@
   <meta property="og:description" content="Stockist, supplier, trader, importer & exporter of stainless steel, nickel alloys, duplex, 254 SMO and industrial metals. PAN India supply + export support." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://rubinoxmetal.com/" />
-  <!-- <meta property="og:image" content="https://rubinoxmetal.com/og-image.jpg" /> -->
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Rubinox Metal and Alloys | Metal Supplier in India" />
-  <meta name="twitter:description" content="Stainless steel, nickel alloys, duplex/super-duplex, 254 SMO, titanium & industrial metals. PAN India supply + exports." />
-  <!-- <meta name="twitter:image" content="https://rubinoxmetal.com/og-image.jpg" /> -->
+  <meta name="twitter:description" content="Stainless steel, nickel alloys, duplex/super duplex, 254 SMO, titanium & industrial metals. PAN India supply + exports." />
 
   <style>
     :root{
@@ -33,12 +31,18 @@
       --text:#e8eefc;
       --muted:#b9c6e6;
       --accent:#4f8cff;
+
+      --line:#e6ecf8;
+      --ink:#0b1220;
+      --ink2:#132a63;
+      --muted2:#566b9a;
+      --card:#ffffff;
     }
     *{box-sizing:border-box}
     body{
       margin:0;
       font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      color:#0b1220;
+      color:var(--ink);
       background:#f6f8fc;
     }
     a{color:inherit}
@@ -48,7 +52,7 @@
       position:sticky;top:0;z-index:10;
       background:rgba(255,255,255,.85);
       backdrop-filter: blur(10px);
-      border-bottom:1px solid #e6ecf8;
+      border-bottom:1px solid var(--line);
     }
     .nav{
       display:flex;align-items:center;justify-content:space-between;
@@ -80,6 +84,7 @@
     .btn.ghost{background:#fff;border-color:#dbe6ff;color:#1b2b52}
     .btn.ghost:hover{background:#f4f8ff}
 
+    /* HERO */
     .hero{
       background: radial-gradient(1200px 600px at 20% 0%, rgba(79,140,255,.28), transparent 60%),
                   radial-gradient(900px 500px at 90% 20%, rgba(25,195,125,.18), transparent 60%),
@@ -88,15 +93,12 @@
       padding:56px 0 40px;
       border-bottom:1px solid rgba(255,255,255,.08);
     }
-
-    /* ✅ hero columns same height */
     .heroGrid{
       display:grid;
       gap:22px;
       grid-template-columns: 1.25fr .75fr;
       align-items:stretch;
     }
-
     h1{margin:0;font-size:38px;line-height:1.15;letter-spacing:-.3px}
     .lead{margin:12px 0 0;color:var(--muted);max-width:62ch;font-size:16px;line-height:1.6}
     .pillRow{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
@@ -107,16 +109,26 @@
       border:1px solid rgba(255,255,255,.12);
       color:var(--text);font-weight:700;font-size:12px;
     }
+    .ctaRow{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
 
-    /* ✅ right hero column full height */
+    .kpi{
+      display:grid;gap:10px;
+      grid-template-columns: repeat(3,1fr);
+      margin-top:14px;
+    }
+    .kpi .box{
+      background:#fff;border:1px solid var(--line);border-radius:16px;
+      padding:14px;
+    }
+    .kpi .num{font-weight:900;font-size:18px;color:var(--ink2)}
+    .kpi .lbl{color:var(--muted2);font-size:12px;margin-top:4px}
+
     .heroRight{
       display:flex;
       flex-direction:column;
       height:100%;
       gap:14px;
     }
-
-    /* ✅ hero image fills remaining height */
     .heroMedia{
       flex:1;
       min-height:240px;
@@ -132,18 +144,18 @@
       display:block;
       object-fit:cover;
     }
-
     .heroCard{
       background:rgba(255,255,255,.06);
       border:1px solid rgba(255,255,255,.14);
       border-radius:18px;
       padding:18px;
     }
-    .heroCard h3{margin:0 0 10px;font-size:16px}
+    .heroCard h3{margin:0 0 10px;font-size:16px;color:var(--text)}
     .heroCard p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
-    .ctaRow{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
 
+    /* SECTIONS */
     .section{padding:34px 0}
+
     .cards{
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -152,71 +164,97 @@
     }
     .cards a{display:block;text-decoration:none;color:inherit}
     .card{
-      background:#fff;border:1px solid #e6ecf8;border-radius:18px;
-      padding:16px;box-shadow:0 10px 30px rgba(15,30,60,.06);
-      height:100%;min-height:120px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:16px;
+      box-shadow:0 10px 30px rgba(15,30,60,.06);
+      height:100%;
+      min-height:120px;
     }
     .card h3{margin:0 0 8px;font-size:16px}
-    .card p{margin:0;color:#566b9a;font-size:13px;line-height:1.6}
+    .card p{margin:0;color:var(--muted2);font-size:13px;line-height:1.6}
 
     .grid2{display:grid;gap:14px;grid-template-columns:1fr 1fr}
-    ul.clean{margin:10px 0 0;padding-left:18px;color:#566b9a}
+    ul.clean{margin:10px 0 0;padding-left:18px;color:var(--muted2)}
     ul.clean li{margin:6px 0}
 
-    .kpi{
-      display:grid;gap:10px;
-      grid-template-columns: repeat(3,1fr);
-      margin-top:14px;
-    }
-    .kpi .box{
-      background:#fff;border:1px solid #e6ecf8;border-radius:16px;
-      padding:14px;
-    }
-    .kpi .num{font-weight:900;font-size:18px;color:#132a63}
-    .kpi .lbl{color:#566b9a;font-size:12px;margin-top:4px}
-
     footer{
-      background:#fff;border-top:1px solid #e6ecf8;
-      padding:22px 0;color:#566b9a;font-size:13px;
+      background:#fff;border-top:1px solid var(--line);
+      padding:22px 0;color:var(--muted2);font-size:13px;
     }
 
     #seo-links a{
-      color:#132a63;
+      color:var(--ink2);
       font-weight:800;
       text-decoration:underline;
       text-underline-offset:3px;
     }
     #seo-links a:hover{opacity:.85;}
 
-    /* Contact section buttons (safe) */
-    #contact .btn{display:inline-flex;width:auto;flex:0 0 auto}
-    #contact .btnrow{
-      display:flex;gap:10px;flex-wrap:wrap;align-items:flex-start;
+    /* PRODUCT FORMS - 3 IMAGE CARDS + CHIPS */
+    .formsGrid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:16px;
+      align-items:stretch;
+      margin-top:12px;
     }
-    #contact .grid2{align-items:stretch}
-
-    /* ✅ NEW: compact form chips (extra forms without clutter) */
-    .formChips{
+    .formCard{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 10px 30px rgba(15,30,60,.06);
+      height:100%;
+      display:flex;
+      flex-direction:column;
+    }
+    .formImg{
+      height:150px;
+      width:100%;
+      display:block;
+      object-fit:cover;
+    }
+    .formBody{
+      padding:14px 16px 16px;
+    }
+    .formTitle{
+      margin:0 0 6px;
+      color:var(--ink2);
+      font-size:16px;
+      font-weight:900;
+    }
+    .formDesc{
+      margin:0;
+      color:var(--muted2);
+      font-size:13px;
+      line-height:1.6;
+    }
+    .chipRow{
       display:flex;
       gap:10px;
       flex-wrap:wrap;
-      margin-top:12px;
+      margin-top:14px;
     }
-    .formChip{
+    .chip{
       display:inline-flex;
       align-items:center;
       gap:8px;
-      padding:8px 12px;
+      padding:9px 12px;
       border-radius:999px;
-      border:1px solid #dbe6ff;
       background:#fff;
-      color:#132a63;
+      border:1px solid #dbe6ff;
+      color:#1b2b52;
       font-weight:800;
       font-size:13px;
-      text-decoration:none;
-      box-shadow:0 8px 18px rgba(15,30,60,.05);
+      box-shadow:0 10px 22px rgba(15,30,60,.05);
+      white-space:nowrap;
     }
-    .formChip:hover{background:#f4f8ff}
+
+    /* Contact section buttons (safe) */
+    #contact .btn{display:inline-flex;width:auto;flex:0 0 auto}
+    #contact .grid2{align-items:stretch}
 
     @media (max-width: 900px){
       .heroGrid{grid-template-columns:1fr}
@@ -226,6 +264,10 @@
       .nav{align-items:flex-start}
       .navlinks{gap:10px}
       .heroMedia{min-height:220px}
+
+      .formsGrid{grid-template-columns:1fr}
+      .formImg{height:170px}
+      .chipRow{gap:8px}
     }
   </style>
 
@@ -304,6 +346,7 @@
     </div>
   </header>
 
+  <!-- HERO -->
   <section class="hero">
     <div class="wrap">
       <div class="heroGrid">
@@ -352,7 +395,6 @@
         <!-- RIGHT -->
         <div class="heroRight">
           <div class="heroMedia">
-            <!-- ✅ Your uploaded image path -->
             <img src="/assets/hero-metal.png" alt="Stainless steel, pipes, sheets and industrial metal stock">
           </div>
 
@@ -370,20 +412,22 @@
     </div>
   </section>
 
+  <!-- SEO LINKS -->
   <section class="section" id="seo-links">
     <div class="wrap">
       <p style="color:#566b9a;line-height:1.8;font-size:15px">
         We specialize in the supply of
-        <a href="/materials/stainless-steel.html">Stainless Steel 304 & 316 Supplier in India</a>,
-        <a href="/materials/nickel-alloys.html">Inconel 625, Inconel 718, Monel 400 & Hastelloy C276 Supplier</a>,
-        <a href="/materials/duplex-super-duplex.html">Duplex 2205 & Super Duplex 2507 Stockist</a>,
-        <a href="/materials/titanium.html">Titanium Grade 2 & Grade 5 Supplier</a>,
+        <a href="/materials/stainless-steel.html">Stainless Steel 304 &amp; 316 Supplier in India</a>,
+        <a href="/materials/nickel-alloys.html">Inconel 625, Inconel 718, Monel 400 &amp; Hastelloy C276 Supplier</a>,
+        <a href="/materials/duplex-super-duplex.html">Duplex 2205 &amp; Super Duplex 2507 Stockist</a>,
+        <a href="/materials/titanium.html">Titanium Grade 2 &amp; Grade 5 Supplier</a>,
         <a href="/materials/smo-254.html">SMO 254 (UNS S31254) Supplier</a>
         in pipes, tubes, sheets, plates, coils, flanges and fittings for industrial applications across India and global markets.
       </p>
     </div>
   </section>
 
+  <!-- MATERIALS -->
   <section class="section" id="materials">
     <div class="wrap">
       <h2 style="margin:0 0 10px;color:#132a63">Materials We Supply</h2>
@@ -404,19 +448,21 @@
     </div>
   </section>
 
+  <!-- WHY CHOOSE -->
   <section class="section">
     <div class="wrap">
-      <h2 style="margin:0 0 10px;color:#132a63">Why Choose Rubinox Metal & Alloys?</h2>
+      <h2 style="margin:0 0 10px;color:#132a63">Why Choose Rubinox Metal &amp; Alloys?</h2>
 
       <div class="grid2">
         <div class="card"><h3>Wide Range of Grades</h3><p>Stainless steel, duplex, nickel alloys, SMO 254, titanium and other industrial metals in multiple grades and specifications.</p></div>
-        <div class="card"><h3>Bulk & Project Supply</h3><p>Serving fabrication units, EPC contractors, oil & gas, chemical, marine and infrastructure industries.</p></div>
+        <div class="card"><h3>Bulk &amp; Project Supply</h3><p>Serving fabrication units, EPC contractors, oil &amp; gas, chemical, marine and infrastructure industries.</p></div>
         <div class="card"><h3>Fast Quotation Support</h3><p>Quick response for urgent, bulk and project-based enquiries.</p></div>
-        <div class="card"><h3>Export & Logistics Support</h3><p>International shipping coordination and complete export documentation assistance.</p></div>
+        <div class="card"><h3>Export &amp; Logistics Support</h3><p>International shipping coordination and complete export documentation assistance.</p></div>
       </div>
     </div>
   </section>
 
+  <!-- MID CTA -->
   <section class="section" style="background:#eef4ff">
     <div class="wrap" style="text-align:center">
       <h2 style="margin:0 0 10px;color:#132a63">Need Stainless Steel or Special Alloy for Your Project?</h2>
@@ -440,67 +486,77 @@
     </div>
   </section>
 
+  <!-- PAN INDIA + EXPORT -->
   <section class="section">
     <div class="wrap">
-      <h2 style="margin:0 0 10px;color:#132a63">PAN India Supply & Global Export</h2>
+      <h2 style="margin:0 0 10px;color:#132a63">PAN India Supply &amp; Global Export</h2>
 
       <div class="grid2">
         <div class="card">
           <h3>Serving Across India</h3>
           <ul class="clean">
             <li>Mumbai, Delhi, Chennai, Ahmedabad, Kolkata</li>
-            <li>Industrial zones & fabrication hubs</li>
-            <li>Fast dispatch & reliable logistics</li>
-            <li>Bulk & project-based supply</li>
+            <li>Industrial zones &amp; fabrication hubs</li>
+            <li>Fast dispatch &amp; reliable logistics</li>
+            <li>Bulk &amp; project-based supply</li>
           </ul>
         </div>
 
         <div class="card">
           <h3>International Export Support</h3>
           <ul class="clean">
-            <li>Middle East, Asia & European markets</li>
+            <li>Middle East, Asia &amp; European markets</li>
             <li>Export documentation support</li>
-            <li>Custom packaging & bulk shipping</li>
-            <li>Container & air freight coordination</li>
+            <li>Custom packaging &amp; bulk shipping</li>
+            <li>Container &amp; air freight coordination</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ✅ FORMS section (3 cards + chips) -->
+  <!-- ✅ PRODUCT FORMS (3 IMAGE CARDS + CHIPS) -->
   <section class="section" id="forms">
     <div class="wrap">
       <h2 style="margin:0 0 10px;color:#132a63">Product Forms Available</h2>
 
-      <div class="grid2">
-        <div class="card">
-          <h3>Pipes &amp; Tubes</h3>
-          <p>ERW / Seamless / Welded options across multiple grades and standards.</p>
+      <div class="formsGrid">
+        <div class="formCard">
+          <img class="formImg" src="/assets/form-pipes.png" alt="Pipes and tubes - seamless and welded supply">
+          <div class="formBody">
+            <div class="formTitle">Pipes &amp; Tubes</div>
+            <p class="formDesc">ERW / Seamless / Welded options across multiple grades and standards.</p>
+          </div>
         </div>
 
-        <div class="card">
-          <h3>Sheets • Plates • Coils</h3>
-          <p>Multiple thicknesses and finishes for fabrication, piping and industrial use.</p>
+        <div class="formCard">
+          <img class="formImg" src="/assets/form-coils.png" alt="Sheets, plates and coils in industrial metals">
+          <div class="formBody">
+            <div class="formTitle">Sheets • Plates • Coils</div>
+            <p class="formDesc">Multiple thicknesses and finishes for fabrication, piping and industrial use.</p>
+          </div>
         </div>
 
-        <div class="card">
-          <h3>Project &amp; Bulk Supply</h3>
-          <p>Fast quotation support for EPC, fabrication, marine and industrial projects.</p>
+        <div class="formCard">
+          <img class="formImg" src="/assets/form-fittings.png" alt="Flanges and fittings supply for piping projects">
+          <div class="formBody">
+            <div class="formTitle">Flanges &amp; Fittings</div>
+            <p class="formDesc">Elbows, tees, reducers, stub ends, flanges and project fittings supply.</p>
+          </div>
         </div>
       </div>
 
-      <div class="formChips">
-        <a class="formChip" href="#forms" onclick="return trackLead('navigation','chip_bars_rods')">✔ Bars &amp; Rods</a>
-        <a class="formChip" href="#forms" onclick="return trackLead('navigation','chip_angles_channels')">✔ Angles &amp; Channels</a>
-        <a class="formChip" href="#forms" onclick="return trackLead('navigation','chip_flanges')">✔ Flanges</a>
-        <a class="formChip" href="#forms" onclick="return trackLead('navigation','chip_fittings')">✔ Fittings</a>
-        <a class="formChip" href="#forms" onclick="return trackLead('navigation','chip_fasteners')">✔ Fasteners</a>
-        <a class="formChip" href="#forms" onclick="return trackLead('navigation','chip_wiremesh')">✔ Wire Mesh (as available)</a>
+      <div class="chipRow" aria-label="Other forms">
+        <span class="chip">✓ Bars &amp; Rods</span>
+        <span class="chip">✓ Angles &amp; Channels</span>
+        <span class="chip">✓ Fasteners</span>
+        <span class="chip">✓ Wire Mesh</span>
+        <span class="chip">✓ Flats &amp; Circles</span>
       </div>
     </div>
   </section>
 
+  <!-- INDUSTRIES -->
   <section class="section">
     <div class="wrap">
       <h2 style="margin:0 0 10px;color:#132a63">Industries We Serve</h2>
@@ -514,9 +570,10 @@
     </div>
   </section>
 
+  <!-- QUALITY -->
   <section class="section">
     <div class="wrap">
-      <h2 style="margin:0 0 10px;color:#132a63">Quality & Documentation Support</h2>
+      <h2 style="margin:0 0 10px;color:#132a63">Quality &amp; Documentation Support</h2>
 
       <div class="grid2">
         <div class="card"><h3>Material Test Certificates (MTC)</h3><p>Supply with EN 10204 3.1 / 3.2 certification as per customer requirement.</p></div>
@@ -527,25 +584,27 @@
     </div>
   </section>
 
+  <!-- SEO TEXT -->
   <section class="section">
     <div class="wrap">
       <div class="card">
-        <h2 style="margin:0 0 10px;color:#132a63">Leading Stainless Steel & Alloy Supplier in India</h2>
+        <h2 style="margin:0 0 10px;color:#132a63">Leading Stainless Steel &amp; Alloy Supplier in India</h2>
 
         <p style="color:#566b9a;line-height:1.8;">
           Rubinox Metal and Alloys is recognized as a trusted stainless steel, duplex, super duplex, nickel alloy and industrial metal supplier in India.
-          We supply high-performance materials including SS 304, SS 316, Duplex 2205, Super Duplex 2507, Inconel 625, Monel 400, Hastelloy C276, SMO 254 and Titanium Grade 2 & 5
+          We supply high-performance materials including SS 304, SS 316, Duplex 2205, Super Duplex 2507, Inconel 625, Monel 400, Hastelloy C276, SMO 254 and Titanium Grade 2 &amp; 5
           in pipes, tubes, sheets, plates, coils, flanges, fittings, fasteners and bars for industrial and project-based applications.
         </p>
 
         <p style="margin-top:12px;color:#566b9a;line-height:1.8;">
-          As a reliable metal stockist in India, we support fabrication units, EPC contractors, oil & gas companies, marine industries, chemical plants, infrastructure projects
+          As a reliable metal stockist in India, we support fabrication units, EPC contractors, oil &amp; gas companies, marine industries, chemical plants, infrastructure projects
           and engineering firms with competitive pricing, bulk supply capacity and fast quotation turnaround.
         </p>
       </div>
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section class="section" id="contact">
     <div class="wrap">
       <h2 style="margin:0 0 10px;color:#132a63">Contact</h2>
@@ -630,7 +689,7 @@
           </div>
 
           <p style="margin:14px 0 0;color:#566b9a;font-size:13px;line-height:1.7">
-            ✅ PAN India supply • ✅ Bulk & project orders • ✅ Export documentation support
+            ✅ PAN India supply • ✅ Bulk &amp; project orders • ✅ Export documentation support
           </p>
         </div>
       </div>
@@ -662,29 +721,6 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
