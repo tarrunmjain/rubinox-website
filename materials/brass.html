@@ -9,7 +9,7 @@
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://rubinoxmetal.com/materials/brass.html" />
 
-  <!-- Google Analytics -->
+  <!-- Google Analytics (GA4) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JT5X5L5H07"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -17,6 +17,7 @@
     gtag('js', new Date());
     gtag('config', 'G-JT5X5L5H07');
 
+    // Track lead + safe navigation
     function trackLeadAndGo(method, label, url, newTab){
       try{
         if (typeof gtag === "function") {
@@ -44,37 +45,40 @@
 
   <style>
     :root{
+      --bg:#0b1220;
+      --text:#0b1220;
+      --muted:#566b9a;
+      --line:#e6ecf8;
       --accent:#4f8cff;
+      --white:#fff;
     }
     *{box-sizing:border-box}
-
     body{
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
       background:#f6f8fc;
-      color:#0b1220;
     }
     a{color:inherit}
 
-    .wrap{max-width:1100px;margin:0 auto;padding:0 14px}
+    .wrap{max-width:1100px;margin:0 auto;padding:0 18px}
 
-    /* ====== HEADER (same as Home/Aluminium) ====== */
+    /* ===== HEADER (same as Home) ===== */
     header{
       position:sticky;top:0;z-index:10;
       background:rgba(255,255,255,.85);
       backdrop-filter: blur(10px);
-      border-bottom:1px solid #e6ecf8;
+      border-bottom:1px solid var(--line);
     }
     .nav{
       display:flex;align-items:center;justify-content:space-between;
       padding:14px 0;
-      gap:14px;
+      gap:12px;
     }
     .brand{
-      display:flex;align-items:center;
-      text-decoration:none;
+      display:flex;align-items:center;text-decoration:none;
     }
-    .brand img{max-height:72px;width:auto;display:block}
+    .brand img{height:72px;width:auto;display:block}
 
     .navlinks{display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
     .navlinks a{
@@ -93,49 +97,63 @@
       gap:8px;
       white-space:nowrap;
     }
-    .btn.primary{
-      background:var(--accent);
-      color:#fff;
-      box-shadow:0 12px 30px rgba(79,140,255,.25);
-    }
-    .btn.primary:hover{filter:brightness(.95)}
-    .btn.ghost{
-      background:#fff;border-color:#dbe6ff;color:#132a63;
-    }
+    .btn.primary{background:var(--accent);color:#fff;box-shadow:0 12px 30px rgba(79,140,255,.22)}
+    .btn.primary:hover{filter:brightness(.96)}
+    .btn.ghost{background:#fff;border-color:#dbe6ff;color:#1b2b52}
     .btn.ghost:hover{background:#f4f8ff}
 
-    /* ====== PAGE ====== */
-    .page{max-width:1100px;margin:0 auto;padding:22px 14px}
-    .crumb{
-      color:#8aa0c8;
-      font-weight:600;
-      margin:8px 0 4px;
-      font-size:12px;
-      letter-spacing:0.3px;
-    }
-    .card{
+    /* ===== Breadcrumb bar (clean, NO WhatsApp here) ===== */
+    .topbar{
       background:#fff;
-      border:1px solid #e6ecf8;
-      border-radius:16px;
-      padding:16px;
-      margin-top:14px;
+      border-bottom:1px solid var(--line);
+      padding:14px 0;
+    }
+    .crumb{
+      color:var(--muted);
+      font-weight:600;
+      font-size:14px;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .crumb a{
+      color:#132a63;
+      font-weight:800;
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+    .crumb a:hover{opacity:.85}
+
+    /* ===== Page content ===== */
+    .page{max-width:1100px;margin:0 auto;padding:22px 18px}
+    .card{
+      background:#fff;border:1px solid var(--line);
+      border-radius:16px;padding:16px;margin-top:14px;
       box-shadow:0 10px 30px rgba(15,30,60,.06);
     }
-    h1{margin:10px 0 10px;color:#132a63}
+    h1{margin:0 0 10px;color:#132a63;font-size:34px;letter-spacing:-.2px}
     h2{margin:0 0 10px;color:#132a63}
-    p{color:#566b9a;line-height:1.7;margin:0}
-    ul{margin:0;padding-left:18px;color:#566b9a;line-height:1.8}
+    p{color:var(--muted);line-height:1.7;margin:0}
+    ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.8}
     .grid2{display:grid;gap:14px;grid-template-columns:1fr 1fr;margin-top:14px}
     .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 
+    @media (max-width: 950px){
+      .brand img{height:64px}
+      .nav{align-items:flex-start}
+    }
     @media (max-width: 900px){
       .grid2{grid-template-columns:1fr}
+      h1{font-size:28px}
+      .navlinks{gap:10px}
     }
   </style>
 </head>
 
 <body>
-  <!-- HEADER (uniform with Home/Aluminium) -->
+
+  <!-- HEADER -->
   <header>
     <div class="wrap">
       <div class="nav">
@@ -150,17 +168,32 @@
           <a href="/industries.html">Industries</a>
           <a href="/#forms">Forms</a>
           <a href="/#contact">Contact</a>
+
           <a class="btn primary"
              href="https://wa.me/919363193755"
              target="_blank"
-             rel="noopener">WhatsApp Quote</a>
+             rel="noopener"
+             onclick="return trackLeadAndGo('whatsapp','header_whatsapp_brass', this.href, true)">
+             WhatsApp Quote
+          </a>
         </div>
       </div>
     </div>
   </header>
 
+  <!-- BREADCRUMB (NO WhatsApp here) -->
+  <div class="topbar">
+    <div class="wrap">
+      <div class="crumb">
+        <a href="/">Home</a> •
+        <a href="/#materials">Materials</a> •
+        Brass
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE -->
   <div class="page">
-    <div class="crumb">Home • Materials • Brass</div>
 
     <h1>Brass C260, C360 &amp; C464 Supplier in India</h1>
 
@@ -224,29 +257,39 @@
            href="https://wa.me/919363193755"
            target="_blank"
            rel="noopener"
-           onclick="return trackLeadAndGo('whatsapp','cta_whatsapp_brass', this.href, true)">WhatsApp for Quote</a>
+           onclick="return trackLeadAndGo('whatsapp','cta_whatsapp_brass', this.href, true)">
+           WhatsApp for Quote
+        </a>
 
         <a class="btn ghost"
            href="mailto:tarun@rubinoxmetal.com?subject=Brass%20Quotation%20Request%20-%20Rubinox"
-           onclick="return trackLeadAndGo('email','cta_email_brass', this.href, false)">Email RFQ</a>
+           onclick="return trackLeadAndGo('email','cta_email_brass', this.href, false)">
+           Email RFQ
+        </a>
 
         <a class="btn ghost"
            href="/quotation.html"
-           onclick="return trackLeadAndGo('navigation','cta_quote_page_brass', this.href, false)">Quotation Page</a>
+           onclick="return trackLeadAndGo('navigation','cta_quote_page_brass', this.href, false)">
+           Quotation Page
+        </a>
 
         <a class="btn ghost"
            href="/"
-           onclick="return trackLeadAndGo('navigation','cta_back_home_brass', this.href, false)">Back to Home</a>
+           onclick="return trackLeadAndGo('navigation','cta_back_home_brass', this.href, false)">
+           Back to Home
+        </a>
       </div>
     </div>
 
     <div class="card">
       <h2>Contact</h2>
       <p>
-        Phone: +91 9363193755 • Email: tarun@rubinoxmetal.com<br/>
+        Phone: <a href="tel:+919363193755" onclick="return trackLeadAndGo('call','brass_call', this.href, false)">+91 9363193755</a>
+        • Email: <a href="mailto:tarun@rubinoxmetal.com?subject=Brass%20Enquiry%20-%20Rubinox" onclick="return trackLeadAndGo('email','brass_contact_email', this.href, false)">tarun@rubinoxmetal.com</a><br/>
         Address: A-206, 2nd floor, Krishvi Escape, Sitaram Poddar Marg, near Vinay Hotel, Kalbadevi, Mumbai – 400002
       </p>
     </div>
+
   </div>
 </body>
 </html>
