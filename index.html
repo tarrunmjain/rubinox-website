@@ -55,9 +55,7 @@
       padding:14px 0;
       gap:14px;
     }
-    .brand{
-      display:flex;align-items:center;text-decoration:none;
-    }
+    .brand{display:flex;align-items:center;text-decoration:none;}
     .brand img{max-height:72px;height:auto;display:block}
 
     .navlinks{display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
@@ -96,7 +94,7 @@
       display:grid;
       gap:22px;
       grid-template-columns: 1.25fr .75fr;
-      align-items:stretch; /* was start */
+      align-items:stretch;
     }
 
     h1{margin:0;font-size:38px;line-height:1.15;letter-spacing:-.3px}
@@ -110,7 +108,7 @@
       color:var(--text);font-weight:700;font-size:12px;
     }
 
-    /* ✅ NEW: right column becomes full-height flex column */
+    /* ✅ right column full-height */
     .heroRight{
       display:flex;
       flex-direction:column;
@@ -118,7 +116,6 @@
       gap:14px;
     }
 
-    /* ✅ HERO IMAGE (PREMIUM) - now fills remaining height */
     .heroMedia{
       flex:1;
       min-height:240px;
@@ -146,6 +143,7 @@
     .ctaRow{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
 
     .section{padding:34px 0}
+
     .cards{
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -177,6 +175,62 @@
     .kpi .num{font-weight:900;font-size:18px;color:#132a63}
     .kpi .lbl{color:#566b9a;font-size:12px;margin-top:4px}
 
+    /* ✅ NEW: Premium image cards section */
+    .snapGrid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+      margin-top:14px;
+    }
+    .snapCard{
+      background:#fff;
+      border:1px solid #e6ecf8;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 10px 30px rgba(15,30,60,.06);
+      display:flex;
+      flex-direction:column;
+      min-height:220px;
+    }
+    .snapImg{
+      height:140px;
+      background:#f2f6ff;
+      overflow:hidden;
+    }
+    .snapImg img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .snapBody{
+      padding:14px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      height:100%;
+    }
+    .snapBody h3{margin:0;font-size:16px;color:#132a63}
+    .snapBody p{margin:0;color:#566b9a;font-size:13px;line-height:1.6}
+    .snapMeta{
+      margin-top:auto;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      color:#566b9a;
+      font-size:12px;
+      font-weight:700;
+    }
+    .tag{
+      background:#eef4ff;
+      border:1px solid #dbe6ff;
+      padding:6px 10px;
+      border-radius:999px;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+
     footer{
       background:#fff;border-top:1px solid #e6ecf8;
       padding:22px 0;color:#566b9a;font-size:13px;
@@ -190,13 +244,6 @@
     }
     #seo-links a:hover{opacity:.85;}
 
-    /* Contact section buttons (safe) */
-    #contact .btn{display:inline-flex;width:auto;flex:0 0 auto}
-    #contact .btnrow{
-      display:flex;gap:10px;flex-wrap:wrap;align-items:flex-start;
-    }
-    #contact .grid2{align-items:stretch}
-
     @media (max-width: 900px){
       .heroGrid{grid-template-columns:1fr}
       h1{font-size:32px}
@@ -205,6 +252,7 @@
       .nav{align-items:flex-start}
       .navlinks{gap:10px}
       .heroMedia{min-height:220px}
+      .snapGrid{grid-template-columns:1fr}
     }
   </style>
 
@@ -328,7 +376,7 @@
           </div>
         </div>
 
-        <!-- RIGHT (✅ FULL HEIGHT + IMAGE + CARD) -->
+        <!-- RIGHT -->
         <div class="heroRight">
           <div class="heroMedia">
             <img src="/assets/hero-metal.png" alt="Stainless steel, pipes, sheets and industrial metal stock">
@@ -347,6 +395,61 @@
       </div>
     </div>
   </section>
+
+  <!-- ✅ NEW: PREMIUM IMAGE CARDS (looks catalog-like) -->
+  <section class="section" id="forms-snapshot">
+    <div class="wrap">
+      <h2 style="margin:0 0 6px;color:#132a63">Product Forms Snapshot</h2>
+      <p style="margin:0;color:#566b9a;line-height:1.7;max-width:80ch">
+        Quick view of common forms we supply. (We can replace these with real product photos later.)
+      </p>
+
+      <div class="snapGrid">
+        <a class="snapCard" href="#forms" onclick="return trackLead('navigation','snapshot_pipes')">
+          <div class="snapImg">
+            <img src="/assets/hero-metal.png" alt="Pipes and tubes stock">
+          </div>
+          <div class="snapBody">
+            <h3>Pipes &amp; Tubes</h3>
+            <p>Seamless / welded options across stainless steel, duplex and alloy grades.</p>
+            <div class="snapMeta">
+              <span class="tag">✔ PAN India</span>
+              <span class="tag">✔ Export</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="snapCard" href="#forms" onclick="return trackLead('navigation','snapshot_plates')">
+          <div class="snapImg">
+            <img src="/assets/hero-metal.png" alt="Sheets and plates stock">
+          </div>
+          <div class="snapBody">
+            <h3>Sheets &amp; Plates</h3>
+            <p>Industrial sheets/plates in common grades like 304/316, 2205, nickel alloys.</p>
+            <div class="snapMeta">
+              <span class="tag">✔ Cut-to-size</span>
+              <span class="tag">✔ Bulk supply</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="snapCard" href="#forms" onclick="return trackLead('navigation','snapshot_coils')">
+          <div class="snapImg">
+            <img src="/assets/hero-metal.png" alt="Coils and flat products stock">
+          </div>
+          <div class="snapBody">
+            <h3>Coils &amp; Flats</h3>
+            <p>Coils for fabrication and processing, plus flats, bars and related products.</p>
+            <div class="snapMeta">
+              <span class="tag">✔ Multiple grades</span>
+              <span class="tag">✔ Fast dispatch</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- /NEW -->
 
   <section class="section" id="seo-links">
     <div class="wrap">
@@ -637,13 +740,6 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
 
 
 
