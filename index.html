@@ -55,9 +55,7 @@
       padding:14px 0;
       gap:14px;
     }
-    .brand{
-      display:flex;align-items:center;text-decoration:none;
-    }
+    .brand{display:flex;align-items:center;text-decoration:none}
     .brand img{max-height:72px;height:auto;display:block}
 
     .navlinks{display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
@@ -91,10 +89,12 @@
       border-bottom:1px solid rgba(255,255,255,.08);
     }
     .heroGrid{
-      display:grid;gap:22px;
-      grid-template-columns: 1.25fr .75fr;
+      display:grid;
+      gap:22px;
+      grid-template-columns: 1.15fr .85fr; /* slightly wider right side for visual */
       align-items:stretch;
     }
+
     h1{margin:0;font-size:38px;line-height:1.15;letter-spacing:-.3px}
     .lead{margin:12px 0 0;color:var(--muted);max-width:62ch;font-size:16px;line-height:1.6}
     .pillRow{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
@@ -105,6 +105,9 @@
       border:1px solid rgba(255,255,255,.12);
       color:var(--text);font-weight:700;font-size:12px;
     }
+
+    .ctaRow{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+
     .heroCard{
       background:rgba(255,255,255,.06);
       border:1px solid rgba(255,255,255,.14);
@@ -113,7 +116,58 @@
     }
     .heroCard h3{margin:0 0 10px;font-size:16px}
     .heroCard p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
-    .ctaRow{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+
+    /* NEW: Premium hero visual */
+    .heroAside{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      height:100%;
+    }
+    .heroMedia{
+      position:relative;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.06);
+      min-height:220px;
+    }
+    .heroMedia img{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;
+      opacity:.95;
+    }
+    .heroOverlay{
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.55));
+      display:flex;
+      align-items:flex-end;
+      padding:14px;
+    }
+    .heroOverlay div{
+      width:100%;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      align-items:flex-end;
+      flex-wrap:wrap;
+    }
+    .heroTag{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding:8px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.18);
+      color:#fff;
+      font-weight:800;
+      font-size:12px;
+      white-space:nowrap;
+    }
 
     .section{padding:34px 0}
     .cards{
@@ -162,9 +216,7 @@
 
     /* Contact section buttons (safe) */
     #contact .btn{display:inline-flex;width:auto;flex:0 0 auto}
-    #contact .btnrow{
-      display:flex;gap:10px;flex-wrap:wrap;align-items:flex-start;
-    }
+    #contact .btnrow{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-start}
     #contact .grid2{align-items:stretch}
 
     @media (max-width: 900px){
@@ -174,6 +226,7 @@
       .kpi{grid-template-columns:1fr}
       .nav{align-items:flex-start}
       .navlinks{gap:10px}
+      .heroMedia{min-height:200px}
     }
   </style>
 
@@ -295,15 +348,30 @@
           </div>
         </div>
 
-        <div class="heroCard">
-          <h3>Send these details for fastest quotation</h3>
-          <p>✅ Material + grade/spec</p>
-          <p>✅ Size (OD/ID/Thk/Length)</p>
-          <p>✅ Quantity</p>
-          <p>✅ Delivery location</p>
-          <p style="margin-top:10px"><b>Email:</b> tarun@rubinoxmetal.com</p>
-          <p><b>Call:</b> +91 9363193755</p>
+        <!-- RIGHT SIDE: Image + Quotation Card -->
+        <div class="heroAside">
+          <div class="heroMedia" aria-label="Industrial metals supply">
+            <!-- Replace this image path with your real file -->
+            <img src="/assets/hero-metal.jpg" alt="Stainless steel pipes, sheets and industrial metal stock">
+            <div class="heroOverlay">
+              <div>
+                <span class="heroTag">Stockist • Supplier • Exporter</span>
+                <span class="heroTag">Fast Dispatch</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="heroCard">
+            <h3>Send these details for fastest quotation</h3>
+            <p>✅ Material + grade/spec</p>
+            <p>✅ Size (OD/ID/Thk/Length)</p>
+            <p>✅ Quantity</p>
+            <p>✅ Delivery location</p>
+            <p style="margin-top:10px"><b>Email:</b> tarun@rubinoxmetal.com</p>
+            <p><b>Call:</b> +91 9363193755</p>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
