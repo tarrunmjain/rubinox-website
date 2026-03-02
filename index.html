@@ -231,12 +231,29 @@
       font-size:13px;
       line-height:1.6;
     }
-    .chipRow{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:14px;
-    }
+
+    /* FULL WIDTH CHIP GRID */
+.chipRow{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap:12px;
+}
+
+.chip{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 12px;
+  border-radius:999px;
+  background:#fff;
+  border:1px solid #dbe6ff;
+  color:#1b2b52;
+  font-weight:800;
+  font-size:13px;
+  box-shadow:0 10px 22px rgba(15,30,60,.05);
+  text-align:center;
+}
     .chip{
       display:inline-flex;
       align-items:center;
@@ -267,7 +284,9 @@
 
       .formsGrid{grid-template-columns:1fr}
       .formImg{height:170px}
-      .chipRow{gap:8px}
+      .chipRow{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
     }
   </style>
 
@@ -721,6 +740,7 @@
   </script>
 </body>
 </html>
+
 
 
 
