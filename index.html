@@ -175,6 +175,47 @@
     .card h3{margin:0 0 8px;font-size:16px}
     .card p{margin:0;color:var(--muted2);font-size:13px;line-height:1.6}
 
+    /* ✅ MATERIAL CARDS: icon + premium hover */
+.cards .card{
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  cursor: pointer;
+}
+.cards .card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 50px rgba(15,30,60,.12);
+  border-color:#cfe0ff;
+}
+
+/* Title row with icon */
+.cardHead{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:0 0 8px;
+}
+.iconBadge{
+  width:34px;
+  height:34px;
+  border-radius:12px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:#eef4ff;
+  border:1px solid #dbe6ff;
+  flex:0 0 auto;
+}
+.iconBadge svg{
+  width:18px;
+  height:18px;
+  display:block;
+  fill:#132a63;
+}
+
+/* Make h3 sit nicely in the head row */
+.cards .card h3{
+  margin:0;
+}
+    
     .grid2{display:grid;gap:14px;grid-template-columns:1fr 1fr}
     ul.clean{margin:10px 0 0;padding-left:18px;color:var(--muted2)}
     ul.clean li{margin:6px 0}
@@ -764,6 +805,7 @@
   </script>
 </body>
 </html>
+
 
 
 
