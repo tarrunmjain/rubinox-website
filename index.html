@@ -90,11 +90,15 @@
       padding:56px 0 40px;
       border-bottom:1px solid rgba(255,255,255,.08);
     }
+
+    /* ✅ FIX: stretch columns to same height */
     .heroGrid{
-      display:grid;gap:22px;
+      display:grid;
+      gap:22px;
       grid-template-columns: 1.25fr .75fr;
-      align-items:start;
+      align-items:stretch; /* was start */
     }
+
     h1{margin:0;font-size:38px;line-height:1.15;letter-spacing:-.3px}
     .lead{margin:12px 0 0;color:var(--muted);max-width:62ch;font-size:16px;line-height:1.6}
     .pillRow{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
@@ -106,8 +110,18 @@
       color:var(--text);font-weight:700;font-size:12px;
     }
 
-    /* ✅ HERO IMAGE (PREMIUM) */
+    /* ✅ NEW: right column becomes full-height flex column */
+    .heroRight{
+      display:flex;
+      flex-direction:column;
+      height:100%;
+      gap:14px;
+    }
+
+    /* ✅ HERO IMAGE (PREMIUM) - now fills remaining height */
     .heroMedia{
+      flex:1;
+      min-height:240px;
       border-radius:18px;
       overflow:hidden;
       border:1px solid rgba(255,255,255,.14);
@@ -116,7 +130,7 @@
     }
     .heroMedia img{
       width:100%;
-      height:240px;
+      height:100%;
       display:block;
       object-fit:cover;
     }
@@ -190,7 +204,7 @@
       .kpi{grid-template-columns:1fr}
       .nav{align-items:flex-start}
       .navlinks{gap:10px}
-      .heroMedia img{height:220px}
+      .heroMedia{min-height:220px}
     }
   </style>
 
@@ -314,13 +328,13 @@
           </div>
         </div>
 
-        <!-- RIGHT (✅ ONE IMAGE ONLY + CARD) -->
-        <div>
+        <!-- RIGHT (✅ FULL HEIGHT + IMAGE + CARD) -->
+        <div class="heroRight">
           <div class="heroMedia">
             <img src="/assets/hero-metal.png" alt="Stainless steel, pipes, sheets and industrial metal stock">
           </div>
 
-          <div class="heroCard" style="margin-top:14px">
+          <div class="heroCard">
             <h3>Send these details for fastest quotation</h3>
             <p>✅ Material + grade/spec</p>
             <p>✅ Size (OD/ID/Thk/Length)</p>
@@ -623,7 +637,6 @@
   </script>
 </body>
 </html>
-
 
 
 
