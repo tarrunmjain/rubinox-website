@@ -9,7 +9,7 @@
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://rubinoxmetal.com/materials/smo-254.html" />
 
-  <!-- Google Analytics -->
+  <!-- Google Analytics (ONLY ONCE) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JT5X5L5H07"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -70,15 +70,12 @@
       padding:14px 0;
       gap:14px;
     }
-
-    /* keeps logo consistent */
     .brand img{
       height:72px;
       max-height:72px;
       width:auto;
       display:block;
     }
-
     .navlinks{
       display:flex;
       gap:14px;
@@ -105,7 +102,9 @@
       white-space:nowrap;
     }
     .btn.primary{background:var(--accent);color:#fff}
+    .btn.primary:hover{filter:brightness(.95)}
     .btn.ghost{background:#fff;border-color:#dbe6ff;color:#1b2b52}
+    .btn.ghost:hover{background:#f4f8ff}
 
     .topbar{
       background:#fff;
@@ -119,6 +118,7 @@
       display:flex;
       gap:8px;
       flex-wrap:wrap;
+      align-items:center;
     }
     .crumb a{
       color:#132a63;
@@ -142,12 +142,56 @@
     .grid2{display:grid;gap:14px;grid-template-columns:1fr 1fr;margin-top:14px}
     .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 
+    .relGrid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:12px;
+      margin-top:10px;
+    }
+    .relItem{
+      display:block;
+      text-decoration:none;
+      padding:12px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:#f9fbff;
+    }
+    .relItem strong{color:#132a63}
+    .relItem span{display:block;color:var(--muted);margin-top:4px;font-size:13px;line-height:1.5}
+
     @media (max-width:900px){
       .grid2{grid-template-columns:1fr}
       h1{font-size:28px}
       .brand img{height:64px;max-height:64px}
     }
   </style>
+
+  <!-- Schema: WebPage + Breadcrumbs (lightweight SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"SMO 254 (UNS S31254 / 6Mo) Supplier in India",
+    "url":"https://rubinoxmetal.com/materials/smo-254.html",
+    "isPartOf":{
+      "@type":"WebSite",
+      "name":"Rubinox Metal and Alloys",
+      "url":"https://rubinoxmetal.com/"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://rubinoxmetal.com/"},
+      {"@type":"ListItem","position":2,"name":"Materials","item":"https://rubinoxmetal.com/#materials"},
+      {"@type":"ListItem","position":3,"name":"SMO 254 (6Mo)","item":"https://rubinoxmetal.com/materials/smo-254.html"}
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -166,6 +210,7 @@
         <a href="/industries.html">Industries</a>
         <a href="/#contact">Contact</a>
 
+        <!-- ONLY ONE WhatsApp in header -->
         <a class="btn primary"
            href="https://wa.me/919363193755"
            target="_blank"
@@ -228,6 +273,31 @@
     <p>Pipes &amp; Tubes • Sheets &amp; Plates • Coils • Flanges • Fittings • Fasteners • Bars &amp; Rods • Flats • Circles</p>
   </div>
 
+  <!-- SEO-friendly internal links (small + clean) -->
+  <div class="card">
+    <h2>Related Materials</h2>
+    <p>Explore other corrosion-resistant alloys and stainless grades we supply:</p>
+
+    <div class="relGrid">
+      <a class="relItem" href="/materials/stainless-steel.html">
+        <strong>Stainless Steel</strong>
+        <span>304 / 316 / 202 and more in pipes, plates, coils.</span>
+      </a>
+      <a class="relItem" href="/materials/duplex-super-duplex.html">
+        <strong>Duplex &amp; Super Duplex</strong>
+        <span>2205 / 2507 for high chloride environments.</span>
+      </a>
+      <a class="relItem" href="/materials/nickel-alloys.html">
+        <strong>Nickel Alloys</strong>
+        <span>Inconel, Monel, Hastelloy, Incoloy.</span>
+      </a>
+      <a class="relItem" href="/materials/titanium.html">
+        <strong>Titanium</strong>
+        <span>Grade 2 / Grade 5 for high corrosion resistance.</span>
+      </a>
+    </div>
+  </div>
+
   <div class="card">
     <h2>Request a Quotation</h2>
     <p>Share <b>grade/spec</b>, <b>size</b>, <b>quantity</b> and <b>delivery location</b> for fastest pricing and availability.</p>
@@ -247,7 +317,11 @@
         Email RFQ
       </a>
 
-      <a class="btn ghost" href="/quotation.html">Quotation Page</a>
+      <a class="btn ghost"
+         href="/quotation.html"
+         onclick="return trackLeadAndGo('navigation','cta_quote_page_smo254', this.href, false)">
+        Quotation Page
+      </a>
     </div>
   </div>
 
