@@ -218,12 +218,17 @@
   box-shadow:0 18px 50px rgba(15,30,60,.12);
   border-color:#cfe0ff;
 }
-    .formImg{
-      height:150px;
-      width:100%;
-      display:block;
-      object-fit:cover;
-    }
+.formImg{
+  height:150px;
+  width:100%;
+  display:block;
+  object-fit:cover;
+  transition: transform .5s ease;
+}
+
+.formCard:hover .formImg{
+  transform: scale(1.06);
+}
     .formBody{
       padding:14px 16px 16px;
     }
@@ -748,6 +753,7 @@
   </script>
 </body>
 </html>
+
 
 
 
