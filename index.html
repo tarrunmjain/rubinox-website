@@ -19,26 +19,20 @@
   <meta property="og:description" content="Stockist, supplier, trader, importer & exporter of stainless steel, nickel alloys, duplex, 254 SMO and industrial metals. PAN India supply + export support." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://rubinoxmetal.com/" />
-  <!-- Optional: add when you create an image later -->
   <!-- <meta property="og:image" content="https://rubinoxmetal.com/og-image.jpg" /> -->
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Rubinox Metal and Alloys | Metal Supplier in India" />
   <meta name="twitter:description" content="Stainless steel, nickel alloys, duplex/super duplex, 254 SMO, titanium & industrial metals. PAN India supply + exports." />
-  <!-- Optional: add when you create an image later -->
   <!-- <meta name="twitter:image" content="https://rubinoxmetal.com/og-image.jpg" /> -->
 
   <style>
     :root{
       --bg:#0b1220;
-      --card:#0f1b33;
       --text:#e8eefc;
       --muted:#b9c6e6;
-      --line:rgba(255,255,255,.12);
       --accent:#4f8cff;
-      --accent2:#19c37d;
-      --white:#fff;
     }
     *{box-sizing:border-box}
     body{
@@ -49,6 +43,7 @@
     }
     a{color:inherit}
     .wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+
     header{
       position:sticky;top:0;z-index:10;
       background:rgba(255,255,255,.85);
@@ -58,35 +53,35 @@
     .nav{
       display:flex;align-items:center;justify-content:space-between;
       padding:14px 0;
+      gap:14px;
     }
     .brand{
-      display:flex;gap:10px;align-items:center;text-decoration:none;
-      font-weight:800;letter-spacing:.2px
+      display:flex;align-items:center;text-decoration:none;
     }
-    .logo{
-      width:36px;height:36px;border-radius:12px;
-      background:linear-gradient(135deg,var(--accent),#7aa7ff);
-      display:grid;place-items:center;color:#fff;font-weight:900;
-      box-shadow:0 10px 30px rgba(79,140,255,.25);
-    }
-    .navlinks{display:flex;gap:14px;align-items:center}
+    .brand img{max-height:72px;height:auto;display:block}
+
+    .navlinks{display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
     .navlinks a{
       text-decoration:none;
       padding:8px 10px;border-radius:10px;
       color:#1b2b52;font-weight:600;font-size:14px;
+      white-space:nowrap;
     }
     .navlinks a:hover{background:#eef4ff}
+
     .btn{
       display:inline-flex;align-items:center;justify-content:center;
       padding:11px 14px;border-radius:12px;
       text-decoration:none;font-weight:800;font-size:14px;
       border:1px solid transparent;
       gap:8px;
+      white-space:nowrap;
     }
     .btn.primary{background:var(--accent);color:#fff;box-shadow:0 12px 30px rgba(79,140,255,.25)}
     .btn.primary:hover{filter:brightness(.95)}
     .btn.ghost{background:#fff;border-color:#dbe6ff;color:#1b2b52}
     .btn.ghost:hover{background:#f4f8ff}
+
     .hero{
       background: radial-gradient(1200px 600px at 20% 0%, rgba(79,140,255,.28), transparent 60%),
                   radial-gradient(900px 500px at 90% 20%, rgba(25,195,125,.18), transparent 60%),
@@ -119,6 +114,7 @@
     .heroCard h3{margin:0 0 10px;font-size:16px}
     .heroCard p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
     .ctaRow{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+
     .section{padding:34px 0}
     .cards{
       display:grid;
@@ -126,17 +122,19 @@
       gap:16px;
       align-items:stretch;
     }
-    .cards a{display:block;}
-    .card{height:100%;min-height:120px;}
+    .cards a{display:block;text-decoration:none;color:inherit}
     .card{
       background:#fff;border:1px solid #e6ecf8;border-radius:18px;
       padding:16px;box-shadow:0 10px 30px rgba(15,30,60,.06);
+      height:100%;min-height:120px;
     }
     .card h3{margin:0 0 8px;font-size:16px}
     .card p{margin:0;color:#566b9a;font-size:13px;line-height:1.6}
+
     .grid2{display:grid;gap:14px;grid-template-columns:1fr 1fr}
     ul.clean{margin:10px 0 0;padding-left:18px;color:#566b9a}
     ul.clean li{margin:6px 0}
+
     .kpi{
       display:grid;gap:10px;
       grid-template-columns: repeat(3,1fr);
@@ -148,24 +146,12 @@
     }
     .kpi .num{font-weight:900;font-size:18px;color:#132a63}
     .kpi .lbl{color:#566b9a;font-size:12px;margin-top:4px}
+
     footer{
       background:#fff;border-top:1px solid #e6ecf8;
       padding:22px 0;color:#566b9a;font-size:13px;
     }
-    .floatWA{
-      position:fixed;right:16px;bottom:16px;z-index:50;
-      background:#25D366;color:#fff;text-decoration:none;
-      padding:12px 14px;border-radius:999px;font-weight:900;
-      box-shadow:0 16px 35px rgba(37,211,102,.25);
-    }
-    .floatWA:hover{filter:brightness(.95)}
-    @media (max-width: 900px){
-      .heroGrid{grid-template-columns:1fr}
-      h1{font-size:32px}
-      .cards{grid-template-columns:1fr}
-      .grid2{grid-template-columns:1fr}
-      .kpi{grid-template-columns:1fr}
-    }
+
     #seo-links a{
       color:#132a63;
       font-weight:800;
@@ -173,37 +159,22 @@
       text-underline-offset:3px;
     }
     #seo-links a:hover{opacity:.85;}
-   /* Contact buttons only (safe) */
-#contact .btn{
-  display:inline-flex;
-  width:auto;
-  flex:0 0 auto;
-}
 
-#contact .btnrow{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  align-items:flex-start;
-}
-    
-    /* Contact section balance */
-#contact .grid2{
-  align-items: stretch;
-}
+    /* Contact section buttons (safe) */
+    #contact .btn{display:inline-flex;width:auto;flex:0 0 auto}
+    #contact .btnrow{
+      display:flex;gap:10px;flex-wrap:wrap;align-items:flex-start;
+    }
+    #contact .grid2{align-items:stretch}
 
-#contact .card{
-  height: 100%;
-}
-
-    .brand img{
-  max-height:72px;
-}
-
-header{
-  border-bottom:1px solid #e6ecf8;
-}
-    
+    @media (max-width: 900px){
+      .heroGrid{grid-template-columns:1fr}
+      h1{font-size:32px}
+      .grid2{grid-template-columns:1fr}
+      .kpi{grid-template-columns:1fr}
+      .nav{align-items:flex-start}
+      .navlinks{gap:10px}
+    }
   </style>
 
   <!-- Schema: LocalBusiness (Primary) -->
@@ -228,7 +199,7 @@ header{
   }
   </script>
 
-  <!-- Schema: Organization (for brand identity) -->
+  <!-- Schema: Organization -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -260,23 +231,22 @@ header{
   <header>
     <div class="wrap">
       <div class="nav">
-        <a class="brand" href="/" style="display:flex;align-items:center;text-decoration:none">
-  <img src="logo.png"
-     alt="Rubinox Metal and Alloys"
-     style="height:72px;width:auto;display:block;">
-</a>
-       <div class="navlinks">
-  <a href="#materials">Materials</a>
-  <a href="/materials/stainless-steel.html">Stainless Steel</a>
-  <a href="/quotation.html">Quotation</a>
-  <a href="/industries.html">Industries</a>
-  <a href="#forms">Forms</a>
-  <a href="#contact">Contact</a>
-  <a class="btn primary"
-     href="https://wa.me/919363193755"
-     target="_blank"
-     rel="noopener">WhatsApp Quote</a>
-</div>
+        <a class="brand" href="/" aria-label="Rubinox Home">
+          <img src="logo.png" alt="Rubinox Metal and Alloys">
+        </a>
+
+        <div class="navlinks">
+          <a href="#materials">Materials</a>
+          <a href="/materials/stainless-steel.html">Stainless Steel</a>
+          <a href="/quotation.html">Quotation</a>
+          <a href="/industries.html">Industries</a>
+          <a href="#forms">Forms</a>
+          <a href="#contact">Contact</a>
+          <a class="btn primary"
+             href="https://wa.me/919363193755"
+             target="_blank"
+             rel="noopener">WhatsApp Quote</a>
+        </div>
       </div>
     </div>
   </header>
@@ -285,10 +255,12 @@ header{
     <div class="wrap">
       <div class="heroGrid">
         <div>
-        <h1>Stainless Steel, Nickel Alloy & Duplex Supplier in India | PAN India Supply & Export</h1>
+          <h1>Stainless Steel, Nickel Alloy & Duplex Supplier in India | PAN India Supply & Export</h1>
+
           <p class="lead">
- Rubinox Metal and Alloys is a leading stockist, supplier, trader, importer and exporter of stainless steel, aluminium, copper, brass, carbon steel, mild steel, nickel alloys (Inconel, Monel, Hastelloy), duplex stainless steel, SMO 254, titanium and phosphor bronze. Serving PAN India and international markets with reliable logistics, competitive pricing and fast quotation support.
-</p>
+            Rubinox Metal and Alloys is a leading stockist, supplier, trader, importer and exporter of stainless steel, aluminium, copper, brass, carbon steel, mild steel, nickel alloys (Inconel, Monel, Hastelloy), duplex stainless steel, SMO 254, titanium and phosphor bronze. Serving PAN India and international markets with reliable logistics, competitive pricing and fast quotation support.
+          </p>
+
           <div class="pillRow">
             <span class="pill">✔ Fast Quotation</span>
             <span class="pill">✔ Multiple Grades</span>
@@ -298,12 +270,12 @@ header{
 
           <div class="ctaRow">
             <a class="btn primary"
-   href="https://wa.me/919363193755"
-   target="_blank"
-   rel="noopener"
-   onclick="return trackLead('whatsapp','hero_whatsapp')">
-   Get Quote on WhatsApp
-</a>
+               href="https://wa.me/919363193755"
+               target="_blank"
+               rel="noopener"
+               onclick="return trackLead('whatsapp','hero_whatsapp')">
+               Get Quote on WhatsApp
+            </a>
             <a class="btn ghost" href="#contact">Call / Email</a>
           </div>
 
@@ -335,186 +307,107 @@ header{
       </div>
     </div>
   </section>
+
   <section class="section" id="seo-links">
-  <div class="wrap">
-    <p style="color:#566b9a;line-height:1.8;font-size:15px">
-      We specialize in the supply of 
-      <a href="/materials/stainless-steel.html">Stainless Steel 304 & 316 Supplier in India</a>,
-      <a href="/materials/nickel-alloys.html">Inconel 625, Inconel 718, Monel 400 & Hastelloy C276 Supplier</a>,
-      <a href="/materials/duplex-super-duplex.html">Duplex 2205 & Super Duplex 2507 Stockist</a>,
-      <a href="/materials/titanium.html">Titanium Grade 2 & Grade 5 Supplier</a>,
-      <a href="/materials/smo-254.html">SMO 254 (UNS S31254) Supplier</a>
-      in pipes, tubes, sheets, plates, coils, flanges and fittings for industrial applications across India and global markets.
-    </p>
-  </div>
-</section>
+    <div class="wrap">
+      <p style="color:#566b9a;line-height:1.8;font-size:15px">
+        We specialize in the supply of
+        <a href="/materials/stainless-steel.html">Stainless Steel 304 & 316 Supplier in India</a>,
+        <a href="/materials/nickel-alloys.html">Inconel 625, Inconel 718, Monel 400 & Hastelloy C276 Supplier</a>,
+        <a href="/materials/duplex-super-duplex.html">Duplex 2205 & Super Duplex 2507 Stockist</a>,
+        <a href="/materials/titanium.html">Titanium Grade 2 & Grade 5 Supplier</a>,
+        <a href="/materials/smo-254.html">SMO 254 (UNS S31254) Supplier</a>
+        in pipes, tubes, sheets, plates, coils, flanges and fittings for industrial applications across India and global markets.
+      </p>
+    </div>
+  </section>
 
   <section class="section" id="materials">
     <div class="wrap">
       <h2 style="margin:0 0 10px;color:#132a63">Materials We Supply</h2>
+
       <div class="cards">
-        <a href="/materials/stainless-steel.html" style="text-decoration:none;color:inherit">
-  <div class="card">
-    <h3>Stainless Steel</h3>
-    <p>200/300 series, 400 series, Duplex & PH grades.</p>
-  </div>
-</a>
-        <a href="/materials/aluminium.html" style="text-decoration:none;color:inherit">
-  <div class="card">
-    <h3>Aluminium</h3>
-    <p>1000–8000 series alloys including 6061, 6063, 7075 etc.</p>
-  </div>
-</a>
-        <a href="/materials/copper.html" style="text-decoration:none;color:inherit">
-  <div class="card">
-    <h3>Copper</h3>
-    <p>C101/C110/C122, C260, C360 and more.</p>
-  </div>
-</a>
-       <a href="/materials/carbon-steel.html" style="text-decoration:none;color:inherit">
-  <div class="card">
-    <h3>Carbon Steel</h3>
-    <p>A36, 1018, 1045, A516 Gr 70 and more.</p>
-  </div>
-</a>
-
-<a href="/materials/mild-steel.html" style="text-decoration:none;color:inherit">
-  <div class="card">
-    <h3>Mild Steel</h3>
-    <p>A36, A500, 1018, 1020, S235, S355 and more.</p>
-  </div>
-</a>
-       <a href="/materials/nickel-alloys.html" style="text-decoration:none;color:inherit">
-  <div class="card">
-    <h3>Nickel Alloys</h3>
-    <p>Inconel, Monel, Hastelloy, Incoloy (various grades).</p>
-  </div>
-</a>
-        <a href="/materials/duplex-super-duplex.html" style="text-decoration:none;color:inherit">
-  <div class="card">
-    <h3>Duplex &amp; Super Duplex</h3>
-    <p>2205, 2507, Zeron 100 and more (pipes, plates, fittings, fasteners).</p>
-  </div>
-</a>
-
-     <a href="/materials/smo-254.html" style="text-decoration:none;color:inherit">
-  <div class="card">
-    <h3>SMO 254</h3>
-    <p>UNS S31254, 6Mo high corrosion resistant grade.</p>
-  </div>
-</a>
-
-<a href="/materials/titanium.html" style="text-decoration:none;color:inherit">
-  <div class="card">
-    <h3>Titanium</h3>
-    <p>Grade 1, 2, 5 (Ti-6Al-4V), 23 and more.</p>
-  </div>
-</a>
-
-<a href="/materials/phosphor-bronze.html" style="text-decoration:none;color:inherit">
-  <div class="card">
-    <h3>Phosphor Bronze</h3>
-    <p>C510, C521, C544 and casting grades.</p>
-  </div>
-</a>
-
-<a href="/materials/brass.html" style="text-decoration:none;color:inherit">
-  <div class="card">
-    <h3>Brass</h3>
-    <p>C260, C360, C464 and more.</p>
-  </div>
-</a>
-        </div>
+        <a href="/materials/stainless-steel.html"><div class="card"><h3>Stainless Steel</h3><p>200/300 series, 400 series, Duplex & PH grades.</p></div></a>
+        <a href="/materials/aluminium.html"><div class="card"><h3>Aluminium</h3><p>1000–8000 series alloys including 6061, 6063, 7075 etc.</p></div></a>
+        <a href="/materials/copper.html"><div class="card"><h3>Copper</h3><p>C101/C110/C122 and more.</p></div></a>
+        <a href="/materials/carbon-steel.html"><div class="card"><h3>Carbon Steel</h3><p>A36, 1018, 1045, A516 Gr 70 and more.</p></div></a>
+        <a href="/materials/mild-steel.html"><div class="card"><h3>Mild Steel</h3><p>A36, A500, 1018, 1020, S235, S355 and more.</p></div></a>
+        <a href="/materials/nickel-alloys.html"><div class="card"><h3>Nickel Alloys</h3><p>Inconel, Monel, Hastelloy, Incoloy (various grades).</p></div></a>
+        <a href="/materials/duplex-super-duplex.html"><div class="card"><h3>Duplex &amp; Super Duplex</h3><p>2205, 2507, Zeron 100 and more.</p></div></a>
+        <a href="/materials/smo-254.html"><div class="card"><h3>SMO 254</h3><p>UNS S31254, 6Mo high corrosion resistant grade.</p></div></a>
+        <a href="/materials/titanium.html"><div class="card"><h3>Titanium</h3><p>Grade 1, 2, 5 (Ti-6Al-4V), 23 and more.</p></div></a>
+        <a href="/materials/phosphor-bronze.html"><div class="card"><h3>Phosphor Bronze</h3><p>C510, C521, C544 and casting grades.</p></div></a>
+        <a href="/materials/brass.html"><div class="card"><h3>Brass</h3><p>C260, C360, C464 and more.</p></div></a>
+      </div>
     </div>
   </section>
+
   <section class="section">
-  <div class="wrap">
-    <h2 style="margin:0 0 10px;color:#132a63">Why Choose Rubinox Metal & Alloys?</h2>
+    <div class="wrap">
+      <h2 style="margin:0 0 10px;color:#132a63">Why Choose Rubinox Metal & Alloys?</h2>
 
-    <div class="grid2">
-      <div class="card">
-        <h3>Wide Range of Grades</h3>
-        <p>Stainless steel, duplex, nickel alloys, SMO 254, titanium and other industrial metals in multiple grades and specifications.</p>
-      </div>
-
-      <div class="card">
-        <h3>Bulk & Project Supply</h3>
-        <p>Serving fabrication units, EPC contractors, oil & gas, chemical, marine and infrastructure industries.</p>
-      </div>
-
-      <div class="card">
-        <h3>Fast Quotation Support</h3>
-        <p>Quick response for urgent, bulk and project-based enquiries.</p>
-      </div>
-
-      <div class="card">
-        <h3>Export & Logistics Support</h3>
-        <p>International shipping coordination and complete export documentation assistance.</p>
+      <div class="grid2">
+        <div class="card"><h3>Wide Range of Grades</h3><p>Stainless steel, duplex, nickel alloys, SMO 254, titanium and other industrial metals in multiple grades and specifications.</p></div>
+        <div class="card"><h3>Bulk & Project Supply</h3><p>Serving fabrication units, EPC contractors, oil & gas, chemical, marine and infrastructure industries.</p></div>
+        <div class="card"><h3>Fast Quotation Support</h3><p>Quick response for urgent, bulk and project-based enquiries.</p></div>
+        <div class="card"><h3>Export & Logistics Support</h3><p>International shipping coordination and complete export documentation assistance.</p></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <section class="section" style="background:#eef4ff">
-  <div class="wrap" style="text-align:center">
-    <h2 style="margin:0 0 10px;color:#132a63">
-      Need Stainless Steel or Special Alloy for Your Project?
-    </h2>
+    <div class="wrap" style="text-align:center">
+      <h2 style="margin:0 0 10px;color:#132a63">Need Stainless Steel or Special Alloy for Your Project?</h2>
 
-    <p style="color:#566b9a;max-width:700px;margin:0 auto 18px;line-height:1.7">
-      Share your material grade, size, quantity and delivery location. 
-      Our team will respond quickly with competitive pricing and availability.
-    </p>
+      <p style="color:#566b9a;max-width:700px;margin:0 auto 18px;line-height:1.7">
+        Share your material grade, size, quantity and delivery location.
+        Our team will respond quickly with pricing and availability.
+      </p>
 
-    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-      <a class="btn primary"
-         href="https://wa.me/919363193755"
-         target="_blank"
-         rel="noopener"
-         onclick="return trackLead('whatsapp','midpage_whatsapp')">
-         Request Instant Quotation
-      </a>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a class="btn primary"
+           href="https://wa.me/919363193755"
+           target="_blank"
+           rel="noopener"
+           onclick="return trackLead('whatsapp','midpage_whatsapp')">Request Instant Quotation</a>
 
-      <a class="btn ghost"
-         href="mailto:tarun@rubinoxmetal.com?subject=Quotation%20Request%20-%20Rubinox"
-         onclick="return trackLead('email','midpage_email')">
-         Email Your Requirement
-      </a>
-    </div>
-  </div>
-</section>
-  
-<section class="section">
-  <div class="wrap">
-    <h2 style="margin:0 0 10px;color:#132a63">PAN India Supply & Global Export</h2>
-
-    <div class="grid2">
-      <div class="card">
-        <h3>Serving Across India</h3>
-        <ul class="clean">
-          <li>Mumbai, Delhi, Chennai, Ahmedabad, Kolkata</li>
-          <li>Industrial zones & fabrication hubs</li>
-          <li>Fast dispatch & reliable logistics</li>
-          <li>Bulk & project-based supply</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>International Export Support</h3>
-        <ul class="clean">
-          <li>Middle East, Asia & European markets</li>
-          <li>Export documentation support</li>
-          <li>Custom packaging & bulk shipping</li>
-          <li>Container & air freight coordination</li>
-        </ul>
+        <a class="btn ghost"
+           href="mailto:tarun@rubinoxmetal.com?subject=Quotation%20Request%20-%20Rubinox"
+           onclick="return trackLead('email','midpage_email')">Email Your Requirement</a>
       </div>
     </div>
-  </div>
-</section>
-  
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2 style="margin:0 0 10px;color:#132a63">PAN India Supply & Global Export</h2>
+
+      <div class="grid2">
+        <div class="card">
+          <h3>Serving Across India</h3>
+          <ul class="clean">
+            <li>Mumbai, Delhi, Chennai, Ahmedabad, Kolkata</li>
+            <li>Industrial zones & fabrication hubs</li>
+            <li>Fast dispatch & reliable logistics</li>
+            <li>Bulk & project-based supply</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>International Export Support</h3>
+          <ul class="clean">
+            <li>Middle East, Asia & European markets</li>
+            <li>Export documentation support</li>
+            <li>Custom packaging & bulk shipping</li>
+            <li>Container & air freight coordination</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="forms">
     <div class="wrap">
-    
       <h2 style="margin:0 0 10px;color:#132a63">Product Forms Available</h2>
       <div class="grid2">
         <div class="card">
@@ -544,227 +437,141 @@ header{
   </section>
 
   <section class="section">
-  <div class="wrap">
-    <h2 style="margin:0 0 10px;color:#132a63">Industries We Serve</h2>
+    <div class="wrap">
+      <h2 style="margin:0 0 10px;color:#132a63">Industries We Serve</h2>
 
-    <div class="grid2">
-      <div class="card">
-        <h3>Oil & Gas Industry</h3>
-        <p>Duplex, super duplex, nickel alloys and corrosion-resistant materials for offshore and onshore projects.</p>
-      </div>
-
-      <div class="card">
-        <h3>Chemical & Petrochemical</h3>
-        <p>High-performance alloys suitable for aggressive chemical environments.</p>
-      </div>
-
-      <div class="card">
-        <h3>Marine & Shipbuilding</h3>
-        <p>Corrosion-resistant stainless steel and copper alloys for marine applications.</p>
-      </div>
-
-      <div class="card">
-        <h3>Infrastructure & Fabrication</h3>
-        <p>Structural steel, stainless steel and alloy materials for industrial construction projects.</p>
+      <div class="grid2">
+        <div class="card"><h3>Oil &amp; Gas Industry</h3><p>Duplex, super duplex, nickel alloys and corrosion-resistant materials for offshore and onshore projects.</p></div>
+        <div class="card"><h3>Chemical &amp; Petrochemical</h3><p>High-performance alloys suitable for aggressive chemical environments.</p></div>
+        <div class="card"><h3>Marine &amp; Shipbuilding</h3><p>Corrosion-resistant stainless steel and copper alloys for marine applications.</p></div>
+        <div class="card"><h3>Infrastructure &amp; Fabrication</h3><p>Structural steel, stainless steel and alloy materials for industrial construction projects.</p></div>
       </div>
     </div>
-  </div>
-</section>
-  
-  <section class="section">
-  <div class="wrap">
-    <h2 style="margin:0 0 10px;color:#132a63">Quality & Documentation Support</h2>
-
-    <div class="grid2">
-      <div class="card">
-        <h3>Material Test Certificates (MTC)</h3>
-        <p>Supply with EN 10204 3.1 / 3.2 certification as per customer requirement.</p>
-      </div>
-
-      <div class="card">
-        <h3>Standards Compliance</h3>
-        <p>Materials available as per ASTM, ASME, DIN, EN and other international standards.</p>
-      </div>
-
-      <div class="card">
-        <h3>Export Documentation</h3>
-        <p>Complete export paperwork support including packing list, invoice and shipping documents.</p>
-      </div>
-
-      <div class="card">
-        <h3>Custom Inspection Support</h3>
-        <p>Third-party inspection and project-specific documentation assistance available.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-
-    <div class="card">
-      <h2 style="margin:0 0 10px;color:#132a63">
-        Leading Stainless Steel & Alloy Supplier in India
-      </h2>
-
-      <p style="color:#566b9a;line-height:1.8;">
-        Rubinox Metal and Alloys is recognized as a trusted stainless steel, duplex, super duplex, nickel alloy and industrial metal supplier in India. 
-        We supply high-performance materials including SS 304, SS 316, Duplex 2205, Super Duplex 2507, Inconel 625, Monel 400, Hastelloy C276, SMO 254 and Titanium Grade 2 & 5 
-        in pipes, tubes, sheets, plates, coils, flanges, fittings, fasteners and bars for industrial and project-based applications.
-      </p>
-
-      <p style="margin-top:12px;color:#566b9a;line-height:1.8;">
-        As a reliable metal stockist in India, we support fabrication units, EPC contractors, oil & gas companies, marine industries, chemical plants, infrastructure projects 
-        and engineering firms with competitive pricing, bulk supply capacity and fast quotation turnaround.
-      </p>
-    </div>
-
-  </div>
-</section>
+  </section>
 
   <section class="section">
-  <div class="wrap">
-    <div class="card">
-      <h2 style="margin:0 0 10px;color:#132a63">Quick Links</h2>
+    <div class="wrap">
+      <h2 style="margin:0 0 10px;color:#132a63">Quality & Documentation Support</h2>
 
-      <p style="color:#566b9a;line-height:1.8;margin:0">
-        <a href="/quotation.html">Request Quotation</a> •
-        <a href="/industries.html">Industries We Serve</a> •
-        <a href="/materials/stainless-steel.html">Stainless Steel Supplier</a> •
-        <a href="/materials/nickel-alloys.html">Nickel Alloys Supplier</a> •
-        <a href="/materials/duplex-super-duplex.html">Duplex & Super Duplex Supplier</a> •
-        <a href="/materials/smo-254.html">SMO 254 Supplier</a> •
-        <a href="/materials/titanium.html">Titanium Supplier</a> •
-        <a href="/materials/aluminium.html">Aluminium Supplier</a> •
-        <a href="/materials/copper.html">Copper Supplier</a> •
-        <a href="/materials/brass.html">Brass Supplier</a>
-      </p>
-
-    </div>
-  </div>
-</section>
-  
- <section class="section" id="contact">
-  <div class="wrap">
-    <h2 style="margin:0 0 10px;color:#132a63">Contact</h2>
-
-    <div class="grid2" style="align-items:stretch">
-      <!-- LEFT CARD (MAP + ADDRESS) -->
-      <div class="card" style="display:flex;flex-direction:column">
-        <h3 style="margin:0 0 10px">Rubinox Metal and Alloys</h3>
-
-        <div style="border-radius:12px;overflow:hidden;border:1px solid #e6ecf8">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.5248003740903!2d72.82250807373288!3d18.952416655843518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf76c0f530a9%3A0x56b5e47b6f039bba!2sKrishvi%20Escape!5e0!3m2!1sen!2sin!4v1772279474781!5m2!1sen!2sin"
-            width="100%"
-            height="240"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-
-        <p style="margin:14px 0 0;color:#566b9a;line-height:1.7">
-          A-206, 2nd floor, C.S. No. 2251 to 2255, Krishvi Escape,<br/>
-          Sitaram Poddar Marg, near Vinay Hotel, Kalbadevi,<br/>
-          Mumbai – 400002, Maharashtra, India
-        </p>
-
-        <p style="margin:10px 0 0;color:#566b9a;line-height:1.7">
-          <b>Phone:</b>
-          <a href="tel:+919363193755" onclick="return trackLead('call','contact_call')">+91 9363193755</a><br/>
-          <b>Email:</b>
-          <a href="mailto:tarun@rubinoxmetal.com?subject=Enquiry%20-%20Rubinox" onclick="return trackLead('email','contact_email')">tarun@rubinoxmetal.com</a><br/>
-          <b>Google Maps:</b>
-          <a href="https://www.google.com/maps/search/?api=1&query=Krishvi%20Escape%2C%20Sitaram%20Poddar%20Marg%2C%20Kalbadevi%2C%20Mumbai%20400002"
-             target="_blank" rel="noopener"
-             onclick="return trackLead('maps','contact_maps')">Open Location</a>
-        </p>
-
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
-          <a class="btn primary"
-             href="https://wa.me/919363193755"
-             target="_blank"
-             rel="noopener"
-             onclick="return trackLead('whatsapp','contact_whatsapp')">WhatsApp Quote</a>
-
-          <a class="btn ghost"
-             href="/quotation.html"
-             onclick="return trackLead('navigation','contact_quote_page')">Quotation Page</a>
-        </div>
+      <div class="grid2">
+        <div class="card"><h3>Material Test Certificates (MTC)</h3><p>Supply with EN 10204 3.1 / 3.2 certification as per customer requirement.</p></div>
+        <div class="card"><h3>Standards Compliance</h3><p>Materials available as per ASTM, ASME, DIN, EN and other international standards.</p></div>
+        <div class="card"><h3>Export Documentation</h3><p>Complete export paperwork support including packing list, invoice and shipping documents.</p></div>
+        <div class="card"><h3>Custom Inspection Support</h3><p>Third-party inspection and project-specific documentation assistance available.</p></div>
       </div>
+    </div>
+  </section>
 
-      <!-- RIGHT CARD (PREMIUM QUICK ACTIONS — NOT TINY) -->
-      <div class="card" style="display:flex;flex-direction:column;justify-content:space-between">
-        <div>
-          <h3 style="margin:0 0 6px">Quick Actions</h3>
-          <p style="color:#566b9a;margin:0;line-height:1.7">
-            Fast quotation for PAN India supply and export orders.
+  <section class="section">
+    <div class="wrap">
+      <div class="card">
+        <h2 style="margin:0 0 10px;color:#132a63">Leading Stainless Steel & Alloy Supplier in India</h2>
+
+        <p style="color:#566b9a;line-height:1.8;">
+          Rubinox Metal and Alloys is recognized as a trusted stainless steel, duplex, super duplex, nickel alloy and industrial metal supplier in India.
+          We supply high-performance materials including SS 304, SS 316, Duplex 2205, Super Duplex 2507, Inconel 625, Monel 400, Hastelloy C276, SMO 254 and Titanium Grade 2 & 5
+          in pipes, tubes, sheets, plates, coils, flanges, fittings, fasteners and bars for industrial and project-based applications.
+        </p>
+
+        <p style="margin-top:12px;color:#566b9a;line-height:1.8;">
+          As a reliable metal stockist in India, we support fabrication units, EPC contractors, oil & gas companies, marine industries, chemical plants, infrastructure projects
+          and engineering firms with competitive pricing, bulk supply capacity and fast quotation turnaround.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap">
+      <h2 style="margin:0 0 10px;color:#132a63">Contact</h2>
+
+      <div class="grid2" style="align-items:stretch">
+        <div class="card" style="display:flex;flex-direction:column">
+          <h3 style="margin:0 0 10px">Rubinox Metal and Alloys</h3>
+
+          <div style="border-radius:12px;overflow:hidden;border:1px solid #e6ecf8">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.5248003740903!2d72.82250807373288!3d18.952416655843518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf76c0f530a9%3A0x56b5e47b6f039bba!2sKrishvi%20Escape!5e0!3m2!1sen!2sin!4v1772279474781!5m2!1sen!2sin"
+              width="100%"
+              height="240"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <p style="margin:14px 0 0;color:#566b9a;line-height:1.7">
+            A-206, 2nd floor, C.S. No. 2251 to 2255, Krishvi Escape,<br/>
+            Sitaram Poddar Marg, near Vinay Hotel, Kalbadevi,<br/>
+            Mumbai – 400002, Maharashtra, India
           </p>
 
-          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+          <p style="margin:10px 0 0;color:#566b9a;line-height:1.7">
+            <b>Phone:</b>
+            <a href="tel:+919363193755" onclick="return trackLead('call','contact_call')">+91 9363193755</a><br/>
+            <b>Email:</b>
+            <a href="mailto:tarun@rubinoxmetal.com?subject=Enquiry%20-%20Rubinox" onclick="return trackLead('email','contact_email')">tarun@rubinoxmetal.com</a><br/>
+            <b>Google Maps:</b>
+            <a href="https://www.google.com/maps/search/?api=1&query=Krishvi%20Escape%2C%20Sitaram%20Poddar%20Marg%2C%20Kalbadevi%2C%20Mumbai%20400002"
+               target="_blank" rel="noopener"
+               onclick="return trackLead('maps','contact_maps')">Open Location</a>
+          </p>
+
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
             <a class="btn primary"
                href="https://wa.me/919363193755"
                target="_blank"
                rel="noopener"
-               onclick="return trackLead('whatsapp','contact_whatsapp_2')">WhatsApp Quote</a>
+               onclick="return trackLead('whatsapp','contact_whatsapp')">WhatsApp Quote</a>
 
             <a class="btn ghost"
-               href="mailto:tarun@rubinoxmetal.com?subject=Quotation%20Request%20-%20Rubinox"
-               onclick="return trackLead('email','contact_email_2')">Email RFQ</a>
-
-            <a class="btn ghost"
-               href="tel:+919363193755"
-               onclick="return trackLead('call','contact_call_2')">Call Now</a>
-          </div>
-
-          <div style="margin-top:16px;background:#eef4ff;border:1px solid #dbe6ff;border-radius:14px;padding:14px">
-            <h4 style="margin:0 0 8px;color:#132a63;font-size:14px">
-              Send these details for fastest quotation
-            </h4>
-            <ul style="margin:0;padding-left:18px;color:#566b9a;line-height:1.8">
-              <li><b>Material + Grade/Spec</b> (SS / Duplex / Inconel / etc.)</li>
-              <li><b>Size</b> (OD/ID/Thk/Length)</li>
-              <li><b>Quantity</b></li>
-              <li><b>Delivery location</b></li>
-            </ul>
+               href="/quotation.html"
+               onclick="return trackLead('navigation','contact_quote_page')">Quotation Page</a>
           </div>
         </div>
 
-        <p style="margin:14px 0 0;color:#566b9a;font-size:13px;line-height:1.7">
-          ✅ PAN India supply • ✅ Bulk & project orders • ✅ Export documentation support
-        </p>
+        <div class="card" style="display:flex;flex-direction:column;justify-content:space-between">
+          <div>
+            <h3 style="margin:0 0 6px">Quick Actions</h3>
+            <p style="color:#566b9a;margin:0;line-height:1.7">
+              Fast quotation for PAN India supply and export orders.
+            </p>
+
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+              <a class="btn primary"
+                 href="https://wa.me/919363193755"
+                 target="_blank"
+                 rel="noopener"
+                 onclick="return trackLead('whatsapp','contact_whatsapp_2')">WhatsApp Quote</a>
+
+              <a class="btn ghost"
+                 href="mailto:tarun@rubinoxmetal.com?subject=Quotation%20Request%20-%20Rubinox"
+                 onclick="return trackLead('email','contact_email_2')">Email RFQ</a>
+
+              <a class="btn ghost"
+                 href="tel:+919363193755"
+                 onclick="return trackLead('call','contact_call_2')">Call Now</a>
+            </div>
+
+            <div style="margin-top:16px;background:#eef4ff;border:1px solid #dbe6ff;border-radius:14px;padding:14px">
+              <h4 style="margin:0 0 8px;color:#132a63;font-size:14px">Send these details for fastest quotation</h4>
+              <ul style="margin:0;padding-left:18px;color:#566b9a;line-height:1.8">
+                <li><b>Material + Grade/Spec</b> (SS / Duplex / Inconel / etc.)</li>
+                <li><b>Size</b> (OD/ID/Thk/Length)</li>
+                <li><b>Quantity</b></li>
+                <li><b>Delivery location</b></li>
+              </ul>
+            </div>
+          </div>
+
+          <p style="margin:14px 0 0;color:#566b9a;font-size:13px;line-height:1.7">
+            ✅ PAN India supply • ✅ Bulk & project orders • ✅ Export documentation support
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-  <section class="section">
-  <div class="wrap">
-    <h2 style="margin:0 0 10px;color:#132a63">PAN India Supply Network</h2>
-
-    <p style="color:#566b9a;line-height:1.8;max-width:80ch">
-      Rubinox Metal and Alloys supplies stainless steel, nickel alloys, duplex, SMO 254, titanium and industrial metals across major industrial cities in India including:
-    </p>
-
-    <div class="card" style="margin-top:14px">
-      <p style="color:#566b9a;line-height:1.9">
-        Mumbai • Navi Mumbai • Thane • Pune • Nashik • Nagpur • 
-Delhi • Noida • Gurugram • Faridabad • 
-Ahmedabad • Vadodara • Surat • Rajkot • 
-Chennai • Coimbatore • Hosur • 
-Bangalore • Hyderabad • Visakhapatnam • 
-Kolkata • Durgapur • Jamshedpur • Bhilai • Raipur • 
-Kochi • Mangalore • Goa • Kandla
-      </p>
-    </div>
-
-    <p style="margin-top:14px;color:#566b9a;line-height:1.8;max-width:80ch">
-      We support fabrication units, EPC contractors, oil & gas companies, marine industries, infrastructure projects and engineering firms across India with bulk supply and project-based requirements.
-    </p>
-  </div>
-</section>
-  
   <footer>
     <div class="wrap">
       © <span id="y"></span> Rubinox Metal and Alloys • Mumbai, India
@@ -772,45 +579,24 @@ Kochi • Mangalore • Goa • Kandla
   </footer>
 
   <script>
-  document.getElementById("y").textContent = new Date().getFullYear();
+    document.getElementById("y").textContent = new Date().getFullYear();
 
-  // Lead tracking (GA4)
-  function trackLead(method, label){
-    try{
-      if (typeof gtag === "function") {
-        gtag("event", "generate_lead", {
-          method: method,
-          event_category: "lead",
-          event_label: label
-        });
-      }
-    } catch(e){}
-    return true; // allow the click to continue
-  }
-</script>
+    // Lead tracking (GA4)
+    function trackLead(method, label){
+      try{
+        if (typeof gtag === "function") {
+          gtag("event", "generate_lead", {
+            method: method,
+            event_category: "lead",
+            event_label: label
+          });
+        }
+      } catch(e){}
+      return true;
+    }
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
