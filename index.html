@@ -180,6 +180,24 @@
   box-shadow:0 20px 45px rgba(15,30,60,.12);
   border-color:#bcd0ff;
 }
+
+    .card:hover .iconBadge{
+  transform: translateY(-2px);
+  box-shadow:0 8px 18px rgba(15,30,60,.15);
+}
+
+.card:hover h3{
+  color:#0f3dbd;
+}
+
+.iconBadge{
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.card h3{
+  transition: color .35s ease;
+}
+    
     .card h3{
   margin:0;
   font-size:18px;
@@ -950,6 +968,7 @@
   </script>
 </body>
 </html>
+
 
 
 
