@@ -96,25 +96,6 @@ header{
   border-radius:16px;padding:16px;margin-top:14px;
 }
 
-  /* MATERIAL HERO (image + title) */
-.matHero{
-  margin-top:14px;
-  border-radius:18px;
-  overflow:hidden;
-  border:1px solid var(--line);
-  background:#fff;
-  box-shadow:0 12px 34px rgba(15,30,60,.08);
-}
-.matHeroImg{
-  width:100%;
-  height:240px;
-  display:block;
-  object-fit:cover;
-}
-@media (max-width:900px){
-  .matHeroImg{height:200px}
-}
-  
 h1{margin:0 0 10px;color:#132a63;font-size:34px;}
 h2{margin:0 0 10px;color:#132a63}
 p{color:var(--muted);line-height:1.7;margin:0}
@@ -122,19 +103,53 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.8}
 .grid2{display:grid;gap:14px;grid-template-columns:1fr 1fr;margin-top:14px}
 .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 
-.relGrid{
+/* ✅ NEW: Intro row (text left + image right) */
+.gridHero{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:12px;margin-top:10px;
+  grid-template-columns: 1.15fr .85fr;
+  gap:14px;
+  margin-top:14px;
+  align-items:stretch;
 }
-.relItem{
-  display:block;text-decoration:none;
-  padding:12px;border:1px solid var(--line);
-  border-radius:14px;background:#f9fbff;
+.leadP{
+  color:var(--muted);
+  line-height:1.7;
+  margin:0;
+  max-width:78ch;
 }
-.relItem strong{color:#132a63}
-.relItem span{display:block;color:var(--muted);margin-top:4px;font-size:13px;}
+.imgCard{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  height:100%;
+  min-height:240px;
+}
+.matImg{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover; /* looks premium */
+}
+.miniRow{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+.miniTag{
+  display:inline-flex;
+  align-items:center;
+  padding:8px 10px;
+  border-radius:999px;
+  background:#f9fbff;
+  border:1px solid var(--line);
+  color:#1b2b52;
+  font-weight:800;
+  font-size:12px;
+}
 
+/* Related Materials grid */
 .relGrid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -156,9 +171,11 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.8}
   margin-top:4px;
   font-size:13px;
 }
-  
+
 @media (max-width:900px){
   .grid2{grid-template-columns:1fr}
+  .gridHero{grid-template-columns:1fr}
+  .imgCard{min-height:200px}
   h1{font-size:28px}
   .brand img{height:64px}
 }
@@ -225,135 +242,145 @@ Stainless Steel
 
 <div class="page">
 
-  <!-- MATERIAL HERO IMAGE -->
-<div class="matHero">
-  <img class="matHeroImg" src="/assets/mat-stainless.png" alt="Rubinox material stock image">
-</div>
+  <!-- ✅ NEW INTRO ROW (TEXT LEFT + IMAGE RIGHT) -->
+  <div class="gridHero">
+    <div>
+      <h1>Stainless Steel 202, 304, 316 &amp; Duplex 2205 Supplier in India</h1>
 
-<h1>Stainless Steel 202, 304, 316 & Duplex 2205 Supplier in India</h1>
+      <p class="leadP">
+        Rubinox Metal and Alloys supplies stainless steel pipes, tubes, sheets, plates, coils,
+        flanges, fittings, fasteners, flats, angles, rods and bars for industrial, marine and fabrication applications across India and export markets.
+      </p>
 
-<p style="max-width:78ch">
-Rubinox Metal and Alloys supplies stainless steel pipes, tubes, sheets, plates, coils,
-flanges, fittings, fasteners, flats, angles, rods and bars for industrial, marine and fabrication applications across India and export markets.
-</p>
+      <div class="miniRow">
+        <span class="miniTag">✔ PAN India Supply</span>
+        <span class="miniTag">✔ Export Support</span>
+        <span class="miniTag">✔ Fast Quotation</span>
+      </div>
+    </div>
 
-<div class="grid2">
-<div class="card">
-<h2>Common Stainless Steel Grades</h2>
-<ul>
-<li><b>Austenitic:</b> 201 / 202, 304 / 304L, 316 / 316L</li>
-<li><b>Ferritic:</b> 409, 430</li>
-<li><b>Martensitic:</b> 410, 420</li>
-<li><b>Duplex:</b> 2205</li>
-<li><b>PH:</b> 17-4 PH (on request)</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>Typical Applications</h2>
-<ul>
-<li>Industrial piping & fabrication</li>
-<li>Chemical processing equipment</li>
-<li>Marine & coastal environments</li>
-<li>Food & pharma applications</li>
-<li>Fasteners, fittings & flanges</li>
-</ul>
-</div>
-</div>
-
-<div class="card">
-<h2>Product Forms Available</h2>
-<p>Pipes & Tubes • Sheets & Plates • Coils • Flanges • Fittings • Fasteners • Angles • Bars & Rods • Flats • Circles • Wire Mesh</p>
-</div>
-
-<!-- RELATED MATERIALS (SEO INTERNAL LINKS) -->
-<div class="card">
-  <h2>Related Materials</h2>
-
-  <div class="relGrid">
-
-    <a class="relItem" href="/materials/nickel-alloys.html">
-      <strong>Nickel Alloys</strong>
-      <span>Inconel, Monel, Hastelloy, Incoloy supply.</span>
-    </a>
-
-    <a class="relItem" href="/materials/duplex-super-duplex.html">
-      <strong>Duplex &amp; Super Duplex</strong>
-      <span>2205 / 2507 for chloride & marine service.</span>
-    </a>
-
-    <a class="relItem" href="/materials/smo-254.html">
-      <strong>SMO 254 (6Mo)</strong>
-      <span>High pitting resistance for seawater service.</span>
-    </a>
-
-    <a class="relItem" href="/materials/titanium.html">
-      <strong>Titanium</strong>
-      <span>Grade 2 &amp; Grade 5 supply for critical use.</span>
-    </a>
-
-    <a class="relItem" href="/materials/aluminium.html">
-      <strong>Aluminium</strong>
-      <span>6061 / 6063 / 7075 sheets, plates, bars & tubes.</span>
-    </a>
-
-    <a class="relItem" href="/materials/copper.html">
-      <strong>Copper</strong>
-      <span>C101 / C110 / C122 pipes, sheets, coils & bars.</span>
-    </a>
-
-    <a class="relItem" href="/materials/brass.html">
-      <strong>Brass</strong>
-      <span>C260 / C360 / C464 rods, sheets & fittings.</span>
-    </a>
-
-    <a class="relItem" href="/materials/carbon-steel.html">
-      <strong>Carbon Steel</strong>
-      <span>A36, 1018, 1045, A516 Gr 70 plates & pipes.</span>
-    </a>
-
-    <a class="relItem" href="/materials/mild-steel.html">
-      <strong>Mild Steel</strong>
-      <span>A36, A500, 1018, 1020, S235, S355 supply.</span>
-    </a>
-
-    <a class="relItem" href="/materials/phosphor-bronze.html">
-      <strong>Phosphor Bronze</strong>
-      <span>C510 / C521 / C544 sheets, coils, rods & bars.</span>
-    </a>
+    <div class="imgCard">
+      <img class="matImg" src="/assets/mat-stainless.png" alt="Stainless steel sheets, coils, pipes and bars">
+    </div>
   </div>
-</div>
-<!-- /RELATED MATERIALS -->
-  
-<div class="card">
-<h2>Request a Quotation</h2>
-<p>Share grade/spec, size, quantity and delivery location for fastest pricing.</p>
 
-<div class="btnrow">
-<a class="btn primary"
-href="https://wa.me/919363193755"
-target="_blank"
-rel="noopener"
-onclick="return trackLeadAndGo('whatsapp','cta_whatsapp_stainless', this.href, true)">
-WhatsApp for Quote
-</a>
+  <div class="grid2">
+    <div class="card">
+      <h2>Common Stainless Steel Grades</h2>
+      <ul>
+        <li><b>Austenitic:</b> 201 / 202, 304 / 304L, 316 / 316L</li>
+        <li><b>Ferritic:</b> 409, 430</li>
+        <li><b>Martensitic:</b> 410, 420</li>
+        <li><b>Duplex:</b> 2205</li>
+        <li><b>PH:</b> 17-4 PH (on request)</li>
+      </ul>
+    </div>
 
-<a class="btn ghost"
-href="mailto:tarun@rubinoxmetal.com?subject=Stainless%20Steel%20Quotation%20Request%20-%20Rubinox">
-Email RFQ
-</a>
+    <div class="card">
+      <h2>Typical Applications</h2>
+      <ul>
+        <li>Industrial piping & fabrication</li>
+        <li>Chemical processing equipment</li>
+        <li>Marine & coastal environments</li>
+        <li>Food & pharma applications</li>
+        <li>Fasteners, fittings & flanges</li>
+      </ul>
+    </div>
+  </div>
 
-<a class="btn ghost" href="/quotation.html">Quotation Page</a>
-</div>
-</div>
+  <div class="card">
+    <h2>Product Forms Available</h2>
+    <p>Pipes &amp; Tubes • Sheets &amp; Plates • Coils • Flanges • Fittings • Fasteners • Angles • Bars &amp; Rods • Flats • Circles • Wire Mesh</p>
+  </div>
 
-<div class="card">
-<h2>Contact</h2>
-<p>
-Phone: +91 9363193755 • Email: tarun@rubinoxmetal.com<br/>
-A-206, 2nd floor, Krishvi Escape, Kalbadevi, Mumbai – 400002
-</p>
-</div>
+  <!-- RELATED MATERIALS (SEO INTERNAL LINKS) -->
+  <div class="card">
+    <h2>Related Materials</h2>
+
+    <div class="relGrid">
+      <a class="relItem" href="/materials/nickel-alloys.html">
+        <strong>Nickel Alloys</strong>
+        <span>Inconel, Monel, Hastelloy, Incoloy supply.</span>
+      </a>
+
+      <a class="relItem" href="/materials/duplex-super-duplex.html">
+        <strong>Duplex &amp; Super Duplex</strong>
+        <span>2205 / 2507 for chloride &amp; marine service.</span>
+      </a>
+
+      <a class="relItem" href="/materials/smo-254.html">
+        <strong>SMO 254 (6Mo)</strong>
+        <span>High pitting resistance for seawater service.</span>
+      </a>
+
+      <a class="relItem" href="/materials/titanium.html">
+        <strong>Titanium</strong>
+        <span>Grade 2 &amp; Grade 5 supply for critical use.</span>
+      </a>
+
+      <a class="relItem" href="/materials/aluminium.html">
+        <strong>Aluminium</strong>
+        <span>6061 / 6063 / 7075 sheets, plates, bars &amp; tubes.</span>
+      </a>
+
+      <a class="relItem" href="/materials/copper.html">
+        <strong>Copper</strong>
+        <span>C101 / C110 / C122 pipes, sheets, coils &amp; bars.</span>
+      </a>
+
+      <a class="relItem" href="/materials/brass.html">
+        <strong>Brass</strong>
+        <span>C260 / C360 / C464 rods, sheets &amp; fittings.</span>
+      </a>
+
+      <a class="relItem" href="/materials/carbon-steel.html">
+        <strong>Carbon Steel</strong>
+        <span>A36, 1018, 1045, A516 Gr 70 plates &amp; pipes.</span>
+      </a>
+
+      <a class="relItem" href="/materials/mild-steel.html">
+        <strong>Mild Steel</strong>
+        <span>A36, A500, 1018, 1020, S235, S355 supply.</span>
+      </a>
+
+      <a class="relItem" href="/materials/phosphor-bronze.html">
+        <strong>Phosphor Bronze</strong>
+        <span>C510 / C521 / C544 sheets, coils, rods &amp; bars.</span>
+      </a>
+    </div>
+  </div>
+  <!-- /RELATED MATERIALS -->
+
+  <div class="card">
+    <h2>Request a Quotation</h2>
+    <p>Share grade/spec, size, quantity and delivery location for fastest pricing.</p>
+
+    <div class="btnrow">
+      <a class="btn primary"
+         href="https://wa.me/919363193755"
+         target="_blank"
+         rel="noopener"
+         onclick="return trackLeadAndGo('whatsapp','cta_whatsapp_stainless', this.href, true)">
+        WhatsApp for Quote
+      </a>
+
+      <a class="btn ghost"
+         href="mailto:tarun@rubinoxmetal.com?subject=Stainless%20Steel%20Quotation%20Request%20-%20Rubinox"
+         onclick="return trackLeadAndGo('email','cta_email_stainless', this.href, false)">
+        Email RFQ
+      </a>
+
+      <a class="btn ghost" href="/quotation.html">Quotation Page</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Contact</h2>
+    <p>
+      Phone: +91 9363193755 • Email: tarun@rubinoxmetal.com<br/>
+      A-206, 2nd floor, Krishvi Escape, Kalbadevi, Mumbai – 400002
+    </p>
+  </div>
 
 </div>
 </body>
