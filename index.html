@@ -164,14 +164,20 @@
     }
     .cards a{display:block;text-decoration:none;color:inherit}
     .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:16px;
-      box-shadow:0 10px 30px rgba(15,30,60,.06);
-      height:100%;
-      min-height:120px;
-    }
+  background:#fff;
+  border:1px solid #e6ecf8;
+  border-radius:18px;
+  padding:16px;
+  box-shadow:0 8px 22px rgba(15,30,60,.06);
+  height:100%;
+  transition: all .25s ease;
+}
+
+.card:hover{
+  transform: translateY(-6px);
+  box-shadow:0 18px 40px rgba(15,30,60,.12);
+  border-color:#c7d7ff;
+}
     .card h3{
   margin:0;
   font-size:18px;
@@ -942,6 +948,7 @@
   </script>
 </body>
 </html>
+
 
 
 
