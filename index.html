@@ -206,6 +206,38 @@
 }
     .card p{margin:0;color:var(--muted2);font-size:13px;line-height:1.6}
 
+    /* Materials card icon (blueprint style) */
+.matHead{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:6px;
+}
+.matIcon{
+  width:34px;
+  height:34px;
+  display:grid;
+  place-items:center;
+  border-radius:12px;
+  background:rgba(79,140,255,.10);
+  border:1px solid rgba(79,140,255,.25);
+  flex:0 0 auto;
+}
+.matIcon svg{
+  width:20px;
+  height:20px;
+  stroke:#4f8cff;
+  stroke-width:2.2;
+  fill:none;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.matTitle{
+  margin:0;
+  font-size:18px;
+  line-height:1.2;
+}
+
     /* ✅ MATERIAL CARDS: icon + premium hover */
 .cards .card{
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
@@ -1038,6 +1070,7 @@
   </script>
 </body>
 </html>
+
 
 
 
