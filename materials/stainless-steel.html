@@ -163,6 +163,49 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.8}
 
 .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 
+  /* ✅ PERFECT MATERIAL LAYOUT (text + 2 cards on left, image spans full height on right) */
+.matLayout{
+  display:grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap:14px;
+  align-items:stretch;
+  margin-top:14px;
+}
+
+.matIntro{ /* left top block */
+  padding:0;
+}
+
+.matMedia{
+  grid-row: 1 / span 2;   /* ✅ image spans both rows */
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:#fff;
+  box-shadow:0 12px 34px rgba(15,30,60,.08);
+}
+
+.matMedia img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+
+.matCards{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:14px;
+}
+
+.matCards .card{ margin-top:0; }  /* ✅ removes extra top gap inside the grid */
+
+@media (max-width:900px){
+  .matLayout{ grid-template-columns:1fr; }
+  .matMedia{ grid-row:auto; min-height:220px; } /* image becomes normal block */
+  .matCards{ grid-template-columns:1fr; }
+}
+  
 @media (max-width:900px){
   .gridHero{grid-template-columns:1fr}
   .grid2{grid-template-columns:1fr}
