@@ -163,20 +163,22 @@
       align-items:stretch;
     }
     .cards a{display:block;text-decoration:none;color:inherit}
-    .card{
+   .card{
   background:#fff;
   border:1px solid #e6ecf8;
   border-radius:18px;
   padding:16px;
-  box-shadow:0 8px 22px rgba(15,30,60,.06);
+  box-shadow:0 6px 18px rgba(15,30,60,.05);
   height:100%;
-  transition: all .25s ease;
+  transition: transform .35s cubic-bezier(.4,0,.2,1),
+              box-shadow .35s cubic-bezier(.4,0,.2,1),
+              border-color .35s ease;
 }
 
 .card:hover{
-  transform: translateY(-6px);
-  box-shadow:0 18px 40px rgba(15,30,60,.12);
-  border-color:#c7d7ff;
+  transform: translateY(-8px);
+  box-shadow:0 20px 45px rgba(15,30,60,.12);
+  border-color:#bcd0ff;
 }
     .card h3{
   margin:0;
@@ -948,6 +950,7 @@
   </script>
 </body>
 </html>
+
 
 
 
