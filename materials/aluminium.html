@@ -100,6 +100,7 @@ header{
   border:1px solid var(--line);
   border-radius:18px;
   padding:18px;
+  margin-top:14px; /* ✅ gap between stacked cards */
 }
 
 h1{margin:0 0 10px;color:var(--ink2);font-size:34px}
@@ -132,7 +133,7 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.8}
   gap:14px;
   grid-template-columns:1fr 1fr;
   margin-top:14px;
-}
+  .grid2 .card{ margin-top:0; } /* ✅ keep the 2 grid cards aligned */
 
 .miniRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 .miniTag{
