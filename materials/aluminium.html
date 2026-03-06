@@ -17,27 +17,23 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-JT5X5L5H07');
 
-function trackLeadAndGo(method, label, url, newTab){
+function trackLeadAndGo(method,label,url,newTab){
   try{
-    if (typeof gtag === "function") {
-      let opened = false;
-      const go = () => {
-        if (opened) return;
-        opened = true;
-        if (newTab) window.open(url, "_blank", "noopener");
-        else window.location.href = url;
+    if(typeof gtag==="function"){
+      let opened=false;
+      const go=()=>{
+        if(opened) return;
+        opened=true;
+        if(newTab) window.open(url,"_blank","noopener");
+        else window.location.href=url;
       };
-      gtag("event", "generate_lead", {
-        method: method,
-        event_label: label,
-        event_callback: go
-      });
-      setTimeout(go, 600);
+      gtag("event","generate_lead",{method:method,event_label:label,event_callback:go});
+      setTimeout(go,600);
       return false;
     }
-  } catch(e){}
-  if (newTab) window.open(url, "_blank", "noopener");
-  else window.location.href = url;
+  }catch(e){}
+  if(newTab) window.open(url,"_blank","noopener");
+  else window.location.href=url;
   return false;
 }
 </script>
@@ -56,49 +52,165 @@ function trackLeadAndGo(method, label, url, newTab){
 *{box-sizing:border-box}
 body{
   margin:0;
-  font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   color:var(--ink);
   background:var(--bg);
 }
 a{color:inherit}
 .wrap{max-width:1100px;margin:0 auto;padding:0 18px}
 
-/* Header */
+/* HEADER */
 header{
-  position:sticky;top:0;z-index:10;
-  background:rgba(255,255,255,.85);
-  backdrop-filter: blur(10px);
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.88);
+  backdrop-filter:blur(10px);
   border-bottom:1px solid var(--line);
 }
 .nav{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:14px 0;gap:14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 0;
+  gap:14px;
+  position:relative;
 }
-.brand img{height:72px;max-height:72px;width:auto;display:block;}
+.brand{
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+  flex:0 0 auto;
+}
+.brand img{
+  height:72px;
+  max-height:72px;
+  width:auto;
+  display:block;
+}
 .navlinks{
-  display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:flex-end;
+  display:flex;
+  gap:14px;
+  align-items:center;
+  flex-wrap:wrap;
+  justify-content:flex-end;
 }
 .navlinks a{
-  text-decoration:none;padding:8px 10px;border-radius:10px;
-  color:#1b2b52;font-weight:600;font-size:14px;
+  text-decoration:none;
+  padding:8px 10px;
+  border-radius:10px;
+  color:#1b2b52;
+  font-weight:600;
+  font-size:14px;
 }
 .navlinks a:hover{background:#eef4ff}
 .btn{
-  display:inline-flex;align-items:center;justify-content:center;
-  padding:11px 14px;border-radius:12px;
-  text-decoration:none;font-weight:800;font-size:14px;
-  border:1px solid transparent;gap:8px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:11px 14px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:800;
+  font-size:14px;
+  border:1px solid transparent;
+  gap:8px;
   white-space:nowrap;
 }
-.btn.primary{background:var(--accent);color:#fff;box-shadow:0 12px 30px rgba(79,140,255,.25)}
+.btn.primary{
+  background:var(--accent);
+  color:#fff;
+  box-shadow:0 12px 30px rgba(79,140,255,.25);
+}
 .btn.primary:hover{filter:brightness(.96)}
-.btn.ghost{background:#fff;border-color:#dbe6ff;color:#1b2b52}
+.btn.ghost{
+  background:#fff;
+  border-color:#dbe6ff;
+  color:#1b2b52;
+}
 .btn.ghost:hover{background:#f4f8ff}
 
+/* MOBILE TOGGLE */
+.menuToggle{
+  display:none;
+  width:44px;
+  height:44px;
+  border-radius:12px;
+  border:1px solid #dbe6ff;
+  background:#fff;
+  color:#1b2b52;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  padding:0;
+  box-shadow:0 8px 20px rgba(15,30,60,.06);
+}
+.menuToggle:hover{background:#f4f8ff}
+.menuToggle svg{
+  width:22px;
+  height:22px;
+  stroke:#1b2b52;
+  stroke-width:2.2;
+  fill:none;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  display:block;
+}
+
+.mobileMenu{
+  display:none;
+  width:100%;
+  padding:0 0 14px;
+}
+.mobileMenuPanel{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  box-shadow:0 16px 40px rgba(15,30,60,.08);
+  padding:10px;
+}
+.mobileMenuPanel a{
+  display:block;
+  text-decoration:none;
+  padding:12px 14px;
+  border-radius:12px;
+  color:#1b2b52;
+  font-weight:700;
+  font-size:14px;
+}
+.mobileMenuPanel a:hover{background:#eef4ff}
+.mobileMenuPanel .mobileBtn{
+  margin-top:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:var(--accent);
+  color:#fff;
+  box-shadow:0 12px 30px rgba(79,140,255,.20);
+}
+.mobileMenu.open{display:block}
+
 /* Breadcrumb */
-.topbar{background:#fff;border-bottom:1px solid var(--line);padding:14px 0;}
-.crumb{color:var(--muted);font-weight:600;font-size:14px;display:flex;gap:8px;flex-wrap:wrap;}
-.crumb a{color:var(--ink2);font-weight:800;text-decoration:underline;text-underline-offset:3px;}
+.topbar{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  padding:14px 0;
+}
+.crumb{
+  color:var(--muted);
+  font-weight:600;
+  font-size:14px;
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.crumb a{
+  color:var(--ink2);
+  font-weight:800;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
 
 .page{max-width:1100px;margin:0 auto;padding:22px 18px}
 
@@ -130,12 +242,16 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
 /* Hero */
 .heroGrid{
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:1fr 1fr;
   gap:14px;
   align-items:stretch;
   margin-top:14px;
 }
-.heroText{display:flex;flex-direction:column;justify-content:center}
+.heroText{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
 .heroImg{
   overflow:hidden;
   border-radius:18px;
@@ -163,23 +279,49 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
 .relGrid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:12px;margin-top:12px;
+  gap:12px;
+  margin-top:12px;
 }
 .relItem{
-  display:block;text-decoration:none;
-  padding:12px;border:1px solid var(--line);
-  border-radius:14px;background:#f9fbff;
+  display:block;
+  text-decoration:none;
+  padding:12px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#f9fbff;
 }
 .relItem strong{color:var(--ink2)}
-.relItem span{display:block;color:var(--muted);margin-top:4px;font-size:13px;}
+.relItem span{
+  display:block;
+  color:var(--muted);
+  margin-top:4px;
+  font-size:13px;
+}
 
-.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.btnrow{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
 
 @media (max-width:900px){
+  .desktopNav{
+    display:none;
+  }
+  .menuToggle{
+    display:inline-flex;
+  }
+  .brand img{
+    height:56px;
+    max-height:56px;
+  }
+  .nav{
+    padding:10px 0;
+  }
   .grid2{grid-template-columns:1fr}
   .heroGrid{grid-template-columns:1fr}
   h1{font-size:28px}
-  .brand img{height:64px}
   .heroImg{min-height:220px}
 }
 </style>
@@ -207,6 +349,7 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
 </script>
 
 </head>
+
 <body>
 
 <header>
@@ -214,7 +357,8 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
     <div class="nav">
       <a class="brand" href="/"><img src="/logo.png" alt="Rubinox Metal and Alloys"></a>
 
-      <div class="navlinks">
+      <!-- Desktop Nav -->
+      <div class="navlinks desktopNav">
         <a href="/#materials">Materials</a>
         <a href="/materials/stainless-steel.html">Stainless Steel</a>
         <a href="/quotation.html">Quotation</a>
@@ -226,6 +370,34 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
            target="_blank"
            rel="noopener"
            onclick="return trackLeadAndGo('whatsapp','header_whatsapp_aluminium', this.href, true)">
+          WhatsApp Quote
+        </a>
+      </div>
+
+      <!-- Mobile Toggle -->
+      <button class="menuToggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg id="menuIcon" viewBox="0 0 24 24">
+          <path d="M4 7h16"></path>
+          <path d="M4 12h16"></path>
+          <path d="M4 17h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobileMenu" id="mobileMenu">
+      <div class="mobileMenuPanel">
+        <a href="/#materials">Materials</a>
+        <a href="/materials/stainless-steel.html">Stainless Steel</a>
+        <a href="/quotation.html">Quotation</a>
+        <a href="/industries.html">Industries</a>
+        <a href="/#contact">Contact</a>
+
+        <a class="mobileBtn btn primary"
+           href="https://wa.me/919363193755"
+           target="_blank"
+           rel="noopener"
+           onclick="return trackLeadAndGo('whatsapp','header_whatsapp_mobile_aluminium', this.href, true)">
           WhatsApp Quote
         </a>
       </div>
@@ -246,13 +418,14 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
 <div class="page">
 
   <div class="heroGrid">
+
     <div class="card heroText">
       <h1>Aluminium 6061, 6063 &amp; 7075 Supplier in India</h1>
 
       <p style="max-width:78ch">
-        Rubinox Metal and Alloys supplies aluminium sheets, plates, coils, pipes, tubes,
-        rods, bars and structural sections for fabrication, marine, aerospace and industrial
-        applications across India and export markets.
+        Rubinox Metal and Alloys supplies aluminium sheets, plates, coils,
+        pipes, tubes, rods, bars and structural sections for fabrication,
+        marine, aerospace and industrial applications across India and export markets.
       </p>
 
       <div class="miniRow">
@@ -263,15 +436,17 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
     </div>
 
     <div class="heroImg">
-      <img src="/assets/mat-aluminium.png" alt="Aluminium sheets, plates, pipes, bars and coils">
+      <img src="/assets/mat-aluminium.png" alt="Aluminium sheets, plates, coils, pipes and bars">
     </div>
+
   </div>
 
   <div class="grid2">
+
     <div class="card">
       <h2>Common Aluminium Grades</h2>
       <ul>
-        <li><b>6061:</b> Structural &amp; engineering alloy</li>
+        <li><b>6061:</b> Structural and engineering alloy</li>
         <li><b>6063:</b> Architectural extrusion grade</li>
         <li><b>7075:</b> High strength aerospace alloy</li>
         <li><b>5083:</b> Marine grade aluminium</li>
@@ -282,13 +457,14 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
     <div class="card">
       <h2>Typical Applications</h2>
       <ul>
-        <li>Aerospace &amp; aviation components</li>
-        <li>Marine &amp; shipbuilding</li>
+        <li>Aerospace and aviation components</li>
+        <li>Marine and shipbuilding</li>
         <li>Industrial fabrication</li>
         <li>Architectural structures</li>
-        <li>Heat exchangers &amp; transport</li>
+        <li>Heat exchangers and transport</li>
       </ul>
     </div>
+
   </div>
 
   <div class="card" style="margin-top:14px">
@@ -300,6 +476,7 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
     <h2>Related Materials</h2>
 
     <div class="relGrid">
+
       <a class="relItem" href="/materials/stainless-steel.html">
         <strong>Stainless Steel</strong>
         <span>SS 202 / 304 / 316 supply.</span>
@@ -307,56 +484,59 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
 
       <a class="relItem" href="/materials/copper.html">
         <strong>Copper</strong>
-        <span>C101 / C110 sheets, tubes, coils &amp; bars.</span>
+        <span>C101 / C110 supply.</span>
       </a>
 
       <a class="relItem" href="/materials/brass.html">
         <strong>Brass</strong>
-        <span>C260 / C360 / C464 rods, sheets &amp; fittings.</span>
+        <span>C260 / C360 supply.</span>
       </a>
 
       <a class="relItem" href="/materials/nickel-alloys.html">
         <strong>Nickel Alloys</strong>
-        <span>Inconel, Monel, Hastelloy, Incoloy supply.</span>
+        <span>Inconel / Monel / Hastelloy supply.</span>
       </a>
 
       <a class="relItem" href="/materials/duplex-super-duplex.html">
         <strong>Duplex &amp; Super Duplex</strong>
-        <span>2205 / 2507 for chloride &amp; marine service.</span>
+        <span>2205 / 2507 supply.</span>
       </a>
 
       <a class="relItem" href="/materials/titanium.html">
         <strong>Titanium</strong>
-        <span>Grade 2 &amp; Grade 5 supply for critical use.</span>
+        <span>Grade 2 / Grade 5 supply.</span>
       </a>
 
       <a class="relItem" href="/materials/carbon-steel.html">
         <strong>Carbon Steel</strong>
-        <span>A36, 1018, 1045, A516 Gr 70 plates &amp; pipes.</span>
+        <span>A36 / 1045 supply.</span>
       </a>
 
       <a class="relItem" href="/materials/mild-steel.html">
         <strong>Mild Steel</strong>
-        <span>A36, A500, 1018, 1020, S235, S355 supply.</span>
+        <span>S235 / S355 supply.</span>
       </a>
 
       <a class="relItem" href="/materials/smo-254.html">
         <strong>SMO 254</strong>
-        <span>6Mo stainless steel for seawater service.</span>
+        <span>6Mo stainless steel.</span>
       </a>
 
       <a class="relItem" href="/materials/phosphor-bronze.html">
         <strong>Phosphor Bronze</strong>
-        <span>C510 / C521 / C544 sheets, coils, rods &amp; bars.</span>
+        <span>C510 / C521 supply.</span>
       </a>
+
     </div>
   </div>
 
   <div class="card" style="margin-top:14px">
     <h2>Request a Quotation</h2>
+
     <p>Share grade/spec, size, quantity and delivery location for fastest pricing.</p>
 
     <div class="btnrow">
+
       <a class="btn primary"
          href="https://wa.me/919363193755"
          target="_blank"
@@ -366,22 +546,64 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
       </a>
 
       <a class="btn ghost"
-         href="mailto:tarun@rubinoxmetal.com?subject=Aluminium%20Quotation%20Request%20-%20Rubinox">
+         href="mailto:tarun@rubinoxmetal.com?subject=Aluminium%20Quotation%20Request">
         Email RFQ
       </a>
 
-      <a class="btn ghost" href="/quotation.html">Quotation Page</a>
+      <a class="btn ghost" href="/quotation.html">
+        Quotation Page
+      </a>
+
     </div>
   </div>
 
   <div class="card" style="margin-top:14px">
     <h2>Contact</h2>
+
     <p>
-      Phone: +91 9363193755 • Email: tarun@rubinoxmetal.com<br/>
-      A-206, 2nd floor, Krishvi Escape, Kalbadevi, Mumbai – 400002
+      Phone: +91 9363193755 • Email: tarun@rubinoxmetal.com<br>
+      A-206, 2nd Floor, Krishvi Escape, Kalbadevi, Mumbai – 400002
     </p>
   </div>
 
 </div>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const menuIcon = document.getElementById("menuIcon");
+
+  function openMenu(){
+    mobileMenu.classList.add("open");
+    menuToggle.setAttribute("aria-expanded", "true");
+    menuIcon.innerHTML = '<path d="M6 6l12 12"></path><path d="M18 6L6 18"></path>';
+  }
+
+  function closeMenu(){
+    mobileMenu.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuIcon.innerHTML = '<path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path>';
+  }
+
+  if(menuToggle && mobileMenu && menuIcon){
+    menuToggle.addEventListener("click", function(){
+      if(mobileMenu.classList.contains("open")) closeMenu();
+      else openMenu();
+    });
+
+    mobileMenu.querySelectorAll("a").forEach(function(link){
+      link.addEventListener("click", function(){
+        closeMenu();
+      });
+    });
+
+    window.addEventListener("resize", function(){
+      if(window.innerWidth > 900){
+        closeMenu();
+      }
+    });
+  }
+</script>
+
 </body>
 </html>
