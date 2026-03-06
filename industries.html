@@ -16,58 +16,113 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-JT5X5L5H07');
+
+function trackLeadAndGo(method, label, url, newTab){
+  try{
+    if (typeof gtag === "function") {
+      let opened = false;
+      const go = () => {
+        if (opened) return;
+        opened = true;
+        if (newTab) window.open(url, "_blank", "noopener");
+        else window.location.href = url;
+      };
+      gtag("event", "generate_lead", {
+        method: method,
+        event_label: label,
+        event_callback: go
+      });
+      setTimeout(go, 600);
+      return false;
+    }
+  } catch(e){}
+  if (newTab) window.open(url, "_blank", "noopener");
+  else window.location.href = url;
+  return false;
+}
 </script>
 
 <style>
 :root{
+  --ink:#0b1220;
+  --ink2:#132a63;
+  --muted:#566b9a;
+  --line:#e6ecf8;
   --accent:#4f8cff;
+  --bg:#f6f8fc;
+  --card:#ffffff;
 }
 *{box-sizing:border-box}
 
 body{
-  font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   margin:0;
-  background:#f6f8fc;
-  color:#0b1220;
+  background:var(--bg);
+  color:var(--ink);
 }
 a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 18px}
 
-.wrap{max-width:1100px;margin:0 auto;padding:0 14px}
-
-/* ====== HEADER (uniform) ====== */
+/* HEADER */
 header{
-  position:sticky;top:0;z-index:10;
-  background:rgba(255,255,255,.85);
-  backdrop-filter: blur(10px);
-  border-bottom:1px solid #e6ecf8;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.88);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
 }
 .nav{
-  display:flex;align-items:center;justify-content:space-between;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
   padding:14px 0;
   gap:14px;
+  position:relative;
 }
 .brand{
-  display:flex;align-items:center;
+  display:flex;
+  align-items:center;
   text-decoration:none;
+  flex:0 0 auto;
 }
-.brand img{max-height:72px;width:auto;display:block}
-
-.navlinks{display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.brand img{
+  height:72px;
+  max-height:72px;
+  width:auto;
+  display:block;
+}
+.navlinks{
+  display:flex;
+  gap:14px;
+  align-items:center;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
 .navlinks a{
   text-decoration:none;
-  padding:8px 10px;border-radius:10px;
-  color:#1b2b52;font-weight:600;font-size:14px;
+  padding:8px 10px;
+  border-radius:10px;
+  color:#1b2b52;
+  font-weight:600;
+  font-size:14px;
   white-space:nowrap;
 }
 .navlinks a:hover{background:#eef4ff}
 
 .btn{
-  display:inline-flex;align-items:center;justify-content:center;
-  padding:11px 14px;border-radius:12px;
-  text-decoration:none;font-weight:800;font-size:14px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:11px 14px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:800;
+  font-size:14px;
   border:1px solid transparent;
   gap:8px;
   white-space:nowrap;
+  cursor:pointer;
 }
 .btn.primary{
   background:var(--accent);
@@ -76,42 +131,144 @@ header{
 }
 .btn.primary:hover{filter:brightness(.95)}
 .btn.ghost{
-  background:#fff;border-color:#dbe6ff;color:#132a63;
+  background:#fff;
+  border-color:#dbe6ff;
+  color:#132a63;
 }
 .btn.ghost:hover{background:#f4f8ff}
 
-/* ====== PAGE ====== */
-.page{max-width:1100px;margin:0 auto;padding:22px 14px}
+/* MOBILE TOGGLE */
+.menuToggle{
+  display:none;
+  width:44px;
+  height:44px;
+  border-radius:12px;
+  border:1px solid #dbe6ff;
+  background:#fff;
+  color:#1b2b52;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  padding:0;
+  box-shadow:0 8px 20px rgba(15,30,60,.06);
+}
+.menuToggle:hover{background:#f4f8ff}
+.menuToggle svg{
+  width:22px;
+  height:22px;
+  stroke:#1b2b52;
+  stroke-width:2.2;
+  fill:none;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  display:block;
+}
+
+.mobileMenu{
+  display:none;
+  width:100%;
+  padding:0 0 14px;
+}
+.mobileMenuPanel{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  box-shadow:0 16px 40px rgba(15,30,60,.08);
+  padding:10px;
+}
+.mobileMenuPanel a{
+  display:block;
+  text-decoration:none;
+  padding:12px 14px;
+  border-radius:12px;
+  color:#1b2b52;
+  font-weight:700;
+  font-size:14px;
+}
+.mobileMenuPanel a:hover{background:#eef4ff}
+.mobileMenuPanel .mobileBtn{
+  margin-top:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:var(--accent);
+  color:#fff;
+  box-shadow:0 12px 30px rgba(79,140,255,.20);
+}
+.mobileMenu.open{display:block}
+
+/* PAGE */
+.page{max-width:1100px;margin:0 auto;padding:22px 18px}
 .crumb{
   color:#8aa0c8;
   font-weight:600;
   margin:8px 0 4px;
   font-size:12px;
-  letter-spacing:0.3px;
+  letter-spacing:.3px;
 }
 .card{
-  background:#fff;
-  border:1px solid #e6ecf8;
-  border-radius:16px;
-  padding:16px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:18px;
   margin-top:14px;
   box-shadow:0 10px 30px rgba(15,30,60,.06);
 }
-h1{margin:10px 0 10px;color:#132a63}
-h2{margin:0 0 10px;color:#132a63}
-p{color:#566b9a;line-height:1.7;margin:0}
-.grid2{display:grid;gap:14px;grid-template-columns:1fr 1fr;margin-top:14px}
-.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+h1{
+  margin:10px 0 10px;
+  color:var(--ink2);
+  font-size:34px;
+  letter-spacing:-.2px;
+}
+h2{
+  margin:0 0 10px;
+  color:var(--ink2);
+}
+p{
+  color:var(--muted);
+  line-height:1.75;
+  margin:0;
+}
+.grid2{
+  display:grid;
+  gap:14px;
+  grid-template-columns:1fr 1fr;
+  margin-top:14px;
+}
+.btnrow{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:14px;
+}
 
 @media (max-width:900px){
-  .grid2{grid-template-columns:1fr}
+  .desktopNav{
+    display:none;
+  }
+  .menuToggle{
+    display:inline-flex;
+  }
+  .brand img{
+    height:56px;
+    max-height:56px;
+  }
+  .nav{
+    padding:10px 0;
+  }
+  .grid2{
+    grid-template-columns:1fr;
+  }
+  h1{
+    font-size:28px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
   <div class="wrap">
     <div class="nav">
@@ -119,17 +276,48 @@ p{color:#566b9a;line-height:1.7;margin:0}
         <img src="/logo.png" alt="Rubinox Metal and Alloys">
       </a>
 
-      <div class="navlinks">
+      <!-- Desktop Nav -->
+      <div class="navlinks desktopNav">
         <a href="/#materials">Materials</a>
         <a href="/materials/stainless-steel.html">Stainless Steel</a>
         <a href="/quotation.html">Quotation</a>
         <a href="/industries.html">Industries</a>
-        <a href="/#forms">Forms</a>
         <a href="/#contact">Contact</a>
         <a class="btn primary"
            href="https://wa.me/919363193755"
            target="_blank"
-           rel="noopener">WhatsApp Quote</a>
+           rel="noopener"
+           onclick="return trackLeadAndGo('whatsapp','header_whatsapp_industries_page', this.href, true)">
+          WhatsApp Quote
+        </a>
+      </div>
+
+      <!-- Mobile Toggle -->
+      <button class="menuToggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg id="menuIcon" viewBox="0 0 24 24">
+          <path d="M4 7h16"></path>
+          <path d="M4 12h16"></path>
+          <path d="M4 17h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobileMenu" id="mobileMenu">
+      <div class="mobileMenuPanel">
+        <a href="/#materials">Materials</a>
+        <a href="/materials/stainless-steel.html">Stainless Steel</a>
+        <a href="/quotation.html">Quotation</a>
+        <a href="/industries.html">Industries</a>
+        <a href="/#contact">Contact</a>
+
+        <a class="mobileBtn btn primary"
+           href="https://wa.me/919363193755"
+           target="_blank"
+           rel="noopener"
+           onclick="return trackLeadAndGo('whatsapp','header_whatsapp_mobile_industries_page', this.href, true)">
+          WhatsApp Quote
+        </a>
       </div>
     </div>
   </div>
@@ -137,74 +325,127 @@ p{color:#566b9a;line-height:1.7;margin:0}
 
 <div class="page">
 
-<div class="crumb">Home • Industries We Serve</div>
+  <div class="crumb">Home • Industries We Serve</div>
 
-<h1>Industries We Serve</h1>
+  <h1>Industries We Serve</h1>
 
-<p style="max-width:80ch">
-Rubinox Metal and Alloys supplies stainless steel, duplex, super duplex, nickel alloys, 254 SMO, titanium and industrial metals for critical industrial applications across India and global markets.
-</p>
+  <p style="max-width:80ch">
+    Rubinox Metal and Alloys supplies stainless steel, duplex, super duplex, nickel alloys,
+    254 SMO, titanium and industrial metals for critical industrial applications across India and global markets.
+  </p>
 
-<div class="grid2">
+  <div class="grid2">
 
-<div class="card">
-<h2>Oil & Gas Industry</h2>
-<p>
-Duplex 2205, Super Duplex 2507, Inconel 625, Hastelloy C276 and corrosion-resistant alloys for offshore platforms, pipelines, refineries and high-pressure systems.
-</p>
+    <div class="card">
+      <h2>Oil &amp; Gas Industry</h2>
+      <p>
+        Duplex 2205, Super Duplex 2507, Inconel 625, Hastelloy C276 and corrosion-resistant alloys
+        for offshore platforms, pipelines, refineries and high-pressure systems.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Chemical &amp; Petrochemical</h2>
+      <p>
+        Nickel alloys, SMO 254 and high-performance stainless steels suitable for aggressive
+        chemical environments and process equipment.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Marine &amp; Shipbuilding</h2>
+      <p>
+        Super duplex stainless steel, copper alloys and corrosion-resistant materials for marine
+        structures and seawater applications.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>EPC &amp; Infrastructure Projects</h2>
+      <p>
+        Bulk supply of structural steel, stainless steel, plates, pipes and fittings for large-scale
+        industrial and infrastructure projects.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Fabrication &amp; Engineering Units</h2>
+      <p>
+        Pipes, tubes, sheets, plates, flanges, fittings and fasteners for custom fabrication
+        and engineering applications.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Power &amp; Energy Sector</h2>
+      <p>
+        Heat-resistant and high-strength alloys for thermal, nuclear and renewable energy applications.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="card">
+    <h2>Request a Quotation</h2>
+    <p>
+      Send your material grade, size, quantity and delivery location for fast pricing support.
+    </p>
+
+    <div class="btnrow">
+      <a class="btn primary"
+         href="https://wa.me/919363193755"
+         target="_blank"
+         rel="noopener"
+         onclick="return trackLeadAndGo('whatsapp','industries_whatsapp', this.href, true)">WhatsApp Quote</a>
+
+      <a class="btn ghost"
+         href="mailto:tarun@rubinoxmetal.com?subject=Industry%20Requirement%20-%20Rubinox"
+         onclick="return trackLeadAndGo('email','industries_email', this.href, false)">Email Requirement</a>
+
+      <a class="btn ghost"
+         href="/quotation.html"
+         onclick="return trackLeadAndGo('navigation','industries_quote_page', this.href, false)">Quotation Page</a>
+    </div>
+  </div>
+
 </div>
 
-<div class="card">
-<h2>Chemical & Petrochemical</h2>
-<p>
-Nickel alloys, SMO 254 and high-performance stainless steels suitable for aggressive chemical environments and process equipment.
-</p>
-</div>
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const menuIcon = document.getElementById("menuIcon");
 
-<div class="card">
-<h2>Marine & Shipbuilding</h2>
-<p>
-Super duplex stainless steel, copper alloys and corrosion-resistant materials for marine structures and seawater applications.
-</p>
-</div>
+  function openMenu(){
+    mobileMenu.classList.add("open");
+    menuToggle.setAttribute("aria-expanded", "true");
+    menuIcon.innerHTML = '<path d="M6 6l12 12"></path><path d="M18 6L6 18"></path>';
+  }
 
-<div class="card">
-<h2>EPC & Infrastructure Projects</h2>
-<p>
-Bulk supply of structural steel, stainless steel, plates, pipes and fittings for large-scale industrial and infrastructure projects.
-</p>
-</div>
+  function closeMenu(){
+    mobileMenu.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuIcon.innerHTML = '<path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path>';
+  }
 
-<div class="card">
-<h2>Fabrication & Engineering Units</h2>
-<p>
-Pipes, tubes, sheets, plates, flanges, fittings and fasteners for custom fabrication and engineering applications.
-</p>
-</div>
+  if(menuToggle && mobileMenu && menuIcon){
+    menuToggle.addEventListener("click", function(){
+      if(mobileMenu.classList.contains("open")) closeMenu();
+      else openMenu();
+    });
 
-<div class="card">
-<h2>Power & Energy Sector</h2>
-<p>
-Heat-resistant and high-strength alloys for thermal, nuclear and renewable energy applications.
-</p>
-</div>
+    mobileMenu.querySelectorAll("a").forEach(function(link){
+      link.addEventListener("click", function(){
+        closeMenu();
+      });
+    });
 
-</div>
-
-<div class="card">
-<h2>Request a Quotation</h2>
-<p>
-Send your material grade, size, quantity and delivery location for fast pricing support.
-</p>
-
-<div class="btnrow">
-<a class="btn primary" href="https://wa.me/919363193755" target="_blank" rel="noopener">WhatsApp Quote</a>
-<a class="btn ghost" href="mailto:tarun@rubinoxmetal.com?subject=Industry%20Requirement%20-%20Rubinox">Email Requirement</a>
-<a class="btn ghost" href="/quotation.html">Quotation Page</a>
-</div>
-</div>
-
-</div>
+    window.addEventListener("resize", function(){
+      if(window.innerWidth > 900){
+        closeMenu();
+      }
+    });
+  }
+</script>
 
 </body>
 </html>
