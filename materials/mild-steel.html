@@ -56,49 +56,165 @@ function trackLeadAndGo(method, label, url, newTab){
 *{box-sizing:border-box}
 body{
   margin:0;
-  font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   color:var(--ink);
   background:var(--bg);
 }
 a{color:inherit}
 .wrap{max-width:1100px;margin:0 auto;padding:0 18px}
 
-/* Header */
+/* HEADER */
 header{
-  position:sticky;top:0;z-index:10;
-  background:rgba(255,255,255,.85);
-  backdrop-filter: blur(10px);
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.88);
+  backdrop-filter:blur(10px);
   border-bottom:1px solid var(--line);
 }
 .nav{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:14px 0;gap:14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 0;
+  gap:14px;
+  position:relative;
 }
-.brand img{height:72px;max-height:72px;width:auto;display:block;}
+.brand{
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+  flex:0 0 auto;
+}
+.brand img{
+  height:72px;
+  max-height:72px;
+  width:auto;
+  display:block;
+}
 .navlinks{
-  display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:flex-end;
+  display:flex;
+  gap:14px;
+  align-items:center;
+  flex-wrap:wrap;
+  justify-content:flex-end;
 }
 .navlinks a{
-  text-decoration:none;padding:8px 10px;border-radius:10px;
-  color:#1b2b52;font-weight:600;font-size:14px;
+  text-decoration:none;
+  padding:8px 10px;
+  border-radius:10px;
+  color:#1b2b52;
+  font-weight:600;
+  font-size:14px;
 }
 .navlinks a:hover{background:#eef4ff}
 .btn{
-  display:inline-flex;align-items:center;justify-content:center;
-  padding:11px 14px;border-radius:12px;
-  text-decoration:none;font-weight:800;font-size:14px;
-  border:1px solid transparent;gap:8px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:11px 14px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:800;
+  font-size:14px;
+  border:1px solid transparent;
+  gap:8px;
   white-space:nowrap;
 }
-.btn.primary{background:var(--accent);color:#fff;box-shadow:0 12px 30px rgba(79,140,255,.25)}
+.btn.primary{
+  background:var(--accent);
+  color:#fff;
+  box-shadow:0 12px 30px rgba(79,140,255,.25);
+}
 .btn.primary:hover{filter:brightness(.96)}
-.btn.ghost{background:#fff;border-color:#dbe6ff;color:#1b2b52}
+.btn.ghost{
+  background:#fff;
+  border-color:#dbe6ff;
+  color:#1b2b52;
+}
 .btn.ghost:hover{background:#f4f8ff}
 
+/* MOBILE TOGGLE */
+.menuToggle{
+  display:none;
+  width:44px;
+  height:44px;
+  border-radius:12px;
+  border:1px solid #dbe6ff;
+  background:#fff;
+  color:#1b2b52;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  padding:0;
+  box-shadow:0 8px 20px rgba(15,30,60,.06);
+}
+.menuToggle:hover{background:#f4f8ff}
+.menuToggle svg{
+  width:22px;
+  height:22px;
+  stroke:#1b2b52;
+  stroke-width:2.2;
+  fill:none;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  display:block;
+}
+
+.mobileMenu{
+  display:none;
+  width:100%;
+  padding:0 0 14px;
+}
+.mobileMenuPanel{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  box-shadow:0 16px 40px rgba(15,30,60,.08);
+  padding:10px;
+}
+.mobileMenuPanel a{
+  display:block;
+  text-decoration:none;
+  padding:12px 14px;
+  border-radius:12px;
+  color:#1b2b52;
+  font-weight:700;
+  font-size:14px;
+}
+.mobileMenuPanel a:hover{background:#eef4ff}
+.mobileMenuPanel .mobileBtn{
+  margin-top:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:var(--accent);
+  color:#fff;
+  box-shadow:0 12px 30px rgba(79,140,255,.20);
+}
+.mobileMenu.open{display:block}
+
 /* Breadcrumb */
-.topbar{background:#fff;border-bottom:1px solid var(--line);padding:14px 0;}
-.crumb{color:var(--muted);font-weight:600;font-size:14px;display:flex;gap:8px;flex-wrap:wrap;}
-.crumb a{color:var(--ink2);font-weight:800;text-decoration:underline;text-underline-offset:3px;}
+.topbar{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  padding:14px 0;
+}
+.crumb{
+  color:var(--muted);
+  font-weight:600;
+  font-size:14px;
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.crumb a{
+  color:var(--ink2);
+  font-weight:800;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
 
 .page{max-width:1100px;margin:0 auto;padding:22px 18px}
 
@@ -130,12 +246,16 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
 /* Hero */
 .heroGrid{
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:1fr 1fr;
   gap:14px;
   align-items:stretch;
   margin-top:14px;
 }
-.heroText{display:flex;flex-direction:column;justify-content:center}
+.heroText{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
 .heroImg{
   overflow:hidden;
   border-radius:18px;
@@ -175,15 +295,37 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
   background:#f9fbff;
 }
 .relItem strong{color:var(--ink2)}
-.relItem span{display:block;color:var(--muted);margin-top:4px;font-size:13px;}
+.relItem span{
+  display:block;
+  color:var(--muted);
+  margin-top:4px;
+  font-size:13px;
+}
 
-.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.btnrow{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
 
 @media (max-width:900px){
+  .desktopNav{
+    display:none;
+  }
+  .menuToggle{
+    display:inline-flex;
+  }
+  .brand img{
+    height:56px;
+    max-height:56px;
+  }
+  .nav{
+    padding:10px 0;
+  }
   .grid2{grid-template-columns:1fr}
   .heroGrid{grid-template-columns:1fr}
   h1{font-size:28px}
-  .brand img{height:64px}
   .heroImg{min-height:220px}
 }
 </style>
@@ -211,6 +353,7 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
 </script>
 
 </head>
+
 <body>
 
 <header>
@@ -218,7 +361,8 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
     <div class="nav">
       <a class="brand" href="/"><img src="/logo.png" alt="Rubinox Metal and Alloys"></a>
 
-      <div class="navlinks">
+      <!-- Desktop Nav -->
+      <div class="navlinks desktopNav">
         <a href="/#materials">Materials</a>
         <a href="/materials/stainless-steel.html">Stainless Steel</a>
         <a href="/quotation.html">Quotation</a>
@@ -230,6 +374,34 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
            target="_blank"
            rel="noopener"
            onclick="return trackLeadAndGo('whatsapp','header_whatsapp_mild', this.href, true)">
+          WhatsApp Quote
+        </a>
+      </div>
+
+      <!-- Mobile Toggle -->
+      <button class="menuToggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg id="menuIcon" viewBox="0 0 24 24">
+          <path d="M4 7h16"></path>
+          <path d="M4 12h16"></path>
+          <path d="M4 17h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobileMenu" id="mobileMenu">
+      <div class="mobileMenuPanel">
+        <a href="/#materials">Materials</a>
+        <a href="/materials/stainless-steel.html">Stainless Steel</a>
+        <a href="/quotation.html">Quotation</a>
+        <a href="/industries.html">Industries</a>
+        <a href="/#contact">Contact</a>
+
+        <a class="mobileBtn btn primary"
+           href="https://wa.me/919363193755"
+           target="_blank"
+           rel="noopener"
+           onclick="return trackLeadAndGo('whatsapp','header_whatsapp_mobile_mild', this.href, true)">
           WhatsApp Quote
         </a>
       </div>
@@ -254,9 +426,9 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
       <h1>Mild Steel A36, A500, 1018, 1020, S235 &amp; S355 Supplier in India</h1>
 
       <p style="max-width:78ch">
-        Rubinox Metal and Alloys supplies mild steel pipes, tubes, sheets, plates, coils, bars,
-        rods, angles, channels, flats, fittings and fasteners for fabrication, structural,
-        engineering and infrastructure applications across India and export markets.
+        Rubinox Metal and Alloys supplies mild steel materials including ASTM and EN grades
+        in pipes, tubes, sheets, plates, coils, bars, rods, angles, channels, flats, fittings
+        and fasteners for fabrication, structural and engineering applications across India and export markets.
       </p>
 
       <div class="miniRow">
@@ -267,7 +439,7 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
     </div>
 
     <div class="heroImg">
-      <img src="/assets/mat-mild-steel.png" alt="Mild steel pipes, plates, bars and structural sections">
+      <img src="/assets/mat-mild-steel.png" alt="Mild steel sheets, plates, pipes, bars and structural sections">
     </div>
   </div>
 
@@ -275,12 +447,11 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
     <div class="card">
       <h2>Common Mild Steel Grades</h2>
       <ul>
-        <li><b>A36:</b> Structural plates and sections</li>
-        <li><b>A500:</b> Hollow structural sections</li>
-        <li><b>A513:</b> Mechanical tubing</li>
-        <li><b>1018:</b> Cold rolled machining grade</li>
-        <li><b>1020:</b> General purpose engineering steel</li>
-        <li><b>S235 / S355:</b> European structural grades</li>
+        <li><b>ASTM A36:</b> Structural plates and sections</li>
+        <li><b>ASTM A500:</b> HSS and structural tubing</li>
+        <li><b>ASTM A513:</b> Mechanical tubing</li>
+        <li><b>SAE 1018 / 1020:</b> General engineering and machining</li>
+        <li><b>EN S235 / S355:</b> European structural grades</li>
       </ul>
     </div>
 
@@ -375,7 +546,9 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
         Email RFQ
       </a>
 
-      <a class="btn ghost" href="/quotation.html">Quotation Page</a>
+      <a class="btn ghost" href="/quotation.html">
+        Quotation Page
+      </a>
     </div>
   </div>
 
@@ -388,6 +561,43 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
   </div>
 
 </div>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const menuIcon = document.getElementById("menuIcon");
+
+  function openMenu(){
+    mobileMenu.classList.add("open");
+    menuToggle.setAttribute("aria-expanded", "true");
+    menuIcon.innerHTML = '<path d="M6 6l12 12"></path><path d="M18 6L6 18"></path>';
+  }
+
+  function closeMenu(){
+    mobileMenu.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuIcon.innerHTML = '<path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path>';
+  }
+
+  if(menuToggle && mobileMenu && menuIcon){
+    menuToggle.addEventListener("click", function(){
+      if(mobileMenu.classList.contains("open")) closeMenu();
+      else openMenu();
+    });
+
+    mobileMenu.querySelectorAll("a").forEach(function(link){
+      link.addEventListener("click", function(){
+        closeMenu();
+      });
+    });
+
+    window.addEventListener("resize", function(){
+      if(window.innerWidth > 900){
+        closeMenu();
+      }
+    });
+  }
+</script>
 
 </body>
 </html>
