@@ -17,395 +17,366 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-JT5X5L5H07');
 
-function trackLeadAndGo(method,label,url,newTab){
-try{
-if(typeof gtag==="function"){
-let opened=false;
-const go=()=>{
-if(opened) return;
-opened=true;
-if(newTab) window.open(url,"_blank","noopener");
-else window.location.href=url;
-};
-gtag("event","generate_lead",{method:method,event_label:label,event_callback:go});
-setTimeout(go,600);
-return false;
-}
-}catch(e){}
-if(newTab) window.open(url,"_blank","noopener");
-else window.location.href=url;
-return false;
+function trackLeadAndGo(method, label, url, newTab){
+  try{
+    if (typeof gtag === "function") {
+      let opened = false;
+      const go = () => {
+        if (opened) return;
+        opened = true;
+        if (newTab) window.open(url, "_blank", "noopener");
+        else window.location.href = url;
+      };
+      gtag("event", "generate_lead", {
+        method: method,
+        event_label: label,
+        event_callback: go
+      });
+      setTimeout(go, 600);
+      return false;
+    }
+  } catch(e){}
+  if (newTab) window.open(url, "_blank", "noopener");
+  else window.location.href = url;
+  return false;
 }
 </script>
 
 <style>
-
 :root{
---ink:#0b1220;
---ink2:#132a63;
---muted:#566b9a;
---line:#e6ecf8;
---accent:#4f8cff;
---bg:#f6f8fc;
---card:#ffffff;
+  --ink:#0b1220;
+  --ink2:#132a63;
+  --muted:#566b9a;
+  --line:#e6ecf8;
+  --accent:#4f8cff;
+  --bg:#f6f8fc;
+  --card:#ffffff;
 }
 
 *{box-sizing:border-box}
-
 body{
-margin:0;
-font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-color:var(--ink);
-background:var(--bg);
+  margin:0;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
 }
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 18px}
 
-.wrap{max-width:1100px;margin:auto;padding:0 18px}
-
+/* Header */
 header{
-position:sticky;
-top:0;
-z-index:10;
-background:rgba(255,255,255,.85);
-backdrop-filter:blur(10px);
-border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:10;
+  background:rgba(255,255,255,.85);
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid var(--line);
 }
-
 .nav{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:14px 0;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 0;gap:14px;
 }
-
-.brand img{height:72px}
-
-.navlinks{display:flex;gap:14px;align-items:center}
-
+.brand img{height:72px;max-height:72px;width:auto;display:block;}
+.navlinks{
+  display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:flex-end;
+}
 .navlinks a{
-text-decoration:none;
-padding:8px 10px;
-border-radius:10px;
-color:#1b2b52;
-font-weight:600;
-font-size:14px;
+  text-decoration:none;padding:8px 10px;border-radius:10px;
+  color:#1b2b52;font-weight:600;font-size:14px;
 }
-
 .navlinks a:hover{background:#eef4ff}
-
 .btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:11px 14px;
-border-radius:12px;
-text-decoration:none;
-font-weight:800;
-font-size:14px;
-border:1px solid transparent;
-gap:8px;
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:11px 14px;border-radius:12px;
+  text-decoration:none;font-weight:800;font-size:14px;
+  border:1px solid transparent;gap:8px;
+  white-space:nowrap;
 }
-
-.btn.primary{background:var(--accent);color:#fff}
+.btn.primary{background:var(--accent);color:#fff;box-shadow:0 12px 30px rgba(79,140,255,.25)}
+.btn.primary:hover{filter:brightness(.96)}
 .btn.ghost{background:#fff;border-color:#dbe6ff;color:#1b2b52}
+.btn.ghost:hover{background:#f4f8ff}
 
-.topbar{background:#fff;border-bottom:1px solid var(--line);padding:14px 0}
+/* Breadcrumb */
+.topbar{background:#fff;border-bottom:1px solid var(--line);padding:14px 0;}
+.crumb{color:var(--muted);font-weight:600;font-size:14px;display:flex;gap:8px;flex-wrap:wrap;}
+.crumb a{color:var(--ink2);font-weight:800;text-decoration:underline;text-underline-offset:3px;}
 
-.crumb{color:var(--muted);font-weight:600;font-size:14px}
-.crumb a{color:var(--ink2);font-weight:800;text-decoration:underline}
+.page{max-width:1100px;margin:0 auto;padding:22px 18px}
 
-.page{max-width:1100px;margin:auto;padding:22px 18px}
-
+/* Base card */
 .card{
-background:var(--card);
-border:1px solid var(--line);
-border-radius:18px;
-padding:18px;
-margin-top:14px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:18px;
+  box-shadow:0 10px 30px rgba(15,30,60,.06);
 }
 
-h1{margin:0 0 10px;color:var(--ink2);font-size:34px}
+/* Headings */
+h1{margin:0 0 10px;color:var(--ink2);font-size:34px;letter-spacing:-.2px}
 h2{margin:0 0 10px;color:var(--ink2)}
+p{color:var(--muted);line-height:1.75;margin:0}
+ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
 
-p{margin:0;color:var(--muted);line-height:1.7}
-ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.8}
-
-/* HERO */
-
-.heroGrid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:14px;
-margin-top:14px;
-margin-bottom:14px;
-}
-
-.heroImg{
-overflow:hidden;
-border-radius:18px;
-border:1px solid var(--line);
-background:#fff;
-display:flex;
-}
-
-.heroImg img{
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
-flex:1;
-}
-/* GRID */
-
-.grid2{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:14px;
-}
-
-.grid2 .card{margin-top:0}
-
-/* CHIPS */
-
-.miniRow{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
-
+/* Chips */
+.miniRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
 .miniTag{
-padding:8px 12px;
-border-radius:999px;
-background:#fff;
-border:1px solid #dbe6ff;
-font-weight:800;
-font-size:12px;
-color:#1b2b52;
+  display:inline-flex;align-items:center;gap:8px;
+  padding:9px 12px;border-radius:999px;
+  background:#fff;border:1px solid #dbe6ff;
+  color:#1b2b52;font-weight:900;font-size:12.5px;
+  box-shadow:0 10px 22px rgba(15,30,60,.05);
 }
 
-/* RELATED MATERIALS */
+/* Hero */
+.heroGrid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:14px;
+  align-items:stretch;
+  margin-top:14px;
+}
+.heroText{display:flex;flex-direction:column;justify-content:center}
+.heroImg{
+  overflow:hidden;
+  border-radius:18px;
+  border:1px solid var(--line);
+  background:#fff;
+  box-shadow:0 12px 34px rgba(15,30,60,.08);
+}
+.heroImg img{
+  width:100%;
+  height:100%;
+  min-height:0;
+  display:block;
+  object-fit:cover;
+}
 
+/* Two cards row */
+.grid2{
+  display:grid;
+  gap:14px;
+  grid-template-columns:1fr 1fr;
+  margin-top:14px;
+}
+
+/* Related Materials */
 .relGrid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:12px;
-margin-top:10px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:12px;margin-top:12px;
 }
-
 .relItem{
-display:block;
-text-decoration:none;
-padding:12px;
-border:1px solid var(--line);
-border-radius:14px;
-background:#f9fbff;
+  display:block;text-decoration:none;
+  padding:12px;border:1px solid var(--line);
+  border-radius:14px;background:#f9fbff;
 }
-
 .relItem strong{color:var(--ink2)}
-.relItem span{display:block;color:var(--muted);margin-top:4px;font-size:13px}
+.relItem span{display:block;color:var(--muted);margin-top:4px;font-size:13px;}
 
 .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 
 @media (max-width:900px){
-
-.heroGrid{grid-template-columns:1fr}
-.grid2{grid-template-columns:1fr}
-h1{font-size:28px}
-.brand img{height:64px}
-
+  .grid2{grid-template-columns:1fr}
+  .heroGrid{grid-template-columns:1fr}
+  h1{font-size:28px}
+  .brand img{height:64px}
+  .heroImg{min-height:220px}
 }
-
 </style>
 
-</head>
+<!-- Schema -->
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"WebPage",
+ "name":"Brass Supplier in India",
+ "url":"https://rubinoxmetal.com/materials/brass.html"
+}
+</script>
 
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"BreadcrumbList",
+ "itemListElement":[
+   {"@type":"ListItem","position":1,"name":"Home","item":"https://rubinoxmetal.com/"},
+   {"@type":"ListItem","position":2,"name":"Materials","item":"https://rubinoxmetal.com/#materials"},
+   {"@type":"ListItem","position":3,"name":"Brass","item":"https://rubinoxmetal.com/materials/brass.html"}
+ ]
+}
+</script>
+
+</head>
 <body>
 
 <header>
-<div class="wrap">
-<div class="nav">
+  <div class="wrap">
+    <div class="nav">
+      <a class="brand" href="/"><img src="/logo.png" alt="Rubinox Metal and Alloys"></a>
 
-<a class="brand" href="/">
-<img src="/logo.png" alt="Rubinox">
-</a>
+      <div class="navlinks">
+        <a href="/#materials">Materials</a>
+        <a href="/materials/stainless-steel.html">Stainless Steel</a>
+        <a href="/quotation.html">Quotation</a>
+        <a href="/industries.html">Industries</a>
+        <a href="/#contact">Contact</a>
 
-<div class="navlinks">
-
-<a href="/#materials">Materials</a>
-<a href="/materials/stainless-steel.html">Stainless Steel</a>
-<a href="/quotation.html">Quotation</a>
-<a href="/industries.html">Industries</a>
-<a href="/#contact">Contact</a>
-
-<a class="btn primary"
-href="https://wa.me/919363193755"
-target="_blank"
-onclick="return trackLeadAndGo('whatsapp','header_whatsapp_brass',this.href,true)">
-WhatsApp Quote
-</a>
-
-</div>
-</div>
-</div>
+        <a class="btn primary"
+           href="https://wa.me/919363193755"
+           target="_blank"
+           rel="noopener"
+           onclick="return trackLeadAndGo('whatsapp','header_whatsapp_brass', this.href, true)">
+          WhatsApp Quote
+        </a>
+      </div>
+    </div>
+  </div>
 </header>
 
 <div class="topbar">
-<div class="wrap">
-<div class="crumb">
-<a href="/">Home</a> •
-<a href="/#materials">Materials</a> •
-Brass
-</div>
-</div>
+  <div class="wrap">
+    <div class="crumb">
+      <a href="/">Home</a> •
+      <a href="/#materials">Materials</a> •
+      Brass
+    </div>
+  </div>
 </div>
 
 <div class="page">
 
-<div class="heroGrid">
+  <div class="heroGrid">
+    <div class="card heroText">
+      <h1>Brass C260, C360 &amp; C464 Supplier in India</h1>
 
-<div class="card">
+      <p style="max-width:78ch">
+        Rubinox Metal and Alloys supplies brass rods, bars, sheets, plates, pipes and tubes
+        used in electrical, marine, plumbing and precision machining applications across India
+        and export markets.
+      </p>
 
-<h1>Brass C260, C360 & C464 Supplier in India</h1>
+      <div class="miniRow">
+        <span class="miniTag">✔ PAN India Supply</span>
+        <span class="miniTag">✔ Export Support</span>
+        <span class="miniTag">✔ Fast Quotation</span>
+      </div>
+    </div>
 
-<p>
-Rubinox Metal and Alloys supplies brass rods, bars, sheets, plates, pipes and tubes used in electrical,
-marine, plumbing and precision machining applications across India and export markets.
-</p>
+    <div class="heroImg">
+      <img src="/assets/mat-brass.png" alt="Brass rods, bars, sheets, plates and pipes">
+    </div>
+  </div>
 
-<div class="miniRow">
-<span class="miniTag">✔ PAN India Supply</span>
-<span class="miniTag">✔ Export Support</span>
-<span class="miniTag">✔ Fast Quotation</span>
-</div>
+  <div class="grid2">
+    <div class="card">
+      <h2>Common Brass Grades</h2>
+      <ul>
+        <li><b>C260 (Cartridge Brass):</b> Deep drawing &amp; sheets</li>
+        <li><b>C360 (Free Cutting Brass):</b> Precision machining</li>
+        <li><b>C464 (Naval Brass):</b> Marine corrosion resistance</li>
+        <li><b>C280:</b> General fabrication</li>
+        <li><b>C385:</b> Architectural hardware</li>
+      </ul>
+    </div>
 
-</div>
+    <div class="card">
+      <h2>Typical Applications</h2>
+      <ul>
+        <li>Electrical connectors &amp; terminals</li>
+        <li>Marine hardware &amp; components</li>
+        <li>Industrial valves &amp; fittings</li>
+        <li>Machined precision parts</li>
+        <li>Plumbing &amp; decorative fittings</li>
+      </ul>
+    </div>
+  </div>
 
-<div class="heroImg">
-<img src="/assets/mat-brass.png" alt="Brass rods bars sheets and pipes">
-</div>
+  <div class="card" style="margin-top:14px">
+    <h2>Product Forms Available</h2>
+    <p>Rods • Bars • Sheets • Plates • Pipes • Tubes • Flats • Angles • Circles</p>
+  </div>
 
-</div>
+  <div class="card" style="margin-top:14px">
+    <h2>Related Materials</h2>
 
-<div class="grid2">
+    <div class="relGrid">
+      <a class="relItem" href="/materials/stainless-steel.html">
+        <strong>Stainless Steel</strong>
+        <span>SS 202 / 304 / 316 supply.</span>
+      </a>
 
-<div class="card">
-<h2>Common Brass Grades</h2>
-<ul>
-<li><b>C260 (Cartridge Brass)</b> – deep drawing & sheets</li>
-<li><b>C360 (Free Cutting Brass)</b> – precision machining</li>
-<li><b>C464 (Naval Brass)</b> – marine corrosion resistance</li>
-<li><b>C280</b> – general fabrication</li>
-<li><b>C385</b> – architectural hardware</li>
-</ul>
-</div>
+      <a class="relItem" href="/materials/aluminium.html">
+        <strong>Aluminium</strong>
+        <span>6061 / 6063 / 7075 sheets, plates, bars &amp; tubes.</span>
+      </a>
 
-<div class="card">
-<h2>Typical Applications</h2>
-<ul>
-<li>Electrical connectors & terminals</li>
-<li>Marine hardware & components</li>
-<li>Industrial valves & fittings</li>
-<li>Machined precision parts</li>
-<li>Plumbing & decorative fittings</li>
-</ul>
-</div>
+      <a class="relItem" href="/materials/copper.html">
+        <strong>Copper</strong>
+        <span>C101 / C110 pipes, sheets, coils &amp; bars.</span>
+      </a>
 
-</div>
+      <a class="relItem" href="/materials/nickel-alloys.html">
+        <strong>Nickel Alloys</strong>
+        <span>Inconel, Monel, Hastelloy, Incoloy supply.</span>
+      </a>
 
-<div class="card">
-<h2>Product Forms Available</h2>
-<p>Rods • Bars • Sheets • Plates • Pipes • Tubes • Flats • Angles • Circles</p>
-</div>
+      <a class="relItem" href="/materials/duplex-super-duplex.html">
+        <strong>Duplex &amp; Super Duplex</strong>
+        <span>2205 / 2507 for chloride &amp; marine service.</span>
+      </a>
 
-<div class="card">
-<h2>Related Materials</h2>
+      <a class="relItem" href="/materials/titanium.html">
+        <strong>Titanium</strong>
+        <span>Grade 2 &amp; Grade 5 supply for critical use.</span>
+      </a>
 
-<div class="relGrid">
+      <a class="relItem" href="/materials/carbon-steel.html">
+        <strong>Carbon Steel</strong>
+        <span>A36, 1018, 1045, A516 Gr 70 plates &amp; pipes.</span>
+      </a>
 
-<a class="relItem" href="/materials/stainless-steel.html">
-<strong>Stainless Steel</strong>
-<span>SS 202 / 304 / 316 supply</span>
-</a>
+      <a class="relItem" href="/materials/mild-steel.html">
+        <strong>Mild Steel</strong>
+        <span>A36, A500, 1018, 1020, S235, S355 supply.</span>
+      </a>
 
-<a class="relItem" href="/materials/aluminium.html">
-<strong>Aluminium</strong>
-<span>6061 / 6063 / 7075 supply</span>
-</a>
+      <a class="relItem" href="/materials/phosphor-bronze.html">
+        <strong>Phosphor Bronze</strong>
+        <span>C510 / C521 / C544 sheets, coils, rods &amp; bars.</span>
+      </a>
+    </div>
+  </div>
 
-<a class="relItem" href="/materials/copper.html">
-<strong>Copper</strong>
-<span>C101 / C110 supply</span>
-</a>
+  <div class="card" style="margin-top:14px">
+    <h2>Request a Quotation</h2>
+    <p>Share grade/spec, size, quantity and delivery location for fastest pricing.</p>
 
-<a class="relItem" href="/materials/nickel-alloys.html">
-<strong>Nickel Alloys</strong>
-<span>Inconel / Monel / Hastelloy</span>
-</a>
+    <div class="btnrow">
+      <a class="btn primary"
+         href="https://wa.me/919363193755"
+         target="_blank"
+         rel="noopener"
+         onclick="return trackLeadAndGo('whatsapp','cta_whatsapp_brass', this.href, true)">
+        WhatsApp for Quote
+      </a>
 
-<a class="relItem" href="/materials/duplex-super-duplex.html">
-<strong>Duplex & Super Duplex</strong>
-<span>2205 / 2507 supply</span>
-</a>
+      <a class="btn ghost"
+         href="mailto:tarun@rubinoxmetal.com?subject=Brass%20Quotation%20Request%20-%20Rubinox">
+        Email RFQ
+      </a>
 
-<a class="relItem" href="/materials/titanium.html">
-<strong>Titanium</strong>
-<span>Grade 2 / Grade 5 supply</span>
-</a>
+      <a class="btn ghost" href="/quotation.html">Quotation Page</a>
+    </div>
+  </div>
 
-<a class="relItem" href="/materials/carbon-steel.html">
-<strong>Carbon Steel</strong>
-<span>A36 / 1045 supply</span>
-</a>
-
-<a class="relItem" href="/materials/mild-steel.html">
-<strong>Mild Steel</strong>
-<span>S235 / S355 supply</span>
-</a>
-
-<a class="relItem" href="/materials/phosphor-bronze.html">
-<strong>Phosphor Bronze</strong>
-<span>C510 / C521 supply</span>
-</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>Request a Quotation</h2>
-
-<p>Share grade/spec, size, quantity and delivery location for fastest pricing.</p>
-
-<div class="btnrow">
-
-<a class="btn primary"
-href="https://wa.me/919363193755"
-target="_blank"
-onclick="return trackLeadAndGo('whatsapp','cta_whatsapp_brass',this.href,true)">
-WhatsApp for Quote
-</a>
-
-<a class="btn ghost"
-href="mailto:tarun@rubinoxmetal.com?subject=Brass%20Quotation%20Request">
-Email RFQ
-</a>
-
-<a class="btn ghost" href="/quotation.html">
-Quotation Page
-</a>
+  <div class="card" style="margin-top:14px">
+    <h2>Contact</h2>
+    <p>
+      Phone: +91 9363193755 • Email: tarun@rubinoxmetal.com<br/>
+      A-206, 2nd floor, Krishvi Escape, Kalbadevi, Mumbai – 400002
+    </p>
+  </div>
 
 </div>
-
-</div>
-
-<div class="card">
-
-<h2>Contact</h2>
-
-<p>
-Phone: +91 9363193755 • Email: tarun@rubinoxmetal.com<br>
-A-206, 2nd Floor, Krishvi Escape, Kalbadevi, Mumbai – 400002
-</p>
-
-</div>
-
-</div>
-
 </body>
 </html>
