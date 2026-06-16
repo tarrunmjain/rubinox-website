@@ -682,6 +682,59 @@
       color:#fff;
     }
 
+    .socialLinks{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+
+    .socialLinks a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:36px;
+      padding:9px 12px;
+      border-radius:6px;
+      border:1px solid rgba(226,160,47,.28);
+      background:#fff;
+      color:#132a63;
+      text-decoration:none;
+      font-size:13px;
+      font-weight:900;
+      transition:all .25s ease;
+    }
+
+    .socialLinks a:hover{
+      background:#07101f;
+      color:#fff;
+      border-color:#e2a02f;
+    }
+
+    footer .footerRow{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    footer .socialLinks{
+      margin-top:0;
+    }
+
+    footer .socialLinks a{
+      background:rgba(255,255,255,.06);
+      color:#fff;
+      border-color:rgba(226,160,47,.34);
+    }
+
+    footer .socialLinks a:hover{
+      background:#e2a02f;
+      color:#07101f;
+    }
+
     footer{
       background:#07101f;
       border-top:1px solid rgba(226,160,47,.22);
@@ -762,6 +815,8 @@
     "availableLanguage":["English"]
   },
   "sameAs":[
+    "https://www.instagram.com/rubinox_metal/",
+    "https://www.facebook.com/profile.php?id=61590518053054",
     "https://www.linkedin.com/company/rubinox-metal-and-alloys",
     "https://www.indiamart.com/rubinox-metal-and-alloys"
   ]
@@ -1249,6 +1304,11 @@ in pipes, tubes, sheets, plates, coils, flanges and fittings for industrial appl
                onclick="return trackLead('maps','contact_maps')">Open Location</a>
           </p>
 
+          <div class="socialLinks" aria-label="Rubinox social media profiles">
+            <a href="https://www.instagram.com/rubinox_metal/" target="_blank" rel="noopener" onclick="return trackLead('social','contact_instagram')">Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=61590518053054" target="_blank" rel="noopener" onclick="return trackLead('social','contact_facebook')">Facebook</a>
+          </div>
+
           <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
             <a class="btn primary"
                href="https://wa.me/919363193755"
@@ -1305,8 +1365,12 @@ in pipes, tubes, sheets, plates, coils, flanges and fittings for industrial appl
   </section>
 
   <footer>
-    <div class="wrap">
-      © <span id="y"></span> Rubinox Metal and Alloys • Mumbai, India
+    <div class="wrap footerRow">
+      <span>© <span id="y"></span> Rubinox Metal and Alloys • Mumbai, India</span>
+      <span class="socialLinks" aria-label="Rubinox social media profiles">
+        <a href="https://www.instagram.com/rubinox_metal/" target="_blank" rel="noopener" onclick="return trackLead('social','footer_instagram')">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61590518053054" target="_blank" rel="noopener" onclick="return trackLead('social','footer_facebook')">Facebook</a>
+      </span>
     </div>
   </footer>
 
