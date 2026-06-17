@@ -275,6 +275,60 @@
       display:block;
     }
 
+    .marketWatch{
+      background:linear-gradient(90deg,#050b16,#07101f 58%,#102554);
+      border-top:1px solid rgba(226,160,47,.18);
+      border-bottom:1px solid rgba(226,160,47,.22);
+      color:#d6dce8;
+    }
+
+    .marketWatch .wrap{
+      display:grid;
+      grid-template-columns:220px minmax(0,1fr) 260px;
+      align-items:center;
+      gap:14px;
+      min-height:58px;
+      padding-top:8px;
+      padding-bottom:8px;
+    }
+
+    .marketLabel{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+      min-width:0;
+    }
+
+    .marketLabel strong{
+      color:#fff;
+      font-size:13px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .marketLabel span,
+    .marketNote{
+      color:#aeb8ca;
+      font-size:11.5px;
+      line-height:1.4;
+    }
+
+    .marketTape{
+      min-width:0;
+      overflow:hidden;
+      border-left:1px solid rgba(226,160,47,.18);
+      border-right:1px solid rgba(226,160,47,.18);
+      padding:0 10px;
+    }
+
+    .tradingview-widget-container{
+      min-height:44px;
+    }
+
+    .marketNote{
+      text-align:right;
+    }
+
     /* HERO */
     .hero{
       background:
@@ -758,6 +812,21 @@
         padding:10px 0;
       }
 
+      .marketWatch .wrap{
+        grid-template-columns:1fr;
+        gap:6px;
+      }
+
+      .marketTape{
+        border-left:0;
+        border-right:0;
+        padding:0;
+      }
+
+      .marketNote{
+        text-align:left;
+      }
+
       .desktopNav{
         display:none;
       }
@@ -889,6 +958,38 @@
       </div>
     </div>
   </header>
+
+  <section class="marketWatch" aria-label="Indicative metal market watch">
+    <div class="wrap">
+      <div class="marketLabel">
+        <strong>Market Watch</strong>
+        <span>Indicative metal references</span>
+      </div>
+      <div class="marketTape">
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+          {
+            "symbols": [
+              {"proName":"MCX:COPPER1!","title":"Copper"},
+              {"proName":"MCX:ALUMINIUM1!","title":"Aluminium"},
+              {"proName":"MCX:ZINC1!","title":"Zinc"},
+              {"proName":"MCX:NICKEL1!","title":"Nickel"},
+              {"proName":"MCX:LEAD1!","title":"Lead"},
+              {"proName":"FX_IDC:USDINR","title":"USD/INR"}
+            ],
+            "showSymbolLogo": false,
+            "isTransparent": true,
+            "displayMode": "adaptive",
+            "colorTheme": "dark",
+            "locale": "en"
+          }
+          </script>
+        </div>
+      </div>
+      <p class="marketNote">Not final selling prices. Quotes depend on grade, size, quantity and delivery.</p>
+    </div>
+  </section>
 
   <section class="hero">
     <div class="wrap">
