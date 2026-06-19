@@ -927,24 +927,8 @@
         <span>Indicative metal references</span>
       </div>
       <div class="marketTape">
-        <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container" id="marketTicker">
           <div class="tradingview-widget-container__widget"></div>
-          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-          {
-            "symbols": [
-              {"proName":"CAPITALCOM:COPPER","title":"Copper"},
-              {"proName":"CAPITALCOM:ALUMINUM","title":"Aluminium"},
-              {"proName":"CAPITALCOM:NICKEL","title":"Nickel"},
-              {"proName":"AMEX:LEAD","title":"Lead"},
-              {"proName":"FX_IDC:USDINR","title":"USD/INR"}
-            ],
-            "showSymbolLogo": false,
-            "isTransparent": true,
-            "displayMode": "adaptive",
-            "colorTheme": "dark",
-            "locale": "en"
-          }
-          </script>
         </div>
       </div>
       <p class="marketNote">Not final selling prices. Quotes depend on grade, size, quantity and delivery.</p>
@@ -1454,6 +1438,39 @@ in pipes, tubes, sheets, plates, coils, flanges and fittings for industrial appl
   </footer>
 
   <script>
+    function loadMarketTicker(){
+      const container = document.getElementById("marketTicker");
+      if (!container || container.dataset.loaded === "true") return;
+      container.dataset.loaded = "true";
+
+      const script = document.createElement("script");
+      script.src = "https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js";
+      script.async = true;
+      script.textContent = JSON.stringify({
+        symbols: [
+          {proName:"CAPITALCOM:COPPER",title:"Copper"},
+          {proName:"CAPITALCOM:ALUMINUM",title:"Aluminium"},
+          {proName:"CAPITALCOM:NICKEL",title:"Nickel"},
+          {proName:"AMEX:LEAD",title:"Lead"},
+          {proName:"FX_IDC:USDINR",title:"USD/INR"}
+        ],
+        showSymbolLogo: false,
+        isTransparent: true,
+        displayMode: "adaptive",
+        colorTheme: "dark",
+        locale: "en"
+      });
+      container.appendChild(script);
+    }
+
+    window.addEventListener("load", function(){
+      if ("requestIdleCallback" in window) {
+        requestIdleCallback(loadMarketTicker, {timeout: 2500});
+      } else {
+        setTimeout(loadMarketTicker, 1200);
+      }
+    }, {once:true});
+
     document.getElementById("y").textContent = new Date().getFullYear();
 
     const menuToggle = document.getElementById("menuToggle");
