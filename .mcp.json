@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "C:\\Users\\Dell\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+      "args": [
+        "node_modules/@playwright/mcp/cli.js",
+        "--browser",
+        "chromium",
+        "--allowed-hosts",
+        "127.0.0.1,localhost"
+      ]
+    },
+    "lighthouse": {
+      "command": "C:\\Users\\Dell\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+      "args": [
+        "node_modules/@danielsogl/lighthouse-mcp/dist/index.js"
+      ]
+    }
+  }
+}

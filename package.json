@@ -1,0 +1,31 @@
+{
+	"scripts": {
+		"mcp:playwright": "\"C:\\Users\\Dell\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe\" node_modules/@playwright/mcp/cli.js --browser chromium --allowed-hosts 127.0.0.1,localhost",
+		"mcp:lighthouse": "\"C:\\Users\\Dell\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe\" node_modules/@danielsogl/lighthouse-mcp/dist/index.js",
+		"qa:accessibility": "\"C:\\Users\\Dell\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe\" scripts/qa-accessibility.cjs",
+		"qa:all": "\"C:\\Users\\Dell\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe\" scripts/qa-all.cjs",
+		"qa:crawl": "\"C:\\Users\\Dell\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe\" scripts/qa-crawl.cjs",
+		"qa:external-links": "\"C:\\Users\\Dell\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe\" scripts/qa-external-links.cjs",
+		"qa:html": "\"C:\\Users\\Dell\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe\" scripts/qa-html.cjs",
+		"qa:images": "\"C:\\Users\\Dell\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe\" scripts/qa-images.cjs",
+		"qa:schema": "\"C:\\Users\\Dell\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe\" scripts/qa-schema.cjs",
+		"qa:sitemap": "\"C:\\Users\\Dell\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe\" scripts/qa-sitemap.cjs",
+		"research:crawl": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/research-crawl.ps1",
+		"test:lighthouse": "\"C:\\Users\\Dell\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe\" scripts/verify-lighthouse-homepage.cjs",
+		"test:navigation": "\"C:\\Users\\Dell\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe\" scripts/verify-navigation.cjs",
+		"test:navigation:spec": "\"C:\\Users\\Dell\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe\" node_modules/playwright/cli.js test"
+	},
+	"devDependencies": {
+		"@axe-core/playwright": "^4.11.3",
+		"@danielsogl/lighthouse-mcp": "^1.3.0",
+		"@playwright/mcp": "^0.0.76",
+		"chrome-launcher": "^1.2.1",
+		"fast-xml-parser": "^5.9.3",
+		"html-validate": "^11.5.3",
+		"jsonld": "^9.0.0",
+		"lighthouse": "^13.4.0",
+		"linkinator": "^7.6.1",
+		"playwright": "^1.61.0",
+		"sharp": "^0.35.2"
+	}
+}
