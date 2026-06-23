@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
@@ -238,7 +238,7 @@ h1{
   margin:10px 0 10px;
   color:var(--ink2);
   font-size:34px;
-  letter-spacing:-.2px;
+  letter-spacing:0;
 }
 h2{
   margin:0 0 10px;
@@ -261,6 +261,53 @@ p{
   flex-wrap:wrap;
   margin-top:14px;
 }
+.premiumHero{
+  overflow:hidden;
+  border:1px solid rgba(226,160,47,.25);
+  border-radius:12px;
+  margin-top:14px;
+  padding:34px;
+  background:linear-gradient(120deg,rgba(7,16,31,.94),rgba(19,42,99,.88)),radial-gradient(circle at 78% 22%,rgba(226,160,47,.28),transparent 34%),linear-gradient(135deg,#07101f,#132a63);
+  box-shadow:0 22px 55px rgba(7,16,31,.22);
+}
+.premiumHero .crumb{color:#c3cad8;margin:0 0 12px}
+.premiumHero h1{color:#fff;margin:0 0 12px;font-size:44px;max-width:760px}
+.premiumHero p{color:#d7deec;max-width:82ch}
+.heroProof{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.heroProof span{display:inline-flex;padding:9px 12px;border-radius:6px;background:rgba(255,255,255,.08);color:#f4eddd;border:1px solid rgba(226,160,47,.30);font-size:13px;font-weight:800}
+.trustStrip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+.trustItem{min-height:84px;padding:14px;background:#fff;border:1px solid rgba(16,37,84,.12);border-radius:8px;box-shadow:0 10px 28px rgba(15,30,60,.06);color:#132a63;font-weight:800}
+.trustItem small{display:block;color:#566b9a;font-weight:700;margin-top:4px}
+.sectionIntro{max-width:82ch;margin-bottom:12px}
+.industryGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+.industryCard{overflow:hidden;background:#fff;border:1px solid rgba(16,37,84,.12);border-radius:12px;box-shadow:0 12px 30px rgba(15,30,60,.08);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.industryCard:hover{transform:translateY(-4px);box-shadow:0 18px 42px rgba(7,16,31,.15);border-color:rgba(226,160,47,.55)}
+.industryMedia{position:relative;height:190px;overflow:hidden;background-image:linear-gradient(135deg,rgba(7,16,31,.66),rgba(19,42,99,.20)),var(--industry-image),linear-gradient(120deg,#d8e0ec,#f8fafc);background-size:cover;background-position:center}
+.industryMedia::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,16,31,.50),rgba(7,16,31,.08))}
+.industryMedia::after{content:"";position:absolute;inset:18px;border:1px solid rgba(255,255,255,.35);border-radius:8px}
+.industryMedia span{position:absolute;left:14px;bottom:14px;z-index:1;display:inline-flex;padding:7px 9px;border-radius:6px;color:#fff;background:rgba(7,16,31,.72);border:1px solid rgba(226,160,47,.35);font-size:12px;font-weight:800}
+.industryBody{padding:16px}
+.industryTop{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.industryTop h2{margin:0;font-size:20px}
+.industryIcon{width:42px;height:42px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;background:#f4eddd;border:1px solid rgba(226,160,47,.35);color:#07101f;flex:0 0 auto;font-weight:900}
+.industryIcon svg{width:24px;height:24px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.tagRow{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.materialTag{display:inline-flex;padding:7px 9px;border-radius:6px;background:#f8fafc;border:1px solid #d8e0ec;color:#132a63;font-size:12px;font-weight:800;text-decoration:none}
+table{width:100%;border-collapse:collapse;margin-top:12px;color:var(--muted);font-size:14px;line-height:1.65}
+th,td{border:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}
+th{background:#f4eddd;color:#07101f}
+td strong{color:var(--ink2)}
+.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:14px}
+.timelineStep{padding:14px;border-radius:10px;background:#fff;border:1px solid rgba(16,37,84,.12);box-shadow:0 10px 24px rgba(15,30,60,.05)}
+.timelineStep strong{display:block;color:#132a63;margin-bottom:6px}
+.faqGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
+.faqItem{padding:14px;border:1px solid rgba(16,37,84,.12);border-radius:8px;background:#fff;box-shadow:0 10px 24px rgba(15,30,60,.05)}
+.faqItem h3{margin:0 0 8px;color:var(--ink2);font-size:17px}
+.faqItem p{color:var(--muted);line-height:1.7;margin:0}
+.ctaBand{border-radius:12px;border:1px solid rgba(226,160,47,.35);background:linear-gradient(120deg,#07101f,#132a63);padding:24px;margin-top:14px;box-shadow:0 18px 46px rgba(7,16,31,.18)}
+.ctaBand h2{color:#fff}
+.ctaBand p{color:#d7deec}
+.ctaBand .btn.ghost{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:#fff}
 
 @media (max-width:900px){
   .desktopNav{
@@ -278,6 +325,19 @@ p{
   }
   .grid2{
     grid-template-columns:1fr;
+  }
+  .trustStrip,.industryGrid,.timeline,.faqGrid{
+    grid-template-columns:1fr;
+  }
+  .premiumHero{
+    padding:24px;
+  }
+  .premiumHero h1{
+    font-size:32px;
+  }
+  table{
+    display:block;
+    overflow-x:auto;
   }
   h1{
     font-size:28px;
@@ -322,7 +382,7 @@ p{
       </div>
 
       <!-- Mobile Toggle -->
-      <button class="menuToggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <button type="button" class="menuToggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
         <svg id="menuIcon" viewBox="0 0 24 24">
           <path d="M4 7h16"></path>
           <path d="M4 12h16"></path>
@@ -354,108 +414,303 @@ p{
 
 <div class="page" id="main-content" role="main">
 
-  <div class="crumb">Home • Industries We Serve</div>
-
-  <h1>Industries We Serve</h1>
-
-  <p style="max-width:80ch">
-    Rubinox Metal and Alloys supplies stainless steel, duplex, super duplex, nickel alloys,
-    254 SMO, titanium and industrial metals for critical industrial applications across India and global markets.
-  </p>
-
-  <div class="grid2">
-
-    <div class="card">
-      <h2>Oil &amp; Gas Industry</h2>
-      <p>
-        Duplex 2205, Super Duplex 2507, Inconel 625, Hastelloy C276 and corrosion-resistant alloys
-        for offshore platforms, pipelines, refineries and high-pressure systems.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>Chemical &amp; Petrochemical</h2>
-      <p>
-        Nickel alloys, SMO 254 and high-performance stainless steels suitable for aggressive
-        chemical environments and process equipment.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>Marine &amp; Shipbuilding</h2>
-      <p>
-        Super duplex stainless steel, copper alloys and corrosion-resistant materials for marine
-        structures and seawater applications.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>EPC &amp; Infrastructure Projects</h2>
-      <p>
-        Bulk supply of structural steel, stainless steel, plates, pipes and fittings for large-scale
-        industrial and infrastructure projects.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>Fabrication &amp; Engineering Units</h2>
-      <p>
-        Pipes, tubes, sheets, plates, flanges, fittings and fasteners for custom fabrication
-        and engineering applications.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>Power &amp; Energy Sector</h2>
-      <p>
-        Heat-resistant and high-strength alloys for thermal, nuclear and renewable energy applications.
-      </p>
-    </div>
-
-  </div>
-
-<div class="card">
-    <h2>Materials Selected for Industrial Service</h2>
-    <p>Material selection depends on pressure, temperature, corrosion exposure, fabrication method and the applicable project standard. Common enquiries include <a href="/materials/stainless-steel.html"><b>stainless steel</b></a> for general process equipment, <a href="/materials/duplex-super-duplex.html"><b>Duplex 2205 and Super Duplex 2507</b></a> for chloride service, <a href="/materials/nickel-alloys.html"><b>nickel alloys</b></a> for severe corrosion or elevated temperatures, and <a href="/materials/titanium.html"><b>titanium</b></a> for lightweight, seawater and chemical applications.</p>
-  </div>
-
-  <div class="grid2">
-    <div class="card">
-      <h2>Project Products We Supply</h2>
-      <p>Pipes, tubes, sheets, plates, coils, round bars, rods, flanges, fittings, fasteners, flats, angles and fabricated components can be supplied according to grade, dimensions and quantity. For project requirements, share the bill of materials or item-wise enquiry so availability can be checked accurately.</p>
-    </div>
-    <div class="card">
-      <h2>Standards &amp; Documentation</h2>
-      <p>Requirements can be reviewed against ASTM, ASME, EN, DIN and customer specifications. Material Test Certificates, heat-number traceability, inspection requirements, packing instructions and export documentation should be stated at enquiry stage.</p>
-    </div>
-    <div class="card">
-      <h2>Bulk &amp; Scheduled Supply</h2>
-      <p>Rubinox supports one-time purchases, shutdown requirements, fabrication orders and phased project dispatches. Clearly mention required delivery dates, partial-delivery acceptance and the project location when requesting a commercial offer.</p>
-    </div>
-    <div class="card">
-      <h2>What to Include in an Enquiry</h2>
-      <p>Send material grade, product form, size, schedule or thickness, quantity, standard, testing requirement and delivery location. Drawings and end-user specifications are especially important for machined, forged or fabricated parts.</p>
-    </div>
-  </div>
-
-  <div class="card">
-    <h2>From Enquiry to Project Dispatch</h2>
-    <p>For industrial orders, the enquiry is reviewed item by item for grade, form, size, specification and quantity. Commercial offers can account for cutting, inspection, certification, packing and freight when these requirements are stated in advance. After order confirmation, dispatch planning should identify priority items, delivery sequence and any site restrictions. This approach is especially useful for EPC packages, fabrication schedules, shutdown maintenance and multi-location projects where incomplete specifications can delay procurement.</p>
-  </div>
-
-  <div class="card">
-    <h2>Industrial Supply FAQs</h2>
-    <p><b>Can Rubinox support multi-item project enquiries?</b><br>Yes. Send the complete item list or bill of materials for grade, size, quantity and delivery review.</p>
-    <p style="margin-top:12px"><b>Do you supply outside Mumbai?</b><br>Yes. Materials are supplied across India, with export coordination available for international requirements.</p>
-    <p style="margin-top:12px"><b>Can third-party inspection be arranged?</b><br>Inspection and documentation requirements can be considered when they are specified before quotation and order confirmation.</p>
-  </div>
-
-  <div class="card">
-    <h2>Request a Quotation</h2>
+  <section class="premiumHero">
+    <div class="crumb">Home &bull; Industries We Serve</div>
+    <h1>Industries We Serve</h1>
     <p>
-      Send your material grade, size, quantity and delivery location for fast pricing support.
+      Rubinox Metal and Alloys supplies stainless steel, duplex, super duplex, nickel alloys,
+      SMO 254, titanium and industrial metals for regulated, corrosive, high-temperature and
+      project-driven applications across India and global markets.
+    </p>
+    <div class="heroProof">
+      <span>PAN India Supply</span>
+      <span>Export Enquiries</span>
+      <span>MTC / Inspection Review</span>
+      <span>Project Supply</span>
+    </div>
+    <div class="btnrow">
+      <a class="btn primary"
+         href="https://wa.me/919363193755"
+         target="_blank"
+         rel="noopener"
+         onclick="return trackLeadAndGo('whatsapp','industries_hero_whatsapp', this.href, true)">Send Project RFQ</a>
+      <a class="btn ghost"
+         href="/quotation.html"
+         onclick="return trackLeadAndGo('navigation','industries_hero_quote_page', this.href, false)">Quotation Page</a>
+    </div>
+  </section>
+
+  <div class="trustStrip" aria-label="Rubinox industrial supply trust signals">
+    <div class="trustItem">PAN India Supply<small>Project and plant requirements across India.</small></div>
+    <div class="trustItem">Export Enquiries<small>Packing and shipment details reviewed when specified.</small></div>
+    <div class="trustItem">MTC / Inspection Review<small>Documentation scope checked at enquiry stage.</small></div>
+    <div class="trustItem">Project Supply<small>Multi-item BOQ, MTO and scheduled dispatch support.</small></div>
+  </div>
+
+  <section class="card">
+    <h2>Premium Industrial Metal Supply by Sector</h2>
+    <p class="sectionIntro">
+      Every industry has different corrosion, hygiene, heat, strength, documentation and delivery
+      requirements. These industry cards show common material directions, while final selection should
+      follow grade, standard, service condition and project specification.
     </p>
 
+    <div class="industryGrid">
+      <article class="industryCard">
+        <div class="industryMedia" style="--industry-image:url('/assets/industry-pharma.webp')" role="img" aria-label="Pharma processing facility image placeholder">
+          <span>assets/industry-pharma.webp</span>
+        </div>
+        <div class="industryBody">
+          <div class="industryTop"><span class="industryIcon" aria-hidden="true">Rx</span><h2>Pharma</h2></div>
+          <p>Hygienic stainless steel tubes, fittings, sheets and process materials for clean production environments.</p>
+          <div class="tagRow">
+            <a class="materialTag" href="/materials/ss-316l-supplier-india.html">SS 316L</a>
+            <a class="materialTag" href="/materials/stainless-steel-tubes-supplier-india.html">Tubes</a>
+            <a class="materialTag" href="/materials/stainless-steel-fittings-supplier-india.html">Fittings</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="industryCard">
+        <div class="industryMedia" style="--industry-image:url('/assets/industry-food-processing.webp')" role="img" aria-label="Food processing line image placeholder">
+          <span>assets/industry-food-processing.webp</span>
+        </div>
+        <div class="industryBody">
+          <div class="industryTop"><span class="industryIcon" aria-hidden="true">FP</span><h2>Food Processing</h2></div>
+          <p>Food-grade stainless steel products for equipment, conveyors, tanks, work surfaces and washdown areas.</p>
+          <div class="tagRow">
+            <a class="materialTag" href="/materials/ss-304-supplier-india.html">SS 304</a>
+            <a class="materialTag" href="/materials/ss-316-supplier-india.html">SS 316</a>
+            <a class="materialTag" href="/materials/stainless-steel-sheets-supplier-india.html">Sheets</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="industryCard">
+        <div class="industryMedia" style="--industry-image:url('/assets/industry-chemical.webp')" role="img" aria-label="Chemical processing plant image placeholder">
+          <span>assets/industry-chemical.webp</span>
+        </div>
+        <div class="industryBody">
+          <div class="industryTop"><span class="industryIcon" aria-hidden="true">Ch</span><h2>Chemical</h2></div>
+          <p>Nickel alloys, SMO 254 and high-performance stainless steels for aggressive process environments.</p>
+          <div class="tagRow">
+            <a class="materialTag" href="/materials/nickel-alloys.html">Nickel Alloys</a>
+            <a class="materialTag" href="/materials/smo-254.html">SMO 254</a>
+            <a class="materialTag" href="/materials/duplex-super-duplex.html">Duplex</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="industryCard">
+        <div class="industryMedia" style="--industry-image:url('/assets/industry-oil-gas.webp')" role="img" aria-label="Oil and gas refinery image placeholder">
+          <span>assets/industry-oil-gas.webp</span>
+        </div>
+        <div class="industryBody">
+          <div class="industryTop"><span class="industryIcon" aria-hidden="true">OG</span><h2>Oil &amp; Gas</h2></div>
+          <p>Duplex 2205, Super Duplex 2507, Inconel 625 and Hastelloy C276 for offshore, refinery and pressure-system enquiries.</p>
+          <div class="tagRow">
+            <a class="materialTag" href="/materials/duplex-super-duplex.html">Duplex</a>
+            <a class="materialTag" href="/materials/inconel-625-supplier-india.html">Inconel 625</a>
+            <a class="materialTag" href="/materials/hastelloy-c-276-supplier-india.html">Hastelloy C276</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="industryCard">
+        <div class="industryMedia" style="--industry-image:url('/assets/industry-epc-projects.webp')" role="img" aria-label="EPC construction project image placeholder">
+          <span>assets/industry-epc-projects.webp</span>
+        </div>
+        <div class="industryBody">
+          <div class="industryTop"><span class="industryIcon" aria-hidden="true">EP</span><h2>EPC Projects</h2></div>
+          <p>Bulk supply of pipes, plates, fittings, structural products and project materials for BOQ-driven procurement.</p>
+          <div class="tagRow">
+            <a class="materialTag" href="/materials/stainless-steel.html">Stainless Steel</a>
+            <a class="materialTag" href="/materials/carbon-steel.html">Carbon Steel</a>
+            <a class="materialTag" href="/quotation.html">RFQ</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="industryCard">
+        <div class="industryMedia" style="--industry-image:url('/assets/industry-water-treatment.webp')" role="img" aria-label="Water treatment plant image placeholder">
+          <span>assets/industry-water-treatment.webp</span>
+        </div>
+        <div class="industryBody">
+          <div class="industryTop"><span class="industryIcon" aria-hidden="true">WT</span><h2>Water Treatment</h2></div>
+          <p>Materials for desalination, wastewater, brine, filtration, piping and chloride-exposed water systems.</p>
+          <div class="tagRow">
+            <a class="materialTag" href="/materials/smo-254.html">SMO 254</a>
+            <a class="materialTag" href="/materials/super-duplex-2507-supplier-india.html">2507</a>
+            <a class="materialTag" href="/materials/stainless-steel-pipes-supplier-india.html">Pipes</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="industryCard">
+        <div class="industryMedia" style="--industry-image:url('/assets/industry-marine-offshore.webp')" role="img" aria-label="Marine and offshore platform image placeholder">
+          <span>assets/industry-marine-offshore.webp</span>
+        </div>
+        <div class="industryBody">
+          <div class="industryTop"><span class="industryIcon" aria-hidden="true">MO</span><h2>Marine &amp; Offshore</h2></div>
+          <p>Super duplex stainless steel, copper alloys and corrosion-resistant materials for seawater and marine structures.</p>
+          <div class="tagRow">
+            <a class="materialTag" href="/materials/monel-400-supplier-india.html">Monel 400</a>
+            <a class="materialTag" href="/materials/duplex-super-duplex.html">Super Duplex</a>
+            <a class="materialTag" href="/materials/copper.html">Copper</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="industryCard">
+        <div class="industryMedia" style="--industry-image:url('/assets/industry-power-generation.webp')" role="img" aria-label="Power generation plant image placeholder">
+          <span>assets/industry-power-generation.webp</span>
+        </div>
+        <div class="industryBody">
+          <div class="industryTop"><span class="industryIcon" aria-hidden="true">Pw</span><h2>Power Generation</h2></div>
+          <p>Heat-resistant and high-strength alloys for thermal, nuclear, renewable and heat-transfer equipment enquiries.</p>
+          <div class="tagRow">
+            <a class="materialTag" href="/materials/ss-310-supplier-india.html">SS 310</a>
+            <a class="materialTag" href="/materials/ss-321-supplier-india.html">SS 321</a>
+            <a class="materialTag" href="/materials/nickel-alloys.html">Nickel</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="industryCard">
+        <div class="industryMedia" style="--industry-image:url('/assets/industry-engineering-fabrication.webp')" role="img" aria-label="Engineering and fabrication shop image placeholder">
+          <span>assets/industry-engineering-fabrication.webp</span>
+        </div>
+        <div class="industryBody">
+          <div class="industryTop"><span class="industryIcon" aria-hidden="true">En</span><h2>Engineering &amp; Fabrication</h2></div>
+          <p>Pipes, tubes, sheets, plates, flanges, fittings and fasteners for custom fabrication and engineering applications.</p>
+          <div class="tagRow">
+            <a class="materialTag" href="/materials/stainless-steel-plates-supplier-india.html">Plates</a>
+            <a class="materialTag" href="/materials/stainless-steel-flanges-supplier-india.html">Flanges</a>
+            <a class="materialTag" href="/materials/stainless-steel-fasteners-supplier-india.html">Fasteners</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="industryCard">
+        <div class="industryMedia" style="--industry-image:url('/assets/industry-infrastructure.webp')" role="img" aria-label="Infrastructure project image placeholder">
+          <span>assets/industry-infrastructure.webp</span>
+        </div>
+        <div class="industryBody">
+          <div class="industryTop"><span class="industryIcon" aria-hidden="true">In</span><h2>Infrastructure</h2></div>
+          <p>Structural steel, stainless steel, plates, pipes, flats and angles for industrial and infrastructure projects.</p>
+          <div class="tagRow">
+            <a class="materialTag" href="/materials/mild-steel.html">Mild Steel</a>
+            <a class="materialTag" href="/materials/carbon-steel.html">Carbon Steel</a>
+            <a class="materialTag" href="/materials/stainless-steel-angles-supplier-india.html">Angles</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Materials Selection by Industry</h2>
+    <p class="sectionIntro">
+      Material selection depends on pressure, temperature, corrosion exposure, fabrication method,
+      documentation needs and the applicable project standard. Share operating conditions before finalising
+      grade recommendations. Common enquiries include <a href="/materials/stainless-steel.html"><b>stainless steel</b></a>
+      for general process equipment, <a href="/materials/duplex-super-duplex.html"><b>Duplex 2205 and Super Duplex 2507</b></a>
+      for chloride service, <a href="/materials/nickel-alloys.html"><b>nickel alloys</b></a> for severe corrosion or
+      elevated temperatures, and <a href="/materials/titanium.html"><b>titanium</b></a> for lightweight, seawater and
+      chemical applications.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Industry</th><th>Common Material Families</th><th>Product Forms</th><th>RFQ Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Pharma</strong></td><td>SS 304, SS 316, SS 316L</td><td>Tubes, fittings, sheets, plates</td><td>Specify finish, cleaning exposure and documentation.</td></tr>
+        <tr><td><strong>Food Processing</strong></td><td>SS 304, SS 316</td><td>Sheets, coils, tubes, flats</td><td>Include washdown, hygiene and fabrication details.</td></tr>
+        <tr><td><strong>Chemical</strong></td><td>Nickel alloys, SMO 254, Duplex, Titanium</td><td>Pipes, plates, flanges, fittings</td><td>Share media, concentration, temperature and pressure.</td></tr>
+        <tr><td><strong>Oil &amp; Gas</strong></td><td>Duplex, Super Duplex, Inconel, Hastelloy</td><td>Pipes, flanges, fittings, fasteners</td><td>List service, standard, pressure class and inspection needs.</td></tr>
+        <tr><td><strong>EPC Projects</strong></td><td>Stainless steel, carbon steel, mild steel, nickel alloys</td><td>BOQ and MTO line items</td><td>Send item-wise quantities, schedule and delivery location.</td></tr>
+        <tr><td><strong>Water Treatment</strong></td><td>SMO 254, 904L, Duplex, Super Duplex</td><td>Pipes, plates, fittings, fasteners</td><td>Define chloride level, seawater exposure and brine conditions.</td></tr>
+        <tr><td><strong>Marine &amp; Offshore</strong></td><td>Super Duplex, Monel, copper alloys, SMO 254</td><td>Pipes, bars, plates, fasteners</td><td>Share splash-zone, immersion and offshore documentation needs.</td></tr>
+        <tr><td><strong>Power Generation</strong></td><td>SS 310, SS 321, SS 347, nickel alloys</td><td>Tubes, sheets, plates, bars</td><td>Specify temperature, cycling and heat-transfer conditions.</td></tr>
+        <tr><td><strong>Engineering &amp; Fabrication</strong></td><td>Stainless steel, carbon steel, brass, copper, aluminium</td><td>Sheets, plates, bars, flanges, fittings</td><td>Attach drawings for machined, forged or fabricated parts.</td></tr>
+        <tr><td><strong>Infrastructure</strong></td><td>Mild steel, carbon steel, stainless steel</td><td>Plates, flats, angles, pipes, structural items</td><td>Share grade, size, quantity, delivery schedule and site location.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Project Supply Timeline</h2>
+    <p class="sectionIntro">
+      For industrial orders, the enquiry is reviewed item by item for grade, form, size,
+      specification and quantity before commercial and dispatch planning. Rubinox supports one-time purchases,
+      shutdown requirements, fabrication orders and phased project dispatches when delivery schedules are stated clearly.
+    </p>
+    <div class="timeline">
+      <div class="timelineStep"><strong>1. RFQ Review</strong><p>BOQ, MTO, drawings, grade, quantity and delivery location are checked.</p></div>
+      <div class="timelineStep"><strong>2. Material Mapping</strong><p>Product forms, standards, dimensions and alternates are reviewed where permitted.</p></div>
+      <div class="timelineStep"><strong>3. Documentation Scope</strong><p>MTC, heat-number traceability, inspection and packing needs are confirmed.</p></div>
+      <div class="timelineStep"><strong>4. Commercial Offer</strong><p>Item-wise quotation, delivery planning and freight inputs are prepared.</p></div>
+      <div class="timelineStep"><strong>5. Dispatch Planning</strong><p>Priority items, phased supply and site restrictions are aligned before dispatch.</p></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Documentation and Standards</h2>
+    <p>
+      Requirements can be reviewed against ASTM, ASME, EN, DIN and customer specifications.
+      Material Test Certificates, heat-number traceability, third-party inspection requirements,
+      packing instructions and export documentation should be stated at enquiry stage.
+    </p>
+    <div class="grid2">
+      <div class="timelineStep">
+        <h2>Project Products We Supply</h2>
+        <p>Pipes, tubes, sheets, plates, coils, round bars, rods, flanges, fittings, fasteners, flats, angles and fabricated components can be supplied according to grade, dimensions and quantity.</p>
+      </div>
+      <div class="timelineStep">
+        <h2>What to Include in an Enquiry</h2>
+        <p>Send material grade, product form, size, schedule or thickness, quantity, standard, testing requirement and delivery location. Drawings and end-user specifications are especially important for machined, forged or fabricated parts.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Industry FAQ</h2>
+    <div class="faqGrid">
+      <div class="faqItem">
+        <h3>Which metals are used in pharma and food processing?</h3>
+        <p>SS 304, SS 316 and SS 316L are commonly reviewed for hygienic equipment, tubes, fittings, sheets and process components, depending on finish, cleaning conditions and project specification.</p>
+      </div>
+      <div class="faqItem">
+        <h3>Which alloys are used for chemical processing?</h3>
+        <p>Chemical processing enquiries often involve stainless steel, 904L, SMO 254, Duplex, Nickel Alloys, Hastelloy and Titanium depending on media, concentration, temperature and pressure.</p>
+      </div>
+      <div class="faqItem">
+        <h3>Which materials are reviewed for marine and offshore service?</h3>
+        <p>Marine and offshore enquiries often review Duplex, Super Duplex, SMO 254, Monel, Nickel Alloys and copper alloys. Buyers should share seawater conditions, chloride exposure and project standards.</p>
+      </div>
+      <div class="faqItem">
+        <h3>Can Rubinox support multi-item EPC project enquiries?</h3>
+        <p>Yes. Send the complete bill of materials or item list with grade, size, product form, quantity, standard, testing requirement and delivery location for item-wise review.</p>
+      </div>
+      <div class="faqItem">
+        <h3>Can third-party inspection be reviewed?</h3>
+        <p>Inspection and documentation requirements can be considered when they are specified before quotation and order confirmation.</p>
+      </div>
+      <div class="faqItem">
+        <h3>Does Rubinox supply outside Mumbai?</h3>
+        <p>Yes. Rubinox supports PAN India supply, and export enquiries can be reviewed when destination, packing, documentation and delivery terms are shared.</p>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which metals are used in pharma and food processing?","acceptedAnswer":{"@type":"Answer","text":"SS 304, SS 316 and SS 316L are commonly reviewed for hygienic equipment, tubes, fittings, sheets and process components, depending on finish, cleaning conditions and project specification."}},{"@type":"Question","name":"Which alloys are used for chemical processing?","acceptedAnswer":{"@type":"Answer","text":"Chemical processing enquiries often involve stainless steel, 904L, SMO 254, Duplex, Nickel Alloys, Hastelloy and Titanium depending on media, concentration, temperature and pressure."}},{"@type":"Question","name":"Which materials are reviewed for marine and offshore service?","acceptedAnswer":{"@type":"Answer","text":"Marine and offshore enquiries often review Duplex, Super Duplex, SMO 254, Monel, Nickel Alloys and copper alloys. Buyers should share seawater conditions, chloride exposure and project standards."}},{"@type":"Question","name":"Can Rubinox support multi-item EPC project enquiries?","acceptedAnswer":{"@type":"Answer","text":"Yes. Send the complete bill of materials or item list with grade, size, product form, quantity, standard, testing requirement and delivery location for item-wise review."}},{"@type":"Question","name":"Can third-party inspection be reviewed?","acceptedAnswer":{"@type":"Answer","text":"Inspection and documentation requirements can be considered when they are specified before quotation and order confirmation."}},{"@type":"Question","name":"Does Rubinox supply outside Mumbai?","acceptedAnswer":{"@type":"Answer","text":"Yes. Rubinox supports PAN India supply, and export enquiries can be reviewed when destination, packing, documentation and delivery terms are shared."}}]}</script>
+
+  <section class="ctaBand">
+    <h2>Send Your Industry Requirement</h2>
+    <p>
+      Share grade, size, product form, quantity, standard, documentation requirement and delivery location
+      for item-wise review and fast quotation support.
+    </p>
     <div class="btnrow">
       <a class="btn primary"
          href="https://wa.me/919363193755"
@@ -471,7 +726,7 @@ p{
          href="/quotation.html"
          onclick="return trackLeadAndGo('navigation','industries_quote_page', this.href, false)">Quotation Page</a>
     </div>
-  </div>
+  </section>
 
 </div>
 
@@ -517,6 +772,6 @@ p{
     © 2026 Rubinox Metal and Alloys • Mumbai, India
   </div>
 </footer>
-  
+
 </body>
 </html>
