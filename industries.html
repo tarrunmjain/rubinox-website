@@ -282,10 +282,10 @@ p{
 .industryGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
 .industryCard{overflow:hidden;background:#fff;border:1px solid rgba(16,37,84,.12);border-radius:12px;box-shadow:0 12px 30px rgba(15,30,60,.08);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
 .industryCard:hover{transform:translateY(-4px);box-shadow:0 18px 42px rgba(7,16,31,.15);border-color:rgba(226,160,47,.55)}
-.industryMedia{position:relative;height:190px;overflow:hidden;background-image:linear-gradient(135deg,rgba(7,16,31,.66),rgba(19,42,99,.20)),var(--industry-image),linear-gradient(120deg,#d8e0ec,#f8fafc);background-size:cover;background-position:center}
-.industryMedia::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,16,31,.50),rgba(7,16,31,.08))}
+.industryMedia{position:relative;height:190px;overflow:hidden;background-image:linear-gradient(135deg,rgba(7,16,31,.24),rgba(19,42,99,.04)),var(--industry-image),linear-gradient(120deg,#d8e0ec,#f8fafc);background-size:cover;background-position:center}
+.industryMedia::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,16,31,0),rgba(7,16,31,.16))}
 .industryMedia::after{content:"";position:absolute;inset:18px;border:1px solid rgba(255,255,255,.35);border-radius:8px}
-.industryMedia span{position:absolute;left:14px;bottom:14px;z-index:1;display:inline-flex;padding:7px 9px;border-radius:6px;color:#fff;background:rgba(7,16,31,.72);border:1px solid rgba(226,160,47,.35);font-size:12px;font-weight:800}
+.industryMedia span{display:none}
 .industryBody{padding:16px}
 .industryTop{display:flex;align-items:center;gap:10px;margin-bottom:8px}
 .industryTop h2{margin:0;font-size:20px}
@@ -457,8 +457,7 @@ td strong{color:var(--ink2)}
 
     <div class="industryGrid">
       <article class="industryCard">
-        <div class="industryMedia" style="--industry-image:url('/assets/industry-pharma.webp')" role="img" aria-label="Pharma processing facility image placeholder">
-          <span>assets/industry-pharma.webp</span>
+        <div class="industryMedia" style="--industry-image:url('/assets/industry-pharma.webp')" role="img" aria-label="Stainless steel pharma processing equipment and hygienic piping">
         </div>
         <div class="industryBody">
           <div class="industryTop"><span class="industryIcon" aria-hidden="true">Rx</span><h2>Pharma</h2></div>
@@ -472,8 +471,7 @@ td strong{color:var(--ink2)}
       </article>
 
       <article class="industryCard">
-        <div class="industryMedia" style="--industry-image:url('/assets/industry-food-processing.webp')" role="img" aria-label="Food processing line image placeholder">
-          <span>assets/industry-food-processing.webp</span>
+        <div class="industryMedia" style="--industry-image:url('/assets/industry-food-processing.webp')" role="img" aria-label="Stainless steel food processing line and production equipment">
         </div>
         <div class="industryBody">
           <div class="industryTop"><span class="industryIcon" aria-hidden="true">FP</span><h2>Food Processing</h2></div>
@@ -487,8 +485,7 @@ td strong{color:var(--ink2)}
       </article>
 
       <article class="industryCard">
-        <div class="industryMedia" style="--industry-image:url('/assets/industry-chemical.webp')" role="img" aria-label="Chemical processing plant image placeholder">
-          <span>assets/industry-chemical.webp</span>
+        <div class="industryMedia" style="--industry-image:url('/assets/industry-chemical.webp')" role="img" aria-label="Chemical processing plant with corrosion-resistant alloy equipment">
         </div>
         <div class="industryBody">
           <div class="industryTop"><span class="industryIcon" aria-hidden="true">Ch</span><h2>Chemical</h2></div>
@@ -502,8 +499,7 @@ td strong{color:var(--ink2)}
       </article>
 
       <article class="industryCard">
-        <div class="industryMedia" style="--industry-image:url('/assets/industry-oil-gas.webp')" role="img" aria-label="Oil and gas refinery image placeholder">
-          <span>assets/industry-oil-gas.webp</span>
+        <div class="industryMedia" style="--industry-image:url('/assets/industry-oil-gas.webp')" role="img" aria-label="Oil and gas refinery piping and process infrastructure">
         </div>
         <div class="industryBody">
           <div class="industryTop"><span class="industryIcon" aria-hidden="true">OG</span><h2>Oil &amp; Gas</h2></div>
@@ -517,8 +513,7 @@ td strong{color:var(--ink2)}
       </article>
 
       <article class="industryCard">
-        <div class="industryMedia" style="--industry-image:url('/assets/industry-epc-projects.webp')" role="img" aria-label="EPC construction project image placeholder">
-          <span>assets/industry-epc-projects.webp</span>
+        <div class="industryMedia" style="--industry-image:url('/assets/industry-epc-projects.webp')" role="img" aria-label="EPC industrial construction project with structural steel and piping">
         </div>
         <div class="industryBody">
           <div class="industryTop"><span class="industryIcon" aria-hidden="true">EP</span><h2>EPC Projects</h2></div>
@@ -532,8 +527,7 @@ td strong{color:var(--ink2)}
       </article>
 
       <article class="industryCard">
-        <div class="industryMedia" style="--industry-image:url('/assets/industry-water-treatment.webp')" role="img" aria-label="Water treatment plant image placeholder">
-          <span>assets/industry-water-treatment.webp</span>
+        <div class="industryMedia" style="--industry-image:url('/assets/industry-water-treatment.webp')" role="img" aria-label="Water treatment plant piping and filtration system">
         </div>
         <div class="industryBody">
           <div class="industryTop"><span class="industryIcon" aria-hidden="true">WT</span><h2>Water Treatment</h2></div>
@@ -547,8 +541,7 @@ td strong{color:var(--ink2)}
       </article>
 
       <article class="industryCard">
-        <div class="industryMedia" style="--industry-image:url('/assets/industry-marine-offshore.webp')" role="img" aria-label="Marine and offshore platform image placeholder">
-          <span>assets/industry-marine-offshore.webp</span>
+        <div class="industryMedia" style="--industry-image:url('/assets/industry-marine-offshore.webp')" role="img" aria-label="Marine offshore platform and seawater service equipment">
         </div>
         <div class="industryBody">
           <div class="industryTop"><span class="industryIcon" aria-hidden="true">MO</span><h2>Marine &amp; Offshore</h2></div>
@@ -562,8 +555,7 @@ td strong{color:var(--ink2)}
       </article>
 
       <article class="industryCard">
-        <div class="industryMedia" style="--industry-image:url('/assets/industry-power-generation.webp')" role="img" aria-label="Power generation plant image placeholder">
-          <span>assets/industry-power-generation.webp</span>
+        <div class="industryMedia" style="--industry-image:url('/assets/industry-power-generation.webp')" role="img" aria-label="Power generation plant with heat and high-temperature process equipment">
         </div>
         <div class="industryBody">
           <div class="industryTop"><span class="industryIcon" aria-hidden="true">Pw</span><h2>Power Generation</h2></div>
@@ -577,8 +569,7 @@ td strong{color:var(--ink2)}
       </article>
 
       <article class="industryCard">
-        <div class="industryMedia" style="--industry-image:url('/assets/industry-engineering-fabrication.webp')" role="img" aria-label="Engineering and fabrication shop image placeholder">
-          <span>assets/industry-engineering-fabrication.webp</span>
+        <div class="industryMedia" style="--industry-image:url('/assets/industry-engineering-fabrication.webp')" role="img" aria-label="Engineering fabrication workshop with metal plates and components">
         </div>
         <div class="industryBody">
           <div class="industryTop"><span class="industryIcon" aria-hidden="true">En</span><h2>Engineering &amp; Fabrication</h2></div>
@@ -592,8 +583,7 @@ td strong{color:var(--ink2)}
       </article>
 
       <article class="industryCard">
-        <div class="industryMedia" style="--industry-image:url('/assets/industry-infrastructure.webp')" role="img" aria-label="Infrastructure project image placeholder">
-          <span>assets/industry-infrastructure.webp</span>
+        <div class="industryMedia" style="--industry-image:url('/assets/industry-infrastructure.webp')" role="img" aria-label="Infrastructure project with structural steel and industrial metal materials">
         </div>
         <div class="industryBody">
           <div class="industryTop"><span class="industryIcon" aria-hidden="true">In</span><h2>Infrastructure</h2></div>
