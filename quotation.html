@@ -130,12 +130,19 @@
       linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,transparent 1px 100%),
       linear-gradient(0deg,rgba(255,255,255,.06) 0 1px,transparent 1px 100%);background-size:76px 76px;opacity:.32}
     .premiumHero h1{color:#ffffff}
-    .heroGrid{position:relative;display:grid;grid-template-columns:1.1fr .78fr;gap:34px;align-items:center}
+    .premiumHero .crumb{color:#c3cad8;margin:0 0 12px}
+    .premiumHero .crumb a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+    .heroGrid{position:relative;display:grid;max-width:960px;gap:24px;align-items:start}
     .heroPanel{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:24px;padding:26px;box-shadow:0 26px 70px rgba(0,0,0,.22)}
     .heroPanel h2{color:#fff;font-size:24px;margin-bottom:18px}
     .heroChecklist{display:grid;gap:12px;margin:0;padding:0;list-style:none}
     .heroChecklist li{display:flex;gap:10px;align-items:flex-start;color:#e8eef8;font-weight:700}
     .heroChecklist li:before{content:"";flex:0 0 9px;width:9px;height:9px;border-radius:50%;margin-top:9px;background:var(--gold)}
+    .guidanceCard{position:relative;background:#fff;border:1px solid rgba(220,227,238,.94);border-radius:20px;padding:28px;box-shadow:0 18px 44px rgba(11,31,77,.08);overflow:hidden}
+    .guidanceCard:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--gold),rgba(216,168,75,.2))}
+    .guidanceList{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:22px 0 0;padding:0;list-style:none}
+    .guidanceList li{display:flex;gap:10px;color:var(--muted);font-weight:750;line-height:1.6}
+    .guidanceList li:before{content:"";flex:0 0 10px;width:10px;height:10px;border-radius:50%;margin-top:8px;background:var(--gold);box-shadow:0 0 0 5px rgba(216,168,75,.14)}
     .heroProof{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 0}
     .chip{display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#eef4ff;font-size:13px;font-weight:900}
     .chip:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
@@ -245,7 +252,7 @@
       .btn{width:100%}
       .heroProof{gap:8px}
       .chip{font-size:12px;padding:8px 10px}
-      .checkGrid,.materialGrid,.projectGrid,.docGrid,.contactGrid,.faqGrid,.formGrid{grid-template-columns:1fr}
+      .checkGrid,.materialGrid,.projectGrid,.docGrid,.contactGrid,.faqGrid,.formGrid,.guidanceList{grid-template-columns:1fr}
       .checkCard{min-height:auto}
       table{min-width:680px}
       .ctaBand{padding:30px 22px;border-radius:20px}
@@ -290,11 +297,11 @@
   </header>
 
   <main id="main-content">
-    <div class="wrap crumb"><a href="/">Home</a> &gt; Request Quotation</div>
 
     <section class="premiumHero" aria-labelledby="quotation-title">
       <div class="wrap heroGrid">
         <div>
+          <div class="crumb"><a href="/">Home</a> &gt; Request Quotation</div>
           <span class="eyebrow">Industrial metal RFQ</span>
           <h1 id="quotation-title">Request an Industrial Metal Quotation</h1>
           <p class="lead">Share material, grade, product form, dimensions, quantity, standards, documentation requirements and delivery location for RFQ review.</p>
@@ -308,21 +315,28 @@
           <div class="btnRow">
             <a class="btn btnGold" href="https://wa.me/919363193755" onclick="trackLeadAndGo('quotation_whatsapp_hero','https://wa.me/919363193755');return false;">WhatsApp RFQ</a>
             <a class="btn btnLight" href="mailto:tarun@rubinoxmetal.com?subject=Quotation%20Request%20-%20Rubinox" onclick="trackLeadAndGo('quotation_email_hero','mailto:tarun@rubinoxmetal.com?subject=Quotation%20Request%20-%20Rubinox');return false;">Email RFQ</a>
-            <a class="btn btnLight" href="#rfq-checklist">View RFQ Checklist</a>
           </div>
         </div>
-        <div class="heroPanel">
-          <h2>Faster RFQ review starts with complete specifications.</h2>
-          <ul class="heroChecklist">
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="rfq-guidance-title">
+      <div class="wrap">
+        <article class="guidanceCard">
+          <div class="sectionHead">
+            <span class="eyebrow">RFQ preparation</span>
+            <h2 id="rfq-guidance-title">Faster RFQ Review Starts With Complete Specifications</h2>
+            <p>Complete technical inputs help Rubinox review industrial metal enquiries with fewer follow-up questions.</p>
+          </div>
+          <ul class="guidanceList">
             <li>Confirm material family, grade, standard and product form.</li>
             <li>Share dimensions, quantity, finish, condition and delivery location.</li>
             <li>Mention MTC, PMI, inspection or project documentation requirements where applicable.</li>
             <li>Attach BOQ, MTO, drawings or item schedules for multi-line enquiries.</li>
           </ul>
-        </div>
+        </article>
       </div>
     </section>
-
     <section class="section" id="rfq-checklist" aria-labelledby="rfq-checklist-title">
       <div class="wrap">
         <div class="sectionHead">
