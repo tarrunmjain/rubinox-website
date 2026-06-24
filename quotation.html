@@ -255,6 +255,115 @@
       .footerGrid{display:grid;gap:10px}
     }
   
+
+/* RUBINOX HERO COMPONENT STANDARDIZATION START */
+main > .premiumHero{
+  position:relative;
+  margin:20px 0 0;
+  padding:0;
+  color:#fff;
+  background:transparent;
+  border:0;
+  box-shadow:none;
+  overflow:visible;
+}
+main > .premiumHero:before{content:none}
+main > .premiumHero .heroGrid{
+  position:relative;
+  overflow:hidden;
+  width:min(1140px,calc(100% - 40px));
+  max-width:1140px;
+  min-height:380px;
+  margin:0 auto;
+  padding:34px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:0;
+  align-items:stretch;
+  border:1px solid rgba(226,160,47,.25);
+  border-radius:12px;
+  background:linear-gradient(120deg,rgba(7,16,31,.94),rgba(19,42,99,.88)),radial-gradient(circle at 78% 22%,rgba(226,160,47,.28),transparent 34%),linear-gradient(135deg,#07101f,#132a63);
+  box-shadow:0 22px 55px rgba(7,16,31,.22);
+}
+main > .premiumHero .heroGrid > div{max-width:900px}
+main > .premiumHero .crumb{
+  color:#c3cad8;
+  font-weight:700;
+  margin:0 0 12px;
+  font-size:12px;
+  line-height:1.4;
+  letter-spacing:.3px;
+}
+main > .premiumHero .crumb a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+main > .premiumHero .eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin:0 0 12px;
+  color:#e2a02f;
+  font-size:12px;
+  font-weight:950;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+main > .premiumHero h1{
+  color:#fff;
+  margin:0 0 12px;
+  font-size:46px;
+  line-height:1.08;
+  letter-spacing:0;
+  max-width:860px;
+}
+main > .premiumHero .lead,
+main > .premiumHero p{
+  color:#d7deec;
+  max-width:84ch;
+  font-size:17px;
+  line-height:1.65;
+  margin:0;
+}
+main > .premiumHero .heroProof{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 0}
+main > .premiumHero .heroProof span,
+main > .premiumHero .chip{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:9px 12px;
+  border-radius:6px;
+  background:rgba(255,255,255,.08);
+  color:#f4eddd;
+  border:1px solid rgba(226,160,47,.30);
+  font-size:13px;
+  font-weight:800;
+  line-height:1.2;
+  gap:0;
+}
+main > .premiumHero .chip:before{display:none}
+main > .premiumHero .btnRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+main > .premiumHero .btn{
+  min-height:44px;
+  padding:11px 14px;
+  border-radius:6px;
+  font-size:14px;
+  font-weight:800;
+  line-height:1.2;
+}
+main > .premiumHero .btnGold{background:linear-gradient(180deg,#f2bc55,#e2a02f);color:#07101f;border-color:transparent;box-shadow:0 14px 30px rgba(226,160,47,.28)}
+main > .premiumHero .btnLight{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:#fff;box-shadow:none}
+main > .premiumHero .btnLight:hover{background:#fff;color:#07101f}
+@media(max-width:900px){
+  main > .premiumHero{padding:0;margin-top:18px}
+  main > .premiumHero .heroGrid{width:min(100% - 36px,1140px);min-height:0;padding:24px;border-radius:12px}
+  main > .premiumHero h1{font-size:32px;line-height:1.12}
+  main > .premiumHero .lead,
+  main > .premiumHero p{font-size:16px;line-height:1.6}
+  main > .premiumHero .heroProof span,
+  main > .premiumHero .chip,
+  main > .premiumHero .btn{width:100%;justify-content:center;text-align:center}
+  main > .premiumHero .btnRow{display:flex;flex-direction:column}
+}
+/* RUBINOX HERO COMPONENT STANDARDIZATION END */
 /* RUBINOX STANDARD HEADER START */
 header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(7,16,31,.12);box-shadow:0 14px 34px rgba(7,16,31,.09)}
 header .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
