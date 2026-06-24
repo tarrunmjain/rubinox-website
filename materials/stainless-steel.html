@@ -70,7 +70,13 @@ footer{background:#07101f !important;border-top:1px solid rgba(226,160,47,.22) !
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<style>.skipLink{position:fixed;left:16px;top:12px;z-index:10000;padding:10px 14px;background:#fff;color:#07101f;border:2px solid #e2a02f;border-radius:6px;font-weight:800;text-decoration:none;transform:translateY(-160%);transition:transform .15s ease}.skipLink:focus{transform:translateY(0)}</style>
+<style>.skipLink{position:fixed;left:16px;top:12px;z-index:10000;padding:10px 14px;background:#fff;color:#07101f;border:2px solid #e2a02f;border-radius:6px;font-weight:800;text-decoration:none;transform:translateY(-160%);transition:transform .15s ease}.skipLink:focus{transform:translateY(0)}
+/* RUBINOX NAV ALIGNMENT FIX */
+.nav{gap:10px}
+.navlinks{gap:8px !important;flex-wrap:nowrap;justify-content:flex-end}
+.navlinks a{padding:8px 7px;font-size:13px;white-space:nowrap}
+.navlinks .btn{padding:10px 12px;font-size:13px}
+@media(max-width:1120px){.desktopNav{display:none}.menuToggle{display:inline-flex}.navlinks:not(.desktopNav){flex-wrap:wrap;justify-content:flex-start}}</style>
 </head>
 <body>
 <a class="skipLink" href="#main-content">Skip to main content</a>
