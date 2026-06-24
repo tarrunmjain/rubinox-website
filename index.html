@@ -660,9 +660,17 @@
     #seo-links a:hover{opacity:.85}
 
     /* PRODUCT FORMS */
+
+    .sectionIntro{
+      margin:0 0 14px;
+      color:var(--muted2);
+      max-width:82ch;
+      line-height:1.7;
+    }
+
     .formsGrid{
       display:grid;
-      grid-template-columns:repeat(3, 1fr);
+      grid-template-columns:repeat(4, 1fr);
       gap:16px;
       align-items:stretch;
       margin-top:12px;
@@ -679,6 +687,8 @@
       flex-direction:column;
       transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
       cursor:pointer;
+      text-decoration:none;
+      color:inherit;
     }
 
     .formCard:hover{
@@ -712,6 +722,20 @@
       font-size:13px;
       line-height:1.6;
     }
+
+    .formMeta{
+      display:inline-flex;
+      margin-top:12px;
+      padding:7px 9px;
+      border-radius:6px;
+      background:#f4eddd;
+      color:#132a63;
+      font-size:12px;
+      font-weight:900;
+      border:1px solid rgba(226,160,47,.28);
+    }
+
+    @media(max-width:1100px){.formsGrid{grid-template-columns:repeat(2, 1fr)}}
 
     .chipRow{
       margin-top:14px;
@@ -896,7 +920,7 @@
       .rfqFlowGrid,.docSupportGrid,.geoSupportGrid,.buyerFaqGrid,.docChecklist{grid-template-columns:1fr}
       .finalCtaActions .btn{width:100%}
     }
-  
+
 /* RUBINOX STANDARD HEADER START */
 header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(7,16,31,.12);box-shadow:0 14px 34px rgba(7,16,31,.09)}
 header .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
@@ -1307,43 +1331,122 @@ in pipes, tubes, sheets, plates, coils, flanges and fittings for industrial appl
   <section class="section" id="forms">
     <div class="wrap">
       <h2 style="margin:0 0 10px;color:#132a63">Product Forms Available</h2>
-
+      <p class="sectionIntro">Explore stainless steel and industrial metal product forms for RFQ review. Share grade, size, standard, finish, quantity and delivery location for quotation support.</p>
       <div class="formsGrid">
-        <div class="formCard">
-          <img width="1400" height="933" class="formImg" src="/assets/form-pipes.webp" alt="Pipes and tubes - seamless and welded supply" decoding="async" loading="lazy">
+        <a class="formCard" href="/materials/stainless-steel-pipes-supplier-india.html">
+          <img width="1400" height="933" class="formImg" src="/assets/form-pipes.webp" alt="Stainless steel pipes for industrial piping and project supply" decoding="async" loading="lazy">
           <div class="formBody">
-            <div class="formTitle">Pipes &amp; Tubes</div>
-            <p class="formDesc">ERW / Seamless / Welded options across multiple grades and standards.</p>
+            <h3 class="formTitle">Pipes</h3>
+            <p class="formDesc">Seamless and welded pipe enquiries by OD, schedule, wall thickness, length and standard.</p>
+            <span class="formMeta">OD / Schedule</span>
           </div>
-        </div>
-
-        <div class="formCard">
-          <img width="1400" height="933" class="formImg" src="/assets/form-coils.webp" alt="Sheets, plates and coils in industrial metals" decoding="async" loading="lazy">
+        </a>
+        <a class="formCard" href="/materials/stainless-steel-tubes-supplier-india.html">
+          <img width="1400" height="933" class="formImg" src="/assets/form-pipes.webp" alt="Stainless steel tubes for fabrication and instrumentation requirements" decoding="async" loading="lazy">
           <div class="formBody">
-            <div class="formTitle">Sheets • Plates • Coils</div>
-            <p class="formDesc">Multiple thicknesses and finishes for fabrication, piping and industrial use.</p>
+            <h3 class="formTitle">Tubes</h3>
+            <p class="formDesc">Tube enquiries by outer diameter, thickness, length, finish and application requirement.</p>
+            <span class="formMeta">Round / Square</span>
           </div>
-        </div>
-
-        <div class="formCard">
-          <img width="1400" height="933" class="formImg" src="/assets/form-fittings.webp" alt="Flanges and fittings supply for piping projects" decoding="async" loading="lazy">
+        </a>
+        <a class="formCard" href="/materials/stainless-steel-sheets-supplier-india.html">
+          <img width="1400" height="933" class="formImg" src="/assets/form-sheets.webp" alt="Stainless steel sheets in industrial finishes" decoding="async" loading="lazy">
           <div class="formBody">
-            <div class="formTitle">Flanges &amp; Fittings</div>
-            <p class="formDesc">Elbows, tees, reducers, stub ends, flanges and project fittings supply.</p>
+            <h3 class="formTitle">Sheets</h3>
+            <p class="formDesc">Sheet enquiries by grade, thickness, width, length, finish, tolerance and MTC requirement.</p>
+            <span class="formMeta">CR / HR Finish</span>
           </div>
-        </div>
-      </div>
-
-      <div class="chipRow">
-        <span class="chip">✓ Bars &amp; Rods</span>
-        <span class="chip">✓ Angles &amp; Channels</span>
-        <span class="chip">✓ Fasteners</span>
-        <span class="chip">✓ Wire Mesh</span>
-        <span class="chip">✓ Flats &amp; Circles</span>
-      </div>
+        </a>
+        <a class="formCard" href="/materials/stainless-steel-plates-supplier-india.html">
+          <img width="1400" height="933" class="formImg" src="/assets/form-plates.webp" alt="Stainless steel plates and cut plate requirements" decoding="async" loading="lazy">
+          <div class="formBody">
+            <h3 class="formTitle">Plates</h3>
+            <p class="formDesc">Plate requirements by thickness, size, cutting scope, standard, finish and inspection need.</p>
+            <span class="formMeta">Thick Sections</span>
+          </div>
+        </a>
+        <a class="formCard" href="/materials/stainless-steel-coils-supplier-india.html">
+          <img width="1400" height="933" class="formImg" src="/assets/form-coils.webp" alt="Stainless steel coils for processing and fabrication" decoding="async" loading="lazy">
+          <div class="formBody">
+            <h3 class="formTitle">Coils</h3>
+            <p class="formDesc">Coil enquiries by grade, thickness, width, coil weight, finish and slit requirement.</p>
+            <span class="formMeta">Slit / Full Coil</span>
+          </div>
+        </a>
+        <a class="formCard" href="/materials/stainless-steel-flanges-supplier-india.html">
+          <img width="1400" height="933" class="formImg" src="/assets/form-flanges.webp" alt="Stainless steel flanges for process piping projects" decoding="async" loading="lazy">
+          <div class="formBody">
+            <h3 class="formTitle">Flanges</h3>
+            <p class="formDesc">Flange enquiries by type, class, face, standard, bore, quantity and inspection requirement.</p>
+            <span class="formMeta">Class / Standard</span>
+          </div>
+        </a>
+        <a class="formCard" href="/materials/stainless-steel-fittings-supplier-india.html">
+          <img width="1400" height="933" class="formImg" src="/assets/form-fittings.webp" alt="Stainless steel pipe fittings including elbows tees and reducers" decoding="async" loading="lazy">
+          <div class="formBody">
+            <h3 class="formTitle">Fittings</h3>
+            <p class="formDesc">Elbows, tees, reducers, caps and forged fittings by schedule, type, standard and quantity.</p>
+            <span class="formMeta">BW / Forged</span>
+          </div>
+        </a>
+        <a class="formCard" href="/materials/stainless-steel-fasteners-supplier-india.html">
+          <img width="1400" height="933" class="formImg" src="/assets/form-fasteners.webp" alt="Stainless steel fasteners for industrial assemblies" decoding="async" loading="lazy">
+          <div class="formBody">
+            <h3 class="formTitle">Fasteners</h3>
+            <p class="formDesc">Bolts, nuts, washers and studs by grade, thread, length, standard, finish and quantity.</p>
+            <span class="formMeta">Bolts / Studs</span>
+          </div>
+        </a>
+        <a class="formCard" href="/materials/stainless-steel-angles-supplier-india.html">
+          <img width="1400" height="933" class="formImg" src="/assets/form-angles.webp" alt="Stainless steel angles for fabrication and structural use" decoding="async" loading="lazy">
+          <div class="formBody">
+            <h3 class="formTitle">Angles</h3>
+            <p class="formDesc">Angle requirements by leg size, thickness, length, grade, finish and fabrication use.</p>
+            <span class="formMeta">Equal / Unequal</span>
+          </div>
+        </a>
+        <a class="formCard" href="/materials/stainless-steel-bars-rods-supplier-india.html">
+          <img width="1400" height="933" class="formImg" src="/assets/form-bars-rods.webp" alt="Stainless steel square hex and rectangular solid bars" decoding="async" loading="lazy">
+          <div class="formBody">
+            <h3 class="formTitle">Bars</h3>
+            <p class="formDesc">Square, hex and rectangular solid section enquiries by size, condition, tolerance and length.</p>
+            <span class="formMeta">Square / Hex</span>
+          </div>
+        </a>
+        <a class="formCard" href="/materials/stainless-steel-bars-rods-supplier-india.html">
+          <img width="1400" height="933" class="formImg" src="/assets/form-bars-rods.webp" alt="Stainless steel round rods and solid round sections" decoding="async" loading="lazy">
+          <div class="formBody">
+            <h3 class="formTitle">Rods</h3>
+            <p class="formDesc">Round solid section enquiries by diameter, length, condition, tolerance and machining use.</p>
+            <span class="formMeta">Round Solid</span>
+          </div>
+        </a>
+        <a class="formCard" href="/materials/stainless-steel-flats-supplier-india.html">
+          <img width="1400" height="933" class="formImg" src="/assets/form-flats.webp" alt="Stainless steel flats for fabrication and machining" decoding="async" loading="lazy">
+          <div class="formBody">
+            <h3 class="formTitle">Flats</h3>
+            <p class="formDesc">Flat bar enquiries by width, thickness, length, edge condition, finish and quantity.</p>
+            <span class="formMeta">Width / Thickness</span>
+          </div>
+        </a>
+        <a class="formCard" href="/materials/stainless-steel-circles-supplier-india.html">
+          <img width="1400" height="933" class="formImg" src="/assets/form-circles.webp" alt="Stainless steel circles and round cut discs" decoding="async" loading="lazy">
+          <div class="formBody">
+            <h3 class="formTitle">Circles</h3>
+            <p class="formDesc">Round cut disc and sheet circle enquiries by diameter, thickness, grade and finish.</p>
+            <span class="formMeta">Round Cut Discs</span>
+          </div>
+        </a>
+        <a class="formCard" href="/materials/stainless-steel-wire-mesh-supplier-india.html">
+          <img width="1400" height="933" class="formImg" src="/assets/form-wire-mesh.webp" alt="Stainless steel woven and welded wire mesh" decoding="async" loading="lazy">
+          <div class="formBody">
+            <h3 class="formTitle">Wire Mesh</h3>
+            <p class="formDesc">Woven or welded mesh enquiries by mesh count, wire diameter, roll size, grade and finish.</p>
+            <span class="formMeta">Woven / Welded</span>
+          </div>
+        </a>      </div>
     </div>
   </section>
-
   <section class="section">
     <div class="wrap">
       <h2 style="margin:0 0 10px;color:#132a63">Industries We Serve</h2>
