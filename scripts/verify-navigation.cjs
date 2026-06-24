@@ -72,7 +72,7 @@ async function main() {
     await expectText(page.getByRole("heading", { level: 1 }), "Stainless Steel Supplier");
 
     await page.goto(`http://${host}:${port}/quotation.html`, { waitUntil: "domcontentloaded" });
-    await expectText(page.getByRole("heading", { level: 1 }), "Request a Fast Quotation");
+    await expectText(page.getByRole("heading", { level: 1 }), "Request an Industrial Metal Quotation");
 
     await page.goto(`http://${host}:${port}/industries.html`, { waitUntil: "domcontentloaded" });
     await expectText(page.getByRole("heading", { level: 1 }), "Industries We Serve");

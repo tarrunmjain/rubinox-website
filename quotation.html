@@ -1,546 +1,688 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-  <title>Request a Metal Quotation | Rubinox Mumbai</title>
-  <meta name="description" content="Request pricing for stainless steel, nickel alloys, duplex, titanium and other metals. Share grade, size, quantity and delivery location." />
+  <title>Request Metal Quotation | Industrial Metals RFQ | Rubinox</title>
+  <meta name="description" content="Send an RFQ to Rubinox for stainless steel, nickel alloys, duplex, titanium and industrial metals. Share grade, form, size, quantity, standard, documentation and delivery details." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://rubinoxmetal.com/quotation.html" />
-<meta property="og:locale" content="en_IN" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Rubinox Metal and Alloys" />
-<meta property="og:title" content="Request a Metal Quotation | Rubinox Mumbai" />
-<meta property="og:description" content="Request pricing for stainless steel, nickel alloys, duplex, titanium and other metals. Share grade, size, quantity and delivery location." />
-<meta property="og:url" content="https://rubinoxmetal.com/quotation.html" />
-<meta property="og:image" content="https://rubinoxmetal.com/assets/rubinox-social-preview-2026.jpg" />
-<meta property="og:image:secure_url" content="https://rubinoxmetal.com/assets/rubinox-social-preview-2026.jpg" />
-<meta property="og:image:type" content="image/jpeg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Request a Metal Quotation | Rubinox Mumbai" />
-
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:site" content="@rubinoxmetal" />
-<meta name="twitter:title" content="Request a Metal Quotation | Rubinox Mumbai" />
-<meta name="twitter:description" content="Request pricing for stainless steel, nickel alloys, duplex, titanium and other metals. Share grade, size, quantity and delivery location." />
-<meta name="twitter:image" content="https://rubinoxmetal.com/assets/rubinox-social-preview-2026.jpg" />
-<meta name="twitter:image:alt" content="Request a Metal Quotation | Rubinox Mumbai" />
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JT5X5L5H07"></script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta property="og:title" content="Request Metal Quotation | Industrial Metals RFQ | Rubinox" />
+  <meta property="og:description" content="Send an RFQ to Rubinox for stainless steel, nickel alloys, duplex, titanium and industrial metals. Share grade, form, size, quantity, standard, documentation and delivery details." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rubinoxmetal.com/quotation.html" />
+  <meta property="og:image" content="https://rubinoxmetal.com/assets/og-rubinox.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Request Metal Quotation | Industrial Metals RFQ | Rubinox" />
+  <meta name="twitter:description" content="Send an RFQ to Rubinox for stainless steel, nickel alloys, duplex, titanium and industrial metals. Share grade, form, size, quantity, standard, documentation and delivery details." />
+  <meta name="twitter:image" content="https://rubinoxmetal.com/assets/og-rubinox.jpg" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR18QYPS6C"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-JT5X5L5H07');
-
-    function trackLeadAndGo(method, label, url, newTab){
-      try{
-        if (typeof gtag === "function") {
-          let opened = false;
-          const go = () => {
-            if (opened) return;
-            opened = true;
-            if (newTab) window.open(url, "_blank", "noopener");
-            else window.location.href = url;
-          };
-          gtag("event", "generate_lead", {
-            method: method,
-            event_label: label,
-            event_callback: go
-          });
-          setTimeout(go, 600);
-          return false;
-        }
-      } catch(e){}
-      if (newTab) window.open(url, "_blank", "noopener");
-      else window.location.href = url;
-      return false;
+    gtag('config', 'G-CR18QYPS6C');
+    function trackLeadAndGo(eventName, destination){
+      try { gtag('event', eventName, { event_category: 'lead', event_label: destination }); }
+      catch (error) {}
+      window.location.href = destination;
     }
   </script>
-
   <style>
     :root{
+      --navy:#0b1f4d;
+      --navy2:#132a63;
+      --gold:#d8a84b;
+      --gold2:#f0c96a;
+      --silver:#eef2f7;
       --ink:#0b1220;
       --ink2:#132a63;
-      --muted:#566b9a;
-      --line:#e6ecf8;
-      --accent:#4f8cff;
-      --bg:#f6f8fc;
+      --muted:#64748b;
+      --line:#dce3ee;
       --card:#ffffff;
+      --soft:#f8fafc;
+      --shadow:0 22px 60px rgba(11,31,77,.12);
     }
-
     *{box-sizing:border-box}
-
+    html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       color:var(--ink);
-      background:var(--bg);
+      background:linear-gradient(180deg,#f8fafc 0,#eef2f7 46%,#f5f7fb 100%);
+      line-height:1.65;
     }
-
-    a{color:inherit}
-    .wrap{max-width:1100px;margin:0 auto;padding:0 18px}
-
-    /* HEADER */
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;height:auto;display:block}
+    .wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
     header{
       position:sticky;
       top:0;
-      z-index:1000;
-      background:rgba(255,255,255,.88);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid var(--line);
+      z-index:50;
+      background:rgba(255,255,255,.94);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(220,227,238,.92);
     }
-
-    .nav{
-      display:flex;
+    .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:12px;flex:0 0 auto;min-width:0}
+    .brand img{width:210px;max-width:34vw;height:auto}
+    .navlinks{display:flex;align-items:center;justify-content:flex-end;gap:14px;font-size:13px;font-weight:800;letter-spacing:.01em;white-space:nowrap;min-width:0}
+    .navlinks a{color:var(--navy2);padding:9px 6px;border-radius:999px;transition:color .2s ease,background .2s ease,transform .2s ease}
+    .navlinks a:hover{color:var(--navy);background:#f3f6fb;transform:translateY(-1px)}
+    .navlinks .quoteBtn,
+    .quoteBtn{
+      display:inline-flex;
       align-items:center;
-      justify-content:space-between;
-      gap:14px;
-      padding:14px 0;
-      position:relative;
+      justify-content:center;
+      gap:8px;
+      background:linear-gradient(135deg,var(--gold),var(--gold2));
+      color:#07162d;
+      padding:10px 13px;
+      border-radius:999px;
+      font-weight:900;
+      box-shadow:0 12px 28px rgba(216,168,75,.28);
     }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      text-decoration:none;
-      flex:0 0 auto;
-    }
-
-    .brand img{
-      height:72px;
-      max-height:72px;
-      width:auto;
-      display:block;
-    }
-
-    .navlinks{
-      display:flex;
-      gap:14px;
-      align-items:center;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-
-    .navlinks a{
-      text-decoration:none;
-      padding:8px 10px;
-      border-radius:10px;
-      color:#1b2b52;
-      font-weight:600;
-      font-size:14px;
-      white-space:nowrap;
-    }
-
-    .navlinks a:hover{background:#eef4ff}
-
+    .navlinks .quoteBtn:hover,.quoteBtn:hover{color:#07162d;background:linear-gradient(135deg,var(--gold2),var(--gold));transform:translateY(-1px)}
+    .menuToggle{display:none;border:1px solid var(--line);background:#fff;color:var(--navy2);border-radius:12px;padding:10px 12px;font-weight:900;cursor:pointer}
+    .mobileMenu{display:none;border-top:1px solid var(--line);padding:12px 0 18px}
+    .mobileMenu[hidden]{display:none}
+    .mobileMenuPanel{display:grid;gap:8px}
+    .mobileMenuPanel a{padding:12px 14px;border-radius:12px;background:#f8fafc;color:var(--navy2);font-weight:800}
+    .mobileMenuPanel .quoteBtn{width:100%;margin-top:4px}
+    main{overflow:hidden}
+    .crumb{font-size:13px;color:var(--muted);margin:22px 0 0;font-weight:700}
+    .crumb a{color:var(--navy2)}
+    .section{padding:58px 0}
+    .sectionHead{max-width:820px;margin-bottom:26px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;margin-bottom:12px;color:var(--gold);font-size:12px;font-weight:950;letter-spacing:.13em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:30px;height:2px;background:var(--gold);border-radius:999px}
+    h1,h2,h3{margin:0;color:var(--ink2);line-height:1.1;letter-spacing:0}
+    h1{font-size:clamp(38px,5.2vw,74px);max-width:900px}
+    h2{font-size:clamp(28px,3.2vw,46px)}
+    h3{font-size:19px}
+    p{margin:0;color:var(--muted)}
+    .lead{font-size:clamp(17px,1.7vw,21px);max-width:820px;color:#dbe6f6;line-height:1.55}
+    .btnRow{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      padding:11px 14px;
-      border-radius:12px;
-      text-decoration:none;
-      font-weight:800;
-      font-size:14px;
+      gap:9px;
+      min-height:46px;
+      padding:12px 18px;
+      border-radius:999px;
+      font-weight:950;
       border:1px solid transparent;
-      gap:8px;
-      white-space:nowrap;
-      cursor:pointer;
+      transition:transform .2s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease;
     }
-
-    .btn.primary{
-      background:var(--accent);
-      color:#fff;
-      box-shadow:0 12px 30px rgba(79,140,255,.25);
+    .btn:hover{transform:translateY(-2px)}
+    .btnGold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#07162d;box-shadow:0 16px 34px rgba(216,168,75,.26)}
+    .btnLight{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.28);color:#fff}
+    .btnLight:hover{background:rgba(255,255,255,.18)}
+    .btnNavy{background:var(--navy);color:#fff;box-shadow:0 16px 34px rgba(11,31,77,.18)}
+    .btnLine{background:#fff;border-color:var(--line);color:var(--navy2)}    .premiumHero{position:relative;margin-top:20px;padding:78px 0 64px;color:#fff;background:
+      radial-gradient(circle at 84% 18%,rgba(216,168,75,.26),transparent 28%),
+      linear-gradient(135deg,#081936 0%,#0b1f4d 52%,#17356f 100%);
+      overflow:hidden;
     }
-
-    .btn.primary:hover{filter:brightness(.95)}
-
-    .btn.ghost{
-      background:#fff;
-      border-color:#dbe6ff;
-      color:#132a63;
-    }
-
-    .btn.ghost:hover{background:#f4f8ff}
-
-    /* MOBILE TOGGLE */
-    .menuToggle{
-      display:none;
-      width:44px;
-      height:44px;
-      border-radius:12px;
-      border:1px solid #dbe6ff;
-      background:#fff;
-      color:#1b2b52;
-      align-items:center;
-      justify-content:center;
-      cursor:pointer;
-      padding:0;
-      box-shadow:0 8px 20px rgba(15,30,60,.06);
-    }
-
-    .menuToggle:hover{background:#f4f8ff}
-
-    .menuToggle svg{
-      width:22px;
-      height:22px;
-      stroke:#1b2b52;
-      stroke-width:2.2;
-      fill:none;
-      stroke-linecap:round;
-      stroke-linejoin:round;
-      display:block;
-    }
-
-    .mobileMenu{
-      display:none;
-      width:100%;
-      padding:0 0 14px;
-    }
-
-    .mobileMenuPanel{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:18px;
-      box-shadow:0 16px 40px rgba(15,30,60,.08);
-      padding:10px;
-    }
-
-    .mobileMenuPanel a{
-      display:block;
-      text-decoration:none;
-      padding:12px 14px;
-      border-radius:12px;
-      color:#1b2b52;
-      font-weight:700;
-      font-size:14px;
-    }
-
-    .mobileMenuPanel a:hover{background:#eef4ff}
-
-    .mobileMenuPanel .mobileBtn{
-      margin-top:8px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      background:var(--accent);
-      color:#fff;
-      box-shadow:0 12px 30px rgba(79,140,255,.20);
-    }
-
-    .mobileMenu.open{display:block}
-
-    /* PAGE */
-    .page{max-width:1100px;margin:0 auto;padding:22px 18px}
-
-    .crumb{
-      color:#8aa0c8;
-      font-weight:600;
-      margin:8px 0 4px;
-      font-size:12px;
-      letter-spacing:.3px;
-    }
-
-    .card{
+    .premiumHero:before{content:"";position:absolute;inset:0;background:
+      linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,transparent 1px 100%),
+      linear-gradient(0deg,rgba(255,255,255,.06) 0 1px,transparent 1px 100%);background-size:76px 76px;opacity:.32}
+    .heroGrid{position:relative;display:grid;grid-template-columns:1.1fr .78fr;gap:34px;align-items:center}
+    .heroPanel{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:24px;padding:26px;box-shadow:0 26px 70px rgba(0,0,0,.22)}
+    .heroPanel h2{color:#fff;font-size:24px;margin-bottom:18px}
+    .heroChecklist{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+    .heroChecklist li{display:flex;gap:10px;align-items:flex-start;color:#e8eef8;font-weight:700}
+    .heroChecklist li:before{content:"";flex:0 0 9px;width:9px;height:9px;border-radius:50%;margin-top:9px;background:var(--gold)}
+    .heroProof{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 0}
+    .chip{display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#eef4ff;font-size:13px;font-weight:900}
+    .chip:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
+    .card,
+    .checkCard,
+    .materialCard,
+    .docCard,
+    .projectCard,
+    .contactCard,
+    .faqItem{
+      position:relative;
       background:var(--card);
-      border:1px solid var(--line);
+      border:1px solid rgba(220,227,238,.9);
       border-radius:18px;
-      padding:18px;
-      margin-top:14px;
-      box-shadow:0 10px 30px rgba(15,30,60,.06);
+      box-shadow:0 18px 44px rgba(11,31,77,.08);
+      overflow:hidden;
     }
-
-    h1{
-      margin:10px 0 10px;
-      color:var(--ink2);
-      font-size:34px;
-      letter-spacing:-.2px;
+    .card:before,
+    .checkCard:before,
+    .materialCard:before,
+    .docCard:before,
+    .projectCard:before,
+    .contactCard:before,
+    .faqItem:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--gold),rgba(216,168,75,.2))}
+    .checkGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+    .checkCard{padding:20px;min-height:176px}
+    .cardTop{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+    .iconBox{flex:0 0 42px;width:42px;height:42px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;background:#fff7e5;border:1px solid rgba(216,168,75,.42);color:var(--navy2);font-weight:950;font-size:13px}
+    .checkCard p,.materialCard p,.docCard p,.projectCard p,.contactCard p,.faqItem p{font-size:14px;line-height:1.55}
+    .rfqFormShell{display:grid;grid-template-columns:1.35fr .65fr;gap:20px;align-items:start}
+    .rfqFormCard,.rfqHelpCard{position:relative;background:#fff;border:1px solid rgba(220,227,238,.94);border-radius:20px;box-shadow:0 18px 44px rgba(11,31,77,.08);overflow:hidden}
+    .rfqFormCard:before,.rfqHelpCard:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--gold),rgba(216,168,75,.2))}
+    .rfqFormCard{padding:28px}
+    .rfqHelpCard{padding:26px}
+    .formGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .formField{display:grid;gap:7px}
+    .formField.full{grid-column:1/-1}
+    .formField label{color:var(--ink2);font-size:14px;font-weight:950;line-height:1.3}
+    .req{color:var(--gold);font-weight:950}
+    .formField input,.formField select,.formField textarea{width:100%;border:1px solid var(--line);border-radius:14px;background:#fff;color:var(--ink);font:inherit;font-size:15px;padding:13px 14px;outline:none;transition:border-color .2s ease,box-shadow .2s ease;background .2s ease}
+    .formField input:focus,.formField select:focus,.formField textarea:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(216,168,75,.18);background:#fffdf8}
+    .formField textarea{min-height:132px;resize:vertical}
+    .formActions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+    .formActions .btn{border:0;cursor:pointer;font:inherit}
+    .formActions .btnLine{border:1px solid var(--line)}
+    .formStatus{min-height:24px;margin-top:14px;color:var(--ink2);font-size:14px;font-weight:800}
+    .formNote{margin-top:16px;font-size:13px;color:var(--muted)}
+    .rfqHelpCard h3{margin-bottom:12px}
+    .rfqHelpList{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+    .rfqHelpList li{display:flex;gap:10px;color:var(--muted);font-size:14px;line-height:1.55}
+    .rfqHelpList li:before{content:"";flex:0 0 9px;width:9px;height:9px;border-radius:50%;margin-top:8px;background:var(--gold)}
+    .materialGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .materialCard{padding:22px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+    .materialCard:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:rgba(216,168,75,.55)}
+    .materialCard h3{margin-bottom:9px}
+    .materialCard .miniLink{display:inline-flex;margin-top:14px;color:var(--navy2);font-weight:950;font-size:13px}
+    .splitGrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+    .tableWrap{overflow:auto;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 18px 44px rgba(11,31,77,.08)}
+    table{width:100%;border-collapse:collapse;min-width:760px;background:#fff}
+    th,td{padding:16px 18px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;color:var(--muted);font-size:14px}
+    th{background:#f4f7fb;color:var(--ink2);font-size:13px;text-transform:uppercase;letter-spacing:.08em;font-weight:950}
+    tr:last-child td{border-bottom:0}
+    td:first-child{color:var(--ink2);font-weight:900}
+    .docGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .docCard{padding:20px}
+    .projectGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .projectCard{padding:22px}
+    .cityCloud{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    .cityTag,.standardTag{display:inline-flex;align-items:center;padding:8px 11px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--navy2);font-weight:850;font-size:13px}
+    .supportPanel{padding:24px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 44px rgba(11,31,77,.08)}
+    .supportPanel h3{margin-bottom:10px}
+    .supportPanel + .supportPanel{margin-top:16px}
+    .contactGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .contactCard{padding:22px;display:flex;flex-direction:column;gap:12px;min-height:220px}
+    .contactCard .btn{margin-top:auto;width:100%}
+    .faqGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .faqItem{padding:22px}
+    .faqItem h3{color:var(--ink2);margin-bottom:10px;font-size:18px}
+    .faqItem p{color:var(--muted)}
+    .ctaBand{margin:58px 0 72px;padding:42px;border-radius:26px;background:linear-gradient(135deg,#081936,#132a63);color:#fff;box-shadow:0 28px 70px rgba(11,31,77,.2);display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;position:relative;overflow:hidden}
+    .ctaBand:after{content:"";position:absolute;right:-90px;top:-90px;width:240px;height:240px;border-radius:50%;background:rgba(216,168,75,.18)}
+    .ctaBand h2{color:#fff;position:relative}
+    .ctaBand p{color:#dbe6f6;max-width:760px;position:relative}
+    .ctaBand .btnRow{position:relative;margin-top:0;justify-content:flex-end}
+    footer{background:#07162d;color:#dbe6f6;padding:34px 0;font-size:14px}
+    footer a{color:#fff;font-weight:850}
+    .footerGrid{display:flex;flex-wrap:wrap;gap:12px 20px;justify-content:space-between;align-items:center}
+    @media (max-width:1120px){
+      .desktopNav{display:none}
+      .menuToggle{display:inline-flex}
+      .mobileMenu:not([hidden]){display:block}
+      .brand img{width:188px;max-width:62vw}
     }
-
-    h2{
-      margin:0 0 10px;
-      color:var(--ink2);
+    @media (max-width:980px){
+      .heroGrid,.splitGrid,.ctaBand,.rfqFormShell{grid-template-columns:1fr}
+      .heroPanel{order:2}
+      .checkGrid{grid-template-columns:repeat(2,1fr)}
+      .materialGrid,.projectGrid{grid-template-columns:1fr 1fr}
+      .docGrid,.contactGrid{grid-template-columns:repeat(2,1fr)}
+      .ctaBand .btnRow{justify-content:flex-start}
     }
-
-    p{
-      color:var(--muted);
-      line-height:1.75;
-      margin:0;
-    }
-
-    ul{
-      margin:0;
-      padding-left:18px;
-      color:var(--muted);
-      line-height:1.9;
-    }
-
-    .grid2{
-      display:grid;
-      gap:14px;
-      grid-template-columns:1fr 1fr;
-      margin-top:14px;
-    }
-
-    .btnrow{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:12px;
-    }
-
-    .note{
-      font-size:12px;
-      color:#7b8fb8;
-      margin-top:10px;
-    }
-
-    @media (max-width:900px){
-      .desktopNav{
-        display:none;
-      }
-
-      .menuToggle{
-        display:inline-flex;
-      }
-
-      .brand img{
-        height:56px;
-        max-height:56px;
-      }
-
-      .nav{
-        padding:10px 0;
-      }
-
-      .grid2{
-        grid-template-columns:1fr;
-      }
-
-      h1{
-        font-size:28px;
-      }
+    @media (max-width:640px){
+      .wrap{width:min(100% - 28px,1180px)}
+      .premiumHero{padding:56px 0 46px}
+      .section{padding:42px 0}
+      .btnRow{display:grid;grid-template-columns:1fr}
+      .btn{width:100%}
+      .heroProof{gap:8px}
+      .chip{font-size:12px;padding:8px 10px}
+      .checkGrid,.materialGrid,.projectGrid,.docGrid,.contactGrid,.faqGrid,.formGrid{grid-template-columns:1fr}
+      .checkCard{min-height:auto}
+      table{min-width:680px}
+      .ctaBand{padding:30px 22px;border-radius:20px}
+      .footerGrid{display:grid;gap:10px}
     }
   </style>
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
-<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://rubinoxmetal.com/quotation.html#webpage","url":"https://rubinoxmetal.com/quotation.html","name":"Request a Metal Quotation | Rubinox Mumbai","description":"Request pricing for stainless steel, nickel alloys, duplex, titanium and other metals. Share grade, size, quantity and delivery location.","isPartOf":{"@id":"https://rubinoxmetal.com/#website"},"about":{"@id":"https://rubinoxmetal.com/#organization"},"breadcrumb":{"@id":"https://rubinoxmetal.com/quotation.html#breadcrumb"},"inLanguage":"en-IN"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://rubinoxmetal.com/quotation.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rubinoxmetal.com/"},{"@type":"ListItem","position":2,"name":"Quotation","item":"https://rubinoxmetal.com/quotation.html"}]}</script>
-<style>.skipLink{position:fixed;left:16px;top:12px;z-index:10000;padding:10px 14px;background:#fff;color:#07101f;border:2px solid #e2a02f;border-radius:6px;font-weight:800;text-decoration:none;transform:translateY(-160%);transition:transform .15s ease}.skipLink:focus{transform:translateY(0)}
-/* RUBINOX HEADER ALIGNMENT AND CTA COLOR FIX */
-.nav{gap:10px}
-.navlinks{gap:8px;flex-wrap:nowrap}
-.navlinks a{padding:8px 7px;font-size:13px}
-.navlinks .btn{padding:10px 12px;font-size:13px}
-.btn.primary{background:linear-gradient(180deg,#f2bc55,#e2a02f);color:#07101f;box-shadow:0 14px 30px rgba(226,160,47,.28)}
-.mobileMenuPanel .mobileBtn{background:linear-gradient(180deg,#f2bc55,#e2a02f);color:#07101f;box-shadow:0 12px 30px rgba(226,160,47,.20)}
-@media (max-width:1120px){.desktopNav{display:none}.menuToggle{display:inline-flex}}</style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://rubinoxmetal.com/quotation.html#webpage","url":"https://rubinoxmetal.com/quotation.html","name":"Request Metal Quotation | Industrial Metals RFQ | Rubinox","description":"Send an RFQ to Rubinox for stainless steel, nickel alloys, duplex, titanium and industrial metals. Share grade, form, size, quantity, standard, documentation and delivery details.","isPartOf":{"@type":"WebSite","name":"Rubinox Metal and Alloys","url":"https://rubinoxmetal.com/"},"about":{"@type":"Organization","name":"Rubinox Metal and Alloys"}},{"@type":"BreadcrumbList","@id":"https://rubinoxmetal.com/quotation.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rubinoxmetal.com/"},{"@type":"ListItem","position":2,"name":"Request Quotation","item":"https://rubinoxmetal.com/quotation.html"}]}]}
+  </script>
 </head>
-
-<body>
-<a class="skipLink" href="#main-content">Skip to main content</a>
-  <header>
+<body>  <header>
     <div class="wrap">
       <div class="nav">
-        <a class="brand" href="/" aria-label="Rubinox Home">
-          <img width="360" height="87" src="/logo.png" alt="Rubinox Metal and Alloys" decoding="async">
+        <a class="brand" href="/" aria-label="Rubinox Metal and Alloys home">
+          <img src="/logo.png" alt="Rubinox Metal and Alloys logo" />
         </a>
-
-        <!-- Desktop Nav -->
-        <div class="navlinks desktopNav" role="navigation" aria-label="Main navigation">
+        <nav class="navlinks desktopNav" aria-label="Main navigation">
           <a href="/#materials">Materials</a>
           <a href="/materials/stainless-steel.html">Stainless Steel</a>
           <a href="/about-us.html">About Us</a>
           <a href="/quotation.html">Quotation</a>
           <a href="/industries.html">Industries</a>
+          <a href="/#products">Forms</a>
           <a href="/#contact">Contact</a>
-
-          <a class="btn primary"
-             href="https://wa.me/919363193755"
-             target="_blank"
-             rel="noopener"
-             onclick="return trackLeadAndGo('whatsapp','header_whatsapp_quote_page', this.href, true)">
-            WhatsApp Quote
-          </a>
-        </div>
-
-        <!-- Mobile Toggle -->
-        <button class="menuToggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-          <svg id="menuIcon" viewBox="0 0 24 24">
-            <path d="M4 7h16"></path>
-            <path d="M4 12h16"></path>
-            <path d="M4 17h16"></path>
-          </svg>
-        </button>
+          <a class="quoteBtn" href="https://wa.me/919363193755" onclick="trackLeadAndGo('whatsapp_quote','https://wa.me/919363193755');return false;">WhatsApp Quote</a>
+        </nav>
+        <button class="menuToggle" type="button" aria-controls="mobile-menu" aria-expanded="false">Menu</button>
       </div>
-
-      <!-- Mobile Menu -->
-      <div class="mobileMenu" id="mobileMenu">
-        <div class="mobileMenuPanel" role="navigation" aria-label="Mobile navigation">
+      <div class="mobileMenu" id="mobile-menu" hidden>
+        <nav class="mobileMenuPanel" aria-label="Mobile navigation">
           <a href="/#materials">Materials</a>
           <a href="/materials/stainless-steel.html">Stainless Steel</a>
           <a href="/about-us.html">About Us</a>
           <a href="/quotation.html">Quotation</a>
           <a href="/industries.html">Industries</a>
+          <a href="/#products">Forms</a>
           <a href="/#contact">Contact</a>
-
-          <a class="mobileBtn btn primary"
-             href="https://wa.me/919363193755"
-             target="_blank"
-             rel="noopener"
-             onclick="return trackLeadAndGo('whatsapp','header_whatsapp_mobile_quote_page', this.href, true)">
-            WhatsApp Quote
-          </a>
-        </div>
+          <a class="quoteBtn" href="https://wa.me/919363193755" onclick="trackLeadAndGo('mobile_whatsapp_quote','https://wa.me/919363193755');return false;">WhatsApp Quote</a>
+        </nav>
       </div>
     </div>
   </header>
 
-  <div class="page" id="main-content" role="main">
-    <div class="crumb">Home • Request Quotation</div>
+  <main id="main-content">
+    <div class="wrap crumb"><a href="/">Home</a> &gt; Request Quotation</div>
 
-    <h1>Request a Fast Quotation</h1>
-    <p style="max-width:78ch">
-      For quickest pricing and availability, send your requirement in this format.
-      Our team will respond fast with a quotation.
-    </p>
-
-    <div class="grid2">
-      <div class="card">
-        <h2>Send These Details</h2>
-        <ul>
-          <li><b>Material + Grade / Spec:</b> SS 316L, Inconel 625, Duplex 2205, Titanium Grade 2, etc.</li>
-          <li><b>Product Form:</b> Pipes / Tubes, Sheets / Plates, Coils, Flanges, Fittings, Fasteners, Bars / Rods</li>
-          <li><b>Size:</b> OD / ID / Thickness / Length</li>
-          <li><b>Quantity:</b> Nos / Meters / Kgs</li>
-          <li><b>Standard:</b> ASTM / ASME / DIN / EN if required</li>
-          <li><b>Delivery Location:</b> City / Country</li>
-        </ul>
-        <p class="note">Tip: Attach drawing, standard or project spec if available.</p>
-      </div>
-
-      <div class="card">
-        <h2>Quick Actions</h2>
-        <p>Click below to send your requirement:</p>
-
-        <div class="btnrow">
-          <a class="btn primary"
-             href="https://wa.me/919363193755"
-             target="_blank"
-             rel="noopener"
-             onclick="return trackLeadAndGo('whatsapp','quote_whatsapp', this.href, true)">WhatsApp Quote</a>
-
-          <a class="btn ghost"
-             href="mailto:tarun@rubinoxmetal.com?subject=Quotation%20Request%20-%20Rubinox"
-             onclick="return trackLeadAndGo('email','quote_email', this.href, false)">Email RFQ</a>
-
-          <a class="btn ghost"
-             href="/"
-             onclick="return trackLeadAndGo('navigation','quote_back_home', this.href, false)">Back to Home</a>
+    <section class="premiumHero" aria-labelledby="quotation-title">
+      <div class="wrap heroGrid">
+        <div>
+          <span class="eyebrow">Industrial metal RFQ</span>
+          <h1 id="quotation-title">Request an Industrial Metal Quotation</h1>
+          <p class="lead">Share material, grade, product form, dimensions, quantity, standards, documentation requirements and delivery location for RFQ review.</p>
+          <div class="heroProof">
+            <span class="chip">Stockist</span>
+            <span class="chip">Supplier</span>
+            <span class="chip">Importer</span>
+            <span class="chip">Exporter</span>
+            <span class="chip">Project Supplier</span>
+          </div>
+          <div class="btnRow">
+            <a class="btn btnGold" href="https://wa.me/919363193755" onclick="trackLeadAndGo('quotation_whatsapp_hero','https://wa.me/919363193755');return false;">WhatsApp RFQ</a>
+            <a class="btn btnLight" href="mailto:tarun@rubinoxmetal.com?subject=Quotation%20Request%20-%20Rubinox" onclick="trackLeadAndGo('quotation_email_hero','mailto:tarun@rubinoxmetal.com?subject=Quotation%20Request%20-%20Rubinox');return false;">Email RFQ</a>
+            <a class="btn btnLight" href="#rfq-checklist">View RFQ Checklist</a>
+          </div>
         </div>
-
-        <div class="card" style="margin-top:14px">
-          <h2 style="margin:0 0 8px;color:#132a63">Contact</h2>
-          <p>
-            Phone: +91 9363193755 • Email: tarun@rubinoxmetal.com<br/>
-            A-206, 2nd floor, Krishvi Escape, Sitaram Poddar Marg, near Vinay Hotel, Kalbadevi, Mumbai – 400002
-          </p>
+        <div class="heroPanel">
+          <h2>Faster RFQ review starts with complete specifications.</h2>
+          <ul class="heroChecklist">
+            <li>Confirm material family, grade, standard and product form.</li>
+            <li>Share dimensions, quantity, finish, condition and delivery location.</li>
+            <li>Mention MTC, PMI, inspection or project documentation requirements where applicable.</li>
+            <li>Attach BOQ, MTO, drawings or item schedules for multi-line enquiries.</li>
+          </ul>
         </div>
       </div>
-    </div>
-<div class="grid2">
-      <div class="card">
-        <h2>How We Review Your RFQ</h2>
-        <p>We first confirm the material designation, product form, dimensions, quantity and required standard. Availability may vary by grade, thickness, diameter, schedule, temper, finish and manufacturing route. If an equivalent grade or alternate delivery condition is acceptable, mention it clearly.</p>
+    </section>
+
+    <section class="section" id="rfq-checklist" aria-labelledby="rfq-checklist-title">
+      <div class="wrap">
+        <div class="sectionHead">
+          <span class="eyebrow">RFQ checklist</span>
+          <h2 id="rfq-checklist-title">Details to Share for a Clear Metal Quotation</h2>
+          <p>Use these fields to help Rubinox review your enquiry accurately without adding pricing, stock commitments or unsupported assumptions.</p>
+        </div>
+        <div class="checkGrid">
+          <article class="checkCard"><div class="cardTop"><span class="iconBox">01</span><h3>Material Family</h3></div><p>Stainless steel, duplex, nickel alloy, titanium, SMO 254, aluminium, copper, brass or special engineering alloy.</p></article>
+          <article class="checkCard"><div class="cardTop"><span class="iconBox">02</span><h3>Grade / Specification</h3></div><p>Share the exact grade, UNS, ASTM, EN, DIN or project specification when known.</p></article>
+          <article class="checkCard"><div class="cardTop"><span class="iconBox">03</span><h3>Product Form</h3></div><p>Pipes, tubes, sheets, plates, coils, bars, rods, flanges, fittings, fasteners or drawing-based components.</p></article>
+          <article class="checkCard"><div class="cardTop"><span class="iconBox">04</span><h3>Size / Dimensions</h3></div><p>Include OD, ID, thickness, width, length, schedule, class, thread, bore or drawing dimensions as relevant.</p></article>
+          <article class="checkCard"><div class="cardTop"><span class="iconBox">05</span><h3>Quantity</h3></div><p>Mention pieces, meters, kilograms, tons, sheets, coils, sets or line-item quantities.</p></article>
+          <article class="checkCard"><div class="cardTop"><span class="iconBox">06</span><h3>Standard</h3></div><p>Include ASTM, ASME, EN, DIN, JIS, IS, project standard or client specification where applicable.</p></article>
+          <article class="checkCard"><div class="cardTop"><span class="iconBox">07</span><h3>Finish / Condition</h3></div><p>Specify annealed, pickled, polished, bright, hot rolled, cold rolled, solution annealed or other condition.</p></article>
+          <article class="checkCard"><div class="cardTop"><span class="iconBox">08</span><h3>MTC / PMI / Inspection</h3></div><p>Note mill test certificate, PMI, dimensional inspection, third-party inspection or other review needs.</p></article>
+          <article class="checkCard"><div class="cardTop"><span class="iconBox">09</span><h3>Delivery Location</h3></div><p>Share delivery city, state, project site, port, export destination or logistics preference.</p></article>
+          <article class="checkCard"><div class="cardTop"><span class="iconBox">10</span><h3>Timeline</h3></div><p>Mention required quotation deadline, dispatch expectation or project milestone without assuming availability.</p></article>
+        </div>
       </div>
-      <div class="card">
-        <h2>What Affects the Quoted Price?</h2>
-        <p>Pricing depends on raw-material markets, ordered quantity, cutting or machining, testing, certification, packing, freight and delivery schedule. A complete enquiry helps us avoid assumptions and return a more accurate commercial offer.</p>
+    </section>
+
+    <section class="section" id="submit-rfq" aria-labelledby="submit-rfq-title">
+      <div class="wrap">
+        <div class="sectionHead">
+          <span class="eyebrow">Static RFQ form</span>
+          <h2 id="submit-rfq-title">Submit Your RFQ Details</h2>
+          <p>Share your requirement and your email application will open with the RFQ details pre-filled.</p>
+        </div>
+        <div class="rfqFormShell">
+          <form class="rfqFormCard" id="static-rfq-form" novalidate>
+            <div class="formGrid">
+              <div class="formField">
+                <label for="rfq-name">Name <span class="req" aria-hidden="true">*</span></label>
+                <input id="rfq-name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="formField">
+                <label for="rfq-company">Company Name</label>
+                <input id="rfq-company" name="company" type="text" autocomplete="organization" />
+              </div>
+              <div class="formField">
+                <label for="rfq-email">Email</label>
+                <input id="rfq-email" name="email" type="email" autocomplete="email" />
+              </div>
+              <div class="formField">
+                <label for="rfq-contact">Contact Number <span class="req" aria-hidden="true">*</span></label>
+                <input id="rfq-contact" name="contact" type="tel" autocomplete="tel" required />
+              </div>
+              <div class="formField">
+                <label for="rfq-material">Required Material <span class="req" aria-hidden="true">*</span></label>
+                <input id="rfq-material" name="material" type="text" required />
+              </div>
+              <div class="formField">
+                <label for="rfq-grade">Grade / Specification</label>
+                <input id="rfq-grade" name="grade" type="text" />
+              </div>
+              <div class="formField">
+                <label for="rfq-product-form">Product Form</label>
+                <select id="rfq-product-form" name="productForm">
+                  <option value="">Select product form</option>
+                  <option value="Pipe">Pipe</option>
+                  <option value="Tube">Tube</option>
+                  <option value="Sheet">Sheet</option>
+                  <option value="Plate">Plate</option>
+                  <option value="Coil">Coil</option>
+                  <option value="Bar">Bar</option>
+                  <option value="Rod">Rod</option>
+                  <option value="Flange">Flange</option>
+                  <option value="Fitting">Fitting</option>
+                  <option value="Fastener">Fastener</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="formField">
+                <label for="rfq-size">Size / Dimensions <span class="req" aria-hidden="true">*</span></label>
+                <input id="rfq-size" name="size" type="text" required />
+              </div>
+              <div class="formField">
+                <label for="rfq-quantity">Quantity <span class="req" aria-hidden="true">*</span></label>
+                <input id="rfq-quantity" name="quantity" type="text" required />
+              </div>
+              <div class="formField">
+                <label for="rfq-location">Delivery Location</label>
+                <input id="rfq-location" name="deliveryLocation" type="text" autocomplete="address-level2" />
+              </div>
+              <div class="formField full">
+                <label for="rfq-notes">Notes to Rubinox</label>
+                <textarea id="rfq-notes" name="notes"></textarea>
+              </div>
+            </div>
+            <div class="formActions">
+              <button class="btn btnGold" type="submit">Send RFQ by Email</button>
+              <button class="btn btnLine" type="button" id="rfq-whatsapp">Send Requirement on WhatsApp</button>
+            </div>
+            <p class="formStatus" id="rfq-form-status" role="status" aria-live="polite"></p>
+            <p class="formNote">This static form opens your own email or WhatsApp application. Rubinox does not store form data on this website.</p>
+          </form>
+          <div class="rfqHelpCard">
+            <h3>Before You Send</h3>
+            <ul class="rfqHelpList">
+              <li>Use exact grades, standards and dimensions when available.</li>
+              <li>Add MTC, PMI, inspection, packing or documentation notes in the notes field.</li>
+              <li>For BOQ, MTO or drawings, use email so attachments can be included.</li>
+              <li>WhatsApp is useful for quick requirements, photos and short item lists.</li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="card">
-      <h2>Materials You Can Enquire For</h2>
-      <p>Send requirements for <a href="/materials/stainless-steel.html"><b>stainless steel</b></a>, <a href="/materials/nickel-alloys.html"><b>Inconel, Monel, Hastelloy and Incoloy</b></a>, <a href="/materials/duplex-super-duplex.html"><b>duplex and super duplex</b></a>, <a href="/materials/titanium.html"><b>titanium</b></a>, <a href="/materials/aluminium.html"><b>aluminium</b></a>, <a href="/materials/copper.html"><b>copper</b></a>, <a href="/materials/brass.html"><b>brass</b></a>, carbon steel, mild steel, phosphor bronze and <a href="/materials/other-metals.html"><b>other specialty metals</b></a>.</p>
-    </div>
-
-    <div class="grid2">
-      <div class="card">
-        <h2>For Pipes, Tubes &amp; Fittings</h2>
-        <p>Include NB or OD, wall thickness or schedule, seamless or welded construction, end type, length, quantity and specification. For fittings and flanges, include type, class or pressure rating, facing and dimensional standard.</p>
+    </section>
+    <section class="section" aria-labelledby="material-guidance-title">
+      <div class="wrap">
+        <div class="sectionHead">
+          <span class="eyebrow">Material and grade guidance</span>
+          <h2 id="material-guidance-title">Share the Right Grade for Industrial Procurement Review</h2>
+          <p>These material pages can help buyers compare grades, applications and documentation points before sending an RFQ.</p>
+        </div>
+        <div class="materialGrid">
+          <a class="materialCard" href="/materials/stainless-steel.html"><h3>Stainless Steel</h3><p>304, 316, 316L, 310, 321, 347 and specialty stainless steel requirements for industrial use.</p><span class="miniLink">Review stainless steel guidance</span></a>
+          <a class="materialCard" href="/materials/duplex-super-duplex.html"><h3>Duplex &amp; Super Duplex</h3><p>Duplex 2205, Super Duplex 2507 and related grades for chloride, marine and process environments.</p><span class="miniLink">Review duplex guidance</span></a>
+          <a class="materialCard" href="/materials/nickel-alloys.html"><h3>Nickel Alloys</h3><p>Inconel, Monel, Hastelloy, Incoloy, Nickel 200 and Nickel 201 enquiries.</p><span class="miniLink">Review nickel alloy guidance</span></a>
+          <a class="materialCard" href="/materials/titanium.html"><h3>Titanium</h3><p>Grade 1, Grade 2, Grade 5 and Grade 23 titanium RFQ preparation for demanding applications.</p><span class="miniLink">Review titanium guidance</span></a>
+          <a class="materialCard" href="/materials/smo-254.html"><h3>SMO 254</h3><p>High-alloy stainless guidance for seawater, chloride and desalination-related enquiries.</p><span class="miniLink">Review SMO 254 guidance</span></a>
+          <a class="materialCard" href="/materials/other-metals.html"><h3>Special Engineering Alloys</h3><p>Project-specific, hard-to-source and application-led alloy enquiries with clear identification details.</p><span class="miniLink">Review special alloy guidance</span></a>
+        </div>
       </div>
-      <div class="card">
-        <h2>For Sheets, Plates &amp; Bars</h2>
-        <p>Include thickness or diameter, width, length, finish or condition, tolerance, quantity and whether cutting is required. For machined parts, attach a readable drawing with material and inspection notes.</p>
+    </section>    <section class="section" aria-labelledby="product-form-title">
+      <div class="wrap">
+        <div class="sectionHead">
+          <span class="eyebrow">Product form guidance</span>
+          <h2 id="product-form-title">Product Form Details Buyers Should Include</h2>
+          <p>Clear form and dimension details reduce follow-up questions and support better technical review of each line item.</p>
+        </div>
+        <div class="tableWrap">
+          <table>
+            <thead>
+              <tr><th>Product form</th><th>Dimensions to share</th><th>Helpful RFQ notes</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Pipes</td><td>OD / NB, schedule, wall thickness, length, end type</td><td>Mention seamless or welded requirement if specified.</td></tr>
+              <tr><td>Tubes</td><td>OD, wall thickness, length, tolerance, finish</td><td>Share application or drawing if tolerance is important.</td></tr>
+              <tr><td>Sheets</td><td>Thickness, width, length, finish, quantity</td><td>Include 2B, BA, No.4, mirror, HR or CR condition where relevant.</td></tr>
+              <tr><td>Plates</td><td>Thickness, width, length, grade, quantity</td><td>Share cutting or project plate size requirements if applicable.</td></tr>
+              <tr><td>Coils</td><td>Thickness, width, coil ID, finish, quantity</td><td>Mention slit coil or mother coil requirement if known.</td></tr>
+              <tr><td>Bars</td><td>Diameter, length, condition, tolerance, quantity</td><td>Share round, square, hex or flat bar requirement.</td></tr>
+              <tr><td>Rods</td><td>Diameter, length, grade, finish, quantity</td><td>Specify coil rod or straight length where applicable.</td></tr>
+              <tr><td>Flanges</td><td>Size, class, facing, standard, bore, quantity</td><td>Include ASME, EN, DIN or drawing references.</td></tr>
+              <tr><td>Fittings</td><td>Type, size, schedule, standard, quantity</td><td>Elbows, tees, reducers, caps, stub ends and unions need exact form details.</td></tr>
+              <tr><td>Fasteners</td><td>Diameter, length, thread, standard, quantity</td><td>Share bolt, nut, washer, stud or anchor details.</td></tr>
+              <tr><td>Drawing-Based Components</td><td>Drawing number, dimensions, tolerances, material, quantity</td><td>Attach drawings, revision details and documentation requirements.</td></tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <h2>Delivery, Packing &amp; Commercial Terms</h2>
-      <p>State whether pricing is required ex-works, delivered to site or for export shipment. Heavy plates, long pipes, precision-finished products and export consignments may need special packing or handling. Mention the destination postcode or port, required delivery date, preferred transport mode and any site unloading limitations. If the enquiry is part of a tender, also share the quotation deadline, validity requirement, payment terms and documentation format.</p>
-    </div>
+    <section class="section" aria-labelledby="documentation-title">
+      <div class="wrap">
+        <div class="sectionHead">
+          <span class="eyebrow">Documentation and inspection</span>
+          <h2 id="documentation-title">Mention Quality Documentation Requirements in the RFQ</h2>
+          <p>Rubinox can review documentation and inspection requirements where applicable, subject to material, standard and project specification.</p>
+        </div>
+        <div class="docGrid">
+          <article class="docCard"><div class="cardTop"><span class="iconBox">MTC</span><h3>Mill Test Certificate</h3></div><p>Request MTC requirements with grade, heat number and standard expectations where applicable.</p></article>
+          <article class="docCard"><div class="cardTop"><span class="iconBox">PMI</span><h3>PMI Requirement</h3></div><p>Mention positive material identification needs if your project specification requires PMI review.</p></article>
+          <article class="docCard"><div class="cardTop"><span class="iconBox">DIM</span><h3>Dimensional Inspection</h3></div><p>Share dimensional tolerances, drawings or inspection checkpoints for size-sensitive items.</p></article>
+          <article class="docCard"><div class="cardTop"><span class="iconBox">TPI</span><h3>Third-Party Inspection</h3></div><p>State third-party inspection preference or nominated agency where this is required by the buyer.</p></article>
+          <article class="docCard"><div class="cardTop"><span class="iconBox">HYD</span><h3>Hydro Testing</h3></div><p>For pipes, tubes or fittings, mention hydro test expectations based on specification.</p></article>
+          <article class="docCard"><div class="cardTop"><span class="iconBox">UT</span><h3>UT Review</h3></div><p>Ultrasonic testing can be considered where applicable to the product form and standard.</p></article>
+          <article class="docCard"><div class="cardTop"><span class="iconBox">DOC</span><h3>Project Documentation</h3></div><p>For project enquiries, include packing, marking, traceability and document submission requirements.</p></article>
+          <article class="docCard"><div class="cardTop"><span class="iconBox">STD</span><h3>Standards Review</h3></div><p>Share ASTM, ASME, EN, DIN, JIS, IS or project standards so the enquiry can be reviewed correctly.</p></article>
+        </div>
+      </div>
+    </section>
 
-    <div class="card">
-      <h2>Quotation FAQs</h2>
-      <p><b>Can I send a photograph or handwritten list?</b><br>Yes, but a typed item list or drawing reduces ambiguity and helps us respond faster.</p>
-      <p style="margin-top:12px"><b>Do you quote small and bulk quantities?</b><br>Requirements are reviewed according to grade, size, stock position and minimum supply quantity.</p>
-      <p style="margin-top:12px"><b>Can you quote delivery outside India?</b><br>Yes. Include the destination country, port or delivery terms so export packing and logistics can be considered.</p>
-    </div>
+    <section class="section" aria-labelledby="project-rfq-title">
+      <div class="wrap">
+        <div class="sectionHead">
+          <span class="eyebrow">Project RFQ support</span>
+          <h2 id="project-rfq-title">BOQ, MTO, Drawing and Multi-Item Enquiry Support</h2>
+          <p>Project buyers can send structured item lists for RFQ review. Clear line items help avoid grade, form, standard and quantity mismatches.</p>
+        </div>
+        <div class="projectGrid">
+          <article class="projectCard"><div class="cardTop"><span class="iconBox">BOQ</span><h3>BOQ Review</h3></div><p>Share bill of quantities with line numbers, material descriptions, sizes, standards and required quantities.</p></article>
+          <article class="projectCard"><div class="cardTop"><span class="iconBox">MTO</span><h3>MTO Enquiries</h3></div><p>Material take-off schedules can be reviewed when product form, grade and specification details are clear.</p></article>
+          <article class="projectCard"><div class="cardTop"><span class="iconBox">DWG</span><h3>Drawing-Based Items</h3></div><p>Attach drawings, revisions, tolerances, finish requirements and inspection notes where applicable.</p></article>
+        </div>
+      </div>
+    </section>
 
-  </div>
+    <section class="section" aria-labelledby="pan-india-export-title">
+      <div class="wrap splitGrid">
+        <div>
+          <div class="sectionHead">
+            <span class="eyebrow">PAN India and export</span>
+            <h2 id="pan-india-export-title">Domestic and Export Enquiry Review</h2>
+            <p>Rubinox can review PAN India and export enquiries where applicable.</p>
+          </div>
+          <div class="cityCloud">
+            <span class="cityTag">Mumbai</span><span class="cityTag">Navi Mumbai</span><span class="cityTag">Thane</span><span class="cityTag">Pune</span><span class="cityTag">Ahmedabad</span><span class="cityTag">Vadodara</span><span class="cityTag">Surat</span><span class="cityTag">Chennai</span><span class="cityTag">Bengaluru</span><span class="cityTag">Hyderabad</span><span class="cityTag">Delhi NCR</span><span class="cityTag">Kolkata</span>
+          </div>
+        </div>
+        <div>
+          <article class="supportPanel">
+            <h3>Domestic Enquiries</h3>
+            <p>Share delivery city, site details, transport preference and project schedule so Rubinox can review the enquiry context.</p>
+          </article>
+          <article class="supportPanel">
+            <h3>Export Enquiries</h3>
+            <p>For export RFQs, include destination country, port, packing expectation, documentation needs and preferred shipping terms where applicable.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="contact-method-title">
+      <div class="wrap">
+        <div class="sectionHead">
+          <span class="eyebrow">Contact methods</span>
+          <h2 id="contact-method-title">Choose the Best RFQ Channel</h2>
+          <p>Send specifications through the channel that best fits the urgency and amount of technical information in your enquiry.</p>
+        </div>
+        <div class="contactGrid">
+          <article class="contactCard"><div class="cardTop"><span class="iconBox">WA</span><h3>WhatsApp RFQ</h3></div><p>Useful for quick item lists, photos, grade checks and short RFQs.</p><a class="btn btnGold" href="https://wa.me/919363193755" onclick="trackLeadAndGo('quotation_whatsapp_card','https://wa.me/919363193755');return false;">Send on WhatsApp</a></article>
+          <article class="contactCard"><div class="cardTop"><span class="iconBox">@</span><h3>Email RFQ</h3></div><p>Best for BOQ, MTO, drawings, specifications, multiple attachments and project documentation.</p><a class="btn btnNavy" href="mailto:tarun@rubinoxmetal.com?subject=Quotation%20Request%20-%20Rubinox" onclick="trackLeadAndGo('quotation_email_card','mailto:tarun@rubinoxmetal.com?subject=Quotation%20Request%20-%20Rubinox');return false;">Email RFQ</a></article>
+          <article class="contactCard"><div class="cardTop"><span class="iconBox">PH</span><h3>Phone</h3></div><p>Call for urgent enquiry coordination or to clarify grade, form and delivery details before sending documents.</p><a class="btn btnLine" href="tel:+919363193755" onclick="trackLeadAndGo('quotation_phone_card','tel:+919363193755');return false;">Call&nbsp;Rubinox</a></article>
+          <article class="contactCard"><div class="cardTop"><span class="iconBox">IN</span><h3>Office Details</h3></div><p>A-206, 2nd floor, Krishvi Escape, Sitaram Poddar Marg, Kalbadevi, Mumbai - 400002, Maharashtra, India.</p><a class="btn btnLine" href="/#contact">View Contact Details</a></article>
+        </div>
+      </div>
+    </section>    <section class="section" aria-labelledby="quotation-faq-title">
+      <div class="wrap">
+        <div class="sectionHead">
+          <span class="eyebrow">Quotation FAQ</span>
+          <h2 id="quotation-faq-title">Industrial Metal RFQ Questions</h2>
+          <p>These answers help procurement teams prepare clearer metal enquiries for Rubinox review.</p>
+        </div>
+        <div class="faqGrid">
+          <article class="faqItem"><h3>What details should I send for a metal quotation?</h3><p>Send the material family, grade, product form, size, quantity, standard, finish or condition, documentation requirements and delivery location.</p></article>
+          <article class="faqItem"><h3>Can I send a BOQ, MTO or drawing?</h3><p>Yes. Rubinox can review BOQ, MTO, drawing-based and multi-line enquiries when the item descriptions and specifications are clear.</p></article>
+          <article class="faqItem"><h3>Which materials can I enquire for?</h3><p>You can enquire for stainless steel, duplex and super duplex, nickel alloys, titanium, SMO 254, aluminium, copper, brass, carbon steel, mild steel, phosphor bronze and special engineering alloys.</p></article>
+          <article class="faqItem"><h3>What product forms can Rubinox review?</h3><p>Rubinox can review enquiries for pipes, tubes, sheets, plates, coils, bars, rods, flanges, fittings, fasteners and drawing-based components.</p></article>
+          <article class="faqItem"><h3>Can I request MTC, PMI or inspection?</h3><p>Yes. Mention MTC, PMI, dimensional inspection, third-party inspection or testing requirements in the RFQ where applicable to the material and standard.</p></article>
+          <article class="faqItem"><h3>Can Rubinox support PAN India enquiries?</h3><p>Rubinox can review PAN India enquiries for industrial buyers and project teams when delivery city, quantity and specifications are shared.</p></article>
+          <article class="faqItem"><h3>Can Rubinox support export enquiries?</h3><p>Rubinox can review export enquiries where applicable. Share destination country, port, packing expectation, documentation requirements and product specifications.</p></article>
+          <article class="faqItem"><h3>Can I send photos or item lists?</h3><p>Yes. Photos, item lists and sketches can help initial review, but final quotation should be based on grade, dimensions, standard and quantity.</p></article>
+          <article class="faqItem"><h3>Why are grade and dimensions important?</h3><p>Grade, dimensions and standards affect material suitability, sourcing review, documentation and the accuracy of the enquiry response.</p></article>
+          <article class="faqItem"><h3>Is Rubinox a manufacturer?</h3><p>No. Rubinox Metal and Alloys is a stockist, supplier, importer, exporter and project supplier for industrial metals and alloys.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What details should I send for a metal quotation?","acceptedAnswer":{"@type":"Answer","text":"Send the material family, grade, product form, size, quantity, standard, finish or condition, documentation requirements and delivery location."}},{"@type":"Question","name":"Can I send a BOQ, MTO or drawing?","acceptedAnswer":{"@type":"Answer","text":"Yes. Rubinox can review BOQ, MTO, drawing-based and multi-line enquiries when the item descriptions and specifications are clear."}},{"@type":"Question","name":"Which materials can I enquire for?","acceptedAnswer":{"@type":"Answer","text":"You can enquire for stainless steel, duplex and super duplex, nickel alloys, titanium, SMO 254, aluminium, copper, brass, carbon steel, mild steel, phosphor bronze and special engineering alloys."}},{"@type":"Question","name":"What product forms can Rubinox review?","acceptedAnswer":{"@type":"Answer","text":"Rubinox can review enquiries for pipes, tubes, sheets, plates, coils, bars, rods, flanges, fittings, fasteners and drawing-based components."}},{"@type":"Question","name":"Can I request MTC, PMI or inspection?","acceptedAnswer":{"@type":"Answer","text":"Yes. Mention MTC, PMI, dimensional inspection, third-party inspection or testing requirements in the RFQ where applicable to the material and standard."}},{"@type":"Question","name":"Can Rubinox support PAN India enquiries?","acceptedAnswer":{"@type":"Answer","text":"Rubinox can review PAN India enquiries for industrial buyers and project teams when delivery city, quantity and specifications are shared."}},{"@type":"Question","name":"Can Rubinox support export enquiries?","acceptedAnswer":{"@type":"Answer","text":"Rubinox can review export enquiries where applicable. Share destination country, port, packing expectation, documentation requirements and product specifications."}},{"@type":"Question","name":"Can I send photos or item lists?","acceptedAnswer":{"@type":"Answer","text":"Yes. Photos, item lists and sketches can help initial review, but final quotation should be based on grade, dimensions, standard and quantity."}},{"@type":"Question","name":"Why are grade and dimensions important?","acceptedAnswer":{"@type":"Answer","text":"Grade, dimensions and standards affect material suitability, sourcing review, documentation and the accuracy of the enquiry response."}},{"@type":"Question","name":"Is Rubinox a manufacturer?","acceptedAnswer":{"@type":"Answer","text":"No. Rubinox Metal and Alloys is a stockist, supplier, importer, exporter and project supplier for industrial metals and alloys."}}]}
+    </script>
+
+    <div class="wrap">
+      <section class="ctaBand" aria-labelledby="final-rfq-title">
+        <div>
+          <h2 id="final-rfq-title">Ready to Send Your Metal RFQ?</h2>
+          <p>Share material, grade, form, dimensions, quantity, standard, documentation requirements and delivery location for quotation review.</p>
+        </div>
+        <div class="btnRow">
+          <a class="btn btnGold" href="https://wa.me/919363193755" onclick="trackLeadAndGo('quotation_whatsapp_final','https://wa.me/919363193755');return false;">WhatsApp RFQ</a>
+          <a class="btn btnLight" href="mailto:tarun@rubinoxmetal.com?subject=Quotation%20Request%20-%20Rubinox" onclick="trackLeadAndGo('quotation_email_final','mailto:tarun@rubinoxmetal.com?subject=Quotation%20Request%20-%20Rubinox');return false;">Email RFQ</a>
+          <a class="btn btnLight" href="tel:+919363193755" onclick="trackLeadAndGo('quotation_phone_final','tel:+919363193755');return false;">Call&nbsp;Rubinox</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footerGrid">
+      <span>&copy; 2026 Rubinox Metal and Alloys. All rights reserved.</span>
+      <span><a href="/about-us.html">About Us</a> &bull; <a href="/quotation.html">Request Quotation</a> &bull; <a href="/#contact">Contact</a></span>
+    </div>
+  </footer>
 
   <script>
-    const menuToggle = document.getElementById("menuToggle");
-    const mobileMenu = document.getElementById("mobileMenu");
-    const menuIcon = document.getElementById("menuIcon");
-
-    function openMenu(){
-      mobileMenu.classList.add("open");
-      menuToggle.setAttribute("aria-expanded", "true");
-      menuIcon.innerHTML = '<path d="M6 6l12 12"></path><path d="M18 6L6 18"></path>';
-    }
-
-    function closeMenu(){
-      mobileMenu.classList.remove("open");
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuIcon.innerHTML = '<path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path>';
-    }
-
-    if(menuToggle && mobileMenu && menuIcon){
-      menuToggle.addEventListener("click", function(){
-        if(mobileMenu.classList.contains("open")) closeMenu();
-        else openMenu();
+    (function(){
+      var form = document.getElementById('static-rfq-form');
+      if (!form) return;
+      var status = document.getElementById('rfq-form-status');
+      var whatsappButton = document.getElementById('rfq-whatsapp');
+      function fieldValue(id){
+        var field = document.getElementById(id);
+        return field ? field.value.trim() : '';
+      }
+      function validateForm(){
+        if (form.checkValidity()) {
+          return true;
+        }
+        if (status) status.textContent = 'Please complete all required fields marked with *.';
+        form.reportValidity();
+        return false;
+      }
+      function rfqBody(){
+        return [
+          'Name: ' + fieldValue('rfq-name'),
+          'Company: ' + fieldValue('rfq-company'),
+          'Email: ' + fieldValue('rfq-email'),
+          'Contact: ' + fieldValue('rfq-contact'),
+          'Material: ' + fieldValue('rfq-material'),
+          'Grade: ' + fieldValue('rfq-grade'),
+          'Product Form: ' + fieldValue('rfq-product-form'),
+          'Size: ' + fieldValue('rfq-size'),
+          'Quantity: ' + fieldValue('rfq-quantity'),
+          'Delivery Location: ' + fieldValue('rfq-location'),
+          'Notes: ' + fieldValue('rfq-notes')
+        ].join('\n');
+      }
+      form.addEventListener('submit', function(event){
+        event.preventDefault();
+        if (!validateForm()) return;
+        var subject = 'Quotation Request - Rubinox Metal and Alloys';
+        var mailto = 'mailto:tarun@rubinoxmetal.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(rfqBody());
+        if (status) status.textContent = 'Opening your email application with RFQ details pre-filled.';
+        try { gtag('event', 'quotation_static_form_email', { event_category: 'lead', event_label: 'static_rfq_form' }); } catch (error) {}
+        window.location.href = mailto;
       });
-
-      mobileMenu.querySelectorAll("a").forEach(function(link){
-        link.addEventListener("click", function(){
-          closeMenu();
+      if (whatsappButton) {
+        whatsappButton.addEventListener('click', function(){
+          if (!validateForm()) return;
+          var message = [
+            'Hello Rubinox,',
+            '',
+            'I would like a quotation for:',
+            '',
+            'Material: ' + fieldValue('rfq-material'),
+            'Grade: ' + fieldValue('rfq-grade'),
+            'Size: ' + fieldValue('rfq-size'),
+            'Quantity: ' + fieldValue('rfq-quantity')
+          ].join('\n');
+          var whatsapp = 'https://wa.me/919363193755?text=' + encodeURIComponent(message);
+          if (status) status.textContent = 'Opening WhatsApp with your requirement.';
+          try { gtag('event', 'quotation_static_form_whatsapp', { event_category: 'lead', event_label: 'static_rfq_form' }); } catch (error) {}
+          window.location.href = whatsapp;
         });
+      }
+    })();
+    (function(){
+      var toggle = document.querySelector('.menuToggle');
+      var menu = document.getElementById('mobile-menu');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('click', function(){
+        var open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        menu.hidden = open;
       });
-
-      window.addEventListener("resize", function(){
-        if(window.innerWidth > 900){
-          closeMenu();
+      menu.addEventListener('click', function(event){
+        if (event.target.tagName === 'A') {
+          toggle.setAttribute('aria-expanded', 'false');
+          menu.hidden = true;
         }
       });
-    }
+      window.addEventListener('resize', function(){
+        if (window.innerWidth > 1120) {
+          toggle.setAttribute('aria-expanded', 'false');
+          menu.hidden = true;
+        }
+      });
+    })();
   </script>
-
-  <footer style="background:#fff;border-top:1px solid #e6ecf8;padding:22px 0;color:#566b9a;font-size:13px;margin-top:22px;">
-  <div class="wrap">
-    © 2026 Rubinox Metal and Alloys • Mumbai, India &bull; <a href="/about-us.html">About Us</a>
-  </div>
-</footer>
-  
 </body>
 </html>
