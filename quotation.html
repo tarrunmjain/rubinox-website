@@ -121,18 +121,13 @@
     .btnLight{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.28);color:#fff}
     .btnLight:hover{background:rgba(255,255,255,.18)}
     .btnNavy{background:var(--navy);color:#fff;box-shadow:0 16px 34px rgba(11,31,77,.18)}
-    .btnLine{background:#fff;border-color:var(--line);color:var(--navy2)}    .premiumHero{position:relative;margin-top:20px;padding:78px 0 64px;color:#fff;background:
-      radial-gradient(circle at 84% 18%,rgba(216,168,75,.26),transparent 28%),
-      linear-gradient(135deg,#081936 0%,#0b1f4d 52%,#17356f 100%);
-      overflow:hidden;
-    }
-    .premiumHero:before{content:"";position:absolute;inset:0;background:
-      linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,transparent 1px 100%),
-      linear-gradient(0deg,rgba(255,255,255,.06) 0 1px,transparent 1px 100%);background-size:76px 76px;opacity:.32}
+    .btnLine{background:#fff;border-color:var(--line);color:var(--navy2)}
+    .premiumHero{position:relative;margin-top:20px;padding:0;color:#fff;background:transparent;overflow:visible}
+    .premiumHero:before{content:none}
     .premiumHero h1{color:#ffffff}
     .premiumHero .crumb{color:#c3cad8;margin:0 0 12px}
     .premiumHero .crumb a{color:#fff;text-decoration:underline;text-underline-offset:3px}
-    .heroGrid{position:relative;display:grid;max-width:960px;gap:24px;align-items:start}
+    .heroGrid{position:relative;display:grid;gap:24px;align-items:start;overflow:hidden;border:1px solid rgba(216,168,75,.25);border-radius:12px;padding:34px;background:linear-gradient(120deg,rgba(7,16,31,.94),rgba(19,42,99,.88)),radial-gradient(circle at 78% 22%,rgba(216,168,75,.28),transparent 34%),linear-gradient(135deg,#07101f,#132a63);box-shadow:0 22px 55px rgba(7,16,31,.22)}
     .heroPanel{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:24px;padding:26px;box-shadow:0 26px 70px rgba(0,0,0,.22)}
     .heroPanel h2{color:#fff;font-size:24px;margin-bottom:18px}
     .heroChecklist{display:grid;gap:12px;margin:0;padding:0;list-style:none}
@@ -246,7 +241,8 @@
     }
     @media (max-width:640px){
       .wrap{width:min(100% - 28px,1180px)}
-      .premiumHero{padding:56px 0 46px}
+      .premiumHero{padding:0}
+      .heroGrid{padding:24px;border-radius:12px}
       .section{padding:42px 0}
       .btnRow{display:grid;grid-template-columns:1fr}
       .btn{width:100%}
