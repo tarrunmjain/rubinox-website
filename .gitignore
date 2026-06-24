@@ -1,0 +1,49 @@
+﻿# ===========================
+# Node.js dependencies
+# ===========================
+node_modules/
+
+# ===========================
+# QA / Test Reports
+# ===========================
+tool-reports/
+playwright-report/
+test-results/
+coverage/
+
+# ===========================
+# Logs
+# ===========================
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===========================
+# OS Files
+# ===========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===========================
+# IDE Files
+# ===========================
+.vscode/settings.json
+.idea/
+
+# ===========================
+# Temporary Files
+# ===========================
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# ===========================
+# Local Development
+# ===========================
+.env
+.env.local
+.env.*
