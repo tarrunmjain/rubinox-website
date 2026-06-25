@@ -8,7 +8,7 @@ Working repository: `C:\Users\Dell\OneDrive\Documents\rubinox-website-live`
 
 - Batch 1 - Material family consistency audit: completed.
 - Batch 2 - Hero grade chip standardization: completed.
-- Batch 3 - Duplex & Super Duplex completion: pending.
+- Batch 3 - Duplex & Super Duplex completion: completed.
 - Batch 4 - Aluminium coverage review and completion: pending.
 - Batch 5 - Non-ferrous family consistency: pending.
 - Batch 6 - Ferrous family consistency: pending.
@@ -112,3 +112,22 @@ Working repository: `C:\Users\Dell\OneDrive\Documents\rubinox-website-live`
 3. Standardize Copper, Brass and Phosphor Bronze naming without creating duplicate pages for equivalent designations.
 4. Standardize Carbon Steel and Mild Steel overlap, keeping A36 and 1018 canonical to the stronger Carbon Steel pages unless a distinct mild-steel angle is justified.
 5. Run final full QA and update this report with commit hashes and known unrelated legacy issues.
+
+
+## Batch 3 Actions Completed
+
+- Created `materials/zeron-100-supplier-india.html` as a non-thin focused page for Zeron 100 / UNS S32760.
+- Linked Zeron 100 from the Duplex & Super Duplex category page, focused pages section, UNS references and product forms matrix.
+- Added Zeron 100 to `sitemap.xml` with the existing Duplex material image asset.
+- Added FAQPage schema to existing Duplex 2205 and Super Duplex 2507 focused pages after visible FAQ content.
+- Added related Zeron 100 links on Duplex 2205 and Super Duplex 2507 pages.
+- Converted the Super Duplex 2507 main wrapper from `div role="main"` to native `main` markup for HTML validation consistency.
+- Standardized the Duplex category quotation section heading to `Duplex and Super Duplex RFQ Checklist`.
+
+## Batch 3 QA Status
+
+- `qa:schema`: passed. HTML pages scanned: 106. JSON-LD blocks found: 256. Invalid JSON-LD blocks: 0.
+- `test:navigation`: passed.
+- `qa:crawl`: passed. Successfully scanned 183 local links.
+- `qa:html`: completed with known unrelated legacy issues. Batch 3 touched pages are valid: `materials/duplex-super-duplex.html`, `materials/duplex-2205-supplier-india.html`, `materials/super-duplex-2507-supplier-india.html` and `materials/zeron-100-supplier-india.html`. Overall invalid pages after this batch: 59, all outside the Duplex batch scope except pre-existing `industries.html` and older legacy grade/product pages.
+- `qa:sitemap`: passed. Sitemap URLs: 106. Local HTML pages: 106. Missing from sitemap: 0. Sitemap URLs without local file: 0. Duplicate sitemap URLs: 0.
