@@ -425,7 +425,7 @@ header .mobileMenuPanel .mobileBtn{margin-top:8px;width:100%;text-align:center;p
       </nav>
       <button type="button" class="menuToggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><svg id="menuIcon" viewBox="0 0 24 24"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg></button>
     </div>
-    <div class="mobileMenu" id="mobileMenu">
+    <div class="mobileMenu" id="mobileMenu" hidden>
       <nav class="mobileMenuPanel" aria-label="Mobile navigation">
         <a href="/#materials">Materials</a>
         <a href="/materials/stainless-steel.html">Stainless Steel</a>
@@ -837,13 +837,18 @@ header .mobileMenuPanel .mobileBtn{margin-top:8px;width:100%;text-align:center;p
   const menuToggle=document.getElementById("menuToggle");
   const mobileMenu=document.getElementById("mobileMenu");
   const menuIcon=document.getElementById("menuIcon");
-  function openMenu(){mobileMenu.classList.add("open");menuToggle.setAttribute("aria-expanded","true");menuIcon.innerHTML='<path d="M6 6l12 12"></path><path d="M18 6L6 18"></path>';}
-  function closeMenu(){mobileMenu.classList.remove("open");menuToggle.setAttribute("aria-expanded","false");menuIcon.innerHTML='<path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path>';}
   if(menuToggle&&mobileMenu&&menuIcon&&!menuToggle.dataset.rubinoxHeaderBound){
     menuToggle.dataset.rubinoxHeaderBound="true";
-    menuToggle.addEventListener("click",function(){mobileMenu.classList.contains("open")?closeMenu():openMenu();});
-    mobileMenu.querySelectorAll("a").forEach(function(link){link.addEventListener("click",closeMenu);});
-    window.addEventListener("resize",function(){if(window.innerWidth>1120)closeMenu();});
+    function setMenu(open){
+      mobileMenu.hidden=!open;
+      mobileMenu.classList.toggle("open",open);
+      menuToggle.setAttribute("aria-expanded",String(open));
+      menuIcon.innerHTML=open?'<path d="M6 6l12 12"></path><path d="M18 6L6 18"></path>':'<path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path>';
+    }
+    setMenu(false);
+    menuToggle.addEventListener("click",function(){setMenu(menuToggle.getAttribute("aria-expanded")!=="true");});
+    mobileMenu.querySelectorAll("a").forEach(function(link){link.addEventListener("click",function(){setMenu(false);});});
+    window.addEventListener("resize",function(){if(window.innerWidth>1120)setMenu(false);});
   }
 })();
 </script>
