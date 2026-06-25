@@ -11,7 +11,7 @@ Working repository: `C:\Users\Dell\OneDrive\Documents\rubinox-website-live`
 - Batch 3 - Duplex & Super Duplex completion: completed.
 - Batch 4 - Aluminium coverage review and completion: completed.
 - Batch 5 - Non-ferrous family consistency: completed.
-- Batch 6 - Ferrous family consistency: pending.
+- Batch 6 - Ferrous family consistency: completed.
 - Batch 7 - Final material library QA and report: pending.
 
 ## Pages Audited
@@ -165,3 +165,21 @@ Working repository: `C:\Users\Dell\OneDrive\Documents\rubinox-website-live`
 - `test:navigation`: passed.
 - `qa:crawl`: passed. Successfully scanned 184 local links.
 - `qa:html`: completed with known unrelated legacy issues. All touched non-ferrous pages are valid: `materials/copper.html`, `materials/brass.html`, `materials/phosphor-bronze.html` and `materials/brass-c464-supplier-india.html`. Overall invalid pages after this batch: 59, all outside the non-ferrous batch scope.
+
+
+## Batch 6 Actions Completed
+
+- Created `materials/mild-steel-is-2062-supplier-india.html` as a focused non-thin IS 2062 structural steel page.
+- Created `materials/mild-steel-s275-supplier-india.html` as a focused non-thin EN S275 structural steel page.
+- Updated the Mild Steel category page with IS 2062 and S275 comparison guidance, visible FAQ coverage and matching FAQPage schema.
+- Updated Carbon Steel category guidance to clarify IS 2062 and EN S275 as related structural steel references, not automatic substitutes.
+- Added internal links from related Carbon Steel and Mild Steel pages to the new IS 2062 and S275 pages where appropriate.
+- Added both new pages to `sitemap.xml` with the existing mild steel image asset.
+
+## Batch 6 QA Status
+
+- `qa:schema`: passed. HTML pages scanned: 109. JSON-LD blocks found: 265. Invalid JSON-LD blocks: 0.
+- `test:navigation`: passed.
+- `qa:crawl`: passed. Successfully scanned 186 local links.
+- `qa:html`: completed with known unrelated legacy issues. All touched ferrous pages and new pages are valid, including `materials/mild-steel-is-2062-supplier-india.html` and `materials/mild-steel-s275-supplier-india.html`. Overall invalid pages after this batch: 59, all outside the ferrous batch scope.
+- `qa:sitemap`: passed. Sitemap URLs: 109. Local HTML pages: 109. Missing from sitemap: 0. Sitemap URLs without local file: 0. Duplicate sitemap URLs: 0.
