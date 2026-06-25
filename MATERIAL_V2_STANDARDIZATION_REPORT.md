@@ -9,7 +9,7 @@ Working repository: `C:\Users\Dell\OneDrive\Documents\rubinox-website-live`
 - Batch 1 - Material family consistency audit: completed.
 - Batch 2 - Hero grade chip standardization: completed.
 - Batch 3 - Duplex & Super Duplex completion: completed.
-- Batch 4 - Aluminium coverage review and completion: pending.
+- Batch 4 - Aluminium coverage review and completion: completed.
 - Batch 5 - Non-ferrous family consistency: pending.
 - Batch 6 - Ferrous family consistency: pending.
 - Batch 7 - Final material library QA and report: pending.
@@ -131,3 +131,20 @@ Working repository: `C:\Users\Dell\OneDrive\Documents\rubinox-website-live`
 - `qa:crawl`: passed. Successfully scanned 183 local links.
 - `qa:html`: completed with known unrelated legacy issues. Batch 3 touched pages are valid: `materials/duplex-super-duplex.html`, `materials/duplex-2205-supplier-india.html`, `materials/super-duplex-2507-supplier-india.html` and `materials/zeron-100-supplier-india.html`. Overall invalid pages after this batch: 59, all outside the Duplex batch scope except pre-existing `industries.html` and older legacy grade/product pages.
 - `qa:sitemap`: passed. Sitemap URLs: 106. Local HTML pages: 106. Missing from sitemap: 0. Sitemap URLs without local file: 0. Duplicate sitemap URLs: 0.
+
+
+## Batch 4 Actions Completed
+
+- Created `materials/aluminium-6082-supplier-india.html` as a focused non-thin structural/extrusion Aluminium page.
+- Updated `materials/aluminium.html` to include Aluminium 6082 in hero chips, common grades, comparison guidance and buyer specification examples.
+- Added category-level coverage for broader aluminium grade enquiries such as 1050, 1060, 1070, 1100, 2014, 2024, 3003, 3105, 5086, 5454, 5754, 7050 and 8011 without creating thin standalone pages.
+- Added a visible FAQ and matching FAQPage schema coverage for broader aluminium grade enquiries.
+- Linked Aluminium 6082 from existing Aluminium grade pages and added the new URL to `sitemap.xml`.
+
+## Batch 4 QA Status
+
+- `qa:schema`: passed. HTML pages scanned: 107. JSON-LD blocks found: 259. Invalid JSON-LD blocks: 0.
+- `test:navigation`: passed.
+- `qa:crawl`: passed. Successfully scanned 184 local links.
+- `qa:html`: completed with known unrelated legacy issues. All touched Aluminium pages are valid: `materials/aluminium.html`, `materials/aluminium-5052-supplier-india.html`, `materials/aluminium-5083-supplier-india.html`, `materials/aluminium-6061-supplier-india.html`, `materials/aluminium-6063-supplier-india.html`, `materials/aluminium-6082-supplier-india.html` and `materials/aluminium-7075-supplier-india.html`. Overall invalid pages after this batch: 59, all outside the Aluminium batch scope.
+- `qa:sitemap`: passed. Sitemap URLs: 107. Local HTML pages: 107. Missing from sitemap: 0. Sitemap URLs without local file: 0. Duplicate sitemap URLs: 0.
