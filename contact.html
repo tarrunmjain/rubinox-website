@@ -54,14 +54,12 @@ header .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
 .navlinks{display:flex;gap:8px;align-items:center;flex-wrap:nowrap;justify-content:flex-end}
 .navlinks a{text-decoration:none;padding:8px 7px;border-radius:6px;color:#1b2b52;font-weight:600;font-size:13px;white-space:nowrap;transition:background .2s ease,color .2s ease}
 .navlinks a:hover{background:#f4eddd;color:#07101f}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 14px;border-radius:6px;text-decoration:none;font-weight:800;font-size:14px;border:1px solid transparent;gap:8px;white-space:nowrap;cursor:pointer}
-.btn.primary{background:linear-gradient(180deg,#f2bc55,#e2a02f);color:#07101f;box-shadow:0 14px 30px rgba(226,160,47,.28)}
-.btn.primary:hover{filter:brightness(.95)}
-.btn.ghost{background:#fff;border-color:#d8e0ec;color:#1b2b52}
-.btn.ghost:hover{background:#07101f;color:#fff;border-color:#07101f}
-.btn.darkGhost{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:#fff}
-.btn.darkGhost:hover{background:#fff;color:#07101f}
-.btn.disabled{background:#eef2f7;border-color:#d8e0ec;color:#6b7894;box-shadow:none;cursor:default}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:11px 15px;border-radius:6px;text-decoration:none;font-weight:800;font-size:14px;border:1px solid transparent;gap:9px;white-space:nowrap;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,background .18s ease,border-color .18s ease}
+.btn.primary,.btn.ghost,.btn.darkGhost{background:linear-gradient(135deg,#f7c65b,#e2a02f);color:#07101f;border:1px solid rgba(161,105,8,.35);box-shadow:0 14px 30px rgba(226,160,47,.28)}
+.btn.primary:hover,.btn.ghost:hover,.btn.darkGhost:hover{background:linear-gradient(135deg,#efb942,#d58f21);color:#07101f;border-color:rgba(127,80,6,.45);box-shadow:0 16px 34px rgba(226,160,47,.34);transform:translateY(-1px)}
+.btn:focus-visible{outline:3px solid rgba(19,42,99,.45);outline-offset:3px}
+.btn svg{width:18px;height:18px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;flex:0 0 18px}
+.btn.disabled,.btn.disabled:hover{background:#eef2f7;border-color:#d8e0ec;color:#6b7894;box-shadow:none;cursor:default;transform:none}
 .navlinks .btn.primary{padding:10px 12px;font-size:13px}
 .menuToggle{display:none;width:44px;height:44px;border-radius:6px;border:1px solid #d8e0ec;background:#fff;color:#1b2b52;align-items:center;justify-content:center;cursor:pointer;padding:0;box-shadow:0 8px 20px rgba(15,30,60,.06)}
 .menuToggle:hover{background:#f4f8ff}
@@ -71,7 +69,7 @@ header .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
 .mobileMenuPanel{background:#fff;border:1px solid #d8e0ec;border-radius:8px;box-shadow:0 16px 40px rgba(15,30,60,.08);padding:10px}
 .mobileMenuPanel a{display:block;text-decoration:none;padding:12px 14px;border-radius:6px;color:#1b2b52;font-weight:700;font-size:14px}
 .mobileMenuPanel a:hover{background:#eef4ff}
-.mobileMenuPanel .mobileBtn{margin-top:8px;width:100%;text-align:center;padding:12px 14px;background:linear-gradient(180deg,#f2bc55,#e2a02f);color:#07101f;box-shadow:0 14px 30px rgba(226,160,47,.28)}
+.mobileMenuPanel .mobileBtn{margin-top:8px;width:100%;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px 14px;background:linear-gradient(135deg,#f7c65b,#e2a02f);color:#07101f;box-shadow:0 14px 30px rgba(226,160,47,.28)}
 .page{max-width:1180px;margin:0 auto;padding:24px 20px}
 p{color:var(--muted);line-height:1.75;margin:0}
 h1{margin:0 0 12px;color:#fff;font-size:46px;line-height:1.08;letter-spacing:0}
@@ -92,11 +90,13 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.8}
 .grid4{display:grid;gap:14px;grid-template-columns:repeat(4,1fr);margin-top:14px}
 .flowCard,.contactCard,.supportCard,.platformCard,.faqItem{background:#fff;border:1px solid rgba(16,37,84,.12);border-radius:8px;box-shadow:0 10px 24px rgba(15,30,60,.05);padding:16px}
 .flowCard{position:relative;border-top:4px solid var(--accent)}
-.flowNum{display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;border-radius:50%;background:#132a63;color:#fff;font-weight:900;margin-bottom:10px}
+.flowNum,.checkMark{display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;border-radius:8px;background:linear-gradient(145deg,#f8fafc,#d9dee7);border:1px solid rgba(19,42,99,.16);color:var(--ink2);box-shadow:0 6px 16px rgba(15,30,60,.08);font-weight:900;flex:0 0 34px}
+.flowNum{margin-bottom:10px}
 .cardTop{display:flex;align-items:center;gap:12px;margin-bottom:10px}
-.iconBox{width:42px;height:42px;display:inline-flex;align-items:center;justify-content:center;border-radius:8px;background:#f4eddd;border:1px solid rgba(226,160,47,.35);color:var(--ink2);flex:0 0 42px}
+.iconBox{width:42px;height:42px;display:inline-flex;align-items:center;justify-content:center;border-radius:8px;background:linear-gradient(145deg,#f8fafc,#d9dee7);border:1px solid rgba(19,42,99,.16);color:var(--ink2);box-shadow:0 6px 16px rgba(15,30,60,.08);flex:0 0 42px}
 .iconBox svg{width:23px;height:23px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
 .contactCard .btn,.platformCard .btn{margin-top:14px}
+.platformCard .btn{width:100%}
 .officeGrid{display:grid;grid-template-columns:.95fr 1.05fr;gap:16px;align-items:stretch;margin-top:14px}
 .mapFrame{border-radius:10px;overflow:hidden;border:1px solid #e6ecf8;min-height:100%}
 .mapFrame iframe{display:block;border:0;width:100%;height:100%;min-height:330px}
@@ -105,7 +105,7 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.8}
 .infoItem strong{display:block;color:var(--ink2);margin-bottom:4px}
 .checkGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
 .checkItem{display:flex;align-items:flex-start;gap:10px;background:#f8fafc;border:1px solid rgba(16,37,84,.10);border-radius:8px;padding:12px;color:var(--muted);line-height:1.5}
-.checkMark{display:inline-flex;width:22px;height:22px;align-items:center;justify-content:center;border-radius:50%;background:#f4eddd;color:#132a63;font-weight:900;flex:0 0 22px}
+.checkMark{margin-top:-2px}
 .heritageBand,.ctaBand{border:1px solid rgba(226,160,47,.35);background:linear-gradient(120deg,#07101f,#132a63);border-radius:8px;padding:24px;margin-top:16px;box-shadow:0 18px 46px rgba(7,16,31,.18)}
 .heritageBand h2,.ctaBand h2{color:#fff}
 .heritageBand p,.ctaBand p{color:#d7deec}
@@ -155,7 +155,7 @@ footer{background:#fff;border-top:1px solid #e6ecf8;padding:22px 0;color:#566b9a
         <a href="/industries.html">Industries</a>
         <a href="/#forms">Forms</a>
         <a href="/contact.html">Contact</a>
-        <a class="btn primary" href="https://wa.me/919363193755" target="_blank" rel="noopener" onclick="try{if(window.gtag){gtag('event','generate_lead',{method:'whatsapp',event_label:'header_whatsapp'});}}catch(e){}">WhatsApp Quote</a>
+        <a class="btn primary" href="https://wa.me/919363193755" target="_blank" rel="noopener" onclick="try{if(window.gtag){gtag('event','generate_lead',{method:'whatsapp',event_label:'header_whatsapp'});}}catch(e){}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.9 7L4 20l1.4-4.2A8 8 0 1 1 20 11.5z"></path><path d="M9 8.8c.2 3.1 2.1 5 5.2 5.2"></path></svg>WhatsApp Quote</a>
       </nav>
       <button type="button" class="menuToggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><svg id="menuIcon" viewBox="0 0 24 24"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg></button>
     </div>
@@ -168,7 +168,7 @@ footer{background:#fff;border-top:1px solid #e6ecf8;padding:22px 0;color:#566b9a
         <a href="/industries.html">Industries</a>
         <a href="/#forms">Forms</a>
         <a href="/contact.html">Contact</a>
-        <a class="mobileBtn btn primary" href="https://wa.me/919363193755" target="_blank" rel="noopener" onclick="try{if(window.gtag){gtag('event','generate_lead',{method:'whatsapp',event_label:'header_whatsapp_mobile'});}}catch(e){}">WhatsApp Quote</a>
+        <a class="mobileBtn btn primary" href="https://wa.me/919363193755" target="_blank" rel="noopener" onclick="try{if(window.gtag){gtag('event','generate_lead',{method:'whatsapp',event_label:'header_whatsapp_mobile'});}}catch(e){}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.9 7L4 20l1.4-4.2A8 8 0 1 1 20 11.5z"></path><path d="M9 8.8c.2 3.1 2.1 5 5.2 5.2"></path></svg>WhatsApp Quote</a>
       </nav>
     </div>
   </div>
@@ -181,9 +181,9 @@ footer{background:#fff;border-top:1px solid #e6ecf8;padding:22px 0;color:#566b9a
     <p>Connect with Rubinox for metal RFQs, grade/specification review, documentation requirements, PAN India enquiries and export enquiry support.</p>
     <div class="heroProof"><span>Stockist | Supplier | Importer | Exporter</span><span>PAN India Enquiries</span><span>Export Enquiry Support</span><span>MTC / PMI / Inspection Review</span><span>BOQ / MTO Project RFQs</span></div>
     <div class="btnrow">
-      <a class="btn primary" href="https://wa.me/919363193755" target="_blank" rel="noopener" onclick="return trackLeadAndGo('whatsapp','contact_hero_whatsapp', this.href, true)">WhatsApp RFQ</a>
-      <a class="btn darkGhost" href="mailto:tarun@rubinoxmetal.com?subject=Quotation%20Request%20-%20Rubinox" onclick="return trackLeadAndGo('email','contact_hero_email', this.href, false)">Email RFQ</a>
-      <a class="btn darkGhost" href="/quotation.html" onclick="return trackLeadAndGo('navigation','contact_hero_quote_page', this.href, false)">Request Quotation</a>
+      <a class="btn primary" href="https://wa.me/919363193755" target="_blank" rel="noopener" onclick="return trackLeadAndGo('whatsapp','contact_hero_whatsapp', this.href, true)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.9 7L4 20l1.4-4.2A8 8 0 1 1 20 11.5z"></path><path d="M9 8.8c.2 3.1 2.1 5 5.2 5.2"></path></svg>WhatsApp RFQ</a>
+      <a class="btn darkGhost" href="mailto:tarun@rubinoxmetal.com?subject=Quotation%20Request%20-%20Rubinox" onclick="return trackLeadAndGo('email','contact_hero_email', this.href, false)"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>Email RFQ</a>
+      <a class="btn darkGhost" href="/quotation.html" onclick="return trackLeadAndGo('navigation','contact_hero_quote_page', this.href, false)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8l4 4v14H4V3h4z"></path><path d="M16 3v5h5"></path><path d="M8 13h8"></path><path d="M8 17h6"></path></svg>Request Quotation</a>
     </div>
   </section>
 
@@ -202,10 +202,10 @@ footer{background:#fff;border-top:1px solid #e6ecf8;padding:22px 0;color:#566b9a
     <h2 id="contact-method-title">Choose the Best Contact Method</h2>
     <p class="sectionIntro">Use the channel that fits your enquiry urgency and technical detail.</p>
     <div class="grid4">
-      <article class="contactCard"><div class="cardTop"><span class="iconBox"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6.4 6.4l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"></path></svg></span><h3>Call Rubinox</h3></div><p>Call for urgent enquiry coordination or to clarify grade, form, size and delivery details before sending documents.</p><a class="btn ghost" href="tel:+919363193755" onclick="return trackLeadAndGo('call','contact_card_call', this.href, false)">Call&nbsp;+91&nbsp;9363193755</a></article>
-      <article class="contactCard"><div class="cardTop"><span class="iconBox"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg></span><h3>Email RFQ</h3></div><p>Best for BOQ, MTO, drawings, specifications, multiple line items and documentation requirements.</p><a class="btn ghost" href="mailto:tarun@rubinoxmetal.com?subject=Quotation%20Request%20-%20Rubinox" onclick="return trackLeadAndGo('email','contact_card_email', this.href, false)">Email RFQ</a></article>
-      <article class="contactCard"><div class="cardTop"><span class="iconBox"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.9 7L4 20l1.4-4.2A8 8 0 1 1 20 11.5z"></path><path d="M9 8.8c.2 3.1 2.1 5 5.2 5.2"></path></svg></span><h3>WhatsApp Requirement</h3></div><p>Useful for quick item lists, photos, grade checks and short RFQs.</p><a class="btn primary" href="https://wa.me/919363193755" target="_blank" rel="noopener" onclick="return trackLeadAndGo('whatsapp','contact_card_whatsapp', this.href, true)">Send on WhatsApp</a></article>
-      <article class="contactCard"><div class="cardTop"><span class="iconBox"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.1 7-11a7 7 0 0 0-14 0c0 5.9 7 11 7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg></span><h3>Mumbai Office</h3></div><p>A-206, 2nd floor, C.S. No. 2251 to 2255, Krishvi Escape, Sitaram Poddar Marg, Kalbadevi, Mumbai - 400002.</p><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Krishvi%20Escape%2C%20Sitaram%20Poddar%20Marg%2C%20Kalbadevi%2C%20Mumbai%20400002" target="_blank" rel="noopener" onclick="return trackLeadAndGo('maps','contact_card_maps', this.href, true)">Open Google Maps</a></article>
+      <article class="contactCard"><div class="cardTop"><span class="iconBox"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6.4 6.4l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"></path></svg></span><h3>Call Rubinox</h3></div><p>Call for urgent enquiry coordination or to clarify grade, form, size and delivery details before sending documents.</p><a class="btn ghost" href="tel:+919363193755" onclick="return trackLeadAndGo('call','contact_card_call', this.href, false)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6.4 6.4l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"></path></svg>Call&nbsp;+91&nbsp;9363193755</a></article>
+      <article class="contactCard"><div class="cardTop"><span class="iconBox"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg></span><h3>Email RFQ</h3></div><p>Best for BOQ, MTO, drawings, specifications, multiple line items and documentation requirements.</p><a class="btn ghost" href="mailto:tarun@rubinoxmetal.com?subject=Quotation%20Request%20-%20Rubinox" onclick="return trackLeadAndGo('email','contact_card_email', this.href, false)"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>Email RFQ</a></article>
+      <article class="contactCard"><div class="cardTop"><span class="iconBox"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.9 7L4 20l1.4-4.2A8 8 0 1 1 20 11.5z"></path><path d="M9 8.8c.2 3.1 2.1 5 5.2 5.2"></path></svg></span><h3>WhatsApp Requirement</h3></div><p>Useful for quick item lists, photos, grade checks and short RFQs.</p><a class="btn primary" href="https://wa.me/919363193755" target="_blank" rel="noopener" onclick="return trackLeadAndGo('whatsapp','contact_card_whatsapp', this.href, true)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.9 7L4 20l1.4-4.2A8 8 0 1 1 20 11.5z"></path><path d="M9 8.8c.2 3.1 2.1 5 5.2 5.2"></path></svg>Send on WhatsApp</a></article>
+      <article class="contactCard"><div class="cardTop"><span class="iconBox"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.1 7-11a7 7 0 0 0-14 0c0 5.9 7 11 7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg></span><h3>Mumbai Office</h3></div><p>A-206, 2nd floor, C.S. No. 2251 to 2255, Krishvi Escape, Sitaram Poddar Marg, Kalbadevi, Mumbai - 400002.</p><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Krishvi%20Escape%2C%20Sitaram%20Poddar%20Marg%2C%20Kalbadevi%2C%20Mumbai%20400002" target="_blank" rel="noopener" onclick="return trackLeadAndGo('maps','contact_card_maps', this.href, true)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.1 7-11a7 7 0 0 0-14 0c0 5.9 7 11 7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>Open Google Maps</a></article>
     </div>
   </section>
 
@@ -246,7 +246,7 @@ footer{background:#fff;border-top:1px solid #e6ecf8;padding:22px 0;color:#566b9a
       <div class="checkItem"><span class="checkMark">8</span><span>MTC, PMI or inspection requirement</span></div>
       <div class="checkItem"><span class="checkMark">9</span><span>Drawing, BOQ or MTO where applicable</span></div>
     </div>
-    <div class="btnrow"><a class="btn ghost" href="/quotation.html">Open Full Quotation Page</a></div>
+    <div class="btnrow"><a class="btn ghost" href="/quotation.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8l4 4v14H4V3h4z"></path><path d="M16 3v5h5"></path><path d="M8 13h8"></path><path d="M8 17h6"></path></svg>Open Full Quotation Page</a></div>
   </section>
 
   <section class="heritageBand" aria-labelledby="heritage-title">
@@ -312,10 +312,10 @@ footer{background:#fff;border-top:1px solid #e6ecf8;padding:22px 0;color:#566b9a
     <h2 id="final-contact-title">Ready to Contact Rubinox for Your Metal Requirement?</h2>
     <p>Share material, grade, form, dimensions, quantity, standard, documentation requirement and delivery location for RFQ review.</p>
     <div class="btnrow">
-      <a class="btn primary" href="https://wa.me/919363193755" target="_blank" rel="noopener" onclick="return trackLeadAndGo('whatsapp','contact_final_whatsapp', this.href, true)">WhatsApp RFQ</a>
-      <a class="btn darkGhost" href="mailto:tarun@rubinoxmetal.com?subject=Quotation%20Request%20-%20Rubinox" onclick="return trackLeadAndGo('email','contact_final_email', this.href, false)">Email RFQ</a>
-      <a class="btn darkGhost" href="/quotation.html" onclick="return trackLeadAndGo('navigation','contact_final_quote_page', this.href, false)">Request Quotation</a>
-      <a class="btn darkGhost" href="tel:+919363193755" onclick="return trackLeadAndGo('call','contact_final_call', this.href, false)">Call&nbsp;Rubinox</a>
+      <a class="btn primary" href="https://wa.me/919363193755" target="_blank" rel="noopener" onclick="return trackLeadAndGo('whatsapp','contact_final_whatsapp', this.href, true)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.9 7L4 20l1.4-4.2A8 8 0 1 1 20 11.5z"></path><path d="M9 8.8c.2 3.1 2.1 5 5.2 5.2"></path></svg>WhatsApp RFQ</a>
+      <a class="btn darkGhost" href="mailto:tarun@rubinoxmetal.com?subject=Quotation%20Request%20-%20Rubinox" onclick="return trackLeadAndGo('email','contact_final_email', this.href, false)"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>Email RFQ</a>
+      <a class="btn darkGhost" href="/quotation.html" onclick="return trackLeadAndGo('navigation','contact_final_quote_page', this.href, false)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8l4 4v14H4V3h4z"></path><path d="M16 3v5h5"></path><path d="M8 13h8"></path><path d="M8 17h6"></path></svg>Request Quotation</a>
+      <a class="btn darkGhost" href="tel:+919363193755" onclick="return trackLeadAndGo('call','contact_final_call', this.href, false)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6.4 6.4l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"></path></svg>Call&nbsp;Rubinox</a>
     </div>
     <nav class="materialLinks" aria-label="Major material pages">
       <a href="/materials/stainless-steel.html">Stainless Steel</a>
