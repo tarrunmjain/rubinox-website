@@ -10,7 +10,7 @@ Working repository: `C:\Users\Dell\OneDrive\Documents\rubinox-website-live`
 - Batch 2 - Hero grade chip standardization: completed.
 - Batch 3 - Duplex & Super Duplex completion: completed.
 - Batch 4 - Aluminium coverage review and completion: completed.
-- Batch 5 - Non-ferrous family consistency: pending.
+- Batch 5 - Non-ferrous family consistency: completed.
 - Batch 6 - Ferrous family consistency: pending.
 - Batch 7 - Final material library QA and report: pending.
 
@@ -148,3 +148,20 @@ Working repository: `C:\Users\Dell\OneDrive\Documents\rubinox-website-live`
 - `qa:crawl`: passed. Successfully scanned 184 local links.
 - `qa:html`: completed with known unrelated legacy issues. All touched Aluminium pages are valid: `materials/aluminium.html`, `materials/aluminium-5052-supplier-india.html`, `materials/aluminium-5083-supplier-india.html`, `materials/aluminium-6061-supplier-india.html`, `materials/aluminium-6063-supplier-india.html`, `materials/aluminium-6082-supplier-india.html` and `materials/aluminium-7075-supplier-india.html`. Overall invalid pages after this batch: 59, all outside the Aluminium batch scope.
 - `qa:sitemap`: passed. Sitemap URLs: 107. Local HTML pages: 107. Missing from sitemap: 0. Sitemap URLs without local file: 0. Duplicate sitemap URLs: 0.
+
+
+## Batch 5 Actions Completed
+
+- Updated Copper category guidance with C102 / oxygen-free copper reference handling without creating a thin duplicate page.
+- Updated Brass category guidance with CZ108, CZ121, CZ124 and C272 reference handling without creating duplicate thin pages.
+- Updated Phosphor Bronze category guidance with PB1, PB2, C51000 and C52100 naming coverage without duplicating existing C510 and C521 pages.
+- Added matching visible FAQ entries and FAQPage schema entries on the Copper, Brass and Phosphor Bronze category pages.
+- Fixed duplicated Brass C464 standards wording in both visible FAQ content and FAQPage schema.
+- Corrected inherited mojibake separator/copyright entities across Copper, Brass and Phosphor Bronze family pages touched in this batch.
+
+## Batch 5 QA Status
+
+- `qa:schema`: passed. HTML pages scanned: 107. JSON-LD blocks found: 259. Invalid JSON-LD blocks: 0.
+- `test:navigation`: passed.
+- `qa:crawl`: passed. Successfully scanned 184 local links.
+- `qa:html`: completed with known unrelated legacy issues. All touched non-ferrous pages are valid: `materials/copper.html`, `materials/brass.html`, `materials/phosphor-bronze.html` and `materials/brass-c464-supplier-india.html`. Overall invalid pages after this batch: 59, all outside the non-ferrous batch scope.
