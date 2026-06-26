@@ -478,6 +478,25 @@ header .topRail .brandUtility img{display:block;width:18px;height:18px;object-fi
 .siteFooter .footerIcon.functionIcon[href^="tel"]{color:#178a55;background:linear-gradient(145deg,#ffffff,#edf6f2)}
 .siteFooter .footerIcon.functionIcon[href^="mailto"]{color:#1f64b7;background:linear-gradient(145deg,#ffffff,#edf4ff)}
 /* RUBINOX FINAL POLISH BATCH 1 END *//* RUBINOX VISUAL SYSTEM END */
+
+/* RUBINOX ALIGNMENT POLISH BATCH 2 START */
+:root{--rubinox-content-max:1140px;--rubinox-section-pad:30px;--rubinox-section-pad-mobile:24px}
+main.page,.page{max-width:var(--rubinox-content-max);margin-left:auto;margin-right:auto}
+.premiumHero{max-width:var(--rubinox-content-max)}
+.section{padding-top:var(--rubinox-section-pad);padding-bottom:var(--rubinox-section-pad)}
+.section + .section{padding-top:24px}
+main.page > .card,main.page > section.card{margin-top:12px}
+main.page > .card + .card,main.page > section.card + section.card{margin-top:12px}
+.section > .wrap > h2,.section .phase3Head h2,.section .sectionHead h2,main.page > .card > h2,main.page > section.card > h2,.hubSection > h2{position:relative}
+.section > .wrap > h2::after,.section .phase3Head h2::after,.section .sectionHead h2::after,main.page > .card > h2::after,main.page > section.card > h2::after,.hubSection > h2::after{content:"";display:block;width:52px;height:3px;margin-top:9px;border-radius:999px;background:linear-gradient(90deg,#e2a02f,rgba(226,160,47,0))}
+.section > .wrap[style*="text-align:center"] > h2::after,.section .phase3Head[style*="text-align:center"] h2::after{margin-left:auto;margin-right:auto}
+.homeContactCard{align-self:start}
+.homeContactActions{margin-top:16px}
+.homeMapCard{display:flex;flex-direction:column}
+.homeMapFrame{aspect-ratio:16/9;min-height:220px;max-height:270px}
+.homeMapFrame iframe{height:100%}
+@media(max-width:900px){.section{padding-top:var(--rubinox-section-pad-mobile);padding-bottom:var(--rubinox-section-pad-mobile)}main.page,.page{width:min(100% - 32px,var(--rubinox-content-max));padding-left:0;padding-right:0}.premiumHero{width:min(100% - 32px,var(--rubinox-content-max))}.homeMapFrame{aspect-ratio:4/3;max-height:none}}
+/* RUBINOX ALIGNMENT POLISH BATCH 2 END */
 </style>
 </head>
 
