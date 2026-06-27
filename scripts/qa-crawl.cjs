@@ -13,6 +13,13 @@ async function run() {
     server.origin,
     "--recurse",
     "--check-fragments",
+    "--concurrency",
+    "12",
+    "--retry-errors",
+    "--retry-errors-count",
+    "2",
+    "--timeout",
+    "30000",
     "--skip",
     "^(?!http://127\\.0\\.0\\.1:4181)"
   ];
