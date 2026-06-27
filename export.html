@@ -243,7 +243,7 @@ header .navlinks .btn.primary{padding:9px 11px !important}
 /* RUBINOX HEADER BREADCRUMB SPACING POLISH END */</style>
 <style>
 .hubSection{margin-top:16px}
-.answerBlock{border-left:5px solid var(--accent);background:linear-gradient(145deg,#fff,#f8fafc)}
+.answerBlock{position:relative;overflow:hidden;border-left:0;background:linear-gradient(145deg,#fff,#f8fafc)}.answerBlock::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--accent),var(--ink2),var(--silver));pointer-events:none}
 .clusterGrid,.countryGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:14px}
 .clusterCard,.countryCard{background:#fff;border:1px solid rgba(16,37,84,.12);border-radius:8px;padding:12px;box-shadow:0 8px 18px rgba(15,30,60,.05)}
 .clusterCard strong,.countryCard strong{display:block;color:var(--ink2);font-size:14px;line-height:1.25}
