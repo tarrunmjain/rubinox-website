@@ -37,6 +37,7 @@ developer, or content contributor working in this project.
 - `docs/05-seo-keywords.md` - target keyword groups and metadata rules.
 - `docs/06-content-rules.md` - accuracy, SEO, CTA, and claim rules.
 - `docs/07-contact-information.md` - official contact details and RFQ guidance.
+- `RUBINOX_SITE_WIDE_DESIGN_RULES.md` - permanent site-wide rules for visual, layout, header, footer, CTA, card, typography, spacing, mobile, and design-system work.
 
 ## Brand Summary
 
@@ -116,6 +117,8 @@ Before adding a new public page, also check whether `sitemap.xml` needs to inclu
 - Use descriptive image alt text that matches the visible product or material.
 
 ## Development Workflow
+
+Before any visual, layout, header, footer, CTA, card, typography, spacing, mobile, or design-system change, read `RUBINOX_SITE_WIDE_DESIGN_RULES.md` and follow it unless the user explicitly approves an exception.
 
 1. Read `PROJECT_TRANSFER.md` and `docs/RUBINOX_MASTER_CONTEXT.md`.
 2. Inspect the relevant existing HTML page before editing.
