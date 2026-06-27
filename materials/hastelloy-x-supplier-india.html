@@ -213,6 +213,26 @@ main.page > .card + .card,main.page > section.card + section.card{margin-top:12p
 .materialRfqContact{margin-top:6px;color:rgba(255,255,255,.76);font-size:13px;line-height:1.6;text-align:center}
 @media(max-width:820px){.materialRfqCta{grid-template-columns:1fr}.materialRfqMain{padding:22px}.materialRfqActions{padding:20px}.materialRfqChecklist{grid-template-columns:1fr}}
 /* RUBINOX MATERIAL RFQ CTA BATCH 4 END */
+
+/* RUBINOX LAYOUT ALIGNMENT STANDARD START */
+:root{--rubinox-page-max:1140px;--rubinox-page-gutter:clamp(18px,4vw,32px);--rubinox-hero-radius:12px}
+main.page,.page{width:min(var(--rubinox-page-max),calc(100% - (var(--rubinox-page-gutter) * 2)));max-width:var(--rubinox-page-max);margin-left:auto;margin-right:auto;padding-left:0;padding-right:0;box-sizing:border-box}
+.page > .wrap,main.page > .wrap{width:100%;max-width:100%;padding-left:0;padding-right:0;box-sizing:border-box}
+.page > .premiumHero,main.page > .premiumHero,body > main > .premiumHero{width:100%;max-width:var(--rubinox-page-max);margin-left:auto;margin-right:auto;transform:none;box-sizing:border-box}
+body > main > .premiumHero{width:min(var(--rubinox-page-max),calc(100% - (var(--rubinox-page-gutter) * 2)))}
+.page > .premiumHero,main.page > .premiumHero{border-radius:var(--rubinox-hero-radius)}
+.page > .heroGrid,main.page > .heroGrid,.page > .trustStrip,main.page > .trustStrip,.page > .card,main.page > .card,.page > section.card,main.page > section.card,.page > .grid2,main.page > .grid2,.page > section.grid2,main.page > section.grid2,.page > .grid3,main.page > .grid3,.page > .grid4,main.page > .grid4,.page > .materialGrid,main.page > .materialGrid,.page > .industryGrid,main.page > .industryGrid,.page > .faqGrid,main.page > .faqGrid,.page > .processGrid,main.page > .processGrid,.page > .docGrid,main.page > .docGrid,.page > .contactGrid,main.page > .contactGrid,.page > .officeGrid,main.page > .officeGrid,.page > .platformGrid,main.page > .platformGrid,.page > .checkGrid,main.page > .checkGrid,.page > .linkGrid,main.page > .linkGrid,.page > .ctaBand,main.page > .ctaBand,.page > .timeline,main.page > .timeline,.page > .splitGrid,main.page > .splitGrid,.page > .formsGrid,main.page > .formsGrid,.page > .gradeGrid,main.page > .gradeGrid,.page > .productGrid,main.page > .productGrid,.page > .hubGrid,main.page > .hubGrid{width:100%;max-width:100%;margin-left:0;margin-right:0;box-sizing:border-box}
+body > main > .premiumHero .heroGrid.wrap,body > main > .premiumHero > .wrap.heroGrid{width:100%;max-width:100%;margin-left:auto;margin-right:auto;box-sizing:border-box}
+body > main > .premiumHero ~ .section{width:min(var(--rubinox-page-max),calc(100% - (var(--rubinox-page-gutter) * 2)));max-width:var(--rubinox-page-max);margin-left:auto;margin-right:auto;box-sizing:border-box}
+body > main > .premiumHero ~ .section > .wrap{width:100%;max-width:100%;padding-left:0;padding-right:0;box-sizing:border-box}
+.topbar > .wrap{width:min(var(--rubinox-page-max),calc(100% - (var(--rubinox-page-gutter) * 2)));max-width:var(--rubinox-page-max);padding-left:0;padding-right:0;box-sizing:border-box}
+.premiumHero .heroContent,.premiumHero .hero-copy{min-width:0}
+.premiumHero.hasHeroVisual{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(280px,.92fr);gap:24px;align-items:center}
+.premiumHero.hasHeroVisual .heroVisual{display:block}
+.premiumHero .heroVisual:empty{display:none}
+@media(max-width:900px){:root{--rubinox-page-gutter:18px}main.page,.page,body > main > .premiumHero,body > main > .premiumHero ~ .section,.topbar > .wrap{width:min(var(--rubinox-page-max),calc(100% - 32px))}.premiumHero.hasHeroVisual{grid-template-columns:1fr}}
+@media(max-width:520px){main.page,.page,body > main > .premiumHero,body > main > .premiumHero ~ .section,.topbar > .wrap{width:min(var(--rubinox-page-max),calc(100% - 28px))}}
+/* RUBINOX LAYOUT ALIGNMENT STANDARD END */
 </style>
 </head>
 <body>
