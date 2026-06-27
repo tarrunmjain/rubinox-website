@@ -86,7 +86,32 @@ header .mobileMenuPanel .mobileBtn{margin-top:8px;width:100%;text-align:center;p
 @media(max-width:1120px){header .desktopNav{display:none}header .menuToggle{display:inline-flex}header .brand img{width:232px;height:auto;max-height:56px}header .nav{min-height:76px;padding:10px 0}header .topRail .wrap{align-items:flex-start;flex-direction:column;padding-top:8px;padding-bottom:8px;gap:4px}header .railLinks{gap:10px}}
 @media(max-width:640px){header .wrap{padding-left:14px;padding-right:14px}header .topRail{font-size:11.5px}header .railLinks{display:grid;gap:4px}header .brand img{width:200px;max-width:62vw}header .nav{gap:8px}}
 /* RUBINOX STANDARD HEADER END */
-</style>
+
+/* RUBINOX DROPDOWN NAV START */
+header .navlinks{gap:10px;align-items:center}
+header .navDropdown{position:relative;display:inline-flex;align-items:center}
+header .navDropToggle,header .navTextLink{display:inline-flex;align-items:center;gap:6px;min-height:38px;border-radius:6px;color:#1b2b52;font-weight:800;font-size:13px;line-height:1.2;text-decoration:none;white-space:nowrap}
+header .navDropToggle{border:0;background:transparent;padding:8px 8px;cursor:pointer;font-family:inherit}
+header .navTextLink{padding:8px 7px}
+header .navDropToggle:hover,header .navDropToggle:focus-visible,header .navTextLink:hover,header .navTextLink:focus-visible{background:#f4eddd;color:#07101f;outline:none}
+header .navDropToggle span{font-size:12px;color:#8a5a06}
+header .megaMenu{position:absolute;top:calc(100% + 12px);left:0;z-index:100;min-width:340px;display:grid;gap:8px;padding:12px;border:1px solid rgba(19,42,99,.14);border-radius:12px;background:#fff;box-shadow:0 24px 70px rgba(7,16,31,.18);opacity:0;visibility:hidden;transform:translateY(8px);pointer-events:none;transition:opacity .18s ease,transform .18s ease,visibility .18s ease}
+header .productMega{min-width:300px}
+header .navDropdown:hover .megaMenu,header .navDropdown:focus-within .megaMenu,header .navDropdown.open .megaMenu{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
+header .megaMenu a{display:grid;gap:4px;padding:12px;border:1px solid transparent;border-radius:8px;background:linear-gradient(145deg,#fff,#f8fafc);text-decoration:none;white-space:normal;color:#132a63}
+header .megaMenu a:hover,header .megaMenu a:focus-visible{border-color:rgba(226,160,47,.55);background:#fff8e8;outline:none}
+header .megaMenu strong{font-size:14px;line-height:1.2;color:#132a63}
+header .megaMenu span{font-size:12px;line-height:1.45;color:#566b9a;font-weight:650}
+header .mobileAccordion{border-bottom:1px solid #eef2f8}
+header .mobileAccordionToggle{width:100%;display:flex;align-items:center;justify-content:space-between;border:0;background:#fff;color:#132a63;font-family:inherit;font-size:14px;font-weight:850;text-align:left;padding:12px 14px;border-radius:6px;cursor:pointer}
+header .mobileAccordionToggle:after{content:"+";color:#8a5a06;font-size:18px;line-height:1}
+header .mobileAccordion.open .mobileAccordionToggle{background:#fff8e8}
+header .mobileAccordion.open .mobileAccordionToggle:after{content:"-"}
+header .mobileAccordionPanel{display:none;gap:4px;padding:0 4px 10px}
+header .mobileAccordion.open .mobileAccordionPanel{display:grid}
+header .mobileAccordionPanel a{background:#f8fafc;padding:10px 14px 10px 22px;font-size:13px}
+@media(max-width:1180px){header .desktopNav{display:none}header .menuToggle{display:inline-flex}}
+/* RUBINOX DROPDOWN NAV END */</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Stainless Steel 310S Supplier in India","url":"https://rubinoxmetal.com/materials/ss-310s-supplier-india.html","@id":"https://rubinoxmetal.com/materials/ss-310s-supplier-india.html#webpage","description":"Rubinox supplies Stainless Steel 310S and SS 310S pipes, tubes, sheets, plates, coils across India, with export support, MTC documentation and fast quotations.","isPartOf":{"@id":"https://rubinoxmetal.com/#website"},"about":{"@id":"https://rubinoxmetal.com/#organization"},"breadcrumb":{"@id":"https://rubinoxmetal.com/materials/ss-310s-supplier-india.html#breadcrumb"},"inLanguage":"en-IN"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rubinoxmetal.com/"},{"@type":"ListItem","position":2,"name":"Materials","item":"https://rubinoxmetal.com/#materials"},{"@type":"ListItem","position":3,"name":"Stainless Steel","item":"https://rubinoxmetal.com/materials/stainless-steel.html"},{"@type":"ListItem","position":4,"name":"Stainless Steel 310S","item":"https://rubinoxmetal.com/materials/ss-310s-supplier-india.html"}],"@id":"https://rubinoxmetal.com/materials/ss-310s-supplier-india.html#breadcrumb"}</script>
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -238,32 +263,59 @@ main.page > .card + .card,main.page > section.card + section.card{margin-top:12p
     <div class="nav">
       <a class="brand" href="/" aria-label="Rubinox Home"><img width="360" height="87" src="/logo.png" alt="Rubinox Metal and Alloys" decoding="async"></a>
       <nav class="navlinks desktopNav" aria-label="Main navigation">
-        <a href="/#materials">Materials</a>
-        <a href="/materials/stainless-steel.html">Stainless Steel</a>
-        <a href="/about-us.html">About Us</a>
-        <a href="/quotation.html">Quotation</a>
-        <a href="/industries.html">Industries</a>
-        <a href="/#forms">Forms</a>
-        <a href="/contact.html">Contact</a>
-        <a class="btn primary" href="https://wa.me/919363193755" target="_blank" rel="noopener" onclick="try{if(window.gtag){gtag('event','generate_lead',{method:'whatsapp',event_label:'header_whatsapp'});}}catch(e){}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.9 7L4 20l1.4-4.2A8 8 0 1 1 20 11.5z"></path><path d="M9 8.8c.2 3.1 2.1 5 5.2 5.2"></path></svg>WhatsApp Quote</a>
+        <div class="navDropdown">
+          <button type="button" class="navDropToggle" aria-haspopup="true" aria-expanded="false" aria-controls="companyMega">Company Profile <span aria-hidden="true">&#9662;</span></button>
+          <div class="megaMenu" id="companyMega">
+            <a href="/about-us.html"><strong>About Us</strong><span>Company profile and procurement positioning.</span></a>
+            <a href="/mission-vision.html"><strong>Mission &amp; Vision</strong><span>Values, buyer support principles and long-term direction.</span></a>
+            <a href="/industries.html"><strong>Industries We Serve</strong><span>Industrial sectors supported for material RFQs.</span></a>
+            <a href="/locations.html"><strong>Cities We Serve</strong><span>PAN India enquiry support and location hub.</span></a>
+            <a href="/export.html"><strong>Countries We Serve</strong><span>Export enquiry support for overseas buyers.</span></a>
+            <a href="/registrations-compliance.html"><strong>Registrations &amp; Compliance</strong><span>GST, IEC, MSME/Udyam and onboarding references.</span></a>
+          </div>
+        </div>
+        <div class="navDropdown">
+          <button type="button" class="navDropToggle" aria-haspopup="true" aria-expanded="false" aria-controls="portfolioMega">Product Portfolio <span aria-hidden="true">&#9662;</span></button>
+          <div class="megaMenu productMega" id="portfolioMega">
+            <a href="/product-portfolio.html"><strong>Product Portfolio</strong><span>Materials, grades and product form overview.</span></a>
+            <a href="/materials.html"><strong>Materials</strong><span>Stainless, duplex, nickel, titanium and more.</span></a>
+            <a href="/product-forms.html"><strong>Product Forms</strong><span>Pipes, tubes, sheets, plates, flanges and fittings.</span></a>
+            <a href="/grades.html"><strong>Grades</strong><span>Grade references for RFQ preparation.</span></a>
+          </div>
+        </div>
+        <a class="navTextLink" href="/quotation.html">Request Quote</a>
+        <a class="navTextLink" href="/blog.html">Knowledge Hub</a>
+        <a class="navTextLink" href="/contact.html">Contact</a>
+        <a class="btn primary" href="https://wa.me/919363193755" target="_blank" rel="noopener">WhatsApp Quote</a>
       </nav>
       <button type="button" class="menuToggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><svg id="menuIcon" viewBox="0 0 24 24"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg></button>
     </div>
     <div class="mobileMenu" id="mobileMenu">
       <nav class="mobileMenuPanel" aria-label="Mobile navigation">
-        <a href="/#materials">Materials</a>
-        <a href="/materials/stainless-steel.html">Stainless Steel</a>
-        <a href="/about-us.html">About Us</a>
-        <a href="/quotation.html">Quotation</a>
-        <a href="/industries.html">Industries</a>
-        <a href="/#forms">Forms</a>
+        <div class="mobileAccordion">
+          <button type="button" class="mobileAccordionToggle" data-mobile-accordion aria-expanded="false">Company Profile</button>
+          <div class="mobileAccordionPanel">
+            <a href="/about-us.html">About Us</a>
+            <a href="/mission-vision.html">Mission &amp; Vision</a>
+            <a href="/industries.html">Industries We Serve</a>
+            <a href="/locations.html">Cities We Serve</a>
+            <a href="/export.html">Countries We Serve</a>
+            <a href="/registrations-compliance.html">Registrations &amp; Compliance</a>
+          </div>
+        </div>
+        <div class="mobileAccordion">
+          <button type="button" class="mobileAccordionToggle" data-mobile-accordion aria-expanded="false">Product Portfolio</button>
+          <div class="mobileAccordionPanel">
+            <a href="/product-portfolio.html">Product Portfolio</a>
+            <a href="/materials.html">Materials</a>
+            <a href="/product-forms.html">Product Forms</a>
+            <a href="/grades.html">Grades</a>
+          </div>
+        </div>
+        <a href="/quotation.html">Request Quote</a>
+        <a href="/blog.html">Knowledge Hub</a>
         <a href="/contact.html">Contact</a>
-        <a class="mobileBtn btn primary" href="https://wa.me/919363193755" target="_blank" rel="noopener" onclick="try{if(window.gtag){gtag('event','generate_lead',{method:'whatsapp',event_label:'header_whatsapp_mobile'});}}catch(e){}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.9 7L4 20l1.4-4.2A8 8 0 1 1 20 11.5z"></path><path d="M9 8.8c.2 3.1 2.1 5 5.2 5.2"></path></svg>WhatsApp Quote</a>
-        <span class="mobileSocial">
-          <a class="utilityIcon brandUtility" href="https://www.facebook.com/profile.php?id=61590518053054" target="_blank" rel="noopener noreferrer" aria-label="Follow Rubinox on Facebook" title="Facebook"><img src="/assets/icons/social/facebook.svg" width="18" height="18" alt="" aria-hidden="true" loading="lazy"></a>
-          <a class="utilityIcon brandUtility" href="https://www.instagram.com/rubinox_metal/" target="_blank" rel="noopener noreferrer" aria-label="Follow Rubinox on Instagram" title="Instagram"><img src="/assets/icons/social/instagram.svg" width="18" height="18" alt="" aria-hidden="true" loading="lazy"></a>
-          <a class="utilityIcon brandUtility" href="https://www.linkedin.com/company/rubinox-metal-and-alloys" target="_blank" rel="noopener noreferrer" aria-label="Follow Rubinox on LinkedIn" title="LinkedIn"><img src="/assets/icons/social/linkedin.ico" width="18" height="18" alt="" aria-hidden="true" loading="lazy"></a>
-        </span>
+        <a class="mobileBtn btn primary" href="https://wa.me/919363193755" target="_blank" rel="noopener">WhatsApp Quote</a>
       </nav>
     </div>
   </div>
@@ -362,5 +414,45 @@ main.page > .card + .card,main.page > section.card + section.card{margin-top:12p
   </div>
   <div class="footerBottom"><div class="wrap">&copy; Rubinox Metal and Alloys. All rights reserved.</div></div>
 </footer>
-</body>
+
+<script>
+(function(){
+  document.querySelectorAll(".navDropdown").forEach(function(dropdown){
+    const button = dropdown.querySelector(".navDropToggle");
+    if(!button) return;
+    function close(){ dropdown.classList.remove("open"); button.setAttribute("aria-expanded","false"); }
+    button.addEventListener("click", function(event){
+      event.stopPropagation();
+      const willOpen = !dropdown.classList.contains("open");
+      document.querySelectorAll(".navDropdown.open").forEach(function(other){
+        if(other !== dropdown){
+          other.classList.remove("open");
+          const otherButton = other.querySelector(".navDropToggle");
+          if(otherButton) otherButton.setAttribute("aria-expanded","false");
+        }
+      });
+      dropdown.classList.toggle("open", willOpen);
+      button.setAttribute("aria-expanded", willOpen ? "true" : "false");
+    });
+    dropdown.addEventListener("focusout", function(event){
+      if(!dropdown.contains(event.relatedTarget)) close();
+    });
+  });
+  document.addEventListener("click", function(){
+    document.querySelectorAll(".navDropdown.open").forEach(function(dropdown){
+      dropdown.classList.remove("open");
+      const button = dropdown.querySelector(".navDropToggle");
+      if(button) button.setAttribute("aria-expanded","false");
+    });
+  });
+  document.querySelectorAll("[data-mobile-accordion]").forEach(function(button){
+    button.addEventListener("click", function(){
+      const accordion = button.closest(".mobileAccordion");
+      if(!accordion) return;
+      const isOpen = accordion.classList.toggle("open");
+      button.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+  });
+})();
+</script></body>
 </html>
