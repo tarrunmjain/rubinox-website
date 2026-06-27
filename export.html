@@ -333,9 +333,9 @@ main.page > .card + .card,main.page > section.card + section.card{margin-top:12p
           </div>
         </div>
         <div class="navDropdown">
-          <button type="button" class="navDropToggle" aria-haspopup="true" aria-expanded="false" aria-controls="portfolioMega">Product Portfolio <span aria-hidden="true">&#9662;</span></button>
+          <a class="navDropToggle" href="/product-portfolio.html" aria-haspopup="true" aria-expanded="false" aria-controls="portfolioMega">Product Portfolio <span aria-hidden="true">&#9662;</span></a>
           <div class="megaMenu productMega" id="portfolioMega">
-            <a href="/product-portfolio.html"><strong>Product Portfolio</strong><span>Materials, grades and product form overview.</span></a>
+
             <a href="/materials.html"><strong>Materials</strong><span>Stainless, duplex, nickel, titanium and more.</span></a>
             <a href="/product-forms.html"><strong>Product Forms</strong><span>Pipes, tubes, sheets, plates, flanges and fittings.</span></a>
             <a href="/grades.html"><strong>Grades</strong><span>Grade references for RFQ preparation.</span></a>
@@ -364,7 +364,7 @@ main.page > .card + .card,main.page > section.card + section.card{margin-top:12p
         <div class="mobileAccordion">
           <button type="button" class="mobileAccordionToggle" data-mobile-accordion aria-expanded="false">Product Portfolio</button>
           <div class="mobileAccordionPanel">
-            <a href="/product-portfolio.html">Product Portfolio</a>
+
             <a href="/materials.html">Materials</a>
             <a href="/product-forms.html">Product Forms</a>
             <a href="/grades.html">Grades</a>
@@ -461,33 +461,47 @@ const menuToggle=document.getElementById("menuToggle");const mobileMenu=document
 
 <script>
 (function(){
+  function closeDropdown(dropdown){
+    const button = dropdown.querySelector(".navDropToggle");
+    dropdown.classList.remove("open");
+    if(button) button.setAttribute("aria-expanded","false");
+  }
+  function closeOtherDropdowns(current){
+    document.querySelectorAll(".navDropdown").forEach(function(other){
+      if(other !== current){
+        if(other.contains(document.activeElement)) document.activeElement.blur();
+        closeDropdown(other);
+      }
+    });
+  }
   document.querySelectorAll(".navDropdown").forEach(function(dropdown){
     const button = dropdown.querySelector(".navDropToggle");
     if(!button) return;
-    function close(){ dropdown.classList.remove("open"); button.setAttribute("aria-expanded","false"); }
-    button.addEventListener("click", function(event){
-      event.stopPropagation();
-      const willOpen = !dropdown.classList.contains("open");
-      document.querySelectorAll(".navDropdown.open").forEach(function(other){
-        if(other !== dropdown){
-          other.classList.remove("open");
-          const otherButton = other.querySelector(".navDropToggle");
-          if(otherButton) otherButton.setAttribute("aria-expanded","false");
-        }
-      });
-      dropdown.classList.toggle("open", willOpen);
-      button.setAttribute("aria-expanded", willOpen ? "true" : "false");
+    function markActive(){
+      closeOtherDropdowns(dropdown);
+      button.setAttribute("aria-expanded","true");
+    }
+    dropdown.addEventListener("mouseenter", markActive);
+    dropdown.addEventListener("focusin", markActive);
+    dropdown.addEventListener("mouseleave", function(){
+      if(!dropdown.classList.contains("open")) button.setAttribute("aria-expanded","false");
     });
+    if(button.tagName.toLowerCase() === "button"){
+      button.addEventListener("click", function(event){
+        event.stopPropagation();
+        const willOpen = !dropdown.classList.contains("open");
+        closeOtherDropdowns(dropdown);
+        dropdown.classList.toggle("open", willOpen);
+        button.setAttribute("aria-expanded", willOpen ? "true" : "false");
+      });
+    }
     dropdown.addEventListener("focusout", function(event){
-      if(!dropdown.contains(event.relatedTarget)) close();
+      if(!dropdown.contains(event.relatedTarget)) closeDropdown(dropdown);
     });
   });
-  document.addEventListener("click", function(){
-    document.querySelectorAll(".navDropdown.open").forEach(function(dropdown){
-      dropdown.classList.remove("open");
-      const button = dropdown.querySelector(".navDropToggle");
-      if(button) button.setAttribute("aria-expanded","false");
-    });
+  document.addEventListener("click", function(event){
+    if(event.target.closest && event.target.closest(".navDropdown")) return;
+    document.querySelectorAll(".navDropdown.open").forEach(closeDropdown);
   });
   document.querySelectorAll("[data-mobile-accordion]").forEach(function(button){
     button.addEventListener("click", function(){
