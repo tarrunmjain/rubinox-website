@@ -588,12 +588,12 @@ a.relItem:hover:not(:focus-visible),
 .faqItem h3{margin:0 0 10px !important;line-height:1.28}
 .faqItem p{margin:0;line-height:1.65}
 /* PRIMARY HERO VISUAL */
-.premiumHero.hasHeroVisual{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(280px,.92fr);gap:24px;align-items:center}
+.premiumHero.hasHeroVisual{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(280px,.92fr);gap:24px;align-items:center;width:min(var(--rubinox-page-max),calc(100% - (var(--rubinox-page-gutter) * 2)));max-width:var(--rubinox-page-max);margin:clamp(16px,2.4vw,24px) auto 0;padding:34px;border:1px solid rgba(226,160,47,.25);border-radius:var(--rubinox-hero-radius);background:linear-gradient(120deg,rgba(7,16,31,.94),rgba(19,42,99,.88)),radial-gradient(circle at 78% 22%,rgba(226,160,47,.28),transparent 34%),linear-gradient(135deg,#07101f,#132a63);box-shadow:0 22px 55px rgba(7,16,31,.22);overflow:hidden}
 .premiumHero .heroCopy{min-width:0}
 .premiumHero .heroVisual{position:relative;display:block;border-radius:12px;overflow:hidden;border:1px solid rgba(247,198,91,.24);box-shadow:0 20px 46px rgba(7,16,31,.28);background:rgba(255,255,255,.08)}
 .premiumHero .heroVisual:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,16,31,.08),rgba(19,42,99,.20));z-index:1;pointer-events:none}
 .premiumHero .heroVisual img{display:block;width:100%;height:clamp(240px,28vw,350px);object-fit:cover;filter:saturate(1.04) contrast(1.03)}
-@media(max-width:900px){.premiumHero.hasHeroVisual{grid-template-columns:1fr}.premiumHero .heroVisual img{height:220px}}
+@media(max-width:900px){.premiumHero.hasHeroVisual{grid-template-columns:1fr;width:min(var(--rubinox-page-max),calc(100% - 32px));padding:24px}.premiumHero .heroVisual img{height:220px}}
 @media(max-width:520px){.premiumHero .heroVisual img{height:190px}}</style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://rubinoxmetal.com/quotation.html#webpage","url":"https://rubinoxmetal.com/quotation.html","name":"Request Metal Quotation | Industrial Metals RFQ | Rubinox","description":"Send an RFQ to Rubinox for stainless steel, nickel alloys, duplex, titanium and industrial metals. Share grade, form, size, quantity, standard, documentation and delivery details.","isPartOf":{"@type":"WebSite","name":"Rubinox Metal and Alloys","url":"https://rubinoxmetal.com/"},"about":{"@type":"Organization","name":"Rubinox Metal and Alloys"}},{"@type":"BreadcrumbList","@id":"https://rubinoxmetal.com/quotation.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rubinoxmetal.com/"},{"@type":"ListItem","position":2,"name":"Request Quotation","item":"https://rubinoxmetal.com/quotation.html"}]}]}
@@ -677,8 +677,6 @@ a.relItem:hover:not(:focus-visible),
   <main id="main-content">
 
     <section class="premiumHero hasHeroVisual" aria-labelledby="quotation-title"><div class="heroCopy">
-      <div class="wrap heroGrid">
-        <div>
           <div class="crumb"><a href="/">Home</a> &gt; Request Quotation</div>
           <h1 id="quotation-title">Request an Industrial Metal Quotation</h1>
           <p class="lead">Share material, grade, product form, dimensions, quantity, standards, documentation requirements and delivery location for RFQ review.</p>
@@ -693,8 +691,6 @@ a.relItem:hover:not(:focus-visible),
             <a class="btn btnGold" href="https://wa.me/919363193755" onclick="trackLeadAndGo('quotation_whatsapp_hero','https://wa.me/919363193755');return false;"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.9 7L4 20l1.4-4.2A8 8 0 1 1 20 11.5z"></path><path d="M9 8.8c.2 3.1 2.1 5 5.2 5.2"></path></svg>WhatsApp RFQ</a>
             <a class="btn btnGold" href="mailto:tarun@rubinoxmetal.com?subject=Quotation%20Request%20-%20Rubinox" onclick="trackLeadAndGo('quotation_email_hero','mailto:tarun@rubinoxmetal.com?subject=Quotation%20Request%20-%20Rubinox');return false;"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>Email RFQ</a>
           </div>
-        </div>
-      </div>
     </div><div class="heroVisual"><img src="/assets/hero/hero-quotation-metal-rfq-desk.webp" width="1600" height="900" alt="Industrial metal RFQ desk with quotation documents and metal samples" decoding="async" loading="lazy"></div></section>
 
     <section class="section" aria-labelledby="rfq-guidance-title">
