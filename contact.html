@@ -89,7 +89,7 @@ ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.8}
 .grid3{display:grid;gap:14px;grid-template-columns:repeat(3,1fr);margin-top:14px}
 .grid4{display:grid;gap:14px;grid-template-columns:repeat(4,1fr);margin-top:14px}
 .flowCard,.contactCard,.supportCard,.platformCard,.faqItem{background:#fff;border:1px solid rgba(16,37,84,.12);border-radius:8px;box-shadow:0 10px 24px rgba(15,30,60,.05);padding:16px}
-.flowCard{position:relative;border-top:4px solid var(--accent)}
+.flowCard{position:relative;overflow:hidden}.flowCard:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--accent),var(--ink2));pointer-events:none}
 .flowNum,.checkMark{display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;border-radius:8px;background:linear-gradient(145deg,#f8fafc,#d9dee7);border:1px solid rgba(19,42,99,.16);color:var(--ink2);box-shadow:0 6px 16px rgba(15,30,60,.08);font-weight:900;flex:0 0 34px}
 .flowNum{margin-bottom:10px}
 .cardTop{display:flex;align-items:center;gap:12px;margin-bottom:10px}

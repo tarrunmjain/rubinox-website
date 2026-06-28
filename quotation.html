@@ -134,7 +134,7 @@
     .heroChecklist li{display:flex;gap:10px;align-items:flex-start;color:#e8eef8;font-weight:700}
     .heroChecklist li:before{content:"";flex:0 0 9px;width:9px;height:9px;border-radius:50%;margin-top:9px;background:var(--gold)}
     .guidanceCard{position:relative;background:#fff;border:1px solid rgba(220,227,238,.94);border-radius:20px;padding:28px;box-shadow:0 18px 44px rgba(11,31,77,.08);overflow:hidden}
-    .guidanceCard:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--gold),rgba(216,168,75,.2))}
+    .guidanceCard:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--ink2));pointer-events:none}
     .guidanceList{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:22px 0 0;padding:0;list-style:none}
     .guidanceList li{display:flex;gap:10px;color:var(--muted);font-weight:750;line-height:1.6}
     .guidanceList li:before{content:"";flex:0 0 10px;width:10px;height:10px;border-radius:50%;margin-top:8px;background:var(--gold);box-shadow:0 0 0 5px rgba(216,168,75,.14)}
@@ -160,8 +160,8 @@
     .materialCard:before,
     .docCard:before,
     .projectCard:before,
-    .contactCard:before,
-    .faqItem:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--gold),rgba(216,168,75,.2))}
+    .contactCard:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--ink2));pointer-events:none}
+    .faqItem:before{display:none}
     .checkGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
     .checkCard{padding:20px;min-height:176px}
     .cardTop{display:flex;align-items:center;gap:12px;margin-bottom:12px}
@@ -169,7 +169,7 @@
     .checkCard p,.materialCard p,.docCard p,.projectCard p,.contactCard p,.faqItem p{font-size:14px;line-height:1.55}
     .rfqFormShell{display:grid;grid-template-columns:1.35fr .65fr;gap:20px;align-items:start}
     .rfqFormCard,.rfqHelpCard{position:relative;background:#fff;border:1px solid rgba(220,227,238,.94);border-radius:20px;box-shadow:0 18px 44px rgba(11,31,77,.08);overflow:hidden}
-    .rfqFormCard:before,.rfqHelpCard:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--gold),rgba(216,168,75,.2))}
+    .rfqHelpCard:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--ink2));pointer-events:none}
     .rfqFormCard{padding:28px}
     .rfqHelpCard{padding:26px}
     .formGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
