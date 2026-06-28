@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "rubinox-rfq",
+      "type": "skill-md",
+      "description": "Prepare cautious RFQ guidance for Rubinox Metal and Alloys metal supply enquiries, covering material, grade, form, size, quantity, standards, documentation and logistics details without pricing, stock or manufacturing claims.",
+      "url": "/.well-known/agent-skills/rubinox-rfq/SKILL.md",
+      "digest": "sha256:76ccb03e81826c3122c6f785e503a9b90ac2df56f6c8fcb08fd142cda3a533ba"
+    }
+  ]
+}
