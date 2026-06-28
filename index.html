@@ -543,8 +543,47 @@
     .cards .card:hover h3{
       color:#07101f;
     }
-    .phase3WhyCards .card h3{
+    .phase3WhyCards{
+      padding:32px 0;
+    }
+    .whyTileGrid{
+      display:grid;
+      grid-template-columns:repeat(8,minmax(0,1fr));
+      gap:12px;
+      margin-top:16px;
+      align-items:stretch;
+    }
+    .whyTile{
+      position:relative;
+      overflow:hidden;
+      min-height:86px;
+      padding:14px 10px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      background:linear-gradient(180deg,#ffffff,#f8fafc);
+      border:1px solid rgba(16,37,84,.12);
+      border-radius:8px;
+      box-shadow:0 10px 24px rgba(15,30,60,.06);
+    }
+    .whyTile::before{
+      content:"";
+      position:absolute;
+      left:0;
+      right:0;
+      top:0;
+      height:3px;
+      background:linear-gradient(90deg,var(--accent),var(--navy3));
+      opacity:.9;
+    }
+    .whyTile h3{
+      margin:0;
       color:var(--ink2);
+      font-size:13px;
+      line-height:1.25;
+      font-weight:800;
+      letter-spacing:0;
     }
     .card p{
       margin:0;
@@ -745,6 +784,7 @@
       font-size:13px;
     }
     @media (max-width:1120px){
+      .whyTileGrid{grid-template-columns:repeat(4,minmax(0,1fr))}
       .desktopNav{
         display:none;
       }
@@ -791,10 +831,15 @@
       .formsGrid{grid-template-columns:1fr}
       .formImg{height:170px}
       .chipRow{grid-template-columns:repeat(2, minmax(0, 1fr))}
+      .whyTile{min-height:76px;padding:12px 8px}
+      .whyTile h3{font-size:12px}
       .phase3Head{display:block}
       .phase3Head .btn{margin-top:12px;width:100%}
       .rfqFlowGrid,.docSupportGrid,.geoSupportGrid,.buyerFaqGrid,.docChecklist{grid-template-columns:1fr}
       .finalCtaActions .btn{width:100%}
+    }
+    @media (max-width:640px){
+      .whyTileGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
     }
 /* RUBINOX STANDARD HEADER START */
 header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(7,16,31,.12);box-shadow:0 14px 34px rgba(7,16,31,.09)}
@@ -1372,11 +1417,15 @@ in pipes, tubes, sheets, plates, coils, flanges and fittings for industrial appl
   <section class="section phase3WhyCards">
     <div class="wrap">
       <h2 style="margin:0 0 10px;color:#132a63">Why Choose Rubinox Metal &amp; Alloys?</h2>
-      <div class="grid2">
-        <div class="card"><h3>Wide Range of Grades</h3><p>Stainless steel, duplex, nickel alloys, SMO 254, titanium and other industrial metals in multiple grades and specifications.</p></div>
-        <div class="card"><h3>Bulk &amp; Project Supply</h3><p>Serving fabrication units, EPC contractors, oil &amp; gas, chemical, marine and infrastructure industries.</p></div>
-        <div class="card"><h3>RFQ Review Support</h3><p>Structured support for urgent, bulk and project-based enquiries subject to requirement.</p></div>
-        <div class="card"><h3>Export &amp; Logistics Support</h3><p>Export enquiry coordination and documentation support where applicable.</p></div>
+      <div class="whyTileGrid">
+        <div class="whyTile"><h3>Wide Grade Range</h3></div>
+        <div class="whyTile"><h3>RFQ Review Support</h3></div>
+        <div class="whyTile"><h3>PAN India Enquiries</h3></div>
+        <div class="whyTile"><h3>Export Enquiry Support</h3></div>
+        <div class="whyTile"><h3>MTC &amp; Inspection Review</h3></div>
+        <div class="whyTile"><h3>Project Supply Coordination</h3></div>
+        <div class="whyTile"><h3>Multi-Item BOQ Support</h3></div>
+        <div class="whyTile"><h3>Buyer-Focused Communication</h3></div>
       </div>
     </div>
   </section>
