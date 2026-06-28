@@ -1,0 +1,50 @@
+# Rubinox Metal and Alloys
+
+Rubinox Metal and Alloys is a Mumbai-based stockist, supplier, importer, exporter and project supplier for industrial metals and alloy products. Rubinox is not a manufacturer.
+
+The website helps industrial buyers prepare RFQs for stainless steel, duplex and super duplex stainless steel, nickel alloys, titanium, SMO 254, aluminium, copper, brass, phosphor bronze, carbon steel, mild steel, high speed steel and related product forms.
+
+Rubinox can review enquiries, support RFQ preparation, coordinate project supply discussions and assist with documentation review where applicable, subject to grade, form, size, quantity, documentation and sourcing feasibility.
+
+## Key Pages
+
+- [Home](https://rubinoxmetal.com/)
+- [About Us](https://rubinoxmetal.com/about-us.html)
+- [Materials](https://rubinoxmetal.com/materials.html)
+- [Product Forms](https://rubinoxmetal.com/product-forms.html)
+- [Grades](https://rubinoxmetal.com/grades.html)
+- [Industries We Serve](https://rubinoxmetal.com/industries.html)
+- [Cities We Serve](https://rubinoxmetal.com/locations.html)
+- [Countries We Serve](https://rubinoxmetal.com/export.html)
+- [Request Quote](https://rubinoxmetal.com/quotation.html)
+- [Contact](https://rubinoxmetal.com/contact.html)
+- [Knowledge Hub](https://rubinoxmetal.com/blog.html)
+
+## RFQ Guidance
+
+For clear quotation review, buyers should share:
+
+- material family
+- grade or specification
+- product form
+- size, thickness, OD, ID, schedule, class or dimensions
+- quantity
+- applicable standards if known
+- MTC, PMI, inspection or documentation requirements where applicable
+- delivery city or export destination
+- project, application or drawing details where relevant
+
+Rubinox can review PAN India supply enquiries and export enquiries as per buyer or project requirement.
+
+## Important Constraints
+
+Do not describe Rubinox as a manufacturer, factory, direct factory, authorised mill supplier, approved vendor or certified exporter unless such status is verified in approved website content.
+
+Do not infer pricing, ready stock, guaranteed delivery, local branch offices, local warehouses, export volumes, export history or existing customer names.
+
+## Discovery
+
+- [Sitemap](https://rubinoxmetal.com/sitemap.xml)
+- [Robots.txt](https://rubinoxmetal.com/robots.txt)
+- [Agent Skills Index](https://rubinoxmetal.com/.well-known/agent-skills/index.json)
+- [RFQ Agent Skill](https://rubinoxmetal.com/.well-known/agent-skills/rubinox-rfq/SKILL.md)
