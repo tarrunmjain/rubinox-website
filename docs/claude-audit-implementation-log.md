@@ -56,3 +56,10 @@ Date: 2026-06-28
 - Connected the new pages from grades.html plus nickel alloy, copper, carbon steel and mild steel hubs.
 - Added all new public URLs to sitemap.xml and refreshed related hub lastmod entries to 2026-06-28.
 - Kept copy RFQ-focused and conservative: no manufacturer language, stock promises, price claims or unverified certifications.
+
+## Batch 3 - Technical Resources and Documentation Support
+
+- Added technical-resources.html with pipe schedule guidance, RFQ tables, EN 10204 notes, API 5L comparison, PMI guide and price-factor guidance without publishing prices.
+- Added quality-documentation-support.html for MTC, EN 10204 3.1/3.2, PMI, third-party inspection, packing, marking, traceability and export documentation support.
+- Linked the new resources from About, Quotation, Registrations & Compliance and Knowledge Hub pages, and added both URLs to sitemap.xml.
+- Kept wording conservative and documentation-dependent; no certifications, lab, factory, manufacturer, availability or pricing claims were added.
