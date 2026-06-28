@@ -40,6 +40,7 @@ Index files checked:
 - Desktop viewport: 1366 x 768
 - Mobile viewport: 390 x 844
 - Local post-fix mobile recheck for `technical-resources.html`: 390 x 844
+- Post-push live mobile recheck for `technical-resources.html`: 390 x 844
 
 ## Visual And Functional Results
 
@@ -72,6 +73,12 @@ Post-fix local mobile check for `technical-resources.html` at 390px:
 - `documentElement.scrollWidth`: 375
 - Technical tables remain scrollable inside their wrappers.
 
+Post-push live mobile check for `technical-resources.html` at 390px:
+
+- `documentElement.clientWidth`: 390
+- `documentElement.scrollWidth`: 390
+- `tableOverflowOk`: true
+
 ## QA Results
 
 Commands were run from `C:\Users\Dell\OneDrive\Documents\rubinox-website-live` using `npm.cmd run ...`.
@@ -88,4 +95,5 @@ Commands were run from `C:\Users\Dell\OneDrive\Documents\rubinox-website-live` u
 ## Remaining Known Baseline Issues
 
 - The HTML validation backlog remains at 59 invalid legacy pages. This is larger than a small post-deploy QA fix and should be handled as a separate cleanup batch.
-- The live `technical-resources.html` mobile overflow fix will appear after the QA commit is pushed and GitHub Pages redeploys.
+- The pushed `technical-resources.html` mobile overflow fix was confirmed live after GitHub Pages redeployed. The remaining post-deploy work is the broader HTML validation backlog.
+
