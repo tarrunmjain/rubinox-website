@@ -49,3 +49,10 @@ Date: 2026-06-28
 - Real client names, project references, order history, team size, stockyard details, real photos or years of experience.
 - Fixed price lists or live price claims.
 - Broad schema generation for Product and ItemList entities until page-by-page content and validation strategy is selected.
+
+## Batch 2 - High-Value Specification Pages
+
+- Added 17 specification-led material and pipe pages requested in the audit backlog.
+- Connected the new pages from grades.html plus nickel alloy, copper, carbon steel and mild steel hubs.
+- Added all new public URLs to sitemap.xml and refreshed related hub lastmod entries to 2026-06-28.
+- Kept copy RFQ-focused and conservative: no manufacturer language, stock promises, price claims or unverified certifications.

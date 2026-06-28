@@ -397,7 +397,7 @@
   </url>
   <url>
     <loc>https://rubinoxmetal.com/materials/copper.html</loc>
-    <lastmod>2026-06-23</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <image:image>
       <image:loc>https://rubinoxmetal.com/assets/mat-copper.webp</image:loc>
     </image:image>
@@ -481,7 +481,7 @@
   </url>
   <url>
     <loc>https://rubinoxmetal.com/materials/carbon-steel.html</loc>
-    <lastmod>2026-06-23</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <image:image>
       <image:loc>https://rubinoxmetal.com/assets/mat-carbon-steel.webp</image:loc>
     </image:image>
@@ -516,14 +516,14 @@
   </url>
   <url>
     <loc>https://rubinoxmetal.com/materials/mild-steel.html</loc>
-    <lastmod>2026-06-23</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <image:image>
       <image:loc>https://rubinoxmetal.com/assets/mat-mild-steel.webp</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://rubinoxmetal.com/materials/nickel-alloys.html</loc>
-    <lastmod>2026-06-23</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <image:image>
       <image:loc>https://rubinoxmetal.com/assets/mat-nickel-alloys.webp</image:loc>
     </image:image>
@@ -1131,7 +1131,7 @@
   </url>
   <url>
     <loc>https://rubinoxmetal.com/grades.html</loc>
-    <lastmod>2026-06-27</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
@@ -1234,6 +1234,108 @@
   <url>
     <loc>https://rubinoxmetal.com/blog/industrial-metal-product-forms-guide.html</loc>
     <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://rubinoxmetal.com/materials/copper-nickel-90-10-c70600-supplier-india.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://rubinoxmetal.com/materials/copper-nickel-70-30-c71500-supplier-india.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://rubinoxmetal.com/materials/alloy-20-uns-n08020-supplier-india.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://rubinoxmetal.com/materials/inconel-601-supplier-india.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://rubinoxmetal.com/materials/incoloy-800h-supplier-india.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://rubinoxmetal.com/materials/astm-a335-p11-pipe-supplier-india.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://rubinoxmetal.com/materials/astm-a335-p22-pipe-supplier-india.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://rubinoxmetal.com/materials/astm-a335-p91-pipe-supplier-india.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://rubinoxmetal.com/materials/api-5l-grade-b-pipe-supplier-india.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://rubinoxmetal.com/materials/api-5l-x52-pipe-supplier-india.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://rubinoxmetal.com/materials/api-5l-x65-pipe-supplier-india.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://rubinoxmetal.com/materials/is-2062-steel-supplier-india.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://rubinoxmetal.com/materials/is-1239-pipe-supplier-india.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://rubinoxmetal.com/materials/is-3589-pipe-supplier-india.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://rubinoxmetal.com/materials/astm-a106-grade-b-pipe-supplier-india.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://rubinoxmetal.com/materials/astm-a53-grade-b-pipe-supplier-india.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://rubinoxmetal.com/materials/astm-a333-grade-6-pipe-supplier-india.html</loc>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
