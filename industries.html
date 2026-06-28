@@ -654,7 +654,14 @@ a.relItem:hover:not(:focus-visible),
 .faqItem{padding:18px !important}
 .faqItem h3{margin:0 0 10px !important;line-height:1.28}
 .faqItem p{margin:0;line-height:1.65}
-</style>
+/* PRIMARY HERO VISUAL */
+.premiumHero.hasHeroVisual{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(280px,.92fr);gap:24px;align-items:center}
+.premiumHero .heroCopy{min-width:0}
+.premiumHero .heroVisual{position:relative;display:block;border-radius:12px;overflow:hidden;border:1px solid rgba(247,198,91,.24);box-shadow:0 20px 46px rgba(7,16,31,.28);background:rgba(255,255,255,.08)}
+.premiumHero .heroVisual:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,16,31,.08),rgba(19,42,99,.20));z-index:1;pointer-events:none}
+.premiumHero .heroVisual img{display:block;width:100%;height:clamp(240px,28vw,350px);object-fit:cover;filter:saturate(1.04) contrast(1.03)}
+@media(max-width:900px){.premiumHero.hasHeroVisual{grid-template-columns:1fr}.premiumHero .heroVisual img{height:220px}}
+@media(max-width:520px){.premiumHero .heroVisual img{height:190px}}</style>
 </head>
 <body>
 <a class="skipLink" href="#main-content">Skip to main content</a>
@@ -734,7 +741,7 @@ a.relItem:hover:not(:focus-visible),
 </header>
 <div class="page" id="main-content" role="main">
 
-  <section class="premiumHero">
+  <section class="premiumHero hasHeroVisual"><div class="heroCopy">
     <div class="crumb"><a href="/">Home</a> &bull; Industries We Serve</div>
     <h1>Industries We Serve</h1>
     <p>
@@ -758,7 +765,7 @@ a.relItem:hover:not(:focus-visible),
          href="/quotation.html"
          onclick="return trackLeadAndGo('navigation','industries_hero_quote_page', this.href, false)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8l4 4v14H4V3h4z"></path><path d="M16 3v5h5"></path><path d="M8 13h8"></path><path d="M8 17h6"></path></svg>Quotation Page</a>
     </div>
-  </section>
+  </div><div class="heroVisual"><img src="/assets/industry-chemical.webp" width="1200" height="684" alt="Industrial process plant and piping for sectors served by Rubinox" decoding="async" loading="lazy"></div></section>
 
   <div class="trustStrip" aria-label="Rubinox industrial supply trust signals">
     <div class="trustItem">PAN India Supply<small>Project and plant requirements across India.</small></div>

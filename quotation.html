@@ -587,7 +587,14 @@ a.relItem:hover:not(:focus-visible),
 .faqItem{padding:18px !important}
 .faqItem h3{margin:0 0 10px !important;line-height:1.28}
 .faqItem p{margin:0;line-height:1.65}
-</style>
+/* PRIMARY HERO VISUAL */
+.premiumHero.hasHeroVisual{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(280px,.92fr);gap:24px;align-items:center}
+.premiumHero .heroCopy{min-width:0}
+.premiumHero .heroVisual{position:relative;display:block;border-radius:12px;overflow:hidden;border:1px solid rgba(247,198,91,.24);box-shadow:0 20px 46px rgba(7,16,31,.28);background:rgba(255,255,255,.08)}
+.premiumHero .heroVisual:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,16,31,.08),rgba(19,42,99,.20));z-index:1;pointer-events:none}
+.premiumHero .heroVisual img{display:block;width:100%;height:clamp(240px,28vw,350px);object-fit:cover;filter:saturate(1.04) contrast(1.03)}
+@media(max-width:900px){.premiumHero.hasHeroVisual{grid-template-columns:1fr}.premiumHero .heroVisual img{height:220px}}
+@media(max-width:520px){.premiumHero .heroVisual img{height:190px}}</style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://rubinoxmetal.com/quotation.html#webpage","url":"https://rubinoxmetal.com/quotation.html","name":"Request Metal Quotation | Industrial Metals RFQ | Rubinox","description":"Send an RFQ to Rubinox for stainless steel, nickel alloys, duplex, titanium and industrial metals. Share grade, form, size, quantity, standard, documentation and delivery details.","isPartOf":{"@type":"WebSite","name":"Rubinox Metal and Alloys","url":"https://rubinoxmetal.com/"},"about":{"@type":"Organization","name":"Rubinox Metal and Alloys"}},{"@type":"BreadcrumbList","@id":"https://rubinoxmetal.com/quotation.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rubinoxmetal.com/"},{"@type":"ListItem","position":2,"name":"Request Quotation","item":"https://rubinoxmetal.com/quotation.html"}]}]}
   </script>
@@ -669,7 +676,7 @@ a.relItem:hover:not(:focus-visible),
 
   <main id="main-content">
 
-    <section class="premiumHero" aria-labelledby="quotation-title">
+    <section class="premiumHero hasHeroVisual" aria-labelledby="quotation-title"><div class="heroCopy">
       <div class="wrap heroGrid">
         <div>
           <div class="crumb"><a href="/">Home</a> &gt; Request Quotation</div>
@@ -688,7 +695,7 @@ a.relItem:hover:not(:focus-visible),
           </div>
         </div>
       </div>
-    </section>
+    </div><div class="heroVisual"><img src="/assets/blog/metal-rfq-checklist-for-buyers.webp" width="1200" height="675" alt="Metal RFQ checklist with grade form size quantity and documentation details" decoding="async" loading="lazy"></div></section>
 
     <section class="section" aria-labelledby="rfq-guidance-title">
       <div class="wrap">
