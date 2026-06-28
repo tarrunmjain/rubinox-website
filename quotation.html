@@ -734,7 +734,7 @@ a.relItem:hover:not(:focus-visible),
       <div class="wrap">
         <div class="sectionHead">
           <h2 id="submit-rfq-title">Submit Your RFQ Details</h2>
-          <p>Share your requirement and your email application will open with the RFQ details pre-filled.</p>
+          <p>Share your requirement and your email or WhatsApp application will open with the RFQ details pre-filled.</p>
         </div>
         <div class="rfqFormShell">
           <form class="rfqFormCard" id="static-rfq-form" novalidate>
@@ -764,6 +764,10 @@ a.relItem:hover:not(:focus-visible),
                 <input id="rfq-grade" name="grade" type="text" />
               </div>
               <div class="formField">
+                <label for="rfq-standard">Standard / Specification</label>
+                <input id="rfq-standard" name="standard" type="text" placeholder="ASTM, ASME, EN, DIN, IS or project spec" />
+              </div>
+              <div class="formField">
                 <label for="rfq-product-form">Product Form</label>
                 <select id="rfq-product-form" name="productForm">
                   <option value="">Select product form</option>
@@ -789,20 +793,20 @@ a.relItem:hover:not(:focus-visible),
                 <input id="rfq-quantity" name="quantity" type="text" required />
               </div>
               <div class="formField">
-                <label for="rfq-location">Delivery Location</label>
+                <label for="rfq-location">Delivery Location / Port</label>
                 <input id="rfq-location" name="deliveryLocation" type="text" autocomplete="address-level2" />
               </div>
               <div class="formField full">
-                <label for="rfq-notes">Notes to Rubinox</label>
+                <label for="rfq-notes">Message / Documentation Notes</label>
                 <textarea id="rfq-notes" name="notes"></textarea>
               </div>
             </div>
             <div class="formActions">
               <button class="btn btnGold" type="submit">Send RFQ by Email</button>
-              <button class="btn btnLine" type="button" id="rfq-whatsapp">Send Requirement on WhatsApp</button>
+              <button class="btn btnLine" type="button" id="rfq-whatsapp">Send RFQ by WhatsApp</button>
             </div>
             <p class="formStatus" id="rfq-form-status" role="status" aria-live="polite"></p>
-            <p class="formNote">This static form opens your own email or WhatsApp application. Rubinox does not store form data on this website.</p>
+            <p class="formNote">This static form opens your own email or WhatsApp application. Rubinox does not store form data on this website. RFQs are reviewed during business hours; response time depends on grade, size, quantity, documentation and sourcing requirements.</p>
           </form>
           <div class="rfqHelpCard">
             <h3>Before You Send</h3>
@@ -1028,7 +1032,7 @@ a.relItem:hover:not(:focus-visible),
       </div>
     </div>
   </div>
-  <div class="footerBottom"><div class="wrap">&copy; Rubinox Metal and Alloys. All rights reserved.</div></div>
+  <div class="footerBottom"><div class="wrap">&copy; 2026 Rubinox Metal and Alloys. All rights reserved.</div></div>
 </footer>
 
   <script>
@@ -1057,11 +1061,12 @@ a.relItem:hover:not(:focus-visible),
           'Contact: ' + fieldValue('rfq-contact'),
           'Material: ' + fieldValue('rfq-material'),
           'Grade: ' + fieldValue('rfq-grade'),
+          'Standard / Specification: ' + fieldValue('rfq-standard'),
           'Product Form: ' + fieldValue('rfq-product-form'),
           'Size: ' + fieldValue('rfq-size'),
           'Quantity: ' + fieldValue('rfq-quantity'),
-          'Delivery Location: ' + fieldValue('rfq-location'),
-          'Notes: ' + fieldValue('rfq-notes')
+          'Delivery Location / Port: ' + fieldValue('rfq-location'),
+          'Message / Documentation Notes: ' + fieldValue('rfq-notes')
         ].join('\n');
       }
       form.addEventListener('submit', function(event){
@@ -1081,10 +1086,18 @@ a.relItem:hover:not(:focus-visible),
             '',
             'I would like a quotation for:',
             '',
+            'Name: ' + fieldValue('rfq-name'),
+            'Company: ' + fieldValue('rfq-company'),
+            'Email: ' + fieldValue('rfq-email'),
+            'Contact: ' + fieldValue('rfq-contact'),
             'Material: ' + fieldValue('rfq-material'),
             'Grade: ' + fieldValue('rfq-grade'),
+            'Standard / Specification: ' + fieldValue('rfq-standard'),
+            'Product Form: ' + fieldValue('rfq-product-form'),
             'Size: ' + fieldValue('rfq-size'),
-            'Quantity: ' + fieldValue('rfq-quantity')
+            'Quantity: ' + fieldValue('rfq-quantity'),
+            'Delivery Location / Port: ' + fieldValue('rfq-location'),
+            'Message / Documentation Notes: ' + fieldValue('rfq-notes')
           ].join('\n');
           var whatsapp = 'https://wa.me/919363193755?text=' + encodeURIComponent(message);
           if (status) status.textContent = 'Opening WhatsApp with your requirement.';

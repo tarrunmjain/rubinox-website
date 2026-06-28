@@ -548,7 +548,7 @@
     }
     .whyTileGrid{
       display:grid;
-      grid-template-columns:repeat(8,minmax(0,1fr));
+      grid-template-columns:repeat(4,minmax(0,1fr));
       gap:12px;
       margin-top:16px;
       align-items:stretch;
@@ -556,12 +556,14 @@
     .whyTile{
       position:relative;
       overflow:hidden;
-      min-height:86px;
-      padding:14px 10px;
+      min-height:142px;
+      padding:16px 14px;
       display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
+      flex-direction:column;
+      align-items:flex-start;
+      justify-content:flex-start;
+      gap:8px;
+      text-align:left;
       background:linear-gradient(180deg,#ffffff,#f8fafc);
       border:1px solid rgba(16,37,84,.12);
       border-radius:8px;
@@ -584,6 +586,12 @@
       line-height:1.25;
       font-weight:800;
       letter-spacing:0;
+    }
+    .whyTile p{
+      margin:0;
+      color:var(--muted2);
+      font-size:12px;
+      line-height:1.45;
     }
     .card p{
       margin:0;
@@ -847,8 +855,9 @@
       .formsGrid,.materialSupplyGrid{grid-template-columns:1fr}
       .formImg,.materialSupplyImg{height:170px}
       .chipRow{grid-template-columns:repeat(2, minmax(0, 1fr))}
-      .whyTile{min-height:76px;padding:12px 8px}
+      .whyTile{min-height:auto;padding:12px 10px}
       .whyTile h3{font-size:12px}
+      .whyTile p{font-size:11px}
       .phase3Head{display:block}
       .phase3Head .btn{margin-top:12px;width:100%}
       .rfqFlowGrid,.docSupportGrid,.geoSupportGrid,.buyerFaqGrid,.docChecklist{grid-template-columns:1fr}
@@ -1208,7 +1217,7 @@ a.relItem:hover:not(:focus-visible),
           <div class="tradingview-widget-container__widget"></div>
         </div>
       </div>
-      <p class="marketNote">Not final selling prices. Quotes depend on grade, size, quantity and delivery.</p>
+      <p class="marketNote">Market Watch values are indicative reference signals only and do not represent live pricing, confirmed stock, or a formal quotation. Final pricing depends on grade, form, size, quantity, documentation, origin and logistics.</p>
     </div>
   </section>
   <main id="main-content">
@@ -1237,11 +1246,15 @@ a.relItem:hover:not(:focus-visible),
           </div>
 <div class="popularRow">
   <span class="popularLabel">Popular Grades:</span>
-  <a class="popularChip" href="/materials/stainless-steel.html">SS 304</a>
-  <a class="popularChip" href="/materials/stainless-steel.html">SS 316L</a>
-  <a class="popularChip" href="/materials/duplex-super-duplex.html">Duplex 2205</a>
-  <a class="popularChip" href="/materials/nickel-alloys.html">Inconel 625</a>
-  <a class="popularChip" href="/materials/nickel-alloys.html">Monel 400</a>
+  <a class="popularChip" href="/materials/ss-304-supplier-india.html">SS 304</a>
+  <a class="popularChip" href="/materials/ss-316l-supplier-india.html">SS 316L</a>
+  <a class="popularChip" href="/materials/duplex-2205-supplier-india.html">Duplex 2205</a>
+  <a class="popularChip" href="/materials/super-duplex-2507-supplier-india.html">Super Duplex 2507</a>
+  <a class="popularChip" href="/materials/inconel-625-supplier-india.html">Inconel 625</a>
+  <a class="popularChip" href="/materials/monel-400-supplier-india.html">Monel 400</a>
+  <a class="popularChip" href="/materials/hastelloy-c-276-supplier-india.html">Hastelloy C276</a>
+  <a class="popularChip" href="/materials/titanium-grade-2-supplier-india.html">Titanium Grade 2</a>
+  <a class="popularChip" href="/materials/smo-254-supplier-india.html">SMO 254</a>
 </div>
           <div class="kpi">
             <div class="box">
@@ -1505,14 +1518,14 @@ a.relItem:hover:not(:focus-visible),
     <div class="wrap">
       <h2 style="margin:0 0 10px;color:#132a63">Why Choose Rubinox Metal &amp; Alloys?</h2>
       <div class="whyTileGrid">
-        <div class="whyTile"><h3>Wide Grade Range</h3></div>
-        <div class="whyTile"><h3>RFQ Review Support</h3></div>
-        <div class="whyTile"><h3>PAN India Enquiries</h3></div>
-        <div class="whyTile"><h3>Export Enquiry Support</h3></div>
-        <div class="whyTile"><h3>MTC &amp; Inspection Review</h3></div>
-        <div class="whyTile"><h3>Project Supply Coordination</h3></div>
-        <div class="whyTile"><h3>Multi-Item BOQ Support</h3></div>
-        <div class="whyTile"><h3>Buyer-Focused Communication</h3></div>
+        <div class="whyTile"><h3>Wide Grade Range</h3><p>Stainless steel, duplex, nickel alloys, titanium, SMO 254, aluminium, copper, brass and carbon or mild steel enquiries can be reviewed by grade, form and specification.</p></div>
+        <div class="whyTile"><h3>RFQ Review Support</h3><p>Buyers can share grade, size, quantity, standard, MTC or inspection notes and delivery location for clearer quotation review.</p></div>
+        <div class="whyTile"><h3>PAN India Enquiries</h3><p>Mumbai-based enquiry coordination supports purchase teams, fabricators, EPC buyers and project users across India.</p></div>
+        <div class="whyTile"><h3>Export Enquiry Support</h3><p>Export RFQs can include destination, port, packing expectation, documentation needs and product specifications for review.</p></div>
+        <div class="whyTile"><h3>MTC &amp; Inspection Review</h3><p>Documentation, PMI and third-party inspection requirements are reviewed where applicable and should be stated before quotation.</p></div>
+        <div class="whyTile"><h3>Project Supply Coordination</h3><p>Multi-grade and multi-form requirements can be coordinated against buyer specifications, source route and project schedule.</p></div>
+        <div class="whyTile"><h3>Multi-Item BOQ Support</h3><p>BOQ, MTO and drawing-based lists are easier to review when each line includes grade, form, size, quantity and standard.</p></div>
+        <div class="whyTile"><h3>Buyer-Focused Communication</h3><p>Rubinox keeps RFQ discussion practical, specification-led and aligned with sourcing feasibility instead of unsupported stock or price promises.</p></div>
       </div>
     </div>
   </section>
@@ -1738,7 +1751,7 @@ in pipes, tubes, sheets, plates, coils, flanges and fittings for industrial appl
       </div>
     </div>
   </div>
-  <div class="footerBottom"><div class="wrap">&copy; Rubinox Metal and Alloys. All rights reserved.</div></div>
+  <div class="footerBottom"><div class="wrap">&copy; 2026 Rubinox Metal and Alloys. All rights reserved.</div></div>
 </footer>
   <script>
     function loadMarketTicker(){
