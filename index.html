@@ -616,14 +616,17 @@
       max-width:82ch;
       line-height:1.7;
     }
-    .formsGrid{
+    .formsGrid,
+    .materialSupplyGrid{
       display:grid;
       grid-template-columns:repeat(4, 1fr);
       gap:16px;
       align-items:stretch;
       margin-top:12px;
     }
-    .formCard{
+    .formCard,
+    .materialSupplyCard{
+      position:relative;
       background:#fff;
       border:1px solid rgba(16,37,84,.12);
       border-radius:8px;
@@ -636,28 +639,41 @@
       cursor:pointer;
       text-decoration:none;
       color:inherit;
-    }.formCard:focus-visible{outline:3px solid rgba(247,198,91,.55);outline-offset:3px;border-color:rgba(226,160,47,.72)}
-    .formCard:hover{
+    }.formCard:focus-visible,.materialSupplyCard:focus-visible{outline:3px solid rgba(247,198,91,.55);outline-offset:3px;border-color:rgba(226,160,47,.72)}
+    .formCard:hover,
+    .materialSupplyCard:hover{
       transform:translateY(-4px);
       box-shadow:0 18px 38px rgba(7,16,31,.14);
       border-color:rgba(226,160,47,.45);
     }
-    .formImg{
+    .formImg,
+    .materialSupplyImg{
       height:150px;
       width:100%;
       display:block;
       object-fit:cover;
       transition:transform .5s ease;
     }
-    .formCard:hover .formImg{transform:scale(1.06)}
-    .formBody{padding:14px 16px 16px}
-    .formTitle{
+    .formCard:hover .formImg,.materialSupplyCard:hover .materialSupplyImg{transform:scale(1.06)}
+    .materialSupplyCard::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      height:3px;
+      z-index:2;
+      background:linear-gradient(90deg,var(--accent),var(--navy3));
+      opacity:.9;
+    }
+    .formBody,.materialSupplyBody{padding:14px 16px 16px}
+    .formTitle,.materialSupplyTitle{
       margin:0 0 6px;
       color:var(--navy3);
       font-size:16px;
       font-weight:900;
     }
-    .formDesc{
+    .formDesc,.materialSupplyDesc{
       margin:0;
       color:var(--muted2);
       font-size:13px;
@@ -674,7 +690,7 @@
       font-weight:900;
       border:1px solid rgba(226,160,47,.28);
     }
-    @media(max-width:1100px){.formsGrid{grid-template-columns:repeat(2, 1fr)}}
+    @media(max-width:1100px){.formsGrid,.materialSupplyGrid{grid-template-columns:repeat(2, 1fr)}}
     .chipRow{
       margin-top:14px;
       display:grid;
@@ -828,8 +844,8 @@
       .grid2{grid-template-columns:1fr}
       .kpi{grid-template-columns:1fr}
       .heroMedia{min-height:220px}
-      .formsGrid{grid-template-columns:1fr}
-      .formImg{height:170px}
+      .formsGrid,.materialSupplyGrid{grid-template-columns:1fr}
+      .formImg,.materialSupplyImg{height:170px}
       .chipRow{grid-template-columns:repeat(2, minmax(0, 1fr))}
       .whyTile{min-height:76px;padding:12px 8px}
       .whyTile h3{font-size:12px}
@@ -1278,139 +1294,91 @@ in pipes, tubes, sheets, plates, coils, flanges and fittings for industrial appl
   <section class="section" id="materials">
     <div class="wrap">
       <h2 style="margin:0 0 10px;color:#132a63">Materials We Supply</h2>
-      <div class="cards">
-        <a href="/materials/stainless-steel.html">
-          <div class="card">
-            <div class="cardTop">
-              <span class="cardIcon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 2 20 6v6c0 5-3.5 9.5-8 10-4.5-.5-8-5-8-10V6l8-4z"/></svg>
-              </span>
-              <h3>Stainless Steel</h3>
-            </div>
-            <p>200 / 300 series, 400 series, duplex and PH grades.</p>
+      <div class="materialSupplyGrid">
+        <a class="materialSupplyCard" href="/materials/stainless-steel.html">
+          <img width="1400" height="933" class="materialSupplyImg" src="/assets/mat-stainless.webp" alt="Stainless steel coils sheets pipes and industrial metal products" decoding="async" loading="lazy">
+          <div class="materialSupplyBody">
+            <h3 class="materialSupplyTitle">Stainless Steel</h3>
+            <p class="materialSupplyDesc">200 / 300 series, 400 series, duplex and PH grades.</p>
           </div>
         </a>
-        <a href="/materials/aluminium.html">
-          <div class="card">
-            <div class="cardTop">
-              <span class="cardIcon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M20 7c0-3-3-5-6-5C8 2 4 7 4 12v8h8c5 0 8-4 8-13z"/><path d="M4 16c6 0 10-4 16-10"/><path d="M8 20c4-1 7-4 10-8"/></svg>
-              </span>
-              <h3>Aluminium</h3>
-            </div>
-            <p>1000&ndash;8000 series alloys like 6061, 6063, 7075 and more.</p>
+        <a class="materialSupplyCard" href="/materials/aluminium.html">
+          <img width="1400" height="933" class="materialSupplyImg" src="/assets/mat-aluminium.webp" alt="Aluminium sheets plates pipes and industrial alloy products" decoding="async" loading="lazy">
+          <div class="materialSupplyBody">
+            <h3 class="materialSupplyTitle">Aluminium</h3>
+            <p class="materialSupplyDesc">1000&ndash;8000 series alloys like 6061, 6063, 7075 and more.</p>
           </div>
         </a>
-        <a href="/materials/copper.html">
-          <div class="card">
-            <div class="cardTop">
-              <span class="cardIcon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M7 7a5 5 0 1 1 10 0v10a5 5 0 1 1-10 0V9a3 3 0 1 1 6 0v8a1 1 0 1 1-2 0V10"/></svg>
-              </span>
-              <h3>Copper</h3>
-            </div>
-            <p>C101, C110, C122 and more.</p>
+        <a class="materialSupplyCard" href="/materials/copper.html">
+          <img width="1400" height="933" class="materialSupplyImg" src="/assets/mat-copper.webp" alt="Copper bars rods sheets and industrial copper alloy products" decoding="async" loading="lazy">
+          <div class="materialSupplyBody">
+            <h3 class="materialSupplyTitle">Copper</h3>
+            <p class="materialSupplyDesc">C101, C110, C122 and more.</p>
           </div>
         </a>
-        <a href="/materials/brass.html">
-          <div class="card">
-            <div class="cardTop">
-              <span class="cardIcon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M8 3h8l5 9-5 9H8L3 12 8 3z"/><path d="M9.5 9.5h5v5h-5z"/></svg>
-              </span>
-              <h3>Brass</h3>
-            </div>
-            <p>C260, C360, C464 and more.</p>
+        <a class="materialSupplyCard" href="/materials/brass.html">
+          <img width="1400" height="933" class="materialSupplyImg" src="/assets/mat-brass.webp" alt="Brass rods sheets and industrial brass alloy products" decoding="async" loading="lazy">
+          <div class="materialSupplyBody">
+            <h3 class="materialSupplyTitle">Brass</h3>
+            <p class="materialSupplyDesc">C260, C360, C464 and more.</p>
           </div>
         </a>
-        <a href="/materials/carbon-steel.html">
-          <div class="card">
-            <div class="cardTop">
-              <span class="cardIcon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 17h16"/><path d="M7 7v10"/><path d="M17 7v10"/></svg>
-              </span>
-              <h3>Carbon Steel</h3>
-            </div>
-            <p>A36, 1018, 1045, A516 Gr 70 and more.</p>
+        <a class="materialSupplyCard" href="/materials/carbon-steel.html">
+          <img width="1400" height="933" class="materialSupplyImg" src="/assets/mat-carbon-steel.webp" alt="Carbon steel plates bars pipes and industrial steel products" decoding="async" loading="lazy">
+          <div class="materialSupplyBody">
+            <h3 class="materialSupplyTitle">Carbon Steel</h3>
+            <p class="materialSupplyDesc">A36, 1018, 1045, A516 Gr 70 and more.</p>
           </div>
         </a>
-        <a href="/materials/mild-steel.html">
-          <div class="card">
-            <div class="cardTop">
-              <span class="cardIcon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M14 4 20 10l-2 2-6-6 2-2z"/><path d="M11 7 6 12"/><path d="M5 13l6 6"/><path d="M3 15l2-2"/></svg>
-              </span>
-              <h3>Mild Steel</h3>
-            </div>
-            <p>A36, A500, 1018, 1020, S235, S355 and more.</p>
+        <a class="materialSupplyCard" href="/materials/mild-steel.html">
+          <img width="1400" height="933" class="materialSupplyImg" src="/assets/mat-mild-steel.webp" alt="Mild steel structural sections plates and fabrication materials" decoding="async" loading="lazy">
+          <div class="materialSupplyBody">
+            <h3 class="materialSupplyTitle">Mild Steel</h3>
+            <p class="materialSupplyDesc">A36, A500, 1018, 1020, S235, S355 and more.</p>
           </div>
         </a>
-        <a href="/materials/nickel-alloys.html">
-          <div class="card">
-            <div class="cardTop">
-              <span class="cardIcon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 2s4 4 4 8a4 4 0 0 1-8 0c0-2 1-4 2-6"/><path d="M6 14a6 6 0 0 0 12 0c0-2-1-4-3-6"/></svg>
-              </span>
-              <h3>Nickel Alloys</h3>
-            </div>
-            <p>Inconel, Monel, Hastelloy, Incoloy and more.</p>
+        <a class="materialSupplyCard" href="/materials/nickel-alloys.html">
+          <img width="1400" height="933" class="materialSupplyImg" src="/assets/mat-nickel-alloys.webp" alt="Nickel alloy pipes plates bars and corrosion resistant materials" decoding="async" loading="lazy">
+          <div class="materialSupplyBody">
+            <h3 class="materialSupplyTitle">Nickel Alloys</h3>
+            <p class="materialSupplyDesc">Inconel, Monel, Hastelloy, Incoloy and more.</p>
           </div>
         </a>
-        <a href="/materials/duplex-super-duplex.html">
-          <div class="card">
-            <div class="cardTop">
-              <span class="cardIcon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7 0l2-2a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-2 2a5 5 0 0 0 7 7l1-1"/></svg>
-              </span>
-              <h3>Duplex &amp; Super Duplex</h3>
-            </div>
-            <p>2205, 2507, Zeron 100 and more.</p>
+        <a class="materialSupplyCard" href="/materials/duplex-super-duplex.html">
+          <img width="1400" height="933" class="materialSupplyImg" src="/assets/mat-duplex.webp" alt="Duplex and super duplex stainless steel products for industrial applications" decoding="async" loading="lazy">
+          <div class="materialSupplyBody">
+            <h3 class="materialSupplyTitle">Duplex &amp; Super Duplex</h3>
+            <p class="materialSupplyDesc">2205, 2507, Zeron 100 and more.</p>
           </div>
         </a>
-        <a href="/materials/smo-254.html">
-          <div class="card">
-            <div class="cardTop">
-              <span class="cardIcon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 2s7 8 7 13a7 7 0 0 1-14 0c0-5 7-13 7-13z"/></svg>
-              </span>
-              <h3>SMO 254</h3>
-            </div>
-            <p>UNS S31254, 6Mo high corrosion resistant grade.</p>
+        <a class="materialSupplyCard" href="/materials/smo-254.html">
+          <img width="1400" height="933" class="materialSupplyImg" src="/assets/mat-smo254.webp" alt="SMO 254 corrosion resistant stainless steel material products" decoding="async" loading="lazy">
+          <div class="materialSupplyBody">
+            <h3 class="materialSupplyTitle">SMO 254</h3>
+            <p class="materialSupplyDesc">UNS S31254, 6Mo corrosion-resistant grade.</p>
           </div>
         </a>
-        <a href="/materials/titanium.html">
-          <div class="card">
-            <div class="cardTop">
-              <span class="cardIcon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M14 3c4 1 7 4 7 7-3 2-6 3-10 3-1 4-2 7-4 10-3 0-6-3-6-6 3-2 6-3 10-4 0-4 1-7 3-10z"/><path d="M9 14l-2 2"/><path d="M12 11a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
-              </span>
-              <h3>Titanium</h3>
-            </div>
-            <p>Grade 1, 2, 5, 23 and more.</p>
+        <a class="materialSupplyCard" href="/materials/titanium.html">
+          <img width="1400" height="933" class="materialSupplyImg" src="/assets/mat-titanium.webp" alt="Titanium sheets bars pipes and industrial titanium grades" decoding="async" loading="lazy">
+          <div class="materialSupplyBody">
+            <h3 class="materialSupplyTitle">Titanium</h3>
+            <p class="materialSupplyDesc">Grade 1, 2, 5, 23 and more.</p>
           </div>
         </a>
-        <a href="/materials/phosphor-bronze.html">
-          <div class="card">
-            <div class="cardTop">
-              <span class="cardIcon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M7 7a3 3 0 0 1 6 0v10a3 3 0 0 1-6 0V9a1 1 0 0 1 2 0v8a1 1 0 0 0 2 0V7"/><path d="M14 7h3a3 3 0 0 1 3 3v7a4 4 0 0 1-4 4h-2"/></svg>
-              </span>
-              <h3>Phosphor Bronze</h3>
-            </div>
-            <p>C510, C521, C544 and more.</p>
+        <a class="materialSupplyCard" href="/materials/phosphor-bronze.html">
+          <img width="1400" height="933" class="materialSupplyImg" src="/assets/mat-phosphor-bronze.webp" alt="Phosphor bronze strips sheets rods and industrial bronze alloys" decoding="async" loading="lazy">
+          <div class="materialSupplyBody">
+            <h3 class="materialSupplyTitle">Phosphor Bronze</h3>
+            <p class="materialSupplyDesc">C510, C521, C544 and more.</p>
           </div>
         </a>
-        <a href="/materials/high-speed-steel.html">
-        <div class="card">
-          <div class="cardTop">
-            <span class="cardIcon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M5 7h14"/><path d="M7 12h10"/><path d="M9 17h6"/><path d="M6 5v14"/><path d="M18 5v14"/></svg>
-            </span>
-            <h3>High Speed Steel</h3>
+        <a class="materialSupplyCard" href="/materials/high-speed-steel.html">
+          <img width="1400" height="933" class="materialSupplyImg" src="/assets/mat-high-speed-steel.svg" alt="High speed steel bars and tooling material enquiries" decoding="async" loading="lazy">
+          <div class="materialSupplyBody">
+            <h3 class="materialSupplyTitle">High Speed Steel</h3>
+            <p class="materialSupplyDesc">HSS M2, M35, M42 and T1 enquiries.</p>
           </div>
-          <p>HSS M2, M35, M42 and T1 enquiries for tooling, machining and cut-size requirements.</p>
-        </div>
-      </a>
+        </a>
       </div>
     </div>
   </section>
