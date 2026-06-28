@@ -414,9 +414,37 @@ header .navlinks .btn.primary{padding:9px 11px !important}
 @media(max-width:640px){header .brand img{width:188px !important;max-width:60vw !important;max-height:48px !important}}
 /* RUBINOX HEADER BREADCRUMB SPACING POLISH END */
 /* RUBINOX FOOTER STANDARDIZATION START */
-body{font-family:Arial,Helvetica,sans-serif!important;color:#07101f}
-main h1,main h2,main h3,main h4{color:#132a63}
-main p,main li,main td,main .sectionIntro{color:#566b9a}
+body{font-family:Arial,Helvetica,sans-serif!important;color:#566b9a}
+header{position:sticky!important;top:0!important;z-index:1000!important}
+header .topRail{background:linear-gradient(90deg,#050b16,#07101f 52%,#102554)!important;color:#d6dce8!important;border-bottom:1px solid rgba(226,160,47,.2)!important}
+header .topRail .wrap{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:16px!important}
+header .topRail .railNote{display:inline!important;color:#f6d58b!important;font-weight:700!important;line-height:1.35!important}
+header .topRail .railLinks.utilityIcons{display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:flex-end!important;gap:8px!important;flex-wrap:nowrap!important}
+header .topRail .utilityIcon,header .topRail .functionIcon,header .topRail .brandUtility,header .topRail .socialUtility{display:inline-flex!important;visibility:visible!important;opacity:1!important;width:30px!important;height:30px!important;min-width:30px!important;min-height:30px!important;max-width:30px!important;max-height:30px!important;flex:0 0 30px!important;align-items:center!important;justify-content:center!important;padding:0!important;line-height:0!important;text-decoration:none!important;border:0!important;background:transparent!important;box-shadow:none!important;border-radius:6px!important;color:#d8e0ec!important}
+header .topRail .utilityIcon:hover,header .topRail .utilityIcon:focus-visible{background:rgba(255,255,255,.08)!important;outline:2px solid rgba(247,198,91,.45)!important;outline-offset:2px!important}
+header .topRail .utilityIcon.functionIcon[href^="tel"]{color:#58d68d!important}
+header .topRail .utilityIcon.functionIcon[href^="mailto"]{color:#8ec5ff!important}
+header .topRail .utilityIcon svg{display:block!important;width:18px!important;height:18px!important;stroke:currentColor!important;stroke-width:2!important;fill:none!important;stroke-linecap:round!important;stroke-linejoin:round!important;margin:auto!important}
+header .topRail .brandUtility img{display:block!important;width:18px!important;height:18px!important;max-width:18px!important;max-height:18px!important;object-fit:contain!important;margin:auto!important}
+main h1,main h2,main h3,main h4{color:#132a63!important}
+main p,main li,main td,main .sectionIntro,main .card p,main .checkItem,main .articleCard span,main .docItem p,main .overviewCard p,main .supportCard p,main .contactItem p{color:#566b9a!important}
+main strong,main b{color:#132a63}
+main .premiumHero h1,main .premiumHero h2,main .premiumHero h3,.premiumHero h1,.premiumHero h2,.premiumHero h3{color:#fff!important;text-shadow:none!important}
+main .premiumHero p,main .premiumHero li,main .premiumHero .sectionIntro,.premiumHero p,.premiumHero li,.premiumHero .sectionIntro{color:#d7deec!important}
+main .premiumHero .crumb,main .premiumHero .crumb span,.premiumHero .crumb,.premiumHero .crumb span{color:rgba(255,255,255,.82)!important}
+main .premiumHero .crumb a,.premiumHero .crumb a{color:#fff!important;text-decoration-color:rgba(247,198,91,.92)!important}
+main .premiumHero .heroProof span,.premiumHero .heroProof span{color:#fff!important}
+main .ctaBand h2,main .ctaBand h3,.ctaBand h2,.ctaBand h3{color:#fff!important}
+main .ctaBand p,.ctaBand p{color:#d7deec!important}
+.faqGrid,.relGrid{gap:16px!important;align-items:stretch!important}
+.faqItem{padding:22px!important;border:1px solid rgba(16,37,84,.12)!important;border-radius:8px!important;background:#fff!important;box-shadow:0 10px 24px rgba(15,30,60,.05)!important;min-width:0!important;overflow:hidden!important;box-sizing:border-box!important}
+.faqItem h3{margin:0 0 12px!important;color:#132a63!important;line-height:1.3!important;font-size:clamp(17px,1.5vw,19px)!important;overflow-wrap:anywhere!important;word-break:normal!important}
+.faqItem p{margin:0!important;color:#566b9a!important;line-height:1.7!important;overflow-wrap:anywhere!important}
+.checkItem strong,.checkItem b,.checkMark{color:#132a63!important}
+main .card{max-width:100%!important;overflow-wrap:anywhere!important}
+main .card table{width:100%!important;max-width:100%!important;border-collapse:collapse!important}
+main .card table th,main .card table td{overflow-wrap:anywhere!important;word-break:normal!important;vertical-align:top!important}
+@media(max-width:760px){main .card{overflow-x:auto!important}main .card table{min-width:640px!important;width:max-content!important;max-width:none!important}}
 .siteFooter{background:#fff!important;border-top:1px solid #d8e0ec!important;margin-top:28px!important;color:#566b9a!important;padding:0!important;font-size:initial!important}
 .siteFooter .footerLayout{display:grid!important;grid-template-columns:1.4fr repeat(3,minmax(0,1fr)) 1.25fr!important;gap:24px!important;padding:34px 20px!important}
 .siteFooter .footerBrand img{max-width:220px!important;height:auto!important;display:block!important;margin-bottom:12px!important}
@@ -434,8 +462,8 @@ main p,main li,main td,main .sectionIntro{color:#566b9a}
 .siteFooter .footerIcon.functionIcon[href^="tel"]{color:#178a55!important;background:linear-gradient(145deg,#ffffff,#edf6f2)!important}
 .siteFooter .footerIcon.functionIcon[href^="mailto"]{color:#1f64b7!important;background:linear-gradient(145deg,#ffffff,#edf4ff)!important}
 .siteFooter .footerBottom{border-top:1px solid #e6ecf8!important;color:#566b9a!important;font-size:13px!important;padding:13px 0!important;background:#fff!important}
-@media(max-width:1120px){.siteFooter .footerLayout{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
-@media(max-width:760px){.siteFooter .footerLayout{grid-template-columns:1fr!important;padding:28px 18px!important}.siteFooter .footerBrand img{max-width:190px!important}.siteFooter .footerIconGroup{flex-wrap:nowrap!important;gap:6px!important}.siteFooter .footerIconGroup .footerIcon{width:32px!important;height:32px!important;min-width:32px!important;min-height:32px!important;max-width:32px!important;max-height:32px!important}}
+@media(max-width:1120px){header .topRail .wrap{flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important;gap:6px!important;padding-top:8px!important;padding-bottom:8px!important}header .topRail .railLinks.utilityIcons{justify-content:center!important;width:100%!important}.siteFooter .footerLayout{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:760px){header .topRail .railNote{display:block!important;font-size:11.5px!important}header .topRail .railLinks.utilityIcons{gap:6px!important}.faqGrid,.relGrid{grid-template-columns:1fr!important;gap:14px!important}.faqItem{padding:20px!important}.siteFooter .footerLayout{grid-template-columns:1fr!important;padding:28px 18px!important}.siteFooter .footerBrand img{max-width:190px!important}.siteFooter .footerIconGroup{flex-wrap:nowrap!important;gap:6px!important}.siteFooter .footerIconGroup .footerIcon{width:32px!important;height:32px!important;min-width:32px!important;min-height:32px!important;max-width:32px!important;max-height:32px!important}}
 /* RUBINOX FOOTER STANDARDIZATION END */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"ASTM A333 Grade 6 Pipe Supplier in India","url":"https://rubinoxmetal.com/materials/astm-a333-grade-6-pipe-supplier-india.html","@id":"https://rubinoxmetal.com/materials/astm-a333-grade-6-pipe-supplier-india.html#webpage","description":"ASTM A333 Grade 6 pipe supplier in India for low temperature carbon steel pipe RFQs with size, schedule, impact testing and MTC details.","isPartOf":{"@type":"WebSite","name":"Rubinox Metal and Alloys","url":"https://rubinoxmetal.com"},"about":{"@type":"Thing","name":"ASTM A333 Grade 6 Pipe"},"mainEntity":{"@type":"Organization","name":"Rubinox Metal and Alloys","url":"https://rubinoxmetal.com","telephone":"+91 9363193755","email":"tarun@rubinoxmetal.com"}}</script>
