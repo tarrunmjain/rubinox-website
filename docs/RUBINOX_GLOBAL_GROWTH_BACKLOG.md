@@ -134,3 +134,41 @@ Deferred scope:
 
 Safe wording strategy: city pages use PAN India RFQ support from Mumbai with stockist, supplier, importer, exporter and project supplier role language. Export pages use exporter-from-India wording for destination enquiries. Dealer wording is retained only as buyer-search language, not as Rubinox positioning.
 <!-- RUBINOX BATCH 6 END -->
+
+<!-- RUBINOX BATCH 6B START -->
+## Batch 6B - Finish Existing Location and Export Page Polish
+
+Status: implemented for 16 existing city/location pages and 4 existing country/export pages. No new public URLs were created and sitemap scope remains stable.
+
+City/location pages improved:
+- locations/bhopal-mandideep.html
+- locations/chakan-pimpri-chinchwad.html
+- locations/dholera-sanand.html
+- locations/greater-noida.html
+- locations/haridwar-rudrapur.html
+- locations/jodhpur-pali.html
+- locations/kakinada.html
+- locations/mysuru.html
+- locations/nellore-krishnapatnam.html
+- locations/salem.html
+- locations/sriperumbudur-oragadam.html
+- locations/thoothukudi.html
+- locations/tiruchirappalli.html
+- locations/tumakuru.html
+- locations/vijayawada.html
+- locations/zaheerabad.html
+
+Export pages improved:
+- export/netherlands.html
+- export/thailand.html
+- export/vietnam.html
+- export/usa.html
+
+Public-page status after Batch 6B:
+- Existing public location pages improved across Batches 5, 6A and 6B: 50 of 50.
+- Existing public export pages improved across Batches 5, 6A and 6B: 15 of 15.
+- Existing public location/export pages still deferred: none.
+- Data-only planned markets remain uncreated and gated by Search Console, enquiry history or owner-approved buyer value: Dahej, Hazira, Kochi, Rourkela, Chandigarh, Baddi, Morbi, Sri Lanka, Bangladesh, Nepal, South Africa and other roadmap candidates.
+
+Safe wording strategy: city pages use PAN India RFQ support from Mumbai with stockist, supplier, importer, exporter and project supplier role language. Dealer wording is retained only as buyer-search language, not as Rubinox positioning. Export pages use exporter-from-India wording for destination enquiries.
+<!-- RUBINOX BATCH 6B END -->

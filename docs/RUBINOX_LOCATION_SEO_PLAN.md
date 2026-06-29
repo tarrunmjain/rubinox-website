@@ -115,3 +115,37 @@ Deferred:
 
 Claim boundaries: no fake local presence, stock, price, certification, client, project, rating or timing promise is introduced. Export pages avoid destination-country local-role positioning.
 <!-- RUBINOX BATCH 6 END -->
+
+<!-- RUBINOX BATCH 6B START -->
+## Batch 6B Existing Page Finish
+
+Batch 6B completes polish for the remaining existing public city/location and country/export pages not covered by Batch 5 or Batch 6A. It does not create city, state, country/export or product-location URLs and does not add sitemap URLs.
+
+Improved city/location pages:
+- locations/bhopal-mandideep.html
+- locations/chakan-pimpri-chinchwad.html
+- locations/dholera-sanand.html
+- locations/greater-noida.html
+- locations/haridwar-rudrapur.html
+- locations/jodhpur-pali.html
+- locations/kakinada.html
+- locations/mysuru.html
+- locations/nellore-krishnapatnam.html
+- locations/salem.html
+- locations/sriperumbudur-oragadam.html
+- locations/thoothukudi.html
+- locations/tiruchirappalli.html
+- locations/tumakuru.html
+- locations/vijayawada.html
+- locations/zaheerabad.html
+
+Improved export pages:
+- export/netherlands.html
+- export/thailand.html
+- export/vietnam.html
+- export/usa.html
+
+After Batch 6B, all 50 existing public location pages and all 15 existing public export pages have been improved across the location/export rollout. Planned/data-only locations and export markets remain deferred until evidence supports differentiated public content.
+
+Claim boundaries: no fake local presence, stock, price, certification, client, project, rating or timing promise is introduced. Export pages avoid destination-country local-role positioning.
+<!-- RUBINOX BATCH 6B END -->
