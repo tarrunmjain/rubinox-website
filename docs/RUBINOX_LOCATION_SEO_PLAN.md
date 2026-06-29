@@ -1,4 +1,3 @@
-
 # Rubinox Location SEO Plan
 
 Date: 2026-06-29
@@ -61,3 +60,58 @@ Sitemap status: unchanged. Existing URLs remain canonical and no sitemap URL add
 
 Future location work should remain query-led. Expand only where Search Console, enquiry history or clear buyer value supports unique content, and keep local presence, inventory and delivery timing claims out unless owner-verified.
 <!-- RUBINOX BATCH 5 LOCATION PILOT END -->
+
+<!-- RUBINOX BATCH 6 START -->
+## Batch 6A Location and Export Rollout
+
+Batch 6A improves only existing public pages. It does not create city, state or country doorway pages and does not add sitemap URLs.
+
+Improved city/location pages:
+- locations/navi-mumbai.html
+- locations/thane.html
+- locations/hyderabad.html
+- locations/gurugram-manesar.html
+- locations/noida.html
+- locations/faridabad.html
+- locations/ghaziabad.html
+- locations/rajkot.html
+- locations/vapi.html
+- locations/ankleshwar.html
+- locations/bharuch.html
+- locations/kolkata-howrah-durgapur.html
+- locations/coimbatore.html
+- locations/visakhapatnam.html
+- locations/nagpur.html
+- locations/nashik.html
+- locations/indore-pithampur.html
+- locations/raipur.html
+- locations/bhilai.html
+- locations/jamshedpur.html
+- locations/ludhiana.html
+- locations/jaipur.html
+- locations/chhatrapati-sambhajinagar-aurangabad.html
+- locations/mangaluru.html
+- locations/hosur.html
+
+Improved export pages:
+- export/saudi-arabia.html
+- export/oman.html
+- export/qatar.html
+- export/kuwait.html
+- export/bahrain.html
+- export/singapore.html
+- export/malaysia.html
+- export/australia.html
+- export/uk.html
+- export/germany.html
+
+Data correction documented before implementation: the Chhatrapati Sambhajinagar / Aurangabad local page already existed at https://rubinoxmetal.com/locations/chhatrapati-sambhajinagar-aurangabad.html; data/location-seo-map.csv previously had the market as a planned Aurangabad candidate with existing_page=no. Batch 6A maps it to the existing URL without creating a page.
+
+Deferred:
+- Existing lower-priority city pages not included in Batch 6A: bhopal-mandideep, chakan-pimpri-chinchwad, dholera-sanand, greater-noida, haridwar-rudrapur, jamnagar, jodhpur-pali, kakinada, mysuru, nellore-krishnapatnam, salem, sriperumbudur-oragadam, thoothukudi, tiruchirappalli, tumakuru, vijayawada, zaheerabad.
+- Planned/data-only locations without existing public pages remain deferred: Dahej, Hazira, Kochi, Rourkela, Chandigarh, Baddi, Morbi and other roadmap candidates.
+- Existing export pages deferred to Batch 6B: export/netherlands.html, export/thailand.html, export/vietnam.html, export/usa.html.
+- Planned/data-only export markets without existing public pages remain deferred: Sri Lanka, Bangladesh, Nepal and South Africa.
+
+Claim boundaries: no fake local presence, stock, price, certification, client, project, rating or timing promise is introduced. Export pages avoid destination-country local-role positioning.
+<!-- RUBINOX BATCH 6 END -->

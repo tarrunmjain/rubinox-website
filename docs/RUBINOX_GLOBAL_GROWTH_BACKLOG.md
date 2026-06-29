@@ -1,4 +1,3 @@
-
 # Rubinox Global Growth Backlog
 
 Date: 2026-06-29
@@ -82,3 +81,56 @@ Priority definitions:
 - Full 30-50 city rollout, state pages and product-city pages remain pending until Search Console or enquiry evidence supports them.
 - Batch 5 did not change sitemap URLs, canonical URL targets or create public pages.
 <!-- RUBINOX BATCH 5 BACKLOG END -->
+
+<!-- RUBINOX BATCH 6 START -->
+## Batch 6A - Remaining Existing Location and Export Page Rollout
+
+Status: implemented for 25 existing city/location pages and 10 existing country/export pages. No new public URLs were created and sitemap scope remains stable.
+
+City/location pages improved:
+- locations/navi-mumbai.html
+- locations/thane.html
+- locations/hyderabad.html
+- locations/gurugram-manesar.html
+- locations/noida.html
+- locations/faridabad.html
+- locations/ghaziabad.html
+- locations/rajkot.html
+- locations/vapi.html
+- locations/ankleshwar.html
+- locations/bharuch.html
+- locations/kolkata-howrah-durgapur.html
+- locations/coimbatore.html
+- locations/visakhapatnam.html
+- locations/nagpur.html
+- locations/nashik.html
+- locations/indore-pithampur.html
+- locations/raipur.html
+- locations/bhilai.html
+- locations/jamshedpur.html
+- locations/ludhiana.html
+- locations/jaipur.html
+- locations/chhatrapati-sambhajinagar-aurangabad.html
+- locations/mangaluru.html
+- locations/hosur.html
+
+Export pages improved:
+- export/saudi-arabia.html
+- export/oman.html
+- export/qatar.html
+- export/kuwait.html
+- export/bahrain.html
+- export/singapore.html
+- export/malaysia.html
+- export/australia.html
+- export/uk.html
+- export/germany.html
+
+Deferred scope:
+- Existing lower-priority city pages not included in Batch 6A: bhopal-mandideep, chakan-pimpri-chinchwad, dholera-sanand, greater-noida, haridwar-rudrapur, jamnagar, jodhpur-pali, kakinada, mysuru, nellore-krishnapatnam, salem, sriperumbudur-oragadam, thoothukudi, tiruchirappalli, tumakuru, vijayawada, zaheerabad.
+- Planned/data-only locations without existing public pages remain deferred: Dahej, Hazira, Kochi, Rourkela, Chandigarh, Baddi, Morbi and other roadmap candidates.
+- Existing export pages deferred to Batch 6B: export/netherlands.html, export/thailand.html, export/vietnam.html, export/usa.html.
+- Planned/data-only export markets without existing public pages remain deferred: Sri Lanka, Bangladesh, Nepal and South Africa.
+
+Safe wording strategy: city pages use PAN India RFQ support from Mumbai with stockist, supplier, importer, exporter and project supplier role language. Export pages use exporter-from-India wording for destination enquiries. Dealer wording is retained only as buyer-search language, not as Rubinox positioning.
+<!-- RUBINOX BATCH 6 END -->
