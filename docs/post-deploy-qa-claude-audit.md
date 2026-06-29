@@ -6,9 +6,9 @@ Local folder: C:\Users\Dell\OneDrive\Documents\rubinox-website-live
 
 ## Deployment Status
 
-GitHub Pages deployment is live. The latest Claude audit implementation pages are reflected on production: the new technical/documentation pages return 200, the new material/spec pages sampled return 200, and the live sitemap contains 238 URLs with the latest batch URLs present.
+GitHub Pages deployment is live. The latest pushed visual consistency commit is reflected on production: checked live HTML pages contain the shared hero/top-bar/FAQ/table standardization CSS from the latest push.
 
-Live `robots.txt` points to `https://rubinoxmetal.com/sitemap.xml`.
+Live `sitemap.xml` returns 200 and contains 238 URLs. Live `robots.txt` returns 200 and points to `https://rubinoxmetal.com/sitemap.xml`.
 
 ## Live Pages Checked
 
@@ -22,7 +22,7 @@ Core pages:
 - https://rubinoxmetal.com/quality-documentation-support.html
 - https://rubinoxmetal.com/registrations-compliance.html
 
-Material/spec pages visually checked from the latest batch:
+Material/spec pages checked from the latest audit batches:
 
 - https://rubinoxmetal.com/materials/copper-nickel-90-10-c70600-supplier-india.html
 - https://rubinoxmetal.com/materials/astm-a335-p91-pipe-supplier-india.html
@@ -39,47 +39,24 @@ Index files checked:
 
 - Desktop viewport: 1366 x 768
 - Mobile viewport: 390 x 844
-- Local post-fix mobile recheck for `technical-resources.html`: 390 x 844
-- Post-push live mobile recheck for `technical-resources.html`: 390 x 844
 
 ## Visual And Functional Results
 
-- Header, logo, top rail and footer were visible and consistent on the checked live pages.
-- Breadcrumbs were visible on checked inner pages. Home does not use a breadcrumb, which is expected.
-- Each checked page had exactly one H1.
-- No broken live product/hero images were found. Footer platform icons initially appeared unloaded until the footer entered view because they are lazy-loaded; direct asset checks returned 200 and the icons loaded after scrolling.
-- WhatsApp CTAs use `https://wa.me/919363193755`.
-- Email/RFQ links point to `tarun@rubinoxmetal.com`; quotation-page RFQ mailto includes prefilled subject/body context.
-- New material/spec pages sampled had substantial body content and did not feel thin.
-- Raw claim scanning found `manufacturer` only in deliberate negative FAQ wording such as "not as a manufacturer" / "should not be described as a manufacturer". No accidental manufacturer, factory, stock, pricing or certification claims were found on the checked new pages.
-- Live JSON-LD blocks on checked pages parsed successfully.
-- All 17 latest material/spec pages are present in `sitemap.xml` and linked from `grades.html` or relevant material hubs.
+- Header remains sticky/fixed on checked live pages.
+- Logo is visible on checked live pages.
+- Top bar shows the expected six utility/social links: phone, WhatsApp, email, Facebook, Instagram and LinkedIn.
+- Checked pages have one H1 each.
+- Hero H1 text on dark hero sections computes to white on checked pages.
+- No page-level horizontal overflow was found at 390px on checked pages.
+- Technical tables are contained in responsive scrollers where needed.
+- Breadcrumbs are visible on checked inner pages. Home page does not use breadcrumbs, as expected.
+- Footer links are present on checked pages.
+- WhatsApp links point to `https://wa.me/919363193755`.
+- Email links use `mailto:tarun@rubinoxmetal.com`; RFQ pages retain prefilled context where implemented.
+- Direct asset verification found 43 image/icon URLs from checked pages returning 200. Browser lazy-loading timing produced transient `complete=false` signals before assets entered view, but direct URL checks confirmed no broken sampled assets.
+- Live claim scan found no forbidden patterns for factory/manufacturing claims, ready-stock guarantees, lowest/live price claims, fake review schema or rating schema on checked pages.
 
-## Issues Found
-
-1. `technical-resources.html` had mobile horizontal overflow at 390px on the live deployment. The overflow came from the comparison/resource card grid around wide technical tables, while the tables themselves were already in horizontal scrollers.
-2. `npm run qa:html` still reports 59 invalid legacy pages. The changed/new Claude audit pages checked in this pass validate, including `technical-resources.html`, `quality-documentation-support.html`, and `registrations-compliance.html`.
-3. Running `npm run ...` directly in PowerShell is blocked by local execution policy for `npm.ps1`; the equivalent `npm.cmd run ...` commands were used.
-
-## Fixes Applied
-
-- Added a small mobile-only CSS constraint to `technical-resources.html` so card grids and link grids do not expand past the mobile viewport while preserving internal table scrolling.
-- No new pages were created.
-- No broad design, layout or content changes were made.
-
-Post-fix local mobile check for `technical-resources.html` at 390px:
-
-- `documentElement.clientWidth`: 375
-- `documentElement.scrollWidth`: 375
-- Technical tables remain scrollable inside their wrappers.
-
-Post-push live mobile check for `technical-resources.html` at 390px:
-
-- `documentElement.clientWidth`: 390
-- `documentElement.scrollWidth`: 390
-- `tableOverflowOk`: true
-
-## QA Results
+## QA Results Before This Batch
 
 Commands were run from `C:\Users\Dell\OneDrive\Documents\rubinox-website-live` using `npm.cmd run ...`.
 
@@ -89,11 +66,18 @@ Commands were run from `C:\Users\Dell\OneDrive\Documents\rubinox-website-live` u
 | `npm run qa:crawl` | Pass - 370 links scanned successfully |
 | `npm run qa:schema` | Pass - 238 pages scanned, 652 JSON-LD blocks, 0 invalid blocks |
 | `npm run qa:accessibility` | Pass - 5 scripted pages checked, 0 violations |
-| `npm run qa:html` | Baseline warnings remain - 238 pages checked, 59 invalid legacy pages reported; changed audit pages checked here validate |
+| `npm run qa:html` | Known baseline - 238 pages checked, 59 invalid legacy pages reported; current Knowledge Hub and recently added resource pages validate |
 | `npm run test:navigation` | Pass - navigation verification passed |
 
-## Remaining Known Baseline Issues
+## Issues Found
 
-- The HTML validation backlog remains at 59 invalid legacy pages. This is larger than a small post-deploy QA fix and should be handled as a separate cleanup batch.
-- The pushed `technical-resources.html` mobile overflow fix was confirmed live after GitHub Pages redeployed. The remaining post-deploy work is the broader HTML validation backlog.
+No live deployment-blocking issues were found in this pass.
 
+Known baseline issue remains:
+
+- `npm run qa:html` reports 59 invalid legacy pages. This predates this batch and should remain a separate cleanup unless directly touched by implementation work.
+
+## Fixes Applied In This Phase
+
+- No site fixes were required during this live verification phase.
+- This document was updated with the current live deployment verification and baseline QA status.
