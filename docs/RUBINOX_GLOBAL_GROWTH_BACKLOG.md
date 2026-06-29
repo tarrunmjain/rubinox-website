@@ -22,16 +22,16 @@ Priority definitions:
 | P0-006 | Add conversion tracking plan | Roadmap | Conversion | P0 | Medium | Low | None | High | Medium | Yes | GA4 confirmation | Planned | Phase 0 | WhatsApp, email, phone, PDF and RFQ events |
 | P0-007 | Create page inventory | User request | All pages | P0 | High | Medium | Low | Medium | Low | No | Sitemap/local HTML | Done in this batch | Phase 0 | See data/page-inventory.csv |
 | P0-008 | Create keyword master map | User request | Keyword architecture | P0 | High | High | None | Medium | Low | No | Current URLs | Starter done | Phase 0 | Expand with GSC data |
-| P0-009 | Clean 58 legacy HTML validation issues | Design audit | Material pages | P0 | Medium | Low | Low | Low | Medium | No | qa:html baseline | Pending | Technical cleanup | Separate batch only |
+| P0-009 | Clean 58 legacy HTML validation issues | Design audit | Material pages | P0 | Medium | Low | Low | Low | Medium | No | qa:html baseline | Done in Batch 2 | Technical cleanup | qa:html now reports 0 invalid pages. |
 | P0-010 | Preserve header/footer/top rail baseline | Design audit | Sitewide design | P0 | Medium | Medium | High | Medium | Low | No | Design decision log | Active guardrail | Phase 0 | White footer, sticky header, full icon set |
 | P1-001 | Homepage buyer journey polish | Design audit | Home | P1 | High | Medium | High | High | Medium | No | Baseline lock | Pending | Phase 1 | No H1/meta/canonical changes |
 | P1-002 | Technical resources table UX polish | Design audit | Technical / documentation | P1 | High | High | High | Medium | Medium | No | Baseline lock | Pending | Phase 2 | Keep real HTML tables |
 | P1-003 | Five-page grade/spec pilot | Design audit | Grade / specification | P1 | High | High | High | High | Medium | No | Phase 2 patterns | Pending | Phase 3 | Use five listed pilot pages |
-| P1-004 | Product form page polish | Design audit | Product form pages | P1 | High | Medium | High | High | Medium | No | Pilot results | Pending | Phase 4 | Form-specific hierarchy |
+| P1-004 | Product form page polish | Design audit | Product form pages | P1 | High | Medium | High | High | Medium | No | Pilot results | Done in Batch 3 | Phase 4 | Product form RFQ polish completed; hub work remains separate. |
 | P1-005 | Product-form hub polish | Design audit | Hub pages | P1 | High | Medium | High | Medium | Low | No | Product form strategy | Pending | Phase 4 | Improve product-forms.html |
 | P1-006 | Knowledge Hub card/filter polish | Design audit | Knowledge Hub | P1 | Medium | High | High | Medium | Low | No | Static JS accessibility | Pending | Phase 5 | Keep article links crawlable |
-| P1-007 | Keyword matrix completion | Roadmap | Keyword architecture | P1 | High | High | None | Medium | Low | No | GSC data preferred | Pending | SEO planning | Expand starter CSV |
-| P1-008 | Location SEO architecture | Roadmap | Location pages | P1 | High | High | Low | Medium | Medium | No | Keyword map | Pending | Location planning | No doorway pages |
+| P1-007 | Keyword matrix completion | Roadmap | Keyword architecture | P1 | High | High | None | Medium | Low | No | GSC data preferred | Done in Batch 4 | SEO planning | Expanded keyword matrix; implementation remains planned. |
+| P1-008 | Location SEO architecture | Roadmap | Location pages | P1 | High | High | Low | Medium | Medium | No | Keyword map | Done in Batch 4 | Location planning | Expanded location architecture; no public pages created. |
 | P1-009 | Main city-page phase | Roadmap | Location pages | P1 | High | High | Medium | Medium | High | No | GSC/keyword data | Pending | Location implementation | 30-50 cities only after mapping |
 | P1-010 | Search Console performance review | Roadmap | Measurement | P1 | High | High | None | Medium | Low | Yes | GSC verification | Pending | SEO planning | Use query/page data |
 | P2-001 | Country/export page refinement | Roadmap | Export pages | P2 | Medium | Medium | Medium | Medium | Medium | No | Export map | Pending | Phase 6 | No fake export approvals |
@@ -63,3 +63,12 @@ Priority definitions:
 - P2: 10
 - P3: 6
 - P4: 5
+
+<!-- RUBINOX BATCH 4 BACKLOG START -->
+## Batch 4 Status Notes
+
+- Keyword matrix completion is complete as a planning/data architecture task.
+- Location SEO architecture is complete as a planning/data architecture task.
+- Main city-page, export-page, state-page and product-city implementation tasks remain pending.
+- Batch 4 did not create public pages or change sitemap/canonical/internal-link strategy.
+<!-- RUBINOX BATCH 4 BACKLOG END -->

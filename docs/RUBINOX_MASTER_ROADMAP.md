@@ -245,3 +245,11 @@ Document first, install later.
 1. P0 external setup: verify Search Console/Bing, confirm GA4 access, submit sitemap and finalize tracking plan.
 2. P0 technical cleanup: clean 58 legacy HTML validation issues without design or SEO URL changes.
 3. P1 design pilot: homepage buyer journey, technical table UX and five-page grade/spec pilot.
+
+<!-- RUBINOX BATCH 4 KEYWORD LOCATION START -->
+## Batch 4 Keyword And Location Architecture Status
+
+Batch 4 completed the planning/data architecture layer for future keyword and location SEO expansion. It expanded data/keyword-master-map.csv from 20 rows to 955 rows and data/location-seo-map.csv from 56 rows to 97 rows. No public pages were created or edited.
+
+Future city, state, country/export, product-city and product-country pages remain planned candidates. Implementation still requires query review, differentiated page value, safe claim checks and full QA before publication.
+<!-- RUBINOX BATCH 4 KEYWORD LOCATION END -->

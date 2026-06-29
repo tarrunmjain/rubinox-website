@@ -41,3 +41,11 @@ Before creating a new public page:
 ## Starter Matrix
 
 The starter rows in data/keyword-master-map.csv cover dealer, supplier, grade, specification, technical chart, price-factor, city and export examples. The next pass should expand them using Search Console query data, not guessing.
+
+<!-- RUBINOX BATCH 4 KEYWORD PLAN START -->
+## Batch 4 Expansion Status
+
+Batch 4 expanded the keyword master matrix from 20 starter rows to 955 mapped rows. The required columns are active across material, grade, product form, specification, city, state, country/export, price-factor, RFQ and answer-query categories.
+
+The matrix remains planning data only. Planned URLs do not authorize public page creation, sitemap edits or internal-link changes.
+<!-- RUBINOX BATCH 4 KEYWORD PLAN END -->

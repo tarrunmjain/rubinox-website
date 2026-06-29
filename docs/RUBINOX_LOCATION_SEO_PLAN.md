@@ -38,3 +38,11 @@ Scope: planning only. No new public pages are authorized by this file.
 - Local warehouse, stockyard or branch without proof.
 - Authorized dealer unless formally verified.
 - Country-specific approvals, client references or certifications without owner proof.
+
+<!-- RUBINOX BATCH 4 LOCATION PLAN START -->
+## Batch 4 Expansion Status
+
+Batch 4 expanded the location SEO map from 56 rows to 97 rows, covering Indian cities/clusters, industrial states and export markets. Each location has priority, planned primary page, existing-page status, top materials, top product forms, industries, safe claims and unsafe claims to avoid.
+
+The map remains planning data only. No new city, state, country/export or product-location page is authorized until query review and implementation QA are complete.
+<!-- RUBINOX BATCH 4 LOCATION PLAN END -->
