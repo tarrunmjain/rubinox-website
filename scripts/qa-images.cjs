@@ -9,7 +9,7 @@ fs.mkdirSync(outputDir, { recursive: true });
 
 function walk(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap(entry => {
-    if (entry.name === ".git" || entry.name === "node_modules" || entry.name === ".pnpm-store" || entry.name === "tool-reports") return [];
+    if ([".git", "node_modules", ".pnpm-store", "tool-reports", "reports", ".lighthouseci"].includes(entry.name)) return [];
     const full = path.join(dir, entry.name);
     return entry.isDirectory() ? walk(full) : [full];
   });

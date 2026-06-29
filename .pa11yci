@@ -1,0 +1,35 @@
+{
+    "defaults":  {
+                     "timeout":  30000,
+                     "standard":  "WCAG2AA",
+                     "chromeLaunchConfig":  {
+                                                "args":  [
+                                                             "--headless=new",
+                                                             "--no-sandbox",
+                                                             "--disable-gpu",
+                                                             "--disable-dev-shm-usage"
+                                                         ]
+                                            },
+                     "reporters":  [
+                                       "cli",
+                                       [
+                                           "json",
+                                           {
+                                               "fileName":  "./reports/pa11y-ci.json"
+                                           }
+                                       ]
+                                   ],
+                     "threshold":  7
+                 },
+    "urls":  [
+                 "http://127.0.0.1:4184/",
+                 "http://127.0.0.1:4184/quotation.html",
+                 "http://127.0.0.1:4184/technical-resources.html",
+                 "http://127.0.0.1:4184/company-profile.html",
+                 "http://127.0.0.1:4184/materials/ss-316l-supplier-india.html",
+                 "http://127.0.0.1:4184/materials/inconel-625-supplier-india.html",
+                 "http://127.0.0.1:4184/materials/api-5l-grade-b-pipe-supplier-india.html",
+                 "http://127.0.0.1:4184/blog.html",
+                 "http://127.0.0.1:4184/contact.html"
+             ]
+}

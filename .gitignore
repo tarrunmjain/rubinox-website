@@ -47,3 +47,9 @@ desktop.ini
 .env
 .env.local
 .env.*
+
+# ===========================
+# Generated Lighthouse / Pa11y Reports
+# ===========================
+reports/
+.lighthouseci/
