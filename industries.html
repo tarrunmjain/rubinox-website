@@ -62,7 +62,7 @@ function trackLeadAndGo(method, label, url, newTab){
   --ink2:#132a63;
   --muted:#566b9a;
   --line:#e6ecf8;
-  --accent:#4f8cff;
+  --accent:#e2a02f;
   --bg:#f6f8fc;
   --card:#ffffff;
 }
@@ -120,7 +120,7 @@ header{
   font-size:14px;
   white-space:nowrap;
 }
-.navlinks a:hover{background:#eef4ff}
+.navlinks a:hover{background:#fff8e8}
 .btn{
   display:inline-flex;
   align-items:center;
@@ -136,14 +136,12 @@ header{
   cursor:pointer;
 }
 .btn.primary{
-  background:var(--accent);
-  color:#fff;
-  box-shadow:0 12px 30px rgba(79,140,255,.25);
+  background:linear-gradient(180deg,#f2bc55,#e2a02f);color:#07101f;box-shadow:0 14px 30px rgba(226,160,47,.28);
 }
 .btn.primary:hover{filter:brightness(.95)}
 .btn.ghost{
   background:#fff;
-  border-color:#dbe6ff;
+  border-color:#d8e0ec;
   color:#132a63;
 }
 .btn.ghost:hover{background:#f4f8ff}
@@ -194,16 +192,14 @@ header{
   font-weight:700;
   font-size:14px;
 }
-.mobileMenuPanel a:hover{background:#eef4ff}
+.mobileMenuPanel a:hover{background:#fff8e8}
 .mobileMenuPanel .mobileBtn{
   margin-top:8px;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
-  background:var(--accent);
-  color:#fff;
-  box-shadow:0 12px 30px rgba(79,140,255,.20);
+  background:linear-gradient(180deg,#f2bc55,#e2a02f);color:#07101f;box-shadow:0 12px 30px rgba(226,160,47,.20);
 }
 .mobileMenu.open{display:block}
 /* PAGE */
@@ -439,7 +435,7 @@ header .mobileMenu{display:none;width:100%;padding:0 0 14px}
 header .mobileMenu.open{display:block}
 header .mobileMenuPanel{background:#fff;border:1px solid #d8e0ec;border-radius:8px;box-shadow:0 16px 40px rgba(15,30,60,.08);padding:10px}
 header .mobileMenuPanel a{display:block;text-decoration:none;padding:12px 14px;border-radius:6px;color:#1b2b52;font-weight:700;font-size:14px}
-header .mobileMenuPanel a:hover{background:#eef4ff}
+header .mobileMenuPanel a:hover{background:#fff8e8}
 header .mobileMenuPanel .mobileBtn{margin-top:8px;width:100%;text-align:center;padding:12px 14px}
 @media(max-width:1120px){header .desktopNav{display:none}header .menuToggle{display:inline-flex}header .brand img{width:232px;height:auto;max-height:56px}header .nav{min-height:76px;padding:10px 0}header .topRail .wrap{align-items:flex-start;flex-direction:column;padding-top:8px;padding-bottom:8px;gap:4px}header .railLinks{gap:10px}}
 @media(max-width:640px){header .wrap{padding-left:14px;padding-right:14px}header .topRail{font-size:11.5px}header .railLinks{display:grid;gap:4px}header .brand img{width:200px;max-width:62vw}header .nav{gap:8px}}
@@ -792,7 +788,7 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
     </div>
   </div>
 </header>
-<div class="page" id="main-content" role="main">
+<main class="page" id="main-content">
 
   <section class="premiumHero hasHeroVisual"><div class="heroCopy">
     <div class="crumb"><a href="/">Home</a> &bull; Industries We Serve</div>
@@ -820,7 +816,7 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
     </div>
   </div><div class="heroVisual"><img src="/assets/hero/hero-industries-industrial-piping.webp" width="1600" height="900" alt="Industrial piping and process equipment for industries served" decoding="async" loading="lazy"></div></section>
 
-  <div class="trustStrip" aria-label="Rubinox industrial supply trust signals">
+  <div class="trustStrip" role="group" aria-label="Rubinox industrial supply trust signals">
     <div class="trustItem">PAN India Supply<small>Project and plant requirements across India.</small></div>
     <div class="trustItem">Export Enquiries<small>Packing and shipment details reviewed when specified.</small></div>
     <div class="trustItem">MTC / Inspection Review<small>Documentation scope checked at enquiry stage.</small></div>
@@ -1075,7 +1071,7 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
 
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which metals are used in pharma and food processing?","acceptedAnswer":{"@type":"Answer","text":"SS 304, SS 316 and SS 316L are commonly reviewed for hygienic equipment, tubes, fittings, sheets and process components, depending on finish, cleaning conditions and project specification."}},{"@type":"Question","name":"Which alloys are used for chemical processing?","acceptedAnswer":{"@type":"Answer","text":"Chemical processing enquiries often involve stainless steel, 904L, SMO 254, Duplex, Nickel Alloys, Hastelloy and Titanium depending on media, concentration, temperature and pressure."}},{"@type":"Question","name":"Which materials are reviewed for marine and offshore service?","acceptedAnswer":{"@type":"Answer","text":"Marine and offshore enquiries often review Duplex, Super Duplex, SMO 254, Monel, Nickel Alloys and copper alloys. Buyers should share seawater conditions, chloride exposure and project standards."}},{"@type":"Question","name":"Can Rubinox support multi-item EPC project enquiries?","acceptedAnswer":{"@type":"Answer","text":"Yes. Send the complete bill of materials or item list with grade, size, product form, quantity, standard, testing requirement and delivery location for item-wise review."}},{"@type":"Question","name":"Can third-party inspection be reviewed?","acceptedAnswer":{"@type":"Answer","text":"Inspection and documentation requirements can be considered when they are specified before quotation and order confirmation."}},{"@type":"Question","name":"Does Rubinox supply outside Mumbai?","acceptedAnswer":{"@type":"Answer","text":"Yes. Rubinox supports PAN India supply, and export enquiries can be reviewed when destination, packing, documentation and delivery terms are shared."}}]}</script>
 
-  <section class="ctaBand">
+  <section class="card" data-rubinox-section="RUBINOX INDUSTRY SPEC LINKS START"><h2>Industry Specification Links</h2><p class="sectionIntro">Connect industry RFQs to grade and standard resources for clearer material review.</p><div class="linkGrid"><a href="/materials/api-5l-grade-b-pipe-supplier-india.html">API 5L Grade B</a><a href="/materials/api-5l-x65-pipe-supplier-india.html">API 5L X65</a><a href="/materials/astm-a335-p91-pipe-supplier-india.html">ASTM A335 P91</a><a href="/materials/copper-nickel-90-10-c70600-supplier-india.html">Copper Nickel 90/10</a><a href="/materials/smo-254-supplier-india.html">SMO 254</a><a href="/materials/titanium-grade-2-supplier-india.html">Titanium Grade 2</a><a href="/materials/is-2062-steel-supplier-india.html">IS 2062</a><a href="/materials/stainless-steel-tubes-supplier-india.html">Stainless Steel Tubes</a></div></section><section class="ctaBand">
     <h2>Send Your Industry Requirement</h2>
     <p>
       Share grade, size, product form, quantity, standard, documentation requirement and delivery location
@@ -1098,7 +1094,7 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
     </div>
   </section>
 
-</div>
+</main>
 <script>
   const menuToggle = document.getElementById("menuToggle");
   const mobileMenu = document.getElementById("mobileMenu");
@@ -1153,6 +1149,9 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
       <a href="/locations.html">Locations</a>
       <a href="/export.html">Export</a>
       <a href="/blog.html">Blog</a>
+      <a href="/technical-resources.html">Technical Resources</a>
+      <a href="/quality-documentation-support.html">Quality Documentation</a>
+      <a href="/company-profile.html">Company Profile</a>
       <a href="/quotation.html">Quotation</a>
       <a href="/contact.html">Contact</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-and-conditions.html">Terms &amp; Conditions</a>
     </nav>

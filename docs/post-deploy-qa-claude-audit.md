@@ -69,15 +69,31 @@ Commands were run from `C:\Users\Dell\OneDrive\Documents\rubinox-website-live` u
 | `npm run qa:html` | Known baseline - 238 pages checked, 59 invalid legacy pages reported; current Knowledge Hub and recently added resource pages validate |
 | `npm run test:navigation` | Pass - navigation verification passed |
 
+## Final Local QA After Remaining Claude Audit Implementation
+
+Commands were rerun after the Knowledge Hub, schema, standards/spec pages, price-factor guides, company profile, footer/linking and visual consistency fixes.
+
+| Command / check | Result |
+| --- | --- |
+| `npm.cmd run qa:sitemap` | Pass - 261 sitemap URLs, 261 local HTML pages, no missing/extra/duplicate sitemap URLs |
+| `npm.cmd run qa:crawl` | Pass - 394 links scanned successfully |
+| `npm.cmd run qa:schema` | Pass - 261 pages scanned, 866 JSON-LD blocks, 0 invalid blocks |
+| `npm.cmd run qa:accessibility` | Pass - 5 scripted pages checked, 0 violations |
+| `npm.cmd run qa:html` | Known legacy baseline - 58 invalid legacy material pages; all new pages and touched core/Knowledge Hub pages validate |
+| `npm.cmd run test:navigation` | Pass - navigation verification passed |
+| `git diff --check` | Pass - no whitespace errors; line-ending warnings only |
+| Rendered visual QA | Pass - 261 pages checked at 1366px and 390px, 522 page/viewport checks, 0 issues |
+| Strict forbidden phrase scan | Pass - no strict HTML matches for fixed stock/delivery promises, live-price/price-list language, fake rating/review schema, certification-approval phrases or factory/manufacturing-claim phrases |
+
 ## Issues Found
 
 No live deployment-blocking issues were found in this pass.
 
 Known baseline issue remains:
 
-- `npm run qa:html` reports 59 invalid legacy pages. This predates this batch and should remain a separate cleanup unless directly touched by implementation work.
+- `npm run qa:html` reports 58 invalid legacy material pages. This predates this batch and is improved from the documented 59-page baseline; it should remain a separate cleanup unless directly touched by implementation work.
 
 ## Fixes Applied In This Phase
 
-- No site fixes were required during this live verification phase.
-- This document was updated with the current live deployment verification and baseline QA status.
+- Fixed final local QA/design items before the final commit: one old blue accent token, one missing visible breadcrumb, strict risky wording in technical/company-profile copy, and minor HTML validator regressions introduced during edits.
+- This document was updated with the current live deployment verification, final local QA results and remaining known baseline status.
