@@ -438,7 +438,20 @@ header .navlinks .btn.primary{padding:9px 11px !important}
 .premiumHero + .card,.premiumHero + .trustStrip,.premiumHero + .section,.premiumHero + .wrap{margin-top:var(--rubinox-section-gap)}
 @media(max-width:1120px){header .nav{min-height:70px !important;padding:8px 0 !important}header .brand img{width:220px !important;max-height:52px !important}}
 @media(max-width:640px){header .brand img{width:188px !important;max-width:60vw !important;max-height:48px !important}}
-/* RUBINOX HEADER BREADCRUMB SPACING POLISH END */</style>
+/* RUBINOX HEADER BREADCRUMB SPACING POLISH END *//* RUBINOX PRODUCT FORM POLISH CSS START */
+.formAnswer{position:relative;overflow:hidden;display:grid;gap:14px}
+.formAnswer::before,.formPolishCard::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,#e2a02f,#132a63,rgba(216,224,236,.35))}
+.formLead{max-width:84ch;color:var(--muted,#566b9a);line-height:1.75}.formChipRow{display:flex;flex-wrap:wrap;gap:9px;margin-top:2px}
+.formChip{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:8px 11px;border-radius:999px;border:1px solid rgba(19,42,99,.14);background:linear-gradient(145deg,#fff,#eef3fa);color:var(--ink2,#132a63);font-size:13px;font-weight:850;box-shadow:0 8px 18px rgba(15,30,60,.05)}
+.formChip:hover,.formChip:focus-visible{border-color:rgba(226,160,47,.62);background:#fff;outline:2px solid rgba(226,160,47,.26);outline-offset:2px}
+.formPolishGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--rubinox-card-gap,14px);margin-top:var(--rubinox-section-gap,18px)}
+.formPolishCard{position:relative;overflow:hidden;background:#fff;border:1px solid rgba(16,37,84,.12);border-radius:8px;padding:16px;box-shadow:0 12px 28px rgba(15,30,60,.06)}
+.formPolishCard h3{margin-top:4px;font-size:17px;color:var(--ink2,#132a63)}.formPolishCard p{font-size:14px;line-height:1.65}.formPolishCard ul{margin:0;padding-left:18px;color:var(--muted,#566b9a);line-height:1.75;font-size:14px}
+.formPolishLinks{display:grid;gap:8px;margin-top:2px}.formPolishLinks a{display:flex;align-items:center;justify-content:space-between;gap:12px;text-decoration:none;padding:10px;border:1px solid rgba(19,42,99,.12);border-radius:8px;background:#f8fafc;color:var(--ink2,#132a63);font-weight:850}
+.formPolishLinks a::after{content:">";color:#8a5a06;font-weight:900;flex:0 0 auto}.formPolishLinks a:hover,.formPolishLinks a:focus-visible{border-color:rgba(226,160,47,.62);background:#fff;outline:2px solid rgba(19,42,99,.18);outline-offset:2px}.formPolishLinks small{display:block;margin-top:3px;color:var(--muted,#566b9a);font-size:12.5px;font-weight:700;line-height:1.45}
+@media(max-width:900px){.formPolishGrid{grid-template-columns:1fr 1fr}}@media(max-width:640px){.formPolishGrid{grid-template-columns:1fr}.formChip{width:100%}.formPolishLinks a{align-items:flex-start}}
+/* RUBINOX PRODUCT FORM POLISH CSS END */
+</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Stainless Steel Flanges Supplier in India","url":"https://rubinoxmetal.com/materials/stainless-steel-flanges-supplier-india.html","description":"Stainless steel flanges supplier in India for SS 304, 316, 316L, 202, 310, 321 and more.","@id":"https://rubinoxmetal.com/materials/stainless-steel-flanges-supplier-india.html#webpage","isPartOf":{"@id":"https://rubinoxmetal.com/#website"},"about":{"@id":"https://rubinoxmetal.com/#organization"},"breadcrumb":{"@id":"https://rubinoxmetal.com/materials/stainless-steel-flanges-supplier-india.html#breadcrumb"},"inLanguage":"en-IN"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rubinoxmetal.com/"},{"@type":"ListItem","position":2,"name":"Materials","item":"https://rubinoxmetal.com/#materials"},{"@type":"ListItem","position":3,"name":"Stainless Steel","item":"https://rubinoxmetal.com/materials/stainless-steel.html"},{"@type":"ListItem","position":4,"name":"Stainless Steel Flanges Supplier in India","item":"https://rubinoxmetal.com/materials/stainless-steel-flanges-supplier-india.html"}],"@id":"https://rubinoxmetal.com/materials/stainless-steel-flanges-supplier-india.html#breadcrumb"}</script>
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -671,8 +684,7 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
 .siteFooter .footerBottom{border-top:1px solid #e6ecf8!important;color:#566b9a!important;font-size:13px!important;padding:13px 0!important;background:#fff!important}
 @media(max-width:1120px){header .topRail .wrap{flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important;gap:6px!important;padding-top:8px!important;padding-bottom:8px!important}header .topRail .railLinks.utilityIcons{justify-content:center!important;width:100%!important}.siteFooter .footerLayout{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:760px){header .topRail .railNote{display:block!important;font-size:11.5px!important}header .topRail .railLinks.utilityIcons{gap:6px!important}.faqGrid,.relGrid{grid-template-columns:1fr!important;gap:14px!important}.faqItem{padding:20px!important}.siteFooter .footerLayout{grid-template-columns:1fr!important;padding:28px 18px!important}.siteFooter .footerBrand img{max-width:190px!important}.siteFooter .footerIconGroup{flex-wrap:nowrap!important;gap:6px!important}.siteFooter .footerIconGroup .footerIcon{width:32px!important;height:32px!important;min-width:32px!important;min-height:32px!important;max-width:32px!important;max-height:32px!important}}
-/* RUBINOX FOOTER STANDARDIZATION END */
-</style>
+/* RUBINOX FOOTER STANDARDIZATION END */</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","@id":"https://rubinoxmetal.com/materials/stainless-steel-flanges-supplier-india.html#product","name":"Stainless Steel Flanges Supplier in India","description":"Buy Stainless Steel Flanges products from Rubinox with PAN India delivery, export support, material documentation and fast quotations.","url":"https://rubinoxmetal.com/materials/stainless-steel-flanges-supplier-india.html","image":"https://rubinoxmetal.com/assets/rubinox-social-preview-2026.jpg","brand":{"@type":"Organization","name":"Rubinox Metal and Alloys","url":"https://rubinoxmetal.com"},"category":"Industrial metal flanges","material":"Stainless steel","additionalProperty":[{"@type":"PropertyValue","name":"Business role","value":"Stockist, supplier, importer, exporter and project supplier support for RFQs"},{"@type":"PropertyValue","name":"RFQ details","value":"Grade or specification, product form, size, quantity, standard, documentation requirement and delivery location"},{"@type":"PropertyValue","name":"Area served","value":"PAN India supply and export enquiry support where applicable"}]}</script></head>
 <body>
 <a class="skipLink" href="#main-content">Skip to main content</a>
@@ -781,6 +793,48 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
       <img fetchpriority="high" width="1400" height="788" src="/assets/form-flanges.webp" alt="Stainless steel flanges supplier in India for SS 304 SS 316 and SS 316L" decoding="async">
     </div>
   </section>
+  <!-- RUBINOX PRODUCT FORM POLISH MODULE START -->
+  <section class="formAnswer card" aria-labelledby="form-answer-title">
+    <div class="formAnswerCopy">
+      <h2 id="form-answer-title">Quick answer for stainless steel flange RFQs</h2>
+      <p class="formLead">Rubinox Metal and Alloys reviews stainless steel flanges RFQs for weld neck, slip on, blind, socket weld, threaded and lap joint flange needs. Share flange type, grade, size, pressure class, facing and standard, quantity, standard, documentation requirement and delivery location so the enquiry can be checked clearly. PAN India and export enquiries are reviewed subject to grade, size and sourcing feasibility.</p>
+    </div>
+    <nav class="formChipRow" aria-label="Common material and grade links for stainless steel flanges">
+      <a class="formChip" href="/materials/stainless-steel.html">Stainless Steel</a>
+      <a class="formChip" href="/materials/ss-304-supplier-india.html">SS 304</a>
+      <a class="formChip" href="/materials/ss-316-supplier-india.html">SS 316</a>
+      <a class="formChip" href="/materials/ss-316l-supplier-india.html">SS 316L</a>
+      <a class="formChip" href="/materials/ss-310-supplier-india.html">SS 310</a>
+      <a class="formChip" href="/materials/ss-321-supplier-india.html">SS 321</a>
+    </nav>
+  </section>
+  <section class="formPolishGrid" aria-label="stainless steel flanges RFQ support">
+    <article class="formPolishCard"><h3>RFQ details to share</h3><ul>
+        <li>Form/type: weld neck, slip on, blind, socket weld, threaded and lap joint flange needs</li>
+        <li>Material grade or project specification</li>
+        <li>Dimensions: flange type, grade, size, pressure class, facing and standard</li>
+        <li>Quantity, standard, MTC/PMI needs and delivery location</li>
+      </ul></article>
+    <article class="formPolishCard"><h3>Documentation notes</h3><ul>
+        <li>MTC requirement where applicable</li>
+        <li>PMI or third-party inspection need if specified</li>
+        <li>Drawing, BOQ, sample or tolerance notes when available</li>
+        <li>Packing, marking or finish requirement where applicable</li>
+      </ul></article>
+    <article class="formPolishCard"><h3>Use-case cues</h3><ul>
+        <li>Process piping connections</li>
+        <li>Maintenance shutdown enquiries</li>
+        <li>Contractor and EPC package RFQs</li>
+        <li>Project procurement and maintenance requirements</li>
+      </ul></article>
+    <article class="formPolishCard"><h3>Helpful next pages</h3><div class="formPolishLinks">
+        <a href="/materials/stainless-steel-fittings-supplier-india.html"><span><strong>SS Fittings</strong><small>Elbows, tees, reducers and pipe fittings.</small></span></a>
+        <a href="/materials/stainless-steel-pipes-supplier-india.html"><span><strong>SS Pipes</strong><small>Pipe enquiries by OD, NB and schedule.</small></span></a>
+        <a href="/quality-documentation-support.html"><span><strong>Quality Documentation</strong><small>MTC, PMI and inspection notes.</small></span></a>
+        <a href="/stainless-steel-pipe-price-factors-india.html"><span><strong>Price Factor Guide</strong><small>RFQ variables without fixed public prices.</small></span></a>
+      </div></article>
+  </section>
+  <!-- RUBINOX PRODUCT FORM POLISH MODULE END -->
   <section class="grid2">
     <div class="card">
       <h2>Stainless Steel Flange Types</h2>
