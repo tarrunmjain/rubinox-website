@@ -1,0 +1,22 @@
+tool,category,current_status,install_status,recommended_order,use_case,risk,cost_notes,next_action,notes
+qa:sitemap,existing npm QA,active,installed,0,Sitemap/local HTML parity,low,included in repo,Run before/after public page batches,Current baseline passing
+qa:crawl,existing npm QA,active,installed,0,Internal crawl/link verification,low,included in repo,Run before/after navigation/link batches,Current baseline passing
+qa:schema,existing npm QA,active,installed,0,JSON-LD validation,low,included in repo,Run after schema/public page edits,Current baseline passing
+qa:accessibility,existing npm QA,active,installed,0,Axe sample checks,low,included in repo,Run after design/content changes,Current baseline passing
+test:navigation,existing npm QA,active,installed,0,Navigation verification,low,included in repo,Run after header/nav/footer edits,Current baseline passing
+qa:html,existing npm QA,active,installed,1,HTML validation,medium,included in repo,Use for 58 legacy cleanup batch,Known legacy failures remain
+qa:images,existing npm QA,available,installed,2,Image audit,low,included in repo,Run before visual asset batches,Use before adding page-specific images
+qa:external-links,existing npm QA,available,installed,2,External link audit,medium,included in repo,Run before directory/social updates,May require network
+Lighthouse helper,existing npm QA,available,installed,3,Homepage performance/accessibility check,medium,included in repo,Use after major design batches,Can expand later
+Lighthouse CI,recommended tool,not installed as CI,document only,4,Regression performance checks,medium,free/open-source,Install after baseline stabilizes,Do not block small docs changes
+PageSpeed Insights API,recommended tool,not configured,document only,5,Production mobile/desktop checks,medium,API quota/account may apply,Use after owner approves API access,External live checks
+Pa11y,recommended tool,not installed,document only,6,Broader accessibility checks,medium,free/open-source,Evaluate after current axe coverage,Avoid duplicate noisy checks
+HTML validator workflow,recommended workflow,partially available via qa:html,document only,1,Legacy HTML cleanup,medium,included/local,Use in dedicated cleanup batch,58 pages remain
+Schema/Rich Results workflow,recommended workflow,manual external checks,document only,2,Representative schema validation,low,free public tools,Use on template-level changes,Local qa:schema remains primary
+Image audit helper,recommended workflow,partially available via qa:images,document only,2,Large asset and WebP checks,low,included/local,Use before adding assets,Prefer accurate WebP
+llms.txt workflow,AISEO/LLMO,file exists,document only,4,AI crawler/LLM guidance,medium,local,Audit before changing llms.txt,Do not edit in unrelated batches
+Codex SEO skill suite candidate,optional SEO tool,candidate,document only,7,Advanced guided SEO audits,medium,depends on availability,Evaluate after GSC setup,Do not auto-rewrite pages
+Google Search Console MCP candidate,optional search data tool,candidate,document only,7,Query/page data access,medium,requires owner auth,Use after verification,Data access must be approved
+Better Search Console candidate,optional search data tool,candidate,document only,8,Query grouping/reporting,medium,may require auth/cost,Evaluate after GSC data exists,Optional
+On-Page.ai MCP,optional paid SEO tool,candidate,document only,9,Targeted page scans,medium,paid/credit-based,Use only with owner approval,Avoid broad automated edits
+Semrush plugin/MCP,optional paid SEO tool,candidate,document only,9,Competitor and keyword scans,medium,paid/subscription-based,Use only with owner approval,Optional
