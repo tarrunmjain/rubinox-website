@@ -620,6 +620,19 @@ a.relItem:hover:not(:focus-visible),
 .faqItem h3{margin:0 0 10px !important;line-height:1.28}
 .faqItem p{margin:0;line-height:1.65}
 
+/* RUBINOX GRADE PILOT POLISH START */
+.gradeQuickNav{margin-top:var(--rubinox-section-gap,14px)!important}
+.gradeQuickNav .relGrid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px!important}
+.gradeQuickNav .relItem{min-height:72px;background:linear-gradient(180deg,#fff,#f8fafc)!important}
+.pilotLead{margin:0 0 12px!important;color:#566b9a!important;line-height:1.65!important;font-size:14px!important}
+.specSignalGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px}
+.specSignalGrid span{display:block;padding:12px;border:1px solid rgba(19,42,99,.12);border-radius:8px;background:linear-gradient(180deg,#fff,#f8fafc);color:#566b9a;font-size:13px;line-height:1.55}
+.specSignalGrid strong{display:block;color:#132a63;margin-bottom:4px}
+.tablePilotCard table caption{caption-side:top;text-align:left;color:#132a63;font-weight:850;padding:0 0 8px;line-height:1.45}
+.relatedPilot .relGrid{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.relatedPilot .relItem span{font-size:13px;line-height:1.55}
+@media(max-width:760px){.specSignalGrid{grid-template-columns:1fr}.gradeQuickNav .relGrid,.relatedPilot .relGrid{grid-template-columns:1fr!important}}
+/* RUBINOX GRADE PILOT POLISH END */
 /* RUBINOX FOOTER STANDARDIZATION START */
 body{font-family:Arial,Helvetica,sans-serif!important;color:#566b9a}
 header{position:sticky!important;top:0!important;z-index:1000!important}
@@ -781,9 +794,21 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
       <img fetchpriority="high" width="1400" height="933" src="/assets/mat-stainless.webp" alt="SS 316L stainless steel tubes sheets coils fittings and fasteners supplier in India" decoding="async">
     </div>
   </section>
-  <section class="grid2">
+  <section class="card gradeQuickNav" aria-label="SS 316L page shortcuts">
+    <h2>SS 316L Buyer Shortcuts</h2>
+    <p class="pilotLead">Jump to the details most buyers check before sending an SS 316L RFQ: product forms, standards, related resources, FAQs and quotation details.</p>
+    <div class="relGrid">
+      <a class="relItem" href="#forms-applications"><strong>Forms &amp; uses</strong><span>Products and application areas</span></a>
+      <a class="relItem" href="#supply-details"><strong>Supply details</strong><span>Forms, sizes and enquiry inputs</span></a>
+      <a class="relItem" href="#standards"><strong>Standards</strong><span>Documentation and buying notes</span></a>
+      <a class="relItem" href="#related"><strong>Related resources</strong><span>Grades, forms and technical guides</span></a>
+      <a class="relItem" href="#rfq"><strong>Send RFQ</strong><span>What to share for review</span></a>
+    </div>
+  </section>
+  <section class="grid2" id="forms-applications">
     <div class="card">
       <h2>SS 316L Products Available</h2>
+      <p class="pilotLead">Use this list to identify the exact product form before sharing sizes, standards and quantity.</p>
       <ul>
         <li>SS 316L pipes and tubes</li>
         <li>SS 316L sheets and plates</li>
@@ -797,6 +822,7 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
     </div>
     <div class="card">
       <h2>Typical Applications</h2>
+      <p class="pilotLead">Application details help align documentation, finish, testing and inspection expectations where applicable.</p>
       <ul>
         <li>Welded fabrication and process piping</li>
         <li>Chemical and petrochemical equipment</li>
@@ -807,9 +833,11 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
       </ul>
     </div>
   </section>
-  <section class="card" style="margin-top:14px">
+  <section class="card tablePilotCard" id="supply-details" style="margin-top:14px">
     <h2>SS 316L Forms, Sizes and Supply Details</h2>
+    <p class="pilotLead">Use this table as an RFQ planning guide. Final review depends on grade, form, size, quantity, standard and sourcing feasibility.</p>
     <table>
+      <caption>SS 316L form and enquiry detail guide</caption>
       <thead>
         <tr>
           <th>Product Form</th>
@@ -844,7 +872,7 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
       </tbody>
     </table>
   </section>
-  <section class="grid2">
+  <section class="grid2" id="standards">
     <div class="card">
       <h2>Standards and Documentation</h2>
       <p>
@@ -855,6 +883,11 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
     </div>
     <div class="card">
       <h2>Why Buy From Rubinox?</h2>
+      <div class="specSignalGrid">
+        <span><strong>RFQ support</strong>Specification-led review for grade, form, size and quantity.</span>
+        <span><strong>Documentation</strong>MTC, PMI or inspection requirements can be reviewed where applicable.</span>
+        <span><strong>Supply route</strong>PAN India and export enquiry support based on buyer requirement.</span>
+      </div>
       <ul>
         <li>Stainless steel 316L in multiple forms and sizes</li>
         <li>Mumbai-based quotation and sourcing support</li>
@@ -864,8 +897,9 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
       </ul>
     </div>
   </section>
-  <section class="card" style="margin-top:14px">
+  <section class="card relatedPilot" id="related" style="margin-top:14px">
     <h2>Related Stainless Steel Pages</h2>
+    <p class="pilotLead">Move between related grades, product forms, technical resources and quotation support without changing the SS 316L page intent.</p>
     <div class="relGrid">
       <a class="relItem" href="/materials/stainless-steel.html">
         <strong>Stainless Steel Supplier in India</strong>
@@ -883,9 +917,12 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
         <strong>Request Quotation</strong>
         <span>Send grade, size, quantity and delivery location for pricing.</span>
       </a><a class="relItem" href="/materials/ss-317l-supplier-india.html"><strong>SS 317L Supplier in India</strong><span>Higher-alloy austenitic stainless steel for demanding corrosion service.</span></a>
+      <a class="relItem" href="/product-forms.html"><strong>Product Forms Hub</strong><span>Pipes, tubes, sheets, plates, coils, flanges, fittings and fasteners.</span></a>
+      <a class="relItem" href="/technical-resources.html"><strong>Technical Resources</strong><span>Pipe schedules, MTC notes, PMI guide and RFQ checklist.</span></a>
+      <a class="relItem" href="/blog/stainless-steel-304-vs-316-vs-316l.html"><strong>SS 304 vs 316 vs 316L</strong><span>Knowledge Hub comparison for stainless steel grade selection.</span></a>
     </div>
   </section>
-  <section class="card" style="margin-top:14px">
+  <section class="card" id="faqs" style="margin-top:14px">
     <h2>SS 316L Supplier FAQs</h2>
     <div class="faq">
       <div class="faqItem">
@@ -911,7 +948,7 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
     </div>
   </section>
 
-  <section class="materialRfqCta" aria-labelledby="material-rfq-cta-title">
+  <section class="materialRfqCta" id="rfq" aria-labelledby="material-rfq-cta-title">
     <div class="materialRfqMain">
       <span class="materialRfqLabel">Procurement RFQ support</span>
       <h2 id="material-rfq-cta-title">Share Your SS 316L Requirement</h2>
