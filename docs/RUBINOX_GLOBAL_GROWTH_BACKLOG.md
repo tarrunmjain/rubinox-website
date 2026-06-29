@@ -32,9 +32,9 @@ Priority definitions:
 | P1-006 | Knowledge Hub card/filter polish | Design audit | Knowledge Hub | P1 | Medium | High | High | Medium | Low | No | Static JS accessibility | Pending | Phase 5 | Keep article links crawlable |
 | P1-007 | Keyword matrix completion | Roadmap | Keyword architecture | P1 | High | High | None | Medium | Low | No | GSC data preferred | Done in Batch 4 | SEO planning | Expanded keyword matrix; implementation remains planned. |
 | P1-008 | Location SEO architecture | Roadmap | Location pages | P1 | High | High | Low | Medium | Medium | No | Keyword map | Done in Batch 4 | Location planning | Expanded location architecture; no public pages created. |
-| P1-009 | Main city-page phase | Roadmap | Location pages | P1 | High | High | Medium | Medium | High | No | GSC/keyword data | Pending | Location implementation | 30-50 cities only after mapping |
+| P1-009 | Main city-page phase | Roadmap | Location pages | P1 | High | High | Medium | Medium | High | No | GSC/keyword data | Pilot started in Batch 5 | Location implementation | Nine existing city pages improved; 30-50 city rollout still pending after GSC/enquiry review |
 | P1-010 | Search Console performance review | Roadmap | Measurement | P1 | High | High | None | Medium | Low | Yes | GSC verification | Pending | SEO planning | Use query/page data |
-| P2-001 | Country/export page refinement | Roadmap | Export pages | P2 | Medium | Medium | Medium | Medium | Medium | No | Export map | Pending | Phase 6 | No fake export approvals |
+| P2-001 | Country/export page refinement | Roadmap | Export pages | P2 | Medium | Medium | Medium | Medium | Medium | No | Export map | Pilot started in Batch 5 | Phase 6 | Existing UAE/Dubai export page improved; no fake export approvals or local presence claims |
 | P2-002 | State pages | Roadmap | Location pages | P2 | Medium | Medium | Medium | Medium | High | No | Keyword/GSC data | Pending | Location expansion | 10-15 industrial states |
 | P2-003 | Top product-city pages | Roadmap | Location/product | P2 | High | High | Medium | High | High | No | Search demand proof | Pending | Location expansion | Selected only |
 | P2-004 | llms.txt workflow | AEO roadmap | AISEO/LLMO | P2 | Medium | High | None | Low | Medium | No | AEO strategy | Pending | AEO | Existing llms.txt should be audited before edits |
@@ -72,3 +72,13 @@ Priority definitions:
 - Main city-page, export-page, state-page and product-city implementation tasks remain pending.
 - Batch 4 did not create public pages or change sitemap/canonical/internal-link strategy.
 <!-- RUBINOX BATCH 4 BACKLOG END -->
+
+
+<!-- RUBINOX BATCH 5 BACKLOG START -->
+## Batch 5 Status Notes
+
+- Main city-page implementation moved from pure pending to a controlled pilot: the location hub and nine existing city pages were improved without creating new URLs.
+- Country/export page refinement also started as a UAE/Dubai export wording pilot on the existing export page.
+- Full 30-50 city rollout, state pages and product-city pages remain pending until Search Console or enquiry evidence supports them.
+- Batch 5 did not change sitemap URLs, canonical URL targets or create public pages.
+<!-- RUBINOX BATCH 5 BACKLOG END -->

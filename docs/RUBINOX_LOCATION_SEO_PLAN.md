@@ -46,3 +46,18 @@ Batch 4 expanded the location SEO map from 56 rows to 97 rows, covering Indian c
 
 The map remains planning data only. No new city, state, country/export or product-location page is authorized until query review and implementation QA are complete.
 <!-- RUBINOX BATCH 4 LOCATION PLAN END -->
+
+
+<!-- RUBINOX BATCH 5 LOCATION PILOT START -->
+## Batch 5 Location Pilot Status
+
+Batch 5 improved the existing locations hub, nine existing city pages and the existing UAE/Dubai export page. It did not create new city, state, country or product-location URLs.
+
+Pilot city pages improved: Mumbai, Pune, Chennai, Bengaluru, Delhi NCR, Ahmedabad, Vadodara, Surat and Jamnagar.
+
+Export pilot improved: UAE/Dubai export enquiries using supplier and exporter from India wording.
+
+Sitemap status: unchanged. Existing URLs remain canonical and no sitemap URL additions were made.
+
+Future location work should remain query-led. Expand only where Search Console, enquiry history or clear buyer value supports unique content, and keep local presence, inventory and delivery timing claims out unless owner-verified.
+<!-- RUBINOX BATCH 5 LOCATION PILOT END -->
