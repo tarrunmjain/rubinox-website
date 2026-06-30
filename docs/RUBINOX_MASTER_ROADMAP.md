@@ -272,3 +272,13 @@ Future city, state, country/export, product-city and product-country pages remai
 - The hub now links more clearly to relevant material, grade, product-form, technical resource, quality documentation, Knowledge Hub, location/export and quotation pages.
 - Individual industry pages remain future candidates only and should be created only after keyword, Search Console, enquiry history or owner-priority review confirms differentiated buyer value.
 <!-- RUBINOX BATCH 8 ROADMAP END -->
+
+
+<!-- RUBINOX BATCH 9 ROADMAP START -->
+## Batch 9 Material Family Hub Status
+
+- Material family discovery confirmed one top-level materials hub plus 13 existing public family pages: stainless steel, nickel alloys, duplex and super duplex, titanium, aluminium, copper, brass, carbon steel, mild steel, SMO 254, phosphor bronze, high speed steel and special engineering alloys.
+- Batch 9 polished only those existing URLs with crawlable RFQ pathway links to grade/specification pages, product-form cues, technical resources, quality documentation, Knowledge Hub guides and quotation routes.
+- Existing URLs, H1 intent, title/meta descriptions, canonical targets, sitemap URLs and schema meaning were preserved.
+- New material or grade pages remain future candidates only after keyword, Search Console, enquiry history or owner-priority review confirms differentiated buyer value.
+<!-- RUBINOX BATCH 9 ROADMAP END -->

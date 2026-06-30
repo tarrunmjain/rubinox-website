@@ -206,3 +206,21 @@ Deferred scope:
 
 Safe wording strategy: Batch 8 uses RFQ support, supply enquiry support, documentation support where applicable and project supplier support language. No manufacturer, factory, mill, ready-stock, fixed-price, approved-vendor, client, project, rating or delivery-guarantee claims were added.
 <!-- RUBINOX BATCH 8 BACKLOG END -->
+
+
+<!-- RUBINOX BATCH 9 BACKLOG START -->
+## Batch 9 - Material Family Hub Polish
+
+Status: implemented for the existing materials hub and 13 existing public material family pages. No new public material, grade, city, export or product-form URLs were created.
+
+Completed scope:
+- materials.html now has a clearer material-family routing block connecting grade, product form, technical resource, quality documentation, Knowledge Hub, export and quotation paths.
+- Existing material family pages now include compact RFQ pathway sections before the final enquiry CTA, linking buyers to relevant grade/spec pages, product-form cues, technical resources, quality documentation and related Knowledge Hub guides.
+- Page intent, URLs, sitemap entries, H1s, title/meta/canonical targets and existing schema meaning were preserved.
+
+Deferred scope:
+- New material family, grade and specification pages remain gated by keyword evidence, enquiry history or owner priority.
+- Any future visual asset refresh should continue to avoid unsupported production-line, certification or proof visuals unless owner-verified.
+
+Safe wording strategy: Batch 9 uses stockist, supplier, importer, exporter, project supplier, RFQ support, documentation support where applicable, PAN India supply and export enquiry support language. No unsupported production, stock, price, certificate, proof, rating or timing claims were added.
+<!-- RUBINOX BATCH 9 BACKLOG END -->
