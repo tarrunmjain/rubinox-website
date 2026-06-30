@@ -46,6 +46,7 @@ Scope: required checklist for future Rubinox website batches.
 - Run git diff --check.
 - Run a forbidden phrase scan on changed public HTML where relevant.
 - Check rendered pages at 1366, 1280, 768, 390 and 360 widths for visual work.
+- For visual or template-rollout batches, complete a subjective visual review for premium feel, hierarchy, chip density, card balance, desktop width comfort and mobile reading comfort; automated QA passing is not enough.
 - Check WhatsApp, email, phone and quotation links on touched pages.
 - Check one H1 per touched page.
 - Check no manufacturer/factory/stock/price/certification drift on touched pages.

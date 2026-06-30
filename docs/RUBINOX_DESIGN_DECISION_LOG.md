@@ -18,6 +18,7 @@ Status: active design decision log for future visual work.
 | DES-008 | No full redesign in one batch | Current work is polish, not repair | Active |
 | DES-009 | Design work must be batched and rendered at 1366, 1280, 768, 390 and 360 widths | Prevent responsive regressions | Active |
 | DES-010 | Do not add fake factory, stockyard or certification visuals | Visual trust must reflect real owner-approved assets | Active |
+| DES-011 | Technical QA passing is not enough for visual batches | Premium feel, hierarchy, chip density, card balance and mobile reading comfort require subjective review | Active |
 
 ## First Design Batch
 
