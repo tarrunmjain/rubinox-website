@@ -620,6 +620,24 @@ a.relItem:hover:not(:focus-visible),
 .faqItem h3{margin:0 0 10px !important;line-height:1.28}
 .faqItem p{margin:0;line-height:1.65}
 
+/* RUBINOX GRADE TEMPLATE GATE START */
+.gradeQuickNav{margin-top:var(--rubinox-section-gap,14px)!important}
+.gradeQuickNav .relGrid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px!important}
+.gradeQuickNav .relItem{min-height:72px;background:linear-gradient(180deg,#fff,#f8fafc)!important}
+.gateLead{margin:0 0 12px!important;color:#566b9a!important;line-height:1.65!important;font-size:14px!important}
+.gateSignalGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:12px}
+.gateSignalGrid span{display:block;padding:12px;border:1px solid rgba(19,42,99,.12);border-radius:8px;background:linear-gradient(180deg,#fff,#f8fafc);color:#566b9a;font-size:13px;line-height:1.55}
+.gateSignalGrid strong{display:block;color:#132a63;margin-bottom:4px}
+.gateCardGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:12px}
+.gateCard{padding:14px;border:1px solid rgba(19,42,99,.12);border-radius:8px;background:#fff;box-shadow:0 10px 24px rgba(15,30,60,.05);min-width:0}
+.gateCard h3{margin:0 0 8px;color:#132a63;font-size:18px;line-height:1.3}
+.gateCard p{margin:0!important;color:#566b9a!important;line-height:1.65!important}
+.tableGateCard table caption{caption-side:top;text-align:left;color:#132a63;font-weight:850;padding:0 0 8px;line-height:1.45}
+.relatedGate .relGrid{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.relatedGate .relItem span{font-size:13px;line-height:1.55}
+@media(max-width:900px){.gateSignalGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.gateSignalGrid{grid-template-columns:1fr}.gradeQuickNav .relGrid,.relatedGate .relGrid{grid-template-columns:1fr!important}}
+/* RUBINOX GRADE TEMPLATE GATE END */
 /* RUBINOX FOOTER STANDARDIZATION START */
 body{font-family:Arial,Helvetica,sans-serif!important;color:#566b9a}
 header{position:sticky!important;top:0!important;z-index:1000!important}
@@ -765,153 +783,168 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
     <div class="card heroText">
       <h1>SS 316 Supplier in India</h1>
       <p style="max-width:78ch">
-        Rubinox Metal and Alloys is an SS 316 supplier in India offering stainless steel 316 pipes,
-        tubes, sheets, plates, coils, rods, bars, angles, flats, flanges, fittings and fasteners.
-        SS 316 is commonly selected where better corrosion resistance is required compared with SS 304,
-        especially in chemical, marine, coastal and industrial environments.
+        Rubinox Metal and Alloys supports SS 316 RFQs as a stockist, supplier, importer, exporter
+        and project supplier. Buyers can share product form, size, quantity, standard, documentation
+        needs and delivery location for stainless steel 316 quotation review.
       </p>
       <div class="miniRow">
         <span class="miniTag">SS 316</span>
-        <span class="miniTag">Pipes &bull; Plates &bull; Bars</span>
-        <span class="miniTag">Corrosion Resistant</span>
-        <span class="miniTag">PAN India Supply</span>
+        <span class="miniTag">Corrosion-Focused RFQs</span>
+        <span class="miniTag">Forms &amp; Documentation</span>
+        <span class="miniTag">PAN India &amp; Export Enquiries</span>
       </div>
     </div>
     <div class="heroImg">
       <img fetchpriority="high" width="1400" height="933" src="/assets/mat-stainless.webp" alt="SS 316 stainless steel pipes sheets plates coils and bars supplier in India" decoding="async">
     </div>
   </section>
-  <section class="grid2">
-    <div class="card">
-      <h2>SS 316 Products Available</h2>
-      <ul>
-        <li>SS 316 pipes and tubes</li>
-        <li>SS 316 sheets and plates</li>
-        <li>SS 316 coils and strips</li>
-        <li>SS 316 rods and round bars</li>
-        <li>SS 316 angles and flats</li>
-        <li>SS 316 flanges</li>
-        <li>SS 316 pipe fittings</li>
-        <li>SS 316 fasteners, bolts, nuts and washers</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h2>Typical Applications</h2>
-      <ul>
-        <li>Chemical and petrochemical equipment</li>
-        <li>Marine and coastal fabrication</li>
-        <li>Food, pharma and process equipment</li>
-        <li>Heat exchangers and pressure systems</li>
-        <li>Industrial piping and fluid handling</li>
-        <li>Flanges, fittings and fasteners for corrosive service</li>
-      </ul>
+  <section class="card gradeQuickNav" aria-label="SS 316 page shortcuts">
+    <h2>SS 316 Buyer Shortcuts</h2>
+    <p class="gateLead">Jump to the details buyers usually check before sending an SS 316 RFQ.</p>
+    <div class="relGrid">
+      <a class="relItem" href="#overview"><strong>Overview</strong><span>Quick answer and RFQ cues</span></a>
+      <a class="relItem" href="#standards"><strong>Standards</strong><span>Specification notes</span></a>
+      <a class="relItem" href="#forms"><strong>Product Forms</strong><span>Pipes, sheets, plates and fittings</span></a>
+      <a class="relItem" href="#applications"><strong>Applications</strong><span>Marine, chemical and process use</span></a>
+      <a class="relItem" href="#rfq-checklist"><strong>RFQ Checklist</strong><span>Details to share</span></a>
+      <a class="relItem" href="#faqs"><strong>FAQs</strong><span>Buyer questions</span></a>
     </div>
   </section>
-  <section class="card" style="margin-top:14px">
-    <h2>SS 316 Forms, Sizes and Supply Details</h2>
+  <section class="grid2" id="overview">
+    <div class="card">
+      <h2>What Is SS 316?</h2>
+      <p>SS 316 is a molybdenum-bearing austenitic stainless steel grade commonly requested for corrosion-focused RFQs. Buyers often compare it with SS 304 and SS 316L, but final selection should follow the application, service condition, fabrication method and project specification.</p>
+    </div>
+    <div class="card">
+      <h2>Specification Signals</h2>
+      <div class="gateSignalGrid">
+        <span><strong>Grade family</strong>Austenitic stainless steel, 300 series.</span>
+        <span><strong>RFQ forms</strong>Pipes, tubes, sheets, plates, coils, bars, flanges and fittings.</span>
+        <span><strong>Use context</strong>Chemical, marine, coastal, process and equipment RFQs where specified.</span>
+        <span><strong>Documents</strong>MTC, PMI or inspection needs can be reviewed where applicable.</span>
+      </div>
+    </div>
+  </section>
+  <section class="card tableGateCard" id="standards" style="margin-top:14px">
+    <h2>Standards, Composition and Property Notes</h2>
+    <p class="gateLead">Use this as an RFQ planning guide. Exact composition, mechanical properties and equivalent references should be confirmed against the buyer's standard or project specification.</p>
     <table>
+      <caption>SS 316 standards and enquiry guide</caption>
       <thead>
         <tr>
-          <th>Product Form</th>
-          <th>Common Requirement Details</th>
+          <th>Buyer Check</th>
+          <th>Safe RFQ Guidance</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>SS 316 Pipes</td>
-          <td>Seamless, welded and ERW pipes in required OD, wall thickness, schedule and length.</td>
+          <td>Primary grade</td>
+          <td>Specify SS 316 / Stainless Steel 316 and the applicable ASTM, ASME, EN, DIN, JIS or project reference.</td>
         </tr>
         <tr>
-          <td>SS 316 Tubes</td>
-          <td>Round, square, rectangular, instrumentation and industrial tubes as per enquiry.</td>
+          <td>Related grades</td>
+          <td>SS 304, SS 316 and SS 316L are separate buyer references; substitution should be confirmed by the buyer or project engineer.</td>
         </tr>
         <tr>
-          <td>SS 316 Sheets and Plates</td>
-          <td>Sheets and plates in required thicknesses, sizes and finishes for fabrication and project use.</td>
+          <td>Composition and properties</td>
+          <td>Share the required standard or datasheet if exact chemical or mechanical limits must be quoted.</td>
         </tr>
         <tr>
-          <td>SS 316 Coils</td>
-          <td>HR coils, CR coils, slit coils and strips for manufacturing and industrial requirements.</td>
-        </tr>
-        <tr>
-          <td>SS 316 Bars, Rods, Angles and Flats</td>
-          <td>Round bars, rods, flats, pattas, equal angles and unequal angles for machining and fabrication.</td>
-        </tr>
-        <tr>
-          <td>SS 316 Flanges, Fittings and Fasteners</td>
-          <td>Flanges, elbows, tees, reducers, stub ends, bolts, nuts, washers, studs and screws.</td>
+          <td>Documentation</td>
+          <td>MTC, PMI, inspection or third-party documentation can be reviewed enquiry-wise where applicable.</td>
         </tr>
       </tbody>
     </table>
   </section>
-  <section class="grid2">
+  <section class="card relatedGate" id="forms" style="margin-top:14px">
+    <h2>Common SS 316 Product Forms</h2>
+    <p class="gateLead">Pick the closest form route, then share dimensions, finish, quantity and documentation requirements.</p>
+    <div class="relGrid">
+      <a class="relItem" href="/materials/stainless-steel-pipes-supplier-india.html"><strong>SS Pipes</strong><span>OD, NB, schedule, wall thickness and length.</span></a>
+      <a class="relItem" href="/materials/stainless-steel-tubes-supplier-india.html"><strong>SS Tubes</strong><span>Round, square, rectangular or instrumentation tube RFQs.</span></a>
+      <a class="relItem" href="/materials/stainless-steel-sheets-supplier-india.html"><strong>SS Sheets</strong><span>Thickness, finish, width, length and packing details.</span></a>
+      <a class="relItem" href="/materials/stainless-steel-plates-supplier-india.html"><strong>SS Plates</strong><span>Thickness, cut size, tolerance and project quantity.</span></a>
+      <a class="relItem" href="/materials/stainless-steel-coils-supplier-india.html"><strong>SS Coils</strong><span>HR, CR, slit coil or strip requirements.</span></a>
+      <a class="relItem" href="/materials/stainless-steel-bars-rods-supplier-india.html"><strong>Bars &amp; Rods</strong><span>Diameter, length, finish and machining needs.</span></a>
+      <a class="relItem" href="/materials/stainless-steel-flanges-supplier-india.html"><strong>Flanges</strong><span>Class, face, standard, bore and quantity.</span></a>
+      <a class="relItem" href="/materials/stainless-steel-fittings-supplier-india.html"><strong>Fittings</strong><span>Elbows, tees, reducers, stub ends and caps.</span></a>
+    </div>
+  </section>
+  <section class="card" id="applications" style="margin-top:14px">
+    <h2>Application Context</h2>
+    <div class="gateCardGrid">
+      <div class="gateCard"><h3>Chemical Process</h3><p>Process equipment and piping enquiries where SS 316 is specified for the service.</p></div>
+      <div class="gateCard"><h3>Marine and Coastal</h3><p>Coastal fabrication, marine hardware and chloride-exposure contexts where buyers request 316.</p></div>
+      <div class="gateCard"><h3>Food and Pharma</h3><p>Hygiene-sensitive equipment RFQs where grade, finish and documentation details matter.</p></div>
+      <div class="gateCard"><h3>Heat Exchangers</h3><p>Tubes, sheets, plates and fittings for heat-transfer or process-system enquiries.</p></div>
+      <div class="gateCard"><h3>Piping Systems</h3><p>Pipes, flanges and fittings for industrial fluid-handling requirements.</p></div>
+      <div class="gateCard"><h3>Project Buying</h3><p>MTO or BOQ-based requirements with standards, size lists and inspection notes.</p></div>
+    </div>
+    <p class="gateLead" style="margin-top:12px!important"><a href="/industries.html">View industries served</a> for broader application routing.</p>
+  </section>
+  <section class="grid2" id="rfq-checklist">
     <div class="card">
-      <h2>Standards and Documentation</h2>
-      <p>
-        SS 316 material can be supplied as per common stainless steel standards such as ASTM, ASME,
-        DIN, EN and JIS where applicable. Material Test Certificate support may be provided as per
-        customer requirement, stock availability and order specification.
-      </p>
+      <h2>Documentation Support</h2>
+      <p>Buyers can mention MTC, PMI, inspection, testing, packing, marking or export-document needs where applicable. Documentation support is reviewed against the grade, source, quantity and customer requirement.</p>
+      <div class="gateCardGrid">
+        <a class="relItem" href="/quality-documentation-support.html"><strong>Quality Documentation</strong><span>MTC, PMI and inspection support notes.</span></a>
+        <a class="relItem" href="/technical-resources.html"><strong>Technical Resources</strong><span>Pipe schedules, standards and RFQ references.</span></a>
+        <a class="relItem" href="/blog/mtc-pmi-third-party-inspection-guide.html"><strong>MTC / PMI Guide</strong><span>Buyer guide for documentation requests.</span></a>
+      </div>
     </div>
     <div class="card">
-      <h2>Why Buy From Rubinox?</h2>
+      <h2>RFQ Checklist</h2>
       <ul>
-        <li>Stainless steel grades for industrial and project requirements</li>
-        <li>Mumbai-based sourcing and quotation support</li>
-        <li>Domestic supply across India</li>
-        <li>Bulk, project and urgent enquiry support</li>
-        <li>Quotation by WhatsApp and email</li>
+        <li>Material grade: SS 316 and any equivalent or project reference.</li>
+        <li>Product form: pipe, tube, sheet, plate, coil, bar, flange, fitting or fastener.</li>
+        <li>Size: OD, NB, schedule, thickness, width, length, class, finish or drawing.</li>
+        <li>Quantity: pieces, weight, lengths, sheets, plates, bars or project MTO.</li>
+        <li>Standard, MTC, PMI, inspection, packing or marking requirement where applicable.</li>
+        <li>Delivery city, project site, port or export destination.</li>
       </ul>
     </div>
   </section>
-  <section class="card" style="margin-top:14px">
-    <h2>Related Stainless Steel Pages</h2>
+  <section class="card relatedGate" id="related" style="margin-top:14px">
+    <h2>Related Resources</h2>
+    <p class="gateLead">Use these links to compare grades, route to product forms and prepare a cleaner RFQ.</p>
     <div class="relGrid">
-      <a class="relItem" href="/materials/stainless-steel.html">
-        <strong>Stainless Steel Supplier in India</strong>
-        <span>Main stainless steel page for grades, forms and applications.</span>
-      </a>
-      <a class="relItem" href="/materials/ss-304-supplier-india.html">
-        <strong>SS 304 Supplier in India</strong>
-        <span>General-purpose stainless steel for fabrication and industrial use.</span>
-      </a>
-      <a class="relItem" href="/materials/ss-316l-supplier-india.html">
-        <strong>SS 316L Supplier in India</strong>
-        <span>Low carbon stainless steel for welded and process applications.</span>
-      </a>
-      <a class="relItem" href="/quotation.html">
-        <strong>Request Quotation</strong>
-        <span>Send grade, size, quantity and delivery location for pricing.</span>
-      </a>
+      <a class="relItem" href="/materials/stainless-steel.html"><strong>Stainless Steel Family</strong><span>Parent material page for grades and forms.</span></a>
+      <a class="relItem" href="/materials/ss-304-supplier-india.html"><strong>SS 304</strong><span>Common stainless grade for general fabrication contexts.</span></a>
+      <a class="relItem" href="/materials/ss-316l-supplier-india.html"><strong>SS 316L</strong><span>Low-carbon 316 variant often requested for welded work.</span></a>
+      <a class="relItem" href="/materials/ss-317l-supplier-india.html"><strong>SS 317L</strong><span>Related grade for more demanding corrosion contexts.</span></a>
+      <a class="relItem" href="/blog/stainless-steel-304-vs-316-vs-316l.html"><strong>304 vs 316 vs 316L</strong><span>Knowledge Hub comparison guide.</span></a>
+      <a class="relItem" href="/blog/stainless-steel-for-pharma-food-processing.html"><strong>Pharma and Food Guide</strong><span>Buyer guide for stainless selection contexts.</span></a>
+      <a class="relItem" href="/product-forms.html"><strong>Product Forms Hub</strong><span>Browse pipes, sheets, plates, coils and fittings.</span></a>
+      <a class="relItem" href="/quotation.html"><strong>Request Quotation</strong><span>Send grade, size, quantity and destination details.</span></a>
     </div>
   </section>
-  <section class="card" style="margin-top:14px">
+  <section class="card" id="faqs" style="margin-top:14px">
     <h2>SS 316 Supplier FAQs</h2>
     <div class="faq">
       <div class="faqItem">
-        <h3>Do you supply SS 316 across India?</h3>
-        <p>Yes. Rubinox Metal and Alloys supplies SS 316 products across India based on grade, size, quantity and delivery requirement.</p>
+        <h3>What details should I send for an SS 316 RFQ?</h3>
+        <p>Share the product form, size, quantity, standard, finish, documentation requirement and delivery location so Rubinox can review the enquiry clearly.</p>
       </div>
       <div class="faqItem">
-        <h3>Which SS 316 products are available?</h3>
-        <p>SS 316 is available in pipes, tubes, sheets, plates, coils, rods, bars, angles, flats, flanges, fittings and fasteners.</p>
+        <h3>Which SS 316 product forms can be requested?</h3>
+        <p>Common RFQs include pipes, tubes, sheets, plates, coils, bars, rods, angles, flanges, fittings and fasteners.</p>
       </div>
       <div class="faqItem">
-        <h3>What is SS 316 used for?</h3>
-        <p>SS 316 is commonly used in chemical, marine, coastal, food, pharma, heat exchanger and industrial piping applications.</p>
+        <h3>Is SS 316 always better than SS 304?</h3>
+        <p>No. SS 316 is commonly chosen for more corrosion-focused contexts, but grade selection depends on application, service conditions and buyer specification.</p>
       </div>
       <div class="faqItem">
-        <h3>Is SS 316 better than SS 304?</h3>
-        <p>SS 316 generally offers better corrosion resistance than SS 304, especially in chloride, marine and chemical environments.</p>
+        <h3>Can documentation be requested with SS 316 material?</h3>
+        <p>Yes, buyers can mention MTC, PMI or inspection needs where applicable. Support is reviewed enquiry-wise against the material and requirement.</p>
       </div>
       <div class="faqItem">
-        <h3>How do I request SS 316 pricing?</h3>
-        <p>Send the material grade, product form, size, thickness or schedule, quantity, standard and delivery location by WhatsApp or email.</p>
+        <h3>Is Rubinox a manufacturer of SS 316?</h3>
+        <p>No. Rubinox Metal and Alloys is a stockist, supplier, importer, exporter and project supplier.</p>
       </div>
     </div>
   </section>
 
-  <section class="materialRfqCta" aria-labelledby="material-rfq-cta-title">
+  <section class="materialRfqCta" id="rfq" aria-labelledby="material-rfq-cta-title">
     <div class="materialRfqMain">
       <span class="materialRfqLabel">Procurement RFQ support</span>
       <h2 id="material-rfq-cta-title">Share Your SS 316 Requirement</h2>
