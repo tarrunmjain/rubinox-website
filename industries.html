@@ -771,6 +771,26 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
 @media(max-width:1120px){header .topRail .wrap{flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important;gap:6px!important;padding-top:8px!important;padding-bottom:8px!important}header .topRail .railLinks.utilityIcons{justify-content:center!important;width:100%!important}.siteFooter .footerLayout{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:760px){header .topRail .railNote{display:block!important;font-size:11.5px!important}header .topRail .railLinks.utilityIcons{gap:6px!important}.faqGrid,.relGrid{grid-template-columns:1fr!important;gap:14px!important}.faqItem{padding:20px!important}.siteFooter .footerLayout{grid-template-columns:1fr!important;padding:28px 18px!important}.siteFooter .footerBrand img{max-width:190px!important}.siteFooter .footerIconGroup{flex-wrap:nowrap!important;gap:6px!important}.siteFooter .footerIconGroup .footerIcon{width:32px!important;height:32px!important;min-width:32px!important;min-height:32px!important;max-width:32px!important;max-height:32px!important}}
 /* RUBINOX FOOTER STANDARDIZATION END */
+
+/* Batch 8R industries page rescue: scoped visual hierarchy refinements. */
+.industryRescuePage{--rescue-navy:#0f2747;--rescue-ink:#172236;--rescue-muted:#5d697a;--rescue-line:#dfe6ee;--rescue-soft:#f5f8fb;--rescue-gold:#b08a3c;max-width:min(1180px,calc(100% - 36px));gap:26px}
+.industryRescuePage .premiumHero{max-width:none;margin:0;padding:34px clamp(22px,4vw,48px);grid-template-columns:minmax(0,1.03fr) minmax(320px,.97fr);align-items:stretch}
+.industryRescuePage .premiumHero h1{max-width:760px;font-size:clamp(2.05rem,3.2vw,3.35rem);line-height:1.04}
+.industryRescuePage .premiumHero p{max-width:720px;font-size:1.02rem}.industryRescuePage .heroVisual{min-height:360px}
+.industryRescuePage .trustStrip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:0}
+.industryRescuePage .trustStrip>div,.industryRescuePage .rescuePanel,.industryRescuePage .sectorNav,.industryRescuePage .card{border:1px solid var(--rescue-line);box-shadow:0 18px 44px rgba(14,33,58,.08)}
+.industryRescuePage .trustStrip>div{min-height:0;padding:16px;background:#fff;border-radius:8px;color:var(--rescue-ink);font-weight:400}.industryRescuePage .trustStrip strong{display:block;color:var(--rescue-navy);font-size:.95rem;margin-bottom:5px}.industryRescuePage .trustStrip span{display:block;color:var(--rescue-muted);font-size:.88rem;line-height:1.45}
+.industryRescuePage .sectorNav{background:#fff;border-radius:8px;padding:18px clamp(18px,3vw,28px)}.industryRescuePage .sectorNav h2{margin:0 0 12px;color:var(--rescue-navy);font-size:1.12rem}.industryRescuePage .sectorNav .tagRow{gap:10px}.industryRescuePage .sectorNav a{border-color:#cdd7e3;color:#18304f;background:#f9fbfd;font-weight:800;text-decoration:none}
+.industryRescuePage .industryGroupsSection{padding:clamp(22px,3vw,34px)}.industryRescuePage .industryGroup{margin-top:28px;padding-top:24px;border-top:1px solid var(--rescue-line)}.industryRescuePage .industryGroup:first-child{border-top:0;padding-top:8px}.industryRescuePage .industryGroupHeader{display:block}.industryRescuePage .industryGroupHeader h3{font-size:1.28rem;letter-spacing:0;color:var(--rescue-navy);margin-bottom:6px}.industryRescuePage .industryGroupHeader p,.industryRescuePage .sectionIntro{max-width:860px}
+.industryRescuePage .industryGroup .industryGrid{display:grid;grid-template-columns:1fr;gap:18px}.industryRescuePage .industryCard.compact{display:grid;grid-template-columns:minmax(240px,300px) minmax(0,1fr);min-height:260px;border:1px solid #d9e1eb;border-radius:8px;overflow:hidden;background:#fff;box-shadow:0 14px 34px rgba(13,31,55,.09);transform:none}.industryRescuePage .industryCard.compact:hover{transform:none;box-shadow:0 18px 42px rgba(7,16,31,.13)}
+.industryRescuePage .industryCard.compact .industryMedia{height:100%;min-height:260px;border-right:1px solid #e2e9f1;background-size:cover;background-position:center}.industryRescuePage .industryCard.compact .industryBody{padding:24px clamp(20px,3vw,32px);display:flex;flex-direction:column;gap:12px}.industryRescuePage .industryCard.compact h3{font-size:1.24rem;line-height:1.2;color:#112746}.industryRescuePage .industryCard.compact p{color:#4d5b6d;font-size:.98rem;line-height:1.6;max-width:760px}
+.industryRescuePage .industryCard.compact .industryMeta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 18px;margin-top:8px}.industryRescuePage .industryCard.compact .metaBlock{margin:0;padding:14px;border-radius:8px;background:var(--rescue-soft);border:1px solid #e2e9f1}.industryRescuePage .industryCard.compact .metaBlock strong{color:#163154;font-size:.82rem;letter-spacing:.02em;text-transform:uppercase}.industryRescuePage .industryCard.compact .tagRow.dense{margin-top:10px;gap:8px}.industryRescuePage .industryCard.compact .tagRow.dense a{padding:7px 10px;font-size:.78rem;background:#fff;border-color:#ccd8e4}
+.industryRescuePage .industryCard.compact .specNote,.industryRescuePage .industryCard.compact .industryActions{grid-column:1/-1}.industryRescuePage .industryCard.compact .specNote{margin:0;color:#596779;font-size:.91rem}.industryRescuePage .industryCard.compact .industryActions{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-top:2px}
+.industryRescuePage .materialRouting{display:grid;grid-template-columns:1fr 1fr;gap:18px}.industryRescuePage .rescuePanel{border-radius:8px;padding:22px;background:#fff}.industryRescuePage .rescuePanel h3{margin:0 0 8px;color:var(--rescue-navy);font-size:1.12rem}.industryRescuePage .rescuePanel p{margin:0 0 14px;color:var(--rescue-muted);line-height:1.6}.industryRescuePage .rescuePanel .tagRow{gap:9px}.industryRescuePage .rescuePanel .tagRow a{background:#f8fafc;border-color:#cfdae6;text-decoration:none}
+.industryRescuePage .rfqChecklist{grid-template-columns:repeat(4,minmax(0,1fr))}.industryRescuePage .faqGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.industryRescuePage .faqGrid article,.industryRescuePage .rfqChecklist li,.industryRescuePage .resourceGrid article{border-radius:8px}.industryRescuePage .finalCta,.industryRescuePage .ctaBand{border-radius:8px}
+@media(max-width:980px){.industryRescuePage{max-width:min(100% - 24px,760px)}.industryRescuePage .premiumHero{grid-template-columns:1fr}.industryRescuePage .trustStrip,.industryRescuePage .materialRouting,.industryRescuePage .rfqChecklist,.industryRescuePage .faqGrid{grid-template-columns:1fr 1fr}.industryRescuePage .industryCard.compact{grid-template-columns:1fr}.industryRescuePage .industryCard.compact .industryMedia{min-height:230px;height:230px;border-right:0;border-bottom:1px solid #e2e9f1}}
+@media(max-width:620px){.industryRescuePage{max-width:calc(100% - 18px);gap:18px}.industryRescuePage .premiumHero{padding:24px 18px}.industryRescuePage .trustStrip,.industryRescuePage .materialRouting,.industryRescuePage .rfqChecklist,.industryRescuePage .faqGrid,.industryRescuePage .industryCard.compact .industryMeta{grid-template-columns:1fr}.industryRescuePage .industryCard.compact .industryBody{padding:20px 16px}.industryRescuePage .heroVisual{min-height:260px}}
+
 </style>
 </head>
 <body>
@@ -849,16 +869,12 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
     </div>
   </div>
 </header>
-<main class="page" id="main-content">
+<main class="page industryRescuePage" id="main-content">
 
   <section class="premiumHero hasHeroVisual"><div class="heroCopy">
     <div class="crumb"><a href="/">Home</a> &bull; Industries We Serve</div>
     <h1>Industries We Serve</h1>
-    <p>
-      Rubinox Metal and Alloys supplies stainless steel, duplex, super duplex, nickel alloys,
-      SMO 254, titanium and industrial metals for regulated, corrosive, high-temperature and
-      project-driven applications across India and global markets.
-    </p>
+    <p>Industrial buyers use Rubinox Metal and Alloys for grade-led RFQ support across process plants, fabrication teams, marine work, infrastructure supply, food processing, pharmaceutical equipment, and export enquiries.</p>
     <div class="heroProof">
       <span>PAN India Supply</span>
       <span>Export Enquiries</span>
@@ -866,438 +882,428 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
       <span>Project Supply</span>
     </div>
     <div class="btnrow">
-      <a class="btn primary"
-         href="https://wa.me/919363193755"
-         target="_blank"
-         rel="noopener"
-         onclick="return trackLeadAndGo('whatsapp','industries_hero_whatsapp', this.href, true)"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>Send Project RFQ</a>
-      <a class="btn primary"
-         href="/quotation.html"
-         onclick="return trackLeadAndGo('navigation','industries_hero_quote_page', this.href, false)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8l4 4v14H4V3h4z"></path><path d="M16 3v5h5"></path><path d="M8 13h8"></path><path d="M8 17h6"></path></svg>Quotation Page</a>
+      <a class="btn primary" href="/quotation.html" onclick="return trackLeadAndGo('navigation','industries_hero_quote_page', this.href, false)">Request Quote</a>
+      <a class="btn ghost" href="/materials/stainless-steel.html" onclick="return trackLeadAndGo('navigation','industries_hero_materials', this.href, false)">View Materials</a>
+      <a class="btn ghost" href="/technical-resources.html" onclick="return trackLeadAndGo('navigation','industries_hero_technical_resources', this.href, false)">Technical Resources</a>
     </div>
   </div><div class="heroVisual"><img src="/assets/hero/hero-industries-industrial-piping.webp" width="1600" height="900" alt="Industrial piping and process equipment for industries served" decoding="async" loading="lazy"></div></section>
 
-  <div class="trustStrip" role="group" aria-label="Rubinox industrial supply trust signals">
-    <div class="trustItem">PAN India Supply<small>Project and plant requirements across India.</small></div>
-    <div class="trustItem">Export Enquiries<small>Packing and shipment details reviewed when specified.</small></div>
-    <div class="trustItem">MTC / Inspection Review<small>Documentation scope checked at enquiry stage.</small></div>
-    <div class="trustItem">Project Supply<small>Multi-item BOQ, MTO and scheduled dispatch support.</small></div>
+  <div class="trustStrip" role="group" aria-label="Rubinox industrial supply support pathways">
+    <div><strong>Material &amp; Grade Selection</strong><span>Route stainless steel, duplex, nickel alloy, titanium, copper, brass, aluminium, carbon steel, and mild steel enquiries by duty condition.</span></div>
+    <div><strong>Product Form RFQs</strong><span>Share pipe, tube, sheet, plate, coil, bar, flange, fitting, fastener, angle, channel, flat, circle, and wire mesh requirements.</span></div>
+    <div><strong>Documentation Support</strong><span>Ask for MTC, test, inspection, packing, and export documentation support where applicable and available on request.</span></div>
+    <div><strong>Project / Export Enquiry Support</strong><span>Coordinate multi-grade, multi-form, PAN India, and export RFQs with destination, specification, quantity, and timeline details.</span></div>
   </div>
 
-  <section class="card">
-    <h2>Industry RFQ Pathways</h2>
-    <p class="sectionIntro">
-      Rubinox supports RFQs from industrial buyers across oil &amp; gas, chemical, pharma, marine, power, fabrication, construction and EPC sectors as a stockist, supplier, importer, exporter and project supplier. Final supply scope depends on grade, product form, size, quantity, documentation and logistics requirements.
-    </p>
+  <section class="sectorNav" aria-labelledby="sector-nav-title">
+    <h2 id="sector-nav-title">Browse Industry Groups</h2>
+    <div class="tagRow">
+      <a href="#process-energy">Process &amp; Energy</a>
+      <a href="#chemical-pharma">Chemical &amp; Pharma</a>
+      <a href="#marine-water">Marine &amp; Water</a>
+      <a href="#fabrication-infrastructure">Fabrication &amp; Infrastructure</a>
+      <a href="#food-hygiene">Food &amp; Hygiene</a>
+    </div>
+  </section>
+
+  <section class="card industryGroupsSection">
+    <h2>Industry Groups and RFQ Routes</h2>
+    <p class="sectionIntro">Grouped sector pathways keep the page scannable while preserving practical RFQ routes for common materials, product forms, documentation, and quotation support.</p>
 
     <div class="industryGroups">
-      <div class="industryGroup">
+      <div class="industryGroup" id="process-energy">
         <div class="industryGroupHeader">
-          <h3>Process &amp; Energy Industries</h3>
-          <p>Corrosion, pressure, temperature and shutdown schedules drive most process-industry enquiries. Buyers should share standards, service conditions and documentation scope with the RFQ.</p>
+          <h3>Process &amp; Energy</h3>
+          <p>Oil and gas, petrochemical, boiler, power, and energy RFQs benefit from early clarity on pressure, temperature, standards, documentation, and schedule requirements.</p>
         </div>
         <div class="industryGrid">
           <article class="industryCard compact">
-            <div class="industryMedia" style="--industry-image:url('/assets/industry-oil-gas.webp')" role="img" aria-label="Oil and gas refinery piping and process infrastructure"></div>
-            <div class="industryBody">
-              <div class="industryTop"><span class="industryIcon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11z"></path><path d="M8 15h8"></path><path d="M12 11v8"></path></svg></span><h3>Oil &amp; Gas / Petrochemical</h3></div>
-              <p>RFQ support for refinery, pipeline, petrochemical and offshore buyers reviewing alloy steel, duplex stainless steel, nickel alloy and carbon steel line items.</p>
-              <div class="industryMeta">
-                <div class="metaBlock">
-                  <strong>Materials and grades</strong>
-                  <div class="tagRow dense">
+                      <div class="industryMedia" style="--industry-image:url('/assets/industry-oil-gas.webp')" role="img" aria-label="Oil and gas refinery piping and process infrastructure"></div>
+                      <div class="industryBody">
+                        <div class="industryTop"><span class="industryIcon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11z"></path><path d="M8 15h8"></path><path d="M12 11v8"></path></svg></span><h3>Oil &amp; Gas / Petrochemical</h3></div>
+                        <p>RFQ support for refinery, pipeline, petrochemical and offshore buyers reviewing alloy steel, duplex stainless steel, nickel alloy and carbon steel line items.</p>
+                        <div class="industryMeta">
+                          <div class="metaBlock">
+                            <strong>Materials and grades</strong>
+                            <div class="tagRow dense">
                     <a class="materialTag" href="/materials/api-5l-grade-b-pipe-supplier-india.html">API 5L Grade B</a>
                     <a class="materialTag" href="/materials/api-5l-x52-pipe-supplier-india.html">API 5L X52</a>
                     <a class="materialTag" href="/materials/api-5l-x65-pipe-supplier-india.html">API 5L X65</a>
                     <a class="materialTag" href="/materials/astm-a106-grade-b-pipe-supplier-india.html">ASTM A106 Gr B</a>
-                    <a class="materialTag" href="/materials/astm-a335-p11-pipe-supplier-india.html">ASTM A335 P11</a>
-                    <a class="materialTag" href="/materials/duplex-2205-supplier-india.html">Duplex 2205</a>
-                    <a class="materialTag" href="/materials/super-duplex-2507-supplier-india.html">Super Duplex 2507</a>
-                    <a class="materialTag" href="/materials/inconel-625-supplier-india.html">Inconel 625</a>
                   </div>
-                </div>
-                <div class="metaBlock">
-                  <strong>Common forms</strong>
-                  <div class="tagRow dense">
-                    <a class="materialTag" href="/materials/stainless-steel-pipes-supplier-india.html">Pipes</a>
-                    <a class="materialTag" href="/materials/stainless-steel-flanges-supplier-india.html">Flanges</a>
-                    <a class="materialTag" href="/materials/stainless-steel-fittings-supplier-india.html">Fittings</a>
-                    <a class="materialTag" href="/materials/stainless-steel-fasteners-supplier-india.html">Fasteners</a>
-                  </div>
-                </div>
-                <p class="specNote">Buyer RFQ references may include API 5L, ASTM A106, ASTM A335, ASTM A182, pressure class, schedule, NACE or project specifications where applicable.</p>
-                <div class="industryActions"><a class="rfqAction" href="/quotation.html">Send oil &amp; gas RFQ</a><a href="/technical-resources.html">Technical resources</a></div>
-              </div>
-            </div>
-          </article>
+                          </div>
+                          <div class="metaBlock">
+                            <strong>Common forms</strong>
+                            <div class="tagRow dense">
+                              <a class="materialTag" href="/materials/stainless-steel-pipes-supplier-india.html">Pipes</a>
+                              <a class="materialTag" href="/materials/stainless-steel-flanges-supplier-india.html">Flanges</a>
+                              <a class="materialTag" href="/materials/stainless-steel-fittings-supplier-india.html">Fittings</a>
+                              <a class="materialTag" href="/materials/stainless-steel-fasteners-supplier-india.html">Fasteners</a>
+                            </div>
+                          </div>
+                          <p class="specNote">Buyer RFQ references may include API 5L, ASTM A106, ASTM A335, ASTM A182, pressure class, schedule, NACE or project specifications where applicable.</p>
+                          <div class="industryActions"><a class="rfqAction" href="/quotation.html">Send oil &amp; gas RFQ</a><a href="/technical-resources.html">Technical resources</a></div>
+                        </div>
+                      </div>
+                    </article>
 
           <article class="industryCard compact">
-            <div class="industryMedia" style="--industry-image:url('/assets/industry-chemical.webp')" role="img" aria-label="Chemical processing plant with corrosion-resistant alloy equipment"></div>
-            <div class="industryBody">
-              <div class="industryTop"><span class="industryIcon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M9 3h6"></path><path d="M10 3v5l-5 9a3 3 0 0 0 3 4h8a3 3 0 0 0 3-4l-5-9V3"></path><path d="M7 15h10"></path></svg></span><h3>Chemical Processing</h3></div>
-              <p>Supply enquiry support for process plants, chemical equipment, heat exchangers and piping systems where corrosion media and temperature decide material choice.</p>
-              <div class="industryMeta">
-                <div class="metaBlock">
-                  <strong>Materials and grades</strong>
-                  <div class="tagRow dense">
-                    <a class="materialTag" href="/materials/ss-316l-supplier-india.html">SS 316L</a>
-                    <a class="materialTag" href="/materials/ss-904l-supplier-india.html">SS 904L</a>
-                    <a class="materialTag" href="/materials/smo-254-supplier-india.html">SMO 254</a>
-                    <a class="materialTag" href="/materials/alloy-20-uns-n08020-supplier-india.html">Alloy 20</a>
-                    <a class="materialTag" href="/materials/hastelloy-c-276-supplier-india.html">Hastelloy C276</a>
-                    <a class="materialTag" href="/materials/hastelloy-c-22-supplier-india.html">Hastelloy C22</a>
-                    <a class="materialTag" href="/materials/inconel-625-supplier-india.html">Inconel 625</a>
-                    <a class="materialTag" href="/materials/titanium-grade-2-supplier-india.html">Titanium Grade 2</a>
-                  </div>
-                </div>
-                <div class="metaBlock">
-                  <strong>Common forms</strong>
-                  <div class="tagRow dense">
-                    <a class="materialTag" href="/materials/stainless-steel-pipes-supplier-india.html">Pipes</a>
-                    <a class="materialTag" href="/materials/stainless-steel-tubes-supplier-india.html">Tubes</a>
-                    <a class="materialTag" href="/materials/stainless-steel-sheets-supplier-india.html">Sheets</a>
-                    <a class="materialTag" href="/materials/stainless-steel-plates-supplier-india.html">Plates</a>
-                    <a class="materialTag" href="/materials/stainless-steel-flanges-supplier-india.html">Flanges</a>
-                    <a class="materialTag" href="/materials/stainless-steel-fittings-supplier-india.html">Fittings</a>
-                  </div>
-                </div>
-                <p class="specNote">Buyers should include media, concentration, pressure, temperature, corrosion allowance and MTC / PMI requirements where applicable.</p>
-                <div class="industryActions"><a class="rfqAction" href="/quotation.html">Send chemical RFQ</a><a href="/quality-documentation-support.html">Documentation support</a></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="industryCard compact">
-            <div class="industryMedia" style="--industry-image:url('/assets/industry-power-generation.webp')" role="img" aria-label="Power generation plant with heat and high-temperature process equipment"></div>
-            <div class="industryBody">
-              <div class="industryTop"><span class="industryIcon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M13 2L4 14h7l-1 8 10-13h-7z"></path></svg></span><h3>Power / Boiler / Energy</h3></div>
-              <p>RFQ support for boiler, heat-transfer, high-temperature and energy project line items where creep strength, oxidation resistance and documentation matter.</p>
-              <div class="industryMeta">
-                <div class="metaBlock">
-                  <strong>Materials and grades</strong>
-                  <div class="tagRow dense">
+                      <div class="industryMedia" style="--industry-image:url('/assets/industry-power-generation.webp')" role="img" aria-label="Power generation plant with heat and high-temperature process equipment"></div>
+                      <div class="industryBody">
+                        <div class="industryTop"><span class="industryIcon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M13 2L4 14h7l-1 8 10-13h-7z"></path></svg></span><h3>Power / Boiler / Energy</h3></div>
+                        <p>RFQ support for boiler, heat-transfer, high-temperature and energy project line items where creep strength, oxidation resistance and documentation matter.</p>
+                        <div class="industryMeta">
+                          <div class="metaBlock">
+                            <strong>Materials and grades</strong>
+                            <div class="tagRow dense">
                     <a class="materialTag" href="/materials/astm-a335-p11-pipe-supplier-india.html">ASTM A335 P11</a>
                     <a class="materialTag" href="/materials/astm-a335-p22-pipe-supplier-india.html">ASTM A335 P22</a>
                     <a class="materialTag" href="/materials/astm-a335-p91-pipe-supplier-india.html">ASTM A335 P91</a>
                     <a class="materialTag" href="/materials/sa-210-grade-a1-boiler-tube-supplier-india.html">SA 210 Gr A1</a>
-                    <a class="materialTag" href="/materials/sa-213-t11-tube-supplier-india.html">SA 213 T11</a>
-                    <a class="materialTag" href="/materials/sa-213-t22-tube-supplier-india.html">SA 213 T22</a>
-                    <a class="materialTag" href="/materials/incoloy-800h-supplier-india.html">Incoloy 800H</a>
-                    <a class="materialTag" href="/materials/ss-310-supplier-india.html">SS 310</a>
                   </div>
-                </div>
-                <div class="metaBlock">
-                  <strong>Common forms</strong>
-                  <div class="tagRow dense">
+                          </div>
+                          <div class="metaBlock">
+                            <strong>Common forms</strong>
+                            <div class="tagRow dense">
                     <a class="materialTag" href="/materials/stainless-steel-pipes-supplier-india.html">Pipes</a>
                     <a class="materialTag" href="/materials/stainless-steel-tubes-supplier-india.html">Tubes</a>
                     <a class="materialTag" href="/materials/stainless-steel-plates-supplier-india.html">Plates</a>
                     <a class="materialTag" href="/materials/stainless-steel-flanges-supplier-india.html">Flanges</a>
-                    <a class="materialTag" href="/materials/stainless-steel-fittings-supplier-india.html">Fittings</a>
                   </div>
-                </div>
-                <p class="specNote">Buyers may specify ASTM, ASME, SA, EN or project specifications. Temperature, pressure, schedule and inspection notes should be shared before quotation.</p>
-                <div class="industryActions"><a class="rfqAction" href="/quotation.html">Send energy RFQ</a><a href="/blog/stainless-steel-310-vs-321-vs-347.html">Heat-grade guide</a></div>
-              </div>
-            </div>
-          </article>
+                          </div>
+                          <p class="specNote">Buyers may specify ASTM, ASME, SA, EN or project specifications. Temperature, pressure, schedule and inspection notes should be shared before quotation.</p>
+                          <div class="industryActions"><a class="rfqAction" href="/quotation.html">Send energy RFQ</a><a href="/blog/stainless-steel-310-vs-321-vs-347.html">Heat-grade guide</a></div>
+                        </div>
+                      </div>
+                    </article>
+        </div>
+      </div>
+
+      <div class="industryGroup" id="chemical-pharma">
+        <div class="industryGroupHeader">
+          <h3>Chemical &amp; Pharma</h3>
+          <p>Chemical processing and pharmaceutical equipment buyers often compare corrosion resistance, finish, testing, and documentation requirements before quote release.</p>
+        </div>
+        <div class="industryGrid">
+          <article class="industryCard compact">
+                      <div class="industryMedia" style="--industry-image:url('/assets/industry-chemical.webp')" role="img" aria-label="Chemical processing plant with corrosion-resistant alloy equipment"></div>
+                      <div class="industryBody">
+                        <div class="industryTop"><span class="industryIcon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M9 3h6"></path><path d="M10 3v5l-5 9a3 3 0 0 0 3 4h8a3 3 0 0 0 3-4l-5-9V3"></path><path d="M7 15h10"></path></svg></span><h3>Chemical Processing</h3></div>
+                        <p>Supply enquiry support for process plants, chemical equipment, heat exchangers and piping systems where corrosion media and temperature decide material choice.</p>
+                        <div class="industryMeta">
+                          <div class="metaBlock">
+                            <strong>Materials and grades</strong>
+                            <div class="tagRow dense">
+                    <a class="materialTag" href="/materials/ss-316l-supplier-india.html">SS 316L</a>
+                    <a class="materialTag" href="/materials/ss-904l-supplier-india.html">SS 904L</a>
+                    <a class="materialTag" href="/materials/smo-254-supplier-india.html">SMO 254</a>
+                    <a class="materialTag" href="/materials/alloy-20-uns-n08020-supplier-india.html">Alloy 20</a>
+                  </div>
+                          </div>
+                          <div class="metaBlock">
+                            <strong>Common forms</strong>
+                            <div class="tagRow dense">
+                    <a class="materialTag" href="/materials/stainless-steel-pipes-supplier-india.html">Pipes</a>
+                    <a class="materialTag" href="/materials/stainless-steel-tubes-supplier-india.html">Tubes</a>
+                    <a class="materialTag" href="/materials/stainless-steel-sheets-supplier-india.html">Sheets</a>
+                    <a class="materialTag" href="/materials/stainless-steel-plates-supplier-india.html">Plates</a>
+                  </div>
+                          </div>
+                          <p class="specNote">Buyers should include media, concentration, pressure, temperature, corrosion allowance and MTC / PMI requirements where applicable.</p>
+                          <div class="industryActions"><a class="rfqAction" href="/quotation.html">Send chemical RFQ</a><a href="/quality-documentation-support.html">Documentation support</a></div>
+                        </div>
+                      </div>
+                    </article>
 
           <article class="industryCard compact">
-            <div class="industryMedia" style="--industry-image:url('/assets/industry-water-treatment.webp')" role="img" aria-label="Water treatment plant piping and filtration system"></div>
-            <div class="industryBody">
-              <div class="industryTop"><span class="industryIcon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3s5 5.4 5 9a5 5 0 0 1-10 0c0-3.6 5-9 5-9z"></path><path d="M4 19c2 1.2 4 1.2 6 0s4-1.2 6 0 3 1.2 4 .5"></path></svg></span><h3>Water Treatment</h3></div>
-              <p>Material review support for water treatment, brine, desalination, wastewater and chloride-exposed process systems.</p>
-              <div class="industryMeta">
-                <div class="metaBlock">
-                  <strong>Materials and grades</strong>
-                  <div class="tagRow dense">
+                      <div class="industryMedia" style="--industry-image:url('/assets/industry-pharma.webp')" role="img" aria-label="Stainless steel pharma processing equipment and hygienic piping"></div>
+                      <div class="industryBody">
+                        <div class="industryTop"><span class="industryIcon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M10 21l10-10a5 5 0 0 0-7-7L3 14a5 5 0 0 0 7 7z"></path><path d="M8 12l4 4"></path><path d="M14 6l4 4"></path></svg></span><h3>Pharma</h3></div>
+                        <p>RFQ support for pharma equipment, hygienic piping, process skids and clean production environments.</p>
+                        <div class="industryMeta">
+                          <div class="metaBlock">
+                            <strong>Materials and grades</strong>
+                            <div class="tagRow dense">
+                              <a class="materialTag" href="/materials/ss-304-supplier-india.html">SS 304</a>
+                              <a class="materialTag" href="/materials/ss-316-supplier-india.html">SS 316</a>
+                              <a class="materialTag" href="/materials/ss-316l-supplier-india.html">SS 316L</a>
+                              <a class="materialTag" href="/materials/ss-316ti-supplier-india.html">SS 316Ti</a>
+                            </div>
+                          </div>
+                          <div class="metaBlock">
+                            <strong>Common forms</strong>
+                            <div class="tagRow dense">
+                              <a class="materialTag" href="/materials/stainless-steel-tubes-supplier-india.html">Tubes</a>
+                              <a class="materialTag" href="/materials/stainless-steel-sheets-supplier-india.html">Sheets</a>
+                              <a class="materialTag" href="/materials/stainless-steel-fittings-supplier-india.html">Fittings</a>
+                              <a class="materialTag" href="/materials/stainless-steel-fasteners-supplier-india.html">Fasteners</a>
+                            </div>
+                          </div>
+                          <p class="specNote">Specify finish, cleaning exposure, wall thickness, dimension, MTC needs and any customer specification for enquiry-wise review.</p>
+                          <div class="industryActions"><a class="rfqAction" href="/quotation.html">Send pharma RFQ</a><a href="/blog/stainless-steel-for-pharma-food-processing.html">Pharma guide</a></div>
+                        </div>
+                      </div>
+                    </article>
+        </div>
+      </div>
+
+      <div class="industryGroup" id="marine-water">
+        <div class="industryGroupHeader">
+          <h3>Marine &amp; Water</h3>
+          <p>Marine, desalination, water treatment, coastal, and chloride-service enquiries need corrosion-aware material selection and destination-specific packing notes.</p>
+        </div>
+        <div class="industryGrid">
+          <article class="industryCard compact">
+                      <div class="industryMedia" style="--industry-image:url('/assets/industry-water-treatment.webp')" role="img" aria-label="Water treatment plant piping and filtration system"></div>
+                      <div class="industryBody">
+                        <div class="industryTop"><span class="industryIcon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3s5 5.4 5 9a5 5 0 0 1-10 0c0-3.6 5-9 5-9z"></path><path d="M4 19c2 1.2 4 1.2 6 0s4-1.2 6 0 3 1.2 4 .5"></path></svg></span><h3>Water Treatment</h3></div>
+                        <p>Material review support for water treatment, brine, desalination, wastewater and chloride-exposed process systems.</p>
+                        <div class="industryMeta">
+                          <div class="metaBlock">
+                            <strong>Materials and grades</strong>
+                            <div class="tagRow dense">
                     <a class="materialTag" href="/materials/ss-316l-supplier-india.html">SS 316L</a>
                     <a class="materialTag" href="/materials/duplex-2205-supplier-india.html">Duplex 2205</a>
                     <a class="materialTag" href="/materials/super-duplex-2507-supplier-india.html">Super Duplex 2507</a>
                     <a class="materialTag" href="/materials/smo-254-supplier-india.html">SMO 254</a>
-                    <a class="materialTag" href="/materials/copper-nickel-90-10-c70600-supplier-india.html">Copper Nickel 90/10</a>
-                    <a class="materialTag" href="/materials/titanium-grade-2-supplier-india.html">Titanium Grade 2</a>
                   </div>
-                </div>
-                <div class="metaBlock">
-                  <strong>Common forms</strong>
-                  <div class="tagRow dense">
-                    <a class="materialTag" href="/materials/stainless-steel-pipes-supplier-india.html">Pipes</a>
-                    <a class="materialTag" href="/materials/stainless-steel-tubes-supplier-india.html">Tubes</a>
-                    <a class="materialTag" href="/materials/stainless-steel-fittings-supplier-india.html">Fittings</a>
-                    <a class="materialTag" href="/materials/stainless-steel-flanges-supplier-india.html">Flanges</a>
-                  </div>
-                </div>
-                <p class="specNote">Share chloride level, seawater exposure, brine conditions, operating temperature, pressure class and documentation needs for enquiry-wise review.</p>
-                <div class="industryActions"><a class="rfqAction" href="/quotation.html">Send water RFQ</a><a href="/blog/super-duplex-for-seawater-desalination.html">Desalination guide</a></div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <div class="industryGroup">
-        <div class="industryGroupHeader">
-          <h3>Engineering &amp; Fabrication</h3>
-          <p>General engineering and project procurement often needs mixed materials, drawings and item-wise product forms rather than a single grade.</p>
-        </div>
-        <div class="industryGrid">
-          <article class="industryCard compact">
-            <div class="industryMedia" style="--industry-image:url('/assets/industry-engineering-fabrication.webp')" role="img" aria-label="Engineering fabrication workshop with metal plates and components"></div>
-            <div class="industryBody">
-              <div class="industryTop"><span class="industryIcon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3"></path><path d="M12 19v3"></path><path d="M2 12h3"></path><path d="M19 12h3"></path><path d="M4.9 4.9l2.1 2.1"></path><path d="M17 17l2.1 2.1"></path><path d="M19.1 4.9L17 7"></path><path d="M7 17l-2.1 2.1"></path></svg></span><h3>Fabrication / Engineering</h3></div>
-              <p>RFQ support for engineering buyers sourcing plates, sheets, bars, rods, flats, angles and customer-specified parts.</p>
-              <div class="industryMeta">
-                <div class="metaBlock">
-                  <strong>Materials and grades</strong>
-                  <div class="tagRow dense">
-                    <a class="materialTag" href="/materials/stainless-steel.html">Stainless Steel</a>
-                    <a class="materialTag" href="/materials/carbon-steel.html">Carbon Steel</a>
-                    <a class="materialTag" href="/materials/mild-steel.html">Mild Steel</a>
-                    <a class="materialTag" href="/materials/aluminium.html">Aluminium</a>
-                    <a class="materialTag" href="/materials/copper.html">Copper</a>
-                    <a class="materialTag" href="/materials/brass.html">Brass</a>
-                  </div>
-                </div>
-                <div class="metaBlock">
-                  <strong>Common forms</strong>
-                  <div class="tagRow dense">
-                    <a class="materialTag" href="/materials/stainless-steel-plates-supplier-india.html">Plates</a>
-                    <a class="materialTag" href="/materials/stainless-steel-sheets-supplier-india.html">Sheets</a>
-                    <a class="materialTag" href="/materials/stainless-steel-bars-supplier-india.html">Bars</a>
-                    <a class="materialTag" href="/materials/stainless-steel-rods-supplier-india.html">Rods</a>
-                    <a class="materialTag" href="/materials/stainless-steel-flats-supplier-india.html">Flats</a>
-                    <a class="materialTag" href="/materials/stainless-steel-angles-supplier-india.html">Angles</a>
-                  </div>
-                </div>
-                <p class="specNote">Attach drawings, dimensions, tolerances, finish notes and material standard references for practical item-wise review.</p>
-                <div class="industryActions"><a class="rfqAction" href="/quotation.html">Send fabrication RFQ</a><a href="/blog/industrial-metal-product-forms-guide.html">Product form guide</a></div>
-              </div>
-            </div>
-          </article>
+                          </div>
+                          <div class="metaBlock">
+                            <strong>Common forms</strong>
+                            <div class="tagRow dense">
+                              <a class="materialTag" href="/materials/stainless-steel-pipes-supplier-india.html">Pipes</a>
+                              <a class="materialTag" href="/materials/stainless-steel-tubes-supplier-india.html">Tubes</a>
+                              <a class="materialTag" href="/materials/stainless-steel-fittings-supplier-india.html">Fittings</a>
+                              <a class="materialTag" href="/materials/stainless-steel-flanges-supplier-india.html">Flanges</a>
+                            </div>
+                          </div>
+                          <p class="specNote">Share chloride level, seawater exposure, brine conditions, operating temperature, pressure class and documentation needs for enquiry-wise review.</p>
+                          <div class="industryActions"><a class="rfqAction" href="/quotation.html">Send water RFQ</a><a href="/blog/super-duplex-for-seawater-desalination.html">Desalination guide</a></div>
+                        </div>
+                      </div>
+                    </article>
 
           <article class="industryCard compact">
-            <div class="industryMedia" style="--industry-image:url('/assets/industry-epc-projects.webp')" role="img" aria-label="EPC industrial construction project with structural steel and piping"></div>
-            <div class="industryBody">
-              <div class="industryTop"><span class="industryIcon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 20h16"></path><path d="M7 20V8l9-4 4 4"></path><path d="M7 8h10"></path><path d="M10 20v-6h4v6"></path></svg></span><h3>EPC / Projects</h3></div>
-              <p>Project supplier support for BOQ, MTO and multi-item enquiries, with line-by-line grade, form, standard and quantity review.</p>
-              <div class="industryMeta">
-                <div class="metaBlock">
-                  <strong>Materials and grades</strong>
-                  <div class="tagRow dense">
-                    <a class="materialTag" href="/materials/stainless-steel.html">Stainless Steel</a>
-                    <a class="materialTag" href="/materials/carbon-steel.html">Carbon Steel</a>
-                    <a class="materialTag" href="/materials/mild-steel.html">Mild Steel</a>
-                    <a class="materialTag" href="/materials/nickel-alloys.html">Nickel Alloys</a>
-                    <a class="materialTag" href="/materials/duplex-super-duplex.html">Duplex</a>
-                  </div>
-                </div>
-                <div class="metaBlock">
-                  <strong>Common forms</strong>
-                  <div class="tagRow dense">
-                    <a class="materialTag" href="/materials/stainless-steel-pipes-supplier-india.html">Pipes</a>
-                    <a class="materialTag" href="/materials/stainless-steel-plates-supplier-india.html">Plates</a>
-                    <a class="materialTag" href="/materials/stainless-steel-flanges-supplier-india.html">Flanges</a>
-                    <a class="materialTag" href="/materials/stainless-steel-fittings-supplier-india.html">Fittings</a>
-                    <a class="materialTag" href="/materials/stainless-steel-fasteners-supplier-india.html">Fasteners</a>
-                  </div>
-                </div>
-                <p class="specNote">Send item list, quantity, phase priority, standards, documentation requirements and destination city or port for quotation support.</p>
-                <div class="industryActions"><a class="rfqAction" href="/quotation.html">Send project RFQ</a><a href="/locations.html">Location routing</a></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="industryCard compact">
-            <div class="industryMedia" style="--industry-image:url('/assets/industry-engineering-fabrication.webp')" role="img" aria-label="Precision engineering materials for automotive and aerospace support enquiries"></div>
-            <div class="industryBody">
-              <div class="industryTop"><span class="industryIcon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 12h16"></path><path d="M7 9h10l3 3-3 3H7l-3-3z"></path><path d="M8 17l-2 3"></path><path d="M16 17l2 3"></path></svg></span><h3>Automotive / Aerospace Support</h3></div>
-              <p>Supply enquiry support for precision engineering buyers reviewing aluminium, titanium, stainless steel and nickel alloy requirements.</p>
-              <div class="industryMeta">
-                <div class="metaBlock">
-                  <strong>Materials and grades</strong>
-                  <div class="tagRow dense">
-                    <a class="materialTag" href="/materials/aluminium-6061-supplier-india.html">Aluminium 6061</a>
-                    <a class="materialTag" href="/materials/aluminium-7075-supplier-india.html">Aluminium 7075</a>
-                    <a class="materialTag" href="/materials/titanium-grade-2-supplier-india.html">Titanium Grade 2</a>
-                    <a class="materialTag" href="/materials/titanium-grade-5-supplier-india.html">Titanium Grade 5</a>
-                    <a class="materialTag" href="/materials/stainless-steel.html">Stainless Steel</a>
-                    <a class="materialTag" href="/materials/nickel-alloys.html">Nickel Alloys</a>
-                  </div>
-                </div>
-                <div class="metaBlock">
-                  <strong>Common forms</strong>
-                  <div class="tagRow dense">
-                    <a class="materialTag" href="/materials/stainless-steel-bars-supplier-india.html">Bars</a>
-                    <a class="materialTag" href="/materials/stainless-steel-rods-supplier-india.html">Rods</a>
-                    <a class="materialTag" href="/materials/stainless-steel-sheets-supplier-india.html">Sheets</a>
-                    <a class="materialTag" href="/materials/stainless-steel-plates-supplier-india.html">Plates</a>
-                    <a class="materialTag" href="/materials/stainless-steel-fasteners-supplier-india.html">Fasteners</a>
-                  </div>
-                </div>
-                <p class="specNote">Share grade, temper or condition, dimensions, tolerance, finish and documentation requirements; any end-use note is reviewed enquiry-wise.</p>
-                <div class="industryActions"><a class="rfqAction" href="/quotation.html">Send engineering RFQ</a><a href="/blog/metals-for-automotive-ev-components.html">Automotive guide</a></div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <div class="industryGroup">
-        <div class="industryGroupHeader">
-          <h3>Marine &amp; Export Applications</h3>
-          <p>Marine, offshore and desalination enquiries usually need chloride-service material review, packing details and destination-specific documentation.</p>
-        </div>
-        <div class="industryGrid singleIndustryGrid">
-          <article class="industryCard compact">
-            <div class="industryMedia" style="--industry-image:url('/assets/industry-marine-offshore.webp')" role="img" aria-label="Marine offshore platform and seawater service equipment"></div>
-            <div class="industryBody">
-              <div class="industryTop"><span class="industryIcon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="5" r="2"></circle><path d="M12 7v13"></path><path d="M5 12h14"></path><path d="M7 16c1.4 3 3.1 4 5 4s3.6-1 5-4"></path><path d="M5 16l2-4 2 4"></path><path d="M15 16l2-4 2 4"></path></svg></span><h3>Marine / Offshore / Desalination</h3></div>
-              <p>RFQ support for seawater, coastal, offshore, desalination and export-linked projects where corrosion resistance and packing requirements are critical.</p>
-              <div class="industryMeta">
-                <div class="metaBlock">
-                  <strong>Materials and grades</strong>
-                  <div class="tagRow dense">
+                      <div class="industryMedia" style="--industry-image:url('/assets/industry-marine-offshore.webp')" role="img" aria-label="Marine offshore platform and seawater service equipment"></div>
+                      <div class="industryBody">
+                        <div class="industryTop"><span class="industryIcon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="5" r="2"></circle><path d="M12 7v13"></path><path d="M5 12h14"></path><path d="M7 16c1.4 3 3.1 4 5 4s3.6-1 5-4"></path><path d="M5 16l2-4 2 4"></path><path d="M15 16l2-4 2 4"></path></svg></span><h3>Marine / Offshore / Desalination</h3></div>
+                        <p>RFQ support for seawater, coastal, offshore, desalination and export-linked projects where corrosion resistance and packing requirements are critical.</p>
+                        <div class="industryMeta">
+                          <div class="metaBlock">
+                            <strong>Materials and grades</strong>
+                            <div class="tagRow dense">
                     <a class="materialTag" href="/materials/copper-nickel-90-10-c70600-supplier-india.html">Copper Nickel 90/10</a>
                     <a class="materialTag" href="/materials/copper-nickel-70-30-c71500-supplier-india.html">Copper Nickel 70/30</a>
                     <a class="materialTag" href="/materials/duplex-2205-supplier-india.html">Duplex 2205</a>
                     <a class="materialTag" href="/materials/super-duplex-2507-supplier-india.html">Super Duplex 2507</a>
-                    <a class="materialTag" href="/materials/smo-254-supplier-india.html">SMO 254</a>
-                    <a class="materialTag" href="/materials/titanium-grade-2-supplier-india.html">Titanium Grade 2</a>
-                    <a class="materialTag" href="/materials/monel-400-supplier-india.html">Monel 400</a>
                   </div>
-                </div>
-                <div class="metaBlock">
-                  <strong>Common forms</strong>
-                  <div class="tagRow dense">
+                          </div>
+                          <div class="metaBlock">
+                            <strong>Common forms</strong>
+                            <div class="tagRow dense">
                     <a class="materialTag" href="/materials/stainless-steel-pipes-supplier-india.html">Pipes</a>
                     <a class="materialTag" href="/materials/stainless-steel-tubes-supplier-india.html">Tubes</a>
                     <a class="materialTag" href="/materials/stainless-steel-plates-supplier-india.html">Plates</a>
                     <a class="materialTag" href="/materials/stainless-steel-flanges-supplier-india.html">Flanges</a>
-                    <a class="materialTag" href="/materials/stainless-steel-fittings-supplier-india.html">Fittings</a>
                   </div>
-                </div>
-                <p class="specNote">Buyers should share seawater exposure, splash-zone details, project specification, packing requirements and destination port where applicable.</p>
-                <div class="industryActions"><a class="rfqAction" href="/quotation.html">Send marine RFQ</a><a href="/export.html">Export support</a></div>
-              </div>
-            </div>
-          </article>
+                          </div>
+                          <p class="specNote">Buyers should share seawater exposure, splash-zone details, project specification, packing requirements and destination port where applicable.</p>
+                          <div class="industryActions"><a class="rfqAction" href="/quotation.html">Send marine RFQ</a><a href="/export.html">Export support</a></div>
+                        </div>
+                      </div>
+                    </article>
         </div>
       </div>
 
-      <div class="industryGroup">
+      <div class="industryGroup" id="fabrication-infrastructure">
         <div class="industryGroupHeader">
-          <h3>Infrastructure &amp; Construction</h3>
-          <p>Construction and infrastructure enquiries are usually driven by structural form, grade, size, quantity and project delivery location.</p>
+          <h3>Fabrication &amp; Infrastructure</h3>
+          <p>Fabrication shops, EPC buyers, precision engineering teams, and infrastructure projects often send mixed product-form RFQs with drawings or BOQ line items.</p>
         </div>
-        <div class="industryGrid singleIndustryGrid">
+        <div class="industryGrid">
           <article class="industryCard compact">
-            <div class="industryMedia" style="--industry-image:url('/assets/industry-infrastructure.webp')" role="img" aria-label="Infrastructure project with structural steel and industrial metal materials"></div>
-            <div class="industryBody">
-              <div class="industryTop"><span class="industryIcon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 19h18"></path><path d="M5 19V9l7-4 7 4v10"></path><path d="M8 19v-7"></path><path d="M12 19v-9"></path><path d="M16 19v-7"></path><path d="M5 9h14"></path></svg></span><h3>Construction / Infrastructure</h3></div>
-              <p>Supply enquiry support for infrastructure, site fabrication, structural steel and industrial construction requirements.</p>
-              <div class="industryMeta">
-                <div class="metaBlock">
-                  <strong>Materials and grades</strong>
-                  <div class="tagRow dense">
+                      <div class="industryMedia" style="--industry-image:url('/assets/industry-engineering-fabrication.webp')" role="img" aria-label="Engineering fabrication workshop with metal plates and components"></div>
+                      <div class="industryBody">
+                        <div class="industryTop"><span class="industryIcon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3"></path><path d="M12 19v3"></path><path d="M2 12h3"></path><path d="M19 12h3"></path><path d="M4.9 4.9l2.1 2.1"></path><path d="M17 17l2.1 2.1"></path><path d="M19.1 4.9L17 7"></path><path d="M7 17l-2.1 2.1"></path></svg></span><h3>Fabrication / Engineering</h3></div>
+                        <p>RFQ support for engineering buyers sourcing plates, sheets, bars, rods, flats, angles and customer-specified parts.</p>
+                        <div class="industryMeta">
+                          <div class="metaBlock">
+                            <strong>Materials and grades</strong>
+                            <div class="tagRow dense">
+                    <a class="materialTag" href="/materials/stainless-steel.html">Stainless Steel</a>
+                    <a class="materialTag" href="/materials/carbon-steel.html">Carbon Steel</a>
+                    <a class="materialTag" href="/materials/mild-steel.html">Mild Steel</a>
+                    <a class="materialTag" href="/materials/aluminium.html">Aluminium</a>
+                  </div>
+                          </div>
+                          <div class="metaBlock">
+                            <strong>Common forms</strong>
+                            <div class="tagRow dense">
+                    <a class="materialTag" href="/materials/stainless-steel-plates-supplier-india.html">Plates</a>
+                    <a class="materialTag" href="/materials/stainless-steel-sheets-supplier-india.html">Sheets</a>
+                    <a class="materialTag" href="/materials/stainless-steel-bars-supplier-india.html">Bars</a>
+                    <a class="materialTag" href="/materials/stainless-steel-rods-supplier-india.html">Rods</a>
+                  </div>
+                          </div>
+                          <p class="specNote">Attach drawings, dimensions, tolerances, finish notes and material standard references for practical item-wise review.</p>
+                          <div class="industryActions"><a class="rfqAction" href="/quotation.html">Send fabrication RFQ</a><a href="/blog/industrial-metal-product-forms-guide.html">Product form guide</a></div>
+                        </div>
+                      </div>
+                    </article>
+
+          <article class="industryCard compact">
+                      <div class="industryMedia" style="--industry-image:url('/assets/industry-epc-projects.webp')" role="img" aria-label="EPC industrial construction project with structural steel and piping"></div>
+                      <div class="industryBody">
+                        <div class="industryTop"><span class="industryIcon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 20h16"></path><path d="M7 20V8l9-4 4 4"></path><path d="M7 8h10"></path><path d="M10 20v-6h4v6"></path></svg></span><h3>EPC / Projects</h3></div>
+                        <p>Project supplier support for BOQ, MTO and multi-item enquiries, with line-by-line grade, form, standard and quantity review.</p>
+                        <div class="industryMeta">
+                          <div class="metaBlock">
+                            <strong>Materials and grades</strong>
+                            <div class="tagRow dense">
+                    <a class="materialTag" href="/materials/stainless-steel.html">Stainless Steel</a>
+                    <a class="materialTag" href="/materials/carbon-steel.html">Carbon Steel</a>
+                    <a class="materialTag" href="/materials/mild-steel.html">Mild Steel</a>
+                    <a class="materialTag" href="/materials/nickel-alloys.html">Nickel Alloys</a>
+                  </div>
+                          </div>
+                          <div class="metaBlock">
+                            <strong>Common forms</strong>
+                            <div class="tagRow dense">
+                    <a class="materialTag" href="/materials/stainless-steel-pipes-supplier-india.html">Pipes</a>
+                    <a class="materialTag" href="/materials/stainless-steel-plates-supplier-india.html">Plates</a>
+                    <a class="materialTag" href="/materials/stainless-steel-flanges-supplier-india.html">Flanges</a>
+                    <a class="materialTag" href="/materials/stainless-steel-fittings-supplier-india.html">Fittings</a>
+                  </div>
+                          </div>
+                          <p class="specNote">Send item list, quantity, phase priority, standards, documentation requirements and destination city or port for quotation support.</p>
+                          <div class="industryActions"><a class="rfqAction" href="/quotation.html">Send project RFQ</a><a href="/locations.html">Location routing</a></div>
+                        </div>
+                      </div>
+                    </article>
+
+          <article class="industryCard compact">
+                      <div class="industryMedia" style="--industry-image:url('/assets/industry-engineering-fabrication.webp')" role="img" aria-label="Precision engineering materials for automotive and aerospace support enquiries"></div>
+                      <div class="industryBody">
+                        <div class="industryTop"><span class="industryIcon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 12h16"></path><path d="M7 9h10l3 3-3 3H7l-3-3z"></path><path d="M8 17l-2 3"></path><path d="M16 17l2 3"></path></svg></span><h3>Automotive / Aerospace Support</h3></div>
+                        <p>Supply enquiry support for precision engineering buyers reviewing aluminium, titanium, stainless steel and nickel alloy requirements.</p>
+                        <div class="industryMeta">
+                          <div class="metaBlock">
+                            <strong>Materials and grades</strong>
+                            <div class="tagRow dense">
+                    <a class="materialTag" href="/materials/aluminium-6061-supplier-india.html">Aluminium 6061</a>
+                    <a class="materialTag" href="/materials/aluminium-7075-supplier-india.html">Aluminium 7075</a>
+                    <a class="materialTag" href="/materials/titanium-grade-2-supplier-india.html">Titanium Grade 2</a>
+                    <a class="materialTag" href="/materials/titanium-grade-5-supplier-india.html">Titanium Grade 5</a>
+                  </div>
+                          </div>
+                          <div class="metaBlock">
+                            <strong>Common forms</strong>
+                            <div class="tagRow dense">
+                    <a class="materialTag" href="/materials/stainless-steel-bars-supplier-india.html">Bars</a>
+                    <a class="materialTag" href="/materials/stainless-steel-rods-supplier-india.html">Rods</a>
+                    <a class="materialTag" href="/materials/stainless-steel-sheets-supplier-india.html">Sheets</a>
+                    <a class="materialTag" href="/materials/stainless-steel-plates-supplier-india.html">Plates</a>
+                  </div>
+                          </div>
+                          <p class="specNote">Share grade, temper or condition, dimensions, tolerance, finish and documentation requirements; any end-use note is reviewed enquiry-wise.</p>
+                          <div class="industryActions"><a class="rfqAction" href="/quotation.html">Send engineering RFQ</a><a href="/blog/metals-for-automotive-ev-components.html">Automotive guide</a></div>
+                        </div>
+                      </div>
+                    </article>
+
+          <article class="industryCard compact">
+                      <div class="industryMedia" style="--industry-image:url('/assets/industry-infrastructure.webp')" role="img" aria-label="Infrastructure project with structural steel and industrial metal materials"></div>
+                      <div class="industryBody">
+                        <div class="industryTop"><span class="industryIcon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 19h18"></path><path d="M5 19V9l7-4 7 4v10"></path><path d="M8 19v-7"></path><path d="M12 19v-9"></path><path d="M16 19v-7"></path><path d="M5 9h14"></path></svg></span><h3>Construction / Infrastructure</h3></div>
+                        <p>Supply enquiry support for infrastructure, site fabrication, structural steel and industrial construction requirements.</p>
+                        <div class="industryMeta">
+                          <div class="metaBlock">
+                            <strong>Materials and grades</strong>
+                            <div class="tagRow dense">
                     <a class="materialTag" href="/materials/is-2062-steel-supplier-india.html">IS 2062</a>
                     <a class="materialTag" href="/materials/is-1239-pipe-supplier-india.html">IS 1239</a>
                     <a class="materialTag" href="/materials/is-3589-pipe-supplier-india.html">IS 3589</a>
                     <a class="materialTag" href="/materials/carbon-steel-a36-supplier-india.html">ASTM A36</a>
-                    <a class="materialTag" href="/materials/mild-steel.html">Mild Steel</a>
-                    <a class="materialTag" href="/materials/carbon-steel.html">Carbon Steel</a>
                   </div>
-                </div>
-                <div class="metaBlock">
-                  <strong>Common forms</strong>
-                  <div class="tagRow dense">
+                          </div>
+                          <div class="metaBlock">
+                            <strong>Common forms</strong>
+                            <div class="tagRow dense">
                     <a class="materialTag" href="/materials/stainless-steel-plates-supplier-india.html">Plates</a>
                     <a class="materialTag" href="/materials/stainless-steel-angles-supplier-india.html">Angles</a>
                     <a class="materialTag" href="/materials/stainless-steel-channels-supplier-india.html">Channels</a>
                     <a class="materialTag" href="/materials/stainless-steel-flats-supplier-india.html">Flats</a>
-                    <a class="materialTag" href="/materials/stainless-steel-pipes-supplier-india.html">Pipes</a>
-                    <a class="materialTag" href="/materials/stainless-steel-wire-mesh-supplier-india.html">Wire Mesh</a>
                   </div>
-                </div>
-                <p class="specNote">Share grade, length, thickness, section, quantity, inspection requirement and site or city destination for quotation support.</p>
-                <div class="industryActions"><a class="rfqAction" href="/quotation.html">Send infrastructure RFQ</a><a href="/locations.html">PAN India locations</a></div>
-              </div>
-            </div>
-          </article>
+                          </div>
+                          <p class="specNote">Share grade, length, thickness, section, quantity, inspection requirement and site or city destination for quotation support.</p>
+                          <div class="industryActions"><a class="rfqAction" href="/quotation.html">Send infrastructure RFQ</a><a href="/locations.html">PAN India locations</a></div>
+                        </div>
+                      </div>
+                    </article>
         </div>
       </div>
 
-      <div class="industryGroup">
+      <div class="industryGroup" id="food-hygiene">
         <div class="industryGroupHeader">
-          <h3>Food, Pharma &amp; Hygiene Applications</h3>
-          <p>Hygienic-sector RFQs depend on grade, finish, product form, cleaning exposure and documentation expectations. Rubinox can review these details enquiry-wise.</p>
+          <h3>Food &amp; Hygiene</h3>
+          <p>Food, dairy, and hygiene-led enquiries usually focus on cleanability, surface finish, stainless steel grades, fabrication details, and documentation expectations.</p>
         </div>
         <div class="industryGrid">
           <article class="industryCard compact">
-            <div class="industryMedia" style="--industry-image:url('/assets/industry-pharma.webp')" role="img" aria-label="Stainless steel pharma processing equipment and hygienic piping"></div>
-            <div class="industryBody">
-              <div class="industryTop"><span class="industryIcon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M10 21l10-10a5 5 0 0 0-7-7L3 14a5 5 0 0 0 7 7z"></path><path d="M8 12l4 4"></path><path d="M14 6l4 4"></path></svg></span><h3>Pharma</h3></div>
-              <p>RFQ support for pharma equipment, hygienic piping, process skids and clean production environments.</p>
-              <div class="industryMeta">
-                <div class="metaBlock">
-                  <strong>Materials and grades</strong>
-                  <div class="tagRow dense">
-                    <a class="materialTag" href="/materials/ss-304-supplier-india.html">SS 304</a>
-                    <a class="materialTag" href="/materials/ss-316-supplier-india.html">SS 316</a>
-                    <a class="materialTag" href="/materials/ss-316l-supplier-india.html">SS 316L</a>
-                    <a class="materialTag" href="/materials/ss-316ti-supplier-india.html">SS 316Ti</a>
-                  </div>
-                </div>
-                <div class="metaBlock">
-                  <strong>Common forms</strong>
-                  <div class="tagRow dense">
-                    <a class="materialTag" href="/materials/stainless-steel-tubes-supplier-india.html">Tubes</a>
-                    <a class="materialTag" href="/materials/stainless-steel-sheets-supplier-india.html">Sheets</a>
-                    <a class="materialTag" href="/materials/stainless-steel-fittings-supplier-india.html">Fittings</a>
-                    <a class="materialTag" href="/materials/stainless-steel-fasteners-supplier-india.html">Fasteners</a>
-                  </div>
-                </div>
-                <p class="specNote">Specify finish, cleaning exposure, wall thickness, dimension, MTC needs and any customer specification for enquiry-wise review.</p>
-                <div class="industryActions"><a class="rfqAction" href="/quotation.html">Send pharma RFQ</a><a href="/blog/stainless-steel-for-pharma-food-processing.html">Pharma guide</a></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="industryCard compact">
-            <div class="industryMedia" style="--industry-image:url('/assets/industry-food-processing.webp')" role="img" aria-label="Stainless steel food processing line and production equipment"></div>
-            <div class="industryBody">
-              <div class="industryTop"><span class="industryIcon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 16h16"></path><path d="M6 16v3"></path><path d="M18 16v3"></path><path d="M7 16l2-5h6l2 5"></path><path d="M10 7h4v4h-4z"></path></svg></span><h3>Food &amp; Dairy</h3></div>
-              <p>Supply enquiry support for food processing, dairy, packaging equipment, work surfaces, tanks and washdown areas.</p>
-              <div class="industryMeta">
-                <div class="metaBlock">
-                  <strong>Materials and grades</strong>
-                  <div class="tagRow dense">
-                    <a class="materialTag" href="/materials/ss-304-supplier-india.html">SS 304</a>
-                    <a class="materialTag" href="/materials/ss-316-supplier-india.html">SS 316</a>
-                    <a class="materialTag" href="/materials/ss-316l-supplier-india.html">SS 316L</a>
-                  </div>
-                </div>
-                <div class="metaBlock">
-                  <strong>Common forms</strong>
-                  <div class="tagRow dense">
+                      <div class="industryMedia" style="--industry-image:url('/assets/industry-food-processing.webp')" role="img" aria-label="Stainless steel food processing line and production equipment"></div>
+                      <div class="industryBody">
+                        <div class="industryTop"><span class="industryIcon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 16h16"></path><path d="M6 16v3"></path><path d="M18 16v3"></path><path d="M7 16l2-5h6l2 5"></path><path d="M10 7h4v4h-4z"></path></svg></span><h3>Food &amp; Dairy</h3></div>
+                        <p>Supply enquiry support for food processing, dairy, packaging equipment, work surfaces, tanks and washdown areas.</p>
+                        <div class="industryMeta">
+                          <div class="metaBlock">
+                            <strong>Materials and grades</strong>
+                            <div class="tagRow dense">
+                              <a class="materialTag" href="/materials/ss-304-supplier-india.html">SS 304</a>
+                              <a class="materialTag" href="/materials/ss-316-supplier-india.html">SS 316</a>
+                              <a class="materialTag" href="/materials/ss-316l-supplier-india.html">SS 316L</a>
+                            </div>
+                          </div>
+                          <div class="metaBlock">
+                            <strong>Common forms</strong>
+                            <div class="tagRow dense">
                     <a class="materialTag" href="/materials/stainless-steel-sheets-supplier-india.html">Sheets</a>
                     <a class="materialTag" href="/materials/stainless-steel-coils-supplier-india.html">Coils</a>
                     <a class="materialTag" href="/materials/stainless-steel-tubes-supplier-india.html">Tubes</a>
                     <a class="materialTag" href="/materials/stainless-steel-flats-supplier-india.html">Flats</a>
-                    <a class="materialTag" href="/materials/stainless-steel-fittings-supplier-india.html">Fittings</a>
                   </div>
-                </div>
-                <p class="specNote">Share hygiene expectations, finish, dimensions, fabrication notes and documentation requirements where applicable.</p>
-                <div class="industryActions"><a class="rfqAction" href="/quotation.html">Send food RFQ</a><a href="/quality-documentation-support.html">Quality documentation</a></div>
-              </div>
-            </div>
-          </article>
+                          </div>
+                          <p class="specNote">Share hygiene expectations, finish, dimensions, fabrication notes and documentation requirements where applicable.</p>
+                          <div class="industryActions"><a class="rfqAction" href="/quotation.html">Send food RFQ</a><a href="/quality-documentation-support.html">Quality documentation</a></div>
+                        </div>
+                      </div>
+                    </article>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="card">
+  <section class="card rescueSection" id="material-product-routing">
+    <h2>Material and Product Form Routing</h2>
+    <p class="sectionIntro">Use these entry points when an industry RFQ starts with the material family, grade, or product form rather than the sector name.</p>
+    <div class="materialRouting">
+      <article class="rescuePanel">
+        <h3>Material Families</h3>
+        <p>Compare common material routes before sharing duty condition, grade, size, quantity, and destination.</p>
+        <div class="tagRow">
+          <a href="/materials/stainless-steel.html">Stainless Steel</a><a href="/materials/duplex-super-duplex.html">Duplex Steel</a><a href="/materials/nickel-alloys.html">Nickel Alloys</a><a href="/materials/titanium.html">Titanium</a><a href="/materials/aluminium.html">Aluminium</a><a href="/materials/copper.html">Copper</a><a href="/materials/brass.html">Brass</a><a href="/materials/carbon-steel.html">Carbon Steel</a>
+        </div>
+      </article>
+      <article class="rescuePanel">
+        <h3>Product Forms</h3>
+        <p>Route enquiries by the product forms buyers most often include in quotation requests and project take-offs.</p>
+        <div class="tagRow">
+          <a href="/materials/stainless-steel-pipes-supplier-india.html">Pipes</a><a href="/materials/stainless-steel-tubes-supplier-india.html">Tubes</a><a href="/materials/stainless-steel-sheets-supplier-india.html">Sheets</a><a href="/materials/stainless-steel-plates-supplier-india.html">Plates</a><a href="/materials/stainless-steel-coils-supplier-india.html">Coils</a><a href="/materials/stainless-steel-bars-supplier-india.html">Bars</a><a href="/materials/stainless-steel-flanges-supplier-india.html">Flanges</a><a href="/materials/stainless-steel-fittings-supplier-india.html">Fittings</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="card rescueSection">
     <h2>RFQ Checklist for Industry Buyers</h2>
     <p class="sectionIntro">
       Clear RFQ inputs help Rubinox review grade, product form, documentation and logistics scope without implying stock availability or fixed delivery timing.
@@ -1314,7 +1320,7 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
     </ul>
   </section>
 
-  <section class="card">
+  <section class="card rescueSection">
     <h2>Technical and Documentation Support</h2>
     <p class="sectionIntro">
       Use these resources to prepare safer RFQs and documentation requests before final quotation review.
@@ -1326,7 +1332,7 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
     </div>
   </section>
 
-  <section class="card">
+  <section class="card rescueSection">
     <h2>Related Knowledge Hub Guides</h2>
     <p class="sectionIntro">
       These guides support industry material selection and documentation conversations without replacing project specifications.
@@ -1341,89 +1347,20 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
     </div>
   </section>
 
-  <section class="card">
-    <h2>Location and Export RFQ Routing</h2>
-    <p class="sectionIntro">
-      Location and export links are included only where they help buyers route an enquiry. They do not imply local branches, local inventory, approved vendor status or fixed delivery timelines.
-    </p>
-    <div class="locationLinkGrid">
-      <a href="/locations.html">PAN India locations hub</a>
-      <a href="/locations/mumbai.html">Mumbai RFQs</a>
-      <a href="/locations/pune.html">Pune engineering RFQs</a>
-      <a href="/locations/vadodara.html">Vadodara chemical RFQs</a>
-      <a href="/locations/jamnagar.html">Jamnagar refinery and marine RFQs</a>
-      <a href="/export.html">Export support hub</a>
-      <a href="/export/uae.html">UAE export RFQs</a>
-      <a href="/export/saudi-arabia.html">Saudi Arabia export RFQs</a>
-      <a href="/export/oman.html">Oman export RFQs</a>
-      <a href="/export/qatar.html">Qatar export RFQs</a>
-    </div>
-  </section>
 
-  <section class="card" data-rubinox-section="RUBINOX INDUSTRY SPEC LINKS START">
-    <h2>Cross-Industry Specification Shortcuts</h2>
-    <p class="sectionIntro">Connect industry RFQs to grade, standard and product-form resources for clearer material review.</p>
-    <div class="linkGrid">
-      <a href="/materials/api-5l-grade-b-pipe-supplier-india.html">API 5L Grade B</a>
-      <a href="/materials/api-5l-x65-pipe-supplier-india.html">API 5L X65</a>
-      <a href="/materials/astm-a335-p91-pipe-supplier-india.html">ASTM A335 P91</a>
-      <a href="/materials/sa-213-t91-tube-supplier-india.html">SA 213 T91</a>
-      <a href="/materials/copper-nickel-90-10-c70600-supplier-india.html">Copper Nickel 90/10</a>
-      <a href="/materials/smo-254-supplier-india.html">SMO 254</a>
-      <a href="/materials/titanium-grade-2-supplier-india.html">Titanium Grade 2</a>
-      <a href="/materials/is-2062-steel-supplier-india.html">IS 2062</a>
-      <a href="/materials/stainless-steel-tubes-supplier-india.html">Stainless Steel Tubes</a>
-      <a href="/materials/stainless-steel-plates-supplier-india.html">Stainless Steel Plates</a>
-      <a href="/materials/stainless-steel-flanges-supplier-india.html">Stainless Steel Flanges</a>
-      <a href="/materials/stainless-steel-fittings-supplier-india.html">Stainless Steel Fittings</a>
-    </div>
-  </section>
 
-  <section class="card">
-    <h2>Project Supply Review Flow</h2>
-    <p class="sectionIntro">
-      For industrial orders, the enquiry is reviewed item by item for grade, form, size, specification, documentation and quantity before commercial and logistics planning.
-    </p>
-    <div class="timeline">
-      <div class="timelineStep"><strong>1. RFQ Review</strong><p>BOQ, MTO, drawings, grade, quantity and destination are checked.</p></div>
-      <div class="timelineStep"><strong>2. Material Mapping</strong><p>Product forms, standards, dimensions and alternates are reviewed where permitted.</p></div>
-      <div class="timelineStep"><strong>3. Documentation Scope</strong><p>MTC, PMI, traceability, inspection and packing needs are reviewed where applicable.</p></div>
-      <div class="timelineStep"><strong>4. Commercial Offer</strong><p>Item-wise quotation and logistics inputs are prepared after the enquiry details are clear.</p></div>
-      <div class="timelineStep"><strong>5. Dispatch Coordination</strong><p>Priority items, phased supply and site or port instructions are aligned before dispatch.</p></div>
-    </div>
-  </section>
 
-  <section class="card">
+  <section class="card rescueSection">
     <h2>Industry FAQ</h2>
     <div class="faqGrid">
-      <div class="faqItem">
-        <h3>Does Rubinox manufacture materials for these industries?</h3>
-        <p>No. Rubinox Metal and Alloys supports industry RFQs as a stockist, supplier, importer, exporter and project supplier. Material source, grade, form, documentation and logistics scope are reviewed enquiry-wise.</p>
-      </div>
-      <div class="faqItem">
-        <h3>What grades are commonly requested for industry RFQs?</h3>
-        <p>Common enquiries include SS 304, SS 316L, SS 904L, Duplex 2205, Super Duplex 2507, SMO 254, Inconel 625, Hastelloy C276, Monel 400, titanium, carbon steel and alloy steel grades depending on service conditions.</p>
-      </div>
-      <div class="faqItem">
-        <h3>Can MTC, PMI or inspection documentation be shared?</h3>
-        <p>Documentation support can be reviewed where applicable and should be specified before quotation. Buyers should state MTC, PMI, third-party inspection, packing and traceability requirements in the RFQ.</p>
-      </div>
-      <div class="faqItem">
-        <h3>What details should be sent for an industry RFQ?</h3>
-        <p>Send industry or end use, grade, product form, size, quantity, standard, testing requirement, documentation scope, destination city or port, and any drawings or project notes.</p>
-      </div>
-      <div class="faqItem">
-        <h3>Does Rubinox support export and project RFQs?</h3>
-        <p>Yes. Export and project enquiries can be reviewed when grade, form, size, quantity, destination, packing, documentation and logistics requirements are shared clearly.</p>
-      </div>
-      <div class="faqItem">
-        <h3>Can buyers request third-party inspection coordination?</h3>
-        <p>Third-party inspection coordination can be reviewed where applicable when the agency, inspection scope, acceptance criteria and documentation requirements are stated before quotation and order confirmation.</p>
-      </div>
+      <article><h3>What details should an industry RFQ include?</h3><p>Share the material family, grade or specification, product form, size, quantity, surface or end requirement, documentation needs, and delivery location.</p></article>
+      <article><h3>Can Rubinox support multi-grade project enquiries?</h3><p>Rubinox can coordinate quotation support for multi-grade and multi-form enquiries across stainless steel, duplex, nickel alloy, titanium, aluminium, copper, brass, carbon steel, and related materials.</p></article>
+      <article><h3>Are documentation and inspection requirements available?</h3><p>Documentation, test certificates, third-party inspection, packing notes, and export paperwork can be discussed where applicable and available on request.</p></article>
+      <article><h3>Which sectors commonly request corrosion-resistant alloys?</h3><p>Chemical processing, marine service, desalination, oil and gas, pharmaceutical utilities, and process equipment buyers often compare stainless steel, duplex, super duplex, and nickel alloy routes.</p></article>
+      <article><h3>Does Rubinox support PAN India and export enquiries?</h3><p>Rubinox supports PAN India supply coordination and export enquiry assistance for buyers who share specification, quantity, destination, and documentation requirements.</p></article>
     </div>
   </section>
-
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does Rubinox manufacture materials for these industries?","acceptedAnswer":{"@type":"Answer","text":"No. Rubinox Metal and Alloys supports industry RFQs as a stockist, supplier, importer, exporter and project supplier. Material source, grade, form, documentation and logistics scope are reviewed enquiry-wise."}},{"@type":"Question","name":"What grades are commonly requested for industry RFQs?","acceptedAnswer":{"@type":"Answer","text":"Common enquiries include SS 304, SS 316L, SS 904L, Duplex 2205, Super Duplex 2507, SMO 254, Inconel 625, Hastelloy C276, Monel 400, titanium, carbon steel and alloy steel grades depending on service conditions."}},{"@type":"Question","name":"Can MTC, PMI or inspection documentation be shared?","acceptedAnswer":{"@type":"Answer","text":"Documentation support can be reviewed where applicable and should be specified before quotation. Buyers should state MTC, PMI, third-party inspection, packing and traceability requirements in the RFQ."}},{"@type":"Question","name":"What details should be sent for an industry RFQ?","acceptedAnswer":{"@type":"Answer","text":"Send industry or end use, grade, product form, size, quantity, standard, testing requirement, documentation scope, destination city or port, and any drawings or project notes."}},{"@type":"Question","name":"Does Rubinox support export and project RFQs?","acceptedAnswer":{"@type":"Answer","text":"Yes. Export and project enquiries can be reviewed when grade, form, size, quantity, destination, packing, documentation and logistics requirements are shared clearly."}},{"@type":"Question","name":"Can buyers request third-party inspection coordination?","acceptedAnswer":{"@type":"Answer","text":"Third-party inspection coordination can be reviewed where applicable when the agency, inspection scope, acceptance criteria and documentation requirements are stated before quotation and order confirmation."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What details should an industry RFQ include?","acceptedAnswer":{"@type":"Answer","text":"Share the material family, grade or specification, product form, size, quantity, surface or end requirement, documentation needs, and delivery location."}},{"@type":"Question","name":"Can Rubinox support multi-grade project enquiries?","acceptedAnswer":{"@type":"Answer","text":"Rubinox can coordinate quotation support for multi-grade and multi-form enquiries across stainless steel, duplex, nickel alloy, titanium, aluminium, copper, brass, carbon steel, and related materials."}},{"@type":"Question","name":"Are documentation and inspection requirements available?","acceptedAnswer":{"@type":"Answer","text":"Documentation, test certificates, third-party inspection, packing notes, and export paperwork can be discussed where applicable and available on request."}},{"@type":"Question","name":"Which sectors commonly request corrosion-resistant alloys?","acceptedAnswer":{"@type":"Answer","text":"Chemical processing, marine service, desalination, oil and gas, pharmaceutical utilities, and process equipment buyers often compare stainless steel, duplex, super duplex, and nickel alloy routes."}},{"@type":"Question","name":"Does Rubinox support PAN India and export enquiries?","acceptedAnswer":{"@type":"Answer","text":"Rubinox supports PAN India supply coordination and export enquiry assistance for buyers who share specification, quantity, destination, and documentation requirements."}}]}</script>
 
   <section class="ctaBand">
     <h2>Send Your Industry Requirement</h2>
