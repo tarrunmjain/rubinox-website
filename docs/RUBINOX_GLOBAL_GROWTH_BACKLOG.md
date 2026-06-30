@@ -242,3 +242,25 @@ Deferred scope:
 
 Safe wording strategy: Batch 10B uses stockist, supplier, importer, exporter, project supplier, RFQ support, documentation support where applicable, PAN India supply and export enquiry support language. No manufacturer, factory, mill, production, ready-stock, fixed-price, certification, client, project, rating or delivery-guarantee claims were added.
 <!-- RUBINOX BATCH 10B BACKLOG END -->
+
+## Batch 10C - Remaining Grade / Specification Page Rollout
+
+Status: implemented for 30 existing public grade/specification pages. No new public URLs were created.
+
+Batch 10C scope:
+- Stainless and Mumbai stainless pages: 14.
+- Aluminium grade pages: 5.
+- Copper grade pages: 5.
+- Brass grade pages: 5.
+- ASTM A36 carbon steel page: 1.
+
+Batch 10C improvements:
+- Continued the approved grade/specification gate rhythm with compact hero sections, RFQ shortcut cards, buyer-answer blocks, readable standards/specification tables, product-form pathways, application context, documentation/RFQ checklist cards, related links, visible FAQ sections and final RFQ CTAs.
+- Preserved public URLs, H1 intent, title/meta/canonical targets, sitemap URLs, schema meaning and broad internal-link strategy.
+- Updated FAQPage schema only where it already existed and only to match visible FAQ content.
+
+Deferred:
+- 30 remaining grade/specification pages are deferred to Batch 10D.
+- New grade/specification pages remain gated by keyword evidence, enquiry history or owner priority.
+
+Safe wording strategy: Batch 10C uses stockist, supplier, importer, exporter, project supplier, RFQ support, documentation support where applicable, PAN India supply and export enquiry support language. No manufacturer, factory, plant, production, ready-stock, fixed-price, certification, client, rating or delivery-guarantee claims were added.

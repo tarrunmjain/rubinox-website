@@ -294,3 +294,14 @@ Future city, state, country/export, product-city and product-country pages remai
 - FAQ schema was updated only on pages that already had FAQPage schema, and only to match visible FAQ content.
 - Future Batch 10C work should continue the same visual gate: all changed pages at 1366 and 390, representative pages at 1280, 768 and 360, with no page below 8/10.
 <!-- RUBINOX BATCH 10B ROADMAP END -->
+
+## Batch 10C Grade / Specification Rollout Status
+
+Date: 2026-07-01
+
+- Batch 10C polished 30 additional existing grade/specification pages with the approved Batch 10A/10B gate rhythm.
+- Batch 10C covered remaining stainless/Mumbai stainless pages, aluminium grades, copper grades, brass grades and one high-intent ASTM A36 carbon steel page.
+- 30 remaining grade/specification pages are deferred to Batch 10D.
+- No new public pages, sitemap URLs, public SEO URLs, title/meta/canonical targets or broad internal-link strategy changes were introduced.
+- FAQ schema was updated only on pages that already had FAQPage schema, and only to match visible FAQ content.
+- Future Batch 10D work should continue the same visual gate: all changed pages at 1366 and 390, representative pages at 1280, 768 and 360, with no page below 8/10.

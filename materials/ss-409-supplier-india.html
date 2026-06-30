@@ -129,7 +129,48 @@ header .navlinks .btn.primary{padding:9px 11px !important}
 .premiumHero + .card,.premiumHero + .trustStrip,.premiumHero + .section,.premiumHero + .wrap{margin-top:var(--rubinox-section-gap)}
 @media(max-width:1120px){header .nav{min-height:70px !important;padding:8px 0 !important}header .brand img{width:220px !important;max-height:52px !important}}
 @media(max-width:640px){header .brand img{width:188px !important;max-width:60vw !important;max-height:48px !important}}
-/* RUBINOX HEADER BREADCRUMB SPACING POLISH END */</style>
+/* RUBINOX HEADER BREADCRUMB SPACING POLISH END *//* RUBINOX GRADE TEMPLATE GATE START */
+.skipLink{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skipLink:focus{left:18px;top:18px;width:auto;height:auto;z-index:2000;background:#fff;color:#132a63;padding:10px 12px;border:2px solid #e2a02f;border-radius:8px;box-shadow:0 10px 24px rgba(15,30,60,.18)}
+.heroGrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.9fr);gap:16px;align-items:stretch;width:100%;max-width:100%;margin-top:18px}
+.heroGrid .card{margin-top:0}
+.heroText{display:flex;flex-direction:column;justify-content:center;min-width:0}
+.heroText h1{color:#132a63;font-size:clamp(30px,4.4vw,48px);line-height:1.08;margin:0 0 14px;letter-spacing:0}
+.heroText p{margin:0;color:#566b9a;line-height:1.7}
+.miniRow{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.miniTag{display:inline-flex;align-items:center;min-height:30px;border:1px solid rgba(19,42,99,.13);border-radius:6px;background:linear-gradient(180deg,#f8fafc,#eaf0f7);color:#132a63;font-size:12px;font-weight:850;line-height:1.3;padding:7px 9px;box-shadow:0 6px 14px rgba(15,30,60,.06)}
+.relGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.relItem{display:block;text-decoration:none;color:#132a63;border:1px solid rgba(19,42,99,.12);border-radius:8px;background:linear-gradient(180deg,#fff,#f8fafc);padding:13px 14px;box-shadow:0 8px 18px rgba(15,30,60,.05);min-width:0}
+.relItem strong{display:block;color:#132a63;font-size:14px;line-height:1.3;margin-bottom:3px}
+.relItem span{display:block;color:#566b9a;font-size:12px;line-height:1.45}
+.relItem:hover,.relItem:focus-visible{border-color:rgba(226,160,47,.48);background:#fff;outline:2px solid rgba(19,42,99,.20);outline-offset:2px}
+@media(max-width:900px){.heroGrid{grid-template-columns:1fr}.heroImg img,main .heroImg img{height:240px}}
+@media(max-width:520px){.heroGrid{gap:0;margin-top:14px}.heroText h1{font-size:30px}.miniRow{gap:7px}.miniTag{font-size:11px;min-height:28px}.heroImg img,main .heroImg img{height:220px}.relGrid{grid-template-columns:1fr!important}.relItem{padding:12px}}
+.gradeQuickNav{margin-top:var(--rubinox-section-gap,14px)!important}
+.gradeQuickNav .relGrid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px!important}
+.gradeQuickNav .relItem{min-height:72px;background:linear-gradient(180deg,#fff,#f8fafc)!important}
+.gateLead{margin:0 0 12px!important;color:#566b9a!important;line-height:1.65!important;font-size:14px!important}
+.gateSignalGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:12px}
+.gateSignalGrid span{display:block;padding:12px;border:1px solid rgba(19,42,99,.12);border-radius:8px;background:linear-gradient(180deg,#fff,#f8fafc);color:#566b9a;font-size:13px;line-height:1.55}
+.gateSignalGrid strong{display:block;color:#132a63;margin-bottom:4px}
+.gateCardGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:12px}
+.gateCard{padding:14px;border:1px solid rgba(19,42,99,.12);border-radius:8px;background:#fff;box-shadow:0 10px 24px rgba(15,30,60,.05);min-width:0}
+.gateCard h3{margin:0 0 8px;color:#132a63;font-size:18px;line-height:1.3}
+.gateCard p{margin:0!important;color:#566b9a!important;line-height:1.65!important}
+.tableGateCard table caption{caption-side:top;text-align:left;color:#132a63;font-weight:850;padding:0 0 8px;line-height:1.45}
+.heroImg{overflow:hidden}
+.heroImg img,main .heroImg img{display:block;width:100%!important;max-width:100%!important;height:clamp(220px,28vw,340px);object-fit:cover}
+.tableGateCard .tableWrap,main .card.tableGateCard .tableWrap{overflow-x:auto!important;max-width:100%!important;width:100%!important}
+.tableGateCard table,main .card.tableGateCard table{width:100%!important;min-width:0!important;max-width:100%!important;table-layout:auto!important}
+main .card.tableGateCard{max-width:100%;overflow-x:hidden!important}
+main .card.tableGateCard th,main .card.tableGateCard td{overflow-wrap:anywhere;word-break:normal}
+@media(max-width:760px){main .card.tableGateCard .tableWrap{overflow-x:auto!important;max-width:100%!important;width:100%!important}main .card.tableGateCard table{width:100%!important;min-width:0!important;max-width:100%!important;table-layout:fixed!important}}
+.relatedGate .relGrid{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.relatedGate .relItem span{font-size:13px;line-height:1.55}
+@media(max-width:900px){.gateSignalGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.gateSignalGrid{grid-template-columns:1fr}.gradeQuickNav .relGrid,.relatedGate .relGrid{grid-template-columns:1fr!important}}
+/* RUBINOX GRADE TEMPLATE GATE END */
+</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"SS 409 Supplier in India","url":"https://rubinoxmetal.com/materials/ss-409-supplier-india.html","@id":"https://rubinoxmetal.com/materials/ss-409-supplier-india.html#webpage","description":"Rubinox supplies SS 409 stainless steel sheets, coils, plates, strips, pipes, tubes across India, with export support, MTC documentation and fast quotations.","isPartOf":{"@id":"https://rubinoxmetal.com/#website"},"about":{"@id":"https://rubinoxmetal.com/#organization"},"breadcrumb":{"@id":"https://rubinoxmetal.com/materials/ss-409-supplier-india.html#breadcrumb"},"inLanguage":"en-IN"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rubinoxmetal.com/"},{"@type":"ListItem","position":2,"name":"Materials","item":"https://rubinoxmetal.com/#materials"},{"@type":"ListItem","position":3,"name":"Stainless Steel","item":"https://rubinoxmetal.com/materials/stainless-steel.html"},{"@type":"ListItem","position":4,"name":"SS 409","item":"https://rubinoxmetal.com/materials/ss-409-supplier-india.html"}],"@id":"https://rubinoxmetal.com/materials/ss-409-supplier-india.html#breadcrumb"}</script>
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -438,36 +479,91 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
 </header>
 <div class="topbar"><div class="wrap"><div class="crumb"><a href="/">Home</a> &bull; <a href="/#materials">Materials</a> &bull; <a href="/materials/stainless-steel.html">Stainless Steel</a> &bull; SS 409</div></div></div>
 <main id="main-content" class="page">
-  <section class="heroGrid"><div class="card heroText"><h1>SS 409 Supplier in India</h1><p style="max-width:78ch">Rubinox Metal and Alloys supplies SS 409 stainless steel sheets, coils, plates, strips, pipes, tubes, flats, angles, flanges, fittings and fasteners for automotive exhaust systems, fabrication, heat-related equipment and industrial requirements across India.</p><div class="miniRow"><span class="miniTag">Ferritic Stainless Steel</span><span class="miniTag">Automotive Exhaust Grade</span><span class="miniTag">PAN India Supply</span></div></div><div class="heroImg"><img fetchpriority="high" width="1400" height="686" src="/assets/grade-ss-409.webp" alt="SS 409 stainless steel coils sheets pipes and automotive exhaust components" decoding="async"></div></section>
-  <section class="grid2"><div class="card"><h2>Why SS 409?</h2><ul><li>Ferritic stainless steel grade widely used in automotive exhaust systems.</li><li>Good resistance to oxidation and heat-related service conditions.</li><li>Often selected where cost-effective stainless steel performance is required.</li><li>Suitable for fabrication, forming, welding and exhaust component production.</li></ul></div><div class="card"><h2>Common Applications</h2><ul><li>Automotive exhaust pipes, silencers and muffler parts</li><li>Heat shields and thermal components</li><li>Industrial fabrication and formed parts</li><li>Equipment where moderate corrosion and heat resistance is required</li><li>Coil, strip and sheet-based component manufacturing</li></ul></div></section>
-  <section class="card" style="margin-top:14px"><h2>SS 409 Products Available</h2><div class="grid3"><div><h3>Sheets, Plates &amp; Coils</h3><p>SS 409 sheets, plates, coils and strips for fabrication, forming and exhaust component production.</p></div><div><h3>Pipes &amp; Tubes</h3><p>SS 409 pipes and tubes for exhaust, fabrication and industrial requirements.</p></div><div><h3>Bars, Flats &amp; Angles</h3><p>Flats, angles, rods and cut sizes as per size and project requirement.</p></div><div><h3>Flanges</h3><p>Stainless steel flanges for piping and fabrication enquiries.</p></div><div><h3>Fittings</h3><p>Elbows, reducers, tees and other fittings based on availability and specification.</p></div><div><h3>Fasteners</h3><p>Bolts, nuts, washers, studs and project fastener requirements.</p></div></div></section>
-  <section class="card" style="margin-top:14px"><h2>What to Send for Fast Quotation</h2><div class="tableWrap"><table><thead><tr><th>Item</th><th>Details to Share</th></tr></thead><tbody><tr><td>Grade / Spec</td><td>SS 409, UNS S40900, ASTM / ASME / EN or project specification.</td></tr><tr><td>Product Form</td><td>Sheet, plate, coil, strip, pipe, tube, flat, angle, flange, fitting or fastener.</td></tr><tr><td>Size</td><td>Thickness, width, length, OD, NB, schedule, drawing or component requirement.</td></tr><tr><td>Quantity</td><td>Pieces, kilograms, meters, sheets, coils, bundles or project quantity.</td></tr><tr><td>Delivery</td><td>City, state and expected delivery timeline for India supply.</td></tr></tbody></table></div></section>
-  <section class="grid2"><div class="card"><h2>SS 409 vs SS 430</h2><p>SS 409 is commonly selected for automotive exhaust and heat-related fabrication, while SS 430 is more common for decorative, appliance and indoor sheet/coil applications. Rubinox can help buyers compare grades based on application, size and budget.</p></div><div class="card"><h2>Industries Served</h2><ul><li>Automotive exhaust and component manufacturing</li><li>Fabrication and sheet metal work</li><li>Industrial equipment maintenance</li><li>Engineering and OEM supply</li><li>Heat shield and thermal component production</li></ul></div></section>
-  <section class="card" style="margin-top:14px"><h2>Related Pages</h2><div class="relGrid"><a class="relItem" href="/materials/stainless-steel.html"><strong>Stainless Steel</strong><span>All major stainless grades and product forms.</span></a><a class="relItem" href="/materials/ss-430-supplier-india.html"><strong>SS 430</strong><span>Ferritic stainless steel for sheets, coils and decorative use.</span></a><a class="relItem" href="/materials/ss-304-supplier-india.html"><strong>SS 304 / 304L</strong><span>General corrosion-resistant stainless steel grade.</span></a><a class="relItem" href="/materials/stainless-steel-coils-supplier-india.html"><strong>Stainless Steel Coils</strong><span>Coil and strip supply for fabrication and processing.</span></a><a class="relItem" href="/materials/stainless-steel-sheets-supplier-india.html"><strong>Stainless Steel Sheets</strong><span>Sheets for industrial and fabrication use.</span></a><a class="relItem" href="/materials/stainless-steel-pipes-supplier-india.html"><strong>Stainless Steel Pipes</strong><span>Pipe supply for industrial and fabrication requirements.</span></a></div></section>
-  <section class="card" style="margin-top:14px"><h2>FAQ</h2><h3>What is SS 409 used for?</h3><p>SS 409 is commonly used for automotive exhaust systems, mufflers, silencers, heat shields and fabrication work where ferritic stainless steel is suitable.</p><br><h3>Do you supply SS 409 sheets and coils?</h3><p>Yes. Rubinox supplies SS 409 sheets, coils, plates, strips and other product forms based on size, specification and quantity.</p><br><h3>Do you supply SS 409 across India?</h3><p>Yes. Rubinox supplies SS 409 stainless steel products across India, with export support also available.</p></section>
-
-  <section class="materialRfqCta" aria-labelledby="material-rfq-cta-title">
-    <div class="materialRfqMain">
-      <span class="materialRfqLabel">Procurement RFQ support</span>
-      <h2 id="material-rfq-cta-title">Share Your SS 409 Requirement</h2>
-      <p>Share grade or specification, product form, size, quantity, standard, MTC/PMI or inspection needs, delivery location and timeline for Rubinox quotation support.</p>
-      <div class="materialRfqChecklist">
-        <span>Grade / specification</span>
-        <span>Product form and size</span>
-        <span>Quantity and standard</span>
-        <span>Delivery location</span>
-        <span>MTC / inspection needs</span>
-        <span>Drawing or BOQ if any</span>
-      </div>
+  <section class="heroGrid">
+    <div class="card heroText">
+      <h1>SS 409 Supplier in India</h1>
+      <p class="gateLead">Rubinox Metal and Alloys supports SS 409 enquiries as a stockist, supplier, importer, exporter and project supplier. Share the grade/specification, form, size, quantity, documentation requirement and delivery location for a clear RFQ review.</p>
+      <div class="miniRow"><span class="miniTag">SS 409</span><span class="miniTag">Stainless steel</span><span class="miniTag">RFQ Documentation</span><span class="miniTag">PAN India &amp; Export Enquiries</span></div>
     </div>
-    <div class="materialRfqActions">
-      <a class="btn primary" href="https://wa.me/919363193755" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.9 7L4 20l1.4-4.2A8 8 0 1 1 20 11.5z"></path><path d="M9 8.8c.2 3.1 2.1 5 5.2 5.2"></path></svg>WhatsApp RFQ</a>
-      <a class="btn ghost" href="mailto:tarun@rubinoxmetal.com?subject=SS%20409%20Quotation%20Request%20-%20Rubinox"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>Email RFQ</a>
-      <a class="btn ghost" href="/quotation.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8l4 4v14H4V3h4z"></path><path d="M16 3v5h5"></path><path d="M8 13h8"></path><path d="M8 17h6"></path></svg>Quotation Page</a>
-      <a class="btn ghost" href="/contact.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6.4 6.4l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"></path></svg>Contact Rubinox</a>
-      <p class="materialRfqContact">+91&nbsp;9363193755<br>tarun@rubinoxmetal.com</p>
+    <div class="heroImg"><img fetchpriority="high" width="1400" height="800" src="/assets/grade-ss-409.webp" alt="SS 409 industrial metal product forms for RFQ support" decoding="async"></div>
+  </section>
+
+  <section class="card gradeQuickNav" aria-label="SS 409 page shortcuts">
+    <div class="relGrid">
+      <a class="relItem" href="#overview"><strong>Overview</strong><span>Quick buyer answer</span></a>
+      <a class="relItem" href="#standards"><strong>Standards</strong><span>Specification cues</span></a>
+      <a class="relItem" href="#forms"><strong>Product Forms</strong><span>Clean RFQ paths</span></a>
+      <a class="relItem" href="#applications"><strong>Applications</strong><span>Use-case context</span></a>
+      <a class="relItem" href="#rfq-checklist"><strong>RFQ Checklist</strong><span>Details to send</span></a>
+      <a class="relItem" href="#faqs"><strong>FAQs</strong><span>Buyer questions</span></a>
     </div>
   </section>
+
+  <section class="grid2" id="overview">
+    <div class="card">
+      <h2>SS 409 quick answer</h2>
+      <p>SS 409 RFQs should state the exact grade or specification, product form, size, quantity, documentation need and delivery location. Rubinox can review enquiries subject to grade, size, quantity and sourcing feasibility.</p>
+    </div>
+    <div class="card">
+      <h2>Specification-led buying note</h2>
+      <p>Selection depends on the governing specification, service condition, fabrication route and buyer approval. Equivalent references should be checked against the project specification before any substitution.</p>
+      <div class="gateSignalGrid">
+        <span><strong>Grade family</strong>Stainless steel</span>
+        <span><strong>RFQ forms</strong>Common metal forms and drawing-led items</span>
+        <span><strong>Specification cues</strong>SS 409; buyer-specified standards where applicable.</span>
+        <span><strong>Documentation support</strong>MTC, PMI, inspection, packing, marking and export documents where applicable.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="card tableGateCard" id="standards" style="margin-top:14px">
+    <h2>SS 409 standards and RFQ signals</h2>
+    <p class="gateLead">Use this table as an enquiry guide. Buyers may specify equivalent references, but final acceptance should follow the project specification.</p>
+    <div class="tableWrap"><table><caption>SS 409 RFQ reference guide</caption><thead><tr><th>Buyer cue</th><th>Safe details to confirm</th></tr></thead><tbody><tr><td>Primary reference</td><td>SS 409</td></tr><tr><td>Material family</td><td>Stainless steel</td></tr><tr><td>Common RFQ context</td><td>ferritic stainless automotive, exhaust, fabrication and general engineering RFQs</td></tr><tr><td>Equivalent references</td><td>Confirm UNS, EN, DIN, ASTM, ASME, API, IS or project references against the buyer specification before substitution.</td></tr><tr><td>Product form details</td><td>Form, size, thickness, diameter, length, finish, condition, drawing or cut-size details.</td></tr><tr><td>Documentation note</td><td>MTC, PMI, inspection, testing or third-party review should be mentioned where applicable.</td></tr></tbody></table></div>
+  </section>
+
+  <section class="card relatedGate" id="forms" style="margin-top:14px"><h2>Common SS 409 product forms</h2><p class="gateLead">Keep the RFQ focused on the form and measurable dimensions instead of sending a generic enquiry.</p><div class="relGrid">
+      <a class="relItem" href="/materials/stainless-steel-pipes-supplier-india.html"><strong>Pipes</strong><span>OD, NB, schedule, wall thickness and length.</span></a>
+      <a class="relItem" href="/materials/stainless-steel-tubes-supplier-india.html"><strong>Tubes</strong><span>OD, thickness, length, finish and end-use notes.</span></a>
+      <a class="relItem" href="/materials/stainless-steel-sheets-supplier-india.html"><strong>Sheets</strong><span>Thickness, width, length, finish and quantity.</span></a>
+      <a class="relItem" href="/materials/stainless-steel-plates-supplier-india.html"><strong>Plates</strong><span>Thickness, width, length, grade and testing notes.</span></a>
+      <a class="relItem" href="/materials/stainless-steel-bars-rods-supplier-india.html"><strong>Bars &amp;amp; Rods</strong><span>Diameter, length, condition and machining notes.</span></a>
+      <a class="relItem" href="/materials/stainless-steel-flanges-supplier-india.html"><strong>Flanges</strong><span>Class, face, standard, bore and quantity.</span></a>
+      <a class="relItem" href="/materials/stainless-steel-fittings-supplier-india.html"><strong>Fittings</strong><span>Elbows, tees, reducers, caps and standard details.</span></a>
+      <a class="relItem" href="/materials/stainless-steel-fasteners-supplier-india.html"><strong>Fasteners</strong><span>Bolts, nuts, washers, studs and drawing notes.</span></a>
+    </div></section>
+
+  <section class="card" id="applications" style="margin-top:14px"><h2>SS 409 application context</h2><p class="gateLead">These are buyer enquiry contexts, not proof or case-study claims. Final material selection depends on the governing specification and service conditions.</p><div class="gateCardGrid">
+      <div class="gateCard"><h3>Automotive &amp; Exhaust RFQs</h3><p>Buyer enquiry context for SS 409; final suitability depends on the governing specification, service conditions and buyer approval.</p></div>
+      <div class="gateCard"><h3>General Fabrication</h3><p>Buyer enquiry context for SS 409; final suitability depends on the governing specification, service conditions and buyer approval.</p></div>
+      <div class="gateCard"><h3>Ferritic Stainless Enquiries</h3><p>Buyer enquiry context for SS 409; final suitability depends on the governing specification, service conditions and buyer approval.</p></div>
+      <div class="gateCard"><h3>Specification Review</h3><p>Buyer enquiry context for SS 409; final suitability depends on the governing specification, service conditions and buyer approval.</p></div>
+    </div></section>
+
+  <section class="grid2" id="rfq-checklist"><div class="card"><h2>Documentation support</h2><ul><li>MTC, heat number and traceability requirements where applicable.</li><li>PMI, inspection, testing or third-party review only when specified by the buyer.</li><li>Packing, marking and export documentation support can be reviewed enquiry-wise.</li></ul><div class="btnrow"><a class="btn ghost" href="/quality-documentation-support.html">Documentation support</a><a class="btn ghost" href="/technical-resources.html">Technical resources</a></div></div><div class="card"><h2>SS 409 RFQ checklist</h2><ul><li>Material, grade or specification: SS 409</li><li>Product form and governing standard or project specification</li><li>Size, thickness, schedule, class, diameter, length, finish, condition or drawing</li><li>Quantity, cut lengths, BOQ, MTO or project notes</li><li>MTC, PMI, inspection, testing, marking or packing needs where applicable</li><li>Delivery city, project site, port or export destination</li></ul></div></section>
+
+  <section class="card relatedGate" id="related" style="margin-top:14px"><h2>Related SS 409 resources</h2><p class="gateLead">Use these paths to compare neighbouring grades, product forms, documentation guidance and RFQ preparation steps.</p><div class="relGrid">
+      <a class="relItem" href="/materials/stainless-steel.html"><strong>Stainless Steel Hub</strong><span>Parent material family for stainless grade enquiries.</span></a>
+      <a class="relItem" href="/materials/ss-304-supplier-india.html"><strong>SS 304</strong><span>Related stainless grade, specification or buyer guide.</span></a>
+      <a class="relItem" href="/materials/ss-304l-supplier-india.html"><strong>SS 304L</strong><span>Related stainless grade, specification or buyer guide.</span></a>
+      <a class="relItem" href="/materials/ss-316-supplier-india.html"><strong>SS 316</strong><span>Related stainless grade, specification or buyer guide.</span></a>
+      <a class="relItem" href="/materials/ss-316l-supplier-india.html"><strong>SS 316L</strong><span>Related stainless grade, specification or buyer guide.</span></a>
+      <a class="relItem" href="/blog/stainless-steel-304-vs-316-vs-316l.html"><strong>Stainless Grade Guide</strong><span>Buyer guide for stainless grade comparisons.</span></a>
+      <a class="relItem" href="/technical-resources.html"><strong>Technical Resources</strong><span>Charts, standards and buyer reference tables.</span></a>
+      <a class="relItem" href="/quality-documentation-support.html"><strong>Quality Documentation Support</strong><span>MTC, PMI and inspection request guidance.</span></a>
+      <a class="relItem" href="/blog/mtc-pmi-third-party-inspection-guide.html"><strong>MTC / PMI Guide</strong><span>Documentation and inspection request guide.</span></a>
+      <a class="relItem" href="/quotation.html"><strong>Request Quotation</strong><span>Send a structured RFQ to Rubinox.</span></a>
+    </div></section>
+
+  <section class="card" id="faqs" style="margin-top:14px"><h2>SS 409 FAQs</h2><div class="gateCardGrid">
+      <div class="gateCard"><h3>What details should I send for RFQs involving SS 409?</h3><p>Share SS 409, product form, dimensions, quantity, governing standard, documentation or inspection needs where applicable, and delivery city or export destination so Rubinox can review the enquiry clearly.</p></div>
+      <div class="gateCard"><h3>Which SS 409 product forms can be requested?</h3><p>Common RFQs include pipes, tubes, sheets, plates, bars, rods, flanges, fittings and fasteners. Final review depends on grade, size, quantity, standard, documentation and sourcing feasibility.</p></div>
+      <div class="gateCard"><h3>Can SS 409 be substituted with a related grade or specification?</h3><p>Only when the buyer, consultant or project engineer approves it. Equivalent references and substitutions should be checked against the governing specification.</p></div>
+      <div class="gateCard"><h3>Can documentation be requested with SS 409?</h3><p>Yes, buyers can mention MTC, PMI, inspection, testing, marking, packing or export documentation needs where applicable. Support is reviewed enquiry-wise against the material and requirement.</p></div>
+      <div class="gateCard"><h3>Is Rubinox a manufacturer of SS 409?</h3><p>No. Rubinox Metal and Alloys is a stockist, supplier, importer, exporter and project supplier.</p></div>
+    </div></section>
+
+  <section class="materialRfqCta" id="rfq" aria-labelledby="material-rfq-cta-title"><div><span class="eyebrow">Request SS 409 quotation</span><h2 id="material-rfq-cta-title">Send grade, form, size and documentation needs.</h2><p>Rubinox will review the enquiry as a stockist, supplier, importer, exporter and project supplier, subject to grade, size, quantity, documentation and logistics requirements.</p></div><div class="btnrow"><a class="btn primary" href="https://wa.me/919363193755?text=Hello%20Rubinox%2C%20I%20need%20a%20quotation%20for%20SS%20409">WhatsApp RFQ</a><a class="btn ghost" href="mailto:tarun@rubinoxmetal.com?subject=SS%20409%20RFQ">Email RFQ</a><a class="btn ghost" href="/quotation.html">Request Quotation</a></div></section>
 </main>
 <script>const menuToggle=document.getElementById("menuToggle"),mobileMenu=document.getElementById("mobileMenu"),menuIcon=document.getElementById("menuIcon");function openMenu(){mobileMenu.classList.add("open");menuToggle.setAttribute("aria-expanded","true");menuIcon.innerHTML='<path d="M6 6l12 12"></path><path d="M18 6L6 18"></path>'}function closeMenu(){mobileMenu.classList.remove("open");menuToggle.setAttribute("aria-expanded","false");menuIcon.innerHTML='<path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path>'}if(menuToggle&&mobileMenu&&menuIcon){menuToggle.addEventListener("click",function(){mobileMenu.classList.contains("open")?closeMenu():openMenu()});mobileMenu.querySelectorAll("a").forEach(function(link){link.addEventListener("click",function(){closeMenu()})});window.addEventListener("resize",function(){window.innerWidth>900&&closeMenu()})}</script>
 <footer class="siteFooter">
