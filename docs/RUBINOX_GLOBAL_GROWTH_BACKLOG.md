@@ -28,7 +28,7 @@ Priority definitions:
 | P1-003 | Five-page grade/spec pilot | Design audit | Grade / specification | P1 | High | High | High | High | Medium | No | Phase 2 patterns | Pending | Phase 3 | Use five listed pilot pages |
 | P1-004 | Product form page polish | Design audit | Product form pages | P1 | High | Medium | High | High | Medium | No | Pilot results | Done in Batch 3 | Phase 4 | Product form RFQ polish completed; hub work remains separate. |
 | P1-005 | Product-form hub polish | Design audit | Hub pages | P1 | High | Medium | High | Medium | Low | No | Product form strategy | Pending | Phase 4 | Improve product-forms.html |
-| P1-006 | Knowledge Hub card/filter polish | Design audit | Knowledge Hub | P1 | Medium | High | High | Medium | Low | No | Static JS accessibility | Pending | Phase 5 | Keep article links crawlable |
+| P1-006 | Knowledge Hub card/filter polish | Design audit | Knowledge Hub | P1 | Medium | High | High | Medium | Low | No | Static JS accessibility | Done in Batch 7 | Phase 5 | Blog index filters/card CTAs and article meta consistency completed; article links remain crawlable. |
 | P1-007 | Keyword matrix completion | Roadmap | Keyword architecture | P1 | High | High | None | Medium | Low | No | GSC data preferred | Done in Batch 4 | SEO planning | Expanded keyword matrix; implementation remains planned. |
 | P1-008 | Location SEO architecture | Roadmap | Location pages | P1 | High | High | Low | Medium | Medium | No | Keyword map | Done in Batch 4 | Location planning | Expanded location architecture; no public pages created. |
 | P1-009 | Main city-page phase | Roadmap | Location pages | P1 | High | High | Medium | Medium | High | No | GSC/keyword data | Pilot started in Batch 5 | Location implementation | Nine existing city pages improved; 30-50 city rollout still pending after GSC/enquiry review |
@@ -172,3 +172,20 @@ Public-page status after Batch 6B:
 
 Safe wording strategy: city pages use PAN India RFQ support from Mumbai with stockist, supplier, importer, exporter and project supplier role language. Dealer wording is retained only as buyer-search language, not as Rubinox positioning. Export pages use exporter-from-India wording for destination enquiries.
 <!-- RUBINOX BATCH 6B END -->
+
+<!-- RUBINOX BATCH 7 BACKLOG START -->
+## Batch 7 - Knowledge Hub Index and Article UX Polish
+
+Status: implemented for the existing Knowledge Hub index and 30 existing public article pages. No new public article URLs were created.
+
+Completed scope:
+- Blog index card hierarchy, broad category filters, guide-type labels, buyer-intent chips and crawlable card CTAs.
+- Existing article meta strips now show category, guide type, updated date and safe Procurement Team reviewer wording.
+- Existing article TOCs, related guide blocks, related resource links, editorial notes and RFQ CTAs were confirmed across all article pages.
+
+Deferred scope:
+- New Knowledge Hub topic clusters remain planned and should be created only after keyword, Search Console or owner-priority review.
+- Price-factor articles remain future content; no fixed prices or live-price claims were added.
+
+Safe wording strategy: all review/author language remains organization-level, using Rubinox Metal and Alloys Procurement Team. No fake person credentials, certifications, stock, price, client, project, rating, manufacturer, factory or mill claims were added.
+<!-- RUBINOX BATCH 7 BACKLOG END -->

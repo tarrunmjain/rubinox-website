@@ -253,3 +253,12 @@ Batch 4 completed the planning/data architecture layer for future keyword and lo
 
 Future city, state, country/export, product-city and product-country pages remain planned candidates. Implementation still requires query review, differentiated page value, safe claim checks and full QA before publication.
 <!-- RUBINOX BATCH 4 KEYWORD LOCATION END -->
+
+<!-- RUBINOX BATCH 7 ROADMAP START -->
+## Batch 7 Knowledge Hub Status
+
+- Phase 5 Knowledge Hub polish is complete for existing public Knowledge Hub assets: blog.html, 30 article pages and the organization-level author/review page.
+- Blog index links remain normal crawlable anchors; client-side filtering only hides or shows existing cards visually.
+- Article URLs, H1 intent, title/meta/canonical targets, sitemap URLs and schema meaning were preserved.
+- Future Knowledge Hub topic clusters, price-factor articles and standards articles remain roadmap items; no new public articles were created in Batch 7.
+<!-- RUBINOX BATCH 7 ROADMAP END -->
