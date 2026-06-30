@@ -282,3 +282,15 @@ Future city, state, country/export, product-city and product-country pages remai
 - Existing URLs, H1 intent, title/meta descriptions, canonical targets, sitemap URLs and schema meaning were preserved.
 - New material or grade pages remain future candidates only after keyword, Search Console, enquiry history or owner-priority review confirms differentiated buyer value.
 <!-- RUBINOX BATCH 9 ROADMAP END -->
+
+<!-- RUBINOX BATCH 10B ROADMAP START -->
+## Batch 10B Grade / Specification Rollout Status
+
+- Grade/specification discovery remains 110 existing public pages.
+- Previously polished pages remain: 5 Batch 1 pilot pages and 10 Batch 10A gate pages.
+- Batch 10B polished 35 additional existing grade/specification pages with the approved gate rhythm and mobile-safe component rules.
+- 60 remaining grade/specification pages are deferred to Batch 10C.
+- Existing URLs, H1 intent, title/meta descriptions, canonical targets, sitemap URLs and schema meaning were preserved.
+- FAQ schema was updated only on pages that already had FAQPage schema, and only to match visible FAQ content.
+- Future Batch 10C work should continue the same visual gate: all changed pages at 1366 and 390, representative pages at 1280, 768 and 360, with no page below 8/10.
+<!-- RUBINOX BATCH 10B ROADMAP END -->

@@ -461,10 +461,51 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
 @media(max-width:1120px){header .topRail .wrap{flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important;gap:6px!important;padding-top:8px!important;padding-bottom:8px!important}header .topRail .railLinks.utilityIcons{justify-content:center!important;width:100%!important}.siteFooter .footerLayout{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:760px){header .topRail .railNote{display:block!important;font-size:11.5px!important}header .topRail .railLinks.utilityIcons{gap:6px!important}.faqGrid,.relGrid{grid-template-columns:1fr!important;gap:14px!important}.faqItem{padding:20px!important}.siteFooter .footerLayout{grid-template-columns:1fr!important;padding:28px 18px!important}.siteFooter .footerBrand img{max-width:190px!important}.siteFooter .footerIconGroup{flex-wrap:nowrap!important;gap:6px!important}.siteFooter .footerIconGroup .footerIcon{width:32px!important;height:32px!important;min-width:32px!important;min-height:32px!important;max-width:32px!important;max-height:32px!important}}
 /* RUBINOX FOOTER STANDARDIZATION END */
+/* RUBINOX GRADE TEMPLATE GATE START */
+.skipLink{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skipLink:focus{left:18px;top:18px;width:auto;height:auto;z-index:2000;background:#fff;color:#132a63;padding:10px 12px;border:2px solid #e2a02f;border-radius:8px;box-shadow:0 10px 24px rgba(15,30,60,.18)}
+.heroGrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.9fr);gap:16px;align-items:stretch;width:100%;max-width:100%;margin-top:18px}
+.heroGrid .card{margin-top:0}
+.heroText{display:flex;flex-direction:column;justify-content:center;min-width:0}
+.heroText h1{color:#132a63;font-size:clamp(30px,4.4vw,48px);line-height:1.08;margin:0 0 14px;letter-spacing:0}
+.heroText p{margin:0;color:#566b9a;line-height:1.7}
+.miniRow{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.miniTag{display:inline-flex;align-items:center;min-height:30px;border:1px solid rgba(19,42,99,.13);border-radius:6px;background:linear-gradient(180deg,#f8fafc,#eaf0f7);color:#132a63;font-size:12px;font-weight:850;line-height:1.3;padding:7px 9px;box-shadow:0 6px 14px rgba(15,30,60,.06)}
+.relGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.relItem{display:block;text-decoration:none;color:#132a63;border:1px solid rgba(19,42,99,.12);border-radius:8px;background:linear-gradient(180deg,#fff,#f8fafc);padding:13px 14px;box-shadow:0 8px 18px rgba(15,30,60,.05);min-width:0}
+.relItem strong{display:block;color:#132a63;font-size:14px;line-height:1.3;margin-bottom:3px}
+.relItem span{display:block;color:#566b9a;font-size:12px;line-height:1.45}
+.relItem:hover,.relItem:focus-visible{border-color:rgba(226,160,47,.48);background:#fff;outline:2px solid rgba(19,42,99,.20);outline-offset:2px}
+@media(max-width:900px){.heroGrid{grid-template-columns:1fr}.heroImg img,main .heroImg img{height:240px}}
+@media(max-width:520px){.heroGrid{gap:0;margin-top:14px}.heroText h1{font-size:30px}.miniRow{gap:7px}.miniTag{font-size:11px;min-height:28px}.heroImg img,main .heroImg img{height:220px}.relGrid{grid-template-columns:1fr!important}.relItem{padding:12px}}
+.gradeQuickNav{margin-top:var(--rubinox-section-gap,14px)!important}
+.gradeQuickNav .relGrid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px!important}
+.gradeQuickNav .relItem{min-height:72px;background:linear-gradient(180deg,#fff,#f8fafc)!important}
+.gateLead{margin:0 0 12px!important;color:#566b9a!important;line-height:1.65!important;font-size:14px!important}
+.gateSignalGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:12px}
+.gateSignalGrid span{display:block;padding:12px;border:1px solid rgba(19,42,99,.12);border-radius:8px;background:linear-gradient(180deg,#fff,#f8fafc);color:#566b9a;font-size:13px;line-height:1.55}
+.gateSignalGrid strong{display:block;color:#132a63;margin-bottom:4px}
+.gateCardGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:12px}
+.gateCard{padding:14px;border:1px solid rgba(19,42,99,.12);border-radius:8px;background:#fff;box-shadow:0 10px 24px rgba(15,30,60,.05);min-width:0}
+.gateCard h3{margin:0 0 8px;color:#132a63;font-size:18px;line-height:1.3}
+.gateCard p{margin:0!important;color:#566b9a!important;line-height:1.65!important}
+.tableGateCard table caption{caption-side:top;text-align:left;color:#132a63;font-weight:850;padding:0 0 8px;line-height:1.45}
+.heroImg{overflow:hidden}
+.heroImg img,main .heroImg img{display:block;width:100%!important;max-width:100%!important;height:clamp(220px,28vw,340px);object-fit:cover}
+.tableGateCard .tableWrap,main .card.tableGateCard .tableWrap{overflow-x:auto!important;max-width:100%!important;width:100%!important}
+.tableGateCard table,main .card.tableGateCard table{width:100%!important;min-width:0!important;max-width:100%!important;table-layout:auto!important}
+main .card.tableGateCard{max-width:100%;overflow-x:hidden!important}
+main .card.tableGateCard th,main .card.tableGateCard td{overflow-wrap:anywhere;word-break:normal}
+@media(max-width:760px){main .card.tableGateCard .tableWrap{overflow-x:auto!important;max-width:100%!important;width:100%!important}main .card.tableGateCard table{width:100%!important;min-width:0!important;max-width:100%!important;table-layout:fixed!important}}
+.relatedGate .relGrid{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.relatedGate .relItem span{font-size:13px;line-height:1.55}
+@media(max-width:900px){.gateSignalGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.gateSignalGrid{grid-template-columns:1fr}.gradeQuickNav .relGrid,.relatedGate .relGrid{grid-template-columns:1fr!important}}
+/* RUBINOX GRADE TEMPLATE GATE END */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"IS 3589 Pipe Supplier in India","url":"https://rubinoxmetal.com/materials/is-3589-pipe-supplier-india.html","@id":"https://rubinoxmetal.com/materials/is-3589-pipe-supplier-india.html#webpage","description":"IS 3589 pipe supplier in India for project pipe RFQs with size, wall thickness, class, coating, testing and documentation requirements reviewed.","isPartOf":{"@type":"WebSite","name":"Rubinox Metal and Alloys","url":"https://rubinoxmetal.com"},"about":{"@type":"Thing","name":"IS 3589 Pipe"},"mainEntity":{"@type":"Organization","name":"Rubinox Metal and Alloys","url":"https://rubinoxmetal.com","telephone":"+91 9363193755","email":"tarun@rubinoxmetal.com"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rubinoxmetal.com"},{"@type":"ListItem","position":2,"name":"Materials","item":"https://rubinoxmetal.com/materials.html"},{"@type":"ListItem","position":3,"name":"Mild Steel","item":"https://rubinoxmetal.com/materials/mild-steel.html"},{"@type":"ListItem","position":4,"name":"IS 3589 Pipe Supplier in India","item":"https://rubinoxmetal.com/materials/is-3589-pipe-supplier-india.html"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What details are needed for a IS 3589 Pipe RFQ?","acceptedAnswer":{"@type":"Answer","text":"Share the exact grade or specification, product form, dimensions, quantity, standard, testing, documentation requirement and delivery location so Rubinox can review the enquiry clearly."}},{"@type":"Question","name":"Which product forms can be requested in IS 3589 Pipe?","acceptedAnswer":{"@type":"Answer","text":"RFQs may include mild steel or steel pipes where the is standard is specified; plain end, threaded end or project-specified end finish; black, galvanized, coated or project-specified finish where applicable. Final review depends on grade, size, quantity, standard and sourcing feasibility."}},{"@type":"Question","name":"Can IS 3589 be substituted with IS 1239 or API 5L?","acceptedAnswer":{"@type":"Answer","text":"Only when the buyer or project specification permits it. IS 3589, IS 1239 and API 5L serve different specification needs and should be reviewed separately."}},{"@type":"Question","name":"Can MTC, PMI or third-party inspection be requested?","acceptedAnswer":{"@type":"Answer","text":"Buyers should mention MTC, PMI, inspection or testing requirements in the RFQ where applicable. Documentation support is reviewed against the project requirement."}},{"@type":"Question","name":"Does Rubinox support PAN India and export enquiries for IS 3589 Pipe?","acceptedAnswer":{"@type":"Answer","text":"Rubinox can review PAN India and export enquiries when buyers share complete grade, form, size, quantity, documentation and destination details."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What details should I send for an IS 3589 Pipe RFQ?","acceptedAnswer":{"@type":"Answer","text":"Share IS 3589 Pipe, product form, dimensions, quantity, governing standard, documentation or inspection needs where applicable, and delivery city or export destination so Rubinox can review the enquiry clearly."}},{"@type":"Question","name":"Which IS 3589 Pipe product forms can be requested?","acceptedAnswer":{"@type":"Answer","text":"Common RFQs include pipes, cut lengths, random lengths, related fittings and flanges where specified. Final review depends on grade, size, quantity, standard, documentation and sourcing feasibility."}},{"@type":"Question","name":"Can IS 3589 Pipe be substituted with a related grade or specification?","acceptedAnswer":{"@type":"Answer","text":"Only when the buyer, consultant or project engineer approves it. Equivalent references and substitutions should be checked against the governing specification."}},{"@type":"Question","name":"Can documentation be requested with IS 3589 Pipe?","acceptedAnswer":{"@type":"Answer","text":"Yes, buyers can mention MTC, PMI, inspection, testing, marking, packing or export documentation needs where applicable. Support is reviewed enquiry-wise against the material and requirement."}},{"@type":"Question","name":"Is Rubinox a manufacturer of IS 3589 Pipe?","acceptedAnswer":{"@type":"Answer","text":"No. Rubinox Metal and Alloys is a stockist, supplier, importer, exporter and project supplier."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","@id":"https://rubinoxmetal.com/materials/is-3589-pipe-supplier-india.html#product","name":"IS 3589 Pipe Supplier in India","description":"IS 3589 pipe supplier in India for project pipe RFQs with size, wall thickness, class, coating, testing and documentation requirements reviewed.","url":"https://rubinoxmetal.com/materials/is-3589-pipe-supplier-india.html","image":"https://rubinoxmetal.com/assets/rubinox-social-preview-2026.jpg","brand":{"@type":"Organization","name":"Rubinox Metal and Alloys","url":"https://rubinoxmetal.com"},"category":"Industrial metal pipes","material":"Industrial metal","additionalProperty":[{"@type":"PropertyValue","name":"Business role","value":"Stockist, supplier, importer, exporter and project supplier support for RFQs"},{"@type":"PropertyValue","name":"RFQ details","value":"Grade or specification, product form, size, quantity, standard, documentation requirement and delivery location"},{"@type":"PropertyValue","name":"Area served","value":"PAN India supply and export enquiry support where applicable"}]}</script></head>
 <body>
 <a class="skipLink" href="#main-content">Skip to main content</a>
@@ -545,16 +586,141 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
 </header>
 <div class="topbar"><div class="wrap"><div class="crumb"><a href="/">Home</a> &bull; <a href="/materials.html">Materials</a> &bull; <a href="/materials/mild-steel.html">Mild Steel</a> &bull; IS 3589 Pipe Supplier in India</div></div></div>
 <main id="main-content" class="page">
-  <div class="heroGrid"><div class="card heroText"><h1>IS 3589 Pipe Supplier in India</h1><p style="max-width:78ch">Rubinox Metal and Alloys supports IS 3589 Pipe enquiries as a stockist, supplier, importer, exporter and project supplier. Buyers can share grade, standard, product form, dimensions, quantity, inspection, documentation requirement and delivery location for specification-led RFQ review.</p><div class="miniRow"><span class="miniTag">IS 3589 Pipe</span><span class="miniTag">Project Pipe RFQs</span><span class="miniTag">Coating / Inspection Details</span><span class="miniTag">PAN India &amp; Export Enquiries</span></div></div><div class="heroImg"><img fetchpriority="high" width="1400" height="933" src="/assets/form-pipes.webp" alt="IS 3589 steel pipes for water utility and project piping RFQs with coating and inspection requirements" decoding="async"></div></div>
-  <section class="grid2"><div class="card"><h2>IS 3589 Pipe Overview</h2><p>IS 3589 pipe enquiries are generally specification-led and should include size, wall thickness, length, class, coating, testing, quantity and delivery requirements. Rubinox can review enquiries by grade, standard, product form, dimensions, quantity and documentation requirement.</p></div><div class="card"><h2>Common Product Forms</h2><ul><li>Mild steel or steel pipes where the IS standard is specified</li><li>Plain end, threaded end or project-specified end finish</li><li>Black, galvanized, coated or project-specified finish where applicable</li><li>Cut lengths, bundles and project MTO quantities</li></ul></div></section>
-  <section class="grid2"><div class="card"><h2>Standards and Specification Notes</h2><ul><li>Confirm the IS standard and any class, grade or project-specific requirement.</li><li>Share nominal bore, OD, wall thickness, length, end finish, coating and quantity.</li><li>Mention hydro test, inspection, MTC, marking, packing and delivery requirements where applicable.</li></ul></div><div class="card"><h2>Applications and Enquiry Areas</h2><ul><li>Water, utility and project piping RFQs where specified</li><li>Infrastructure, contractor and fabrication requirements</li><li>Pipeline replacement and maintenance procurement</li><li>Industrial services and plant utility lines</li><li>PAN India project supply coordination discussions</li></ul></div></section>
-  <section class="grid2"><div class="card"><h2>Buyer Guidance</h2><p>IS pipe enquiries should be reviewed against the exact project specification and inspection requirement. Do not assume interchangeability unless the buyer or consultant approves it.</p></div><div class="card"><h2>Documentation and Inspection Notes</h2><ul><li>MTC, heat number and traceability requirements where applicable</li><li>PMI, dimensional inspection, UT, impact testing or third-party inspection only when specified</li><li>Packing, marking, coating, end protection and dispatch preferences</li><li>Buyer or project specification should govern final acceptance and substitution decisions</li></ul></div></section>
-  <section class="card" style="margin-top:14px;overflow:auto"><h2>Buyer Specification Guide</h2><table><thead><tr><th>Requirement</th><th>Details to share</th></tr></thead><tbody><tr><td>Primary reference</td><td>IS 3589 Pipe</td></tr><tr><td>Material family</td><td>Mild Steel Pipe</td></tr><tr><td>Product forms</td><td>Mild steel or steel pipes where the IS standard is specified, Plain end, threaded end or project-specified end finish, Black, galvanized, coated or project-specified finish where applicable, Cut lengths, bundles and project MTO quantities</td></tr><tr><td>RFQ details to share</td><td>Grade, standard, size, quantity, condition, inspection, documentation and delivery location</td></tr><tr><td>Documentation notes</td><td>MTC, PMI, inspection, packing, marking and export documents where applicable</td></tr></tbody></table></section>
-  <section class="grid2"><div class="card"><h2>RFQ Checklist</h2><ul><li>Grade or specification: IS 3589 Pipe</li><li>Applicable ASTM, ASME, API, IS, EN, DIN or project standard</li><li>Product form, size, wall thickness, schedule, length, finish or section details</li><li>Quantity, cut lengths, drawing, BOQ or MTO references</li><li>MTC, PMI, inspection, testing, marking or packing needs where applicable</li><li>Delivery city, project site, port or export destination</li></ul></div><div class="card"><h2>Related Pages</h2><ul><li><a href="/materials/mild-steel.html">Mild Steel hub</a></li><li><a href="/materials/is-1239-pipe-supplier-india.html">IS 1239 Pipe</a></li><li><a href="/materials/api-5l-grade-b-pipe-supplier-india.html">API 5L Grade B Pipe</a></li><li><a href="/quotation.html">Request quotation</a></li><li><a href="/contact.html">Contact Rubinox</a></li></ul></div></section>
-  <section class="card" style="margin-top:14px"><h2>IS 3589 Pipe FAQs</h2><div class="relGrid"><div class="faqItem"><h3>What details are needed for a IS 3589 Pipe RFQ?</h3><p>Share the exact grade or specification, product form, dimensions, quantity, standard, testing, documentation requirement and delivery location so Rubinox can review the enquiry clearly.</p></div><div class="faqItem"><h3>Which product forms can be requested in IS 3589 Pipe?</h3><p>RFQs may include mild steel or steel pipes where the is standard is specified; plain end, threaded end or project-specified end finish; black, galvanized, coated or project-specified finish where applicable. Final review depends on grade, size, quantity, standard and sourcing feasibility.</p></div><div class="faqItem"><h3>Can IS 3589 be substituted with IS 1239 or API 5L?</h3><p>Only when the buyer or project specification permits it. IS 3589, IS 1239 and API 5L serve different specification needs and should be reviewed separately.</p></div><div class="faqItem"><h3>Can MTC, PMI or third-party inspection be requested?</h3><p>Buyers should mention MTC, PMI, inspection or testing requirements in the RFQ where applicable. Documentation support is reviewed against the project requirement.</p></div><div class="faqItem"><h3>Does Rubinox support PAN India and export enquiries for IS 3589 Pipe?</h3><p>Rubinox can review PAN India and export enquiries when buyers share complete grade, form, size, quantity, documentation and destination details.</p></div></div></section>
-  <section class="materialRfqCta" aria-labelledby="material-rfq-cta-title">
-    <div class="materialRfqMain"><span class="materialRfqLabel">Procurement RFQ support</span><h2 id="material-rfq-cta-title">Share Your IS 3589 Pipe Requirement</h2><p>Share grade or specification, product form, size, quantity, standard, MTC/PMI or inspection needs, delivery location and timeline for Rubinox quotation support.</p><div class="materialRfqChecklist"><span>Grade / specification</span><span>Product form and size</span><span>Quantity and standard</span><span>Delivery location</span><span>MTC / inspection needs</span><span>Drawing or BOQ if any</span></div></div>
-    <div class="materialRfqActions"><a class="btn primary" href="https://wa.me/919363193755?text=IS%203589%20Pipe%20RFQ%20-%20grade%2Fspec%2C%20form%2C%20size%2C%20quantity%2C%20delivery%20and%20documents%3A%20" target="_blank" rel="noopener noreferrer">WhatsApp RFQ</a><a class="btn ghost" href="mailto:tarun@rubinoxmetal.com?subject=IS%203589%20Pipe%20Quotation%20Request%20-%20Rubinox">Email RFQ</a><a class="btn ghost" href="/quotation.html">Quotation Page</a><a class="btn ghost" href="/contact.html">Contact Rubinox</a><p class="materialRfqContact">+91&nbsp;9363193755<br>tarun@rubinoxmetal.com</p></div>
+  <section class="heroGrid">
+    <div class="card heroText">
+      <h1>IS 3589 Pipe Supplier in India</h1>
+      <p class="gateLead">Rubinox Metal and Alloys supports IS 3589 Pipe enquiries as a stockist, supplier, importer, exporter and project supplier. Share the grade/specification, form, size, quantity, documentation requirement and delivery location for a clear RFQ review.</p>
+      <div class="miniRow"><span class="miniTag">IS 3589 Pipe</span><span class="miniTag">Indian pipe specification</span><span class="miniTag">RFQ Documentation</span><span class="miniTag">PAN India &amp; Export Enquiries</span></div>
+    </div>
+    <div class="heroImg"><img fetchpriority="high" width="1400" height="800" src="/assets/form-pipes.webp" alt="IS 3589 Pipe industrial metal product forms for RFQ support" decoding="async"></div>
+  </section>
+
+  <section class="card gradeQuickNav" aria-label="IS 3589 Pipe page shortcuts">
+    <div class="relGrid">
+      <a class="relItem" href="#overview"><strong>Overview</strong><span>Quick buyer answer</span></a>
+      <a class="relItem" href="#standards"><strong>Standards</strong><span>Specification cues</span></a>
+      <a class="relItem" href="#forms"><strong>Product Forms</strong><span>Clean RFQ paths</span></a>
+      <a class="relItem" href="#applications"><strong>Applications</strong><span>Use-case context</span></a>
+      <a class="relItem" href="#rfq-checklist"><strong>RFQ Checklist</strong><span>Details to send</span></a>
+      <a class="relItem" href="#faqs"><strong>FAQs</strong><span>Buyer questions</span></a>
+    </div>
+  </section>
+
+  <section class="grid2" id="overview">
+    <div class="card">
+      <h2>IS 3589 Pipe quick answer</h2>
+      <p>IS 3589 Pipe RFQs should state the exact grade or specification, product form, size, quantity, documentation need and delivery location. Rubinox can review enquiries subject to grade, size, quantity and sourcing feasibility.</p>
+    </div>
+    <div class="card">
+      <h2>Specification-led buying note</h2>
+      <p>Selection depends on the governing specification, service condition, fabrication route and buyer approval. Equivalent references should be checked against the project specification before any substitution.</p>
+      <div class="gateSignalGrid">
+        <span><strong>Grade family</strong>Indian pipe specification</span>
+        <span><strong>RFQ forms</strong>Pipe and related project items</span>
+        <span><strong>Specification cues</strong>IS 3589 Pipe; buyer-specified standards where applicable.</span>
+        <span><strong>Documentation support</strong>MTC, PMI, inspection, packing, marking and export documents where applicable.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="card tableGateCard" id="standards" style="margin-top:14px">
+    <h2>IS 3589 Pipe standards and RFQ signals</h2>
+    <p class="gateLead">Use this table as an enquiry guide. Buyers may specify equivalent references, but final acceptance should follow the project specification.</p>
+    <div class="tableWrap">
+      <table>
+        <caption>IS 3589 Pipe RFQ reference guide</caption>
+        <thead><tr><th>Buyer cue</th><th>Safe details to confirm</th></tr></thead>
+        <tbody><tr><td>Primary reference</td><td>IS 3589 Pipe</td></tr><tr><td>Material family</td><td>Indian pipe specification</td></tr><tr><td>Common RFQ context</td><td>domestic pipe projects, water, utility, fabrication and project MTO RFQs</td></tr><tr><td>Equivalent references</td><td>Confirm UNS, EN, DIN, ASTM, ASME, API, IS or project references against the buyer specification before substitution.</td></tr><tr><td>Product form details</td><td>NPS/OD, schedule or wall thickness, length, end finish, coating/marking notes and quantity.</td></tr><tr><td>Documentation note</td><td>MTC, PMI, inspection, testing or third-party review should be mentioned where applicable.</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="card relatedGate" id="forms" style="margin-top:14px">
+    <h2>Common IS 3589 Pipe product forms</h2>
+    <p class="gateLead">Keep the RFQ focused on the form and measurable dimensions instead of sending a generic enquiry.</p>
+    <div class="relGrid">
+      <a class="relItem" href="/materials/stainless-steel-pipes-supplier-india.html"><strong>Pipes</strong><span>NPS, OD, schedule, wall thickness, length and end finish.</span></a>
+      <a class="relItem" href="/materials/stainless-steel-tubes-supplier-india.html"><strong>Tubes</strong><span>Tube size, wall thickness, length and specification.</span></a>
+      <a class="relItem" href="/materials/stainless-steel-flanges-supplier-india.html"><strong>Flanges</strong><span>Class, face, bore, standard and companion pipe details.</span></a>
+      <a class="relItem" href="/materials/stainless-steel-fittings-supplier-india.html"><strong>Fittings</strong><span>Elbows, tees, reducers, caps and project standard.</span></a>
+      <a class="relItem" href="/product-forms.html"><strong>Product Forms Hub</strong><span>Browse additional forms and RFQ paths.</span></a>
+    </div>
+  </section>
+
+  <section class="card" id="applications" style="margin-top:14px">
+    <h2>IS 3589 Pipe application context</h2>
+    <p class="gateLead">These are buyer enquiry contexts, not client/project claims. Final material selection depends on the governing specification and service conditions.</p>
+    <div class="gateCardGrid">
+      <div class="gateCard"><h3>Domestic Pipe Projects</h3><p>Buyer enquiry context for IS 3589 Pipe; final suitability depends on the governing specification, service conditions and buyer approval.</p></div>
+      <div class="gateCard"><h3>Water &amp; Utility Lines</h3><p>Buyer enquiry context for IS 3589 Pipe; final suitability depends on the governing specification, service conditions and buyer approval.</p></div>
+      <div class="gateCard"><h3>Fabrication Contractors</h3><p>Buyer enquiry context for IS 3589 Pipe; final suitability depends on the governing specification, service conditions and buyer approval.</p></div>
+      <div class="gateCard"><h3>Project MTOs</h3><p>Buyer enquiry context for IS 3589 Pipe; final suitability depends on the governing specification, service conditions and buyer approval.</p></div>
+    </div>
+  </section>
+
+  <section class="grid2" id="rfq-checklist">
+    <div class="card">
+      <h2>Documentation support</h2>
+      <ul>
+        <li>MTC, heat number and traceability requirements where applicable.</li>
+        <li>PMI, inspection, testing or third-party review only when specified by the buyer.</li>
+        <li>Packing, marking and export documentation support can be reviewed enquiry-wise.</li>
+      </ul>
+      <div class="btnrow"><a class="btn ghost" href="/quality-documentation-support.html">Documentation support</a><a class="btn ghost" href="/technical-resources.html">Technical resources</a></div>
+    </div>
+    <div class="card">
+      <h2>IS 3589 Pipe RFQ checklist</h2>
+      <ul>
+        <li>Material, grade or specification: IS 3589 Pipe</li>
+        <li>Product form and governing standard or project specification</li>
+        <li>Size, thickness, schedule, class, diameter, length, finish, condition or drawing</li>
+        <li>Quantity, cut lengths, BOQ, MTO or project notes</li>
+        <li>MTC, PMI, inspection, testing, marking or packing needs where applicable</li>
+        <li>Delivery city, project site, port or export destination</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="card relatedGate" id="related" style="margin-top:14px">
+    <h2>Related IS 3589 Pipe resources</h2>
+    <p class="gateLead">Use these paths to compare neighbouring grades, product forms, documentation guidance and RFQ preparation steps.</p>
+    <div class="relGrid">
+      <a class="relItem" href="/materials/carbon-steel.html"><strong>Carbon Steel Hub</strong><span>Parent material family for IS 3589 Pipe enquiries.</span></a>
+      <a class="relItem" href="/materials/astm-a106-grade-b-pipe-supplier-india.html"><strong>ASTM A106 Grade B</strong><span>Related grade, specification or buyer guide.</span></a>
+      <a class="relItem" href="/materials/astm-a53-grade-b-pipe-supplier-india.html"><strong>ASTM A53 Grade B</strong><span>Related grade, specification or buyer guide.</span></a>
+      <a class="relItem" href="/materials/api-5l-grade-b-pipe-supplier-india.html"><strong>API 5L Grade B</strong><span>Related grade, specification or buyer guide.</span></a>
+      <a class="relItem" href="/materials/api-5l-x52-pipe-supplier-india.html"><strong>API 5L X52</strong><span>Related grade, specification or buyer guide.</span></a>
+      <a class="relItem" href="/materials/astm-a335-p91-pipe-supplier-india.html"><strong>ASTM A335 P91</strong><span>Related grade, specification or buyer guide.</span></a>
+      <a class="relItem" href="/technical-resources.html"><strong>Technical Resources</strong><span>Charts, standards and buyer reference tables.</span></a>
+      <a class="relItem" href="/quality-documentation-support.html"><strong>Quality Documentation Support</strong><span>MTC, PMI and inspection request guidance.</span></a>
+      <a class="relItem" href="/blog/metal-rfq-checklist-for-buyers.html"><strong>Metal RFQ Checklist</strong><span>Details buyers should send before quotation.</span></a>
+      <a class="relItem" href="/blog/mtc-pmi-third-party-inspection-guide.html"><strong>MTC / PMI Guide</strong><span>Documentation and inspection request guide.</span></a>
+      <a class="relItem" href="/quotation.html"><strong>Request Quotation</strong><span>Send a structured RFQ to Rubinox.</span></a>
+    </div>
+  </section>
+
+  <section class="card" id="faqs" style="margin-top:14px">
+    <h2>IS 3589 Pipe FAQs</h2>
+    <div class="gateCardGrid">
+      <div class="gateCard"><h3>What details should I send for an IS 3589 Pipe RFQ?</h3><p>Share IS 3589 Pipe, product form, dimensions, quantity, governing standard, documentation or inspection needs where applicable, and delivery city or export destination so Rubinox can review the enquiry clearly.</p></div>
+      <div class="gateCard"><h3>Which IS 3589 Pipe product forms can be requested?</h3><p>Common RFQs include pipes, cut lengths, random lengths, related fittings and flanges where specified. Final review depends on grade, size, quantity, standard, documentation and sourcing feasibility.</p></div>
+      <div class="gateCard"><h3>Can IS 3589 Pipe be substituted with a related grade or specification?</h3><p>Only when the buyer, consultant or project engineer approves it. Equivalent references and substitutions should be checked against the governing specification.</p></div>
+      <div class="gateCard"><h3>Can documentation be requested with IS 3589 Pipe?</h3><p>Yes, buyers can mention MTC, PMI, inspection, testing, marking, packing or export documentation needs where applicable. Support is reviewed enquiry-wise against the material and requirement.</p></div>
+      <div class="gateCard"><h3>Is Rubinox a manufacturer of IS 3589 Pipe?</h3><p>No. Rubinox Metal and Alloys is a stockist, supplier, importer, exporter and project supplier.</p></div>
+    </div>
+  </section>
+
+  <section class="materialRfqCta" id="rfq" aria-labelledby="material-rfq-cta-title">
+    <div>
+      <span class="eyebrow">Request IS 3589 Pipe quotation</span>
+      <h2 id="material-rfq-cta-title">Send grade, form, size and documentation needs.</h2>
+      <p>Rubinox will review the enquiry as a stockist, supplier, importer, exporter and project supplier, subject to grade, size, quantity, documentation and logistics requirements.</p>
+    </div>
+    <div class="btnrow">
+      <a class="btn primary" href="https://wa.me/919363193755?text=Hello%20Rubinox%2C%20I%20need%20a%20quotation%20for%20IS%203589%20Pipe">WhatsApp RFQ</a>
+      <a class="btn ghost" href="mailto:tarun@rubinoxmetal.com?subject=IS%203589%20Pipe%20RFQ">Email RFQ</a>
+      <a class="btn ghost" href="/quotation.html">Request Quotation</a>
+    </div>
   </section>
 </main>
 

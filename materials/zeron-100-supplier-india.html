@@ -129,7 +129,48 @@ header .navlinks .btn.primary{padding:9px 11px !important}
 .premiumHero + .card,.premiumHero + .trustStrip,.premiumHero + .section,.premiumHero + .wrap{margin-top:var(--rubinox-section-gap)}
 @media(max-width:1120px){header .nav{min-height:70px !important;padding:8px 0 !important}header .brand img{width:220px !important;max-height:52px !important}}
 @media(max-width:640px){header .brand img{width:188px !important;max-width:60vw !important;max-height:48px !important}}
-/* RUBINOX HEADER BREADCRUMB SPACING POLISH END */</style>
+/* RUBINOX HEADER BREADCRUMB SPACING POLISH END *//* RUBINOX GRADE TEMPLATE GATE START */
+.skipLink{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skipLink:focus{left:18px;top:18px;width:auto;height:auto;z-index:2000;background:#fff;color:#132a63;padding:10px 12px;border:2px solid #e2a02f;border-radius:8px;box-shadow:0 10px 24px rgba(15,30,60,.18)}
+.heroGrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.9fr);gap:16px;align-items:stretch;width:100%;max-width:100%;margin-top:18px}
+.heroGrid .card{margin-top:0}
+.heroText{display:flex;flex-direction:column;justify-content:center;min-width:0}
+.heroText h1{color:#132a63;font-size:clamp(30px,4.4vw,48px);line-height:1.08;margin:0 0 14px;letter-spacing:0}
+.heroText p{margin:0;color:#566b9a;line-height:1.7}
+.miniRow{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.miniTag{display:inline-flex;align-items:center;min-height:30px;border:1px solid rgba(19,42,99,.13);border-radius:6px;background:linear-gradient(180deg,#f8fafc,#eaf0f7);color:#132a63;font-size:12px;font-weight:850;line-height:1.3;padding:7px 9px;box-shadow:0 6px 14px rgba(15,30,60,.06)}
+.relGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.relItem{display:block;text-decoration:none;color:#132a63;border:1px solid rgba(19,42,99,.12);border-radius:8px;background:linear-gradient(180deg,#fff,#f8fafc);padding:13px 14px;box-shadow:0 8px 18px rgba(15,30,60,.05);min-width:0}
+.relItem strong{display:block;color:#132a63;font-size:14px;line-height:1.3;margin-bottom:3px}
+.relItem span{display:block;color:#566b9a;font-size:12px;line-height:1.45}
+.relItem:hover,.relItem:focus-visible{border-color:rgba(226,160,47,.48);background:#fff;outline:2px solid rgba(19,42,99,.20);outline-offset:2px}
+@media(max-width:900px){.heroGrid{grid-template-columns:1fr}.heroImg img,main .heroImg img{height:240px}}
+@media(max-width:520px){.heroGrid{gap:0;margin-top:14px}.heroText h1{font-size:30px}.miniRow{gap:7px}.miniTag{font-size:11px;min-height:28px}.heroImg img,main .heroImg img{height:220px}.relGrid{grid-template-columns:1fr!important}.relItem{padding:12px}}
+.gradeQuickNav{margin-top:var(--rubinox-section-gap,14px)!important}
+.gradeQuickNav .relGrid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px!important}
+.gradeQuickNav .relItem{min-height:72px;background:linear-gradient(180deg,#fff,#f8fafc)!important}
+.gateLead{margin:0 0 12px!important;color:#566b9a!important;line-height:1.65!important;font-size:14px!important}
+.gateSignalGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:12px}
+.gateSignalGrid span{display:block;padding:12px;border:1px solid rgba(19,42,99,.12);border-radius:8px;background:linear-gradient(180deg,#fff,#f8fafc);color:#566b9a;font-size:13px;line-height:1.55}
+.gateSignalGrid strong{display:block;color:#132a63;margin-bottom:4px}
+.gateCardGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:12px}
+.gateCard{padding:14px;border:1px solid rgba(19,42,99,.12);border-radius:8px;background:#fff;box-shadow:0 10px 24px rgba(15,30,60,.05);min-width:0}
+.gateCard h3{margin:0 0 8px;color:#132a63;font-size:18px;line-height:1.3}
+.gateCard p{margin:0!important;color:#566b9a!important;line-height:1.65!important}
+.tableGateCard table caption{caption-side:top;text-align:left;color:#132a63;font-weight:850;padding:0 0 8px;line-height:1.45}
+.heroImg{overflow:hidden}
+.heroImg img,main .heroImg img{display:block;width:100%!important;max-width:100%!important;height:clamp(220px,28vw,340px);object-fit:cover}
+.tableGateCard .tableWrap,main .card.tableGateCard .tableWrap{overflow-x:auto!important;max-width:100%!important;width:100%!important}
+.tableGateCard table,main .card.tableGateCard table{width:100%!important;min-width:0!important;max-width:100%!important;table-layout:auto!important}
+main .card.tableGateCard{max-width:100%;overflow-x:hidden!important}
+main .card.tableGateCard th,main .card.tableGateCard td{overflow-wrap:anywhere;word-break:normal}
+@media(max-width:760px){main .card.tableGateCard .tableWrap{overflow-x:auto!important;max-width:100%!important;width:100%!important}main .card.tableGateCard table{width:100%!important;min-width:0!important;max-width:100%!important;table-layout:fixed!important}}
+.relatedGate .relGrid{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.relatedGate .relItem span{font-size:13px;line-height:1.55}
+@media(max-width:900px){.gateSignalGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.gateSignalGrid{grid-template-columns:1fr}.gradeQuickNav .relGrid,.relatedGate .relGrid{grid-template-columns:1fr!important}}
+/* RUBINOX GRADE TEMPLATE GATE END */
+</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Zeron 100 Supplier in India","url":"https://rubinoxmetal.com/materials/zeron-100-supplier-india.html","@id":"https://rubinoxmetal.com/materials/zeron-100-supplier-india.html#webpage","description":"Zeron 100 / UNS S32760 supplier in India for project-specific super duplex pipes, plates, bars, flanges, fittings and components with RFQ and documentation support.","isPartOf":{"@id":"https://rubinoxmetal.com/#website"},"about":{"@id":"https://rubinoxmetal.com/#organization"},"breadcrumb":{"@id":"https://rubinoxmetal.com/materials/zeron-100-supplier-india.html#breadcrumb"},"inLanguage":"en-IN"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rubinoxmetal.com/"},{"@type":"ListItem","position":2,"name":"Materials","item":"https://rubinoxmetal.com/#materials"},{"@type":"ListItem","position":3,"name":"Duplex & Super Duplex","item":"https://rubinoxmetal.com/materials/duplex-super-duplex.html"},{"@type":"ListItem","position":4,"name":"Zeron 100","item":"https://rubinoxmetal.com/materials/zeron-100-supplier-india.html"}],"@id":"https://rubinoxmetal.com/materials/zeron-100-supplier-india.html#breadcrumb"}</script>
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -364,7 +405,7 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
 @media(max-width:760px){header .topRail .railNote{display:block!important;font-size:11.5px!important}header .topRail .railLinks.utilityIcons{gap:6px!important}.faqGrid,.relGrid{grid-template-columns:1fr!important;gap:14px!important}.faqItem{padding:20px!important}.siteFooter .footerLayout{grid-template-columns:1fr!important;padding:28px 18px!important}.siteFooter .footerBrand img{max-width:190px!important}.siteFooter .footerIconGroup{flex-wrap:nowrap!important;gap:6px!important}.siteFooter .footerIconGroup .footerIcon{width:32px!important;height:32px!important;min-width:32px!important;min-height:32px!important;max-width:32px!important;max-height:32px!important}}
 /* RUBINOX FOOTER STANDARDIZATION END */
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","@id":"https://rubinoxmetal.com/materials/zeron-100-supplier-india.html#product","name":"Zeron 100 Supplier in India","description":"Zeron 100 / UNS S32760 supplier in India for project-specific super duplex pipes, plates, bars, flanges, fittings and components with RFQ and documentation support.","url":"https://rubinoxmetal.com/materials/zeron-100-supplier-india.html","image":"https://rubinoxmetal.com/assets/rubinox-social-preview-2026.jpg","brand":{"@type":"Organization","name":"Rubinox Metal and Alloys","url":"https://rubinoxmetal.com"},"category":"Industrial metals and alloy products","material":"Industrial metal","additionalProperty":[{"@type":"PropertyValue","name":"Business role","value":"Stockist, supplier, importer, exporter and project supplier support for RFQs"},{"@type":"PropertyValue","name":"RFQ details","value":"Grade or specification, product form, size, quantity, standard, documentation requirement and delivery location"},{"@type":"PropertyValue","name":"Area served","value":"PAN India supply and export enquiry support where applicable"}]}</script></head>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","@id":"https://rubinoxmetal.com/materials/zeron-100-supplier-india.html#product","name":"Zeron 100 Supplier in India","description":"Zeron 100 / UNS S32760 supplier in India for project-specific super duplex pipes, plates, bars, flanges, fittings and components with RFQ and documentation support.","url":"https://rubinoxmetal.com/materials/zeron-100-supplier-india.html","image":"https://rubinoxmetal.com/assets/rubinox-social-preview-2026.jpg","brand":{"@type":"Organization","name":"Rubinox Metal and Alloys","url":"https://rubinoxmetal.com"},"category":"Industrial metals and alloy products","material":"Industrial metal","additionalProperty":[{"@type":"PropertyValue","name":"Business role","value":"Stockist, supplier, importer, exporter and project supplier support for RFQs"},{"@type":"PropertyValue","name":"RFQ details","value":"Grade or specification, product form, size, quantity, standard, documentation requirement and delivery location"},{"@type":"PropertyValue","name":"Area served","value":"PAN India supply and export enquiry support where applicable"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What details should I send for a Zeron 100 RFQ?","acceptedAnswer":{"@type":"Answer","text":"Share Zeron 100, product form, dimensions, quantity, governing standard, documentation or inspection needs where applicable, and delivery city or export destination so Rubinox can review the enquiry clearly."}},{"@type":"Question","name":"Which Zeron 100 product forms can be requested?","acceptedAnswer":{"@type":"Answer","text":"Common RFQs include pipes, tubes, sheets, plates, bars, rods, flanges, fittings and fasteners. Final review depends on grade, size, quantity, standard, documentation and sourcing feasibility."}},{"@type":"Question","name":"Can Zeron 100 be substituted with a related grade or specification?","acceptedAnswer":{"@type":"Answer","text":"Only when the buyer, consultant or project engineer approves it. Equivalent references and substitutions should be checked against the governing specification."}},{"@type":"Question","name":"Can documentation be requested with Zeron 100?","acceptedAnswer":{"@type":"Answer","text":"Yes, buyers can mention MTC, PMI, inspection, testing, marking, packing or export documentation needs where applicable. Support is reviewed enquiry-wise against the material and requirement."}},{"@type":"Question","name":"Is Rubinox a manufacturer of Zeron 100?","acceptedAnswer":{"@type":"Answer","text":"No. Rubinox Metal and Alloys is a stockist, supplier, importer, exporter and project supplier."}}]}</script></head>
 <body>
 <a class="skipLink" href="#main-content">Skip to main content</a>
 <header>
@@ -443,39 +484,144 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
 </header>
 <div class="topbar"><div class="wrap"><div class="crumb"><a href="/">Home</a> &bull; <a href="/#materials">Materials</a> &bull; <a href="/materials/duplex-super-duplex.html">Duplex &amp; Super Duplex</a> &bull; Zeron 100</div></div></div>
 <main id="main-content" class="page">
-  <div class="heroGrid"><div class="card heroText"><h1>Zeron 100 Supplier in India</h1><p style="max-width:78ch">Rubinox Metal and Alloys reviews Zeron 100 and UNS S32760 super duplex stainless steel enquiries for pipes, tubes, plates, bars, flanges, fittings, fasteners and project components used in seawater, desalination, offshore, marine and chemical process applications.</p><div class="miniRow"><span class="miniTag">Stockist | Supplier | Importer | Exporter</span><span class="miniTag">Zeron 100 | UNS S32760</span><span class="miniTag">Super Duplex Stainless Steel</span><span class="miniTag">Seawater | Offshore | Desalination</span><span class="miniTag">PAN India &amp; Export Enquiries</span></div></div><div class="heroImg"><img fetchpriority="high" width="1400" height="933" src="/assets/mat-duplex.webp" alt="Zeron 100 and super duplex stainless steel project products" decoding="async"></div></div>
-  <div class="grid2"><div class="card"><h2>Zeron 100 / UNS S32760 Overview</h2><p>Zeron 100 is a super duplex stainless steel grade commonly associated with UNS S32760. Buyers usually specify it for demanding chloride, seawater, brine, offshore and process environments where the project standard calls for this grade or trade-name requirement.</p><p style="margin-top:10px">Rubinox does not treat trade names as automatic substitutes. Share the exact project specification, UNS number, standard, product form, size, quantity and documentation requirement so the enquiry can be reviewed correctly.</p></div><div class="card"><h2>Common Applications</h2><ul><li>Seawater intake, cooling water and discharge systems.</li><li>Desalination, brine handling and high-pressure piping packages.</li><li>Offshore topside, marine and oil and gas process components.</li><li>Chemical processing, scrubber, heat exchanger and pressure equipment enquiries.</li><li>Project components where UNS S32760 is named in the specification.</li></ul></div></div>
-  <div class="card" style="margin-top:14px;overflow:auto"><h2>Zeron 100 vs Duplex 2205 vs Super Duplex 2507</h2><table><thead><tr><th scope="col">Factor</th><th scope="col">Duplex 2205</th><th scope="col">Super Duplex 2507</th><th scope="col">Zeron 100</th></tr></thead><tbody><tr><td><strong>Common UNS</strong></td><td>S32205 / S31803</td><td>S32750</td><td>S32760</td></tr><tr><td><strong>Buyer positioning</strong></td><td>Balanced strength and corrosion resistance for many duplex applications.</td><td>Higher-alloy super duplex for more demanding chloride and seawater service.</td><td>Project-specified super duplex grade commonly reviewed for severe chloride and offshore service.</td></tr><tr><td><strong>Typical review areas</strong></td><td>Chemical, marine, process water and selected offshore service.</td><td>Seawater, desalination, offshore and high-chloride applications.</td><td>Named project specifications, seawater, brine, oil and gas and severe process environments.</td></tr><tr><td><strong>Selection note</strong></td><td colspan="3">No grade is automatically better for every requirement. Final selection should follow chloride level, temperature, pressure, fabrication route, inspection scope and the project specification.</td></tr></tbody></table></div>
-  <div class="grid2"><div class="card"><h2>Standards and Specification Guidance</h2><ul><li><b>UNS:</b> Zeron 100 is commonly associated with UNS S32760.</li><li><b>Pipe:</b> ASTM A790 / ASME SA790 where applicable to duplex pipe enquiries.</li><li><b>Tube:</b> ASTM A789 / ASME SA789 where applicable.</li><li><b>Plate, sheet and strip:</b> ASTM A240 / ASME SA240 where applicable.</li><li><b>Bars and forgings:</b> ASTM A276, ASTM A479 or ASTM A182 depending on product and application.</li><li><b>Fittings:</b> ASTM A815 / ASME SA815 for wrought piping fittings where specified.</li></ul></div><div class="card"><h2>Documentation and Inspection Notes</h2><p>Zeron 100 project enquiries may require MTC review, PMI, hydro testing, ferrite check, corrosion testing, impact testing, third-party inspection, packing notes or project-specific documentation. Share these requirements at enquiry stage so Rubinox can review the supply route accurately.</p></div></div>
-  <div class="card" style="margin-top:14px;overflow:auto"><h2>Zeron 100 Product Forms Matrix</h2><table><thead><tr><th scope="col">Product Form</th><th scope="col">Typical Buyer Details</th><th scope="col">RFQ Notes</th></tr></thead><tbody><tr><td><strong>Pipes and tubes</strong></td><td>OD, NB, schedule, wall thickness, length, seamless/welded requirement and standard.</td><td>Share pressure, service and testing requirements where relevant.</td></tr><tr><td><strong>Plates, sheets and cut sizes</strong></td><td>Thickness, width, length, finish, tolerance and quantity.</td><td>Attach drawings for cut profiles or project components.</td></tr><tr><td><strong>Bars, rods and flats</strong></td><td>Diameter, section, length, condition and quantity.</td><td>Mention machining, forging or fabrication use if known.</td></tr><tr><td><strong>Flanges and fittings</strong></td><td>Class, standard, size, schedule, facing, end type and quantity.</td><td>Include BOQ/MTO line items for multi-item project packages.</td></tr><tr><td><strong>Fasteners and custom items</strong></td><td>Type, thread, length, drawing, quantity and inspection scope.</td><td>Share project specification and documentation requirements clearly.</td></tr></tbody></table></div>
-  <div class="card" style="margin-top:14px"><h2>Zeron 100 Buyer Specification Guide</h2><p>A complete Zeron 100 enquiry should identify the exact grade route, service requirement and documentation scope.</p><ul><li>Grade naming: Zeron 100, UNS S32760 and any project-specific specification or trade-name wording.</li><li>Product form: pipe, tube, plate, sheet, bar, rod, flange, fitting, fastener or project component.</li><li>Standard: ASTM, ASME, EN, NORSOK or client/project specification with revision if available.</li><li>Size details: OD, wall thickness, schedule, class, thickness, width, length, diameter or drawing.</li><li>Quantity, delivery city or export destination, required timeline and packing expectations.</li><li>MTC, PMI, hydro test, ferrite check, corrosion test, impact test or third-party inspection needs.</li></ul></div>
-  <div class="card" style="margin-top:14px"><h2>Related Duplex and Corrosion-Resistant Pages</h2><div class="relGrid"><a class="relItem" href="/materials/duplex-super-duplex.html"><strong>Duplex &amp; Super Duplex</strong><span>Category overview for Duplex 2205, Super Duplex 2507 and Zeron 100.</span></a><a class="relItem" href="/materials/duplex-2205-supplier-india.html"><strong>Duplex 2205</strong><span>UNS S32205 / S31803 for duplex project enquiries.</span></a><a class="relItem" href="/materials/super-duplex-2507-supplier-india.html"><strong>Super Duplex 2507</strong><span>UNS S32750 for seawater, offshore and chloride service.</span></a><a class="relItem" href="/materials/smo-254.html"><strong>SMO 254</strong><span>6Mo stainless option for severe chloride and seawater service.</span></a><a class="relItem" href="/materials/nickel-alloys.html"><strong>Nickel Alloys</strong><span>Inconel, Monel, Hastelloy, Incoloy and Nickel alloy families.</span></a><a class="relItem" href="/industries.html"><strong>Industries Served</strong><span>Marine, offshore, water treatment, chemical and EPC applications.</span></a></div></div>
-  <div class="card" style="margin-top:14px"><h2>Zeron 100 Supply FAQs</h2><div class="relGrid"><div class="faqItem" style="padding:12px"><h3>What is Zeron 100?</h3><p>Zeron 100 is a super duplex stainless steel grade commonly associated with UNS S32760. Buyers should share the exact project specification, product form, size, testing and documentation scope for quotation review.</p></div><div class="faqItem" style="padding:12px"><h3>Is Zeron 100 the same as Super Duplex 2507?</h3><p>Zeron 100 and Super Duplex 2507 are both super duplex stainless steel options, but they are specified differently. Zeron 100 is commonly associated with UNS S32760, while Super Duplex 2507 is commonly associated with UNS S32750. The project specification should decide the required grade.</p></div><div class="faqItem" style="padding:12px"><h3>Which product forms can be quoted in Zeron 100?</h3><p>Zeron 100 enquiries may include pipes, tubes, plates, sheets, bars, rods, flanges, fittings, fasteners and project components. Availability and route should be reviewed against the exact size, quantity and specification.</p></div><div class="faqItem" style="padding:12px"><h3>Where is Zeron 100 commonly reviewed?</h3><p>Zeron 100 is commonly reviewed for demanding chloride, seawater, offshore, desalination, chemical process and marine service where the project calls for UNS S32760 or a named super duplex requirement.</p></div><div class="faqItem" style="padding:12px"><h3>What standards should be shared for Zeron 100 RFQs?</h3><p>Share the applicable ASTM, ASME, EN, NORSOK or project specification, along with UNS S32760, product form, size, quantity, testing requirement, delivery location and documentation scope.</p></div><div class="faqItem" style="padding:12px"><h3>Can Rubinox support Zeron 100 enquiries for export buyers?</h3><p>Rubinox can review Zeron 100 and UNS S32760 enquiries for PAN India and export buyers when grade, standard, size, quantity, destination and documentation requirements are clearly shared.</p></div><div class="faqItem" style="padding:12px"><h3>What details are needed for a Zeron 100 quotation?</h3><p>Share grade or UNS number, project specification, product form, dimensions, quantity, service environment, MTC, PMI or inspection requirement, delivery location, timeline and any drawings or BOQ/MTO schedules.</p></div></div></div>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Zeron 100?","acceptedAnswer":{"@type":"Answer","text":"Zeron 100 is a super duplex stainless steel grade commonly associated with UNS S32760. Buyers should share the exact project specification, product form, size, testing and documentation scope for quotation review."}},{"@type":"Question","name":"Is Zeron 100 the same as Super Duplex 2507?","acceptedAnswer":{"@type":"Answer","text":"Zeron 100 and Super Duplex 2507 are both super duplex stainless steel options, but they are specified differently. Zeron 100 is commonly associated with UNS S32760, while Super Duplex 2507 is commonly associated with UNS S32750. The project specification should decide the required grade."}},{"@type":"Question","name":"Which product forms can be quoted in Zeron 100?","acceptedAnswer":{"@type":"Answer","text":"Zeron 100 enquiries may include pipes, tubes, plates, sheets, bars, rods, flanges, fittings, fasteners and project components. Availability and route should be reviewed against the exact size, quantity and specification."}},{"@type":"Question","name":"Where is Zeron 100 commonly reviewed?","acceptedAnswer":{"@type":"Answer","text":"Zeron 100 is commonly reviewed for demanding chloride, seawater, offshore, desalination, chemical process and marine service where the project calls for UNS S32760 or a named super duplex requirement."}},{"@type":"Question","name":"What standards should be shared for Zeron 100 RFQs?","acceptedAnswer":{"@type":"Answer","text":"Share the applicable ASTM, ASME, EN, NORSOK or project specification, along with UNS S32760, product form, size, quantity, testing requirement, delivery location and documentation scope."}},{"@type":"Question","name":"Can Rubinox support Zeron 100 enquiries for export buyers?","acceptedAnswer":{"@type":"Answer","text":"Rubinox can review Zeron 100 and UNS S32760 enquiries for PAN India and export buyers when grade, standard, size, quantity, destination and documentation requirements are clearly shared."}},{"@type":"Question","name":"What details are needed for a Zeron 100 quotation?","acceptedAnswer":{"@type":"Answer","text":"Share grade or UNS number, project specification, product form, dimensions, quantity, service environment, MTC, PMI or inspection requirement, delivery location, timeline and any drawings or BOQ/MTO schedules."}}]}</script>
-
-  <section class="materialRfqCta" aria-labelledby="material-rfq-cta-title">
-    <div class="materialRfqMain">
-      <span class="materialRfqLabel">Procurement RFQ support</span>
-      <h2 id="material-rfq-cta-title">Share Your Zeron 100 Requirement</h2>
-      <p>Share grade or specification, product form, size, quantity, standard, MTC/PMI or inspection needs, delivery location and timeline for Rubinox quotation support.</p>
-      <div class="materialRfqChecklist">
-        <span>Grade / specification</span>
-        <span>Product form and size</span>
-        <span>Quantity and standard</span>
-        <span>Delivery location</span>
-        <span>MTC / inspection needs</span>
-        <span>Drawing or BOQ if any</span>
-      </div>
+  <section class="heroGrid">
+    <div class="card heroText">
+      <h1>Zeron 100 Supplier in India</h1>
+      <p class="gateLead">Rubinox Metal and Alloys supports Zeron 100 enquiries as a stockist, supplier, importer, exporter and project supplier. Share the grade/specification, form, size, quantity, documentation requirement and delivery location for a clear RFQ review.</p>
+      <div class="miniRow"><span class="miniTag">Zeron 100</span><span class="miniTag">Super duplex stainless steel</span><span class="miniTag">RFQ Documentation</span><span class="miniTag">PAN India &amp; Export Enquiries</span></div>
     </div>
-    <div class="materialRfqActions">
-      <a class="btn primary" href="https://wa.me/919363193755" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.9 7L4 20l1.4-4.2A8 8 0 1 1 20 11.5z"></path><path d="M9 8.8c.2 3.1 2.1 5 5.2 5.2"></path></svg>WhatsApp RFQ</a>
-      <a class="btn ghost" href="mailto:tarun@rubinoxmetal.com?subject=Zeron%20100%20Quotation%20Request%20-%20Rubinox"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>Email RFQ</a>
-      <a class="btn ghost" href="/quotation.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8l4 4v14H4V3h4z"></path><path d="M16 3v5h5"></path><path d="M8 13h8"></path><path d="M8 17h6"></path></svg>Quotation Page</a>
-      <a class="btn ghost" href="/contact.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6.4 6.4l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"></path></svg>Contact Rubinox</a>
-      <p class="materialRfqContact">+91&nbsp;9363193755<br>tarun@rubinoxmetal.com</p>
+    <div class="heroImg"><img fetchpriority="high" width="1400" height="800" src="/assets/mat-duplex.webp" alt="Zeron 100 industrial metal product forms for RFQ support" decoding="async"></div>
+  </section>
+
+  <section class="card gradeQuickNav" aria-label="Zeron 100 page shortcuts">
+    <div class="relGrid">
+      <a class="relItem" href="#overview"><strong>Overview</strong><span>Quick buyer answer</span></a>
+      <a class="relItem" href="#standards"><strong>Standards</strong><span>Specification cues</span></a>
+      <a class="relItem" href="#forms"><strong>Product Forms</strong><span>Clean RFQ paths</span></a>
+      <a class="relItem" href="#applications"><strong>Applications</strong><span>Use-case context</span></a>
+      <a class="relItem" href="#rfq-checklist"><strong>RFQ Checklist</strong><span>Details to send</span></a>
+      <a class="relItem" href="#faqs"><strong>FAQs</strong><span>Buyer questions</span></a>
     </div>
   </section>
 
+  <section class="grid2" id="overview">
+    <div class="card">
+      <h2>Zeron 100 quick answer</h2>
+      <p>Zeron 100 RFQs should state the exact grade or specification, product form, size, quantity, documentation need and delivery location. Rubinox can review enquiries subject to grade, size, quantity and sourcing feasibility.</p>
+    </div>
+    <div class="card">
+      <h2>Specification-led buying note</h2>
+      <p>Selection depends on the governing specification, service condition, fabrication route and buyer approval. Equivalent references should be checked against the project specification before any substitution.</p>
+      <div class="gateSignalGrid">
+        <span><strong>Grade family</strong>Super duplex stainless steel</span>
+        <span><strong>RFQ forms</strong>Common metal forms and drawing-led items</span>
+        <span><strong>Specification cues</strong>Zeron 100; buyer-specified standards where applicable.</span>
+        <span><strong>Documentation support</strong>MTC, PMI, inspection, packing, marking and export documents where applicable.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="card tableGateCard" id="standards" style="margin-top:14px">
+    <h2>Zeron 100 standards and RFQ signals</h2>
+    <p class="gateLead">Use this table as an enquiry guide. Buyers may specify equivalent references, but final acceptance should follow the project specification.</p>
+    <div class="tableWrap">
+      <table>
+        <caption>Zeron 100 RFQ reference guide</caption>
+        <thead><tr><th>Buyer cue</th><th>Safe details to confirm</th></tr></thead>
+        <tbody><tr><td>Primary reference</td><td>Zeron 100</td></tr><tr><td>Material family</td><td>Super duplex stainless steel</td></tr><tr><td>Common RFQ context</td><td>super duplex, seawater, desalination, offshore and chemical process RFQs</td></tr><tr><td>Equivalent references</td><td>Confirm UNS, EN, DIN, ASTM, ASME, API, IS or project references against the buyer specification before substitution.</td></tr><tr><td>Product form details</td><td>Form, size, thickness, diameter, length, finish, condition, drawing or cut-size details.</td></tr><tr><td>Documentation note</td><td>MTC, PMI, inspection, testing or third-party review should be mentioned where applicable.</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="card relatedGate" id="forms" style="margin-top:14px">
+    <h2>Common Zeron 100 product forms</h2>
+    <p class="gateLead">Keep the RFQ focused on the form and measurable dimensions instead of sending a generic enquiry.</p>
+    <div class="relGrid">
+      <a class="relItem" href="/materials/stainless-steel-pipes-supplier-india.html"><strong>Pipes</strong><span>OD, NB, schedule, wall thickness and length.</span></a>
+      <a class="relItem" href="/materials/stainless-steel-tubes-supplier-india.html"><strong>Tubes</strong><span>OD, thickness, length, finish and end-use notes.</span></a>
+      <a class="relItem" href="/materials/stainless-steel-sheets-supplier-india.html"><strong>Sheets</strong><span>Thickness, width, length, finish and quantity.</span></a>
+      <a class="relItem" href="/materials/stainless-steel-plates-supplier-india.html"><strong>Plates</strong><span>Thickness, width, length, grade and testing notes.</span></a>
+      <a class="relItem" href="/materials/stainless-steel-bars-rods-supplier-india.html"><strong>Bars &amp; Rods</strong><span>Diameter, length, condition and machining notes.</span></a>
+      <a class="relItem" href="/materials/stainless-steel-flanges-supplier-india.html"><strong>Flanges</strong><span>Class, face, standard, bore and quantity.</span></a>
+      <a class="relItem" href="/materials/stainless-steel-fittings-supplier-india.html"><strong>Fittings</strong><span>Elbows, tees, reducers, caps and standard details.</span></a>
+      <a class="relItem" href="/materials/stainless-steel-fasteners-supplier-india.html"><strong>Fasteners</strong><span>Bolts, nuts, washers, studs and drawing notes.</span></a>
+    </div>
+  </section>
+
+  <section class="card" id="applications" style="margin-top:14px">
+    <h2>Zeron 100 application context</h2>
+    <p class="gateLead">These are buyer enquiry contexts, not client/project claims. Final material selection depends on the governing specification and service conditions.</p>
+    <div class="gateCardGrid">
+      <div class="gateCard"><h3>Super Duplex RFQs</h3><p>Buyer enquiry context for Zeron 100; final suitability depends on the governing specification, service conditions and buyer approval.</p></div>
+      <div class="gateCard"><h3>Seawater &amp; Desalination</h3><p>Buyer enquiry context for Zeron 100; final suitability depends on the governing specification, service conditions and buyer approval.</p></div>
+      <div class="gateCard"><h3>Offshore &amp; Marine</h3><p>Buyer enquiry context for Zeron 100; final suitability depends on the governing specification, service conditions and buyer approval.</p></div>
+      <div class="gateCard"><h3>Chemical Process Equipment</h3><p>Buyer enquiry context for Zeron 100; final suitability depends on the governing specification, service conditions and buyer approval.</p></div>
+    </div>
+  </section>
+
+  <section class="grid2" id="rfq-checklist">
+    <div class="card">
+      <h2>Documentation support</h2>
+      <ul>
+        <li>MTC, heat number and traceability requirements where applicable.</li>
+        <li>PMI, inspection, testing or third-party review only when specified by the buyer.</li>
+        <li>Packing, marking and export documentation support can be reviewed enquiry-wise.</li>
+      </ul>
+      <div class="btnrow"><a class="btn ghost" href="/quality-documentation-support.html">Documentation support</a><a class="btn ghost" href="/technical-resources.html">Technical resources</a></div>
+    </div>
+    <div class="card">
+      <h2>Zeron 100 RFQ checklist</h2>
+      <ul>
+        <li>Material, grade or specification: Zeron 100</li>
+        <li>Product form and governing standard or project specification</li>
+        <li>Size, thickness, schedule, class, diameter, length, finish, condition or drawing</li>
+        <li>Quantity, cut lengths, BOQ, MTO or project notes</li>
+        <li>MTC, PMI, inspection, testing, marking or packing needs where applicable</li>
+        <li>Delivery city, project site, port or export destination</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="card relatedGate" id="related" style="margin-top:14px">
+    <h2>Related Zeron 100 resources</h2>
+    <p class="gateLead">Use these paths to compare neighbouring grades, product forms, documentation guidance and RFQ preparation steps.</p>
+    <div class="relGrid">
+      <a class="relItem" href="/materials/duplex-super-duplex.html"><strong>Duplex &amp; Super Duplex Hub</strong><span>Parent material family for Zeron 100 enquiries.</span></a>
+      <a class="relItem" href="/materials/ss-304-supplier-india.html"><strong>SS 304</strong><span>Related grade, specification or buyer guide.</span></a>
+      <a class="relItem" href="/materials/ss-316-supplier-india.html"><strong>SS 316</strong><span>Related grade, specification or buyer guide.</span></a>
+      <a class="relItem" href="/materials/ss-316l-supplier-india.html"><strong>SS 316L</strong><span>Related grade, specification or buyer guide.</span></a>
+      <a class="relItem" href="/blog/stainless-steel-304-vs-316-vs-316l.html"><strong>304 vs 316 vs 316L Guide</strong><span>Related grade, specification or buyer guide.</span></a>
+      <a class="relItem" href="/technical-resources.html"><strong>Technical Resources</strong><span>Charts, standards and buyer reference tables.</span></a>
+      <a class="relItem" href="/quality-documentation-support.html"><strong>Quality Documentation Support</strong><span>MTC, PMI and inspection request guidance.</span></a>
+      <a class="relItem" href="/blog/stainless-steel-304-vs-316-vs-316l.html"><strong>Stainless Grade Guide</strong><span>Buyer guide for stainless grade comparisons.</span></a>
+      <a class="relItem" href="/blog/mtc-pmi-third-party-inspection-guide.html"><strong>MTC / PMI Guide</strong><span>Documentation and inspection request guide.</span></a>
+      <a class="relItem" href="/quotation.html"><strong>Request Quotation</strong><span>Send a structured RFQ to Rubinox.</span></a>
+    </div>
+  </section>
+
+  <section class="card" id="faqs" style="margin-top:14px">
+    <h2>Zeron 100 FAQs</h2>
+    <div class="gateCardGrid">
+      <div class="gateCard"><h3>What details should I send for a Zeron 100 RFQ?</h3><p>Share Zeron 100, product form, dimensions, quantity, governing standard, documentation or inspection needs where applicable, and delivery city or export destination so Rubinox can review the enquiry clearly.</p></div>
+      <div class="gateCard"><h3>Which Zeron 100 product forms can be requested?</h3><p>Common RFQs include pipes, tubes, sheets, plates, bars, rods, flanges, fittings and fasteners. Final review depends on grade, size, quantity, standard, documentation and sourcing feasibility.</p></div>
+      <div class="gateCard"><h3>Can Zeron 100 be substituted with a related grade or specification?</h3><p>Only when the buyer, consultant or project engineer approves it. Equivalent references and substitutions should be checked against the governing specification.</p></div>
+      <div class="gateCard"><h3>Can documentation be requested with Zeron 100?</h3><p>Yes, buyers can mention MTC, PMI, inspection, testing, marking, packing or export documentation needs where applicable. Support is reviewed enquiry-wise against the material and requirement.</p></div>
+      <div class="gateCard"><h3>Is Rubinox a manufacturer of Zeron 100?</h3><p>No. Rubinox Metal and Alloys is a stockist, supplier, importer, exporter and project supplier.</p></div>
+    </div>
+  </section>
+
+  <section class="materialRfqCta" id="rfq" aria-labelledby="material-rfq-cta-title">
+    <div>
+      <span class="eyebrow">Request Zeron 100 quotation</span>
+      <h2 id="material-rfq-cta-title">Send grade, form, size and documentation needs.</h2>
+      <p>Rubinox will review the enquiry as a stockist, supplier, importer, exporter and project supplier, subject to grade, size, quantity, documentation and logistics requirements.</p>
+    </div>
+    <div class="btnrow">
+      <a class="btn primary" href="https://wa.me/919363193755?text=Hello%20Rubinox%2C%20I%20need%20a%20quotation%20for%20Zeron%20100">WhatsApp RFQ</a>
+      <a class="btn ghost" href="mailto:tarun@rubinoxmetal.com?subject=Zeron%20100%20RFQ">Email RFQ</a>
+      <a class="btn ghost" href="/quotation.html">Request Quotation</a>
+    </div>
+  </section>
 </main>
 <script>const menuToggle=document.getElementById("menuToggle"),mobileMenu=document.getElementById("mobileMenu"),menuIcon=document.getElementById("menuIcon");function openMenu(){mobileMenu.classList.add("open");menuToggle.setAttribute("aria-expanded","true");menuIcon.innerHTML='<path d="M6 6l12 12"></path><path d="M18 6L6 18"></path>'}function closeMenu(){mobileMenu.classList.remove("open");menuToggle.setAttribute("aria-expanded","false");menuIcon.innerHTML='<path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path>'}if(menuToggle&&mobileMenu&&menuIcon){menuToggle.addEventListener("click",function(){mobileMenu.classList.contains("open")?closeMenu():openMenu()});mobileMenu.querySelectorAll("a").forEach(function(link){link.addEventListener("click",function(){closeMenu()})});window.addEventListener("resize",function(){window.innerWidth>900&&closeMenu()})}</script>
 <footer class="siteFooter">

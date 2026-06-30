@@ -224,3 +224,21 @@ Deferred scope:
 
 Safe wording strategy: Batch 9 uses stockist, supplier, importer, exporter, project supplier, RFQ support, documentation support where applicable, PAN India supply and export enquiry support language. No unsupported production, stock, price, certificate, proof, rating or timing claims were added.
 <!-- RUBINOX BATCH 9 BACKLOG END -->
+
+<!-- RUBINOX BATCH 10B BACKLOG START -->
+## Batch 10B - Controlled Grade / Specification Page Rollout
+
+Status: implemented for 35 existing public grade/specification pages. No new public URLs were created.
+
+Completed scope:
+- Rolled the approved Batch 10A gate rhythm into the selected Batch 10B pages with compact hero sections, RFQ shortcut cards, buyer-answer blocks, readable standards/specification tables, product-form pathways, application context, documentation/RFQ checklist cards, related links, visible FAQ sections and final RFQ CTAs.
+- Preserved all existing public URLs, H1 intent, title/meta/canonical targets, sitemap URLs and broad internal-link strategy.
+- Kept FAQ schema only where it already existed and aligned it to visible FAQ content.
+- Updated inventory/template tracking for the 35 polished pages and kept keyword primary URLs unchanged.
+
+Deferred scope:
+- 60 remaining grade/specification pages are deferred to Batch 10C.
+- New grade/specification pages remain gated by keyword evidence, enquiry history or owner priority.
+
+Safe wording strategy: Batch 10B uses stockist, supplier, importer, exporter, project supplier, RFQ support, documentation support where applicable, PAN India supply and export enquiry support language. No manufacturer, factory, mill, production, ready-stock, fixed-price, certification, client, project, rating or delivery-guarantee claims were added.
+<!-- RUBINOX BATCH 10B BACKLOG END -->
