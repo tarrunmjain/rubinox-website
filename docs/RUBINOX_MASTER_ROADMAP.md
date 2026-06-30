@@ -262,3 +262,13 @@ Future city, state, country/export, product-city and product-country pages remai
 - Article URLs, H1 intent, title/meta/canonical targets, sitemap URLs and schema meaning were preserved.
 - Future Knowledge Hub topic clusters, price-factor articles and standards articles remain roadmap items; no new public articles were created in Batch 7.
 <!-- RUBINOX BATCH 7 ROADMAP END -->
+
+<!-- RUBINOX BATCH 8 ROADMAP START -->
+## Batch 8 Industry Hub Status
+
+- Industry page discovery found one public industry page: industries.html.
+- The existing industries hub was polished with grouped RFQ pathways for process and energy, engineering and fabrication, marine and export applications, infrastructure and construction, and food/pharma/hygiene applications.
+- Existing URL, H1 intent, title/meta description, canonical target, sitemap URL and WebPage/Breadcrumb schema meaning were preserved.
+- The hub now links more clearly to relevant material, grade, product-form, technical resource, quality documentation, Knowledge Hub, location/export and quotation pages.
+- Individual industry pages remain future candidates only and should be created only after keyword, Search Console, enquiry history or owner-priority review confirms differentiated buyer value.
+<!-- RUBINOX BATCH 8 ROADMAP END -->

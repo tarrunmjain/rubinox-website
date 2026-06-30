@@ -189,3 +189,20 @@ Deferred scope:
 
 Safe wording strategy: all review/author language remains organization-level, using Rubinox Metal and Alloys Procurement Team. No fake person credentials, certifications, stock, price, client, project, rating, manufacturer, factory or mill claims were added.
 <!-- RUBINOX BATCH 7 BACKLOG END -->
+
+<!-- RUBINOX BATCH 8 BACKLOG START -->
+## Batch 8 - Industry Pages UX and Internal Linking Polish
+
+Status: implemented for the existing industries hub only. No new public industry pages were created.
+
+Completed scope:
+- industries.html was improved with grouped industry RFQ pathways, richer card hierarchy, mobile-safe RFQ checklist, documentation/resource cards, related Knowledge Hub guide links and crawlable quotation CTAs.
+- Industry-to-material/product mapping was added for process and energy, engineering and fabrication, marine/export, infrastructure/construction, and food/pharma/hygiene sectors.
+- Location/export routing links were added only as enquiry routing aids, with explicit no local-branch, local-inventory, approved-vendor or fixed-delivery implication.
+
+Deferred scope:
+- Individual industry pages for oil and gas, chemical processing, pharma, food and dairy, power/boiler, marine/offshore, EPC/projects, fabrication/engineering, infrastructure, automotive/aerospace support and water treatment remain future candidates.
+- Future industry pages should be created only after query evidence, enquiry history or owner priority confirms differentiated content value.
+
+Safe wording strategy: Batch 8 uses RFQ support, supply enquiry support, documentation support where applicable and project supplier support language. No manufacturer, factory, mill, ready-stock, fixed-price, approved-vendor, client, project, rating or delivery-guarantee claims were added.
+<!-- RUBINOX BATCH 8 BACKLOG END -->
