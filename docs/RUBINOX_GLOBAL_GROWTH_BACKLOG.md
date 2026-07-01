@@ -39,12 +39,12 @@ Priority definitions:
 | P2-004 | llms.txt workflow | AEO roadmap | AISEO/LLMO | P2 | Medium | High | None | Low | Medium | No | AEO strategy | Pending | AEO | Existing llms.txt should be audited before edits |
 | P2-005 | Knowledge Hub topic clusters | Content roadmap | Knowledge Hub | P2 | High | High | Medium | Medium | Medium | No | Keyword map | Pending | Content | Standards, MTC/PMI, export RFQ |
 | P2-006 | Technical calculators | Content roadmap | Technical resources | P2 | Medium | High | Medium | High | High | No | Accuracy review | Pending | Content/tools | Only if formulas are verified |
-| P2-007 | Owner-approved trust assets | E-E-A-T roadmap | Trust pages | P2 | Medium | Medium | High | High | Medium | Yes | Owner assets | Pending | Phase 7 | Real photos and verified data only |
-| P2-008 | Google Business Profile weekly plan | E-E-A-T roadmap | Local trust | P2 | Medium | Medium | Low | Medium | Medium | Yes | GBP access | Pending | Trust | No fake reviews |
+| P2-007 | Owner-approved trust assets | E-E-A-T roadmap | Trust pages | P2 | Medium | Medium | High | High | Medium | Yes | Owner assets | Reviewed in Batch 12; owner assets pending | Phase 7 | Trust asset review complete; real photos, registration display, certificate images and profile PDF approval remain owner-dependent |
+| P2-008 | Google Business Profile weekly plan | E-E-A-T roadmap | Local trust | P2 | Medium | Medium | Low | Medium | Medium | Yes | GBP access | Pending owner review link/QR | Trust | No fake reviews; official GBP URL and review pathway need owner confirmation |
 | P2-009 | LinkedIn/YouTube content strategy | Content roadmap | Social/content | P2 | Medium | Medium | Medium | Medium | Medium | Yes | Owner approval | Pending | Content | Use technical buyer education |
 | P2-010 | Backlink/digital PR plan | SEO roadmap | Authority | P2 | High | Medium | None | Medium | Medium | Yes | Owner approval | Pending | Authority | No fake awards or associations |
-| P3-001 | Page-specific images | Visual asset roadmap | All page families | P3 | Medium | Medium | High | Medium | Medium | Yes | Real assets | Pending | Visual assets | Use WebP and accurate alt text |
-| P3-002 | Company profile PDF design upgrade | Visual asset roadmap | Company / trust | P3 | Medium | Medium | High | High | Medium | Yes | Owner review | Pending | Trust | Track downloads after GA4 |
+| P3-001 | Page-specific images | Visual asset roadmap | All page families | P3 | Medium | Medium | High | Medium | Medium | Yes | Real assets | Pending owner real photos | Visual assets | Use owner-approved real office, product, packing or dispatch photos; no fake factory/stockyard visuals |
+| P3-002 | Company profile PDF design upgrade | Visual asset roadmap | Company / trust | P3 | Medium | Medium | High | High | Medium | Yes | Owner review | Pending owner approval | Trust | Current PDF exists and is tracked; approve current content before redesign or broader placement |
 | P3-003 | Advanced technical diagrams | Visual asset roadmap | Technical / documentation | P3 | Medium | High | High | Medium | Medium | No | Technical review | Pending | Technical content | Keep diagrams accurate |
 | P3-004 | Premium mega menu review | Design roadmap | Header/navigation | P3 | Medium | Medium | High | Medium | High | No | Header baseline | Pending | Design polish | Do not increase header height |
 | P3-005 | Final homepage polish | Design roadmap | Home | P3 | Medium | Medium | High | High | Medium | No | Earlier design phases | Pending | Design polish | After data-led conversion review |
@@ -323,3 +323,13 @@ Status: implemented as a documentation-only indexing report. No public website p
 - Bing sitemap submission is Success with 261 discovered URLs, 0 errors and 0 warnings.
 - Initial GSC indexing classifications were documented for redirects, Discovered-currently-not-indexed URLs, Crawled-currently-not-indexed URLs and sitemap XML status.
 - Follow-up plan: request indexing for priority commercial pages, submit priority URLs in Bing if needed, and recheck at 7, 14 and 30 days before any content/internal-link review batch.
+
+## Batch 12 - Trust And Conversion Asset Review
+
+Status: implemented as documentation-only trust and conversion planning. No public website pages, sitemap URLs, schema blocks, metadata, canonical targets, H1s, tracking code or internal-link strategy were changed.
+
+- Trust asset review is complete for the named company, trust, RFQ, contact, location/export and Knowledge Hub surfaces.
+- Created `docs/trust-conversion-asset-review-batch-12.md`, `docs/trust-asset-placement-map.md` and `docs/trust-claims-risk-register.md`.
+- Owner assets remain pending for GST/MSME/Udyam/IEC public display, certificate/document images, official GBP review link/QR, official social/directory URL confirmation, real photos, contact/team identity, business hours, client/project proof, memberships, vendor onboarding docs and backend RFQ decisions.
+- Backend RFQ form remains planned owner decision only; no backend, upload handling, CAPTCHA, thank-you page or personal-data tracking was implemented.
+- Registration display remains pending owner approval and verification.

@@ -45,6 +45,17 @@ Use this template only after GA4, Google Search Console and Bing Webmaster Tools
 | Company profile downloads |  |  |  |  |
 | Google Maps clicks |  |  |  |  |
 
+## Trust And Conversion Notes
+
+| Item | Current month observation | Owner action needed | Implementation action |
+| --- | --- | --- | --- |
+| Company profile page/PDF |  | Confirm PDF content is approved | Update only in a scoped trust/PDF batch |
+| Registrations/compliance assets |  | Confirm GST/MSME/Udyam/IEC public display decisions | Add public details only after proof and approval |
+| GBP/review pathway |  | Provide official GBP URL, review link and QR if available | Add links without ratings/counts unless verified |
+| Social/directory links |  | Confirm official URLs | Update links only in a scoped trust/profile batch |
+| Real photos |  | Provide approved office, product, packing, dispatch or team photos | Add accurate WebP assets without stock/factory claims |
+| RFQ backend |  | Choose backend, spam protection and privacy/storage process | Implement only after owner decision |
+
 ## Top Pages
 
 | Page | Clicks | Impressions | CTR | Average position | Lead events | Action |
