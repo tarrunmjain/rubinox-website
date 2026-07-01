@@ -2,6 +2,7 @@
 # Rubinox Owner Data Pending
 
 Date: 2026-06-29
+Last updated: 2026-07-01 for Batch 11A tracking and measurement planning.
 Purpose: track owner-supplied data needed for trust, measurement and conversion upgrades.
 
 Do not invent or publish any item on this list without owner verification and approval.
@@ -31,9 +32,15 @@ Do not invent or publish any item on this list without owner verification and ap
 
 | Item | Needed for | Status | Notes |
 | --- | --- | --- | --- |
-| GA4 measurement ID and property access | Conversion/event tracking | Pending confirmation | Existing docs mention G-JT5X5L5H07 |
-| Google Search Console verification method | Indexing and query data | Pending owner | Required before sitemap submission |
-| Bing Webmaster verification | Bing indexing | Pending owner | Required before sitemap submission |
+| GA4 measurement ID and property access | Conversion/event tracking | Existing public code present; pending owner confirmation | Public HTML already contains a GA4 snippet on 195 of 261 HTML pages. Confirm the active property before adding, replacing or standardizing any tracking code |
+| GA4 Admin event and key-event access | Lead event reporting | Pending owner | Required to verify `generate_lead` events and mark approved lead events as key events |
+| Google Search Console verification method | Indexing and query data | Pending owner | Required before sitemap submission. Preferred method is owner-managed DNS domain verification |
+| Google Search Console property access | Query/page reports | Pending owner | Required before Search Console MCP or monthly reports can use live query data |
+| Bing Webmaster verification | Bing indexing | Pending owner | Required before sitemap submission. Prefer GSC import after GSC is verified if owner approves |
 | Google Business Profile link/review link | Local trust | Pending owner | Use official link only |
 | LinkedIn/Facebook/Instagram official links | Social profile consistency | Pending owner | Confirm current URLs before edits |
 | IndiaMART/TradeIndia/Justdial/ExportersIndia links | Directory trust | Pending owner | Confirm official listing URLs |
+| Google Ads conversion ID | Paid campaign measurement | Deferred owner decision | Do not add Ads conversion tags unless a paid media batch is approved |
+| WhatsApp Business number confirmation | Lead tracking and contact UX | Pending owner | Confirm the public WhatsApp number before treating events as production conversions |
+| RFQ email confirmation | Lead tracking and contact UX | Pending owner | Confirm the quotation email before treating events as production conversions |
+| Business hours for measurement/profile use | Contact page and local reporting | Pending owner | Needed before adding visible hours or GBP-aligned reporting notes |

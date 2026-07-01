@@ -73,6 +73,45 @@ Representative URLs currently include home, quotation, technical resources, comp
 - Full 261-page Pa11y checks: deferred to avoid heavy duplicate accessibility runs until representative baseline is stable.
 - Render/design smoke screenshots: deferred until a dedicated screenshot workflow is intentionally added.
 
+## Batch 11A Tracking And Measurement Readiness
+
+Date: 2026-07-01
+
+Batch 11A was planning and documentation only. No public pages, assets, sitemap, robots file, schema, metadata or tracking scripts were changed.
+
+Current audit status:
+
+- GA4 page tracking is already partially present in public HTML, but owner property confirmation is still required before any implementation cleanup.
+- Existing GA4 coverage appears on 195 of 261 HTML pages.
+- Existing `generate_lead` event/helper coverage appears on 177 HTML pages, with `trackLeadAndGo` found 211 times.
+- 66 HTML pages do not include the current GA4 snippet.
+- Google Search Console verification is not present in the repo.
+- Bing Webmaster Tools verification is not present in the repo.
+- `robots.txt` already references `https://rubinoxmetal.com/sitemap.xml`.
+- Local sitemap QA confirms 261 sitemap URLs and 261 local HTML pages.
+
+Batch 11A files:
+
+- `docs/tracking-measurement-audit-batch-11a.md`
+- `docs/tracking-measurement-implementation-plan.md`
+- `data/tracking-event-map.csv`
+- `docs/search-console-bing-setup-guide.md`
+- `docs/monthly-seo-measurement-report-template.md`
+
+Deferred until owner data is available:
+
+- GA4 property confirmation and key-event setup.
+- Search Console verification and sitemap submission.
+- Bing Webmaster Tools verification or GSC import.
+- Looker Studio or monthly dashboard setup.
+- Any public tracking-code standardization.
+
+Security and privacy rules:
+
+- Do not commit placeholder verification files, fake analytics IDs, API keys, OAuth secrets, service-account JSON or owner credentials.
+- Do not store buyer RFQ details in analytics event parameters.
+- Do not add Google Ads conversion tags unless a paid campaign batch is separately approved.
+
 ## Google Search Console MCP Plan
 
 Do not install or configure Search Console tooling until the owner provides credentials.
