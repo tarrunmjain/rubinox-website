@@ -32,19 +32,19 @@ Priority definitions:
 | P1-007 | Keyword matrix completion | Roadmap | Keyword architecture | P1 | High | High | None | Medium | Low | No | GSC data preferred | Done in Batch 4 | SEO planning | Expanded keyword matrix; implementation remains planned. |
 | P1-008 | Location SEO architecture | Roadmap | Location pages | P1 | High | High | Low | Medium | Medium | No | Keyword map | Done in Batch 4 | Location planning | Expanded location architecture; no public pages created. |
 | P1-009 | Main city-page phase | Roadmap | Location pages | P1 | High | High | Medium | Medium | High | No | GSC/keyword data | Pilot started in Batch 5 | Location implementation | Nine existing city pages improved; 30-50 city rollout still pending after GSC/enquiry review |
-| P1-010 | Search Console performance review | Roadmap | Measurement | P1 | High | High | None | Medium | Low | Yes | GSC verification | Pending | SEO planning | Use query/page data |
+| P1-010 | Search Console performance review | Roadmap | Measurement | P1 | High | High | None | Medium | Low | Yes | GSC verification | Active monitoring from Batch 11D | SEO planning | Use 7/14/30 query/page and indexing data before any expansion |
 | P2-001 | Country/export page refinement | Roadmap | Export pages | P2 | Medium | Medium | Medium | Medium | Medium | No | Export map | Pilot started in Batch 5 | Phase 6 | Existing UAE/Dubai export page improved; no fake export approvals or local presence claims |
 | P2-002 | State pages | Roadmap | Location pages | P2 | Medium | Medium | Medium | Medium | High | No | Keyword/GSC data | Pending | Location expansion | 10-15 industrial states |
 | P2-003 | Top product-city pages | Roadmap | Location/product | P2 | High | High | Medium | High | High | No | Search demand proof | Pending | Location expansion | Selected only |
 | P2-004 | llms.txt workflow | AEO roadmap | AISEO/LLMO | P2 | Medium | High | None | Low | Medium | No | AEO strategy | Pending | AEO | Existing llms.txt should be audited before edits |
 | P2-005 | Knowledge Hub topic clusters | Content roadmap | Knowledge Hub | P2 | High | High | Medium | Medium | Medium | No | Keyword map | Pending | Content | Standards, MTC/PMI, export RFQ |
 | P2-006 | Technical calculators | Content roadmap | Technical resources | P2 | Medium | High | Medium | High | High | No | Accuracy review | Pending | Content/tools | Only if formulas are verified |
-| P2-007 | Owner-approved trust assets | E-E-A-T roadmap | Trust pages | P2 | Medium | Medium | High | High | Medium | Yes | Owner assets | Reviewed in Batch 12; owner assets pending | Phase 7 | Trust asset review complete; real photos, registration display, certificate images and profile PDF approval remain owner-dependent |
-| P2-008 | Google Business Profile weekly plan | E-E-A-T roadmap | Local trust | P2 | Medium | Medium | Low | Medium | Medium | Yes | GBP access | Pending owner review link/QR | Trust | No fake reviews; official GBP URL and review pathway need owner confirmation |
+| P2-007 | Owner-approved trust assets | E-E-A-T roadmap | Trust pages | P2 | Medium | Medium | High | High | Medium | Yes | Owner assets | Complete in Batch 13A for approved scope | Phase 7 | GST/Udyam/IEC status cards, real office/profile images, GBP/review/social/directory links and profile PDF implemented safely |
+| P2-008 | Google Business Profile weekly plan | E-E-A-T roadmap | Local trust | P2 | Medium | Medium | Low | Medium | Medium | Yes | GBP access | Implemented in Batch 13A; monitor manually | Trust | Official GBP and review links/QR are live; do not display ratings, counts or snippets |
 | P2-009 | LinkedIn/YouTube content strategy | Content roadmap | Social/content | P2 | Medium | Medium | Medium | Medium | Medium | Yes | Owner approval | Pending | Content | Use technical buyer education |
 | P2-010 | Backlink/digital PR plan | SEO roadmap | Authority | P2 | High | Medium | None | Medium | Medium | Yes | Owner approval | Pending | Authority | No fake awards or associations |
-| P3-001 | Page-specific images | Visual asset roadmap | All page families | P3 | Medium | Medium | High | Medium | Medium | Yes | Real assets | Pending owner real photos | Visual assets | Use owner-approved real office, product, packing or dispatch photos; no fake factory/stockyard visuals |
-| P3-002 | Company profile PDF design upgrade | Visual asset roadmap | Company / trust | P3 | Medium | Medium | High | High | Medium | Yes | Owner review | Pending owner approval | Trust | Current PDF exists and is tracked; approve current content before redesign or broader placement |
+| P3-001 | Page-specific images | Visual asset roadmap | All page families | P3 | Medium | Medium | High | Medium | Medium | Yes | Real assets | Partially complete in Batch 13A | Visual assets | Approved office/profile images are live; product rack, packing/dispatch and team photos remain pending owner real assets |
+| P3-002 | Company profile PDF design upgrade | Visual asset roadmap | Company / trust | P3 | Medium | Medium | High | High | Medium | Yes | Owner review | Complete in Batch 13A | Trust | Public PDF regenerated with verified trust details and without raw certificate PDFs or unsafe claims |
 | P3-003 | Advanced technical diagrams | Visual asset roadmap | Technical / documentation | P3 | Medium | High | High | Medium | Medium | No | Technical review | Pending | Technical content | Keep diagrams accurate |
 | P3-004 | Premium mega menu review | Design roadmap | Header/navigation | P3 | Medium | Medium | High | Medium | High | No | Header baseline | Pending | Design polish | Do not increase header height |
 | P3-005 | Final homepage polish | Design roadmap | Home | P3 | Medium | Medium | High | High | Medium | No | Earlier design phases | Pending | Design polish | After data-led conversion review |
@@ -330,6 +330,24 @@ Status: implemented as documentation-only trust and conversion planning. No publ
 
 - Trust asset review is complete for the named company, trust, RFQ, contact, location/export and Knowledge Hub surfaces.
 - Created `docs/trust-conversion-asset-review-batch-12.md`, `docs/trust-asset-placement-map.md` and `docs/trust-claims-risk-register.md`.
-- Owner assets remain pending for GST/MSME/Udyam/IEC public display, certificate/document images, official GBP review link/QR, official social/directory URL confirmation, real photos, contact/team identity, business hours, client/project proof, memberships, vendor onboarding docs and backend RFQ decisions.
+- Owner-approved GST/Udyam/IEC status display, official GBP/review/social/directory links, approved office/profile imagery, contact person, business hours and public profile PDF were completed in Batch 13A. Product rack, packing/dispatch, contact/team photo, memberships, backend RFQ and any client/project proof remain future owner-controlled items.
 - Backend RFQ form remains planned owner decision only; no backend, upload handling, CAPTCHA, thank-you page or personal-data tracking was implemented.
-- Registration display remains pending owner approval and verification.
+- Registration display for approved GST/Udyam/IEC status-card details is complete in Batch 13A; raw certificate PDFs remain private unless separately approved.
+
+## Batch 13A - Verified Trust Asset Implementation
+
+Status: complete for owner-approved scope.
+
+- GST, Udyam/MSME and IEC details were implemented as status-card trust details only.
+- Official GBP, Google review, LinkedIn, Instagram, Facebook, IndiaMART, TradeIndia, Justdial and ExportersIndia links were implemented without ratings, review counts, review snippets or endorsement claims.
+- Approved office/profile images and Google review QR were used; no fake factory, stockyard, warehouse, product rack, packing, dispatch or team images were added.
+- Public company profile PDF was regenerated with verified trust details.
+- Raw certificate PDFs, private documents, vendor onboarding packs, client names and project references were not published.
+
+## Batch 13B - Final Website Lock And Monitoring Control
+
+Status: documentation/data lock complete.
+
+- Public website implementation is paused for monitoring.
+- Next action is 7/14/30 day Search Console, Bing and GA4 review before any further content, SEO, design or conversion implementation.
+- Backlog priorities should be re-ranked only after real indexing, query, event and enquiry data is available.

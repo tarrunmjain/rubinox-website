@@ -22,11 +22,11 @@ The current state is taken from the latest local QA runs and the design/audit do
 | Public sitemap URLs | 261 |
 | Local public HTML pages | 261 |
 | qa:sitemap | Passing - 261 sitemap URLs, 261 local HTML pages, 0 missing, 0 extra, 0 duplicate URLs |
-| qa:crawl | Passing - 394 links scanned successfully |
+| qa:crawl | Passing - 397 links scanned successfully |
 | qa:schema | Passing - 261 pages, 866 JSON-LD blocks, 0 invalid blocks |
 | qa:accessibility | Passing - 5 configured pages, 0 violations |
 | test:navigation | Passing |
-| Rendered visual QA | Passing in Batch 10E post-rollout live checkpoint |
+| Rendered visual QA | Passing in Batch 13A live trust asset check; Batch 10E grade/spec checkpoint remains complete |
 | Known HTML validation baseline | qa:html passing with 0 invalid pages |
 | Design score | 7.8 / 10 overall |
 | Header/top rail/footer | Stable and protected |
@@ -61,13 +61,13 @@ Measurement is P0 because future keyword and location decisions should be driven
 
 | Item | Status | Next action |
 | --- | --- | --- |
-| Google Search Console | Owner DNS TXT verification pending | Owner to add DNS TXT record and submit sitemap after verification |
-| Bing Webmaster Tools | Owner GSC import pending | Owner to import after Google Search Console verification |
-| GA4 | Implemented with `G-JT5X5L5H07` on 261 of 261 HTML pages | Verify event receipt after deployment |
-| Sitemap submission | Pending external console access | Submit `https://rubinoxmetal.com/sitemap.xml` after GSC verification |
-| WhatsApp click tracking | Implemented in Batch 11B | Confirm in GA4 Realtime or DebugView after deployment |
-| Email RFQ click tracking | Implemented in Batch 11B | Confirm in GA4 Realtime or DebugView after deployment |
-| Phone click tracking | Implemented in Batch 11B | Confirm on mobile or emulated mobile after deployment |
+| Google Search Console | Domain property exists and sitemap is Success with 261 discovered pages | Run 7, 14 and 30 day indexing/performance monitoring; request indexing for priority URLs |
+| Bing Webmaster Tools | Sitemap is Success with 261 discovered URLs, 0 errors and 0 warnings | Run 7, 14 and 30 day URL status monitoring; submit priority URLs if needed |
+| GA4 | Implemented with `G-JT5X5L5H07` on 261 of 261 HTML pages | Owner to confirm Realtime/DebugView and monitor lead-intent events |
+| Sitemap submission | Complete in Google Search Console and Bing Webmaster Tools | Monitor read status and discovered URL count |
+| WhatsApp click tracking | Implemented in Batch 11B | Confirm in GA4 Realtime or DebugView during owner monitoring |
+| Email RFQ click tracking | Implemented in Batch 11B | Confirm in GA4 Realtime or DebugView during owner monitoring |
+| Phone click tracking | Implemented in Batch 11B | Confirm on mobile or emulated mobile during owner monitoring |
 | Company profile PDF tracking | Implemented in Batch 11B | Confirm as secondary event after deployment |
 | Technical resource engagement | Implemented in Batch 11B | Use for monthly content-path review after data accrues |
 
@@ -331,15 +331,36 @@ Date: 2026-07-01
 - All 261 public HTML pages include one GA4 loader, one GA4 config call and one `/assets/js/tracking.js` include.
 - The old accidental ID `G-CR18QYPS6C` was removed from `quotation.html`.
 - Safe lead-intent events are implemented for WhatsApp, email, phone, quotation CTAs, quotation-form intent, company profile PDF/page links, technical resources, quality documentation, Knowledge Hub article links and existing directory/social outbound links.
-- Google Search Console remains owner action through DNS TXT domain verification; no repo file or meta tag is required.
-- Bing Webmaster Tools remains owner action through GSC import after verification; no repo file or meta tag is required.
-- Sitemap submission remains owner action after GSC verification: `https://rubinoxmetal.com/sitemap.xml`.
+- Google Search Console setup moved to verified monitoring in Batch 11D: domain property exists, sitemap was submitted on 2026-07-01, status Success and 261 discovered pages were reported.
+- Bing Webmaster Tools setup moved to monitoring in Batch 11D: sitemap status Success, 261 discovered URLs, 0 errors and 0 warnings were reported.
+- No repo verification file or meta tag was required; Search Console and Bing follow-up is now URL inspection, priority URL submission where useful and 7/14/30 day monitoring.
 
 ## Batch 12 Trust And Conversion Asset Review Status
 
 - Batch 12 completed a documentation-only review of current trust assets, missing owner-supplied proof and current RFQ conversion pathways.
 - Public pages were not changed; URLs, H1s, title/meta/canonical targets, schema, sitemap URLs, analytics and broad internal-link strategy remain unchanged.
 - Current trust assets include the company profile page/PDF, cautious registrations/compliance page, quality documentation support, Bharat Metals sister concern wording, GBP/directory/social links, contact CTAs, map/address, Knowledge Hub organization-level reviewer page and existing visual assets.
-- Owner assets remain pending for GST/MSME/Udyam/IEC public display, certificate/document images, official GBP review link/QR, official social/directory URL confirmation, real office/product/packing/team photos, business hours, contact person details, vendor onboarding docs, client/project/membership proof, backend RFQ preference and spam protection.
+- Owner assets that were pending in Batch 12 were partly completed in Batch 13A: GST/Udyam/IEC status-card display, office/profile images, GBP/review/social/directory links, contact person, business hours and company profile PDF are owner-approved and implemented. Product rack, packing/dispatch and contact/team photos remain owner-side future inputs.
 - Backend RFQ implementation remains a future owner decision. No backend, upload handling, CAPTCHA, thank-you page or personal-data GA4 tracking was added.
 - Future Phase 7 trust work should use `docs/trust-asset-placement-map.md` and `docs/trust-claims-risk-register.md` before any public-page edit.
+
+## Batch 13A Verified Trust Asset Implementation Status
+
+- Batch 13A implemented owner-approved trust assets and verified public trust details without publishing raw certificate PDFs or private/source documents.
+- Public trust additions stayed within verified GST, Udyam, IEC, GBP/review, social, directory, business hours, contact person and sister concern wording approvals.
+- Approved real images used were office/front, lobby/front, conference room, company profile brochure and Google review QR assets only.
+- The public company profile PDF was regenerated and remains available as `assets/docs/rubinox-company-profile.pdf`.
+- No manufacturer, factory, stock, price, fake certification, client, project, rating, review-snippet, testimonial, vendor onboarding or delivery guarantee claims were introduced.
+
+## Batch 13A-Live Verified Trust Asset QA Status
+
+- Live trust asset QA confirmed public pages and the company profile PDF returned HTTP 200.
+- Live checks confirmed the Google review QR/link path, public profile PDF delivery and absence of raw certificate PDF publication.
+- The live QA report is `docs/verified-trust-assets-live-check-batch-13a.md`.
+
+## Batch 13B Final Website Lock And Monitoring Control
+
+- Batch 13B is documentation/data only and locks the current website for monitoring.
+- Created `docs/verified-owner-assets-batch-13a-report.md`, `docs/RUBINOX_FINAL_CURRENT_STATUS_2026-07-01.md` and `docs/RUBINOX_NEXT_30_DAYS_ACTION_CHECKLIST.md`.
+- Public website pages, sitemap URLs, schema blocks, metadata, canonical targets, H1s, tracking code, visual assets and broad internal-link strategy were not changed.
+- Next work should be Search Console, Bing and GA4 monitoring at 7, 14 and 30 days, followed only by data-led owner-approved implementation batches.

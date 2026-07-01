@@ -1,7 +1,7 @@
 # Rubinox Owner Data Pending
 
 Date: 2026-06-29
-Last updated: 2026-07-02 for Batch 13A owner-verified trust details.
+Last updated: 2026-07-02 for Batch 13B final lock and monitoring control.
 Purpose: track owner-supplied data needed for trust, measurement and conversion upgrades.
 
 Do not invent, infer or publish any item on this list without owner verification and approval.
@@ -48,3 +48,11 @@ Do not invent, infer or publish any item on this list without owner verification
 | GA4 Admin event/key-event access | Lead event reporting | No | Pending owner | Owner account access/verification | Medium | P1 | Required to verify events and mark approved key events |
 | Google Search Console access | Query/page reporting | No | Confirmed setup; data available through owner exports | Owner console access/export process | Medium | P1 | Domain property and sitemap are already successful as of 2026-07-01 |
 | Bing Webmaster Tools access | Bing reporting | No | Confirmed setup through owner screenshots/exports | Owner console access/export process | Medium | P2 | Sitemap success already documented in Batch 11D |
+
+## Batch 13B Final Lock Notes
+
+- Owner-approved GST, Udyam/MSME, IEC, GBP/review, social, directory, business hours, contact person and company profile PDF details are now documented as implemented in Batch 13A.
+- Raw GST, Udyam and IEC certificate PDFs remain private and must not be published unless the owner separately approves a public-safe version.
+- Product/metal rack, packing/dispatch and contact/team photos remain pending owner real assets.
+- Client names, project references, testimonials, review snippets, ratings, vendor onboarding packs and bank/private documents remain not approved for public use.
+- GA4 Realtime/DebugView verification, key-event marking, GSC monitoring exports and Bing monitoring exports remain owner-side monitoring actions.
