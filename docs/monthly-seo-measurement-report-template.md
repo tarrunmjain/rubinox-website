@@ -19,8 +19,8 @@ Use this template only after GA4, Google Search Console and Bing Webmaster Tools
 | Source | Property/view | Date range | Status | Notes |
 | --- | --- | --- | --- | --- |
 | GA4 | Rubinox Website - `G-JT5X5L5H07` |  | Configured | Use verified property data after deployment event receipt is confirmed |
-| Google Search Console | Domain property for `rubinoxmetal.com` |  | Owner DNS verification pending | Submit sitemap after verification |
-| Bing Webmaster Tools | GSC-imported site |  | Owner import pending | Import after GSC verification |
+| Google Search Console | Domain property for `rubinoxmetal.com` |  | Verified / sitemap submitted | Sitemap Success; 261 discovered pages as of 2026-07-01 |
+| Bing Webmaster Tools | `https://rubinoxmetal.com/sitemap.xml` |  | Configured / sitemap submitted | Sitemap Success; 261 discovered URLs, 0 errors, 0 warnings as of 2026-07-01 |
 | Local QA | Repository scripts |  | Pending | Include only if a website batch ran |
 
 ## Search Performance
@@ -72,6 +72,8 @@ Use this template only after GA4, Google Search Console and Bing Webmaster Tools
 
 - Sitemap status:
 - Coverage/indexing issues:
+- GSC non-indexed priority URLs:
+- Bing URL submission status:
 - Crawl or link issues:
 - Schema issues:
 - HTML validation issues:

@@ -14,9 +14,9 @@ Priority definitions:
 | ID | Task | Source | Page family | Priority | SEO impact | GEO/AEO impact | Design impact | Conversion impact | Risk | Owner data required? | Dependencies | Status | Target phase | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | P0-001 | Create master roadmap/control system | User request | Governance | P0 | High | Medium | Low | Medium | Low | No | None | Done in this batch | Phase 0 | Planning docs and CSV maps only |
-| P0-002 | Verify Google Search Console | Roadmap | Measurement | P0 | High | Medium | None | Medium | Medium | Yes | Owner DNS access | Owner action pending | Phase 0 | Selected method is DNS TXT domain verification |
-| P0-003 | Submit sitemap in Google Search Console | Roadmap | Indexing | P0 | High | Low | None | Low | Low | Yes | GSC verification | Owner action pending | Phase 0 | Submit `https://rubinoxmetal.com/sitemap.xml` after GSC verification |
-| P0-004 | Verify Bing Webmaster Tools | Roadmap | Measurement | P0 | Medium | Low | None | Low | Medium | Yes | Verified GSC property | Owner action pending | Phase 0 | Import from Google Search Console after verification |
+| P0-002 | Verify Google Search Console | Roadmap | Measurement | P0 | High | Medium | None | Medium | Medium | Yes | Owner DNS access | Done before Batch 11D | Phase 0 | Domain property exists for `rubinoxmetal.com` |
+| P0-003 | Submit sitemap in Google Search Console | Roadmap | Indexing | P0 | High | Low | None | Low | Low | Yes | GSC verification | Done before Batch 11D | Phase 0 | `https://rubinoxmetal.com/sitemap.xml` submitted 2026-07-01; status Success; 261 discovered pages |
+| P0-004 | Verify Bing Webmaster Tools | Roadmap | Measurement | P0 | Medium | Low | None | Low | Medium | Yes | Verified GSC property | Done before Batch 11D | Phase 0 | Sitemap Success; 261 discovered URLs; 0 errors; 0 warnings |
 | P0-005 | Install or confirm GA4 access | Roadmap | Measurement | P0 | Medium | Low | None | High | Medium | Yes | Owner property access | Done in Batch 11B | Phase 0 | GA4 Measurement ID `G-JT5X5L5H07` now loads on 261 of 261 HTML pages |
 | P0-006 | Add conversion tracking plan | Roadmap | Conversion | P0 | Medium | Low | None | High | Medium | Yes | GA4 confirmation | Done in Batch 11B | Phase 0 | Safe WhatsApp, email, phone, quotation, PDF and RFQ-intent events implemented |
 | P0-007 | Create page inventory | User request | All pages | P0 | High | Medium | Low | Medium | Low | No | Sitemap/local HTML | Done in this batch | Phase 0 | See data/page-inventory.csv |
@@ -313,3 +313,13 @@ Status: implemented for repository-side analytics and safe conversion tracking.
 - Bing Webmaster Tools remains owner action: import from the verified Google Search Console property.
 - No verification files, verification meta tags, credentials or placeholder tokens were committed.
 - No public SEO URLs, H1 intent, title/meta/canonical targets, schema meaning, sitemap URLs or broad internal-link strategy were changed.
+
+## Batch 11D - Search Console And Bing Indexing Status Report
+
+Status: implemented as a documentation-only indexing report. No public website pages, sitemap URLs, schema blocks, metadata, canonical targets, H1s, tracking code or internal-link strategy were changed.
+
+- Google Search Console domain property exists for `rubinoxmetal.com`.
+- Google sitemap submission for `https://rubinoxmetal.com/sitemap.xml` is Success with 261 discovered pages as of 2026-07-01.
+- Bing sitemap submission is Success with 261 discovered URLs, 0 errors and 0 warnings.
+- Initial GSC indexing classifications were documented for redirects, Discovered-currently-not-indexed URLs, Crawled-currently-not-indexed URLs and sitemap XML status.
+- Follow-up plan: request indexing for priority commercial pages, submit priority URLs in Bing if needed, and recheck at 7, 14 and 30 days before any content/internal-link review batch.
