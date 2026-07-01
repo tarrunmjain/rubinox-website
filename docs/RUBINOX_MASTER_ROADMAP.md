@@ -305,3 +305,13 @@ Date: 2026-07-01
 - No new public pages, sitemap URLs, public SEO URLs, title/meta/canonical targets or broad internal-link strategy changes were introduced.
 - FAQ schema was updated only on pages that already had FAQPage schema, and only to match visible FAQ content.
 - Future Batch 10D work should continue the same visual gate: all changed pages at 1366 and 390, representative pages at 1280, 768 and 360, with no page below 8/10.
+
+## Batch 10D Final Grade / Specification Rollout Status
+
+- Grade/specification discovery remains 110 existing public pages.
+- Batch 10D polished the final 30 existing grade/specification pages with the approved Batch 10A/10B/10C gate rhythm.
+- Existing rollout completion: 5 Batch 1 pilot pages, 10 Batch 10A pages, 35 Batch 10B pages, 30 Batch 10C pages and 30 Batch 10D pages.
+- Remaining existing grade/specification pages deferred after Batch 10D: 0.
+- No new public pages, sitemap URLs, public SEO URLs, title/meta/canonical targets or broad internal-link strategy changes were introduced.
+- FAQ schema was updated only on pages that already had FAQPage schema, and only to match visible FAQ content.
+- Future grade/specification expansion remains gated by keyword evidence, enquiry history or owner priority.

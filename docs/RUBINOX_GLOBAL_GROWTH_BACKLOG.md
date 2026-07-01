@@ -264,3 +264,21 @@ Deferred:
 - New grade/specification pages remain gated by keyword evidence, enquiry history or owner priority.
 
 Safe wording strategy: Batch 10C uses stockist, supplier, importer, exporter, project supplier, RFQ support, documentation support where applicable, PAN India supply and export enquiry support language. No manufacturer, factory, plant, production, ready-stock, fixed-price, certification, client, rating or delivery-guarantee claims were added.
+
+## Batch 10D - Final Grade / Specification Page Rollout
+
+Status: implemented for the final 30 existing public grade/specification pages. Existing grade/specification rollout is complete across 110 pages. No new public URLs were created.
+
+Batch 10D improvements:
+
+- Completed the approved grade/specification gate rhythm across the remaining carbon steel, mild steel, nickel alloy, phosphor bronze, DIN/EN/SA, schedule, seamless and welded pipe specification pages.
+- Preserved public URLs, H1 intent/text, title/meta/canonical targets, sitemap URLs, schema meaning and broad internal-link strategy.
+- Updated FAQPage schema only where it already existed and only to match visible FAQ content.
+- Updated page inventory and template tracking to mark the existing grade/spec rollout complete.
+
+Future gate:
+
+- New grade/specification pages remain gated by keyword evidence, enquiry history or owner priority.
+- Next roadmap work should move to owner-prioritized post-Batch 10 items, such as technical resources UX, homepage refinement or Search Console-led content expansion.
+
+Safe wording strategy: Batch 10D uses stockist, supplier, importer, exporter, project supplier, RFQ support, documentation support where applicable, PAN India supply and export enquiry support language. No manufacturer, factory, plant, production, ready-stock, fixed-price, certification, client, rating or delivery-guarantee claims were added.
