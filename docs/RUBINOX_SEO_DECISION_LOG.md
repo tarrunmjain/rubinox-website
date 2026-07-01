@@ -18,10 +18,13 @@ Status: active decision log for future SEO work.
 | SEO-008 | Do not add fake LocalBusiness schema for cities without real addresses | Location pages cannot imply local offices or branches | Active |
 | SEO-009 | Preserve sitemap/canonical consistency | Current qa:sitemap baseline is passing and should stay protected | Active |
 | SEO-010 | Search Console data must guide large keyword/page expansion | Prevent speculative bulk page creation | Active |
+| SEO-011 | Use DNS TXT domain verification for Google Search Console | Owner selected DNS verification and will add the TXT record manually | Active |
+| SEO-012 | Import Bing Webmaster Tools from Google Search Console | Owner selected GSC import after GSC verification instead of repo verification files or meta tags | Active |
+| SEO-013 | Keep analytics changes separate from public SEO intent | Batch 11B tracking work must not change URLs, H1 intent, metadata, canonicals, schema meaning, sitemap URLs or broad internal linking | Active |
 
 ## Open SEO Questions
 
-- Which Search Console property is verified or should be verified?
+- When will the owner complete Google Search Console DNS TXT verification?
 - Does the owner want GST/MSME/IEC publicly displayed once verified?
 - Which city/product combinations receive meaningful impressions or enquiries?
 - Which export markets produce real enquiries?

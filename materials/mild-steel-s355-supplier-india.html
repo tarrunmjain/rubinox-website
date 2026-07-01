@@ -27,7 +27,6 @@
 <meta name="twitter:description" content="EN S355 mild steel supplier in India for higher-strength structural plates, sections, angles, channels and fabrication RFQs with documentation support." />
 <meta name="twitter:image" content="https://rubinoxmetal.com/assets/rubinox-social-preview-2026.jpg" />
 <meta name="twitter:image:alt" content="EN S355 Mild Steel Supplier India | Higher Strength Structural Steel" />
-
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JT5X5L5H07"></script>
 <script>
@@ -35,32 +34,8 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-JT5X5L5H07');
-
-function trackLeadAndGo(method, label, url, newTab){
-  try{
-    if (typeof gtag === "function") {
-      let opened = false;
-      const go = () => {
-        if (opened) return;
-        opened = true;
-        if (newTab) window.open(url, "_blank", "noopener");
-        else window.location.href = url;
-      };
-      gtag("event", "generate_lead", {
-        method: method,
-        event_label: label,
-        event_callback: go
-      });
-      setTimeout(go, 600);
-      return false;
-    }
-  } catch(e){}
-  if (newTab) window.open(url, "_blank", "noopener");
-  else window.location.href = url;
-  return false;
-}
 </script>
-
+<script src="/assets/js/tracking.js" defer></script>
 <style>
 :root{
   --ink:#0b1220;

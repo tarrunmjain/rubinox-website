@@ -16,12 +16,12 @@ Schema/Rich Results workflow,recommended workflow,manual external checks,documen
 Image audit helper,recommended workflow,partially available via qa:images,document only,2,Large asset and WebP checks,low,included/local,Use before adding assets,Prefer accurate WebP
 llms.txt workflow,AISEO/LLMO,file exists,document only,4,AI crawler/LLM guidance,medium,local,Audit before changing llms.txt,Do not edit in unrelated batches
 Codex SEO skill suite candidate,optional SEO tool,candidate,document only,7,Advanced guided SEO audits,medium,depends on availability,Evaluate after GSC setup,Do not auto-rewrite pages
-Google Search Console,measurement,pending owner verification,not configured,7,Indexing/query/page data,medium,free owner account,Owner must verify property and submit sitemap,No verification token committed
-Bing Webmaster Tools,measurement,pending owner verification,not configured,7,Bing indexing/query/page data,medium,free owner account,Owner must verify site or approve GSC import,No verification token committed
-GA4,measurement,partially present pending owner confirmation,public code exists before Batch 11A,7,Traffic and lead event measurement,medium,free owner account,Owner must confirm property and event access,Existing public snippet coverage is partial
-Event tracking,conversion,planned,not implemented in Batch 11A,8,Lead and engagement event standardization,medium,included after GA4 confirmation,Use data/tracking-event-map.csv after owner approval,No public JS added in Batch 11A
+Google Search Console,measurement,owner DNS verification pending,not configured,7,Indexing/query/page data,medium,free owner account,Owner must add DNS TXT record and submit sitemap after verification,No verification token committed
+Bing Webmaster Tools,measurement,owner GSC import pending,not configured,7,Bing indexing/query/page data,medium,free owner account,Owner must import from verified GSC property,No verification token committed
+GA4,measurement,implemented across 261 HTML pages,public code standardized in Batch 11B,7,Traffic and lead event measurement,medium,free owner account,Verify event receipt after deployment,Measurement ID G-JT5X5L5H07
+Event tracking,conversion,implemented in Batch 11B,assets/js/tracking.js,8,Lead and engagement event standardization,medium,included after GA4 confirmation,Verify events in GA4 Realtime or DebugView,No personal RFQ field values collected
 Google Search Console MCP candidate,optional search data tool,future after verification,document only,8,Query/page data access,medium,requires owner auth,Use after verified property has data,Data access must be approved
 Better Search Console candidate,optional search data tool,future after GSC data,document only,9,Query grouping/reporting,medium,may require auth/cost,Evaluate after GSC data exists,Optional
 On-Page.ai MCP,optional paid SEO tool,candidate,document only,9,Targeted page scans,medium,paid/credit-based,Use only with owner approval,Avoid broad automated edits
 Semrush plugin/MCP,optional paid SEO tool,candidate,document only,9,Competitor and keyword scans,medium,paid/subscription-based,Use only with owner approval,Optional
-Looker Studio dashboard,reporting,future,not configured,10,Monthly SEO and lead dashboard,low,free with owner data sources,Create after GA4 and GSC are verified,Do not expose account IDs or credentials
+Looker Studio dashboard,reporting,future,not configured,10,Monthly SEO and lead dashboard,low,free with owner data sources,Create after GA4 events and GSC are verified,Do not expose account IDs or credentials

@@ -17,19 +17,16 @@
   <meta name="twitter:title" content="Request Metal Quotation | Industrial Metals RFQ | Rubinox" />
   <meta name="twitter:description" content="Send an RFQ to Rubinox for stainless steel, nickel alloys, duplex, titanium and industrial metals. Share grade, form, size, quantity, standard, documentation and delivery details." />
   <meta name="twitter:image" content="https://rubinoxmetal.com/assets/og-rubinox.jpg" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR18QYPS6C"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-CR18QYPS6C');
-    function trackLeadAndGo(eventName, destination){
-      try { gtag('event', eventName, { event_category: 'lead', event_label: destination }); }
-      catch (error) {}
-      window.location.href = destination;
-    }
-  </script>
-  <style>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JT5X5L5H07"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-JT5X5L5H07');
+</script>
+<script src="/assets/js/tracking.js" defer></script>
+<style>
     :root{
       --navy:#0b1f4d;
       --navy2:#132a63;
@@ -1130,7 +1127,6 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
         var subject = 'Quotation Request - Rubinox Metal and Alloys';
         var mailto = 'mailto:tarun@rubinoxmetal.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(rfqBody());
         if (status) status.textContent = 'Opening your email application with RFQ details pre-filled.';
-        try { gtag('event', 'quotation_static_form_email', { event_category: 'lead', event_label: 'static_rfq_form' }); } catch (error) {}
         window.location.href = mailto;
       });
       if (whatsappButton) {
@@ -1156,7 +1152,6 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
           ].join('\n');
           var whatsapp = 'https://wa.me/919363193755?text=' + encodeURIComponent(message);
           if (status) status.textContent = 'Opening WhatsApp with your requirement.';
-          try { gtag('event', 'quotation_static_form_whatsapp', { event_category: 'lead', event_label: 'static_rfq_form' }); } catch (error) {}
           window.location.href = whatsapp;
         });
       }

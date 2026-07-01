@@ -32,26 +32,8 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-JT5X5L5H07');
-function trackLeadAndGo(method,label,url,newTab){
-  try{
-    if(typeof gtag==="function"){
-      let opened=false;
-      const go=()=>{
-        if(opened) return;
-        opened=true;
-        if(newTab) window.open(url,"_blank","noopener");
-        else window.location.href=url;
-      };
-      gtag("event","generate_lead",{method:method,event_label:label,event_callback:go});
-      setTimeout(go,600);
-      return false;
-    }
-  }catch(e){}
-  if(newTab) window.open(url,"_blank","noopener");
-  else window.location.href=url;
-  return false;
-}
 </script>
+<script src="/assets/js/tracking.js" defer></script>
 <style>
 :root{
   --ink:#0b1220;

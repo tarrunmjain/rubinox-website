@@ -18,9 +18,9 @@ Use this template only after GA4, Google Search Console and Bing Webmaster Tools
 
 | Source | Property/view | Date range | Status | Notes |
 | --- | --- | --- | --- | --- |
-| GA4 | Owner-confirmed property |  | Pending | Use only verified property data |
-| Google Search Console | `https://rubinoxmetal.com/` or domain property |  | Pending | Confirm property type |
-| Bing Webmaster Tools | Verified site |  | Pending | Import from GSC if approved |
+| GA4 | Rubinox Website - `G-JT5X5L5H07` |  | Configured | Use verified property data after deployment event receipt is confirmed |
+| Google Search Console | Domain property for `rubinoxmetal.com` |  | Owner DNS verification pending | Submit sitemap after verification |
+| Bing Webmaster Tools | GSC-imported site |  | Owner import pending | Import after GSC verification |
 | Local QA | Repository scripts |  | Pending | Include only if a website batch ran |
 
 ## Search Performance
@@ -91,4 +91,3 @@ Use this template only after GA4, Google Search Console and Bing Webmaster Tools
 - Do not change URLs, H1 intent, title/meta/canonical, schema meaning, sitemap URLs or broad internal linking without explicit approval.
 - Do not introduce manufacturer, factory, stock, price, certification, client, project, review, rating or delivery claims.
 - Do not expose account IDs, verification tokens, API keys or credentials in this report.
-

@@ -61,15 +61,15 @@ Measurement is P0 because future keyword and location decisions should be driven
 
 | Item | Status | Next action |
 | --- | --- | --- |
-| Google Search Console | Owner verification pending | Confirm verification method, then submit sitemap |
-| Bing Webmaster Tools | Owner verification pending | Confirm verification method, then submit sitemap |
-| GA4 | Measurement ID appears in existing docs as G-JT5X5L5H07 | Owner to confirm access and property ownership |
-| Sitemap submission | Pending external console access | Submit https://rubinoxmetal.com/sitemap.xml |
-| WhatsApp click tracking | Planning needed | Track click events without changing CTA text in first pass |
-| Email RFQ click tracking | Planning needed | Track mailto clicks and RFQ form handoff |
-| Phone click tracking | Planning needed | Track tel clicks on top rail/footer/contact areas |
-| Company profile PDF tracking | Planning needed | Track PDF downloads after GA4 access is confirmed |
-| Technical resource engagement | Planning needed | Track anchor/table engagement only after measurement plan is approved |
+| Google Search Console | Owner DNS TXT verification pending | Owner to add DNS TXT record and submit sitemap after verification |
+| Bing Webmaster Tools | Owner GSC import pending | Owner to import after Google Search Console verification |
+| GA4 | Implemented with `G-JT5X5L5H07` on 261 of 261 HTML pages | Verify event receipt after deployment |
+| Sitemap submission | Pending external console access | Submit `https://rubinoxmetal.com/sitemap.xml` after GSC verification |
+| WhatsApp click tracking | Implemented in Batch 11B | Confirm in GA4 Realtime or DebugView after deployment |
+| Email RFQ click tracking | Implemented in Batch 11B | Confirm in GA4 Realtime or DebugView after deployment |
+| Phone click tracking | Implemented in Batch 11B | Confirm on mobile or emulated mobile after deployment |
+| Company profile PDF tracking | Implemented in Batch 11B | Confirm as secondary event after deployment |
+| Technical resource engagement | Implemented in Batch 11B | Use for monthly content-path review after data accrues |
 
 ## C. Technical Baseline
 
@@ -242,9 +242,9 @@ Document first, install later.
 
 ## Next Three Batches
 
-1. P0 external setup: verify Search Console/Bing, confirm GA4 access, submit sitemap and finalize tracking plan.
-2. P0/P1 measurement setup: plan WhatsApp, email, phone, RFQ and PDF-download conversion events after GA4 access is confirmed.
-3. P1 design/data follow-up: technical resources table UX or homepage buyer journey refinement, guided by owner priority and measurement/search data.
+1. P0 external setup: owner verifies Search Console through DNS TXT, submits sitemap and imports into Bing Webmaster Tools.
+2. P0/P1 measurement follow-up: verify GA4 event receipt after deployment and mark approved lead events as key events.
+3. P1 design/data follow-up: technical resources table UX or homepage buyer journey refinement, guided by owner priority and measurement/search data after data accrues.
 
 <!-- RUBINOX BATCH 4 KEYWORD LOCATION START -->
 ## Batch 4 Keyword And Location Architecture Status
@@ -324,3 +324,13 @@ Date: 2026-07-01
 - Representative visual review covered 15 grade/specification pages across 1366, 1280, 768, 390 and 360 widths with 75 screenshots and 0 layout failures.
 - Existing grade/specification rollout remains approved complete: 110 of 110 pages in scope, with no public page, URL, H1, metadata, canonical, schema, sitemap or broad internal-link strategy changes in this checkpoint.
 - It is safe to proceed to tracking and measurement setup, pending owner access for Search Console, Bing Webmaster Tools and GA4.
+
+## Batch 11B Tracking Implementation Status
+
+- GA4 is standardized on the owner-confirmed Measurement ID `G-JT5X5L5H07` for the Rubinox Website stream.
+- All 261 public HTML pages include one GA4 loader, one GA4 config call and one `/assets/js/tracking.js` include.
+- The old accidental ID `G-CR18QYPS6C` was removed from `quotation.html`.
+- Safe lead-intent events are implemented for WhatsApp, email, phone, quotation CTAs, quotation-form intent, company profile PDF/page links, technical resources, quality documentation, Knowledge Hub article links and existing directory/social outbound links.
+- Google Search Console remains owner action through DNS TXT domain verification; no repo file or meta tag is required.
+- Bing Webmaster Tools remains owner action through GSC import after verification; no repo file or meta tag is required.
+- Sitemap submission remains owner action after GSC verification: `https://rubinoxmetal.com/sitemap.xml`.

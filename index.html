@@ -28,26 +28,15 @@
 <meta name="geo.region" content="IN-MH" />
   <meta name="geo.placename" content="Mumbai" />
 <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JT5X5L5H07"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-JT5X5L5H07');
-    function trackLead(method, label){
-      try{
-        if (typeof gtag === "function") {
-          gtag("event", "generate_lead", {
-            method: method,
-            event_category: "lead",
-            event_label: label
-          });
-        }
-      } catch(e){}
-      return true;
-    }
-  </script>
-  <style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JT5X5L5H07"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-JT5X5L5H07');
+</script>
+<script src="/assets/js/tracking.js" defer></script>
+<style>
     :root{
       --bg:#07101f;
       --navy:#07101f;

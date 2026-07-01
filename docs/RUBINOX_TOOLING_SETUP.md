@@ -79,6 +79,8 @@ Date: 2026-07-01
 
 Batch 11A was planning and documentation only. No public pages, assets, sitemap, robots file, schema, metadata or tracking scripts were changed.
 
+Batch 11B update: repository-side GA4 and safe conversion tracking are now implemented. The Batch 11A counts below are preserved as pre-implementation audit findings only.
+
 Current audit status:
 
 - GA4 page tracking is already partially present in public HTML, but owner property confirmation is still required before any implementation cleanup.
@@ -97,6 +99,11 @@ Batch 11A files:
 - `data/tracking-event-map.csv`
 - `docs/search-console-bing-setup-guide.md`
 - `docs/monthly-seo-measurement-report-template.md`
+
+Batch 11B implementation files:
+
+- `assets/js/tracking.js`
+- `docs/tracking-implementation-batch-11b-report.md`
 
 Deferred until owner data is available:
 

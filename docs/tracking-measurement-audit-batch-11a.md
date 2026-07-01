@@ -3,6 +3,8 @@
 Date: 2026-07-01
 Scope: planning and readiness audit for analytics, search measurement, conversion events and reporting. Public website pages were not changed in this batch.
 
+Batch 11B update: this audit has been superseded for implementation status by `docs/tracking-implementation-batch-11b-report.md`. GA4 and event tracking are now implemented; Search Console and Bing remain owner-side setup actions.
+
 ## Guardrails
 
 - No public HTML, CSS, JavaScript, assets, sitemap, robots, schema, canonical tags, titles or meta descriptions were changed.
@@ -42,10 +44,12 @@ The current GA4 snippet is absent from 66 HTML files. This is an audit finding o
 
 ## Recommended Next Gate
 
-Do not start a tracking implementation batch until the owner provides:
+Batch 11B has completed the approved repository-side tracking work.
 
-- Confirmed GA4 property access and approved measurement ID.
-- Approved Search Console verification method.
-- Approved Bing Webmaster Tools verification method or approval to import from GSC.
-- Confirmed WhatsApp Business number, RFQ email, business hours and official profile URLs.
-
+- Confirmed GA4 Measurement ID: `G-JT5X5L5H07`.
+- Previous accidental GA4 ID `G-CR18QYPS6C` was removed from `quotation.html`.
+- GA4 coverage is now 261 of 261 HTML pages.
+- `assets/js/tracking.js` now tracks safe lead-intent events without sending personal RFQ field values.
+- Google Search Console uses owner-managed DNS TXT verification; no repo verification file or meta tag is required.
+- Bing Webmaster Tools will be imported from GSC after verification; no repo verification file or meta tag is required.
+- Sitemap submission remains an owner action after GSC verification: `https://rubinoxmetal.com/sitemap.xml`.

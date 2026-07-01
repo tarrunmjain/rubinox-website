@@ -1,7 +1,9 @@
 # Rubinox Tracking And Measurement Implementation Plan
 
 Date: 2026-07-01
-Scope: implementation plan only. No public tracking code was added in Batch 11A.
+Scope: Batch 11A implementation plan with Batch 11B completion notes.
+
+Batch 11B status: repository-side GA4 standardization and safe event tracking are implemented. Owner-side Search Console DNS verification, sitemap submission and Bing import remain pending.
 
 ## Objectives
 
@@ -15,41 +17,41 @@ Scope: implementation plan only. No public tracking code was added in Batch 11A.
 
 | Item | Owner action | Repository action after approval |
 | --- | --- | --- |
-| GA4 property | Confirm the active GA4 property and measurement ID | Audit current snippet coverage and prepare a safe static include or page-level rollout plan |
-| GA4 access | Grant access to reporting and Admin event settings | Confirm whether `generate_lead` events are arriving and choose key events |
-| Search Console | Choose domain property or URL-prefix verification | Add only the approved verification method, then submit sitemap |
-| Bing Webmaster Tools | Choose GSC import, DNS, meta tag or XML file | Add only the approved verification method, then submit sitemap |
-| Contact data | Confirm WhatsApp, email, phone and business hours | Align public contact and event labels only if needed |
+| GA4 property | Confirmed as `G-JT5X5L5H07` for Rubinox Website | Completed in Batch 11B across 261 of 261 HTML pages |
+| GA4 access | Grant reporting/Admin access as needed | Confirm events after deployment and choose key events in GA4 Admin |
+| Search Console | Add DNS TXT record for domain verification | No repo verification artifact required |
+| Bing Webmaster Tools | Import from verified GSC property | No repo verification artifact required |
+| Contact data | Current WhatsApp number and RFQ email confirmed for continued use | No public contact change made |
 | Profiles | Confirm GBP, social and directory URLs | Add links only in a future scoped trust/profile batch |
 
 ## Phase 2 - GA4 Coverage Review
 
-Current audit shows GA4 code on 195 of 261 HTML pages and absent from 66 pages. After owner confirmation:
+Batch 11B standardized GA4 coverage:
 
-1. Confirm whether the existing GA4 property is correct.
-2. Confirm whether the current `generate_lead` event should remain the primary event.
-3. Choose one implementation pattern for static pages:
-   - Keep inline snippets and patch only missing pages.
-   - Move to a shared static JS file if the owner approves a broader implementation cleanup.
-4. Test representative lead actions in GA4 DebugView.
-5. Mark approved lead events as key events in GA4 Admin.
+1. All 261 HTML pages load `G-JT5X5L5H07`.
+2. All 261 HTML pages include `/assets/js/tracking.js`.
+3. The old accidental ID `G-CR18QYPS6C` was removed.
+4. Legacy inline `generate_lead` helper code was replaced by safe central tracking compatibility functions.
+5. Representative lead actions should be tested in GA4 Realtime or DebugView after deployment.
+6. Approved lead events should be marked as key events in GA4 Admin after event receipt is confirmed.
 
 Do not add Google Ads conversion tags unless a paid campaign batch is separately approved.
 
 ## Phase 3 - Event Tracking
 
-Use `data/tracking-event-map.csv` as the source of truth. Recommended order:
+Use `data/tracking-event-map.csv` as the source of truth. Batch 11B implemented:
 
 1. Primary lead events: WhatsApp, email, phone and quotation page navigation.
-2. RFQ form or submission tracking if a form endpoint is added later.
-3. Secondary conversion events: company profile PDF, Google Maps, technical resources and price-factor page engagement.
-4. Reporting dimensions: page path, page type, material family, grade/specification, product form, location or export market where safely derivable from the page URL.
+2. Static quotation form intent events: form start, email submit and WhatsApp submit.
+3. Secondary conversion events: company profile PDF/page, technical resources, quality documentation and Knowledge Hub article clicks.
+4. Directory/social outbound events for existing public links.
+5. Reporting parameters limited to safe context: `page_path`, `link_type`, `cta_location`, `destination_type`, `outbound_domain` and `file_type`.
 
 No event should store buyer names, email addresses, phone numbers, BOQ details, drawings or other sensitive RFQ content.
 
 ## Phase 4 - Search Measurement
 
-After Search Console and Bing verification:
+After owner Search Console and Bing verification:
 
 1. Submit `https://rubinoxmetal.com/sitemap.xml`.
 2. Confirm indexed status for core pages, material hubs, grade/spec pages, location pages, export pages and blog articles.
@@ -78,4 +80,3 @@ Reporting cadence:
 - Do not commit placeholder verification files or fake IDs.
 - Do not change public SEO URLs, H1 intent, title/meta/canonical, schema meaning, sitemap URLs or broad internal-link strategy as part of analytics work.
 - Do not introduce unsafe manufacturer, factory, stock, price, certification, client, project, review, rating or delivery claims.
-

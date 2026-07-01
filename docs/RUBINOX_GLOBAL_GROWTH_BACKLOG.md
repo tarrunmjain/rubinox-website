@@ -14,11 +14,11 @@ Priority definitions:
 | ID | Task | Source | Page family | Priority | SEO impact | GEO/AEO impact | Design impact | Conversion impact | Risk | Owner data required? | Dependencies | Status | Target phase | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | P0-001 | Create master roadmap/control system | User request | Governance | P0 | High | Medium | Low | Medium | Low | No | None | Done in this batch | Phase 0 | Planning docs and CSV maps only |
-| P0-002 | Verify Google Search Console | Roadmap | Measurement | P0 | High | Medium | None | Medium | Medium | Yes | Owner access | Pending | Phase 0 | Needed before query-led expansion |
-| P0-003 | Submit sitemap in Google Search Console | Roadmap | Indexing | P0 | High | Low | None | Low | Low | Yes | GSC verification | Pending | Phase 0 | Submit production sitemap |
-| P0-004 | Verify Bing Webmaster Tools | Roadmap | Measurement | P0 | Medium | Low | None | Low | Medium | Yes | Owner access | Pending | Phase 0 | Optional import from GSC if available |
-| P0-005 | Install or confirm GA4 access | Roadmap | Measurement | P0 | Medium | Low | None | High | Medium | Yes | Owner property access | Pending | Phase 0 | Existing docs mention G-JT5X5L5H07 |
-| P0-006 | Add conversion tracking plan | Roadmap | Conversion | P0 | Medium | Low | None | High | Medium | Yes | GA4 confirmation | Planned | Phase 0 | WhatsApp, email, phone, PDF and RFQ events |
+| P0-002 | Verify Google Search Console | Roadmap | Measurement | P0 | High | Medium | None | Medium | Medium | Yes | Owner DNS access | Owner action pending | Phase 0 | Selected method is DNS TXT domain verification |
+| P0-003 | Submit sitemap in Google Search Console | Roadmap | Indexing | P0 | High | Low | None | Low | Low | Yes | GSC verification | Owner action pending | Phase 0 | Submit `https://rubinoxmetal.com/sitemap.xml` after GSC verification |
+| P0-004 | Verify Bing Webmaster Tools | Roadmap | Measurement | P0 | Medium | Low | None | Low | Medium | Yes | Verified GSC property | Owner action pending | Phase 0 | Import from Google Search Console after verification |
+| P0-005 | Install or confirm GA4 access | Roadmap | Measurement | P0 | Medium | Low | None | High | Medium | Yes | Owner property access | Done in Batch 11B | Phase 0 | GA4 Measurement ID `G-JT5X5L5H07` now loads on 261 of 261 HTML pages |
+| P0-006 | Add conversion tracking plan | Roadmap | Conversion | P0 | Medium | Low | None | High | Medium | Yes | GA4 confirmation | Done in Batch 11B | Phase 0 | Safe WhatsApp, email, phone, quotation, PDF and RFQ-intent events implemented |
 | P0-007 | Create page inventory | User request | All pages | P0 | High | Medium | Low | Medium | Low | No | Sitemap/local HTML | Done in this batch | Phase 0 | See data/page-inventory.csv |
 | P0-008 | Create keyword master map | User request | Keyword architecture | P0 | High | High | None | Medium | Low | No | Current URLs | Starter done | Phase 0 | Expand with GSC data |
 | P0-009 | Clean 58 legacy HTML validation issues | Design audit | Material pages | P0 | Medium | Low | Low | Low | Medium | No | qa:html baseline | Done in Batch 2 | Technical cleanup | qa:html now reports 0 invalid pages. |
@@ -301,3 +301,15 @@ Next recommended work:
 - Proceed to owner-approved tracking and measurement setup: Search Console, Bing Webmaster Tools, sitemap submission, GA4 access confirmation and conversion-event planning.
 - Keep future grade/specification expansion gated by keyword evidence, Search Console data, enquiry history or owner priority.
 - Do not start new broad grade/specification redesign unless measurement data shows a need.
+
+## Batch 11B - Tracking Implementation
+
+Status: implemented for repository-side analytics and safe conversion tracking.
+
+- GA4 Measurement ID `G-JT5X5L5H07` now loads once on each of the 261 public HTML pages.
+- The old accidental ID `G-CR18QYPS6C` was removed from `quotation.html`.
+- `assets/js/tracking.js` centralizes safe click and quotation-form intent events without sending personal RFQ field values.
+- Google Search Console remains owner action: DNS TXT domain verification and then sitemap submission.
+- Bing Webmaster Tools remains owner action: import from the verified Google Search Console property.
+- No verification files, verification meta tags, credentials or placeholder tokens were committed.
+- No public SEO URLs, H1 intent, title/meta/canonical targets, schema meaning, sitemap URLs or broad internal-link strategy were changed.
