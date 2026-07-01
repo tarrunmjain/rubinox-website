@@ -26,8 +26,8 @@ The current state is taken from the latest local QA runs and the design/audit do
 | qa:schema | Passing - 261 pages, 866 JSON-LD blocks, 0 invalid blocks |
 | qa:accessibility | Passing - 5 configured pages, 0 violations |
 | test:navigation | Passing |
-| Rendered visual QA | Passing in latest design audit |
-| Known HTML validation baseline | 58 legacy invalid material pages remain |
+| Rendered visual QA | Passing in Batch 10E post-rollout live checkpoint |
+| Known HTML validation baseline | qa:html passing with 0 invalid pages |
 | Design score | 7.8 / 10 overall |
 | Header/top rail/footer | Stable and protected |
 
@@ -84,7 +84,7 @@ Keep the current QA stack active before any website implementation batch:
 
 Known technical debt:
 
-- 58 legacy HTML validation issues remain on material pages.
+- Legacy HTML validation cleanup is complete; keep `qa:html` in the standard QA suite to protect the 0 invalid-page baseline.
 - The site uses repeated inline CSS/JS by design. This is workable for static hosting but increases batch risk.
 - The latest public inventory is much larger than the older PROJECT_TRANSFER snapshot: 261 public URLs, not 75.
 
@@ -243,8 +243,8 @@ Document first, install later.
 ## Next Three Batches
 
 1. P0 external setup: verify Search Console/Bing, confirm GA4 access, submit sitemap and finalize tracking plan.
-2. P0 technical cleanup: clean 58 legacy HTML validation issues without design or SEO URL changes.
-3. P1 design pilot: homepage buyer journey, technical table UX and five-page grade/spec pilot.
+2. P0/P1 measurement setup: plan WhatsApp, email, phone, RFQ and PDF-download conversion events after GA4 access is confirmed.
+3. P1 design/data follow-up: technical resources table UX or homepage buyer journey refinement, guided by owner priority and measurement/search data.
 
 <!-- RUBINOX BATCH 4 KEYWORD LOCATION START -->
 ## Batch 4 Keyword And Location Architecture Status
@@ -315,3 +315,12 @@ Date: 2026-07-01
 - No new public pages, sitemap URLs, public SEO URLs, title/meta/canonical targets or broad internal-link strategy changes were introduced.
 - FAQ schema was updated only on pages that already had FAQPage schema, and only to match visible FAQ content.
 - Future grade/specification expansion remains gated by keyword evidence, enquiry history or owner priority.
+
+## Batch 10E Post Grade / Specification Rollout Checkpoint
+
+- Batch 10E confirmed local and remote `main` at `9078dd6` / `9078dd68d096b70e1ce08c086e211a0e8dee61c1`.
+- Full local QA passed, including sitemap, crawl, schema, accessibility, navigation, HTML, links, pa11y, image audit, forbidden-claims review, `git diff --check` and `qa:full`.
+- Representative live URL checks returned 200 for the home, grades, materials, technical resources, quotation and selected grade/specification pages.
+- Representative visual review covered 15 grade/specification pages across 1366, 1280, 768, 390 and 360 widths with 75 screenshots and 0 layout failures.
+- Existing grade/specification rollout remains approved complete: 110 of 110 pages in scope, with no public page, URL, H1, metadata, canonical, schema, sitemap or broad internal-link strategy changes in this checkpoint.
+- It is safe to proceed to tracking and measurement setup, pending owner access for Search Console, Bing Webmaster Tools and GA4.

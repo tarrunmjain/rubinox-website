@@ -25,7 +25,7 @@ Priority definitions:
 | P0-010 | Preserve header/footer/top rail baseline | Design audit | Sitewide design | P0 | Medium | Medium | High | Medium | Low | No | Design decision log | Active guardrail | Phase 0 | White footer, sticky header, full icon set |
 | P1-001 | Homepage buyer journey polish | Design audit | Home | P1 | High | Medium | High | High | Medium | No | Baseline lock | Pending | Phase 1 | No H1/meta/canonical changes |
 | P1-002 | Technical resources table UX polish | Design audit | Technical / documentation | P1 | High | High | High | Medium | Medium | No | Baseline lock | Pending | Phase 2 | Keep real HTML tables |
-| P1-003 | Five-page grade/spec pilot | Design audit | Grade / specification | P1 | High | High | High | High | Medium | No | Phase 2 patterns | Pending | Phase 3 | Use five listed pilot pages |
+| P1-003 | Five-page grade/spec pilot | Design audit | Grade / specification | P1 | High | High | High | High | Medium | No | Phase 2 patterns | Completed through Batch 1 and Batch 10A-D rollout | Phase 3 | Existing grade/spec rollout is complete across 110 pages; new pages remain gated by evidence |
 | P1-004 | Product form page polish | Design audit | Product form pages | P1 | High | Medium | High | High | Medium | No | Pilot results | Done in Batch 3 | Phase 4 | Product form RFQ polish completed; hub work remains separate. |
 | P1-005 | Product-form hub polish | Design audit | Hub pages | P1 | High | Medium | High | Medium | Low | No | Product form strategy | Pending | Phase 4 | Improve product-forms.html |
 | P1-006 | Knowledge Hub card/filter polish | Design audit | Knowledge Hub | P1 | Medium | High | High | Medium | Low | No | Static JS accessibility | Done in Batch 7 | Phase 5 | Blog index filters/card CTAs and article meta consistency completed; article links remain crawlable. |
@@ -282,3 +282,22 @@ Future gate:
 - Next roadmap work should move to owner-prioritized post-Batch 10 items, such as technical resources UX, homepage refinement or Search Console-led content expansion.
 
 Safe wording strategy: Batch 10D uses stockist, supplier, importer, exporter, project supplier, RFQ support, documentation support where applicable, PAN India supply and export enquiry support language. No manufacturer, factory, plant, production, ready-stock, fixed-price, certification, client, rating or delivery-guarantee claims were added.
+
+## Batch 10E - Post Grade / Specification Rollout Live Checkpoint
+
+Status: implemented as a documentation-only checkpoint. No public website pages, sitemap URLs, schema blocks, metadata, canonical targets, H1s, internal-link strategy or tracking code were changed.
+
+Completed scope:
+
+- Confirmed local and remote `main` at `9078dd6` / `9078dd68d096b70e1ce08c086e211a0e8dee61c1`.
+- Confirmed the existing grade/specification rollout remains complete across 110 of 110 pages.
+- Ran the full local QA suite plus `qa:full`; all requested checks passed.
+- Checked representative live URLs for home, grades, materials, technical resources, quotation and selected grade/specification pages; all returned 200.
+- Reviewed 15 representative grade/specification pages at 1366, 1280, 768, 390 and 360 viewport widths.
+- Captured 75 screenshots in `C:\Users\Dell\AppData\Local\Temp\rubinox-batch10e-live-checkpoint-20260701`.
+
+Next recommended work:
+
+- Proceed to owner-approved tracking and measurement setup: Search Console, Bing Webmaster Tools, sitemap submission, GA4 access confirmation and conversion-event planning.
+- Keep future grade/specification expansion gated by keyword evidence, Search Console data, enquiry history or owner priority.
+- Do not start new broad grade/specification redesign unless measurement data shows a need.
