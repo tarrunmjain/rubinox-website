@@ -186,3 +186,70 @@ Forbidden changes:
 - No custom left padding for individual pages.
 - No top bar redesign.
 - No header redesign.
+
+## Homepage Market Ticker - LOCK V1
+
+Status: approved and final.
+
+Lock document:
+
+- `docs/design-system/RUBINOX_MARKET_TICKER_LOCK_V1.md`
+
+Source:
+
+- D3A homepage market ticker compact prototype.
+
+Approved prototype commit:
+
+- `5e21d2e2bbe17674e0ebbf797335d00e39954c83`
+
+Scope:
+
+- Homepage only.
+- No sitewide replication is required.
+- Do not add the market ticker to non-home pages unless the owner separately approves it.
+
+Exact visual pattern:
+
+- Premium dark navy Market Watch section below the locked header.
+- Background: `linear-gradient(90deg,#050b16,#07101f 58%,#102554)`.
+- Desktop structure: Market Watch label, TradingView ticker values, compact context block.
+- Desktop height target: about `82px`.
+- Do not exceed about `100px` at `1366px` or `1280px` without owner approval and documentation.
+- Do not return to the old pre-D3A height of about `139.56px`.
+- Mobile/tablet layout may stack for readability and must not create horizontal overflow.
+
+Exact content pattern:
+
+- Label title: `Market Watch`.
+- Label subtitle: `RFQ planning context`.
+- Context title: `Context only, not a quotation.`
+- Context body: `Indicative signals only - not live prices, stock confirmation or a quote. Final quote depends on grade, form, size, quantity, documents, origin and logistics.`
+- The live HTML uses `&mdash;` between "only" and "not live prices".
+
+Required safety meaning:
+
+- Ticker values are indicative reference signals only.
+- Ticker values are not live prices.
+- Ticker values are not stock confirmation.
+- Ticker values are not a formal quotation.
+- Final quote depends on grade, form, size, quantity, documents, origin and logistics.
+
+Future homepage instruction:
+
+- Preserve the compact height and short disclaimer.
+- Preserve the current TradingView ticker tape structure and approved symbol list unless the owner approves a change.
+- Do not add long copy, badges, chips, or extra ticker items that make the section tall again.
+- Do not style the ticker as a live pricing board.
+- Do not convert market signals into quotation, stock, or price promises.
+
+Forbidden changes:
+
+- No live price promises.
+- No confirmed stock claims.
+- No quotation guarantees.
+- No buy-now pricing.
+- No fake stock status.
+- No manufacturer, factory, mill, production, manufacturing unit, or `we manufacture` wording.
+- No certification or approval claims.
+- No sitewide ticker replication without owner approval.

@@ -173,3 +173,41 @@ Owner must review the live homepage market ticker before this section is locked.
 Next step after owner approval:
 
 D3B - Create Homepage Market Ticker Design Lock / Design Fingerprint.
+
+## Approved And Promoted To Market Ticker Lock V1
+
+The owner reviewed the live homepage market ticker after D3A and confirmed:
+
+`APPROVED`
+
+D3B promoted the approved compact homepage market ticker to Market Ticker Lock V1.
+
+Lock document:
+
+- `docs/design-system/RUBINOX_MARKET_TICKER_LOCK_V1.md`
+
+Master design fingerprint:
+
+- `docs/design-system/RUBINOX_DESIGN_FINGERPRINT.md`
+
+Final lock screenshot folder:
+
+- `C:\Users\Dell\AppData\Local\Temp\rubinox-market-ticker-lock-v1`
+
+Non-home check screenshot folder:
+
+- `C:\Users\Dell\AppData\Local\Temp\rubinox-market-ticker-lock-v1-nonhome-check`
+
+Final D3B measurements:
+
+| Viewport | Market ticker height | Horizontal overflow |
+| --- | ---: | --- |
+| 1366px | 82px | No |
+| 1280px | 82px | No |
+| 768px | 169.95px | No |
+| 390px | 184.67px | No |
+| 360px | 184.67px | No |
+
+No sitewide replication was required because the market ticker is a homepage-only section.
+
+The final locked rule is: preserve the compact homepage ticker, keep the disclaimer safety meaning, and do not convert market signals into live prices, stock confirmation, or quotation promises.
