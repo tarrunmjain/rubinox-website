@@ -1319,15 +1319,25 @@ header .topRail.homeTopBarPrototype .socialUtility{
   text-decoration:none!important;
   transition:color .18s ease,transform .18s ease,filter .18s ease!important;
 }
-header .topRail.homeTopBarPrototype .utilityIcon:hover,
-header .topRail.homeTopBarPrototype .utilityIcon:focus,
-header .topRail.homeTopBarPrototype .utilityIcon:focus-visible{
+header .topRail.homeTopBarPrototype .utilityIcon:not(.is-click-reset):hover,
+header .topRail.homeTopBarPrototype .utilityIcon:not(.is-click-reset):focus-visible{
   background:transparent!important;
   border:0!important;
   box-shadow:none!important;
   outline:none!important;
   color:#d7a84f!important;
   transform:translateY(-2px)!important;
+}
+header .topRail.homeTopBarPrototype .utilityIcon.is-click-reset,
+header .topRail.homeTopBarPrototype .utilityIcon.is-click-reset:hover,
+header .topRail.homeTopBarPrototype .utilityIcon.is-click-reset:focus,
+header .topRail.homeTopBarPrototype .utilityIcon.is-click-reset:focus-visible{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  outline:none!important;
+  text-decoration:none!important;
+  transform:none!important;
 }
 header .topRail.homeTopBarPrototype .utilityIcon::before,
 header .topRail.homeTopBarPrototype .utilityIcon::after{
@@ -1340,10 +1350,15 @@ header .topRail.homeTopBarPrototype .utilityIcon svg{
 header .topRail.homeTopBarPrototype .brandUtility img{
   transition:filter .18s ease,transform .18s ease!important;
 }
-header .topRail.homeTopBarPrototype .brandUtility:hover img,
-header .topRail.homeTopBarPrototype .brandUtility:focus img,
-header .topRail.homeTopBarPrototype .brandUtility:focus-visible img{
+header .topRail.homeTopBarPrototype .brandUtility:not(.is-click-reset):hover img,
+header .topRail.homeTopBarPrototype .brandUtility:not(.is-click-reset):focus-visible img{
   filter:brightness(0) saturate(100%) invert(58%) sepia(84%) saturate(534%) hue-rotate(355deg) brightness(93%) contrast(90%)!important;
+}
+header .topRail.homeTopBarPrototype .brandUtility.is-click-reset img,
+header .topRail.homeTopBarPrototype .brandUtility.is-click-reset:hover img,
+header .topRail.homeTopBarPrototype .brandUtility.is-click-reset:focus img,
+header .topRail.homeTopBarPrototype .brandUtility.is-click-reset:focus-visible img{
+  filter:none!important;
 }
 header .topRail.homeTopBarPrototype .linkedInUtility svg{
   display:block!important;
@@ -1359,15 +1374,19 @@ header .topRail.homeTopBarPrototype .linkedInUtility .linkedInLogoShape{
 header .topRail.homeTopBarPrototype .linkedInUtility .linkedInLogoLetters{
   fill:#fff!important;
 }
-header .topRail.homeTopBarPrototype .linkedInUtility:hover,
-header .topRail.homeTopBarPrototype .linkedInUtility:focus,
-header .topRail.homeTopBarPrototype .linkedInUtility:focus-visible{
+header .topRail.homeTopBarPrototype .linkedInUtility:not(.is-click-reset):hover,
+header .topRail.homeTopBarPrototype .linkedInUtility:not(.is-click-reset):focus-visible{
   outline:none!important;
 }
-header .topRail.homeTopBarPrototype .linkedInUtility:hover .linkedInLogoShape,
-header .topRail.homeTopBarPrototype .linkedInUtility:focus .linkedInLogoShape,
-header .topRail.homeTopBarPrototype .linkedInUtility:focus-visible .linkedInLogoShape{
+header .topRail.homeTopBarPrototype .linkedInUtility:not(.is-click-reset):hover .linkedInLogoShape,
+header .topRail.homeTopBarPrototype .linkedInUtility:not(.is-click-reset):focus-visible .linkedInLogoShape{
   fill:#d7a84f!important;
+}
+header .topRail.homeTopBarPrototype .linkedInUtility.is-click-reset .linkedInLogoShape,
+header .topRail.homeTopBarPrototype .linkedInUtility.is-click-reset:hover .linkedInLogoShape,
+header .topRail.homeTopBarPrototype .linkedInUtility.is-click-reset:focus .linkedInLogoShape,
+header .topRail.homeTopBarPrototype .linkedInUtility.is-click-reset:focus-visible .linkedInLogoShape{
+  fill:#0a66c2!important;
 }
 /* HOMEPAGE TOP BAR PROTOTYPE D1A END */
 </style>
@@ -2095,6 +2114,50 @@ in pipes, tubes, sheets, plates, coils, flanges and fittings for industrial appl
         closeMenu();
       }
     });
+    (function(){
+      const topBarLinks = document.querySelectorAll(".homeTopBarPrototype .utilityIcon");
+      if(!topBarLinks.length) return;
+      function markForClickReset(link){
+        link.classList.add("is-click-reset");
+        window.setTimeout(function(){
+          if(document.activeElement === link){
+            link.blur();
+          }
+        }, 0);
+      }
+      function blurActiveResetLink(){
+        const active = document.activeElement;
+        if(active && active.matches && active.matches(".homeTopBarPrototype .utilityIcon.is-click-reset")){
+          active.blur();
+        }
+      }
+      topBarLinks.forEach(function(link){
+        link.addEventListener("pointerdown", function(event){
+          if(event.pointerType === "mouse" || event.pointerType === "pen" || event.pointerType === "touch"){
+            markForClickReset(link);
+          }
+        });
+        link.addEventListener("click", function(event){
+          if(event.detail > 0){
+            markForClickReset(link);
+          }
+        });
+        link.addEventListener("pointerleave", function(){
+          link.classList.remove("is-click-reset");
+        });
+        link.addEventListener("blur", function(){
+          if(!link.matches(":hover")){
+            link.classList.remove("is-click-reset");
+          }
+        });
+      });
+      window.addEventListener("focus", blurActiveResetLink);
+      document.addEventListener("visibilitychange", function(){
+        if(!document.hidden){
+          blurActiveResetLink();
+        }
+      });
+    })();
   </script>
 
 <script>

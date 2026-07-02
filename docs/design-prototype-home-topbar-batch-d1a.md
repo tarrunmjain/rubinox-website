@@ -159,6 +159,63 @@ D1A-R2 QA results:
 - `npm.cmd run qa:forbidden-claims`: completed; 358 files scanned, 591 matches flagged for review, no files rewritten.
 - `git diff --check`: passed; Git reported only the expected LF-to-CRLF working-copy warning for `index.html`.
 
+## D1A-R3 post-click icon state correction
+
+Owner feedback identified one remaining interaction issue: after a homepage top bar icon opened a new tab, returning to the homepage tab could leave the clicked icon visually stuck in the gold lifted hover/focus state.
+
+Root cause identified:
+
+- The D1A-R2 CSS still allowed the approved gold/lift state through focus-visible selectors that were not fully guarded by the temporary reset state.
+- Browser focus and pointer hover could remain on the clicked top bar link after opening a new tab, so the icon could continue matching a visual active/hover path when the user returned.
+
+Correction completed:
+
+- Homepage top bar gold/lift styling is now limited to `.homeTopBarPrototype .utilityIcon:not(.is-click-reset):hover` and `.homeTopBarPrototype .utilityIcon:not(.is-click-reset):focus-visible`.
+- A small homepage-only helper now applies `is-click-reset` to top bar icons after pointer activation, blurs the clicked link, suppresses the gold/lift state while the pointer remains over it, and removes the reset class on `pointerleave`.
+- The helper also checks `window.focus` and `visibilitychange` so a focused reset icon is blurred when the user returns to the homepage tab.
+- Keyboard accessibility is preserved because keyboard activation is not treated as pointer activation, and focus-visible styling remains available for keyboard users.
+- The approved visual design was not changed: the left text remains plain silver, default icon colors remain unchanged, and normal hover still turns the icon itself Rubinox gold with a slight lift.
+
+Manual browser verification:
+
+- Call, WhatsApp, Email, Facebook, Instagram, and LinkedIn were checked in Chromium.
+- Each icon turned gold and lifted on hover.
+- Each icon reset to its default color and normal position after click/return.
+- Each icon hovered normally again after pointer leave and re-enter.
+- Facebook and LinkedIn were checked with new-tab return screenshots.
+- LinkedIn still uses the two-layer inline SVG; on hover only the LinkedIn logo shape turns Rubinox gold and the `in` letters remain white.
+- No hover box, background box, border, box shadow, outline box, underline, or gold line was introduced.
+
+D1A-R3 screenshot folder:
+
+- `C:\Users\Dell\AppData\Local\Temp\rubinox-d1a-r3-topbar-click-reset`
+
+D1A-R3 confirmations:
+
+- Scope remains homepage-only through `header .topRail.homeTopBarPrototype`.
+- Non-home HTML pages were not changed.
+- The non-home visual check used `company-profile.html` at 1366px and 390px.
+- SEO/meta/canonical/schema/sitemap/analytics were not changed.
+- GA4 remains `G-JT5X5L5H07`.
+- Old GA4 ID `G-CR18QYPS6C` remains absent.
+- No raw GST/Udyam/IEC numbers were added.
+- No manufacturing, stock, price, fake certification, client, project, testimonial, rating, factory, or delivery guarantee claims were added.
+- Sitewide replication was not performed.
+- D1B design lock was not created yet.
+
+D1A-R3 QA results:
+
+- `npm.cmd run qa:sitemap`: passed.
+- `npm.cmd run qa:crawl`: passed.
+- `npm.cmd run qa:schema`: passed.
+- `npm.cmd run qa:accessibility`: passed.
+- `npm.cmd run test:navigation`: passed.
+- `npm.cmd run qa:html`: passed.
+- `npm.cmd run qa:links`: passed.
+- `npm.cmd run qa:pa11y`: passed.
+- `npm.cmd run qa:forbidden-claims`: completed with no files rewritten.
+- `git diff --check`: passed.
+
 ## Owner Review Note
 
 Owner must review the live homepage before this top bar design is locked or replicated sitewide.
