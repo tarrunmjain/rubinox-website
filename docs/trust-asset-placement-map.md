@@ -9,9 +9,9 @@ Use this map only after the owner provides the asset, approves public use and co
 
 | Asset | Primary placement | Secondary placement | Publish publicly? | Proof required | Safe wording rule |
 | --- | --- | --- | --- | --- | --- |
-| GST number | Registrations & Compliance | Company profile PDF | Yes, status card only | Owner-approved GSTIN 27ABNFR3678P1Z3 | State as registration detail, not quality certification |
-| MSME/Udyam details | Registrations & Compliance | Company profile PDF | Yes, status card only | Owner-approved UDYAM-MH-19-0443205 | Do not imply benefits or approval beyond registration |
-| IEC details | Registrations & Compliance | Export hub, company profile PDF | Yes, status card only | Owner-approved IEC ABNFR3678P | Use for export identity; avoid export guarantee language |
+| GST number | Registrations & Compliance | Company profile PDF | Yes, status card only | Owner-approved GSTIN 27ABNFR3678P1Z3 | State as registration detail, not quality certification; visible card uses Batch 13C simplified fields only |
+| MSME/Udyam details | Registrations & Compliance | Company profile PDF | Yes, status card only | Owner-approved UDYAM-MH-19-0443205 | Do not imply benefits or approval beyond registration; visible card uses Batch 13C simplified fields only |
+| IEC details | Registrations & Compliance | Export hub, company profile PDF | Yes, status card only | Owner-approved IEC ABNFR3678P | Use for export identity; avoid export guarantee language; visible card uses Batch 13C simplified fields only |
 | Certificate/document images | Quality Documentation Support | Registrations, company profile PDF | No public full PDF display unless separately approved | Original documents exist, but GST annexures include private details/photos | Do not publish full GST/Udyam/IEC PDFs in this batch |
 | MTC sample image | Quality Documentation Support | Technical resources, RFQ checklist | Only if generic/sample or redacted and approved | Redacted real sample or owner-approved sample | Label as sample/reference, not guaranteed for every item |
 | PMI/report sample | Quality Documentation Support | Technical resources | Only if real/redacted and approved | Redacted real sample and scope note | State that PMI is reviewed where applicable |

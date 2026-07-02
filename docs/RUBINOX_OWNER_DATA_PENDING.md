@@ -1,18 +1,18 @@
 # Rubinox Owner Data Pending
 
 Date: 2026-06-29
-Last updated: 2026-07-02 for Batch 13B final lock and monitoring control.
+Last updated: 2026-07-02 for Batch 13C registration trust card cleanup.
 Purpose: track owner-supplied data needed for trust, measurement and conversion upgrades.
 
 Do not invent, infer or publish any item on this list without owner verification and approval.
 
 | asset | needed_for | publish_publicly? | owner_status | verification_needed | risk | priority | notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| GST number | Registrations/compliance and company profile PDF | Yes | Confirmed owner-approved | GSTIN 27ABNFR3678P1Z3; legal/trade name RUBINOX METAL AND ALLOYS; Partnership; Regular; valid from 01/06/2026 | Medium | P0 | Display as GST registration detail only, not certification |
+| GST number | Registrations/compliance and company profile PDF | Yes | Confirmed owner-approved | Public card fields: trade name RUBINOX METAL AND ALLOYS; GSTIN 27ABNFR3678P1Z3; constitution Partnership; registration type Regular | Medium | P0 | Display as GST registration detail only, not certification; public card simplified in Batch 13C |
 | GST public display approval | Public registration references | Yes | Confirmed owner-approved | Owner confirmation received 2026-07-02 | Medium | P0 | Display GSTIN/status card only; do not publish full GST certificate PDF |
-| MSME/Udyam details | Registrations page and company profile PDF | Yes | Confirmed owner-approved | UDYAM-MH-19-0443205; Micro, 2026-27; Trading; registration date 17/06/2026 | Medium | P0 | Display Udyam number/status card only |
+| MSME/Udyam details | Registrations page and company profile PDF | Yes | Confirmed owner-approved | Public card fields: company name RUBINOX METAL AND ALLOYS; Udyam Registration No. UDYAM-MH-19-0443205; Enterprise classification Micro, 2026-27; Major activity Trading | Medium | P0 | Display Udyam number/status card only; public card simplified in Batch 13C |
 | MSME/Udyam public display approval | Public trust proof | Yes | Confirmed owner-approved | Owner confirmation received 2026-07-02 | Medium | P0 | Do not imply benefits or approvals beyond registration |
-| IEC details | Export credibility and company profile PDF | Yes | Confirmed owner-approved | IEC ABNFR3678P; PAN ABNFR3678P; Partnership; issue date 23/06/2026 | Medium | P0 | Display IEC number/status card only |
+| IEC details | Export credibility and company profile PDF | Yes | Confirmed owner-approved | Public card fields: firm name RUBINOX METAL AND ALLOYS; IEC ABNFR3678P; nature of concern Partnership | Medium | P0 | Display IEC number/status card only; public card simplified in Batch 13C |
 | IEC public display approval | Export page/profile trust proof | Yes | Confirmed owner-approved | Owner confirmation received 2026-07-02 | Medium | P0 | Do not imply export guarantee or approval |
 | Certificate/document images | Trust pages and documentation support | No public full PDF display unless separately approved | Files available; public display restricted | GST/Udyam/IEC certificate files exist, but GST annexures include private partner details/photos | High | P0 | Use registration status cards only; do not publish full certificate PDFs |
 | MTC sample document/image | Quality documentation support | Only if redacted/approved | Pending owner | Redacted sample and owner approval | Medium | P2 | Label as sample/reference, not guaranteed |

@@ -12,9 +12,9 @@ This report records the owner-verified trust details that were approved for publ
 
 | Area | Public status | Approved public detail | Display limit |
 | --- | --- | --- | --- |
-| GST | Approved for public display | GSTIN 27ABNFR3678P1Z3; legal and trade name RUBINOX METAL AND ALLOYS; constitution Partnership; registration type Regular; valid from 01/06/2026 | GSTIN/status card only; do not publish full GST certificate PDF |
-| Udyam / MSME | Approved for public display | UDYAM-MH-19-0443205; enterprise type Micro for 2026-2027; major activity Trading; registration date 17/06/2026 | Udyam number/status card only |
-| IEC | Approved for public display | IEC ABNFR3678P; PAN ABNFR3678P; firm name RUBINOX METAL AND ALLOYS; nature of concern Partnership; issue date 23/06/2026 | IEC number/status card only |
+| GST | Approved for public display | Trade name RUBINOX METAL AND ALLOYS; GSTIN 27ABNFR3678P1Z3; constitution Partnership; registration type Regular | GSTIN/status card only; do not publish full GST certificate PDF |
+| Udyam / MSME | Approved for public display | Company name RUBINOX METAL AND ALLOYS; UDYAM-MH-19-0443205; enterprise classification Micro, 2026-27; major activity Trading | Udyam number/status card only |
+| IEC | Approved for public display | Firm name RUBINOX METAL AND ALLOYS; IEC ABNFR3678P; nature of concern Partnership | IEC number/status card only |
 | Google Business Profile | Approved for public link use | https://share.google/r7Mz2LfkMJdfYQl76 | Link only; no rating, review count or review snippets |
 | Google review link and QR | Approved for review invitation | https://g.page/r/CV2a6BfdDB4WEBM/review | Review invitation only; no rating, count or testimonial claims |
 | Social links | Approved | LinkedIn, Instagram and Facebook official URLs | YouTube not available; do not add a placeholder |
@@ -67,3 +67,6 @@ Live QA confirmed:
 Use only these business identity terms unless the owner separately verifies more: stockist, supplier, importer, exporter and project supplier.
 
 Do not use manufacturer, factory, mill, plant, production, in-house testing, ready stock, stock guarantee, price promise, delivery guarantee, fake ISO/PED/NORSOK/IBR/EIL/DNV/Lloyds approval, client reference, project reference, testimonial, review snippet or rating claim.
+## Batch 13C Registration Card Cleanup Note
+
+Batch 13C simplified the visible public GST, MSME/Udyam and IEC status-card fields. Public cards no longer show GST valid-from date, Udyam registration date, IEC issue date or IEC PAN. The public company profile PDF was regenerated with the same simplified field set.
