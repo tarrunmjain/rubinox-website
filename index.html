@@ -1297,93 +1297,14 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
 @media(max-width:760px){header .topRail .railNote{display:block!important;font-size:11.5px!important}header .topRail .railLinks.utilityIcons{gap:6px!important}.faqGrid,.relGrid{grid-template-columns:1fr!important;gap:14px!important}.faqItem{padding:20px!important}.siteFooter .footerLayout{grid-template-columns:1fr!important;padding:28px 18px!important}.siteFooter .footerBrand img{max-width:190px!important}.siteFooter .footerIconGroup{flex-wrap:nowrap!important;gap:6px!important}.siteFooter .footerIconGroup .footerIcon{width:32px!important;height:32px!important;min-width:32px!important;min-height:32px!important;max-width:32px!important;max-height:32px!important}}
 /* RUBINOX FOOTER STANDARDIZATION END */
 
-/* RUBINOX D2A HOMEPAGE HEADER PROTOTYPE START */
-header.home-header-prototype-d2a .nav{
-  min-height:76px!important;
-  padding:5px 0!important;
-  gap:18px!important;
-  border-bottom:1px solid rgba(216,224,236,.74);
-}
-header.home-header-prototype-d2a .brand{
-  align-items:center;
-  filter:none!important;
-}
-header.home-header-prototype-d2a .brand img{
-  width:292px!important;
-  height:auto!important;
-  max-height:70px!important;
-  object-fit:contain!important;
-  image-rendering:auto;
-  filter:none!important;
-}
-header.home-header-prototype-d2a .desktopNav{
-  display:flex!important;
-  margin-left:auto;
-}
-header.home-header-prototype-d2a .menuToggle{
-  display:none!important;
-}
-header.home-header-prototype-d2a .navlinks{
-  gap:8px!important;
-}
-header.home-header-prototype-d2a .navDropToggle,
-header.home-header-prototype-d2a .navTextLink{
-  min-height:34px!important;
-  padding:8px 6px!important;
-  border-radius:6px!important;
-  background:transparent!important;
-  color:#1b2b52!important;
-  font-size:12.5px!important;
-  font-weight:850!important;
-  letter-spacing:0!important;
-  transition:color .18s ease,transform .18s ease;
-}
-header.home-header-prototype-d2a .navDropToggle:hover,
-header.home-header-prototype-d2a .navDropToggle:focus-visible,
-header.home-header-prototype-d2a .navTextLink:hover,
-header.home-header-prototype-d2a .navTextLink:focus-visible{
-  background:transparent!important;
-  color:#d7a84f!important;
-  transform:translateY(-1px);
-  outline:none!important;
-}
-header.home-header-prototype-d2a .navDropToggle span{
-  color:currentColor!important;
-}
-header.home-header-prototype-d2a .megaMenu{
-  top:calc(100% + 8px)!important;
-  border-color:rgba(19,42,99,.13)!important;
-  box-shadow:0 18px 44px rgba(7,16,31,.14)!important;
-}
-header.home-header-prototype-d2a .megaMenu a{
-  background:#fff!important;
-  color:#132a63!important;
-  transition:color .18s ease,border-color .18s ease;
-}
-header.home-header-prototype-d2a .megaMenu a:hover,
-header.home-header-prototype-d2a .megaMenu a:focus-visible{
-  background:#fff!important;
-  border-color:rgba(215,168,79,.42)!important;
-  color:#d7a84f!important;
-  outline:none!important;
-}
-@media(max-width:1020px){
-  header.home-header-prototype-d2a .desktopNav{display:none!important}
-  header.home-header-prototype-d2a .menuToggle{display:inline-flex!important}
-  header.home-header-prototype-d2a .nav{min-height:68px!important;padding:8px 0!important;gap:10px!important}
-  header.home-header-prototype-d2a .brand img{width:214px!important;max-height:52px!important}
-}
-@media(max-width:640px){
-  header.home-header-prototype-d2a .brand img{width:184px!important;max-width:60vw!important;max-height:46px!important}
-}
-/* RUBINOX D2A HOMEPAGE HEADER PROTOTYPE END */
 </style>
 <link rel="stylesheet" href="/assets/css/topbar-lock-v1.css">
+<link rel="stylesheet" href="/assets/css/header-lock-v1.css">
 <script src="/assets/js/topbar-lock-v1.js" defer></script>
 </head>
 <body>
 <a class="skipLink" href="#main-content">Skip to main content</a>
-  <header class="home-header-prototype-d2a">
+  <header class="header-lock-v1">
   <div class="topRail topbar-lock-v1">
     <div class="wrap">
       <span class="railNote">Stockist | Supplier | Importer | Exporter | Project Supplier</span>
@@ -1401,7 +1322,7 @@ header.home-header-prototype-d2a .megaMenu a:focus-visible{
     <div class="nav">
       <a class="brand" href="/" aria-label="Rubinox Home"><img width="360" height="87" src="/logo.png" alt="Rubinox Metal and Alloys" decoding="async"></a>
       <nav class="navlinks desktopNav" aria-label="Main navigation">
-        <a class="navTextLink" href="/" aria-current="page">HOME</a>
+        <a class="navTextLink" href="/">HOME</a>
         <div class="navDropdown">
           <button type="button" class="navDropToggle" aria-haspopup="true" aria-expanded="false" aria-controls="companyMega">COMPANY PROFILE <span aria-hidden="true">&#9662;</span></button>
           <div class="megaMenu" id="companyMega">
@@ -1429,7 +1350,7 @@ header.home-header-prototype-d2a .megaMenu a:focus-visible{
     </div>
     <div class="mobileMenu" id="mobileMenu">
       <nav class="mobileMenuPanel" aria-label="Mobile navigation">
-        <a href="/" aria-current="page">Home</a>
+        <a href="/">Home</a>
         <div class="mobileAccordion">
           <button type="button" class="mobileAccordionToggle" data-mobile-accordion aria-expanded="false">Company Profile</button>
           <div class="mobileAccordionPanel">
@@ -1444,7 +1365,6 @@ header.home-header-prototype-d2a .megaMenu a:focus-visible{
         <div class="mobileAccordion">
           <button type="button" class="mobileAccordionToggle" data-mobile-accordion aria-expanded="false">Product Portfolio</button>
           <div class="mobileAccordionPanel">
-
             <a href="/materials.html">Materials</a>
             <a href="/product-forms.html">Product Forms</a>
             <a href="/grades.html">Grades</a>

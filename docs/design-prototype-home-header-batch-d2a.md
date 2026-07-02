@@ -119,7 +119,100 @@ D2A-R3 screenshot folders:
 
 D2A-R3 is homepage-only. Header Lock V1 was not created. Sitewide header replication was not performed. Non-home pages remain unchanged.
 
-## Exact Scope
+## D2B-D2C Header Lock And Sitewide Replication
+
+Owner reviewed the live D2A-R3 homepage header and approved finalization:
+
+`PERFECT. FINALISE IT AND DO SITE WIDE AND CREATE DESIGN PACK FOR HEADER FOR FUTURE PAGES.`
+
+D2B-D2C promotes the approved homepage-only D2A-R3 header into Header Lock V1 and replicates it across every public HTML page.
+
+Final lock documents:
+
+- `docs/design-system/RUBINOX_HEADER_LOCK_V1.md`
+- `docs/design-system/RUBINOX_DESIGN_FINGERPRINT.md`
+
+Final shared implementation asset:
+
+- `assets/css/header-lock-v1.css`
+
+Sitewide implementation class:
+
+```html
+<header class="header-lock-v1">
+```
+
+The old homepage-only prototype class is superseded and must not be used for future pages:
+
+```html
+home-header-prototype-d2a
+```
+
+Final sitewide desktop nav order:
+
+1. `HOME`
+2. `COMPANY PROFILE`
+3. `PRODUCT PORTFOLIO`
+4. `REQUEST A QUOTE`
+5. `KNOWLEDGE HUB`
+6. `CONTACT`
+
+D2B-D2C preserves the approved D2A-R3 header decisions:
+
+- Desktop full header remains about `117px`.
+- Main header band remains about `81px`.
+- Approved top bar remains about `35px`.
+- Desktop logo remains about `292px x 70px`.
+- Mobile logo remains about `184px x 44.45px` at 390px.
+- Logo uses `filter:none!important` on both `.brand` and `.brand img`.
+- No logo drop-shadow, blur, glow, transform, animation, 3D effect, color change, crop, or asset swap is used.
+- Desktop nav remains visible at 1366px and 1280px.
+- Hamburger remains active on tablet/mobile.
+- Desktop WhatsApp RFQ remains skipped.
+- Mobile `WhatsApp Quote` remains preserved.
+- Dropdown contents are preserved and no links are invented.
+- Top Bar Lock V1 remains visually and behaviorally untouched.
+
+Baseline QA before D2B-D2C edits:
+
+- `npm.cmd run qa:sitemap`: 261 sitemap URLs, 261 local HTML pages, 0 missing, 0 unmatched, 0 duplicates.
+- `npm.cmd run qa:crawl`: 399 links scanned successfully.
+- `npm.cmd run qa:schema`: 261 HTML pages, 866 JSON-LD blocks, 0 invalid.
+- `npm.cmd run qa:accessibility`: 5 configured pages, 0 Axe violations.
+- `npm.cmd run test:navigation`: passed.
+- `npm.cmd run qa:html`: 261 HTML pages, 0 invalid.
+- `npm.cmd run qa:links`: 399 links scanned successfully.
+- `npm.cmd run qa:pa11y`: 9/9 URLs passed; quotation page remained at 5 existing errors within the configured threshold of 7.
+- `npm.cmd run qa:forbidden-claims`: 363 files scanned, 602 matches flagged for review, no files rewritten.
+- `git diff --check`: passed.
+
+D2B-D2C screenshot folders:
+
+- Sitewide header screenshots: `C:\Users\Dell\AppData\Local\Temp\rubinox-d2b-d2c-header-sitewide`
+- Header hover/dropdown screenshots: `C:\Users\Dell\AppData\Local\Temp\rubinox-d2b-d2c-header-hover-dropdown`
+- Mobile menu screenshots: `C:\Users\Dell\AppData\Local\Temp\rubinox-d2b-d2c-header-mobile`
+
+D2B-D2C visual verification:
+
+- Representative pages checked: homepage, company profile, SS 304 material page, quotation page, blog page, and Mumbai location page.
+- Desktop widths checked: `1366px` and `1280px`.
+- Desktop full header measured `117px`.
+- Desktop top bar measured `35px`.
+- Desktop main header band measured `81px`.
+- Desktop logo measured `292px x 70px`.
+- Desktop nav display measured `flex`; hamburger measured hidden.
+- Contact hover color measured `rgb(215, 168, 79)`.
+- Company dropdown opened with visibility `visible`.
+- Dropdown item hover color measured `rgb(215, 168, 79)`.
+- LinkedIn hover measured logo shape `rgb(215, 168, 79)` and letters `rgb(255, 255, 255)`.
+- Mobile width checked: `390px`.
+- Mobile logo measured `184px x 44.45px`.
+- Mobile desktop nav measured hidden and hamburger measured visible.
+- Mobile menu opened with `aria-expanded="true"` and `Home` as the first mobile link.
+
+D2B-D2C does not change hero, trust strip, cards, CTAs, footer content, public SEO URLs, titles, meta descriptions, canonical URLs, JSON-LD, sitemap URLs, or GA4 tracking.
+
+## D2A Exact Scope
 
 Homepage only.
 
