@@ -216,10 +216,36 @@ D1A-R3 QA results:
 - `npm.cmd run qa:forbidden-claims`: completed with no files rewritten.
 - `git diff --check`: passed.
 
+## Approved and promoted to Top Bar Lock V1
+
+The owner reviewed the live homepage top bar after D1A-R3 and approved it with the note: `CHECKED AND PASS.`
+
+Final promotion batch:
+
+- Batch name: D1B-D1C - Top Bar Design Lock + Sitewide Replication.
+- Top bar lock doc: `docs/design-system/RUBINOX_TOPBAR_LOCK_V1.md`.
+- Design fingerprint path: `docs/design-system/RUBINOX_DESIGN_FINGERPRINT.md`.
+- Shared CSS asset: `assets/css/topbar-lock-v1.css`.
+- Shared JS asset: `assets/js/topbar-lock-v1.js`.
+
+Promotion completed in this batch:
+
+- The approved homepage top bar was promoted from the D1A prototype into final class `topbar-lock-v1`.
+- The old homepage-only prototype class is no longer used in public HTML as the implementation class.
+- The approved top bar was replicated across all 261 public sitemap pages.
+- The final top bar keeps the approved silver text, empty center, icon order, icon-only gold hover/lift, LinkedIn two-layer SVG, and post-click reset behavior.
+- Sitewide replication was performed only for the top bar.
+- Header navigation, hero sections, trust strips, cards, footer, SEO tags, schema, sitemap, analytics, images, PDFs, and contact details were not intentionally redesigned or changed.
+
+D1B-D1C screenshot folders:
+
+- Sitewide screenshots: `C:\Users\Dell\AppData\Local\Temp\rubinox-topbar-lock-v1-sitewide`
+- Hover/click screenshots: `C:\Users\Dell\AppData\Local\Temp\rubinox-topbar-lock-v1-hover-click`
+
 ## Owner Review Note
 
-Owner must review the live homepage before this top bar design is locked or replicated sitewide.
+Owner must now review the sitewide top bar replication before the workflow moves to the next section.
 
 ## Next Step
 
-After owner approval: D1B — Create Top Bar Design Lock / Design Fingerprint. Do not replicate sitewide until approval.
+After owner approval of the sitewide top bar: move to the next section, Header.
