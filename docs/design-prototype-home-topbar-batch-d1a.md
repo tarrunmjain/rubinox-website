@@ -109,6 +109,56 @@ Inline SVG icons use `currentColor`; image-based brand icons use a scoped filter
 - `npm.cmd run qa:forbidden-claims`: completed; 357 files scanned, 589 matches flagged for review, no files rewritten.
 - `git diff --check`: passed; Git reported only the expected LF-to-CRLF working-copy warning for `index.html`.
 
+## D1A-R2 owner correction
+
+Owner feedback required a second homepage-only top bar correction after the D1A prototype was live-reviewed.
+
+Corrections completed:
+
+- The left top bar text remains exactly `Stockist | Supplier | Importer | Exporter | Project Supplier`.
+- The clipped metallic gradient/stripe text effect was removed.
+- The text now uses a plain premium silver color with a soft text-shadow for subtle lift.
+- Homepage top bar icon hover/focus now uses icon-only gold behavior.
+- Hover/focus background, border, outline, box-shadow, underline, pseudo-element, and extra box effects were removed from the homepage prototype icons.
+- Each homepage top bar icon lifts slightly on hover/focus with `translateY(-2px)`.
+- The LinkedIn top bar icon keeps the already-started two-layer inline SVG correction.
+- On LinkedIn hover/focus, only the LinkedIn logo shape changes to Rubinox gold.
+- The LinkedIn `in` letters remain white on hover/focus.
+- No extra outer LinkedIn hover box, border, background, outline, or shadow is applied.
+
+Screenshot folders for D1A-R2:
+
+- Before screenshots: `C:\Users\Dell\AppData\Local\Temp\rubinox-d1a-r2-topbar-before`
+- After screenshots: `C:\Users\Dell\AppData\Local\Temp\rubinox-d1a-r2-topbar-after`
+- Hover screenshots: `C:\Users\Dell\AppData\Local\Temp\rubinox-d1a-r2-topbar-hover`
+- Non-home check screenshots: `C:\Users\Dell\AppData\Local\Temp\rubinox-d1a-r2-nonhome-check`
+
+D1A-R2 confirmations:
+
+- Scope remains homepage-only through `header .topRail.homeTopBarPrototype`.
+- Non-home HTML pages were not changed.
+- The non-home top bar visual check used `company-profile.html`.
+- D1B lock has not been created yet.
+- Sitewide replication was not performed.
+- SEO/meta/canonical/schema/sitemap/analytics were not changed.
+- GA4 remains `G-JT5X5L5H07`.
+- Old GA4 ID `G-CR18QYPS6C` remains absent.
+- No raw GST/Udyam/IEC numbers were added.
+- No manufacturing, stock, price, fake certification, client, project, testimonial, rating, or delivery guarantee claims were added.
+
+D1A-R2 QA results:
+
+- `npm.cmd run qa:sitemap`: passed; 261 sitemap URLs, 261 local HTML pages, 0 missing, 0 unmatched, 0 duplicates.
+- `npm.cmd run qa:crawl`: passed; 397 links scanned successfully.
+- `npm.cmd run qa:schema`: passed; 261 HTML pages scanned, 866 JSON-LD blocks found, 0 invalid JSON-LD blocks.
+- `npm.cmd run qa:accessibility`: passed; 5 configured pages checked, 0 total violations.
+- `npm.cmd run test:navigation`: passed; navigation verification passed.
+- `npm.cmd run qa:html`: passed; 261 pages checked, 0 invalid pages.
+- `npm.cmd run qa:links`: passed; 397 links scanned successfully.
+- `npm.cmd run qa:pa11y`: passed; 9/9 URLs passed, homepage 0 errors, quotation page 5 existing errors within threshold.
+- `npm.cmd run qa:forbidden-claims`: completed; 358 files scanned, 591 matches flagged for review, no files rewritten.
+- `git diff --check`: passed; Git reported only the expected LF-to-CRLF working-copy warning for `index.html`.
+
 ## Owner Review Note
 
 Owner must review the live homepage before this top bar design is locked or replicated sitewide.

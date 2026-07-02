@@ -1299,12 +1299,12 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
 /* HOMEPAGE TOP BAR PROTOTYPE D1A START */
 header .topRail.homeTopBarPrototype .railNote{
   display:inline!important;
-  color:#e6edf7!important;
-  background:linear-gradient(180deg,#ffffff 0%,#edf2f8 30%,#aeb9c7 52%,#f8fafc 68%,#c8d1dc 100%);
-  -webkit-background-clip:text;
-  background-clip:text;
-  -webkit-text-fill-color:transparent;
-  text-shadow:0 1px 0 rgba(255,255,255,.16),0 2px 5px rgba(0,0,0,.28);
+  color:#d8dde6!important;
+  background:none!important;
+  -webkit-background-clip:border-box!important;
+  background-clip:border-box!important;
+  -webkit-text-fill-color:currentColor!important;
+  text-shadow:0 1px 0 rgba(255,255,255,.18),0 2px 4px rgba(0,0,0,.35);
   letter-spacing:.01em;
 }
 header .topRail.homeTopBarPrototype .utilityIcon,
@@ -1315,20 +1315,24 @@ header .topRail.homeTopBarPrototype .socialUtility{
   border:0!important;
   box-shadow:none!important;
   color:#d8e0ec!important;
-  transition:color .18s ease,transform .18s ease,filter .18s ease,outline-color .18s ease!important;
+  outline:none!important;
+  text-decoration:none!important;
+  transition:color .18s ease,transform .18s ease,filter .18s ease!important;
 }
 header .topRail.homeTopBarPrototype .utilityIcon:hover,
+header .topRail.homeTopBarPrototype .utilityIcon:focus,
 header .topRail.homeTopBarPrototype .utilityIcon:focus-visible{
   background:transparent!important;
   border:0!important;
   box-shadow:none!important;
-  color:#e2a02f!important;
+  outline:none!important;
+  color:#d7a84f!important;
   transform:translateY(-2px)!important;
 }
-header .topRail.homeTopBarPrototype .utilityIcon:focus-visible{
-  outline:1.5px solid rgba(226,160,47,.72)!important;
-  outline-offset:4px!important;
-  border-radius:999px!important;
+header .topRail.homeTopBarPrototype .utilityIcon::before,
+header .topRail.homeTopBarPrototype .utilityIcon::after{
+  content:none!important;
+  display:none!important;
 }
 header .topRail.homeTopBarPrototype .utilityIcon svg{
   stroke:currentColor!important;
@@ -1337,8 +1341,33 @@ header .topRail.homeTopBarPrototype .brandUtility img{
   transition:filter .18s ease,transform .18s ease!important;
 }
 header .topRail.homeTopBarPrototype .brandUtility:hover img,
+header .topRail.homeTopBarPrototype .brandUtility:focus img,
 header .topRail.homeTopBarPrototype .brandUtility:focus-visible img{
   filter:brightness(0) saturate(100%) invert(58%) sepia(84%) saturate(534%) hue-rotate(355deg) brightness(93%) contrast(90%)!important;
+}
+header .topRail.homeTopBarPrototype .linkedInUtility svg{
+  display:block!important;
+  width:18px!important;
+  height:18px!important;
+  stroke:none!important;
+  fill:none!important;
+}
+header .topRail.homeTopBarPrototype .linkedInUtility .linkedInLogoShape{
+  fill:#0a66c2!important;
+  transition:fill .18s ease!important;
+}
+header .topRail.homeTopBarPrototype .linkedInUtility .linkedInLogoLetters{
+  fill:#fff!important;
+}
+header .topRail.homeTopBarPrototype .linkedInUtility:hover,
+header .topRail.homeTopBarPrototype .linkedInUtility:focus,
+header .topRail.homeTopBarPrototype .linkedInUtility:focus-visible{
+  outline:none!important;
+}
+header .topRail.homeTopBarPrototype .linkedInUtility:hover .linkedInLogoShape,
+header .topRail.homeTopBarPrototype .linkedInUtility:focus .linkedInLogoShape,
+header .topRail.homeTopBarPrototype .linkedInUtility:focus-visible .linkedInLogoShape{
+  fill:#d7a84f!important;
 }
 /* HOMEPAGE TOP BAR PROTOTYPE D1A END */
 </style>
@@ -1355,7 +1384,7 @@ header .topRail.homeTopBarPrototype .brandUtility:focus-visible img{
         <a class="utilityIcon functionIcon" href="mailto:tarun@rubinoxmetal.com" aria-label="Email Rubinox" title="Email Rubinox"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg></a>
         <a class="utilityIcon brandUtility socialUtility" href="https://www.facebook.com/people/Rubinox-Metal-And-Alloys/61590518053054/" target="_blank" rel="noopener noreferrer" aria-label="Follow Rubinox on Facebook" title="Facebook"><img src="/assets/icons/social/facebook.svg" width="18" height="18" alt="" aria-hidden="true" loading="lazy"></a>
         <a class="utilityIcon brandUtility socialUtility" href="https://www.instagram.com/rubinox_metal/" target="_blank" rel="noopener noreferrer" aria-label="Follow Rubinox on Instagram" title="Instagram"><img src="/assets/icons/social/instagram.svg" width="18" height="18" alt="" aria-hidden="true" loading="lazy"></a>
-        <a class="utilityIcon brandUtility socialUtility" href="https://www.linkedin.com/company/rubinox-metal-and-alloys" target="_blank" rel="noopener noreferrer" aria-label="Follow Rubinox on LinkedIn" title="LinkedIn"><img src="/assets/icons/social/linkedin.ico" width="18" height="18" alt="" aria-hidden="true" loading="lazy"></a>
+        <a class="utilityIcon brandUtility socialUtility linkedInUtility" href="https://www.linkedin.com/company/rubinox-metal-and-alloys" target="_blank" rel="noopener noreferrer" aria-label="Follow Rubinox on LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect class="linkedInLogoShape" x="1" y="1" width="22" height="22" rx="3"></rect><circle class="linkedInLogoLetters" cx="7.1" cy="7.2" r="2"></circle><rect class="linkedInLogoLetters" x="5.35" y="10" width="3.5" height="8.8" rx=".25"></rect><path class="linkedInLogoLetters" d="M11 10h3.25v1.12c.5-.78 1.38-1.34 2.75-1.34 2.35 0 3.8 1.5 3.8 4.38v4.64h-3.5v-4.25c0-1.18-.42-1.88-1.36-1.88-.96 0-1.44.68-1.44 1.88v4.25H11V10Z"></path></svg></a>
       </div>
     </div>
   </div>
