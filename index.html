@@ -1306,7 +1306,7 @@ header.home-header-prototype-d2a .nav{
 }
 header.home-header-prototype-d2a .brand{
   align-items:center;
-  filter:drop-shadow(0 10px 18px rgba(7,16,31,.10));
+  filter:drop-shadow(0 4px 8px rgba(8,24,54,.12));
 }
 header.home-header-prototype-d2a .brand img{
   width:292px!important;
@@ -1314,7 +1314,7 @@ header.home-header-prototype-d2a .brand img{
   max-height:70px!important;
   object-fit:contain!important;
   image-rendering:auto;
-  filter:drop-shadow(0 1px 0 rgba(255,255,255,.55)) drop-shadow(0 7px 12px rgba(7,16,31,.16));
+  filter:drop-shadow(0 1px 0 rgba(255,255,255,.42)) drop-shadow(0 4px 8px rgba(8,24,54,.18)) drop-shadow(0 10px 16px rgba(19,42,99,.12));
 }
 header.home-header-prototype-d2a .desktopNav{
   display:flex!important;
@@ -1401,6 +1401,7 @@ header.home-header-prototype-d2a .megaMenu a:focus-visible{
     <div class="nav">
       <a class="brand" href="/" aria-label="Rubinox Home"><img width="360" height="87" src="/logo.png" alt="Rubinox Metal and Alloys" decoding="async"></a>
       <nav class="navlinks desktopNav" aria-label="Main navigation">
+        <a class="navTextLink" href="/" aria-current="page">HOME</a>
         <div class="navDropdown">
           <button type="button" class="navDropToggle" aria-haspopup="true" aria-expanded="false" aria-controls="companyMega">COMPANY PROFILE <span aria-hidden="true">&#9662;</span></button>
           <div class="megaMenu" id="companyMega">
@@ -1428,6 +1429,7 @@ header.home-header-prototype-d2a .megaMenu a:focus-visible{
     </div>
     <div class="mobileMenu" id="mobileMenu">
       <nav class="mobileMenuPanel" aria-label="Mobile navigation">
+        <a href="/" aria-current="page">Home</a>
         <div class="mobileAccordion">
           <button type="button" class="mobileAccordionToggle" data-mobile-accordion aria-expanded="false">Company Profile</button>
           <div class="mobileAccordionPanel">

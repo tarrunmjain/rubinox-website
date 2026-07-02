@@ -13,6 +13,61 @@ Create a homepage-only prototype for the next Rubinox header design pass after T
 - Homepage desktop navigation needed to show the main menu links directly.
 - Header navigation hover needed to feel premium and turn Rubinox gold like the approved top-bar icon hover.
 
+## D2A-R2 Owner Corrections
+
+Owner reviewed the live D2A homepage header and confirmed:
+
+`The size and everything is perfect.`
+
+R2 therefore preserves the approved D2A header height, spacing, desktop nav visibility, mobile hamburger behavior, dropdown behavior, and gold hover treatment. Only the owner-requested final corrections were applied.
+
+R2 corrections:
+
+- Strengthened the homepage logo stand-out effect with a scoped premium layered drop-shadow.
+- Added `HOME` to the homepage desktop navigation and mobile menu.
+- Checked the desktop WhatsApp RFQ header button and skipped it because it reduced clean 1280px desktop spacing with the approved `292px` logo and six required nav items.
+
+Final logo CSS treatment:
+
+```css
+header.home-header-prototype-d2a .brand{
+  filter:drop-shadow(0 4px 8px rgba(8,24,54,.12));
+}
+header.home-header-prototype-d2a .brand img{
+  filter:drop-shadow(0 1px 0 rgba(255,255,255,.42)) drop-shadow(0 4px 8px rgba(8,24,54,.18)) drop-shadow(0 10px 16px rgba(19,42,99,.12));
+}
+```
+
+No scale transform, animation, extra box, logo color change, or logo size change was added. Logo dimensions remain the approved D2A render size.
+
+Final homepage desktop nav order:
+
+1. `HOME`
+2. `COMPANY PROFILE`
+3. `PRODUCT PORTFOLIO`
+4. `REQUEST A QUOTE`
+5. `KNOWLEDGE HUB`
+6. `CONTACT`
+
+Fit confirmation:
+
+- At `1366px`, the full desktop nav is visible and the hamburger is hidden.
+- At `1280px`, the full desktop nav is visible and the hamburger is hidden.
+- Header height remains `117px` full sticky header and `81px` main header band at desktop widths.
+- Mobile closed header height remains unchanged at about `138px` at `390px` and `360px`.
+- Mobile menu opens cleanly at `390px` with `HOME` included at the top.
+
+R2 screenshot folders:
+
+- Before screenshots: `C:\Users\Dell\AppData\Local\Temp\rubinox-d2a-r2-header-before`
+- After screenshots: `C:\Users\Dell\AppData\Local\Temp\rubinox-d2a-r2-header-after`
+- Hover/dropdown screenshots: `C:\Users\Dell\AppData\Local\Temp\rubinox-d2a-r2-header-hover-dropdown`
+- Non-home check screenshots: `C:\Users\Dell\AppData\Local\Temp\rubinox-d2a-r2-header-nonhome-check`
+
+Top Bar Lock V1 remains untouched. Header Lock V1 was not created. Sitewide header replication was not performed. Non-home pages remain unchanged by D2A-R2.
+
+Owner must review the live homepage header again before Header Lock V1 is created.
+
 ## Exact Scope
 
 Homepage only.
@@ -107,15 +162,16 @@ Homepage desktop nav items implemented:
 
 | Item | Link / Behavior |
 | --- | --- |
+| `HOME` | `/` |
 | `COMPANY PROFILE` | Existing dropdown trigger; existing dropdown links preserved |
 | `PRODUCT PORTFOLIO` | Existing dropdown trigger; existing dropdown links preserved |
 | `REQUEST A QUOTE` | `/quotation.html` |
 | `KNOWLEDGE HUB` | `/blog.html` |
 | `CONTACT` | `/contact.html` |
 
-The homepage desktop header does not show `HOME`. The logo remains the homepage link.
+The homepage desktop header now shows `HOME` after the D2A-R2 owner correction. The logo also remains a homepage link.
 
-The previous desktop `WhatsApp Quote` header button was removed from the homepage desktop nav so the top-level homepage nav contains exactly the five requested items. The existing mobile `WhatsApp Quote` action remains.
+The desktop WhatsApp RFQ header button was checked in D2A-R2 and skipped because it reduced clean desktop spacing at 1280px with the approved logo size and six required nav items. The existing mobile `WhatsApp Quote` action remains.
 
 ## Dropdown Behavior
 
@@ -216,18 +272,11 @@ Do not implement this rule until owner approval and a later lock/replication bat
 
 When this header is later approved and replicated sitewide:
 
-- Homepage nav excludes `HOME`.
-- Non-home nav includes `HOME` before `Company Profile`.
+- Homepage nav includes `HOME`.
+- Non-home nav includes `HOME`.
+- The owner wants header navigation to remain visually consistent across pages.
 
-Future homepage nav:
-
-- `COMPANY PROFILE`
-- `PRODUCT PORTFOLIO`
-- `REQUEST A QUOTE`
-- `KNOWLEDGE HUB`
-- `CONTACT`
-
-Future non-home nav:
+Future homepage and non-home nav:
 
 - `HOME`
 - `COMPANY PROFILE`
@@ -264,15 +313,30 @@ Final QA after implementation:
 - `npm.cmd run qa:forbidden-claims`: completed; 363 files scanned, 602 matches flagged for review, no files rewritten.
 - `git diff --check`: passed.
 
+Final QA after D2A-R2 corrections:
+
+- `npm.cmd run qa:sitemap`: passed; 261 sitemap URLs, 261 local HTML pages, 0 missing, 0 unmatched, 0 duplicate URLs.
+- `npm.cmd run qa:crawl`: passed; 399 links scanned successfully.
+- `npm.cmd run qa:schema`: passed; 261 HTML pages scanned, 866 JSON-LD blocks found, 0 invalid blocks.
+- `npm.cmd run qa:accessibility`: passed; 5 configured pages, 0 total violations.
+- `npm.cmd run test:navigation`: passed.
+- `npm.cmd run qa:html`: passed; 261 pages checked, 0 invalid pages.
+- `npm.cmd run qa:links`: passed; 399 links scanned successfully.
+- `npm.cmd run qa:pa11y`: passed; 9/9 URLs passed, quotation page remained within existing threshold.
+- `npm.cmd run qa:forbidden-claims`: completed; 363 files scanned, 602 matches flagged for review, no files rewritten.
+- `git diff --check`: passed.
+
 ## Visual QA Notes
 
 - Homepage 1366px and 1280px show the full desktop nav.
+- D2A-R2 homepage 1366px and 1280px show `HOME` plus the full six-item desktop nav.
 - Homepage 768px, 390px, and 360px use the mobile hamburger.
-- Header logo appears proportionate and smaller than the previous render.
+- Header logo appears proportionate, remains the approved D2A size, and uses the R2 layered drop-shadow treatment.
 - Company Profile dropdown opens and remains readable.
 - Product Portfolio dropdown opens and remains readable.
+- HOME, Knowledge Hub, and Contact hover use Rubinox gold with the same subtle lift.
 - Dropdown item hover uses gold text without a heavy background.
-- Mobile menu opens cleanly at 390px.
+- Mobile menu opens cleanly at 390px and includes `HOME` at the top.
 - Non-home checked pages do not contain the D2A homepage prototype class.
 
 ## Owner Review Instruction
