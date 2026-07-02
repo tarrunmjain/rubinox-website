@@ -27,7 +27,7 @@ R2 corrections:
 - Added `HOME` to the homepage desktop navigation and mobile menu.
 - Checked the desktop WhatsApp RFQ header button and skipped it because it reduced clean 1280px desktop spacing with the approved `292px` logo and six required nav items.
 
-Final logo CSS treatment:
+D2A-R2 logo CSS treatment, superseded by D2A-R3:
 
 ```css
 header.home-header-prototype-d2a .brand{
@@ -67,6 +67,57 @@ R2 screenshot folders:
 Top Bar Lock V1 remains untouched. Header Lock V1 was not created. Sitewide header replication was not performed. Non-home pages remain unchanged by D2A-R2.
 
 Owner must review the live homepage header again before Header Lock V1 is created.
+
+## D2A-R3 Logo Crispness Correction
+
+Owner reviewed the live D2A-R2 homepage header and confirmed the header was otherwise approved, but the logo looked slightly more blurred after the 3D treatment.
+
+Owner feedback:
+
+`ALL GOOD BUT LOGO NOW LOOKING SLIGHTLY MORE BLUR. KINDLY CHECK IF NOT SHIFT BACK TO NON 3D VERSION WITH SAME SIZE.`
+
+Cause identified:
+
+- The D2A-R2 scoped logo treatment applied CSS `filter:drop-shadow(...)` to both the `.brand` link and the logo image.
+- CSS filter rendering can rasterize the logo layer and create a soft halo around text/edges.
+- Because logo crispness is now more important than the 3D effect, the filter treatment was removed.
+
+Final D2A-R3 logo treatment:
+
+```css
+header.home-header-prototype-d2a .brand{
+  filter:none!important;
+}
+header.home-header-prototype-d2a .brand img{
+  width:292px!important;
+  height:auto!important;
+  max-height:70px!important;
+  object-fit:contain!important;
+  image-rendering:auto;
+  filter:none!important;
+}
+```
+
+D2A-R3 removed the 3D/filter effect instead of reducing it. No transform, scale, glow, shadow, box, asset swap, logo color change, or size change was added.
+
+Verification:
+
+- Desktop logo remains `292px x 70px` at `1366px` and `1280px`.
+- Mobile logo remains about `184px x 44.45px` at `390px`.
+- Desktop full header remains `117px`.
+- Main header band remains `81px`.
+- Top bar remains `35px`.
+- Nav order remains `HOME`, `COMPANY PROFILE`, `PRODUCT PORTFOLIO`, `REQUEST A QUOTE`, `KNOWLEDGE HUB`, `CONTACT`.
+- Desktop nav remains visible at `1366px` and `1280px`.
+- Mobile hamburger remains clean with `HOME` included in the mobile menu.
+
+D2A-R3 screenshot folders:
+
+- Before screenshots: `C:\Users\Dell\AppData\Local\Temp\rubinox-d2a-r3-logo-before`
+- After screenshots: `C:\Users\Dell\AppData\Local\Temp\rubinox-d2a-r3-logo-after`
+- Non-home check screenshots: `C:\Users\Dell\AppData\Local\Temp\rubinox-d2a-r3-nonhome-check`
+
+D2A-R3 is homepage-only. Header Lock V1 was not created. Sitewide header replication was not performed. Non-home pages remain unchanged.
 
 ## Exact Scope
 
@@ -146,8 +197,10 @@ Logo crispness fix:
 
 Logo premium treatment:
 
-- Added a restrained drop-shadow on the logo image and brand link.
-- No heavy glow, animation, or extra logo box was added.
+- D2A added a restrained drop-shadow on the logo image and brand link.
+- D2A-R2 strengthened the drop-shadow treatment.
+- D2A-R3 removed the drop-shadow/filter treatment to restore maximum logo crispness.
+- No heavy glow, animation, transform, or extra logo box is used in the final D2A-R3 state.
 
 ## Desktop Navigation
 
@@ -326,12 +379,27 @@ Final QA after D2A-R2 corrections:
 - `npm.cmd run qa:forbidden-claims`: completed; 363 files scanned, 602 matches flagged for review, no files rewritten.
 - `git diff --check`: passed.
 
+Final QA after D2A-R3 logo crispness correction:
+
+- `npm.cmd run qa:sitemap`: passed; 261 sitemap URLs, 261 local HTML pages, 0 missing, 0 unmatched, 0 duplicate URLs.
+- `npm.cmd run qa:crawl`: passed; 399 links scanned successfully.
+- `npm.cmd run qa:schema`: passed; 261 HTML pages scanned, 866 JSON-LD blocks found, 0 invalid blocks.
+- `npm.cmd run qa:accessibility`: passed; 5 configured pages, 0 total violations.
+- `npm.cmd run test:navigation`: passed.
+- `npm.cmd run qa:html`: passed; 261 pages checked, 0 invalid pages.
+- `npm.cmd run qa:links`: passed; 399 links scanned successfully.
+- `npm.cmd run qa:pa11y`: passed; 9/9 URLs passed, quotation page remained within existing threshold.
+- `npm.cmd run qa:forbidden-claims`: completed; 363 files scanned, 602 matches flagged for review, no files rewritten.
+- `git diff --check`: passed.
+
 ## Visual QA Notes
 
 - Homepage 1366px and 1280px show the full desktop nav.
 - D2A-R2 homepage 1366px and 1280px show `HOME` plus the full six-item desktop nav.
 - Homepage 768px, 390px, and 360px use the mobile hamburger.
-- Header logo appears proportionate, remains the approved D2A size, and uses the R2 layered drop-shadow treatment.
+- Header logo appears proportionate and remains the approved D2A size.
+- D2A-R3 removes the logo filter/drop-shadow treatment so the homepage logo renders crisp with computed `filter:none`.
+- D2A-R3 homepage 1366px and 1280px preserve `292px x 70px` logo size, `117px` full header height, and `81px` main header band.
 - Company Profile dropdown opens and remains readable.
 - Product Portfolio dropdown opens and remains readable.
 - HOME, Knowledge Hub, and Contact hover use Rubinox gold with the same subtle lift.
