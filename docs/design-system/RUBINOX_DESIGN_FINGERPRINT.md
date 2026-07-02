@@ -138,3 +138,51 @@ Latest approved homepage prototype commit:
 Sitewide implementation commit:
 
 - Pending until this D2B-D2C batch commit is created; final response will report the commit hash.
+
+## Header + Top Bar Alignment Rail - LOCK V1
+
+Status: approved and final.
+
+Lock document:
+
+- `docs/design-system/RUBINOX_HEADER_TOPBAR_ALIGNMENT_LOCK_V1.md`
+
+Implementation asset:
+
+- `assets/css/header-lock-v1.css`
+
+Source:
+
+- D2D sitewide header/topbar alignment correction.
+
+Exact rail pattern:
+
+- Homepage rail is the source of truth.
+- Max width: `1180px`.
+- Desktop padding: `20px` left and right.
+- Tablet padding: `20px` left and right.
+- Mobile padding: `14px` left and right.
+- Width rule: `width:100%!important`.
+- Centering: `margin-left:auto` and `margin-right:auto`.
+- Box sizing: `border-box`.
+
+Required wrappers:
+
+- Top bar inner rail: `header .topRail.topbar-lock-v1 > .wrap`
+- Header inner rail: `header.header-lock-v1 > .wrap`
+
+Future page instruction:
+
+- Every new public page must use the same locked topbar/header rail classes.
+- Do not create page-specific header or top bar container padding.
+- Do not create custom header/topbar margins for individual pages.
+- Page layout `.wrap`, `.container`, hero, section or article rules must not narrow the locked header/topbar rail.
+
+Forbidden changes:
+
+- No page-specific margin hacks.
+- No different header wrappers.
+- No different topbar wrappers.
+- No custom left padding for individual pages.
+- No top bar redesign.
+- No header redesign.

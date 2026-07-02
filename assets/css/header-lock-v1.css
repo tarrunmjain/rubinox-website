@@ -1,4 +1,11 @@
 /* Rubinox Header Lock V1 - final D2A-R3 header system */
+:root{
+  --rubinox-header-rail-max:1180px;
+  --rubinox-header-rail-padding-desktop:20px;
+  --rubinox-header-rail-padding-tablet:20px;
+  --rubinox-header-rail-padding-mobile:14px;
+}
+
 header.header-lock-v1{
   position:sticky!important;
   top:0!important;
@@ -10,10 +17,13 @@ header.header-lock-v1{
 }
 
 header.header-lock-v1 .wrap{
-  max-width:1180px!important;
-  margin:0 auto!important;
-  padding-left:20px!important;
-  padding-right:20px!important;
+  width:100%!important;
+  max-width:var(--rubinox-header-rail-max)!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  padding-left:var(--rubinox-header-rail-padding-desktop)!important;
+  padding-right:var(--rubinox-header-rail-padding-desktop)!important;
+  box-sizing:border-box!important;
 }
 
 header.header-lock-v1 .nav{
@@ -299,6 +309,10 @@ header.header-lock-v1 .mobileAccordionPanel a{
 }
 
 @media(max-width:1020px){
+  header.header-lock-v1 .wrap{
+    padding-left:var(--rubinox-header-rail-padding-tablet)!important;
+    padding-right:var(--rubinox-header-rail-padding-tablet)!important;
+  }
   header.header-lock-v1 .desktopNav{
     display:none!important;
   }
@@ -318,8 +332,8 @@ header.header-lock-v1 .mobileAccordionPanel a{
 
 @media(max-width:640px){
   header.header-lock-v1 .wrap{
-    padding-left:14px!important;
-    padding-right:14px!important;
+    padding-left:var(--rubinox-header-rail-padding-mobile)!important;
+    padding-right:var(--rubinox-header-rail-padding-mobile)!important;
   }
   header.header-lock-v1 .brand img{
     width:184px!important;

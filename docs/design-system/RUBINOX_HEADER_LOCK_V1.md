@@ -66,6 +66,20 @@ home-header-prototype-d2a
 - Logo crispness rule: `filter:none!important` on both `.brand` and `.brand img`.
 - No logo CSS drop-shadow, blur, glow, transform, scale animation, 3D effect, box, or asset swap.
 
+## Alignment Rail
+
+Logo and navigation must use the locked shared rail across all public pages. The rail rule is documented in:
+
+- `docs/design-system/RUBINOX_HEADER_TOPBAR_ALIGNMENT_LOCK_V1.md`
+
+The main header inner wrapper remains:
+
+```css
+header.header-lock-v1 > .wrap
+```
+
+This wrapper inherits the same locked rail as the top bar: `1180px` max width, `20px` desktop/tablet padding, `14px` mobile padding, centered with `box-sizing:border-box`. Do not create page-specific header padding, different header wrappers, or custom left margins.
+
 ## Desktop Navigation
 
 Final desktop navigation order on all pages:

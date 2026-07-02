@@ -13,6 +13,20 @@
 
 This document is the final Rubinox top bar design print and implementation fingerprint. Future public pages must use this top bar exactly. Codex, future agents, and maintainers must not invent another top bar style, alternate hover pattern, alternate text treatment, or alternate icon set without owner approval.
 
+## Alignment Rail
+
+Top bar inner content must use the locked shared rail across all public pages. The rail rule is documented in:
+
+- `docs/design-system/RUBINOX_HEADER_TOPBAR_ALIGNMENT_LOCK_V1.md`
+
+The top bar inner wrapper remains:
+
+```css
+header .topRail.topbar-lock-v1 > .wrap
+```
+
+This wrapper inherits the same locked rail as the main header: `1180px` max width, `20px` desktop/tablet padding, `14px` mobile padding, centered with `box-sizing:border-box`. Do not create page-specific top bar padding or a different top bar wrapper.
+
 ## Desktop Design Specification
 
 - Rendered desktop height: `35px` at 1366px and 1280px viewport widths.
