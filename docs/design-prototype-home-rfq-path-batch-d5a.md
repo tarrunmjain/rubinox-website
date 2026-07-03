@@ -299,6 +299,94 @@ Final QA was run after implementation and documentation:
 - Mobile stacks the cards cleanly.
 - No RFQ path card text spills outside its card at tested widths or zoom levels.
 
+## D5A-R2 Owner Correction
+
+Owner feedback after the live D5A review: the RFQ path intro paragraph was wrapping into 3 narrow desktop lines while the right side of the section had unused empty space.
+
+Root cause:
+
+- The intro paragraph was constrained by `.buyerPathHead p { max-width: 74ch; }`.
+- On 1366px and 1280px desktop captures, that rendered at about 596.75px wide, which made the paragraph look left-heavy relative to the five-card rail.
+
+Final homepage-only correction:
+
+```css
+.buyerPathHead > div{
+  width:100%;
+  min-width:0;
+}
+
+.buyerPathHead p{
+  max-width:1000px;
+}
+```
+
+The approved paragraph copy stayed unchanged:
+
+`Use these quick steps to prepare grade, form, standards, documents and delivery details before sending your requirement. This helps our team review your RFQ clearly and respond with the right sourcing inputs.`
+
+Before/after measurement summary:
+
+| Viewport | Before intro width | After intro width | Before intro lines | After intro lines | Before section height | After section height | Max card height after |
+| ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 1366 | 596.75px | 1000px | 3 | 2 | 358.92px | 334.28px | 160px |
+| 1280 | 596.75px | 1000px | 3 | 2 | 358.92px | 334.28px | 160px |
+| 768 | 596.75px | 728px | 3 | 2 | 712.42px | 687.78px | 95.50px |
+| 390 | 350px | 350px | 5 | 5 | 887.20px | 887.20px | 115px |
+| 360 | 320px | 320px | 5 | 5 | 906.70px | 906.70px | 134.50px |
+
+Screenshot folders:
+
+- Before: `C:\Users\Dell\AppData\Local\Temp\rubinox-d5a-r2-rfq-path-before`
+- After: `C:\Users\Dell\AppData\Local\Temp\rubinox-d5a-r2-rfq-path-after`
+- Zoom/reflow: `C:\Users\Dell\AppData\Local\Temp\rubinox-d5a-r2-rfq-path-zoom-reflow`
+- Non-home check: `C:\Users\Dell\AppData\Local\Temp\rubinox-d5a-r2-rfq-path-nonhome-check`
+
+D5A-R2 zoom/reflow scoped RFQ path results:
+
+| Physical viewport | Zoom | Effective CSS width | Intro lines | Card columns | Section overflow | Text/card escape | Result |
+| ---: | ---: | ---: | ---: | ---: | --- | --- | --- |
+| 1366 | 100% | 1366 | 2 | 5 | pass | pass | pass |
+| 1280 | 100% | 1280 | 2 | 5 | pass | pass | pass |
+| 390 | 100% | 390 | 5 | 1 | pass | pass | pass |
+| 360 | 100% | 360 | 5 | 1 | pass | pass | pass |
+| 1366 | 110% | 1241 | 2 | 5 | pass | pass | pass |
+| 1280 | 110% | 1163 | 2 | 5 | pass | pass | pass |
+| 390 | 110% | 354 | 5 | 1 | pass | pass | pass |
+| 360 | 110% | 327 | 5 | 1 | pass | pass | pass |
+| 1366 | 125% | 1092 | 2 | 5 | pass | pass | pass |
+| 1280 | 125% | 1024 | 2 | 5 | pass | pass | pass |
+| 390 | 125% | 312 | 6 | 1 | pass | pass | pass |
+| 360 | 125% | 288 | 6 | 1 | pass | pass | pass |
+
+Full-page diagnostic note: at the smallest simulated zoom widths, page-level horizontal scroll is still traceable to the existing homepage contact cards, outside the RFQ path section. D5A-R2 did not change that section because this batch was scoped only to the RFQ path intro.
+
+Non-home check:
+
+- `company-profile.html` at 1366px and 390px: no `#buyer-path`; no non-home edit.
+- `materials/stainless-steel.html` at 1366px and 390px: no `#buyer-path`; no non-home edit.
+
+Scope confirmations:
+
+- RFQ path cards were not redesigned.
+- The approved white-card plus gold-to-blue top accent style was preserved.
+- The D5A inline number/title layout was preserved.
+- Broad card-system replication was not performed.
+- D5B lock was not created yet.
+
+D5A-R2 final QA:
+
+- `npm run qa:sitemap` - passed; 261 sitemap URLs, 261 local HTML pages, 0 missing, 0 extras, 0 duplicates.
+- `npm run qa:crawl` - passed; 400 links scanned.
+- `npm run qa:schema` - passed; 261 HTML pages, 866 JSON-LD blocks, 0 invalid.
+- `npm run qa:accessibility` - passed; 5 pages checked, 0 violations.
+- `npm run test:navigation` - passed.
+- `npm run qa:html` - passed; 261 pages checked, 0 invalid.
+- `npm run qa:links` - passed; 400 links scanned.
+- `npm run qa:pa11y` - passed; 9/9 URLs passed, with the existing `quotation.html` 5-error result within the threshold of 7.
+- `npm run qa:forbidden-claims` - completed; 372 files scanned, 632 review-only matches, no files rewritten.
+- `git diff --check` - passed; only expected CRLF normalization warnings appeared for `index.html` and this documentation file.
+
 ## Owner Review Instruction
 
 Owner must review the live homepage RFQ path cards before this card style is locked or reused elsewhere.
