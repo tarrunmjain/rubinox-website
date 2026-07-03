@@ -516,9 +516,10 @@ gtag('config', 'G-JT5X5L5H07');
       position:relative;
       display:flex;
       flex-direction:column;
-      gap:8px;
-      min-height:150px;
-      padding:16px;
+      gap:9px;
+      min-width:0;
+      min-height:132px;
+      padding:15px 16px 16px;
       text-decoration:none;
       color:inherit;
       background:#fff;
@@ -527,6 +528,13 @@ gtag('config', 'G-JT5X5L5H07');
       box-shadow:0 12px 30px rgba(15,30,60,.07);
       overflow:hidden;
       transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+    }
+    .buyerPathTitleRow{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-width:0;
+      flex-wrap:wrap;
     }
     .buyerPathCard::before{
       content:"";
@@ -556,16 +564,22 @@ gtag('config', 'G-JT5X5L5H07');
       color:var(--ink2);
       font-weight:900;
       font-size:13px;
+      flex:0 0 34px;
     }
     .buyerPathCard strong{
+      flex:1 1 0;
+      min-width:0;
       color:var(--ink2);
       font-size:16px;
       line-height:1.25;
+      overflow-wrap:break-word;
     }
-    .buyerPathCard span:not(.buyerPathStep){
+    .buyerPathBody{
+      min-width:0;
       color:var(--muted2);
       font-size:13px;
-      line-height:1.55;
+      line-height:1.5;
+      overflow-wrap:break-word;
     }
     /* SECTIONS */
     .section{padding:38px 0}
@@ -1480,34 +1494,29 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
       <div class="buyerPathHead">
         <div>
           <h2>Plan the RFQ Path Before You Ask for Pricing</h2>
-          <p>Move from grade selection to form, standards, documentation and quotation details without changing pages blindly. These routes keep buyer research tied to practical RFQ inputs.</p>
+          <p>Use these quick steps to prepare grade, form, standards, documents and delivery details before sending your requirement. This helps our team review your RFQ clearly and respond with the right sourcing inputs.</p>
         </div>
       </div>
-      <nav class="buyerPathGrid" aria-label="Buyer journey links">
+      <nav class="buyerPathGrid" aria-label="RFQ path links">
         <a class="buyerPathCard" href="/grades.html">
-          <span class="buyerPathStep">1</span>
-          <strong>Compare grades</strong>
-          <span>Start with stainless steel, duplex, nickel alloy, titanium, copper, brass and special alloy grade pages.</span>
+          <span class="buyerPathTitleRow"><span class="buyerPathStep">1</span><strong>Compare grades</strong></span>
+          <span class="buyerPathBody">Start with stainless steel, duplex, nickel alloy, titanium, copper, brass and special alloy grade pages.</span>
         </a>
         <a class="buyerPathCard" href="/product-forms.html">
-          <span class="buyerPathStep">2</span>
-          <strong>Select product forms</strong>
-          <span>Review pipes, tubes, sheets, plates, coils, flanges, fittings, fasteners, bars and rods.</span>
+          <span class="buyerPathTitleRow"><span class="buyerPathStep">2</span><strong>Select product forms</strong></span>
+          <span class="buyerPathBody">Review pipes, tubes, sheets, plates, coils, flanges, fittings, fasteners, bars and rods.</span>
         </a>
         <a class="buyerPathCard" href="/technical-resources.html">
-          <span class="buyerPathStep">3</span>
-          <strong>Check standards</strong>
-          <span>Use pipe schedules, MTC notes, PMI guidance and comparison charts for RFQ planning.</span>
+          <span class="buyerPathTitleRow"><span class="buyerPathStep">3</span><strong>Check standards</strong></span>
+          <span class="buyerPathBody">Use pipe schedules, MTC notes, PMI guidance and comparison charts for RFQ planning.</span>
         </a>
         <a class="buyerPathCard" href="/quality-documentation-support.html">
-          <span class="buyerPathStep">4</span>
-          <strong>Confirm documents</strong>
-          <span>State MTC, PMI, inspection, traceability or export documentation needs where applicable.</span>
+          <span class="buyerPathTitleRow"><span class="buyerPathStep">4</span><strong>Confirm documents</strong></span>
+          <span class="buyerPathBody">State MTC, PMI, inspection, traceability or export documentation needs where applicable.</span>
         </a>
         <a class="buyerPathCard" href="/quotation.html">
-          <span class="buyerPathStep">5</span>
-          <strong>Send the RFQ</strong>
-          <span>Share grade, form, size, quantity, standard, documentation needs and delivery location.</span>
+          <span class="buyerPathTitleRow"><span class="buyerPathStep">5</span><strong>Send the RFQ</strong></span>
+          <span class="buyerPathBody">Share grade, form, size, quantity, standard, documentation needs and delivery location.</span>
         </a>
       </nav>
     </div>
