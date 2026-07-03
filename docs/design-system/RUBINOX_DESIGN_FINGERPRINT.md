@@ -253,3 +253,90 @@ Forbidden changes:
 - No manufacturer, factory, mill, production, manufacturing unit, or `we manufacture` wording.
 - No certification or approval claims.
 - No sitewide ticker replication without owner approval.
+
+## Homepage Hero - LOCK V1
+
+Status: approved and final.
+
+Lock document:
+
+- `docs/design-system/RUBINOX_HOME_HERO_LOCK_V1.md`
+
+Source:
+
+- D4A homepage-only hero prototype.
+
+Approved prototype commit:
+
+- `b05495996cb550d192dccfb1d411c9529cb69798`
+
+Deployment repair commit:
+
+- `76f00146545d3e2d7e2e10cdcc842dc7b381808a`
+
+Pages run that made the approved hero live:
+
+- `28622840146`
+
+Scope:
+
+- Homepage only.
+- No sitewide hero replication was performed.
+- Do not add this homepage hero to non-home pages unless the owner separately approves a sitewide or page-family hero workflow.
+
+Exact layout summary:
+
+- Compact dark image-backed homepage hero below Market Ticker Lock V1.
+- Ticker-to-H1 gap: `32px` at 1366px and 1280px.
+- Desktop hero height: about `669.31px` at 1366px and 1280px.
+- Mobile hero height: about `1411.67px` at 390px and `1496.05px` at 360px.
+- Desktop grid: left content column and right image/CTA column.
+- H1 color: premium silver `#e3e7ed`.
+- Hero paragraph color: `rgba(255,255,255,.9)`.
+- Hero image remains `/assets/hero-metal.webp`.
+- Right-side detail/contact card is removed.
+
+Exact chip rules:
+
+- Only three hero chips are allowed:
+  - `Grade & Form Review`
+  - `MTC / PMI Review`
+  - `PAN India RFQ Support`
+- Do not reintroduce the duplicate `Stockist | Supplier | Importer | Exporter | Project Supplier` chip.
+
+Exact CTA rules:
+
+- Only three hero CTAs are allowed:
+  - `WhatsApp Us`
+  - `Email Us`
+  - `Call Us`
+- All three CTAs use the Rubinox gold CTA system.
+- Desktop 100% layout keeps the three CTAs in one row below the image.
+- At 110% and 125% zoom, CTAs may wrap if needed, but text must remain inside each button.
+
+Zoom/reflow no-overflow rule:
+
+- At 100%, 110%, and 125% browser zoom, hero H1 text, paragraph text, chips, CTA buttons, white info boxes, and hero content containers must not spill outside their boxes or columns.
+- Future homepage hero edits must run zoom/reflow checks before commit.
+- Use `min-width:0`, flexible widths, safe wrapping, sensible line-height, and scoped overflow-prevention rules when needed.
+
+Future homepage instruction:
+
+- Preserve the compact 32px gap.
+- Preserve the silver H1.
+- Preserve the white paragraph.
+- Preserve the three-chip system.
+- Preserve the gold CTAs below the right image.
+- Preserve the three white info boxes: `Mumbai`, `PAN India`, and `All Forms`.
+- Preserve the removed right detail card.
+- Preserve the homepage-only scope.
+
+Forbidden changes:
+
+- Do not increase the hero gap back to the old large spacing.
+- Do not restore the blue paragraph treatment.
+- Do not restore the duplicate business-identity chip.
+- Do not restore the right-side detail/contact card.
+- Do not add live price, confirmed stock, delivery, manufacturer, factory, mill, production, certification, approval, testimonial, review, rating, client, project, award, team-size, stockyard-size, or unverified years-of-experience claims.
+- Do not add CTA text that overflows at 100%, 110%, or 125% zoom.
+- Do not replicate the hero sitewide without owner approval.

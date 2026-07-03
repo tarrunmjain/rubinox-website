@@ -4,7 +4,7 @@
 
 - Batch: D4A - Homepage Hero Prototype.
 - Scope: homepage only.
-- Status: prototype complete for owner review; not a hero lock.
+- Status: approved by owner and promoted to Home Hero Lock V1 in D4B.
 - Source page: `index.html`.
 - Documentation file: `docs/design-prototype-home-hero-batch-d4a.md`.
 
@@ -138,8 +138,26 @@ Post-edit QA:
 - No public SEO URL, H1 wording, schema, sitemap entry, canonical URL or analytics ID was changed.
 - Current GA4 remains `G-JT5X5L5H07`; old accidental GA4 ID `G-CR18QYPS6C` remains absent.
 
+## Approved and promoted to Home Hero Lock V1
+
+- Owner approved the live D4A homepage hero after deployment repair.
+- Owner approval note: `CREATE IT. JUST MAKE SURE WHEN THE PAGES ARE ZOOMED FROM 100% TO 110 OR 125% THE TEXT OF ANY BOX, CTC ETC SHOULD NOT COME OUT OF THE BOX.`
+- Owner zoom/reflow requirement: at 100%, 110%, and 125% browser zoom, text inside hero chips, CTA buttons, info boxes, and content containers must remain inside its parent box.
+- `CTC` was interpreted as CTA/buttons in this context.
+- Lock batch: D4B - Homepage Hero Design Lock / Design Fingerprint.
+- Final lock document: `docs/design-system/RUBINOX_HOME_HERO_LOCK_V1.md`.
+- Master design fingerprint: `docs/design-system/RUBINOX_DESIGN_FINGERPRINT.md`.
+- Final lock screenshot folder: `C:\Users\Dell\AppData\Local\Temp\rubinox-hero-lock-v1`.
+- Zoom/reflow screenshot folder: `C:\Users\Dell\AppData\Local\Temp\rubinox-hero-lock-v1-zoom-reflow`.
+- Non-home check screenshot folder: `C:\Users\Dell\AppData\Local\Temp\rubinox-hero-lock-v1-nonhome-check`.
+- Approved hero commit: `b05495996cb550d192dccfb1d411c9529cb69798`.
+- Deployment repair commit: `76f00146545d3e2d7e2e10cdcc842dc7b381808a`.
+- Pages run that made D4A live: `28622840146`.
+- No sitewide hero replication was performed.
+- Non-home page hero sections remain outside this lock and were not changed.
+
 ## Owner Review
 
-Owner must review the live homepage hero before this section is locked.
+Owner review is complete. D4A is no longer pending review; it is the approved source prototype for Home Hero Lock V1.
 
-Next step after owner approval: D4B &mdash; Create Homepage Hero Design Lock / Design Fingerprint.
+Next step after D4B: owner can move to the next homepage section.
