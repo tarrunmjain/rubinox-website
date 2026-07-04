@@ -144,3 +144,45 @@ Full-page diagnostic note:
 - `npm run qa:pa11y` - passed; 9/9 URLs passed, with the existing `quotation.html` 5-error result within the threshold of 7.
 - `npm run qa:forbidden-claims` - completed; 375 files scanned, 644 review-only matches, no files rewritten.
 - `git diff --check` - passed; only the expected CRLF normalization warning appeared for `index.html`.
+
+## D6B Lock Completion
+
+Owner approval:
+
+- "Section intro widths approved for design lock"
+
+D6B completed the final Homepage Section Intro Width Lock V1.
+
+Lock document:
+
+- `docs/design-system/RUBINOX_HOME_SECTION_INTRO_WIDTH_LOCK_V1.md`
+
+Master fingerprint update:
+
+- `docs/design-system/RUBINOX_DESIGN_FINGERPRINT.md`
+
+Final approved homepage section-intro pattern:
+
+```css
+.sectionIntro { max-width:1000px; }
+.phase3Head > div { width:100%; min-width:0; }
+.phase3Intro { max-width:1000px; }
+```
+
+D6B final screenshot and measurement folder:
+
+- `C:\Users\Dell\AppData\Local\Temp\rubinox-d6b-section-intro-lock-final`
+
+D6B zoom/reflow screenshot and result folder:
+
+- `C:\Users\Dell\AppData\Local\Temp\rubinox-d6b-section-intro-lock-zoom-reflow`
+
+Final D6B status:
+
+- D6A section intro width rule is approved and final.
+- Future homepage section intro and lead paragraphs should preserve the `1000px` max-width rule.
+- Text inside sections, cards, boxes, and CTAs must not overflow at 100%, 110%, or 125% zoom.
+- Materials We Supply still has no standalone intro paragraph, and no new Materials We Supply copy was added.
+- No visible design edits were made in D6B.
+- No card/grid/layout redesign was performed.
+- No non-home pages were changed.

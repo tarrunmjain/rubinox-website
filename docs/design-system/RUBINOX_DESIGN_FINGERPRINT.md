@@ -461,3 +461,71 @@ Forbidden changes:
 - Do not put cards inside cards.
 - Do not create heavy gradient cards, oversized rounded cards, decorative blob cards, or marketing-style card clusters from this lock.
 - Do not add live price, confirmed stock, delivery, manufacturer, factory, mill, production, certification, approval, testimonial, review, rating, client, project, award, team-size, stockyard-size, or unverified years-of-experience claims.
+
+## Homepage Section Intro Width - LOCK V1
+
+Status: approved and final.
+
+Owner approval:
+
+- "Section intro widths approved for design lock"
+
+Lock document:
+
+- `docs/design-system/RUBINOX_HOME_SECTION_INTRO_WIDTH_LOCK_V1.md`
+
+Source:
+
+- D6A homepage section intro width standardization.
+
+Approved source commit:
+
+- `7f64585ac61f99647d101a6ec44111ac5551f998`
+
+Scope:
+
+- Homepage section intro and lead paragraphs only.
+- No non-home page replication was performed.
+- No visible redesign was performed in D6B.
+- No card, grid, top bar, header, market ticker, hero, RFQ path, footer, SEO metadata, schema, sitemap, analytics, image, or PDF change is part of this lock.
+
+Exact CSS pattern:
+
+```css
+.sectionIntro { max-width:1000px; }
+.phase3Head > div { width:100%; min-width:0; }
+.phase3Intro { max-width:1000px; }
+```
+
+Covered homepage sections:
+
+- Product Forms Available.
+- Quality, Documentation and Standards Support.
+- PAN India Supply and Export Enquiry Support.
+- Simple RFQ Flow for Industrial Metal Enquiries.
+- Metal Supply FAQs for Buyers.
+
+Current Materials We Supply rule:
+
+- Materials We Supply has no standalone intro paragraph.
+- Do not add new Materials We Supply intro copy without owner approval.
+- Do not redesign the Materials We Supply card grid as part of this lock.
+
+Zoom/reflow no-overflow rule:
+
+- At 100%, 110%, and 125% browser zoom, text inside homepage sections, cards, boxes, and CTAs must not spill outside its parent container.
+- Future homepage intro-width edits must run zoom/reflow checks before commit.
+- Use `min-width:0`, flexible widths, safe wrapping, and sensible line-height where needed.
+
+Future homepage instruction:
+
+- New homepage section intro and lead paragraphs should use `max-width:1000px`.
+- When intro text sits in a flexible heading row, the text wrapper must use `width:100%` and `min-width:0`.
+- Do not return to a narrow left-column intro pattern without owner approval.
+
+Forbidden changes:
+
+- Do not use this lock to redesign cards or grids.
+- Do not use this lock to alter non-home pages.
+- Do not use this lock to change top bar, header, market ticker, hero, RFQ path, or footer.
+- Do not add live price, confirmed stock, delivery, manufacturer, factory, mill, production, certification, approval, testimonial, review, rating, client, project, award, team-size, stockyard-size, or unverified years-of-experience claims.
