@@ -254,6 +254,85 @@ Scope confirmations:
 - D7B lock was not created.
 - Top bar, header, market ticker, hero, approved RFQ Path, sitemap, schema, analytics, images and PDFs were not changed.
 
+## D7A-R3 Final CTA Content Width Correction
+
+Batch:
+
+- D7A-R3 - Homepage Final CTA Content Width Correction.
+
+Owner feedback:
+
+- The `Send Your Metal Requirement to Rubinox` blue CTA box looked good overall, but the paragraph content was restricted to the left side.
+- The empty right side made the CTA feel unbalanced.
+- The paragraph needed to use more left-to-right space and naturally reduce the section height where possible.
+
+Root cause:
+
+- The CTA paragraph inherited a narrow `78ch` maximum width, which measured about `694px` on desktop inside a `1140px` blue card.
+
+Final width rule:
+
+```css
+.finalCtaBand p,
+.finalCtaActions {
+  width:100%;
+  max-width:1080px;
+  min-width:0;
+}
+.finalCtaBand p {
+  overflow-wrap:break-word;
+}
+```
+
+Implementation notes:
+
+- CTA title was kept unchanged.
+- CTA body copy was kept unchanged.
+- CTA buttons were kept unchanged: `WhatsApp Quote`, `Email RFQ`, and `Request Quotation`.
+- CTA links were kept unchanged.
+- Blue background, silver/white contrast, gold button styling and existing alignment were preserved.
+- The correction only widens the content rail and keeps safe wrapping.
+
+Before/after desktop measurements:
+
+| Viewport | Before band height | After band height | Before body width | After body width | Before lines | After lines |
+| ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 1366px | 260.59px | 232.59px | 694.08px | 1080px | 3 | 2 |
+| 1280px | 260.59px | 232.59px | 694.08px | 1080px | 3 | 2 |
+
+Result:
+
+- Desktop CTA band height reduced naturally by `28px` at 1366px and 1280px.
+- Tablet and mobile kept the same safe wrapping behavior.
+
+D7A-R3 screenshot folders:
+
+- Before: `C:\Users\Dell\AppData\Local\Temp\rubinox-d7a-r3-cta-before`
+- After: `C:\Users\Dell\AppData\Local\Temp\rubinox-d7a-r3-cta-after`
+- Zoom/reflow: `C:\Users\Dell\AppData\Local\Temp\rubinox-d7a-r3-cta-zoom-reflow`
+- Non-home check: `C:\Users\Dell\AppData\Local\Temp\rubinox-d7a-r3-nonhome-check`
+
+D7A-R3 zoom/reflow result:
+
+- 100%, 110% and 125% scoped CTA checks passed.
+- Widths checked: 1366px, 1280px, 390px and 360px.
+- CTA title, body copy and button text stayed inside the blue card.
+- No scoped horizontal overflow was introduced by D7A-R3.
+
+D7A-R3 non-home check:
+
+- `/company-profile.html` checked at 1366px and 390px.
+- `/materials/stainless-steel.html` checked at 1366px and 390px.
+- No non-home page file was edited.
+- Checked non-home pages do not contain the homepage final CTA selectors.
+- Checked non-home pages showed no horizontal overflow at the captured widths.
+
+Scope confirmations:
+
+- Footer work was not performed.
+- D7B lock was not created.
+- Top bar, header, market ticker, hero, approved RFQ Path, Quality/Standards, PAN India chips, RFQ Flow, FAQ, contact/map, sitemap, schema, analytics, images and PDFs were not changed.
+
 ## SEO / Schema / Analytics
 
 - No title, meta description, canonical, Open Graph, Twitter card, JSON-LD, sitemap, robots, analytics, image, PDF, map embed, or footer data was changed.
