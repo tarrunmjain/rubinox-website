@@ -1341,6 +1341,24 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
 @media(max-width:760px){header .topRail .railNote{display:block!important;font-size:11.5px!important}header .topRail .railLinks.utilityIcons{gap:6px!important}.faqGrid,.relGrid{grid-template-columns:1fr!important;gap:14px!important}.faqItem{padding:20px!important}.siteFooter .footerLayout{grid-template-columns:1fr!important;padding:28px 18px!important}.siteFooter .footerBrand img{max-width:190px!important}.siteFooter .footerIconGroup{flex-wrap:nowrap!important;gap:6px!important}.siteFooter .footerIconGroup .footerIcon{width:32px!important;height:32px!important;min-width:32px!important;min-height:32px!important;max-width:32px!important;max-height:32px!important}}
 /* RUBINOX FOOTER STANDARDIZATION END */
 
+/* RUBINOX D7A HOMEPAGE REMAINING SECTION POLISH START */
+.docPanel .standardsDetail{margin-top:10px!important}
+.geoPanel.dark h3,.finalCtaBand h2{color:#e3e7ed!important;text-shadow:0 1px 0 rgba(255,255,255,.10),0 3px 8px rgba(0,0,0,.28)!important}
+.geoPanel.dark p,.finalCtaBand p{color:rgba(255,255,255,.92)!important}
+.geoPanel.dark .requirementTags span{background:rgba(255,255,255,.10)!important;border-color:rgba(247,198,91,.28)!important;color:#fff!important;box-shadow:none!important}
+.cityCloud a.cityChip,.cityCloud span{display:inline-flex;align-items:center;justify-content:center;min-width:0;padding:7px 9px;border-radius:6px;background:linear-gradient(145deg,var(--rubinox-silver-light),var(--rubinox-silver-mid))!important;border:1px solid rgba(19,42,99,.14)!important;color:#132a63!important;font-size:12px;font-weight:800;line-height:1.2;text-decoration:none;box-shadow:0 6px 16px rgba(15,30,60,.06)!important}
+.cityCloud a.cityChip{cursor:pointer!important;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease,background .18s ease}
+.cityCloud span{cursor:default!important}
+.cityCloud a.cityChip:hover,.cityCloud a.cityChip:focus-visible{background:linear-gradient(180deg,#f5f8fc,#eaf0f7)!important;border-color:rgba(226,160,47,.48)!important;box-shadow:0 8px 18px rgba(15,30,60,.10)!important;outline:2px solid rgba(19,42,99,.24);outline-offset:2px;transform:translateY(-1px)}
+.rfqStep{min-width:0;box-sizing:border-box}
+.rfqTitleRow{display:flex;align-items:center;gap:10px;min-width:0;flex-wrap:wrap;margin-bottom:10px}
+.rfqTitleRow .stepBadge{flex:0 0 42px;margin-bottom:0}
+.rfqTitleRow h3{margin:0!important;min-width:0;overflow-wrap:break-word}
+.homeSeoAccentCard,.homeContactCard,.homeMapCard{position:relative;overflow:hidden}
+.homeSeoAccentCard::before,.homeContactCard::before,.homeMapCard::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--navy3));pointer-events:none}
+.finalCtaBand{position:relative;overflow:hidden}
+/* RUBINOX D7A HOMEPAGE REMAINING SECTION POLISH END */
+
 </style>
 <link rel="stylesheet" href="/assets/css/topbar-lock-v1.css">
 <link rel="stylesheet" href="/assets/css/header-lock-v1.css">
@@ -1789,6 +1807,7 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
         <div class="docPanel">
           <h3>Standards and Project Specifications</h3>
           <p>Buyer specifications may reference ASTM, ASME, EN, DIN, JIS, IS or project-specific standards. Certificates and documentation are subject to applicable material route, buyer specification, grade, source route and product form.</p>
+          <p class="standardsDetail">Share the applicable buyer-specified reference with grade, form, size, schedule or thickness, quantity, test or documentation expectations, origin notes and logistics requirements. Rubinox reviews these inputs before preparing sourcing and quotation support.</p>
           <div class="requirementTags"><span>ASTM</span><span>ASME</span><span>EN</span><span>DIN</span><span>JIS</span><span>IS</span><span>Project Spec</span><span>Buyer Spec</span></div>
         </div>
       </div>
@@ -1811,7 +1830,7 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
         <div class="geoPanel">
           <h3>Domestic and Export Enquiry Coverage</h3>
           <p>Rubinox serves buyers in major industrial and commercial regions without creating unsupported city-specific stock claims. The team can review domestic supply enquiries and export documentation support where applicable.</p>
-          <div class="cityCloud"><span>Mumbai</span><span>Navi Mumbai</span><span>Thane</span><span>Pune</span><span>Ahmedabad</span><span>Vadodara</span><span>Surat</span><span>Chennai</span><span>Bengaluru</span><span>Hyderabad</span><span>Delhi NCR</span><span>Kolkata</span></div>
+          <div class="cityCloud"><a class="cityChip" href="/locations/mumbai.html">Mumbai</a><a class="cityChip" href="/locations/navi-mumbai.html">Navi Mumbai</a><a class="cityChip" href="/locations/thane.html">Thane</a><a class="cityChip" href="/locations/pune.html">Pune</a><a class="cityChip" href="/locations/ahmedabad.html">Ahmedabad</a><a class="cityChip" href="/locations/vadodara.html">Vadodara</a><a class="cityChip" href="/locations/surat.html">Surat</a><a class="cityChip" href="/locations/chennai.html">Chennai</a><a class="cityChip" href="/locations/bengaluru.html">Bengaluru</a><a class="cityChip" href="/locations/hyderabad.html">Hyderabad</a><span>Delhi NCR</span><a class="cityChip" href="/locations/kolkata-howrah-durgapur.html">Kolkata</a></div>
         </div>
       </div>
     </div>
@@ -1826,10 +1845,10 @@ main .card table th,main .card table td{overflow-wrap:anywhere!important;word-br
         <a class="btn ghost" href="/quotation.html" onclick="return trackLead('navigation','rfq_flow_quote_page')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8l4 4v14H4V3h4z"></path><path d="M16 3v5h5"></path><path d="M8 13h8"></path><path d="M8 17h6"></path></svg>Open Quotation Page</a>
       </div>
       <div class="rfqFlowGrid">
-        <div class="rfqStep"><span class="stepBadge">1</span><h3>Share Material and Form</h3><p>Mention the material family, exact grade and product form such as pipe, tube, sheet, plate, coil, flange, fitting, fastener, bar, rod or custom cut item.</p></div>
-        <div class="rfqStep"><span class="stepBadge">2</span><h3>Add Size and Quantity</h3><p>Include thickness, OD, schedule, class, dimensions, length, finish and quantity. Clear size details help Rubinox review the requirement without unnecessary back-and-forth.</p></div>
-        <div class="rfqStep"><span class="stepBadge">3</span><h3>Specify Standards</h3><p>Share ASTM, ASME, EN, DIN, JIS, IS or project specifications, plus any MTC, PMI or inspection requirement that should be reviewed at enquiry stage.</p></div>
-        <div class="rfqStep"><span class="stepBadge">4</span><h3>Receive Quotation Support</h3><p>Rubinox reviews the buyer requirement as a stockist, supplier, importer, exporter and project supplier, then supports quotation discussion based on the enquiry details.</p></div>
+        <div class="rfqStep"><div class="rfqTitleRow"><span class="stepBadge">1</span><h3>Share Material and Form</h3></div><p>Mention the material family, exact grade and product form such as pipe, tube, sheet, plate, coil, flange, fitting, fastener, bar, rod or custom cut item.</p></div>
+        <div class="rfqStep"><div class="rfqTitleRow"><span class="stepBadge">2</span><h3>Add Size and Quantity</h3></div><p>Include thickness, OD, schedule, class, dimensions, length, finish and quantity. Clear size details help Rubinox review the requirement without unnecessary back-and-forth.</p></div>
+        <div class="rfqStep"><div class="rfqTitleRow"><span class="stepBadge">3</span><h3>Specify Standards</h3></div><p>Share ASTM, ASME, EN, DIN, JIS, IS or project specifications, plus any MTC, PMI or inspection requirement that should be reviewed at enquiry stage.</p></div>
+        <div class="rfqStep"><div class="rfqTitleRow"><span class="stepBadge">4</span><h3>Receive Quotation Support</h3></div><p>Rubinox reviews the buyer requirement as a stockist, supplier, importer, exporter and project supplier, then supports quotation discussion based on the enquiry details.</p></div>
       </div>
       <div class="requirementTags">
         <span>Material</span><span>Grade</span><span>Product Form</span><span>Size</span><span>Thickness / OD</span><span>Schedule / Class</span><span>Quantity</span><span>Standard</span><span>MTC / PMI</span><span>Inspection</span><span>Delivery City</span><span>Export Destination</span>
@@ -1859,7 +1878,7 @@ in pipes, tubes, sheets, plates, coils, flanges and fittings for industrial appl
   </section>
 <section class="section">
     <div class="wrap">
-      <div class="card">
+      <div class="card homeSeoAccentCard">
         <h2 style="margin:0 0 10px;color:#132a63">Leading Stainless Steel &amp; Alloy Supplier in India</h2>
         <p style="color:#566b9a;line-height:1.8;">
           Rubinox Metal and Alloys is recognized as a trusted stainless steel, duplex, super duplex, nickel alloy and industrial metal supplier in India.
