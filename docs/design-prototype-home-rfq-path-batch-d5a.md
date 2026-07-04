@@ -387,10 +387,46 @@ D5A-R2 final QA:
 - `npm run qa:forbidden-claims` - completed; 372 files scanned, 632 review-only matches, no files rewritten.
 - `git diff --check` - passed; only expected CRLF normalization warnings appeared for `index.html` and this documentation file.
 
-## Owner Review Instruction
+## D5B Lock Completion
 
-Owner must review the live homepage RFQ path cards before this card style is locked or reused elsewhere.
+Owner reviewed the live homepage RFQ path cards after D5A and D5A-R2 and approved them for design lock.
 
-## Next Step After Owner Approval
+Owner approval note:
 
-D5B - Create RFQ Path / Card Accent Design Lock. Do not apply to all cards until owner approves.
+`RFQ PATH CARDS APPROVED FOR DESIGN LOCK`
+
+D5B created:
+
+- `docs/design-system/RUBINOX_HOME_RFQ_PATH_LOCK_V1.md`
+- `docs/design-system/RUBINOX_CARD_ACCENT_LOCK_V1.md`
+
+D5B also updated:
+
+- `docs/design-system/RUBINOX_DESIGN_FINGERPRINT.md`
+- This D5A prototype documentation file.
+
+Final status:
+
+- Homepage RFQ Path Lock V1 is approved and final.
+- Card Accent Lock V1 is approved and final as a future base card design reference.
+- The approved homepage RFQ path design remains homepage-only.
+- Broad card-system replication was not performed.
+- FAQs, Materials We Supply, Product Forms, non-home pages, top bar, header, market ticker, hero, footer, SEO metadata, schema, sitemap, analytics, images, and PDFs were not changed in D5B.
+
+Future instruction:
+
+- Do not apply Card Accent Lock V1 broadly without a separate owner-approved rollout batch.
+- Future card rollouts must preserve the owner zoom/reflow rule: card, box, and CTA text must not overflow at 100%, 110%, or 125% zoom.
+
+D5B final QA:
+
+- `npm run qa:sitemap` - passed; 261 sitemap URLs, 261 local HTML pages, 0 missing, 0 extras, 0 duplicates.
+- `npm run qa:crawl` - passed; 400 links scanned.
+- `npm run qa:schema` - passed; 261 HTML pages, 866 JSON-LD blocks, 0 invalid.
+- `npm run qa:accessibility` - passed; 5 pages checked, 0 violations.
+- `npm run test:navigation` - passed.
+- `npm run qa:html` - passed; 261 pages checked, 0 invalid.
+- `npm run qa:links` - passed; 400 links scanned.
+- `npm run qa:pa11y` - passed; 9/9 URLs passed, with the existing `quotation.html` 5-error result within the threshold of 7.
+- `npm run qa:forbidden-claims` - completed; 374 files scanned, 644 review-only matches, no files rewritten.
+- `git diff --check` - passed; only expected CRLF normalization warnings appeared for edited documentation files.

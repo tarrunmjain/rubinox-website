@@ -340,3 +340,124 @@ Forbidden changes:
 - Do not add live price, confirmed stock, delivery, manufacturer, factory, mill, production, certification, approval, testimonial, review, rating, client, project, award, team-size, stockyard-size, or unverified years-of-experience claims.
 - Do not add CTA text that overflows at 100%, 110%, or 125% zoom.
 - Do not replicate the hero sitewide without owner approval.
+
+## Homepage RFQ Path - LOCK V1
+
+Status: approved and final.
+
+Lock document:
+
+- `docs/design-system/RUBINOX_HOME_RFQ_PATH_LOCK_V1.md`
+
+Related card reference:
+
+- `docs/design-system/RUBINOX_CARD_ACCENT_LOCK_V1.md`
+
+Source:
+
+- D5A homepage-only RFQ path card prototype.
+- D5A-R2 homepage-only RFQ path intro width correction.
+
+Approved commits:
+
+- D5A prototype: `6b4c4eb3a47fca722353fc6e86c7d406eefdc18a`
+- D5A-R2 correction: `fcd989d524e0df4294b77ee5af40934ab8b1b987`
+
+Scope:
+
+- Homepage only.
+- No sitewide RFQ path replication was performed.
+- Do not add the RFQ path section to non-home pages unless the owner separately approves it.
+- Do not change top bar, header, market ticker, hero, footer, SEO metadata, schema, sitemap, analytics, images, PDFs, or non-home pages as part of RFQ path maintenance.
+
+Exact content pattern:
+
+- Section title: `Plan the RFQ Path Before You Ask for Pricing`
+- Intro copy: `Use these quick steps to prepare grade, form, standards, documents and delivery details before sending your requirement. This helps our team review your RFQ clearly and respond with the right sourcing inputs.`
+- Card titles:
+  - `Compare grades`
+  - `Select product forms`
+  - `Check standards`
+  - `Confirm documents`
+  - `Send the RFQ`
+
+Exact visual pattern:
+
+- Section background: `linear-gradient(180deg,#fff,#f6f8fc)`.
+- Intro wrapper: `.buyerPathHead > div { width:100%; min-width:0; }`.
+- Intro paragraph: `.buyerPathHead p { max-width:1000px; }`.
+- Desktop card grid: five columns using `repeat(5,minmax(0,1fr))`.
+- Card base: white card, `8px` radius, subtle navy border, subtle shadow.
+- Top accent: `3px` `linear-gradient(90deg,var(--accent),var(--navy3))`.
+- Number/title row: inline, wrapped safely with `min-width:0`.
+- Card hover/focus: `translateY(-2px)`, stronger border, stronger shadow.
+
+Zoom/reflow no-overflow rule:
+
+- At 100%, 110%, and 125% browser zoom, RFQ intro text, card titles, card body text, and card boxes must not spill outside the RFQ path section.
+- Future homepage RFQ path edits must run zoom/reflow checks before commit.
+- Use `min-width:0`, `flex-wrap:wrap`, readable line-height, and safe text wrapping where needed.
+
+Future homepage instruction:
+
+- Preserve the `1000px` intro width correction.
+- Preserve the five-card desktop row at 1366px and 1280px.
+- Preserve the single-column mobile stack.
+- Preserve the white card plus gold-to-blue top accent style.
+- Preserve the inline number/title row.
+- Do not add extra cards or copy that makes the section tall without owner approval.
+
+Forbidden changes:
+
+- Do not revert to the old narrow `74ch` intro.
+- Do not remove the top accent line.
+- Do not return the card title to a stacked number-over-title layout.
+- Do not add live price, confirmed stock, delivery, manufacturer, factory, mill, production, certification, approval, testimonial, review, rating, client, project, award, team-size, stockyard-size, or unverified years-of-experience claims.
+- Do not replicate the RFQ path sitewide without owner approval.
+
+## Card Accent - LOCK V1
+
+Status: approved and final as a design reference.
+
+Lock document:
+
+- `docs/design-system/RUBINOX_CARD_ACCENT_LOCK_V1.md`
+
+Source:
+
+- Homepage RFQ path cards approved in D5A/D5A-R2 and locked in D5B.
+
+Scope:
+
+- Future base card design reference only.
+- No broad card-system replication was performed in D5B.
+- Future applications require separate owner approval, screenshots, zoom/reflow checks, QA, and a scoped implementation batch.
+
+Exact visual pattern:
+
+- White card base: `#fff`.
+- Border: `1px solid rgba(16,37,84,.12)`.
+- Radius: `8px`.
+- Shadow: `0 12px 30px rgba(15,30,60,.07)`.
+- Top accent: `3px` `linear-gradient(90deg,var(--accent),var(--navy3))`.
+- Heading color: `var(--ink2)` / `#132a63`.
+- Body color: `var(--muted2)` / `#566b9a`.
+- Hover/focus lift: `translateY(-2px)`.
+- Text containment: `min-width:0`, safe wrapping, no text escape at 100%, 110%, or 125% zoom.
+
+Future use candidates:
+
+- RFQ journey cards.
+- Material cards.
+- Product form cards.
+- FAQ cards.
+- Industry cards.
+- Related-page cards.
+- Clickable and non-clickable informational boxes.
+
+Forbidden changes:
+
+- Do not treat this lock as permission for broad sitewide card replication.
+- Do not put cards inside cards.
+- Do not create heavy gradient cards, oversized rounded cards, decorative blob cards, or marketing-style card clusters from this lock.
+- Do not add live price, confirmed stock, delivery, manufacturer, factory, mill, production, certification, approval, testimonial, review, rating, client, project, award, team-size, stockyard-size, or unverified years-of-experience claims.
