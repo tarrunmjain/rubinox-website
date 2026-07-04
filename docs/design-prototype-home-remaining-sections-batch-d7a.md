@@ -192,6 +192,68 @@ Result:
 - Checked non-home pages do not contain the D7A homepage-only section selectors.
 - Checked non-home pages showed no horizontal overflow at the captured widths.
 
+## D7A-R2 Owner Correction
+
+Batch:
+
+- D7A-R2 - Homepage RFQ Flow and City Chip Hover Correction.
+
+Issue 1:
+
+- In the Simple RFQ Flow for Industrial Metal Enquiries section, only card 3 appeared to keep the number badge and title in a clean inline row.
+- Cards 1, 2 and 4 could visually wrap the title below the number badge because longer titles were not flexing into the remaining row width.
+
+Fix:
+
+- All four RFQ Flow cards now keep the number badge and title inside the same inline flex row.
+- The title receives the remaining row width and wraps within that space when needed.
+- Existing card titles, body copy, card order and section links were preserved.
+
+Issue 2:
+
+- Clickable city chip hover in the Domestic and Export Enquiry Coverage card did not closely match the approved RFQ Path hover behavior.
+
+Fix:
+
+- Clickable city chips now use a restrained hover/focus style with the same light chip surface, Rubinox gold border emphasis, subtle `translateY(-2px)` lift and a restrained shadow.
+- The hover/focus state does not use a filled gold background, heavy box, large outline, or layout-shifting treatment.
+- City chip links remain keyboard accessible.
+
+City chip link rule:
+
+- Mumbai, Navi Mumbai, Thane, Pune, Ahmedabad, Vadodara, Surat, Chennai, Bengaluru, Hyderabad and Kolkata remain clickable because exact local pages exist.
+- Delhi NCR remains non-clickable because no exact Delhi NCR local page exists.
+
+D7A-R2 screenshot folders:
+
+- Before: `C:\Users\Dell\AppData\Local\Temp\rubinox-d7a-r2-before`
+- After: `C:\Users\Dell\AppData\Local\Temp\rubinox-d7a-r2-after`
+- Zoom/reflow: `C:\Users\Dell\AppData\Local\Temp\rubinox-d7a-r2-zoom-reflow`
+- Non-home check: `C:\Users\Dell\AppData\Local\Temp\rubinox-d7a-r2-nonhome-check`
+
+D7A-R2 zoom/reflow result:
+
+- 100%, 110% and 125% scoped checks passed.
+- Widths checked: 1366px, 1280px, 390px and 360px.
+- All four RFQ Flow number/title rows stayed inline with safe wrapping inside the card.
+- RFQ Flow body copy stayed inside the cards.
+- City chips stayed inside the Domestic and Export Enquiry Coverage card.
+- No scoped horizontal overflow was introduced by D7A-R2.
+
+D7A-R2 non-home check:
+
+- `/company-profile.html` checked at 1366px and 390px.
+- `/materials/stainless-steel.html` checked at 1366px and 390px.
+- No non-home page file was edited.
+- Checked non-home pages do not contain the D7A-R2 RFQ row or city chip selectors.
+- Checked non-home pages showed no horizontal overflow at the captured widths.
+
+Scope confirmations:
+
+- Footer work was not performed.
+- D7B lock was not created.
+- Top bar, header, market ticker, hero, approved RFQ Path, sitemap, schema, analytics, images and PDFs were not changed.
+
 ## SEO / Schema / Analytics
 
 - No title, meta description, canonical, Open Graph, Twitter card, JSON-LD, sitemap, robots, analytics, image, PDF, map embed, or footer data was changed.
