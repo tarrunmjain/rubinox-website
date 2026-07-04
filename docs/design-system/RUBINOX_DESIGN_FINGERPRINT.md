@@ -529,3 +529,86 @@ Forbidden changes:
 - Do not use this lock to alter non-home pages.
 - Do not use this lock to change top bar, header, market ticker, hero, RFQ path, or footer.
 - Do not add live price, confirmed stock, delivery, manufacturer, factory, mill, production, certification, approval, testimonial, review, rating, client, project, award, team-size, stockyard-size, or unverified years-of-experience claims.
+
+## Remaining Homepage Sections Polish - LOCK V1
+
+Status: approved and final.
+
+Owner approval:
+
+- "Remaining homepage sections approved for design lock"
+
+Lock document:
+
+- `docs/design-system/RUBINOX_HOME_REMAINING_SECTIONS_POLISH_LOCK_V1.md`
+
+Source:
+
+- D7A - Homepage Remaining Section Polish Prototype.
+- D7A-R2 - Homepage RFQ Flow and City Chip Hover Correction.
+- D7A-R3 - Homepage Final CTA Content Width Correction.
+
+Approved source commits:
+
+- D7A: `99a90295295fadc0322b40a003b61a9e732f125f`
+- D7A-R2: `5e515dafd955055f1fc4fc2dab2e2c0d00d856e5`
+- D7A-R3: `7ea3a91da981ccb5a13a81a48a32b1bbe58e25fb`
+
+Scope:
+
+- Homepage remaining-section polish only.
+- No sitewide rollout was performed.
+- No footer workflow was started.
+- No non-home pages were changed.
+- No SEO metadata, schema, sitemap, analytics, images or PDFs were changed.
+
+Protected sections and systems:
+
+- Why Choose Rubinox Metal and Alloys.
+- We specialize in stainless steel SEO link section.
+- Metal Supply FAQ.
+- Top Bar Lock V1.
+- Header Lock V1.
+- Homepage Market Ticker Lock V1.
+- Home Hero Lock V1.
+- Homepage RFQ Path Lock V1.
+- Footer.
+
+Exact locked details:
+
+- Quality / Standards card text remains limited to buyer-specified standards, project references, quotation inputs, documentation expectations, origin notes and logistics requirements.
+- PAN India / Export blue card uses approved silver/white contrast.
+- City chips link only to exact existing location pages: Mumbai, Navi Mumbai, Thane, Pune, Ahmedabad, Vadodara, Surat, Chennai, Bengaluru, Hyderabad and Kolkata.
+- Delhi NCR remains non-clickable until an exact approved destination exists.
+- Clickable city chip hover/focus uses light surface, Rubinox gold border, slight lift, restrained shadow and visible focus.
+- RFQ Flow cards use the inline number badge plus title row pattern with safe wrapping.
+- The Leading Stainless Steel and Alloy Supplier white card uses the approved gold-to-blue top accent line.
+- Final contact/RFQ and final map cards use the approved gold-to-blue top accent line.
+- The final blue CTA uses silver/white contrast and the approved wide content rail.
+
+Approved final CTA width rule:
+
+```css
+.finalCtaBand p,
+.finalCtaActions {
+  width:100%;
+  max-width:1080px;
+  min-width:0;
+}
+.finalCtaBand p {
+  overflow-wrap:break-word;
+}
+```
+
+Zoom/reflow no-overflow rule:
+
+- Text inside homepage cards, chips, boxes and CTAs must not spill outside parent containers at 100%, 110% or 125% browser zoom.
+- Future edits to these sections must rerun scoped zoom/reflow checks before commit.
+
+Forbidden changes:
+
+- Do not use this lock to start footer work.
+- Do not use this lock to perform broad card-system rollout.
+- Do not change non-home pages without a separate approved batch.
+- Do not add live price, confirmed stock, delivery guarantee, certification, approval, testimonial, review, rating, client, project, award, team-size, stockyard-size, or unverified years-of-experience claims.
+- Keep Rubinox positioned as Stockist | Supplier | Importer | Exporter | Project Supplier.

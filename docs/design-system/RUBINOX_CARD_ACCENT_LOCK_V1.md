@@ -170,6 +170,33 @@ Do not:
 - Describe Rubinox as a manufacturer.
 - Use this card pattern to publish raw GST, Udyam, IEC, vendor onboarding, or client/project reference content.
 
+## D7A / D7A-R2 / D7A-R3 Approved Homepage Applications
+
+D7B records the owner-approved homepage applications from the remaining-section polish workflow.
+
+Approved applications:
+
+- Simple RFQ Flow cards use the approved inline number badge plus title row behavior from the RFQ Path pattern.
+- The title area must receive the remaining row width, use `min-width:0`, and wrap safely inside the card.
+- Clickable city chips in the PAN India / Export section use light surface, Rubinox gold border emphasis, slight `translateY(-2px)` lift, restrained shadow, and visible keyboard focus.
+- City chip hover/focus must not use a filled gold background, heavy box, or layout-shifting treatment.
+- The `Leading Stainless Steel and Alloy Supplier in India` white card uses the approved gold-to-blue top accent line.
+- The final contact/RFQ card and final map card use the approved gold-to-blue top accent line.
+- The final blue CTA is not a white content-card accent application; its approved D7A/D7A-R3 changes are contrast and content rail width only.
+
+Protected during D7A/D7B:
+
+- Why Choose Rubinox Metal and Alloys.
+- We specialize in stainless steel SEO link section.
+- Metal Supply FAQ.
+- Top bar, header, market ticker, hero, RFQ Path and footer.
+
+Rollout rule:
+
+- These applications are homepage-approved only.
+- They do not authorize broad card-system rollout, sitewide replication, FAQ restyling, form restyling, table restyling, footer changes, or non-home page changes.
+- Future applications still require separate owner approval, screenshots, zoom/reflow checks, QA, and a scoped implementation batch.
+
 ## D5B Validation
 
 The source RFQ path cards were rechecked in D5B:

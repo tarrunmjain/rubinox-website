@@ -7,7 +7,9 @@
 - Scope: homepage only.
 - Files changed: `index.html` and this documentation file.
 - Sitewide rollout: not performed.
-- Design lock: not created in D7A.
+- Design lock: not created in D7A prototype batch.
+- Final owner approval: `Remaining homepage sections approved for design lock`.
+- Final lock: `docs/design-system/RUBINOX_HOME_REMAINING_SECTIONS_POLISH_LOCK_V1.md`.
 
 ## Owner Feedback Summary
 
@@ -377,11 +379,35 @@ Final D7A QA result:
 
 - Passed. Review-only forbidden-claims matches were not rewritten.
 
+## Final Owner Approval and D7B Lock Status
+
+Owner reviewed the live homepage remaining section polish after D7A, D7A-R2 and D7A-R3 and approved it for design lock:
+
+```text
+Remaining homepage sections approved for design lock
+```
+
+D7B created the final lock document:
+
+- `docs/design-system/RUBINOX_HOME_REMAINING_SECTIONS_POLISH_LOCK_V1.md`
+
+D7B also updated:
+
+- `docs/design-system/RUBINOX_CARD_ACCENT_LOCK_V1.md`
+- `docs/design-system/RUBINOX_DESIGN_FINGERPRINT.md`
+
+D7B visual QA artifacts use the D-drive folder required after project migration:
+
+- `D:\Websites\Rubinox\visual-qa\d7b-remaining-section-lock`
+
+The C-drive screenshot folders above are retained only as historical D7A/D7A-R2/D7A-R3 references. New Rubinox visual QA artifacts must use D drive.
+
 ## Owner Review Instruction
 
-Owner must review the live homepage remaining section polish before any lock or sitewide rollout.
+D7A, D7A-R2 and D7A-R3 are approved and locked by D7B.
 
-Next step after owner approval:
+Next workflow step:
 
-- D7B - Create Remaining Homepage Section Polish Lock / update Card Accent rollout plan.
-- Do not apply sitewide until owner approves.
+- Footer workflow may start only when the owner explicitly requests the next batch.
+- D7B did not start footer work.
+- D7B did not perform sitewide rollout.
