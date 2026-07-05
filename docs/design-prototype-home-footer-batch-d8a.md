@@ -1,6 +1,6 @@
 # Design Prototype: Homepage Footer - Batch D8A
 
-Status: Prototype implemented for owner review.
+Status: Prototype implemented for owner review. D8A-R2 horizontal link-row correction implemented.
 Scope: Homepage only (`index.html`).
 Lock status: Not locked. Do not replicate sitewide until D8B approval.
 
@@ -112,6 +112,120 @@ Result:
 - The homepage-only `homeFooterPrototypeD8A` class is absent on checked non-home pages.
 - No sitewide footer replication was performed.
 
+## D8A-R2 horizontal footer link-row prototype
+
+Owner feedback after the live D8A review confirmed the brand block, contact details, and icon direction should remain, but the middle footer links still felt too column-heavy. D8A-R2 keeps the homepage-only footer prototype and converts the middle area into a horizontal link bank.
+
+Scope:
+
+- Homepage only (`index.html`).
+- No Footer Lock V1 was created.
+- No sitewide footer replication was performed.
+- No non-home page footer was edited.
+- No contact detail, SEO, schema, sitemap, analytics, image, PDF, top bar, header, market ticker, hero, RFQ path, homepage section, or footer brand-block redesign was performed.
+
+Desktop layout:
+
+- Left: existing brand block with logo, current short description, and six contact/social icons.
+- Center: `footerLinkBank` with three stacked horizontal rows.
+- Right: existing Contact Details block and platform icons.
+
+Horizontal row contents:
+
+- Quick Links: Home, About Us, Industries, Product Portfolio, Locations, Export, Blog, Technical Resources, Quality Documentation, Company Profile, Quotation, Contact, Privacy Policy, Terms & Conditions.
+- Main Materials: Stainless Steel, Duplex & Super Duplex, Nickel Alloys, Titanium, SMO 254, Special Engineering Alloys.
+- Forms & RFQ: Pipes, Tubes, Sheets, Plates, Flanges, Request Quotation.
+
+Interaction notes:
+
+- Link rows use inline wrapping and subtle vertical separators.
+- Hover changes link color to Rubinox gold without heavy backgrounds or layout shift.
+- Keyboard focus uses a visible gold outline.
+- The six brand/contact icons remain in one row on checked desktop and mobile widths.
+
+Copyright correction:
+
+- Homepage footer changed from `© 2026 Rubinox Metal and Alloys. All rights reserved.` to `© Rubinox Metal and Alloys. All rights reserved.`
+- Checked non-home footers were not changed and still retain their existing copyright text.
+
+### D8A-R2 measurements
+
+| Viewport | D8A footer height before R2 | D8A-R2 footer height | R2 reduction |
+| --- | ---: | ---: | ---: |
+| 1366px desktop | 372px | 319px | 14.2% |
+| 1280px desktop | 372px | 319px | 14.2% |
+| 390px mobile | 1023px | 771px | 24.6% |
+| 360px mobile | 1022px | 770px | 24.7% |
+
+### D8A-R2 icon row result
+
+| Viewport | Brand icon count | Brand icon rows | Result |
+| --- | ---: | ---: | --- |
+| 1366px desktop | 6 | 1 | Pass |
+| 1280px desktop | 6 | 1 | Pass |
+| 390px mobile | 6 | 1 | Pass |
+| 360px mobile | 6 | 1 | Pass |
+
+### D8A-R2 mobile and zoom/reflow results
+
+- 100%, 110%, and effective 125% zoom/reflow checks passed for 1366px, 1280px, 390px, and 360px test widths.
+- No footer horizontal overflow was detected in the checked states.
+- Brand icon row stayed in one row in all checked states.
+- At the narrowest effective 125% mobile check, the copyright line wrapped safely without creating horizontal scroll.
+
+### D8A-R2 visual QA evidence
+
+Before screenshots:
+
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\before\home-footer-desktop-1366.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\before\home-footer-desktop-1280.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\before\home-footer-mobile-390.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\before\home-footer-mobile-360.png`
+
+After screenshots:
+
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\after\home-footer-desktop-1366.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\after\home-footer-desktop-1280.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\after\home-footer-tablet-768.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\after\home-footer-mobile-390.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\after\home-footer-mobile-360.png`
+
+Hover/focus screenshots:
+
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\hover-focus\home-footer-quick-hover.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\hover-focus\home-footer-materials-focus.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\hover-focus\home-footer-forms-hover.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\hover-focus\home-footer-social-hover.png`
+
+Zoom/reflow screenshots:
+
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\zoom-reflow\home-footer-desktop-1366-zoom-1.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\zoom-reflow\home-footer-desktop-1366-zoom-1p1.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\zoom-reflow\home-footer-desktop-1366-zoom-1p25.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\zoom-reflow\home-footer-desktop-1280-zoom-1.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\zoom-reflow\home-footer-desktop-1280-zoom-1p1.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\zoom-reflow\home-footer-desktop-1280-zoom-1p25.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\zoom-reflow\home-footer-mobile-390-zoom-1.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\zoom-reflow\home-footer-mobile-390-zoom-1p1.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\zoom-reflow\home-footer-mobile-390-zoom-1p25.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\zoom-reflow\home-footer-mobile-360-zoom-1.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\zoom-reflow\home-footer-mobile-360-zoom-1p1.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\zoom-reflow\home-footer-mobile-360-zoom-1p25.png`
+
+Non-home footer check screenshots:
+
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\nonhome-check\company-profile-desktop.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\nonhome-check\company-profile-mobile.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\nonhome-check\material-desktop.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r2-footer-horizontal\nonhome-check\material-mobile.png`
+
+Non-home check result:
+
+- `/company-profile.html` and `/materials/stainless-steel.html` were checked at desktop and mobile widths.
+- The checked non-home footers do not have the homepage `homeFooterPrototypeD8A` class.
+- The checked non-home footers do not have the D8A-R2 `footerLinkBank` markup.
+- No sitewide footer replication was performed.
+
 ## QA
 
 Baseline QA before edits passed:
@@ -139,6 +253,8 @@ Final QA after edits passed:
 - `npm run qa:pa11y` - 9/9 URLs passed; quotation page remains within existing threshold
 - `npm run qa:forbidden-claims` - 379 files scanned, 655 matches flagged for review, no files rewritten
 - `git diff --check` - passed
+
+The same final QA suite was rerun after the D8A-R2 horizontal footer link-row correction. Results remained passing: sitemap 261/261, HTML 261 pages with 0 invalid, schema 866 JSON-LD blocks with 0 invalid, accessibility 0 violations on checked pages, navigation passed, crawl and links scanned 400 links, pa11y passed 9/9 URLs within threshold, forbidden-claims rewrote no files, and `git diff --check` passed with only line-ending normalization warnings.
 
 ## Next Step
 
