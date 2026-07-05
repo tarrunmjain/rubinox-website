@@ -752,3 +752,51 @@ Forbidden changes:
 - Do not edit public HTML or CSS for visible design in D9A.
 - Do not change SEO metadata, schema meaning, sitemap URLs, analytics, images, PDFs or contact details as part of planning.
 - Do not add manufacturer, factory, mill, production, stock, price, delivery, certification, approval, client, project, testimonial, rating, review, award, team-size, stockyard-size or unverified years-of-experience claims.
+
+## Sitewide Design Standardization - D9C
+
+Status: implemented for owner review.
+
+Batch document:
+
+- `docs/design-sitewide-standardization-batch-d9c.md`
+
+Scope:
+
+- Full sitewide design standardization across all 261 public HTML pages.
+- Final shared CSS: `assets/css/rubinox-sitewide-design-v1.css`.
+- Final page scope: `body.sitewideDesignV1`.
+- Final footer marker: `sitewideFooterD9C`.
+
+Locked-source design language applied:
+
+- Top Bar Lock V1 and Header Lock V1 remain the shared global navigation baseline.
+- Footer Lock V1 was rolled out sitewide with one unified `Quick Links:` bank.
+- Card Accent Lock V1, section intro width, CTA contrast, chip hover/focus, inline number rows, contact/map card accents and blue-panel contrast were applied where page-type appropriate.
+- Homepage-only market ticker, hero, RFQ Path and homepage body content were not copied to non-home pages.
+
+Specific D9C corrections captured:
+
+- Bharat Metals trust panel contrast and external link treatment.
+- FAQ card consistency.
+- City, country, product form and technical link hover/focus treatment.
+- Quotation numbered cards, Before You Send alignment and factor guide spacing.
+- CTA gold button consistency.
+- Contact, map, support and platform card accents.
+
+Preservation rules:
+
+- Preserve all public URLs, H1 intent, titles, meta descriptions, canonicals, JSON-LD schema meaning, sitemap URLs, GA4 tracking, contact details, images and PDFs.
+- Preserve current GA4 ID `G-JT5X5L5H07` and keep old GA4 ID `G-CR18QYPS6C` absent.
+- Keep Rubinox positioned as Stockist | Supplier | Importer | Exporter | Project Supplier.
+- Do not add unsupported business, stock, price, delivery, certification, approval, client, project, testimonial, rating, award, team-size, stockyard-size or unverified experience claims.
+
+QA and audit baseline:
+
+- Post-D9C audit: 261 final CSS references, 261 final body class references, 261 final footers, 0 old footer headings, 0 footer year instances, 0 D9B pilot markers, 0 homepage-only marker leakage.
+- Zoom/reflow: 132 checks at 100%, 110% and 125%; failing checks: 0.
+- QA gates passed or completed: sitemap, crawl, schema, accessibility, navigation, HTML validation, links, Pa11y, forbidden-claims scan, image audit and `git diff --check`.
+
+Next step:
+
+- Owner should review representative pages after D9C. If approved, next step is D9D - Final Sitewide Design Fingerprint Lock.

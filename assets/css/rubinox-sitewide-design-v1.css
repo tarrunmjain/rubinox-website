@@ -1,0 +1,880 @@
+/* D9C final sitewide design language. */
+body.sitewideDesignV1 {
+  --d9c-ink: #07101f;
+  --d9c-navy: #132a63;
+  --d9c-muted: #566b9a;
+  --d9c-gold: #e2a02f;
+  --d9c-gold-soft: #f7c65b;
+  --d9c-line: #d8e0ec;
+  --d9c-soft: #f8fafc;
+  --d9c-silver: #d9dee7;
+}
+
+body.sitewideDesignV1 .sectionIntro {
+  max-width: 1000px;
+}
+
+body.sitewideDesignV1 .card,
+body.sitewideDesignV1 .faqItem,
+body.sitewideDesignV1 .supportCard,
+body.sitewideDesignV1 .contactCard,
+body.sitewideDesignV1 .platformCard,
+body.sitewideDesignV1 .flowCard,
+body.sitewideDesignV1 .docCard,
+body.sitewideDesignV1 .checkCard,
+body.sitewideDesignV1 .materialCard,
+body.sitewideDesignV1 .projectCard,
+body.sitewideDesignV1 .formCard,
+body.sitewideDesignV1 .ssFormCard,
+body.sitewideDesignV1 .gateCard,
+body.sitewideDesignV1 .industryCard,
+body.sitewideDesignV1 .articleCard,
+body.sitewideDesignV1 .relItem {
+  position: relative;
+  overflow: visible;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  border: 1px solid rgba(19, 42, 99, .12);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 14px 30px rgba(15, 30, 60, .075);
+}
+
+body.sitewideDesignV1 .articleCard,
+body.sitewideDesignV1 .formCard,
+body.sitewideDesignV1 .ssFormCard,
+body.sitewideDesignV1 .industryCard,
+body.sitewideDesignV1 .relItem {
+  overflow: hidden;
+}
+
+body.sitewideDesignV1 .card:has(.dataTable),
+body.sitewideDesignV1 .card:has(table) {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+body.sitewideDesignV1 .card::before,
+body.sitewideDesignV1 .faqItem::before,
+body.sitewideDesignV1 .supportCard::before,
+body.sitewideDesignV1 .contactCard::before,
+body.sitewideDesignV1 .platformCard::before,
+body.sitewideDesignV1 .flowCard::before,
+body.sitewideDesignV1 .docCard::before,
+body.sitewideDesignV1 .checkCard::before,
+body.sitewideDesignV1 .materialCard::before,
+body.sitewideDesignV1 .projectCard::before,
+body.sitewideDesignV1 .formCard::before,
+body.sitewideDesignV1 .ssFormCard::before,
+body.sitewideDesignV1 .gateCard::before,
+body.sitewideDesignV1 .industryCard::before,
+body.sitewideDesignV1 .articleCard::before,
+body.sitewideDesignV1 .relItem::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--d9c-gold), var(--d9c-navy));
+  pointer-events: none;
+}
+
+body.sitewideDesignV1 .card h2,
+body.sitewideDesignV1 .card h3,
+body.sitewideDesignV1 .faqItem h3,
+body.sitewideDesignV1 .supportCard h3,
+body.sitewideDesignV1 .contactCard h3,
+body.sitewideDesignV1 .platformCard h3,
+body.sitewideDesignV1 .flowCard h3,
+body.sitewideDesignV1 .docCard h3,
+body.sitewideDesignV1 .checkCard h3,
+body.sitewideDesignV1 .materialCard h3,
+body.sitewideDesignV1 .projectCard h3,
+body.sitewideDesignV1 .formCard h3,
+body.sitewideDesignV1 .ssFormCard h3,
+body.sitewideDesignV1 .gateCard h3,
+body.sitewideDesignV1 .industryCard h3,
+body.sitewideDesignV1 .articleCard h3,
+body.sitewideDesignV1 .relItem h3 {
+  color: var(--d9c-navy);
+}
+
+body.sitewideDesignV1 a.card,
+body.sitewideDesignV1 a.articleCard,
+body.sitewideDesignV1 a.formCard,
+body.sitewideDesignV1 a.ssFormCard,
+body.sitewideDesignV1 a.industryCard,
+body.sitewideDesignV1 a.relItem,
+body.sitewideDesignV1 a.gateCard,
+body.sitewideDesignV1 .platformCard a {
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+
+body.sitewideDesignV1 a.card:hover,
+body.sitewideDesignV1 a.card:focus-visible,
+body.sitewideDesignV1 a.articleCard:hover,
+body.sitewideDesignV1 a.articleCard:focus-visible,
+body.sitewideDesignV1 a.formCard:hover,
+body.sitewideDesignV1 a.formCard:focus-visible,
+body.sitewideDesignV1 a.ssFormCard:hover,
+body.sitewideDesignV1 a.ssFormCard:focus-visible,
+body.sitewideDesignV1 a.industryCard:hover,
+body.sitewideDesignV1 a.industryCard:focus-visible,
+body.sitewideDesignV1 a.relItem:hover,
+body.sitewideDesignV1 a.relItem:focus-visible,
+body.sitewideDesignV1 a.gateCard:hover,
+body.sitewideDesignV1 a.gateCard:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(226, 160, 47, .52);
+  box-shadow: 0 18px 34px rgba(15, 30, 60, .12);
+  outline: 2px solid rgba(226, 160, 47, .28);
+  outline-offset: 3px;
+}
+
+body.sitewideDesignV1 .premiumHero,
+body.sitewideDesignV1 .rescueSection,
+body.sitewideDesignV1 .ctaBand,
+body.sitewideDesignV1 .darkPanel,
+body.sitewideDesignV1 .bluePanel {
+  color: #fff;
+}
+
+body.sitewideDesignV1 .premiumHero h2,
+body.sitewideDesignV1 .premiumHero h3,
+body.sitewideDesignV1 .rescueSection h2,
+body.sitewideDesignV1 .rescueSection h3,
+body.sitewideDesignV1 .ctaBand h2,
+body.sitewideDesignV1 .ctaBand h3,
+body.sitewideDesignV1 .darkPanel h2,
+body.sitewideDesignV1 .darkPanel h3,
+body.sitewideDesignV1 .bluePanel h2,
+body.sitewideDesignV1 .bluePanel h3 {
+  color: var(--d9c-silver);
+}
+
+body.sitewideDesignV1 .premiumHero p,
+body.sitewideDesignV1 .rescueSection p,
+body.sitewideDesignV1 .ctaBand p,
+body.sitewideDesignV1 .darkPanel p,
+body.sitewideDesignV1 .bluePanel p {
+  color: rgba(255, 255, 255, .88);
+}
+
+body.sitewideDesignV1 a.miniTag,
+body.sitewideDesignV1 a.materialTag,
+body.sitewideDesignV1 a.cityTag,
+body.sitewideDesignV1 a.chip,
+body.sitewideDesignV1 a.tag,
+body.sitewideDesignV1 a.blogFilter,
+body.sitewideDesignV1 a.miniLink {
+  background: #fff;
+  border-color: rgba(19, 42, 99, .16);
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease, color .18s ease;
+}
+
+body.sitewideDesignV1 a.miniTag:hover,
+body.sitewideDesignV1 a.miniTag:focus-visible,
+body.sitewideDesignV1 a.materialTag:hover,
+body.sitewideDesignV1 a.materialTag:focus-visible,
+body.sitewideDesignV1 a.cityTag:hover,
+body.sitewideDesignV1 a.cityTag:focus-visible,
+body.sitewideDesignV1 a.chip:hover,
+body.sitewideDesignV1 a.chip:focus-visible,
+body.sitewideDesignV1 a.tag:hover,
+body.sitewideDesignV1 a.tag:focus-visible,
+body.sitewideDesignV1 a.blogFilter:hover,
+body.sitewideDesignV1 a.blogFilter:focus-visible,
+body.sitewideDesignV1 a.miniLink:hover,
+body.sitewideDesignV1 a.miniLink:focus-visible {
+  color: var(--d9c-navy);
+  border-color: rgba(226, 160, 47, .72);
+  box-shadow: 0 8px 18px rgba(15, 30, 60, .10);
+  transform: translateY(-1px);
+  outline: 2px solid rgba(226, 160, 47, .30);
+  outline-offset: 2px;
+}
+
+body.sitewideDesignV1 .flowCard .cardTop,
+body.sitewideDesignV1 .checkCard .cardTop,
+body.sitewideDesignV1 .docCard .cardTop,
+body.sitewideDesignV1 .contactCard .cardTop,
+body.sitewideDesignV1 .projectCard .cardTop,
+body.sitewideDesignV1 .materialCard .cardTop {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-width: 0;
+}
+
+body.sitewideDesignV1 .flowCard .cardTop h3,
+body.sitewideDesignV1 .checkCard .cardTop h3,
+body.sitewideDesignV1 .docCard .cardTop h3,
+body.sitewideDesignV1 .contactCard .cardTop h3,
+body.sitewideDesignV1 .projectCard .cardTop h3,
+body.sitewideDesignV1 .materialCard .cardTop h3 {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+body.sitewideDesignV1 .flowCard .flowNum,
+body.sitewideDesignV1 .checkCard .flowNum {
+  flex: 0 0 auto;
+}
+
+body.sitewideDesignV1 .btn {
+  min-width: 0;
+  white-space: normal;
+  text-align: center;
+}
+
+body.sitewideDesignV1 .btn.primary,
+body.sitewideDesignV1 .btnGold {
+  background: linear-gradient(135deg, var(--d9c-gold-soft), var(--d9c-gold));
+  color: var(--d9c-ink);
+}
+
+body.sitewideDesignV1 .btn.primary:hover,
+body.sitewideDesignV1 .btn.primary:focus-visible,
+body.sitewideDesignV1 .btnGold:hover,
+body.sitewideDesignV1 .btnGold:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 28px rgba(226, 160, 47, .22);
+}
+
+body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerLayout {
+  grid-template-columns: minmax(230px, .95fr) minmax(0, 2.2fr) minmax(230px, .95fr) !important;
+  align-items: start !important;
+  gap: 24px !important;
+  padding: 30px 20px 28px !important;
+}
+
+body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerBrand img {
+  max-width: 210px !important;
+  margin-bottom: 10px !important;
+}
+
+body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerBrand p,
+body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerContact p {
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  margin: 0 0 10px !important;
+  overflow-wrap: break-word !important;
+}
+
+body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerLinkBank {
+  display: block !important;
+  min-width: 0 !important;
+  padding-top: 1px !important;
+}
+
+body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerUnifiedLinks {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerUnifiedTitle {
+  position: relative !important;
+  display: inline-flex !important;
+  margin: 0 0 10px !important;
+  padding: 0 0 7px !important;
+  color: var(--d9c-navy) !important;
+  font-size: 15px !important;
+  line-height: 1.2 !important;
+  font-weight: 900 !important;
+  white-space: nowrap !important;
+}
+
+body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerUnifiedTitle::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 64px !important;
+  height: 2px !important;
+  border-radius: 999px !important;
+  background: linear-gradient(90deg, var(--d9c-gold), rgba(226, 160, 47, 0)) !important;
+}
+
+body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerContact h2 {
+  margin: 0 0 7px !important;
+  color: var(--d9c-navy) !important;
+  font-size: 14px !important;
+  line-height: 1.45 !important;
+  white-space: nowrap !important;
+}
+
+body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerInlineLinks {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 7px 14px !important;
+  min-width: 0 !important;
+  width: 100% !important;
+}
+
+body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerInlineLinks a,
+body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerContact a {
+  font-size: 13.6px !important;
+  line-height: 1.45 !important;
+  overflow-wrap: anywhere !important;
+  color: var(--d9c-navy) !important;
+  font-weight: 750 !important;
+  text-decoration: none !important;
+}
+
+body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerInlineLinks a {
+  display: inline-flex !important;
+  align-items: center !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerIconGroup {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+  gap: 6px !important;
+  margin-top: 11px !important;
+  max-width: 100% !important;
+}
+
+body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerBrand .footerIcon {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  min-height: 32px !important;
+  max-width: 32px !important;
+  max-height: 32px !important;
+  flex: 0 0 32px !important;
+  border-radius: 8px !important;
+}
+
+body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerBrand .footerIcon svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerBrand .footerIcon img {
+  width: 20px !important;
+  height: 20px !important;
+  max-width: 20px !important;
+  max-height: 20px !important;
+  margin: 0 !important;
+}
+
+body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .platformIconGroup {
+  gap: 8px !important;
+  margin-top: 11px !important;
+  flex-wrap: wrap !important;
+}
+
+body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerBottom {
+  padding: 12px 0 !important;
+}
+
+body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerInlineLinks a:hover,
+body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerContact a:hover {
+  color: #8a5a06 !important;
+  text-decoration: none !important;
+}
+
+body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerInlineLinks a:focus-visible,
+body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerContact a:focus-visible {
+  color: #8a5a06 !important;
+  outline: 2px solid rgba(226, 160, 47, .42) !important;
+  outline-offset: 3px !important;
+  border-radius: 4px !important;
+  text-decoration: none !important;
+}
+
+@media (max-width: 1120px) {
+  body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerLayout {
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.35fr) !important;
+    gap: 20px 24px !important;
+    padding: 24px 20px 22px !important;
+  }
+
+  body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerContact {
+    grid-column: 1 / -1 !important;
+  }
+
+  body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerInlineLinks {
+    gap: 7px 13px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerLayout {
+    grid-template-columns: 1fr !important;
+    padding: 22px 18px 20px !important;
+    gap: 18px !important;
+  }
+
+  body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerBrand img {
+    max-width: 202px !important;
+    margin-bottom: 8px !important;
+  }
+
+  body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerBrand p,
+  body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerContact p {
+    font-size: 13.5px !important;
+    line-height: 1.52 !important;
+    margin: 0 0 8px !important;
+  }
+
+  body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerUnifiedTitle {
+    font-size: 14px !important;
+    margin-bottom: 9px !important;
+  }
+
+  body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerInlineLinks {
+    gap: 7px 12px !important;
+  }
+
+  body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerInlineLinks a,
+  body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerContact a {
+    font-size: 13.5px !important;
+    line-height: 1.36 !important;
+  }
+
+  body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerIconGroup {
+    gap: 5px !important;
+  }
+
+  body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerBrand .footerIcon {
+    width: 29px !important;
+    height: 29px !important;
+    min-width: 29px !important;
+    min-height: 29px !important;
+    max-width: 29px !important;
+    max-height: 29px !important;
+    flex: 0 0 29px !important;
+  }
+
+  body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerBrand .footerIcon svg {
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerBrand .footerIcon img {
+    width: 19px !important;
+    height: 19px !important;
+    max-width: 19px !important;
+    max-height: 19px !important;
+  }
+
+  body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerBottom {
+    padding: 9px 0 !important;
+  }
+}
+
+@media (max-width: 370px) {
+  body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerBrand .footerIcon {
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    min-height: 28px !important;
+    max-width: 28px !important;
+    max-height: 28px !important;
+    flex: 0 0 28px !important;
+  }
+
+  body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerIconGroup {
+    gap: 4px !important;
+  }
+
+  body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerInlineLinks {
+    gap: 7px 10px !important;
+  }
+}
+
+/* RUBINOX D9C SITEWIDE DESIGN STANDARDIZATION START */
+body.sitewideDesignV1 {
+  --d9c-ink: #07101f;
+  --d9c-navy: #132a63;
+  --d9c-navy-soft: #102554;
+  --d9c-gold: #e2a02f;
+  --d9c-gold-soft: #f7c65b;
+  --d9c-silver: #e8edf4;
+  --d9c-muted: #566b9a;
+  --d9c-line: #d8e0ec;
+}
+
+body.sitewideDesignV1 .faqGrid {
+  align-items: stretch !important;
+}
+
+body.sitewideDesignV1 .faqGrid > article:not(.faqItem) {
+  position: relative;
+  overflow: hidden;
+  padding: 22px !important;
+  border: 1px solid rgba(16, 37, 84, .12) !important;
+  border-radius: 8px !important;
+  background: #fff !important;
+  box-shadow: 0 10px 24px rgba(15, 30, 60, .05) !important;
+}
+
+body.sitewideDesignV1 .faqItem {
+  position: relative !important;
+  overflow: hidden !important;
+  padding: 22px !important;
+  border: 1px solid rgba(16, 37, 84, .12) !important;
+  border-radius: 8px !important;
+  background: #fff !important;
+  box-shadow: 0 10px 24px rgba(15, 30, 60, .05) !important;
+  min-width: 0 !important;
+}
+
+body.sitewideDesignV1 .faqItem::before,
+body.sitewideDesignV1 .faqGrid > article:not(.faqItem)::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  height: 4px !important;
+  display: block !important;
+  background: linear-gradient(90deg, var(--d9c-gold), var(--d9c-navy)) !important;
+  pointer-events: none !important;
+}
+
+body.sitewideDesignV1 .faqItem h3,
+body.sitewideDesignV1 .faqGrid > article:not(.faqItem) h3 {
+  margin: 0 0 12px !important;
+  color: var(--d9c-navy) !important;
+  line-height: 1.3 !important;
+  font-size: clamp(17px, 1.5vw, 19px) !important;
+  overflow-wrap: anywhere !important;
+}
+
+body.sitewideDesignV1 .faqItem p,
+body.sitewideDesignV1 .faqGrid > article:not(.faqItem) p {
+  margin: 0 !important;
+  color: var(--d9c-muted) !important;
+  line-height: 1.68 !important;
+  overflow-wrap: anywhere !important;
+}
+
+body.sitewideDesignV1 main .heritageBand,
+body.sitewideDesignV1 main .trustConnection,
+body.sitewideDesignV1 main .darkPanel,
+body.sitewideDesignV1 main .bluePanel,
+body.sitewideDesignV1 main .ctaBand,
+body.sitewideDesignV1 main .rescueSection.dark,
+body.sitewideDesignV1 main .premiumHero {
+  color: #fff !important;
+}
+
+body.sitewideDesignV1 main .heritageBand h2,
+body.sitewideDesignV1 main .heritageBand h3,
+body.sitewideDesignV1 main .trustConnection h2,
+body.sitewideDesignV1 main .trustConnection h3,
+body.sitewideDesignV1 main .darkPanel h2,
+body.sitewideDesignV1 main .darkPanel h3,
+body.sitewideDesignV1 main .bluePanel h2,
+body.sitewideDesignV1 main .bluePanel h3,
+body.sitewideDesignV1 main .ctaBand h2,
+body.sitewideDesignV1 main .ctaBand h3,
+body.sitewideDesignV1 main .rescueSection.dark h2,
+body.sitewideDesignV1 main .rescueSection.dark h3,
+body.sitewideDesignV1 main .premiumHero h1,
+body.sitewideDesignV1 main .premiumHero h2,
+body.sitewideDesignV1 main .premiumHero h3 {
+  color: var(--d9c-silver) !important;
+}
+
+body.sitewideDesignV1 main .heritageBand p,
+body.sitewideDesignV1 main .trustConnection p,
+body.sitewideDesignV1 main .darkPanel p,
+body.sitewideDesignV1 main .bluePanel p,
+body.sitewideDesignV1 main .ctaBand p,
+body.sitewideDesignV1 main .rescueSection.dark p,
+body.sitewideDesignV1 main .premiumHero p,
+body.sitewideDesignV1 main .premiumHero li {
+  color: rgba(255, 255, 255, .88) !important;
+}
+
+body.sitewideDesignV1 main .heritageBand strong,
+body.sitewideDesignV1 main .heritageBand a,
+body.sitewideDesignV1 main .trustConnection a {
+  color: var(--d9c-gold-soft) !important;
+}
+
+body.sitewideDesignV1 main a.card,
+body.sitewideDesignV1 main a.materialSupplyCard,
+body.sitewideDesignV1 main a.articleCard,
+body.sitewideDesignV1 main a.formCard,
+body.sitewideDesignV1 main a.ssFormCard,
+body.sitewideDesignV1 main a.industryCard,
+body.sitewideDesignV1 main a.homeIndustryCard,
+body.sitewideDesignV1 main a.materialLink,
+body.sitewideDesignV1 main a.industryMini,
+body.sitewideDesignV1 main a.relItem,
+body.sitewideDesignV1 main a.gateCard,
+body.sitewideDesignV1 main a.cityCard,
+body.sitewideDesignV1 main a.countryCard,
+body.sitewideDesignV1 main a.exportCard,
+body.sitewideDesignV1 main a.locationCard,
+body.sitewideDesignV1 main a.resourceCard,
+body.sitewideDesignV1 main .linkGrid a,
+body.sitewideDesignV1 main .locationLinkGrid a,
+body.sitewideDesignV1 main .tagRow a,
+body.sitewideDesignV1 main a.miniTag,
+body.sitewideDesignV1 main a.materialTag,
+body.sitewideDesignV1 main a.cityTag,
+body.sitewideDesignV1 main a.gradeTag,
+body.sitewideDesignV1 main a.specTag,
+body.sitewideDesignV1 main a.standardTag,
+body.sitewideDesignV1 main a.chip,
+body.sitewideDesignV1 main a.tag,
+body.sitewideDesignV1 main a.blogFilter,
+body.sitewideDesignV1 main a.miniLink {
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease !important;
+}
+
+body.sitewideDesignV1 main a.card:hover,
+body.sitewideDesignV1 main a.card:focus-visible,
+body.sitewideDesignV1 main a.materialSupplyCard:hover,
+body.sitewideDesignV1 main a.materialSupplyCard:focus-visible,
+body.sitewideDesignV1 main a.articleCard:hover,
+body.sitewideDesignV1 main a.articleCard:focus-visible,
+body.sitewideDesignV1 main a.formCard:hover,
+body.sitewideDesignV1 main a.formCard:focus-visible,
+body.sitewideDesignV1 main a.ssFormCard:hover,
+body.sitewideDesignV1 main a.ssFormCard:focus-visible,
+body.sitewideDesignV1 main a.industryCard:hover,
+body.sitewideDesignV1 main a.industryCard:focus-visible,
+body.sitewideDesignV1 main a.homeIndustryCard:hover,
+body.sitewideDesignV1 main a.homeIndustryCard:focus-visible,
+body.sitewideDesignV1 main a.materialLink:hover,
+body.sitewideDesignV1 main a.materialLink:focus-visible,
+body.sitewideDesignV1 main a.industryMini:hover,
+body.sitewideDesignV1 main a.industryMini:focus-visible,
+body.sitewideDesignV1 main a.relItem:hover,
+body.sitewideDesignV1 main a.relItem:focus-visible,
+body.sitewideDesignV1 main a.gateCard:hover,
+body.sitewideDesignV1 main a.gateCard:focus-visible,
+body.sitewideDesignV1 main a.cityCard:hover,
+body.sitewideDesignV1 main a.cityCard:focus-visible,
+body.sitewideDesignV1 main a.countryCard:hover,
+body.sitewideDesignV1 main a.countryCard:focus-visible,
+body.sitewideDesignV1 main a.exportCard:hover,
+body.sitewideDesignV1 main a.exportCard:focus-visible,
+body.sitewideDesignV1 main a.locationCard:hover,
+body.sitewideDesignV1 main a.locationCard:focus-visible,
+body.sitewideDesignV1 main a.resourceCard:hover,
+body.sitewideDesignV1 main a.resourceCard:focus-visible,
+body.sitewideDesignV1 main .linkGrid a:hover,
+body.sitewideDesignV1 main .linkGrid a:focus-visible,
+body.sitewideDesignV1 main .locationLinkGrid a:hover,
+body.sitewideDesignV1 main .locationLinkGrid a:focus-visible,
+body.sitewideDesignV1 main .tagRow a:hover,
+body.sitewideDesignV1 main .tagRow a:focus-visible {
+  transform: translateY(-3px) !important;
+  border-color: rgba(226, 160, 47, .52) !important;
+  box-shadow: 0 16px 32px rgba(7, 16, 31, .12) !important;
+  outline: 2px solid rgba(226, 160, 47, .28) !important;
+  outline-offset: 3px !important;
+}
+
+body.sitewideDesignV1 main a.miniTag:hover,
+body.sitewideDesignV1 main a.miniTag:focus-visible,
+body.sitewideDesignV1 main a.materialTag:hover,
+body.sitewideDesignV1 main a.materialTag:focus-visible,
+body.sitewideDesignV1 main a.cityTag:hover,
+body.sitewideDesignV1 main a.cityTag:focus-visible,
+body.sitewideDesignV1 main a.gradeTag:hover,
+body.sitewideDesignV1 main a.gradeTag:focus-visible,
+body.sitewideDesignV1 main a.specTag:hover,
+body.sitewideDesignV1 main a.specTag:focus-visible,
+body.sitewideDesignV1 main a.standardTag:hover,
+body.sitewideDesignV1 main a.standardTag:focus-visible,
+body.sitewideDesignV1 main a.chip:hover,
+body.sitewideDesignV1 main a.chip:focus-visible,
+body.sitewideDesignV1 main a.tag:hover,
+body.sitewideDesignV1 main a.tag:focus-visible,
+body.sitewideDesignV1 main a.blogFilter:hover,
+body.sitewideDesignV1 main a.blogFilter:focus-visible,
+body.sitewideDesignV1 main a.miniLink:hover,
+body.sitewideDesignV1 main a.miniLink:focus-visible {
+  color: var(--d9c-navy) !important;
+  border-color: rgba(226, 160, 47, .66) !important;
+  background: #fff !important;
+  box-shadow: 0 10px 22px rgba(7, 16, 31, .09) !important;
+  transform: translateY(-2px) !important;
+  outline: 2px solid rgba(226, 160, 47, .28) !important;
+  outline-offset: 3px !important;
+}
+
+body.sitewideDesignV1 main .linkGrid {
+  gap: 10px !important;
+  align-items: stretch !important;
+}
+
+body.sitewideDesignV1 main .linkGrid a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  padding: 9px 11px !important;
+  border: 1px solid rgba(19, 42, 99, .14) !important;
+  border-radius: 8px !important;
+  background: #fff !important;
+  color: var(--d9c-navy) !important;
+  font-weight: 780 !important;
+  line-height: 1.35 !important;
+  text-decoration: none !important;
+  overflow-wrap: anywhere !important;
+}
+
+body.sitewideDesignV1 main .cardTop,
+body.sitewideDesignV1 main .flowCard .cardTop,
+body.sitewideDesignV1 main .checkCard .cardTop,
+body.sitewideDesignV1 main .docCard .cardTop,
+body.sitewideDesignV1 main .contactCard .cardTop,
+body.sitewideDesignV1 main .projectCard .cardTop,
+body.sitewideDesignV1 main .materialCard .cardTop {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+  min-width: 0 !important;
+  flex-wrap: nowrap !important;
+}
+
+body.sitewideDesignV1 main .cardTop h3,
+body.sitewideDesignV1 main .flowCard .cardTop h3,
+body.sitewideDesignV1 main .checkCard .cardTop h3,
+body.sitewideDesignV1 main .docCard .cardTop h3,
+body.sitewideDesignV1 main .contactCard .cardTop h3,
+body.sitewideDesignV1 main .projectCard .cardTop h3,
+body.sitewideDesignV1 main .materialCard .cardTop h3 {
+  min-width: 0 !important;
+  overflow-wrap: anywhere !important;
+  margin: 0 !important;
+}
+
+body.sitewideDesignV1 main .cardTop .iconBox,
+body.sitewideDesignV1 main .flowNum,
+body.sitewideDesignV1 main .stepNum,
+body.sitewideDesignV1 main .iconBox {
+  flex: 0 0 auto !important;
+}
+
+body.sitewideDesignV1 main .rfqHelpList,
+body.sitewideDesignV1 main .rfqHelpList li {
+  text-align: left !important;
+  word-spacing: normal !important;
+  text-justify: auto !important;
+  overflow-wrap: anywhere !important;
+}
+
+body.sitewideDesignV1 main .req {
+  color: #9d6d10 !important;
+  font-weight: 900 !important;
+}
+body.sitewideDesignV1 main .ctaBand .btn,
+body.sitewideDesignV1 main .finalCta .btn,
+body.sitewideDesignV1 main .finalCtaBand .btn,
+body.sitewideDesignV1 main .reviewBox .btn,
+body.sitewideDesignV1 main .contactCard .btn,
+body.sitewideDesignV1 main .rfqFormCard .btn,
+body.sitewideDesignV1 main .rfqHelpCard .btn,
+body.sitewideDesignV1 main .industryActions .btn,
+body.sitewideDesignV1 main .btnRow .btnGold,
+body.sitewideDesignV1 main .btnrow .btn.primary,
+body.sitewideDesignV1 main .btnrow .btn.darkGhost,
+body.sitewideDesignV1 main .btnrow .btn.ghost {
+  background: linear-gradient(135deg, var(--d9c-gold-soft), var(--d9c-gold)) !important;
+  border: 1px solid rgba(161, 105, 8, .35) !important;
+  color: var(--d9c-ink) !important;
+  box-shadow: 0 14px 28px rgba(226, 160, 47, .22) !important;
+  white-space: normal !important;
+  text-align: center !important;
+}
+
+body.sitewideDesignV1 main .ctaBand .btn:hover,
+body.sitewideDesignV1 main .ctaBand .btn:focus-visible,
+body.sitewideDesignV1 main .finalCta .btn:hover,
+body.sitewideDesignV1 main .finalCta .btn:focus-visible,
+body.sitewideDesignV1 main .finalCtaBand .btn:hover,
+body.sitewideDesignV1 main .finalCtaBand .btn:focus-visible,
+body.sitewideDesignV1 main .reviewBox .btn:hover,
+body.sitewideDesignV1 main .reviewBox .btn:focus-visible,
+body.sitewideDesignV1 main .contactCard .btn:hover,
+body.sitewideDesignV1 main .contactCard .btn:focus-visible {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 16px 30px rgba(226, 160, 47, .28) !important;
+}
+
+body.sitewideDesignV1 main .mapCard,
+body.sitewideDesignV1 main .mapFrame,
+body.sitewideDesignV1 main .officeCard,
+body.sitewideDesignV1 main .contactItem,
+body.sitewideDesignV1 main .reviewBox,
+body.sitewideDesignV1 main .platformCard,
+body.sitewideDesignV1 main .supportCard {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+body.sitewideDesignV1 main .mapCard::before,
+body.sitewideDesignV1 main .officeCard::before,
+body.sitewideDesignV1 main .contactItem::before,
+body.sitewideDesignV1 main .reviewBox::before,
+body.sitewideDesignV1 main .platformCard::before,
+body.sitewideDesignV1 main .supportCard::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  height: 4px !important;
+  background: linear-gradient(90deg, var(--d9c-gold), var(--d9c-navy)) !important;
+  pointer-events: none !important;
+}
+
+body.sitewideDesignV1 .siteFooterD9C .footerQuickGrid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 7px 14px !important;
+  align-items: center !important;
+}
+
+body.sitewideDesignV1 .siteFooterD9C .footerBrand .footerIconGroup {
+  flex-wrap: nowrap !important;
+}
+
+body.sitewideDesignV1 .siteFooterD9C .footerBottom,
+body.sitewideDesignV1 .siteFooterD9C .footerBottom .wrap {
+  color: var(--d9c-muted) !important;
+}
+
+@media (max-width: 760px) {
+  body.sitewideDesignV1 main .cardTop,
+  body.sitewideDesignV1 main .flowCard .cardTop,
+  body.sitewideDesignV1 main .checkCard .cardTop,
+  body.sitewideDesignV1 main .docCard .cardTop,
+  body.sitewideDesignV1 main .contactCard .cardTop,
+  body.sitewideDesignV1 main .projectCard .cardTop,
+  body.sitewideDesignV1 main .materialCard .cardTop {
+    gap: 9px !important;
+  }
+
+  body.sitewideDesignV1 main .linkGrid a {
+    justify-content: flex-start !important;
+  }
+}
+/* RUBINOX D9C SITEWIDE DESIGN STANDARDIZATION END */
+/* RUBINOX D9C HEADER ZOOM REFLOW GUARD START */
+@media (max-width: 1120px) {
+  body.sitewideDesignV1 header .desktopNav {
+    display: none !important;
+  }
+
+  body.sitewideDesignV1 header .menuToggle {
+    display: inline-flex !important;
+  }
+}
+/* RUBINOX D9C HEADER ZOOM REFLOW GUARD END */
+
