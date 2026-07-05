@@ -674,3 +674,81 @@ Forbidden changes:
 - Do not change phone, email, address, social links, platform links, schema, sitemap, analytics, images, PDFs, top bar, header, market ticker, hero, RFQ path, or homepage body sections as part of footer replication.
 - Do not add live price, confirmed stock, delivery guarantee, certification, approval, testimonial, review, rating, client, project, award, team-size, stockyard-size, or unverified years-of-experience claims.
 - Keep Rubinox positioned as Stockist | Supplier | Importer | Exporter | Project Supplier.
+
+## Sitewide Design Rollout Plan - D9A
+
+Status: planning stage.
+
+Plan document:
+
+- `docs/design-system/RUBINOX_SITEWIDE_DESIGN_ROLLOUT_PLAN_D9A.md`
+
+Batch document:
+
+- `docs/design-rollout-sitewide-homepage-design-batch-d9a.md`
+
+Owner clarification:
+
+- "not just footer. the whole home page design to be replicated across all pages."
+
+Planning interpretation:
+
+- Apply approved homepage design language across the full website.
+- Do not blindly copy homepage-only content to all pages.
+- Use a pilot-first workflow before full sitewide replication.
+
+Source locks:
+
+- Top Bar Lock V1.
+- Header Lock V1.
+- Header + Top Bar Alignment Lock V1.
+- Homepage Market Ticker Lock V1.
+- Home Hero Lock V1.
+- Homepage RFQ Path Lock V1.
+- Card Accent Lock V1.
+- Homepage Section Intro Width Lock V1.
+- Remaining Homepage Sections Polish Lock V1.
+- Footer Lock V1.
+
+Already sitewide:
+
+- Top Bar Lock V1.
+- Header Lock V1.
+- Header + Top Bar Alignment Lock V1.
+
+Pending sitewide rollout:
+
+- Footer Lock V1.
+- Card Accent Lock V1 where page-type appropriate.
+- Blue panel contrast rules.
+- Inline number/title card rows.
+- Clickable chip hover/focus pattern.
+- CTA contrast and width rules.
+- Contact/map card accent rules.
+- Section intro width rules where appropriate.
+
+Must remain homepage-only unless separately approved:
+
+- Market ticker.
+- Homepage hero content.
+- Homepage RFQ Path content.
+- Homepage-specific remaining-section content.
+- Homepage-specific material/product grids where page purpose differs.
+
+D9B next step:
+
+- Sitewide Design Pilot on representative pages.
+- Use `index.html` as comparison reference only.
+- Pilot pages should cover company, compliance, material family, grade/spec, product form, industry, location, export, knowledge, article, contact and quotation page types.
+
+D9C after owner approval:
+
+- Full sitewide replication only after D9B live pilot pages are reviewed and approved.
+- Preserve all public URLs, H1 intent, titles, meta descriptions, canonicals, schema meaning, sitemap URLs, GA4, content claims, contact details, images and PDFs.
+
+Forbidden changes:
+
+- Do not start D9B or D9C inside D9A.
+- Do not edit public HTML or CSS for visible design in D9A.
+- Do not change SEO metadata, schema meaning, sitemap URLs, analytics, images, PDFs or contact details as part of planning.
+- Do not add manufacturer, factory, mill, production, stock, price, delivery, certification, approval, client, project, testimonial, rating, review, award, team-size, stockyard-size or unverified years-of-experience claims.
