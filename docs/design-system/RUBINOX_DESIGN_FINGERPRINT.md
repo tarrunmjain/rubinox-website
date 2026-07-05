@@ -612,3 +612,65 @@ Forbidden changes:
 - Do not change non-home pages without a separate approved batch.
 - Do not add live price, confirmed stock, delivery guarantee, certification, approval, testimonial, review, rating, client, project, award, team-size, stockyard-size, or unverified years-of-experience claims.
 - Keep Rubinox positioned as Stockist | Supplier | Importer | Exporter | Project Supplier.
+
+## Footer - LOCK V1
+
+Status: approved and final.
+
+Lock document:
+
+- `docs/design-system/RUBINOX_FOOTER_LOCK_V1.md`
+
+Source:
+
+- D8A - Homepage Footer Prototype.
+- D8A-R2 - Homepage Footer Horizontal Link-Row Correction.
+- D8A-R3 - Homepage Footer Unified Quick Links Correction.
+
+Approved final version:
+
+- D8A-R3 unified Quick Links footer.
+
+Approved source commit:
+
+- `4c5d9efb2d205b2f9c53bacfd629d645462ac278`
+
+Pages run that made the approved footer live:
+
+- `28743433455`
+
+Scope:
+
+- Footer design fingerprint for future sitewide use.
+- Homepage contains the approved prototype.
+- Sitewide footer replication was not performed in D8B.
+- D8C must perform sitewide replication after this lock.
+
+Exact locked details:
+
+- Desktop macro layout: brand block left, unified Quick Links center, Contact Details right.
+- Middle footer block has one non-clickable heading only: `Quick Links:`.
+- `Quick Links:` uses the approved subtle gold underline/accent.
+- Links start below the heading and wrap from the same left edge.
+- Separate `Main Materials` and `Forms & RFQ` headings are forbidden in the final footer.
+- Material, form, and RFQ links remain under the unified Quick Links bank.
+- Six brand/contact/social icons must stay in one row where the approved D8A-R3 layout can keep them together.
+- Contact details, platform/directory icons, and all existing URLs are preserved.
+- Copyright is yearless: `© Rubinox Metal and Alloys. All rights reserved.`
+- Do not re-add `2026` to the footer copyright without owner approval.
+
+Zoom/reflow rule:
+
+- Footer links, headings, icons, contact text, and copyright must not overflow at 100%, 110%, or 125% browser zoom.
+- Unified links may wrap naturally inside the footer rail.
+- Mobile must remain clean at 390px and 360px.
+- Use `min-width:0`, flexible widths, safe wrapping, compact icon sizing, and readable line-height.
+
+Forbidden changes:
+
+- Do not create a footer variant without owner approval.
+- Do not add every city, grade, location, specification, or blog link to the footer.
+- Do not make the footer an SEO link dump.
+- Do not change phone, email, address, social links, platform links, schema, sitemap, analytics, images, PDFs, top bar, header, market ticker, hero, RFQ path, or homepage body sections as part of footer replication.
+- Do not add live price, confirmed stock, delivery guarantee, certification, approval, testimonial, review, rating, client, project, award, team-size, stockyard-size, or unverified years-of-experience claims.
+- Keep Rubinox positioned as Stockist | Supplier | Importer | Exporter | Project Supplier.

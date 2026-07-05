@@ -1,8 +1,8 @@
 # Design Prototype: Homepage Footer - Batch D8A
 
-Status: Prototype implemented for owner review. D8A-R2 horizontal link-row correction implemented. D8A-R3 unified Quick Links correction implemented.
+Status: Approved by owner and promoted to Footer Lock V1. D8A-R2 horizontal link-row correction implemented. D8A-R3 unified Quick Links correction implemented and approved.
 Scope: Homepage only (`index.html`).
-Lock status: Not locked. Do not replicate sitewide until D8B approval.
+Lock status: Promoted to Footer Lock V1 in D8B. Sitewide replication was not performed and is reserved for D8C.
 
 ## Objective
 
@@ -382,6 +382,56 @@ Non-home check result:
 - The checked non-home footers do not have the D8A-R3 `footerUnifiedLinks` markup.
 - No sitewide footer replication was performed.
 
+## Approved and promoted to Footer Lock V1
+
+Owner approval:
+
+- "D8A-R3 footer approved for design lock."
+
+Final approved prototype:
+
+- D8A-R3 unified Quick Links footer.
+
+Design lock batch:
+
+- D8B - Footer Design Lock / Design Fingerprint.
+
+Footer Lock document:
+
+- `docs/design-system/RUBINOX_FOOTER_LOCK_V1.md`
+
+Master design fingerprint:
+
+- `docs/design-system/RUBINOX_DESIGN_FINGERPRINT.md`
+
+Approved final implementation source:
+
+- Homepage footer prototype in `index.html`.
+- Approved D8A-R3 commit: `4c5d9efb2d205b2f9c53bacfd629d645462ac278`.
+- Successful Pages run that made D8A-R3 live: `28743433455`.
+
+D8B final screenshot folders:
+
+- `D:\Websites\Rubinox\visual-qa\d8b-footer-lock-v1\final`
+- `D:\Websites\Rubinox\visual-qa\d8b-footer-lock-v1\hover-focus`
+- `D:\Websites\Rubinox\visual-qa\d8b-footer-lock-v1\zoom-reflow`
+- `D:\Websites\Rubinox\visual-qa\d8b-footer-lock-v1\nonhome-check`
+
+D8B verification summary:
+
+- The approved one-heading `Quick Links:` footer was documented as Footer Lock V1.
+- The separate `Main Materials` and `Forms & RFQ` headings remain removed from the final design.
+- All material, form and RFQ links remain under the unified Quick Links bank.
+- Six brand/contact/social icons remain in one row in the approved homepage footer checks.
+- Contact details remain unchanged.
+- Copyright remains yearless: `© Rubinox Metal and Alloys. All rights reserved.`
+- 100%, 110% and 125% footer zoom/reflow checks passed at 1366px, 1280px, 390px and 360px for footer/link-bank overflow, icon row containment, contact wrapping and copyright wrapping.
+- D8B did not perform sitewide footer replication.
+
+Next step:
+
+- D8C - Replicate Approved Footer Sitewide.
+
 ## QA
 
 Baseline QA before edits passed:
@@ -412,6 +462,8 @@ Final QA after edits passed:
 
 The same final QA suite was rerun after the D8A-R2 horizontal footer link-row correction. Results remained passing: sitemap 261/261, HTML 261 pages with 0 invalid, schema 866 JSON-LD blocks with 0 invalid, accessibility 0 violations on checked pages, navigation passed, crawl and links scanned 400 links, pa11y passed 9/9 URLs within threshold, forbidden-claims rewrote no files, and `git diff --check` passed with only line-ending normalization warnings.
 
+D8B Footer Lock V1 QA was run from the active D-drive project folder after creating the footer lock documentation. Results remained passing: sitemap 261/261, HTML 261 pages with 0 invalid, schema 866 JSON-LD blocks with 0 invalid, accessibility 0 violations on checked pages, navigation passed, crawl and links scanned 400 links, pa11y passed 9/9 URLs within threshold, forbidden-claims rewrote no files, and `git diff --check` passed with only line-ending normalization warnings.
+
 ## Next Step
 
-Owner should review the live homepage footer. If approved, D8B should create Footer Design Lock / Design Fingerprint and then replicate the locked footer sitewide only after approval.
+Owner can now proceed to D8C - Replicate Approved Footer Sitewide.
