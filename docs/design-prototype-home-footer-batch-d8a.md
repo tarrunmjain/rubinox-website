@@ -1,6 +1,6 @@
 # Design Prototype: Homepage Footer - Batch D8A
 
-Status: Prototype implemented for owner review. D8A-R2 horizontal link-row correction implemented.
+Status: Prototype implemented for owner review. D8A-R2 horizontal link-row correction implemented. D8A-R3 unified Quick Links correction implemented.
 Scope: Homepage only (`index.html`).
 Lock status: Not locked. Do not replicate sitewide until D8B approval.
 
@@ -224,6 +224,162 @@ Non-home check result:
 - `/company-profile.html` and `/materials/stainless-steel.html` were checked at desktop and mobile widths.
 - The checked non-home footers do not have the homepage `homeFooterPrototypeD8A` class.
 - The checked non-home footers do not have the D8A-R2 `footerLinkBank` markup.
+- No sitewide footer replication was performed.
+
+## D8A-R3 unified Quick Links footer prototype
+
+Owner feedback after the live D8A-R2 review confirmed that the three horizontal headings were not useful in the compact footer format. `Quick Links`, `Main Materials`, and `Forms & RFQ` created uneven alignment because wrapped rows started at different visual positions.
+
+D8A-R3 keeps the homepage-only footer prototype and converts the middle footer block into one unified Quick Links bank.
+
+Scope:
+
+- Homepage only (`index.html`).
+- No Footer Lock V1 was created.
+- No sitewide footer replication was performed.
+- No non-home page footer was edited.
+- No brand block, contact detail, SEO, schema, sitemap, analytics, image, PDF, top bar, header, market ticker, hero, RFQ path, or homepage section redesign was performed.
+
+Final middle block approach:
+
+- One non-clickable heading: `Quick Links:`.
+- The heading is its own line and includes a subtle gold underline accent.
+- Links begin below the heading, not on the same line.
+- All wrapped link rows begin from the same left edge.
+- Clean spacing is used between links instead of left-edge separators that can wrap awkwardly.
+- Separate `Main Materials` and `Forms & RFQ` headings were removed from the homepage footer prototype.
+
+Unified Quick Links contents:
+
+- Home
+- About Us
+- Industries
+- Product Portfolio
+- Locations
+- Export
+- Blog
+- Technical Resources
+- Quality Documentation
+- Company Profile
+- Quotation
+- Contact
+- Privacy Policy
+- Terms & Conditions
+- Stainless Steel
+- Duplex & Super Duplex
+- Nickel Alloys
+- Titanium
+- SMO 254
+- Special Engineering Alloys
+- Pipes
+- Tubes
+- Sheets
+- Plates
+- Flanges
+- Request Quotation
+
+All material and form/RFQ links remain under the single Quick Links heading. Existing URLs were preserved, including the existing `Quotation` and `Request Quotation` links to `/quotation.html`.
+
+Copyright:
+
+- The D8A-R2 yearless copyright remains unchanged: `© Rubinox Metal and Alloys. All rights reserved.`
+- `2026` was not re-added.
+
+### D8A-R3 height comparison
+
+| Viewport | Pre-D8A | D8A | D8A-R2 | D8A-R3 |
+| --- | ---: | ---: | ---: | ---: |
+| 1366px desktop | 533px | 372px | 319px | 326px |
+| 1280px desktop | 533px | 372px | 319px | 326px |
+| 390px mobile | 1393px | 1023px | 771px | 693px |
+| 360px mobile | 1393px | 1022px | 770px | 717px |
+
+D8A-R3 is 7px taller than D8A-R2 on the checked desktop widths because the single heading now gets its own line and underline. The middle link bank itself is shorter: 163px in D8A-R3 versus 184px in D8A-R2 at 1366px and 1280px.
+
+On mobile, D8A-R3 is shorter than D8A-R2:
+
+- 390px: 693px versus 771px.
+- 360px: 717px versus 770px.
+
+Visual assessment:
+
+- D8A-R3 is visually better than D8A-R2 for the owner's stated feedback.
+- The single heading removes the uneven three-label rhythm.
+- The wrapped rows align cleanly from the same left edge.
+- The footer reads less cluttered and less like a grouped SEO dump, despite the desktop footer being slightly taller overall.
+
+### D8A-R3 icon row result
+
+| Viewport | Brand icon count | Brand icon rows | Result |
+| --- | ---: | ---: | --- |
+| 1366px desktop | 6 | 1 | Pass |
+| 1280px desktop | 6 | 1 | Pass |
+| 390px mobile | 6 | 1 | Pass |
+| 360px mobile | 6 | 1 | Pass |
+
+### D8A-R3 mobile and zoom/reflow results
+
+- 100%, 110%, and effective 125% zoom/reflow checks passed for 1366px, 1280px, 390px, and 360px test widths.
+- No footer horizontal overflow was detected in the checked states.
+- Unified footer links wrapped safely inside the middle/footer area.
+- The heading did not overlap links.
+- Brand icon row stayed in one row in all checked states.
+- Contact text wrapped safely.
+- At the narrowest effective 125% mobile check, the copyright line wrapped safely without creating footer horizontal scroll.
+
+### D8A-R3 visual QA evidence
+
+Before screenshots:
+
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\before\home-footer-desktop-1366.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\before\home-footer-desktop-1280.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\before\home-footer-tablet-768.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\before\home-footer-mobile-390.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\before\home-footer-mobile-360.png`
+
+After screenshots:
+
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\after\home-footer-desktop-1366.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\after\home-footer-desktop-1280.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\after\home-footer-tablet-768.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\after\home-footer-mobile-390.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\after\home-footer-mobile-360.png`
+
+Hover/focus screenshots:
+
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\hover-focus\home-footer-quick-focus.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\hover-focus\home-footer-material-hover.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\hover-focus\home-footer-forms-focus.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\hover-focus\home-footer-social-hover.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\hover-focus\home-footer-mobile-footer.png`
+
+Zoom/reflow screenshots:
+
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\zoom-reflow\home-footer-desktop-1366-zoom-1.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\zoom-reflow\home-footer-desktop-1366-zoom-1p1.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\zoom-reflow\home-footer-desktop-1366-zoom-1p25.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\zoom-reflow\home-footer-desktop-1280-zoom-1.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\zoom-reflow\home-footer-desktop-1280-zoom-1p1.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\zoom-reflow\home-footer-desktop-1280-zoom-1p25.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\zoom-reflow\home-footer-mobile-390-zoom-1.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\zoom-reflow\home-footer-mobile-390-zoom-1p1.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\zoom-reflow\home-footer-mobile-390-zoom-1p25.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\zoom-reflow\home-footer-mobile-360-zoom-1.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\zoom-reflow\home-footer-mobile-360-zoom-1p1.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\zoom-reflow\home-footer-mobile-360-zoom-1p25.png`
+
+Non-home footer check screenshots:
+
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\nonhome-check\company-profile-desktop.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\nonhome-check\company-profile-mobile.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\nonhome-check\material-desktop.png`
+- `D:\Websites\Rubinox\visual-qa\d8a-r3-footer-unified-links\nonhome-check\material-mobile.png`
+
+Non-home check result:
+
+- `/company-profile.html` and `/materials/stainless-steel.html` were checked at desktop and mobile widths.
+- The checked non-home footers do not have the homepage `homeFooterPrototypeD8A` class.
+- The checked non-home footers do not have the D8A-R3 `footerUnifiedLinks` markup.
 - No sitewide footer replication was performed.
 
 ## QA
