@@ -1,0 +1,489 @@
+/* D9B pilot only: scoped homepage design language for selected representative pages. */
+body.sitewideDesignPilotD9B {
+  --d9b-ink: #07101f;
+  --d9b-navy: #132a63;
+  --d9b-muted: #566b9a;
+  --d9b-gold: #e2a02f;
+  --d9b-gold-soft: #f7c65b;
+  --d9b-line: #d8e0ec;
+  --d9b-soft: #f8fafc;
+  --d9b-silver: #d9dee7;
+}
+
+body.sitewideDesignPilotD9B .sectionIntro {
+  max-width: 1000px;
+}
+
+body.sitewideDesignPilotD9B .card,
+body.sitewideDesignPilotD9B .faqItem,
+body.sitewideDesignPilotD9B .supportCard,
+body.sitewideDesignPilotD9B .contactCard,
+body.sitewideDesignPilotD9B .platformCard,
+body.sitewideDesignPilotD9B .flowCard,
+body.sitewideDesignPilotD9B .docCard,
+body.sitewideDesignPilotD9B .checkCard,
+body.sitewideDesignPilotD9B .materialCard,
+body.sitewideDesignPilotD9B .projectCard,
+body.sitewideDesignPilotD9B .formCard,
+body.sitewideDesignPilotD9B .ssFormCard,
+body.sitewideDesignPilotD9B .gateCard,
+body.sitewideDesignPilotD9B .industryCard,
+body.sitewideDesignPilotD9B .articleCard,
+body.sitewideDesignPilotD9B .relItem {
+  position: relative;
+  overflow: visible;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  border: 1px solid rgba(19, 42, 99, .12);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 14px 30px rgba(15, 30, 60, .075);
+}
+
+body.sitewideDesignPilotD9B .articleCard,
+body.sitewideDesignPilotD9B .formCard,
+body.sitewideDesignPilotD9B .ssFormCard,
+body.sitewideDesignPilotD9B .industryCard,
+body.sitewideDesignPilotD9B .relItem {
+  overflow: hidden;
+}
+
+body.sitewideDesignPilotD9B .card:has(.dataTable),
+body.sitewideDesignPilotD9B .card:has(table) {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+body.sitewideDesignPilotD9B .card::before,
+body.sitewideDesignPilotD9B .faqItem::before,
+body.sitewideDesignPilotD9B .supportCard::before,
+body.sitewideDesignPilotD9B .contactCard::before,
+body.sitewideDesignPilotD9B .platformCard::before,
+body.sitewideDesignPilotD9B .flowCard::before,
+body.sitewideDesignPilotD9B .docCard::before,
+body.sitewideDesignPilotD9B .checkCard::before,
+body.sitewideDesignPilotD9B .materialCard::before,
+body.sitewideDesignPilotD9B .projectCard::before,
+body.sitewideDesignPilotD9B .formCard::before,
+body.sitewideDesignPilotD9B .ssFormCard::before,
+body.sitewideDesignPilotD9B .gateCard::before,
+body.sitewideDesignPilotD9B .industryCard::before,
+body.sitewideDesignPilotD9B .articleCard::before,
+body.sitewideDesignPilotD9B .relItem::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--d9b-gold), var(--d9b-navy));
+  pointer-events: none;
+}
+
+body.sitewideDesignPilotD9B .card h2,
+body.sitewideDesignPilotD9B .card h3,
+body.sitewideDesignPilotD9B .faqItem h3,
+body.sitewideDesignPilotD9B .supportCard h3,
+body.sitewideDesignPilotD9B .contactCard h3,
+body.sitewideDesignPilotD9B .platformCard h3,
+body.sitewideDesignPilotD9B .flowCard h3,
+body.sitewideDesignPilotD9B .docCard h3,
+body.sitewideDesignPilotD9B .checkCard h3,
+body.sitewideDesignPilotD9B .materialCard h3,
+body.sitewideDesignPilotD9B .projectCard h3,
+body.sitewideDesignPilotD9B .formCard h3,
+body.sitewideDesignPilotD9B .ssFormCard h3,
+body.sitewideDesignPilotD9B .gateCard h3,
+body.sitewideDesignPilotD9B .industryCard h3,
+body.sitewideDesignPilotD9B .articleCard h3,
+body.sitewideDesignPilotD9B .relItem h3 {
+  color: var(--d9b-navy);
+}
+
+body.sitewideDesignPilotD9B a.card,
+body.sitewideDesignPilotD9B a.articleCard,
+body.sitewideDesignPilotD9B a.formCard,
+body.sitewideDesignPilotD9B a.ssFormCard,
+body.sitewideDesignPilotD9B a.industryCard,
+body.sitewideDesignPilotD9B a.relItem,
+body.sitewideDesignPilotD9B a.gateCard,
+body.sitewideDesignPilotD9B .platformCard a {
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+
+body.sitewideDesignPilotD9B a.card:hover,
+body.sitewideDesignPilotD9B a.card:focus-visible,
+body.sitewideDesignPilotD9B a.articleCard:hover,
+body.sitewideDesignPilotD9B a.articleCard:focus-visible,
+body.sitewideDesignPilotD9B a.formCard:hover,
+body.sitewideDesignPilotD9B a.formCard:focus-visible,
+body.sitewideDesignPilotD9B a.ssFormCard:hover,
+body.sitewideDesignPilotD9B a.ssFormCard:focus-visible,
+body.sitewideDesignPilotD9B a.industryCard:hover,
+body.sitewideDesignPilotD9B a.industryCard:focus-visible,
+body.sitewideDesignPilotD9B a.relItem:hover,
+body.sitewideDesignPilotD9B a.relItem:focus-visible,
+body.sitewideDesignPilotD9B a.gateCard:hover,
+body.sitewideDesignPilotD9B a.gateCard:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(226, 160, 47, .52);
+  box-shadow: 0 18px 34px rgba(15, 30, 60, .12);
+  outline: 2px solid rgba(226, 160, 47, .28);
+  outline-offset: 3px;
+}
+
+body.sitewideDesignPilotD9B .premiumHero,
+body.sitewideDesignPilotD9B .rescueSection,
+body.sitewideDesignPilotD9B .ctaBand,
+body.sitewideDesignPilotD9B .darkPanel,
+body.sitewideDesignPilotD9B .bluePanel {
+  color: #fff;
+}
+
+body.sitewideDesignPilotD9B .premiumHero h2,
+body.sitewideDesignPilotD9B .premiumHero h3,
+body.sitewideDesignPilotD9B .rescueSection h2,
+body.sitewideDesignPilotD9B .rescueSection h3,
+body.sitewideDesignPilotD9B .ctaBand h2,
+body.sitewideDesignPilotD9B .ctaBand h3,
+body.sitewideDesignPilotD9B .darkPanel h2,
+body.sitewideDesignPilotD9B .darkPanel h3,
+body.sitewideDesignPilotD9B .bluePanel h2,
+body.sitewideDesignPilotD9B .bluePanel h3 {
+  color: var(--d9b-silver);
+}
+
+body.sitewideDesignPilotD9B .premiumHero p,
+body.sitewideDesignPilotD9B .rescueSection p,
+body.sitewideDesignPilotD9B .ctaBand p,
+body.sitewideDesignPilotD9B .darkPanel p,
+body.sitewideDesignPilotD9B .bluePanel p {
+  color: rgba(255, 255, 255, .88);
+}
+
+body.sitewideDesignPilotD9B a.miniTag,
+body.sitewideDesignPilotD9B a.materialTag,
+body.sitewideDesignPilotD9B a.cityTag,
+body.sitewideDesignPilotD9B a.chip,
+body.sitewideDesignPilotD9B a.tag,
+body.sitewideDesignPilotD9B a.blogFilter,
+body.sitewideDesignPilotD9B a.miniLink {
+  background: #fff;
+  border-color: rgba(19, 42, 99, .16);
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease, color .18s ease;
+}
+
+body.sitewideDesignPilotD9B a.miniTag:hover,
+body.sitewideDesignPilotD9B a.miniTag:focus-visible,
+body.sitewideDesignPilotD9B a.materialTag:hover,
+body.sitewideDesignPilotD9B a.materialTag:focus-visible,
+body.sitewideDesignPilotD9B a.cityTag:hover,
+body.sitewideDesignPilotD9B a.cityTag:focus-visible,
+body.sitewideDesignPilotD9B a.chip:hover,
+body.sitewideDesignPilotD9B a.chip:focus-visible,
+body.sitewideDesignPilotD9B a.tag:hover,
+body.sitewideDesignPilotD9B a.tag:focus-visible,
+body.sitewideDesignPilotD9B a.blogFilter:hover,
+body.sitewideDesignPilotD9B a.blogFilter:focus-visible,
+body.sitewideDesignPilotD9B a.miniLink:hover,
+body.sitewideDesignPilotD9B a.miniLink:focus-visible {
+  color: var(--d9b-navy);
+  border-color: rgba(226, 160, 47, .72);
+  box-shadow: 0 8px 18px rgba(15, 30, 60, .10);
+  transform: translateY(-1px);
+  outline: 2px solid rgba(226, 160, 47, .30);
+  outline-offset: 2px;
+}
+
+body.sitewideDesignPilotD9B .flowCard .cardTop,
+body.sitewideDesignPilotD9B .checkCard .cardTop,
+body.sitewideDesignPilotD9B .docCard .cardTop,
+body.sitewideDesignPilotD9B .contactCard .cardTop,
+body.sitewideDesignPilotD9B .projectCard .cardTop,
+body.sitewideDesignPilotD9B .materialCard .cardTop {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-width: 0;
+}
+
+body.sitewideDesignPilotD9B .flowCard .cardTop h3,
+body.sitewideDesignPilotD9B .checkCard .cardTop h3,
+body.sitewideDesignPilotD9B .docCard .cardTop h3,
+body.sitewideDesignPilotD9B .contactCard .cardTop h3,
+body.sitewideDesignPilotD9B .projectCard .cardTop h3,
+body.sitewideDesignPilotD9B .materialCard .cardTop h3 {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+body.sitewideDesignPilotD9B .flowCard .flowNum,
+body.sitewideDesignPilotD9B .checkCard .flowNum {
+  flex: 0 0 auto;
+}
+
+body.sitewideDesignPilotD9B .btn {
+  min-width: 0;
+  white-space: normal;
+  text-align: center;
+}
+
+body.sitewideDesignPilotD9B .btn.primary,
+body.sitewideDesignPilotD9B .btnGold {
+  background: linear-gradient(135deg, var(--d9b-gold-soft), var(--d9b-gold));
+  color: var(--d9b-ink);
+}
+
+body.sitewideDesignPilotD9B .btn.primary:hover,
+body.sitewideDesignPilotD9B .btn.primary:focus-visible,
+body.sitewideDesignPilotD9B .btnGold:hover,
+body.sitewideDesignPilotD9B .btnGold:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 28px rgba(226, 160, 47, .22);
+}
+
+body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerLayout {
+  grid-template-columns: minmax(230px, .95fr) minmax(0, 2.2fr) minmax(230px, .95fr) !important;
+  align-items: start !important;
+  gap: 24px !important;
+  padding: 30px 20px 28px !important;
+}
+
+body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerBrand img {
+  max-width: 210px !important;
+  margin-bottom: 10px !important;
+}
+
+body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerBrand p,
+body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerContact p {
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  margin: 0 0 10px !important;
+  overflow-wrap: break-word !important;
+}
+
+body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerLinkBank {
+  display: block !important;
+  min-width: 0 !important;
+  padding-top: 1px !important;
+}
+
+body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerUnifiedLinks {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerUnifiedTitle {
+  position: relative !important;
+  display: inline-flex !important;
+  margin: 0 0 10px !important;
+  padding: 0 0 7px !important;
+  color: var(--d9b-navy) !important;
+  font-size: 15px !important;
+  line-height: 1.2 !important;
+  font-weight: 900 !important;
+  white-space: nowrap !important;
+}
+
+body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerUnifiedTitle::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 64px !important;
+  height: 2px !important;
+  border-radius: 999px !important;
+  background: linear-gradient(90deg, var(--d9b-gold), rgba(226, 160, 47, 0)) !important;
+}
+
+body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerContact h2 {
+  margin: 0 0 7px !important;
+  color: var(--d9b-navy) !important;
+  font-size: 14px !important;
+  line-height: 1.45 !important;
+  white-space: nowrap !important;
+}
+
+body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerInlineLinks {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 7px 14px !important;
+  min-width: 0 !important;
+  width: 100% !important;
+}
+
+body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerInlineLinks a,
+body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerContact a {
+  font-size: 13.6px !important;
+  line-height: 1.45 !important;
+  overflow-wrap: anywhere !important;
+  color: var(--d9b-navy) !important;
+  font-weight: 750 !important;
+  text-decoration: none !important;
+}
+
+body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerInlineLinks a {
+  display: inline-flex !important;
+  align-items: center !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerIconGroup {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+  gap: 6px !important;
+  margin-top: 11px !important;
+  max-width: 100% !important;
+}
+
+body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerBrand .footerIcon {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  min-height: 32px !important;
+  max-width: 32px !important;
+  max-height: 32px !important;
+  flex: 0 0 32px !important;
+  border-radius: 8px !important;
+}
+
+body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerBrand .footerIcon svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerBrand .footerIcon img {
+  width: 20px !important;
+  height: 20px !important;
+  max-width: 20px !important;
+  max-height: 20px !important;
+  margin: 0 !important;
+}
+
+body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .platformIconGroup {
+  gap: 8px !important;
+  margin-top: 11px !important;
+  flex-wrap: wrap !important;
+}
+
+body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerBottom {
+  padding: 12px 0 !important;
+}
+
+body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerInlineLinks a:hover,
+body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerContact a:hover {
+  color: #8a5a06 !important;
+  text-decoration: none !important;
+}
+
+body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerInlineLinks a:focus-visible,
+body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerContact a:focus-visible {
+  color: #8a5a06 !important;
+  outline: 2px solid rgba(226, 160, 47, .42) !important;
+  outline-offset: 3px !important;
+  border-radius: 4px !important;
+  text-decoration: none !important;
+}
+
+@media (max-width: 1120px) {
+  body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerLayout {
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.35fr) !important;
+    gap: 20px 24px !important;
+    padding: 24px 20px 22px !important;
+  }
+
+  body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerContact {
+    grid-column: 1 / -1 !important;
+  }
+
+  body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerInlineLinks {
+    gap: 7px 13px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerLayout {
+    grid-template-columns: 1fr !important;
+    padding: 22px 18px 20px !important;
+    gap: 18px !important;
+  }
+
+  body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerBrand img {
+    max-width: 202px !important;
+    margin-bottom: 8px !important;
+  }
+
+  body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerBrand p,
+  body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerContact p {
+    font-size: 13.5px !important;
+    line-height: 1.52 !important;
+    margin: 0 0 8px !important;
+  }
+
+  body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerUnifiedTitle {
+    font-size: 14px !important;
+    margin-bottom: 9px !important;
+  }
+
+  body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerInlineLinks {
+    gap: 7px 12px !important;
+  }
+
+  body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerInlineLinks a,
+  body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerContact a {
+    font-size: 13.5px !important;
+    line-height: 1.36 !important;
+  }
+
+  body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerIconGroup {
+    gap: 5px !important;
+  }
+
+  body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerBrand .footerIcon {
+    width: 29px !important;
+    height: 29px !important;
+    min-width: 29px !important;
+    min-height: 29px !important;
+    max-width: 29px !important;
+    max-height: 29px !important;
+    flex: 0 0 29px !important;
+  }
+
+  body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerBrand .footerIcon svg {
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerBrand .footerIcon img {
+    width: 19px !important;
+    height: 19px !important;
+    max-width: 19px !important;
+    max-height: 19px !important;
+  }
+
+  body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerBottom {
+    padding: 9px 0 !important;
+  }
+}
+
+@media (max-width: 370px) {
+  body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerBrand .footerIcon {
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    min-height: 28px !important;
+    max-width: 28px !important;
+    max-height: 28px !important;
+    flex: 0 0 28px !important;
+  }
+
+  body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerIconGroup {
+    gap: 4px !important;
+  }
+
+  body.sitewideDesignPilotD9B .siteFooter.homeFooterPrototypeD8A .footerInlineLinks {
+    gap: 7px 10px !important;
+  }
+}
