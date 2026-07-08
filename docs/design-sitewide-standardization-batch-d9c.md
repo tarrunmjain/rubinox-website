@@ -224,3 +224,24 @@ Final QA after implementation:
 ## Next Step
 
 Owner should review representative pages after D9C. If approved, next step is D9D - Final Sitewide Design Fingerprint Lock.
+
+## D9C-R2 Hover Correction
+
+Status: implemented for owner review.
+
+Correction document:
+
+- `docs/design-correction-sitewide-hover-batch-d9c-r2.md`
+
+Summary:
+
+- Standardized sitewide clickable card and chip hover states to the approved RFQ-style pattern.
+- Preserved a white/light surface, subtle Rubinox gold border/accent, slight lift and soft shadow.
+- Removed the visual effect where hover could read as a thick gold card/image frame.
+- Preserved approved CTA button hover behavior.
+- No HTML changes were required.
+- D9D final sitewide design lock was not created.
+
+Owner review required:
+
+- Owner should review representative live hover states. If approved, proceed to D9D final sitewide design lock.

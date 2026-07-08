@@ -878,3 +878,200 @@ body.sitewideDesignV1 .siteFooterD9C .footerBottom .wrap {
 }
 /* RUBINOX D9C HEADER ZOOM REFLOW GUARD END */
 
+
+/* D9C-R2 sitewide hover correction: subtle RFQ-style interactive states. */
+body.sitewideDesignV1 {
+  --rubinox-hover-gold-border: rgba(226, 160, 47, .42);
+  --rubinox-hover-chip-border: rgba(226, 160, 47, .48);
+  --rubinox-hover-shadow: 0 18px 38px rgba(7, 16, 31, .12);
+  --rubinox-hover-chip-shadow: 0 8px 18px rgba(15, 30, 60, .08);
+  --rubinox-hover-lift: translateY(-2px);
+}
+
+body.sitewideDesignV1 main a.card,
+body.sitewideDesignV1 main a.materialSupplyCard,
+body.sitewideDesignV1 main a.articleCard,
+body.sitewideDesignV1 main a.formCard,
+body.sitewideDesignV1 main a.ssFormCard,
+body.sitewideDesignV1 main a.industryCard,
+body.sitewideDesignV1 main a.homeIndustryCard,
+body.sitewideDesignV1 main a.materialLink,
+body.sitewideDesignV1 main a.industryMini,
+body.sitewideDesignV1 main a.relItem,
+body.sitewideDesignV1 main a.gateCard,
+body.sitewideDesignV1 main a.cityCard,
+body.sitewideDesignV1 main a.countryCard,
+body.sitewideDesignV1 main a.exportCard,
+body.sitewideDesignV1 main a.locationCard,
+body.sitewideDesignV1 main a.resourceCard {
+  border-width: 1px !important;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background-color .18s ease, color .18s ease !important;
+}
+
+body.sitewideDesignV1 main a.card:hover,
+body.sitewideDesignV1 main a.card:focus-visible,
+body.sitewideDesignV1 main a.materialSupplyCard:hover,
+body.sitewideDesignV1 main a.materialSupplyCard:focus-visible,
+body.sitewideDesignV1 main a.articleCard:hover,
+body.sitewideDesignV1 main a.articleCard:focus-visible,
+body.sitewideDesignV1 main a.formCard:hover,
+body.sitewideDesignV1 main a.formCard:focus-visible,
+body.sitewideDesignV1 main a.ssFormCard:hover,
+body.sitewideDesignV1 main a.ssFormCard:focus-visible,
+body.sitewideDesignV1 main a.industryCard:hover,
+body.sitewideDesignV1 main a.industryCard:focus-visible,
+body.sitewideDesignV1 main a.homeIndustryCard:hover,
+body.sitewideDesignV1 main a.homeIndustryCard:focus-visible,
+body.sitewideDesignV1 main a.materialLink:hover,
+body.sitewideDesignV1 main a.materialLink:focus-visible,
+body.sitewideDesignV1 main a.industryMini:hover,
+body.sitewideDesignV1 main a.industryMini:focus-visible,
+body.sitewideDesignV1 main a.relItem:hover,
+body.sitewideDesignV1 main a.relItem:focus-visible,
+body.sitewideDesignV1 main a.gateCard:hover,
+body.sitewideDesignV1 main a.gateCard:focus-visible,
+body.sitewideDesignV1 main a.cityCard:hover,
+body.sitewideDesignV1 main a.cityCard:focus-visible,
+body.sitewideDesignV1 main a.countryCard:hover,
+body.sitewideDesignV1 main a.countryCard:focus-visible,
+body.sitewideDesignV1 main a.exportCard:hover,
+body.sitewideDesignV1 main a.exportCard:focus-visible,
+body.sitewideDesignV1 main a.locationCard:hover,
+body.sitewideDesignV1 main a.locationCard:focus-visible,
+body.sitewideDesignV1 main a.resourceCard:hover,
+body.sitewideDesignV1 main a.resourceCard:focus-visible {
+  background: #fff !important;
+  border-width: 1px !important;
+  border-color: var(--rubinox-hover-gold-border) !important;
+  box-shadow: var(--rubinox-hover-shadow) !important;
+  transform: var(--rubinox-hover-lift) !important;
+  outline: 0 !important;
+}
+
+body.sitewideDesignV1 main a.card:focus-visible,
+body.sitewideDesignV1 main a.materialSupplyCard:focus-visible,
+body.sitewideDesignV1 main a.articleCard:focus-visible,
+body.sitewideDesignV1 main a.formCard:focus-visible,
+body.sitewideDesignV1 main a.ssFormCard:focus-visible,
+body.sitewideDesignV1 main a.industryCard:focus-visible,
+body.sitewideDesignV1 main a.homeIndustryCard:focus-visible,
+body.sitewideDesignV1 main a.materialLink:focus-visible,
+body.sitewideDesignV1 main a.industryMini:focus-visible,
+body.sitewideDesignV1 main a.relItem:focus-visible,
+body.sitewideDesignV1 main a.gateCard:focus-visible,
+body.sitewideDesignV1 main a.cityCard:focus-visible,
+body.sitewideDesignV1 main a.countryCard:focus-visible,
+body.sitewideDesignV1 main a.exportCard:focus-visible,
+body.sitewideDesignV1 main a.locationCard:focus-visible,
+body.sitewideDesignV1 main a.resourceCard:focus-visible {
+  outline: 2px solid rgba(226, 160, 47, .26) !important;
+  outline-offset: 2px !important;
+}
+
+body.sitewideDesignV1 main .linkGrid a,
+body.sitewideDesignV1 main .locationLinkGrid a,
+body.sitewideDesignV1 main .tagRow a,
+body.sitewideDesignV1 main a.miniTag,
+body.sitewideDesignV1 main a.materialTag,
+body.sitewideDesignV1 main a.cityTag,
+body.sitewideDesignV1 main a.gradeTag,
+body.sitewideDesignV1 main a.specTag,
+body.sitewideDesignV1 main a.standardTag,
+body.sitewideDesignV1 main a.chip,
+body.sitewideDesignV1 main a.tag,
+body.sitewideDesignV1 main a.blogFilter,
+body.sitewideDesignV1 main a.miniLink {
+  border-width: 1px !important;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background-color .18s ease, color .18s ease !important;
+}
+
+body.sitewideDesignV1 main .linkGrid a:hover,
+body.sitewideDesignV1 main .linkGrid a:focus-visible,
+body.sitewideDesignV1 main .locationLinkGrid a:hover,
+body.sitewideDesignV1 main .locationLinkGrid a:focus-visible,
+body.sitewideDesignV1 main .tagRow a:hover,
+body.sitewideDesignV1 main .tagRow a:focus-visible,
+body.sitewideDesignV1 main a.miniTag:hover,
+body.sitewideDesignV1 main a.miniTag:focus-visible,
+body.sitewideDesignV1 main a.materialTag:hover,
+body.sitewideDesignV1 main a.materialTag:focus-visible,
+body.sitewideDesignV1 main a.cityTag:hover,
+body.sitewideDesignV1 main a.cityTag:focus-visible,
+body.sitewideDesignV1 main a.gradeTag:hover,
+body.sitewideDesignV1 main a.gradeTag:focus-visible,
+body.sitewideDesignV1 main a.specTag:hover,
+body.sitewideDesignV1 main a.specTag:focus-visible,
+body.sitewideDesignV1 main a.standardTag:hover,
+body.sitewideDesignV1 main a.standardTag:focus-visible,
+body.sitewideDesignV1 main a.chip:hover,
+body.sitewideDesignV1 main a.chip:focus-visible,
+body.sitewideDesignV1 main a.tag:hover,
+body.sitewideDesignV1 main a.tag:focus-visible,
+body.sitewideDesignV1 main a.blogFilter:hover,
+body.sitewideDesignV1 main a.blogFilter:focus-visible,
+body.sitewideDesignV1 main a.miniLink:hover,
+body.sitewideDesignV1 main a.miniLink:focus-visible {
+  background: #fff !important;
+  border-width: 1px !important;
+  border-color: var(--rubinox-hover-chip-border) !important;
+  color: var(--d9c-navy) !important;
+  box-shadow: var(--rubinox-hover-chip-shadow) !important;
+  transform: translateY(-1px) !important;
+  outline: 0 !important;
+}
+
+body.sitewideDesignV1 main .linkGrid a:focus-visible,
+body.sitewideDesignV1 main .locationLinkGrid a:focus-visible,
+body.sitewideDesignV1 main .tagRow a:focus-visible,
+body.sitewideDesignV1 main a.miniTag:focus-visible,
+body.sitewideDesignV1 main a.materialTag:focus-visible,
+body.sitewideDesignV1 main a.cityTag:focus-visible,
+body.sitewideDesignV1 main a.gradeTag:focus-visible,
+body.sitewideDesignV1 main a.specTag:focus-visible,
+body.sitewideDesignV1 main a.standardTag:focus-visible,
+body.sitewideDesignV1 main a.chip:focus-visible,
+body.sitewideDesignV1 main a.tag:focus-visible,
+body.sitewideDesignV1 main a.blogFilter:focus-visible,
+body.sitewideDesignV1 main a.miniLink:focus-visible {
+  outline: 2px solid rgba(226, 160, 47, .26) !important;
+  outline-offset: 2px !important;
+}
+
+body.sitewideDesignV1 main a.materialSupplyCard:hover img,
+body.sitewideDesignV1 main a.materialSupplyCard:focus-visible img,
+body.sitewideDesignV1 main a.formCard:hover img,
+body.sitewideDesignV1 main a.formCard:focus-visible img,
+body.sitewideDesignV1 main a.ssFormCard:hover img,
+body.sitewideDesignV1 main a.ssFormCard:focus-visible img,
+body.sitewideDesignV1 main a.articleCard:hover img,
+body.sitewideDesignV1 main a.articleCard:focus-visible img {
+  transform: none !important;
+}
+
+/* D9C-R2 industries hover cleanup: no filled chip or static-card hover frame. */
+body.sitewideDesignV1 main .industryActions a:hover,
+body.sitewideDesignV1 main .industryActions a:focus-visible {
+  background: #fff !important;
+  border-width: 1px !important;
+  border-color: var(--rubinox-hover-chip-border) !important;
+  color: var(--d9c-navy) !important;
+  box-shadow: var(--rubinox-hover-chip-shadow) !important;
+  transform: translateY(-1px) !important;
+  outline: 0 !important;
+}
+
+body.sitewideDesignV1 main .industryActions a:focus-visible {
+  outline: 2px solid rgba(226, 160, 47, .26) !important;
+  outline-offset: 2px !important;
+}
+
+body.sitewideDesignV1 main .articleCard:not(a):hover,
+body.sitewideDesignV1 main .supportCard:not(a):hover,
+body.sitewideDesignV1 main .industryCard:not(a):hover {
+  background: #fff !important;
+  border-width: 1px !important;
+  border-color: rgba(16, 37, 84, .12) !important;
+  box-shadow: 0 12px 30px rgba(15, 30, 60, .07) !important;
+  transform: none !important;
+  outline: 0 !important;
+}

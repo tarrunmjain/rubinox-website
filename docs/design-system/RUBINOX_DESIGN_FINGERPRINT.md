@@ -800,3 +800,24 @@ QA and audit baseline:
 Next step:
 
 - Owner should review representative pages after D9C. If approved, next step is D9D - Final Sitewide Design Fingerprint Lock.
+
+## Sitewide Hover Correction - D9C-R2
+
+Status: implemented for owner review.
+
+Correction document:
+
+- `docs/design-correction-sitewide-hover-batch-d9c-r2.md`
+
+Approved hover intent for owner review:
+
+- Clickable cards use subtle Rubinox gold border/accent, slight lift and restrained premium shadow.
+- Clickable chips keep a light surface with a thin Rubinox gold border and slight lift.
+- Mouse hover must not create a thick gold full border, heavy frame, filled gold background, or layout shift.
+- Focus-visible remains visible through a subtle 2px gold outline.
+- CTA buttons retain the approved gold button hover treatment.
+- Non-anchor cards should not gain strong interactive hover behavior.
+
+D9D gate:
+
+- D9D final sitewide design lock must wait for owner review of D9C-R2 live hover states.
