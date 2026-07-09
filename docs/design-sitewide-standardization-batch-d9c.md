@@ -91,6 +91,15 @@ Quotation factor guides spacing:
 
 - Factor guide links keep all existing destinations and use improved chip spacing with safe wrapping.
 
+D9C-R5 Quotation Factor Guides Alignment Correction:
+
+- Owner review identified the `Quotation Factor Guides` card on `quotation.html` as visually misaligned before D9D.
+- Root cause: the section used a generic `.linkGrid` that computed as block layout in this page context, so guide chips did not form a controlled wrapping row.
+- Correction: the card now uses `quotationFactorGuides`, and its link bank uses `quotationFactorGuideLinks` with flex-wrap, equal gaps, a shared content rail and contained chip text.
+- All seven existing factor-guide links and the paragraph text were preserved.
+- Reference: `docs/design-correction-quotation-factor-guides-batch-d9c-r5.md`.
+- D9D final sitewide design lock remains pending owner review of this live correction.
+
 Industries technical card hover:
 
 - The industries technical/action card links receive the approved hover/focus treatment.

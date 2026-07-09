@@ -885,3 +885,39 @@ Audit gate:
 - Browser-style zoom/reflow simulation: 12 checks, 0 failures.
 - Non-quotation visual checks: 6 screenshots/checks, 0 failures.
 - D9D final sitewide design lock must wait for owner review of the live D9C-R4 quotation correction.
+
+## Quotation Factor Guides Alignment Correction - D9C-R5
+
+Status: Implemented, pending owner review before D9D.
+
+D9C-R5 is a focused correction after D9C-R4. It does not create the final D9D lock.
+
+Reference:
+
+- `docs/design-correction-quotation-factor-guides-batch-d9c-r5.md`
+
+Rule before D9D owner review:
+
+- Guide/link-chip rows must use a shared content rail for the heading, paragraph and chip bank when they appear inside the same card.
+- Chip banks must use controlled wrapping with equal gaps and left-aligned row starts.
+- Guide links must not run together, touch card borders or create horizontal scroll.
+- Chip hover/focus must follow the approved subtle pattern: thin Rubinox gold border/accent, slight lift and soft shadow.
+- Guide chips must not use a filled gold background, thick border, heavy frame or layout-shifting hover.
+
+Corrected quotation guide links:
+
+- Stainless Steel Price Factors
+- Stainless Steel Pipe Factors
+- SS 304 Factors
+- SS 316L Factors
+- Inconel 625 Factors
+- Duplex 2205 Factors
+- Company Profile
+
+Audit gate:
+
+- Exact affected `Quotation Factor Guides` section found only on `quotation.html`.
+- Browser-style zoom/reflow simulation: 12 checks, 0 failures.
+- Hover/focus screenshots: desktop and mobile captured.
+- Non-quotation visual checks: 8 screenshots/checks, 0 failures.
+- D9D final sitewide design lock must wait for owner review of the live D9C-R5 quotation correction.
