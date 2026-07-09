@@ -303,3 +303,29 @@ Reference documentation:
 - `docs/design-correction-sitewide-visual-consistency-batch-d9c-r3.md`
 
 Owner should review representative live pages before D9D final sitewide design lock.
+
+## D9C-R6 Knowledge Hub Filter Hover Correction
+
+Status: Implemented, pending owner review before D9D.
+
+D9C-R6 is a focused correction after D9C-R5. It does not create the final D9D lock.
+
+Reference:
+
+- `docs/design-correction-knowledge-hub-filter-hover-batch-d9c-r6.md`
+
+Rule before D9D owner review:
+
+- Knowledge Hub category/filter chips must follow the approved Rubinox chip hover pattern.
+- Filter chip hover keeps a white/light surface, thin Rubinox gold border/accent, slight lift and restrained shadow.
+- Filter chip hover must not use a filled random color, silver border, thick frame, heavy outline or layout shift.
+- Focus-visible remains accessible through a subtle Rubinox gold outline.
+- Active/selected filter chips use a brand-consistent white/pale-gold surface, Rubinox gold border and navy text.
+
+Audit gate:
+
+- Actual `button.blogFilter` controls found only on `blog.html`.
+- Search/filter JavaScript behavior preserved.
+- Browser-style zoom/reflow simulation: 12 checks, 0 failures.
+- Non-blog visual checks: 10 screenshots/checks, 0 failures.
+- D9D final sitewide design lock must wait for owner review of the live D9C-R6 Knowledge Hub correction.

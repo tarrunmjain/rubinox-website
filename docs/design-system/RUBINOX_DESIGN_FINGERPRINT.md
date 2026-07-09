@@ -921,3 +921,29 @@ Audit gate:
 - Hover/focus screenshots: desktop and mobile captured.
 - Non-quotation visual checks: 8 screenshots/checks, 0 failures.
 - D9D final sitewide design lock must wait for owner review of the live D9C-R5 quotation correction.
+
+## Knowledge Hub Filter Hover Correction - D9C-R6
+
+Status: Implemented, pending owner review before D9D.
+
+D9C-R6 corrected the Knowledge Hub `Featured Buyer Guides` category/filter chips. It does not create the final D9D lock.
+
+Reference:
+
+- `docs/design-correction-knowledge-hub-filter-hover-batch-d9c-r6.md`
+
+Filter/category chip rule before D9D owner review:
+
+- Filter/category chips must not use non-brand hover colors, silver hover borders, thick frames, filled random backgrounds or layout-shifting hover effects.
+- Approved chip hover is a white/light surface, thin Rubinox gold border/accent, slight lift and restrained soft shadow.
+- Keyboard focus-visible must remain visible through a subtle Rubinox gold outline.
+- Active/selected chips may use a subtle brand-consistent white/pale-gold surface with Rubinox gold border and navy text.
+- Default and hover border width must remain stable to prevent layout shift.
+
+Audit gate:
+
+- Actual `button.blogFilter` controls found only on `blog.html`.
+- Search/filter behavior preserved.
+- Browser-style zoom/reflow simulation: 12 checks, 0 failures.
+- Non-blog visual checks: 10 screenshots/checks, 0 failures.
+- D9D final sitewide design lock must wait for owner review of the live D9C-R6 Knowledge Hub correction.

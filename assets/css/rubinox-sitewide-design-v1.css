@@ -1367,3 +1367,45 @@ body.sitewideDesignV1 main.page > .rescueSection + .ctaBand,
 body.sitewideDesignV1 main.page > .card + .grid2 {
   margin-top: var(--rubinox-hero-next-gap-final) !important;
 }
+
+/* D9C-R6 Knowledge Hub filter hover correction. */
+body.sitewideDesignV1 main .blogFilters button.blogFilter {
+  background: #fff !important;
+  border-width: 1px !important;
+  border-color: rgba(19, 42, 99, .14) !important;
+  color: var(--d9c-navy) !important;
+  box-shadow: 0 6px 14px rgba(15, 30, 60, .05) !important;
+  transform: translateY(0) !important;
+  outline: 0 !important;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background-color .18s ease, color .18s ease !important;
+}
+
+body.sitewideDesignV1 main .blogFilters button.blogFilter:hover {
+  background: #fff !important;
+  border-width: 1px !important;
+  border-color: var(--rubinox-hover-gold-border-final) !important;
+  color: var(--d9c-navy) !important;
+  box-shadow: var(--rubinox-hover-chip-shadow-final) !important;
+  transform: translateY(-1px) !important;
+  outline: 0 !important;
+}
+
+body.sitewideDesignV1 main .blogFilters button.blogFilter:focus-visible {
+  background: #fff !important;
+  border-width: 1px !important;
+  border-color: var(--rubinox-hover-gold-border-final) !important;
+  color: var(--d9c-navy) !important;
+  box-shadow: var(--rubinox-hover-chip-shadow-final) !important;
+  transform: translateY(-1px) !important;
+  outline: 2px solid rgba(226, 160, 47, .28) !important;
+  outline-offset: 2px !important;
+}
+
+body.sitewideDesignV1 main .blogFilters button.blogFilter.isActive {
+  background: linear-gradient(145deg, #fff, #fffaf0) !important;
+  border-width: 1px !important;
+  border-color: var(--rubinox-hover-gold-border-final) !important;
+  color: var(--d9c-navy) !important;
+  box-shadow: 0 8px 18px rgba(15, 30, 60, .07) !important;
+  outline: 0 !important;
+}
