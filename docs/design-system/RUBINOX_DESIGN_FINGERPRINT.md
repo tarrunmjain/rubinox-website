@@ -821,3 +821,38 @@ Approved hover intent for owner review:
 D9D gate:
 
 - D9D final sitewide design lock must wait for owner review of D9C-R2 live hover states.
+
+## Sitewide Visual Consistency Correction - D9C-R3
+
+Status: Implemented, pending owner review before D9D.
+
+D9C-R3 is the audit-based correction pass after D9C-R2. It does not create the final D9D lock.
+
+Reference:
+
+- `docs/design-correction-sitewide-visual-consistency-batch-d9c-r3.md`
+
+Final hover rule before D9D owner review:
+
+- Approved hover follows the homepage RFQ Path card feel.
+- Clickable cards/boxes use the same 1px border width before and after hover.
+- Hover may shift border color to subtle Rubinox gold.
+- Hover may lift slightly by `translateY(-1px)` to `translateY(-2px)`.
+- Hover may use a soft premium shadow.
+- Hover must not create a silver border box, thick gold full-frame border, heavy outline, filled gold card/chip background, image frame, or layout shift.
+- Clickable chips/links keep a white/light surface with thin gold border, restrained shadow and slight lift.
+- CTA buttons keep their approved button styling; ghost RFQ buttons avoid silver hover borders.
+- Keyboard focus-visible remains visible through a subtle gold outline.
+
+Spacing rule before D9D owner review:
+
+- Premium hero and hero-grid page families must not visually touch the next major block.
+- `industries.html` hero-to-next spacing was restored.
+- The strict spacing audit still documents locked homepage/quotation band-section exceptions where section padding, not outer margin, creates the visual separation.
+
+Audit gate:
+
+- D9C-R3 hover offenders before: 743.
+- D9C-R3 hover offenders after: 0.
+- Browser-style zoom/reflow simulation: 96 checks, 0 failures.
+- D9D final sitewide design lock must wait for owner review of D9C-R3 live pages.

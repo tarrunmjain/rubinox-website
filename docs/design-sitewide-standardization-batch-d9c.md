@@ -245,3 +245,43 @@ Summary:
 Owner review required:
 
 - Owner should review representative live hover states. If approved, proceed to D9D final sitewide design lock.
+
+## D9C-R3 Sitewide Visual Consistency Correction
+
+Status: Implemented, pending owner review before D9D.
+
+D9C-R3 was added after owner review found remaining visual consistency issues on live D9C pages. The specific reported issues were the `industries.html` Technical and Documentation Support hover state and the collapsed gap between the industries hero and the next section.
+
+Correction scope:
+
+- Shared sitewide CSS only.
+- No public HTML pages changed.
+- No SEO, schema, sitemap, analytics, image, PDF, header, top bar, footer, homepage hero, or homepage body-section redesign.
+- D9D final sitewide lock was not created.
+
+Audit-based result:
+
+- 261 public sitemap pages audited.
+- Hover candidates sampled: 3064.
+- Hover offenders before: 743.
+- Hover offenders after: 0.
+- Silver hover border offenders after: 0.
+- Footer offenders after: 0.
+- FAQ offenders after: 0.
+- Strict spacing offenders before: 1531.
+- Strict spacing offenders after: 22 documented locked-band/section exceptions.
+- Browser-style zoom/reflow simulation: 96 checks, 0 failures.
+
+Design correction:
+
+- Anchor support cards, card-like anchors, material/form link groups, tag/chip groups, article TOC links, industry action links and ghost RFQ buttons now follow the approved RFQ-style hover pattern.
+- Mouse hover uses a subtle Rubinox gold border/accent, slight lift, soft shadow and a white/light surface.
+- Mouse hover must not show a silver border box, thick gold frame, filled gold card background, heavy outline, or layout shift.
+- Keyboard focus-visible remains available through a subtle gold outline.
+- Industries hero-to-next spacing was restored through the shared premium hero spacing floor.
+
+Reference documentation:
+
+- `docs/design-correction-sitewide-visual-consistency-batch-d9c-r3.md`
+
+Owner should review representative live pages before D9D final sitewide design lock.

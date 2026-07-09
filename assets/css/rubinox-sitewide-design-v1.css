@@ -1075,3 +1075,206 @@ body.sitewideDesignV1 main .industryCard:not(a):hover {
   transform: none !important;
   outline: 0 !important;
 }
+
+/* D9C-R3 sitewide visual consistency correction: final hover and hero spacing pass before D9D. */
+body.sitewideDesignV1 {
+  --rubinox-hover-gold-border-final: rgba(226, 160, 47, .46);
+  --rubinox-hover-card-shadow-final: 0 16px 34px rgba(7, 16, 31, .11);
+  --rubinox-hover-chip-shadow-final: 0 8px 18px rgba(15, 30, 60, .08);
+  --rubinox-hero-next-gap-final: clamp(24px, 3vw, 38px);
+}
+
+body.sitewideDesignV1 main.page > .premiumHero + .trustStrip,
+body.sitewideDesignV1 main.page > .premiumHero + .sectorNav,
+body.sitewideDesignV1 main.page > .premiumHero + .card,
+body.sitewideDesignV1 main.page > .premiumHero + section,
+body.sitewideDesignV1 main > .premiumHero + .trustStrip,
+body.sitewideDesignV1 main > .premiumHero + .sectorNav,
+body.sitewideDesignV1 main > .premiumHero + .card,
+body.sitewideDesignV1 main > .premiumHero + section {
+  margin-top: var(--rubinox-hero-next-gap-final) !important;
+}
+
+body.sitewideDesignV1 main a.supportCard,
+body.sitewideDesignV1 main a.flowCard,
+body.sitewideDesignV1 main a.clusterCard,
+body.sitewideDesignV1 main a.materialCard,
+body.sitewideDesignV1 main a[class*="Card"]:not(.btn),
+body.sitewideDesignV1 main a[class*="card"]:not(.btn) {
+  border-width: 1px !important;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background-color .18s ease, color .18s ease !important;
+}
+
+body.sitewideDesignV1 main a.supportCard:hover,
+body.sitewideDesignV1 main a.flowCard:hover,
+body.sitewideDesignV1 main a.clusterCard:hover,
+body.sitewideDesignV1 main a.materialCard:hover,
+body.sitewideDesignV1 main a[class*="Card"]:not(.btn):hover,
+body.sitewideDesignV1 main a[class*="card"]:not(.btn):hover {
+  background: #fff !important;
+  border-width: 1px !important;
+  border-color: var(--rubinox-hover-gold-border-final) !important;
+  box-shadow: var(--rubinox-hover-card-shadow-final) !important;
+  transform: translateY(-2px) !important;
+  outline: 0 !important;
+}
+
+body.sitewideDesignV1 main a.supportCard:focus-visible,
+body.sitewideDesignV1 main a.flowCard:focus-visible,
+body.sitewideDesignV1 main a.clusterCard:focus-visible,
+body.sitewideDesignV1 main a.materialCard:focus-visible,
+body.sitewideDesignV1 main a[class*="Card"]:not(.btn):focus-visible,
+body.sitewideDesignV1 main a[class*="card"]:not(.btn):focus-visible {
+  background: #fff !important;
+  border-width: 1px !important;
+  border-color: var(--rubinox-hover-gold-border-final) !important;
+  box-shadow: var(--rubinox-hover-card-shadow-final) !important;
+  transform: translateY(-2px) !important;
+  outline: 2px solid rgba(226, 160, 47, .28) !important;
+  outline-offset: 2px !important;
+}
+
+body.sitewideDesignV1 main .materialLinks a,
+body.sitewideDesignV1 main .formPolishLinks a,
+body.sitewideDesignV1 main .popularRow a,
+body.sitewideDesignV1 main .formChipRow a,
+body.sitewideDesignV1 main a.formChip,
+body.sitewideDesignV1 main .tagRow a:not(.btn),
+body.sitewideDesignV1 main .linkGrid a:not(.btn),
+body.sitewideDesignV1 main .locationLinkGrid a:not(.btn),
+body.sitewideDesignV1 main .industryActions a:not(.rfqAction):not(.btn),
+body.sitewideDesignV1 main .materialRfqActions a:not(.btn) {
+  border-width: 1px !important;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background-color .18s ease, color .18s ease !important;
+}
+
+body.sitewideDesignV1 main .materialLinks a:hover,
+body.sitewideDesignV1 main .formPolishLinks a:hover,
+body.sitewideDesignV1 main .popularRow a:hover,
+body.sitewideDesignV1 main .formChipRow a:hover,
+body.sitewideDesignV1 main a.formChip:hover,
+body.sitewideDesignV1 main .tagRow a:not(.btn):hover,
+body.sitewideDesignV1 main .linkGrid a:not(.btn):hover,
+body.sitewideDesignV1 main .locationLinkGrid a:not(.btn):hover,
+body.sitewideDesignV1 main .industryActions a:not(.rfqAction):not(.btn):hover,
+body.sitewideDesignV1 main .materialRfqActions a:not(.btn):hover {
+  background: #fff !important;
+  border-width: 1px !important;
+  border-color: var(--rubinox-hover-gold-border-final) !important;
+  color: var(--d9c-navy) !important;
+  box-shadow: var(--rubinox-hover-chip-shadow-final) !important;
+  transform: translateY(-1px) !important;
+  outline: 0 !important;
+}
+
+body.sitewideDesignV1 main .materialLinks a:focus-visible,
+body.sitewideDesignV1 main .formPolishLinks a:focus-visible,
+body.sitewideDesignV1 main .popularRow a:focus-visible,
+body.sitewideDesignV1 main .formChipRow a:focus-visible,
+body.sitewideDesignV1 main a.formChip:focus-visible,
+body.sitewideDesignV1 main .tagRow a:not(.btn):focus-visible,
+body.sitewideDesignV1 main .linkGrid a:not(.btn):focus-visible,
+body.sitewideDesignV1 main .locationLinkGrid a:not(.btn):focus-visible,
+body.sitewideDesignV1 main .industryActions a:not(.rfqAction):not(.btn):focus-visible,
+body.sitewideDesignV1 main .materialRfqActions a:not(.btn):focus-visible {
+  background: #fff !important;
+  border-width: 1px !important;
+  border-color: var(--rubinox-hover-gold-border-final) !important;
+  color: var(--d9c-navy) !important;
+  box-shadow: var(--rubinox-hover-chip-shadow-final) !important;
+  transform: translateY(-1px) !important;
+  outline: 2px solid rgba(226, 160, 47, .28) !important;
+  outline-offset: 2px !important;
+}
+
+body.sitewideDesignV1 main .btn:hover,
+body.sitewideDesignV1 main .industryActions .rfqAction:hover {
+  outline: 0 !important;
+}
+
+body.sitewideDesignV1 main .btn:focus-visible,
+body.sitewideDesignV1 main .industryActions .rfqAction:focus-visible {
+  outline: 2px solid rgba(226, 160, 47, .32) !important;
+  outline-offset: 2px !important;
+}
+
+body.sitewideDesignV1 main .industryActions .rfqAction:hover,
+body.sitewideDesignV1 main .industryActions .rfqAction:focus-visible {
+  background: linear-gradient(180deg, #f2bc55, #e2a02f) !important;
+  color: #07101f !important;
+  border-width: 1px !important;
+  border-color: rgba(161, 105, 8, .35) !important;
+  box-shadow: 0 10px 20px rgba(226, 160, 47, .18) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* D9C-R3 spacing floor: prevent major page blocks from visually touching after hero/rail sections. */
+body.sitewideDesignV1 main.page > .heroGrid + .card,
+body.sitewideDesignV1 main.page > .heroGrid + .grid2,
+body.sitewideDesignV1 main.page > .heroGrid + .grid3,
+body.sitewideDesignV1 main.page > .heroGrid + section,
+body.sitewideDesignV1 main.page > .premiumHero + .wrap {
+  margin-top: var(--rubinox-hero-next-gap-final) !important;
+}
+
+body.sitewideDesignV1 main.page > .trustStrip + .sectorNav,
+body.sitewideDesignV1 main.page > .sectorNav + .card,
+body.sitewideDesignV1 main.page > .card + .card,
+body.sitewideDesignV1 main.page > .card + .ctaBand,
+body.sitewideDesignV1 main.page > section.card + section.card,
+body.sitewideDesignV1 main.page > section.card + .ctaBand {
+  margin-top: 16px !important;
+}
+
+/* D9C-R3 RFQ ghost buttons and article TOC links: remove old silver/outline hover frames. */
+body.sitewideDesignV1 main .materialRfqActions .btn.ghost:hover,
+body.sitewideDesignV1 main .materialRfqActions .btn.ghost:focus-visible {
+  background: #fff !important;
+  border-width: 1px !important;
+  border-color: var(--rubinox-hover-gold-border-final) !important;
+  color: var(--d9c-navy) !important;
+  box-shadow: var(--rubinox-hover-chip-shadow-final) !important;
+  transform: translateY(-1px) !important;
+}
+
+body.sitewideDesignV1 main .materialRfqActions .btn.ghost:hover {
+  outline: 0 !important;
+}
+
+body.sitewideDesignV1 main .articleToc a:hover {
+  background: #fff !important;
+  border-width: 1px !important;
+  border-color: var(--rubinox-hover-gold-border-final) !important;
+  color: var(--d9c-navy) !important;
+  box-shadow: var(--rubinox-hover-chip-shadow-final) !important;
+  transform: translateY(-1px) !important;
+  outline: 0 !important;
+}
+
+body.sitewideDesignV1 main .articleToc a:focus-visible {
+  background: #fff !important;
+  border-width: 1px !important;
+  border-color: var(--rubinox-hover-gold-border-final) !important;
+  color: var(--d9c-navy) !important;
+  box-shadow: var(--rubinox-hover-chip-shadow-final) !important;
+  transform: translateY(-1px) !important;
+  outline: 2px solid rgba(226, 160, 47, .28) !important;
+  outline-offset: 2px !important;
+}
+
+/* D9C-R3 spacing floor for grade/product page grid-to-card transitions. */
+body.sitewideDesignV1 main.page > .grid2 + .card,
+body.sitewideDesignV1 main.page > .grid3 + .card,
+body.sitewideDesignV1 main.page > .formPolishGrid + .card,
+body.sitewideDesignV1 main.page > .card + .materialRfqCta,
+body.sitewideDesignV1 main.page > .grid2 + .materialRfqCta,
+body.sitewideDesignV1 main.page > .grid3 + .materialRfqCta,
+body.sitewideDesignV1 main.page > .section + .section {
+  margin-top: 16px !important;
+}
+
+/* D9C-R3 final small spacing nudges outside locked homepage/quotation band exceptions. */
+body.sitewideDesignV1 main.page > .rescueSection + .ctaBand,
+body.sitewideDesignV1 main.page > .card + .grid2 {
+  margin-top: var(--rubinox-hero-next-gap-final) !important;
+}
