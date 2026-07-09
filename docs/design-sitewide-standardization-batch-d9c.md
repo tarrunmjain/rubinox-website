@@ -78,6 +78,15 @@ Quotation Before You Send alignment:
 
 - The Before You Send helper list remains left aligned with normal word spacing and no forced justification.
 
+D9C-R4 Quotation Before You Send Alignment Correction:
+
+- Owner review identified the fourth `Before You Send` bullet on `quotation.html` as unreadable on the live page.
+- Root cause: the list item used flex layout while the sentence contained inline links, allowing sentence fragments and links to behave as separate flex items.
+- Correction: `.rfqHelpList li` now uses normal block text flow, keeps the bullet dot aligned with `::before`, and keeps internal links inline.
+- The final sentence remains: `Use technical resources and quality documentation guides for schedule, MTC, PMI and inspection notes.`
+- Reference: `docs/design-correction-quotation-before-send-batch-d9c-r4.md`.
+- D9D final sitewide design lock remains pending owner review of this live correction.
+
 Quotation factor guides spacing:
 
 - Factor guide links keep all existing destinations and use improved chip spacing with safe wrapping.

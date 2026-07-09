@@ -856,3 +856,32 @@ Audit gate:
 - D9C-R3 hover offenders after: 0.
 - Browser-style zoom/reflow simulation: 96 checks, 0 failures.
 - D9D final sitewide design lock must wait for owner review of D9C-R3 live pages.
+
+## Quotation Before You Send Alignment Correction - D9C-R4
+
+Status: Implemented, pending owner review before D9D.
+
+D9C-R4 is a focused correction after D9C-R3. It does not create the final D9D lock.
+
+Reference:
+
+- `docs/design-correction-quotation-before-send-batch-d9c-r4.md`
+
+Rule before D9D owner review:
+
+- Inline links inside list items must remain inline when they are part of a sentence.
+- List item layout must not split one sentence into independent flex/grid columns.
+- Helper-list text must remain left aligned, readable, naturally wrapped and contained inside the card.
+- Avoid justified/scattered list text and excessive word or letter spacing.
+- Bullet markers may be positioned separately only to preserve alignment without disrupting sentence flow.
+
+Corrected quotation sentence:
+
+- `Use technical resources and quality documentation guides for schedule, MTC, PMI and inspection notes.`
+
+Audit gate:
+
+- Exact affected helper-card pattern found only on `quotation.html`.
+- Browser-style zoom/reflow simulation: 12 checks, 0 failures.
+- Non-quotation visual checks: 6 screenshots/checks, 0 failures.
+- D9D final sitewide design lock must wait for owner review of the live D9C-R4 quotation correction.

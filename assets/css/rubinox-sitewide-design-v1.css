@@ -769,6 +769,34 @@ body.sitewideDesignV1 main .rfqHelpList li {
   overflow-wrap: anywhere !important;
 }
 
+/* D9C-R4 quotation Before You Send alignment correction. */
+body.sitewideDesignV1 main .rfqHelpList li {
+  position: relative !important;
+  display: block !important;
+  min-width: 0 !important;
+  padding-left: 19px !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  line-height: 1.55 !important;
+}
+
+body.sitewideDesignV1 main .rfqHelpList li::before {
+  position: absolute !important;
+  left: 0 !important;
+  top: .72em !important;
+  flex: none !important;
+  margin-top: 0 !important;
+}
+
+body.sitewideDesignV1 main .rfqHelpList li a {
+  display: inline !important;
+  white-space: normal !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: 3px !important;
+}
+
 body.sitewideDesignV1 main .req {
   color: #9d6d10 !important;
   font-weight: 900 !important;
