@@ -947,3 +947,71 @@ Audit gate:
 - Browser-style zoom/reflow simulation: 12 checks, 0 failures.
 - Non-blog visual checks: 10 screenshots/checks, 0 failures.
 - D9D final sitewide design lock must wait for owner review of the live D9C-R6 Knowledge Hub correction.
+
+## Final Sitewide Design System — LOCK V1
+
+Status: Final approved sitewide design fingerprint.
+
+Owner approval: "D9C-R6 approved for final sitewide design lock"
+
+Final approved live commit: `7198472d18708515f648df50fa03eda3d88094de`
+
+Successful GitHub Pages run: `29010629259`
+
+Final lock reference:
+
+- `docs/design-system/RUBINOX_SITEWIDE_DESIGN_LOCK_V1.md`
+
+D9D batch reference:
+
+- `docs/design-final-sitewide-lock-batch-d9d.md`
+
+D9D finalizes the Rubinox sitewide design system after the approved homepage locks, Footer Lock V1, D9A rollout plan, D9B pilot, D9C sitewide rollout and D9C-R3/R4/R5/R6 correction passes.
+
+The locked public-page markers are:
+
+- `body.sitewideDesignV1`
+- `assets/css/rubinox-sitewide-design-v1.css`
+- `siteFooter homeFooterPrototypeD8A sitewideFooterD9C`
+- Unified footer heading: `Quick Links:`
+- GA4 ID: `G-JT5X5L5H07`
+
+The final sitewide interaction rules are:
+
+- Clickable cards use stable 1px borders, subtle Rubinox gold hover/accent, slight lift and restrained shadow.
+- Chips and small links use a light surface, thin Rubinox gold hover/accent, slight lift and soft shadow.
+- Knowledge Hub `button.blogFilter` controls follow D9C-R6 for default, hover, focus-visible and active states.
+- Primary CTAs keep the approved Rubinox gold treatment.
+- FAQ/card accent bars follow Card Accent Lock V1.
+- Blue/dark panels keep the final D9C navy/silver contrast.
+- Text inside sections, cards, boxes, chips and CTAs must not overflow at 100%, 110% or 125% zoom.
+
+The final scope rules are:
+
+- Footer Lock V1 is sitewide across all 261 public HTML pages.
+- Top Bar Lock V1 and Header Lock V1 remain sitewide.
+- Market ticker, home hero, home RFQ path, homepage section intro width and homepage remaining-section polish remain homepage-only unless a later approved lock expands their scope.
+- Public URLs, SEO metadata, JSON-LD, sitemap, CNAME and GA4 remain protected unless a later task explicitly scopes a change.
+- Future pages must use the final lock document and this master fingerprint before design review.
+
+D9D verification artifacts:
+
+- Final screenshots: `D:\Websites\Rubinox\visual-qa\d9d-final-sitewide-design-lock\final`
+- Hover/focus screenshots: `D:\Websites\Rubinox\visual-qa\d9d-final-sitewide-design-lock\hover-focus`
+- Zoom/reflow screenshots and JSON: `D:\Websites\Rubinox\visual-qa\d9d-final-sitewide-design-lock\zoom-reflow`
+- Audit files: `D:\Websites\Rubinox\visual-qa\d9d-final-sitewide-design-lock\audit`
+
+D9D audit summary:
+
+- Public HTML pages: 261.
+- Final CSS references: 261.
+- `sitewideDesignV1` body class pages: 261.
+- Unified footer pages: 261.
+- Old split footer headings: 0.
+- Footer `2026` copyright findings: 0.
+- Current GA4 pages: 261.
+- Old GA4 pages: 0.
+- Homepage-only leakage into non-home pages: 0.
+- D9C-R3/R4/R5/R6 correction markers: present.
+
+This section supersedes the "pending owner review before D9D" status language in the D9C correction sections above. Those sections remain as implementation history; this final section is the lock source for future work.
