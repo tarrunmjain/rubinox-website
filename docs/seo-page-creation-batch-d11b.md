@@ -79,6 +79,20 @@ Each new page includes WebPage, BreadcrumbList, Organization reference and FAQPa
 - `npm run qa:images:audit`: 184 image files found, 4,101 referenced image URLs, 0 missing image files; existing image inventory items remain for non-WebP, oversized and alt-text review.
 - `git diff --check`: passed with line-ending normalization warnings only.
 
+## D11B-R2 Design Correction
+
+D11B-R2 corrected the first 10 D11B pages after owner live review.
+
+- Footer mismatch fixed by aligning shared CSS selectors to the locked `.sitewideFooterD9C` footer marker.
+- Call and email footer icons now use the approved function-icon treatments.
+- The unified `Quick Links:` footer, six icon row and no-year copyright are preserved.
+- The Typical Enquiry Uses note box now uses the Rubinox white/silver/navy/gold theme through the reusable `.rfqReviewNote` class.
+- No new pages were created.
+- No URL, H1, title/meta, canonical, sitemap, schema meaning or analytics change was made.
+- Owner review is required before D11C.
+
+Detailed correction record: `docs/seo-page-creation-batch-d11b-r2-design-fix.md`.
+
 ## Next Batch Recommendation
 
 Owner should review the first 10 live pages before D11C. If approved, D11C can continue with the next controlled 10-20 candidates from D11A.

@@ -923,19 +923,40 @@ body.sitewideDesignV1 main .supportCard::before {
   pointer-events: none !important;
 }
 
-body.sitewideDesignV1 .siteFooterD9C .footerQuickGrid {
+body.sitewideDesignV1 .sitewideFooterD9C .footerQuickGrid {
   display: flex !important;
   flex-wrap: wrap !important;
   gap: 7px 14px !important;
   align-items: center !important;
 }
 
-body.sitewideDesignV1 .siteFooterD9C .footerBrand .footerIconGroup {
+body.sitewideDesignV1 .sitewideFooterD9C .footerBrand .footerIconGroup {
   flex-wrap: nowrap !important;
 }
 
-body.sitewideDesignV1 .siteFooterD9C .footerBottom,
-body.sitewideDesignV1 .siteFooterD9C .footerBottom .wrap {
+.sitewideFooterD9C .footerBrand .footerIcon.functionIcon {
+  background: linear-gradient(145deg, #fff, #f8fafc) !important;
+  border: 1px solid rgba(19, 42, 99, .16) !important;
+  box-shadow: none !important;
+}
+
+.sitewideFooterD9C .footerBrand .footerIcon.functionIcon[href^="tel"] {
+  color: #178a55 !important;
+  background: linear-gradient(145deg, #ffffff, #edf6f2) !important;
+}
+
+.sitewideFooterD9C .footerBrand .footerIcon.functionIcon[href^="mailto"] {
+  color: #1f64b7 !important;
+  background: linear-gradient(145deg, #ffffff, #edf4ff) !important;
+}
+
+.sitewideFooterD9C .footerBrand .footerIcon.functionIcon svg {
+  stroke: currentColor !important;
+  fill: none !important;
+}
+
+body.sitewideDesignV1 .sitewideFooterD9C .footerBottom,
+body.sitewideDesignV1 .sitewideFooterD9C .footerBottom .wrap {
   color: var(--d9c-muted) !important;
 }
 
@@ -1408,4 +1429,31 @@ body.sitewideDesignV1 main .blogFilters button.blogFilter.isActive {
   color: var(--d9c-navy) !important;
   box-shadow: 0 8px 18px rgba(15, 30, 60, .07) !important;
   outline: 0 !important;
+}
+
+/* D11B-R2 first SEO page batch note correction. */
+body.sitewideDesignV1 main .rfqReviewNote {
+  position: relative !important;
+  margin-top: 16px !important;
+  padding: 16px 18px 16px 20px !important;
+  border: 1px solid rgba(19, 42, 99, .14) !important;
+  border-left: 4px solid var(--d9c-gold) !important;
+  border-radius: 8px !important;
+  background: linear-gradient(145deg, #fff, #f8fafc) !important;
+  color: var(--d9c-muted) !important;
+  box-shadow: 0 10px 24px rgba(15, 30, 60, .05) !important;
+  line-height: 1.7 !important;
+  overflow-wrap: anywhere !important;
+}
+
+body.sitewideDesignV1 main .rfqReviewNote::before {
+  content: "" !important;
+  position: absolute !important;
+  left: -1px !important;
+  right: -1px !important;
+  top: -1px !important;
+  height: 3px !important;
+  border-radius: 8px 8px 0 0 !important;
+  background: linear-gradient(90deg, var(--d9c-gold), var(--d9c-navy)) !important;
+  pointer-events: none !important;
 }
