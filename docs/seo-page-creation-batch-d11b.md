@@ -93,6 +93,24 @@ D11B-R2 corrected the first 10 D11B pages after owner live review.
 
 Detailed correction record: `docs/seo-page-creation-batch-d11b-r2-design-fix.md`.
 
+## D11B-R3 Footer and Note Accent Correction
+
+D11B-R3 corrected the remaining owner-reported footer and note-card issues on the first 10 D11B material-location pages.
+
+- Footer layout fixed by forcing the locked shared footer layout to render as a grid.
+- The final desktop footer now holds brand left, unified Quick Links center and Contact Details right at 1366 and 1280.
+- Call and email icon styling remains aligned with the approved footer icon treatment.
+- The six brand/contact/social icons remain in one row.
+- The unified `Quick Links:` heading is preserved; old split footer headings remain absent.
+- The footer copyright remains yearless.
+- The Typical Enquiry Uses note keeps the white/silver/navy card treatment and top gold-to-blue accent.
+- The unwanted left-side gold accent was removed.
+- No new pages were created.
+- No URL, H1, title/meta, canonical, sitemap, schema meaning or analytics change was made.
+- Owner review is required before D11C.
+
+Detailed correction record: `docs/seo-page-creation-batch-d11b-r3-footer-accent-fix.md`.
+
 ## Next Batch Recommendation
 
 Owner should review the first 10 live pages before D11C. If approved, D11C can continue with the next controlled 10-20 candidates from D11A.

@@ -242,6 +242,7 @@ body.sitewideDesignV1 .btnGold:focus-visible {
 }
 
 body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerLayout {
+  display: grid !important;
   grid-template-columns: minmax(230px, .95fr) minmax(0, 2.2fr) minmax(230px, .95fr) !important;
   align-items: start !important;
   gap: 24px !important;
@@ -387,7 +388,7 @@ body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerContact a:focus-
   text-decoration: none !important;
 }
 
-@media (max-width: 1120px) {
+@media (max-width: 980px) {
   body.sitewideDesignV1 .siteFooter.homeFooterPrototypeD8A .footerLayout {
     grid-template-columns: minmax(0, .9fr) minmax(0, 1.35fr) !important;
     gap: 20px 24px !important;
@@ -1435,9 +1436,8 @@ body.sitewideDesignV1 main .blogFilters button.blogFilter.isActive {
 body.sitewideDesignV1 main .rfqReviewNote {
   position: relative !important;
   margin-top: 16px !important;
-  padding: 16px 18px 16px 20px !important;
+  padding: 16px 18px !important;
   border: 1px solid rgba(19, 42, 99, .14) !important;
-  border-left: 4px solid var(--d9c-gold) !important;
   border-radius: 8px !important;
   background: linear-gradient(145deg, #fff, #f8fafc) !important;
   color: var(--d9c-muted) !important;
