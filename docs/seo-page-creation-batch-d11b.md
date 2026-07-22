@@ -111,6 +111,24 @@ D11B-R3 corrected the remaining owner-reported footer and note-card issues on th
 
 Detailed correction record: `docs/seo-page-creation-batch-d11b-r3-footer-accent-fix.md`.
 
+## D11B-R4 Footer Icon Parity Correction
+
+D11B-R4 corrected the remaining owner-reported footer icon mismatch on the first 10 D11B material-location pages.
+
+- Root cause was shared CSS selector coverage: the locked tile treatment applied to `.footerIcon.functionIcon` only, so Call and Email were boxed while the four social icons appeared loose.
+- The shared footer CSS now applies the locked tile size, radius, border, background, alignment, hover and focus treatment to every `.sitewideFooterD9C .footerBrand .footerIcon`.
+- Call and Email retain their approved subtle function-icon tints.
+- WhatsApp, Facebook, Instagram and LinkedIn now render inside the same rounded light footer tile system.
+- All six footer icons remain in one row at 1366, 1280 and mobile checks.
+- The D11B-R3 footer layout remains preserved: brand left, unified Quick Links center and Contact Details right on desktop.
+- The unified `Quick Links:` heading is preserved; old split footer headings remain absent.
+- The footer copyright remains yearless.
+- No new pages were created.
+- No URL, H1, title/meta, canonical, sitemap, schema meaning or analytics change was made.
+- Owner review is required before D11C.
+
+Detailed correction record: `docs/seo-page-creation-batch-d11b-r4-footer-icon-parity-fix.md`.
+
 ## Next Batch Recommendation
 
-Owner should review the first 10 live pages before D11C. If approved, D11C can continue with the next controlled 10-20 candidates from D11A.
+Owner should review the corrected D11B footer icons before D11C. If approved, D11C can continue with the next controlled 10-20 candidates from D11A.

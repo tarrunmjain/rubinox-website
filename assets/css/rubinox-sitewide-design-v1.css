@@ -935,23 +935,51 @@ body.sitewideDesignV1 .sitewideFooterD9C .footerBrand .footerIconGroup {
   flex-wrap: nowrap !important;
 }
 
-.sitewideFooterD9C .footerBrand .footerIcon.functionIcon {
+/* D11B-R4 footer icon parity: every footer icon receives the locked tile treatment. */
+body.sitewideDesignV1 .sitewideFooterD9C .footerBrand .footerIcon {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  min-height: 32px !important;
+  max-width: 32px !important;
+  max-height: 32px !important;
+  flex: 0 0 32px !important;
+  padding: 0 !important;
+  line-height: 0 !important;
+  border-radius: 8px !important;
   background: linear-gradient(145deg, #fff, #f8fafc) !important;
   border: 1px solid rgba(19, 42, 99, .16) !important;
+  color: var(--d9c-navy) !important;
+  text-decoration: none !important;
   box-shadow: none !important;
 }
 
-.sitewideFooterD9C .footerBrand .footerIcon.functionIcon[href^="tel"] {
+body.sitewideDesignV1 .sitewideFooterD9C .footerBrand .footerIcon:hover {
+  transform: translateY(-1px) !important;
+  background: #fff !important;
+  border-color: rgba(226, 160, 47, .55) !important;
+  box-shadow: 0 8px 18px rgba(15, 30, 60, .10) !important;
+}
+
+body.sitewideDesignV1 .sitewideFooterD9C .footerBrand .footerIcon:focus-visible {
+  outline: 3px solid rgba(247, 198, 91, .75) !important;
+  outline-offset: 3px !important;
+}
+
+body.sitewideDesignV1 .sitewideFooterD9C .footerBrand .footerIcon.functionIcon[href^="tel"] {
   color: #178a55 !important;
   background: linear-gradient(145deg, #ffffff, #edf6f2) !important;
 }
 
-.sitewideFooterD9C .footerBrand .footerIcon.functionIcon[href^="mailto"] {
+body.sitewideDesignV1 .sitewideFooterD9C .footerBrand .footerIcon.functionIcon[href^="mailto"] {
   color: #1f64b7 !important;
   background: linear-gradient(145deg, #ffffff, #edf4ff) !important;
 }
 
-.sitewideFooterD9C .footerBrand .footerIcon.functionIcon svg {
+body.sitewideDesignV1 .sitewideFooterD9C .footerBrand .footerIcon.functionIcon svg {
   stroke: currentColor !important;
   fill: none !important;
 }
