@@ -1,0 +1,2 @@
+url_a,url_b,page_type,material,grade,form,location,similarity_score,keyword_overlap,classification,action,notes
+,,material-location/export-material,,,,,0.7259,none_above_threshold,pass,none,Highest observed core-text similarity: 0.7259 (/material-location/ss-304-fittings-chennai.html vs /material-location/ss-304-fittings-coimbatore.html).
